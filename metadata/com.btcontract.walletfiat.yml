@@ -1,0 +1,29 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Money
+License: Apache-2.0
+AuthorName: Anton Kumaigorodski, Anton Guscha, Ilya Evdokimov
+WebSite: https://standardsats.github.io
+SourceCode: https://github.com/standardsats/wallet/
+IssueTracker: https://github.com/standardsats/wallet/issues
+Changelog: https://github.com/standardsats/wallet/releases
+
+AutoName: Valet
+
+RepoType: git
+Repo: https://github.com/standardsats/wallet.git
+
+Builds:
+  - versionName: 4.1.1
+    versionCode: 99
+    commit: 2b7705cc221a0ac87288ffdc10142aff9ade1012
+    subdir: app
+    gradle:
+      - yes
+    ndk: "['22.1.7171670']"
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 4.1.1
+CurrentVersionCode: 99
