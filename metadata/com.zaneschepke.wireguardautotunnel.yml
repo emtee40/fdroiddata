@@ -281,7 +281,7 @@ Builds:
       - sed -i -e '/gitea.zaneschepke.com/d' ../settings.gradle.kts
 
 AutoUpdateMode: Version
-UpdateCheckMode: Tags
-UpdateCheckData: buildSrc/src/main/kotlin/Constants.kt|VERSION_NAME = (^\d+(?:\.\d+){2}$)
+UpdateCheckMode: Tags (^\d+(?:\.\d+){2}$)
+UpdateCheckData: buildSrc/src/main/kotlin/Constants.kt|VERSION_CODE = (\d+)|.|VERSION_NAME = "(.+)"
 CurrentVersion: 3.3.9
 CurrentVersionCode: 33900
