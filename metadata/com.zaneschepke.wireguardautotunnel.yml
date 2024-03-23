@@ -282,6 +282,7 @@ Builds:
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags (^\d+(?:\.\d+){2}$)
-UpdateCheckData: buildSrc/src/main/kotlin/Constants.kt|VERSION_CODE = (\d+)|.|VERSION_NAME = "(.+)"
+UpdateCheckData: buildSrc/src/main/kotlin/Constants.kt|VERSION_CODE = (\d+)|.|VERSION_NAME
+  = "(.+)"
 CurrentVersion: 3.3.9
 CurrentVersionCode: 33900
