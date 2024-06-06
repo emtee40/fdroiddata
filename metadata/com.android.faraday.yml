@@ -10,7 +10,7 @@ Repo: https://github.com/FaradayApp/Faraday-android
 Builds:
   - versionName: 1.60.0
     versionCode: 1
-    commit: 522de7f3ea856d0462a50912da44580bfca2220d
+    commit: 641a6c4628d1bfbbcdb259897c07f98ab64cf8ed
     subdir: vector-app
     sudo:
       - apt-get update
