@@ -24,6 +24,8 @@ Builds:
     rm:
       - vector/src/main/jniLibs/*/*.so
     prebuild:
+      - sed -i -e 's/-XX:MaxPermSize\S*//' $$jitsi-meet$$/android/gradle.properties
+      - sed -i -e 's/def isCiBuild =.*/def isCiBuild = true/' ../tools/gradle/doctor.gradle
       - sed -i -e '/firebaseAppDistribution {/,/            }/d' -e 's/enable true/enable
         false/g' build.gradle
       - sed -i -e '/repositories {/a mavenLocal()' -e 's|https.*android-sdk-6.2.2|https://jitpack.io|'
