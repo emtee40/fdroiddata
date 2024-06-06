@@ -15,6 +15,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y jq maven npm golang-go
+      - chown vagrant /usr/lib/go-1.19
     gradle:
       - fdroid
     srclibs:
@@ -31,7 +32,6 @@ Builds:
     build:
       - cd ../vector
       - pushd $$obfs4$$
-      - export GOPATH="$HOME/go"
       - export PATH=$$NDK$$/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
       - export ARCH=arm
       - CC=armv7a-linux-androideabi21-clang CXX=armv7a-linux-androideabi21-clang++
