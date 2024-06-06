@@ -15,7 +15,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y jq maven npm golang-go
-      - chown vagrant /usr/lib/go-1.19
+      - chown -R vagrant /usr/lib/go-1.19
     gradle:
       - fdroid
     srclibs:
