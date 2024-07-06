@@ -8,8 +8,8 @@ RepoType: git
 Repo: https://github.com/FaradayApp/Faraday-android
 
 Builds:
-  - versionName: 1.60.0
-    versionCode: 1
+  - versionName: 1.1.1
+    versionCode: 40101050
     commit: 80b644c5ca85326c1ba4e22de53a5ec2a2291958
     subdir: vector-app
     sudo:
