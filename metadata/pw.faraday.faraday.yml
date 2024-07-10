@@ -39,6 +39,9 @@ Builds:
       - export ARCH=arm
       - CC=armv7a-linux-androideabi21-clang CXX=armv7a-linux-androideabi21-clang++
         GOOS=android GOARCH=$ARCH go install std
+      - CGO_ENABLED=1 CC=armv7a-linux-androideabi21-clang CXX=armv7a-linux-androideabi21-clang++
+        GOOS=android GOARCH=$ARCH go build -v -o obfs4proxy/obfs4proxy.${ARCH}.so
+        ./obfs4proxy
       - popd
       - mv $$obfs4$$/obfs4proxy/obfs4proxy.arm.so src/main/jniLibs/armeabi-v7a/obfs4proxy.arm.so
       - cd $$jitsi-meet$$
