@@ -9,7 +9,7 @@ Repo: https://github.com/FaradayApp/Faraday-android
 
 Builds:
   - versionName: 1.1.1
-    versionCode: 40101051
+    versionCode: 401010500
     commit: f7a760732744d25e43e145fa15ba551c92329567
     subdir: vector-app
     sudo:
@@ -28,7 +28,8 @@ Builds:
       - sed -i -e 's/def isCiBuild =.*/def isCiBuild = true/' ../tools/gradle/doctor.gradle
       - sed -i -e '/firebaseAppDistribution {/,/            }/d' -e 's/enable true/enable
         false/g' build.gradle
-      - sed -i -e '/universalApk/d' -e '/abiFilters/d' -e '/include/s/"armeabi-v7a".*/"armeabi-v7a"/' build.gradle
+      - sed -i -e '/universalApk/d' -e '/abiFilters/d' -e '/include/s/"armeabi-v7a".*/"armeabi-v7a"/'
+        build.gradle
       - sed -i -e '/repositories {/a mavenLocal()' -e 's|https.*android-sdk-6.2.2|https://jitpack.io|'
         ../build.gradle
       - sed -i -e '/com.google.firebase/d' -e '/gms/d' {.,..}/build.gradle
@@ -55,7 +56,7 @@ Builds:
     ndk: r21d
 
   - versionName: 1.1.1
-    versionCode: 40101052
+    versionCode: 401010501
     commit: f7a760732744d25e43e145fa15ba551c92329567
     subdir: vector-app
     sudo:
@@ -74,7 +75,8 @@ Builds:
       - sed -i -e 's/def isCiBuild =.*/def isCiBuild = true/' ../tools/gradle/doctor.gradle
       - sed -i -e '/firebaseAppDistribution {/,/            }/d' -e 's/enable true/enable
         false/g' build.gradle
-      - sed -i -e '/universalApk/d' -e '/abiFilters/d' -e '/include/s/"armeabi-v7a".*/"arm64-v8a"/' build.gradle
+      - sed -i -e '/universalApk/d' -e '/abiFilters/d' -e '/include/s/"armeabi-v7a".*/"arm64-v8a"/'
+        build.gradle
       - sed -i -e '/repositories {/a mavenLocal()' -e 's|https.*android-sdk-6.2.2|https://jitpack.io|'
         ../build.gradle
       - sed -i -e '/com.google.firebase/d' -e '/gms/d' {.,..}/build.gradle
@@ -101,7 +103,7 @@ Builds:
     ndk: r21d
 
   - versionName: 1.1.1
-    versionCode: 40101053
+    versionCode: 401010502
     commit: f7a760732744d25e43e145fa15ba551c92329567
     subdir: vector-app
     sudo:
@@ -120,7 +122,8 @@ Builds:
       - sed -i -e 's/def isCiBuild =.*/def isCiBuild = true/' ../tools/gradle/doctor.gradle
       - sed -i -e '/firebaseAppDistribution {/,/            }/d' -e 's/enable true/enable
         false/g' build.gradle
-      - sed -i -e '/universalApk/d' -e '/abiFilters/d' -e '/include/s/"armeabi-v7a".*/"x86"/' build.gradle
+      - sed -i -e '/universalApk/d' -e '/abiFilters/d' -e '/include/s/"armeabi-v7a".*/"x86"/'
+        build.gradle
       - sed -i -e '/repositories {/a mavenLocal()' -e 's|https.*android-sdk-6.2.2|https://jitpack.io|'
         ../build.gradle
       - sed -i -e '/com.google.firebase/d' -e '/gms/d' {.,..}/build.gradle
@@ -146,7 +149,7 @@ Builds:
     ndk: r21d
 
   - versionName: 1.1.1
-    versionCode: 40101054
+    versionCode: 401010503
     commit: f7a760732744d25e43e145fa15ba551c92329567
     subdir: vector-app
     sudo:
@@ -165,7 +168,8 @@ Builds:
       - sed -i -e 's/def isCiBuild =.*/def isCiBuild = true/' ../tools/gradle/doctor.gradle
       - sed -i -e '/firebaseAppDistribution {/,/            }/d' -e 's/enable true/enable
         false/g' build.gradle
-      - sed -i -e '/universalApk/d' -e '/abiFilters/d' -e '/include/s/"armeabi-v7a".*/"x86_64"/' build.gradle
+      - sed -i -e '/universalApk/d' -e '/abiFilters/d' -e '/include/s/"armeabi-v7a".*/"x86_64"/'
+        build.gradle
       - sed -i -e '/repositories {/a mavenLocal()' -e 's|https.*android-sdk-6.2.2|https://jitpack.io|'
         ../build.gradle
       - sed -i -e '/com.google.firebase/d' -e '/gms/d' {.,..}/build.gradle
@@ -193,4 +197,4 @@ Builds:
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 1.1.1
-CurrentVersionCode: 40101054
+CurrentVersionCode: 401010503
