@@ -34,6 +34,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.0-beta.0
     versionCode: 31
@@ -55,6 +60,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.0-rc.1
     versionCode: 34
@@ -76,6 +86,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.0-rc.2
     versionCode: 35
@@ -97,6 +112,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.0-rc.3
     versionCode: 36
@@ -118,6 +138,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.0
     versionCode: 37
@@ -139,6 +164,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.1
     versionCode: 38
@@ -160,6 +190,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.2
     versionCode: 39
@@ -181,6 +216,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.3
     versionCode: 40
@@ -202,6 +242,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.0-alpha.0
     versionCode: 41
@@ -223,6 +268,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.0-alpha.1
     versionCode: 42
@@ -244,6 +294,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.0-alpha.2
     versionCode: 43
@@ -265,6 +320,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.4
     versionCode: 44
@@ -286,6 +346,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.0-beta.0
     versionCode: 45
@@ -307,6 +372,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.0-beta.1
     versionCode: 46
@@ -328,6 +398,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.0-beta.2
     versionCode: 47
@@ -349,6 +424,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.0-rc.0
     versionCode: 48
@@ -366,6 +446,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.0
     versionCode: 50
@@ -383,6 +468,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.1
     versionCode: 51
@@ -400,6 +490,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.6.0-alpha.0
     versionCode: 52
@@ -417,6 +512,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.6.0-alpha.1
     versionCode: 53
@@ -434,6 +534,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.6.0-beta.0
     versionCode: 54
@@ -451,6 +556,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.6.0-rc.0
     versionCode: 55
@@ -468,6 +578,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.6.0-rc.1
     versionCode: 56
@@ -485,6 +600,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.6.0
     versionCode: 57
@@ -502,6 +622,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.6.1
     versionCode: 58
@@ -524,6 +649,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-alpha.0
     versionCode: 59
@@ -546,6 +676,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-alpha.1
     versionCode: 60
@@ -568,6 +703,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-alpha.2
     versionCode: 61
@@ -590,6 +730,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-alpha.3
     versionCode: 62
@@ -612,6 +757,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-alpha.4
     versionCode: 63
@@ -634,6 +784,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.0
     versionCode: 64
@@ -660,6 +815,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.1
     versionCode: 65
@@ -686,6 +846,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.2
     versionCode: 66
@@ -712,6 +877,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.3
     versionCode: 67
@@ -738,6 +908,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.4
     versionCode: 68
@@ -764,6 +939,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.5
     versionCode: 69
@@ -790,6 +970,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.6
     versionCode: 70
@@ -816,6 +1001,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.7
     versionCode: 71
@@ -842,6 +1032,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.8
     versionCode: 72
@@ -873,6 +1068,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.9
     versionCode: 73
@@ -904,6 +1104,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.10
     versionCode: 74
@@ -935,6 +1140,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.11
     versionCode: 75
@@ -966,6 +1176,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.12
     versionCode: 76
@@ -997,6 +1212,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.13
     versionCode: 77
@@ -1028,6 +1248,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.14
     versionCode: 78
@@ -1059,6 +1284,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.15
     versionCode: 79
@@ -1090,6 +1320,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-beta.16
     versionCode: 80
@@ -1121,6 +1356,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-rc.0
     versionCode: 81
@@ -1152,6 +1392,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-rc.1
     versionCode: 82
@@ -1183,6 +1428,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-rc.2
     versionCode: 83
@@ -1214,6 +1464,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0-rc.3
     versionCode: 84
@@ -1245,6 +1500,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0
     versionCode: 85
@@ -1276,6 +1536,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.1-rc.0
     versionCode: 86
@@ -1307,6 +1572,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.1-rc.1
     versionCode: 87
@@ -1338,6 +1608,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.1
     versionCode: 88
@@ -1369,6 +1644,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.2-rc.0
     versionCode: 89
@@ -1400,6 +1680,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.2
     versionCode: 90
@@ -1431,6 +1716,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.3-rc.0
     versionCode: 91
@@ -1462,6 +1752,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.3-rc.1
     versionCode: 92
@@ -1493,6 +1788,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.3
     versionCode: 93
@@ -1524,6 +1824,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.1.0-beta.0
     versionCode: 94
@@ -1555,6 +1860,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.1.0-beta.1
     versionCode: 95
@@ -1586,6 +1896,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.1.0-beta.2
     versionCode: 96
@@ -1617,6 +1932,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.1.0-beta.3
     versionCode: 97
@@ -1644,9 +1964,299 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
+
+  - versionName: 2.1.0-beta.4
+    versionCode: 98
+    commit: e00dc85ba8e07b4d614ab55dfc031fe73a5c4995
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
+
+  - versionName: 2.1.0-beta.5
+    versionCode: 99
+    commit: 5ac1fd7d58381f139532f92a18588f8daec84389
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
+
+  - versionName: 2.1.0-rc.0
+    versionCode: 100
+    commit: e7c5f29dd12265a207f5098c9ba609d547a58e1f
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
+
+  - versionName: 2.1.0-rc.3
+    versionCode: 103
+    commit: 01d869d54fa8909473f503305cbe7d76601e8fec
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.1.0
+    versionCode: 104
+    commit: 5e32dfacd6c30d2b97dbbc76e92ca24d7667b31c
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.1.1-rc.0
+    versionCode: 105
+    commit: fab5ff7b4c143d773f824d6d9f2bf5e20a3bd19a
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.1.1-rc.1
+    versionCode: 106
+    commit: e335ed44fc0c7ad3ef36a3c68b9eb584a1d66f59
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.1.1-rc.2
+    versionCode: 107
+    commit: ba9baeac80c16043517de7165345baf6b5f52fca
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.1.1
+    versionCode: 108
+    commit: 6058fe4cc9ae7905dc398b330b751d361525e942
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.2.0-beta.0
+    versionCode: 109
+    commit: f40aa9e132d579d109c3ab594cbe9d9bb0be72a7
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v.+$
 UpdateCheckData: app/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 2.1.0-beta.3
-CurrentVersionCode: 97
+CurrentVersion: 2.2.0-beta.0
+CurrentVersionCode: 109

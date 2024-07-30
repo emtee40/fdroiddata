@@ -222,7 +222,28 @@ Builds:
       - archive/OriginalApp.zip
     prebuild: sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
 
+  - versionName: '25'
+    versionCode: 89
+    commit: a5fa8883e540a3a3c5fdcd2836918a3eae83fc0e
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - archive/OriginalApp.zip
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+
+  - versionName: '26'
+    versionCode: 90
+    disable: https://github.com/nutritionfactsorg/daily-dozen-android/issues/255
+    commit: 1f741381f10dfba0b4e80cefecaccc6c4eb2ae2a
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - archive/OriginalApp.zip
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*$
-CurrentVersion: '24'
-CurrentVersionCode: 86
+CurrentVersion: '26'
+CurrentVersionCode: 90

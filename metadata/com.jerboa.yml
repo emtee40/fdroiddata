@@ -2,9 +2,9 @@ Categories:
   - Internet
 License: AGPL-3.0-only
 WebSite: https://join-lemmy.org
-SourceCode: https://github.com/dessalines/jerboa
-IssueTracker: https://github.com/dessalines/jerboa/issues
-Changelog: https://github.com/dessalines/jerboa/blob/HEAD/RELEASES.md
+SourceCode: https://github.com/LemmyNet/jerboa
+IssueTracker: https://github.com/LemmyNet/jerboa/issues
+Changelog: https://github.com/LemmyNet/jerboa/blob/HEAD/RELEASES.md
 Donate: https://www.patreon.com/dessalines
 Liberapay: Lemmy
 OpenCollective: lemmy
@@ -13,7 +13,7 @@ Bitcoin: 1Hefs7miXS5ff5Ck5xvmjKjXf5242KzRtK
 AutoName: Jerboa
 
 RepoType: git
-Repo: https://github.com/dessalines/jerboa.git
+Repo: https://github.com/LemmyNet/jerboa.git
 
 Builds:
   - versionName: 0.0.5
@@ -541,7 +541,49 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.0.64
+    versionCode: 64
+    commit: b790ecd51cb322ac808657324cb4b37eda732a44
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.65
+    versionCode: 65
+    commit: 373d359a01b2ec8d42e8c84a4829a6138f7d5f94
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.66
+    versionCode: 66
+    commit: a088d848c5b72d29f346cc6967b0ff7f381361bf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.67
+    versionCode: 67
+    commit: 8727c28df510b7291085bec30cd0d7d3f786be43
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.69
+    versionCode: 69
+    commit: f3bacd8e2a9037c2b30d869413686894ea429961
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.71
+    versionCode: 71
+    commit: 5d9e6b5db01e0c13646f062d9b49e24c517939cc
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.0.63
-CurrentVersionCode: 63
+CurrentVersion: 0.0.71
+CurrentVersionCode: 71

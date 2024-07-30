@@ -726,7 +726,25 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.30.0
+    versionCode: 13000
+    commit: 10543815c97b700b0d4bbf109c32428b3e67fb5e
+    gradle:
+      - yes
+
+  - versionName: 1.30.1
+    versionCode: 13001
+    commit: 9065867c4ac4cbb1d828cc67961e334c11eaa530
+    gradle:
+      - yes
+
+  - versionName: 1.31.1
+    versionCode: 13101
+    commit: f344586fb6263b21d4dca9638471251e20df78e0
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.29.0
-CurrentVersionCode: 12900
+CurrentVersion: 1.31.1
+CurrentVersionCode: 13101

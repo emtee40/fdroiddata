@@ -248,7 +248,87 @@ Builds:
       - yes
     prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
 
+  - versionName: 1.3.0
+    versionCode: 37
+    commit: 89eea11417c5e871fb6d9e5df7c8660c18d43bcc
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.3.1
+    versionCode: 38
+    commit: b6df089200868c6d7ddd2059330fd32e1a9012ee
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.3.2
+    versionCode: 39
+    commit: f302cef32a42ba217984a364e839a777a36f51e6
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.4.0
+    versionCode: 40
+    commit: 4d84678dde0edf0b03b6b4c70f4feadfb6c5d674
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.4.1
+    versionCode: 41
+    commit: 2a29058f92c78869a6a32a77184f970f25981b39
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.4.2
+    versionCode: 42
+    commit: cca185cedc6ff8b81a9025e08babdd7d649e0175
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: '1.5'
+    versionCode: 43
+    commit: 368092814e9c037233eee3b8048b6f0a73a24601
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.5.1
+    versionCode: 44
+    commit: 680ced86fe0aaa405149d56a0b52c5b621a861be
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.5.2
+    versionCode: 45
+    commit: d72a21ec748a5480fd21990f2f317ef7c8fc99f9
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.5.3
+    versionCode: 46
+    commit: ba45ff2c3acab4f5c9c8bc71bbbba6aca7bbedc2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.2.2
-CurrentVersionCode: 36
+CurrentVersion: 1.5.3
+CurrentVersionCode: 46

@@ -100,7 +100,71 @@ Builds:
     scanignore:
       - idTech4Amm/src/main/assets/source
 
+  - versionName: 1.1.0harmattan39natasha
+    versionCode: 11039
+    commit: c8196c18f46448d339d928d484179c390554df1e
+    subdir: idTech4Amm
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libc-dev make libtinfo5
+    gradle:
+      - yes
+    scanignore:
+      - idTech4Amm/src/main/assets/source
+    scandelete:
+      - Q3E/src/main/jni
+
+  - versionName: 1.1.0harmattan50natasha
+    versionCode: 11050
+    commit: c994d926884d7cd9d8dbfc72ea6883ce5e467bc3
+    subdir: idTech4Amm
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libc-dev make libtinfo5
+    gradle:
+      - yes
+    scandelete:
+      - Q3E/src/main/jni
+
+  - versionName: 1.1.0harmattan51natasha
+    versionCode: 11051
+    commit: 3458da7e19f5cc32dade4375b9bc07a0206343ee
+    subdir: idTech4Amm
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libc-dev make libtinfo5
+    gradle:
+      - yes
+    scanignore:
+      - idTech4Amm/src/main/assets/source
+    scandelete:
+      - Q3E/src/main/jni
+
+  - versionName: 1.1.0harmattan52natasha
+    versionCode: 11052
+    commit: fb5dfa0355981b8e3b3bb81b6dbf96f16f958694
+    subdir: idTech4Amm
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libc-dev make libtinfo5 python-is-python3
+    gradle:
+      - yes
+    scandelete:
+      - Q3E/src/main/jni
+
+  - versionName: 1.1.0harmattan53natasha
+    versionCode: 11053
+    commit: c368a078afaa838188eb6a7077cadd38c51c6fee
+    subdir: idTech4Amm
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libc-dev make libtinfo5 python-is-python3
+    gradle:
+      - yes
+    scandelete:
+      - Q3E/src/main/jni
+
 AutoUpdateMode: Version +natasha %v
 UpdateCheckMode: Tags .*-free
-CurrentVersion: 1.1.0harmattan38
-CurrentVersionCode: 11038
+CurrentVersion: 1.1.0harmattan53
+CurrentVersionCode: 11053

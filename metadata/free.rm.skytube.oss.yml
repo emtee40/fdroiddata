@@ -493,9 +493,39 @@ Builds:
     rm:
       - app/libs/*.jar
 
+  - versionName: '2.988'
+    versionCode: 48
+    commit: 59c27f33b5e7fb5e084f966a20e7f9ab5e020834
+    subdir: app
+    submodules: true
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.989'
+    versionCode: 49
+    commit: 12e947bdbb5891b0462576162caba0f50787cd5a
+    subdir: app
+    submodules: true
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.990'
+    versionCode: 50
+    commit: 84e925c5e9fb0cba8752384c7ff318888108b879
+    subdir: app
+    submodules: true
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
 MaintainerNotes: '* Current versions include app/libs/*.jar. Remove them.'
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.987'
-CurrentVersionCode: 47
+CurrentVersion: '2.990'
+CurrentVersionCode: 50

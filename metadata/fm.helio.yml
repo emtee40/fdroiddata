@@ -2,6 +2,8 @@ Categories:
   - Multimedia
   - Writing
 License: GPL-3.0-only
+AuthorName: Peter Rudenko
+AuthorEmail: peter.rudenko@gmail.com
 WebSite: https://helio.fm
 SourceCode: https://github.com/helio-fm/helio-sequencer
 IssueTracker: https://github.com/helio-fm/helio-sequencer/issues
@@ -12,23 +14,13 @@ OpenCollective: helio-workstation
 
 AutoName: Helio
 Description: |-
-  Most of the DAW interfaces often seem overcomplicated,
-  and they only tend to get more and more bloated over time.
-  Many of them are commercial, proprietary-licensed and almost none
-  of them support all major operating systems at the same time.
+  Helio is a libre music sequencer aimed at hobbyist composers,
+  game developers, and indie artists.
 
-  Helio is an attempt to rethink a music sequencer to create a
-  tool that feels right.
-
-  It aims to be a modern music creation software,
-  featuring linear-based/pattern-based sequencer with clean UI,
-  integrated version control for synchronizing project between
-  devices, microtonal temperaments support, small portable builds
-  and more; mainly targeted at hobbyist composers, game developers
-  and indie artists.
+  Follow the documentation to get started: <a href="https://docs.helio.fm">https://docs.helio.fm</a>
 
 RepoType: git
-Repo: https://github.com/helio-fm/helio-workstation.git
+Repo: https://github.com/helio-fm/helio-sequencer.git
 
 Builds:
   - versionName: '3.4'
@@ -154,7 +146,30 @@ Builds:
       - .
     ndk: r22b
 
+  - versionName: '3.13'
+    versionCode: 313
+    commit: d53c705d74ed7c83ab124fdb532b05a4462ba348
+    subdir: Projects/Android/app
+    submodules: true
+    gradle:
+      - yes
+    output: build/outputs/apk/release_/release/app-release_-release-unsigned.apk
+    rm:
+      - Projects/Deployment
+      - Projects/LinuxMakefile
+      - Projects/VisualStudio2017
+      - Projects/VisualStudio2019
+      - Projects/iOS
+      - Projects/macOS
+    prebuild:
+      - sed -i -e 's/6.1.1/7.3.3/' ../gradle/wrapper/gradle-wrapper.properties
+      - sed -i -e 's/4.0.0/7.2.0/' ../build.gradle
+      - sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+    scandelete:
+      - ThirdParty/JUCE
+    ndk: 21.3.6528147
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '3.12'
-CurrentVersionCode: 312
+CurrentVersion: '3.13'
+CurrentVersionCode: 313

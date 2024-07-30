@@ -1,0 +1,83 @@
+Categories:
+  - Internet
+  - Security
+License: MIT
+AuthorName: greenart7c3
+AuthorEmail: greenart7c3@proton.me
+AuthorWebSite: https://greenart7c3.com
+SourceCode: https://github.com/greenart7c3/Amber
+IssueTracker: https://github.com/greenart7c3/Amber/issues
+Translation: https://crowdin.com/project/amber-nostr-signer
+Changelog: https://github.com/greenart7c3/Amber/releases
+Donate: https://greenart7c3.com/
+
+AutoName: Amber
+
+RepoType: git
+Repo: https://github.com/greenart7c3/Amber.git
+Binaries: https://github.com/greenart7c3/Amber/releases/download/v%v/amber-free-universal-v%v.apk
+
+Builds:
+  - versionName: 1.0.6
+    versionCode: 69
+    commit: v1.0.6
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 1.0.7
+    versionCode: 72
+    commit: 2117f8557e6212dc1f6ea7b3af7f1ba59188b561
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 1.0.8
+    versionCode: 73
+    commit: 83be8eed118efb4ac28d44b5eacc89aa9abe8875
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 1.0.9
+    versionCode: 74
+    commit: df8fdf244cb7b7b86590a807987702c548125e36
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 1.1.0
+    versionCode: 75
+    disable: prerelease
+    commit: 8d8d75dae475aad1b1a63c36b5aa771ad03abf24
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 1.1.0
+    versionCode: 76
+    commit: 9a04922193aa882303233f243da443e82d2b7a4a
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 1.1.2
+    versionCode: 78
+    commit: a8b6ae96fd1fc08a9c4426ec8f38f389213f0732
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+AllowedAPKSigningKeys: 56dc631996a55c2284790448c7dc9f1dd05df596b2ce4882313633f5602e5fe4
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ((?!pre).)*$
+CurrentVersion: 1.1.2
+CurrentVersionCode: 78

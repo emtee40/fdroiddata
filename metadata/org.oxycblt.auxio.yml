@@ -696,7 +696,76 @@ Builds:
       - media/libraries
     ndk: 25.2.9519653
 
+  - versionName: 3.4.3
+    versionCode: 44
+    commit: 9f66a05f2d855911dcacd718af90d883c0289214
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 25.2.9519653
+
+  - versionName: 3.5.0
+    versionCode: 46
+    commit: 8beb2ef4af8cd1ca7cfe277193ec7f0ae455725d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 25.2.9519653
+
+  - versionName: 3.5.1
+    versionCode: 47
+    disable: Unusable due to bug
+    commit: 6e07b3fcfd7822ce0f269ea8fe058d07ac9bcdaf
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 25.2.9519653
+
+  - versionName: 3.5.2
+    versionCode: 48
+    commit: 4a57d850379bbb2a62d6baff4f1897537845beea
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake file make ninja-build
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/afterEvaluate {/,/^}/d' ../media/publish.gradle
+      - sed -i -e '/gms/d' ../media/build.gradle
+    scandelete:
+      - media/libraries
+    ndk: 25.2.9519653
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*[0-9]$
-CurrentVersion: 3.4.2
-CurrentVersionCode: 43
+CurrentVersion: 3.5.2
+CurrentVersionCode: 48

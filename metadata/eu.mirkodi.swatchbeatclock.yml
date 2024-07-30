@@ -3,12 +3,12 @@ Categories:
 License: GPL-3.0-or-later
 AuthorName: mirk0dex
 AuthorWebSite: https://www.mirkodi.eu
-SourceCode: https://git.mirkodi.eu/mirk0dex/swatchbeatclock
+SourceCode: https://codeberg.org/mirk0dex/swatchbeatclock
 
 AutoName: Swatch .beat clock
 
 RepoType: git
-Repo: https://git.mirkodi.eu/mirk0dex/swatchbeatclock
+Repo: https://codeberg.org/mirk0dex/swatchbeatclock
 
 Builds:
   - versionName: v1.2.1
@@ -44,7 +44,30 @@ Builds:
     gradle:
       - yes
 
+  - versionName: v1.2.4
+    versionCode: 13
+    commit: fd60ca6daee68dd17d44c33b72cb376396d903b0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.2.6
+    versionCode: 15
+    commit: f4fca1c5894694567d92fe71bed97ff6be0a436d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.2.7
+    versionCode: 17
+    commit: 0e5271b5109c263e4e6d68f446aef1a64eb6d38f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/main/res/values-images
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v1.2.2
-CurrentVersionCode: 11
+CurrentVersion: v1.2.7
+CurrentVersionCode: 17

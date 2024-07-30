@@ -11,6 +11,8 @@ IssueTracker: https://github.com/opacapp/opacclient/issues
 
 AutoName: Web Opac
 Description: |-
+  <b>NOTE:</b> This project is end-of-life as of 2024-06-30. No more changes to this repository are planned and the app will no longer receive updates.
+
   This free and open source Android app enables convenient mobile access to
   catalogues and user accounts of more than 1,000 public and academic libraries,
   most of them currently in the German-speaking countries (Deutschland,
@@ -2870,7 +2872,7 @@ MaintainerNotes: |-
   the source directly fixes this but might break more easily. Wait for next release
   to deploy.
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 6.5.0
-CurrentVersionCode: 245
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 6.28.318
+CurrentVersionCode: 246

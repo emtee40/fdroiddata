@@ -866,7 +866,49 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.29.0
+    versionCode: 134
+    commit: d67b17c58a4bbc0988519476da51ec6c9b14ba3c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.29.1
+    versionCode: 135
+    commit: d5856e79749318c0f610614450031dd34474c114
+    subdir: app
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - sha256sum="$( curl -L https://github.com/CatimaLoyalty/Android/releases/download/v$$VERSION$$/SHA256SUMS
+        | grep -F unsigned | cut -c-64 | tr -cd '0-9a-f' )"
+      - sha256sum -c <<< "$sha256sum  build/outputs/apk/release/app-release-unsigned.apk"
+
+  - versionName: 2.30.0
+    versionCode: 136
+    commit: 61d2e9545e0a8efdd49f0ee1cc9f3a922d4331aa
+    subdir: app
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    prebuild: gradle clean
+    build:
+      - gradle assembleRelease
+      - sha256sum="$( curl -L https://github.com/CatimaLoyalty/Android/releases/download/v$$VERSION$$/SHA256SUMS
+        | grep -F unsigned | cut -c-64 | tr -cd '0-9a-f' )"
+      - sha256sum -c <<< "$sha256sum  build/outputs/apk/release/app-release-unsigned.apk"
+
+  - versionName: 2.31.0
+    versionCode: 137
+    commit: 469ed374ad8e516463e2d246e233e68886ddf7da
+    subdir: app
+    gradle:
+      - yes
+    postbuild:
+      - sha256sum="$( curl -L https://github.com/CatimaLoyalty/Android/releases/download/v$$VERSION$$/SHA256SUMS
+        | grep -F unsigned | cut -c-64 | tr -cd '0-9a-f' )"
+      - sha256sum -c <<< "$sha256sum  $$OUT$$"
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.28.0
-CurrentVersionCode: 133
+CurrentVersion: 2.31.0
+CurrentVersionCode: 137

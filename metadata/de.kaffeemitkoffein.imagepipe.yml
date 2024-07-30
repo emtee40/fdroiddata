@@ -168,7 +168,21 @@ Builds:
       - yes
     output: app/build/outputs/apk/release/app-release-unsigned.apk
 
+  - versionName: '0.68'
+    versionCode: 47
+    commit: b93781cb7ffb8f66d89005ec1fc3d0d2571632fa
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.69'
+    versionCode: 48
+    commit: bfb0a0a23cf5dc69870db6fd5699f7d478e59478
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '0.67'
-CurrentVersionCode: 46
+CurrentVersion: '0.69'
+CurrentVersionCode: 48

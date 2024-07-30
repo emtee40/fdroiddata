@@ -1,6 +1,6 @@
 AntiFeatures:
   Tracking:
-    en-US: Connects to various Mozilla and Google services that can track users.
+    en-US: Connects to various Mozilla services that can track users.
   UpstreamNonFree:
     en-US: Telemetry and proprietary bits are removed by F-Droid builds.
 Categories:
@@ -13,23 +13,9 @@ Changelog: https://www.mozilla.org/en-US/firefox/android/notes/
 Donate: https://sendto.mozilla.org/page/contribute/openwebfund
 
 Name: Fennec F-Droid
-Description: |-
-  Browser that supports current and anticipated web standards.
-
-  * Improved tracking protection that blocks over 2000 online trackers.
-  * Private mode available in a single tap.
-  * Customizable navigation bar position.
-  * Dark theme.
-  * Collections of tabs.
-  * Synchronization across multiple devices.
-  * Search widget.
-  * Picture-in-picture mode.
-
-  Fennec F-Droid is based on the latest Firefox release (codenamed Fenix).
-  It has proprietary bits and telemetry removed, but still connects to various Mozilla and Google services that can track users.
 
 RepoType: git
-Repo: https://github.com/mozilla-mobile/firefox-android.git
+Repo: https://gitlab.com/relan/fennecbuild.git
 
 Builds:
   - versionName: '35.0'
@@ -15165,34 +15151,361 @@ Builds:
     build: $$MozBuild$$/build.sh
     ndk: r25c
 
+  - versionName: 124.2.0
+    versionCode: 1242000
+    commit: fenix-v124.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v122.0
+      - MozAppServices@v124.0
+      - MozBuild@641741e340c189f3907b9c96fbae981aec6c0f71
+      - MozFennec@FIREFOX_124_0_2_RELEASE
+      - MozGlean@v57.0.0
+      - MozGleanAS@v56.0.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MozBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MozBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 124.2.0
+    versionCode: 1242020
+    commit: fenix-v124.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v122.0
+      - MozAppServices@v124.0
+      - MozBuild@641741e340c189f3907b9c96fbae981aec6c0f71
+      - MozFennec@FIREFOX_124_0_2_RELEASE
+      - MozGlean@v57.0.0
+      - MozGleanAS@v56.0.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MozBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MozBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 125.3.0
+    versionCode: 1253000
+    commit: fenix-v125.3.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v123.0
+      - MozAppServices@v125.0.1
+      - MozBuild@1319dc0ecfc2da8b4918899063fc59ae2bade497
+      - MozFennec@FIREFOX_125_0_3_RELEASE
+      - MozGlean@v58.1.0
+      - MozGleanAS@v56.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MozBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MozBuild$$/build.sh
+    ndk: r26c
+
+  - versionName: 125.3.0
+    versionCode: 1253020
+    commit: fenix-v125.3.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v123.0
+      - MozAppServices@v125.0.1
+      - MozBuild@1319dc0ecfc2da8b4918899063fc59ae2bade497
+      - MozFennec@FIREFOX_125_0_3_RELEASE
+      - MozGlean@v58.1.0
+      - MozGleanAS@v56.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MozBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MozBuild$$/build.sh
+    ndk: r26c
+
+  - versionName: 127.0.0
+    versionCode: 1270000
+    commit: e540b658e040742829b4a9f8a074b95d9ca7c4b6
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX_127_0_RELEASE
+      - FirefoxAndroidAS@components-v125.2.0
+      - MozAppServices@v127.0
+      - MozGlean@v60.0.1
+      - MozGleanAS@v58.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 127.0.0
+    versionCode: 1270020
+    commit: e540b658e040742829b4a9f8a074b95d9ca7c4b6
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX_127_0_RELEASE
+      - FirefoxAndroidAS@components-v125.2.0
+      - MozAppServices@v127.0
+      - MozGlean@v60.0.1
+      - MozGleanAS@v58.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 127.0.2
+    versionCode: 1270200
+    commit: 4a10094cb10dcc72bbada31add82baec049828cb
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX_127_0_2_RELEASE
+      - FirefoxAndroidAS@components-v125.2.0
+      - MozAppServices@v127.0
+      - MozGlean@v60.0.1
+      - MozGleanAS@v58.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 127.0.2
+    versionCode: 1270220
+    commit: 4a10094cb10dcc72bbada31add82baec049828cb
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX_127_0_2_RELEASE
+      - FirefoxAndroidAS@components-v125.2.0
+      - MozAppServices@v127.0
+      - MozGlean@v60.0.1
+      - MozGleanAS@v58.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.1
+    versionCode: 1280100
+    commit: 69716a178be85a662ea1cf4e9b53b9e6397924d8
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_1_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.1
+    versionCode: 1280120
+    commit: 69716a178be85a662ea1cf4e9b53b9e6397924d8
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_1_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.2
+    versionCode: 1280200
+    commit: ba2a57cbaa70b6f26a22db198b2fd1987ae63385
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_2_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.2
+    versionCode: 1280220
+    commit: ba2a57cbaa70b6f26a22db198b2fd1987ae63385
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_2_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.3
+    versionCode: 1280300
+    commit: d37d03280c1ae9db2497753c79931676b9b97a86
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_3_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.3
+    versionCode: 1280320
+    commit: d37d03280c1ae9db2497753c79931676b9b97a86
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_3_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
 MaintainerNotes: |-
   Version code scheme:
   XYZAR, where X.Y.Z is upstream version, A is architecture (0 = ARMv7, 1 = x86, 2 = ARMv8), R is revision (if we need to re-release).
   * Example: 530210 = Firefox 53.0.2 for x86, initial revision
   * Example: 550021 = Firefox 55.0 for ARMv8, second revision
 
-  MozAppServices, Glean and MozFennec versions:
-  grep 'VERSION =' build/org.mozilla.fennec_fdroid/android-components/plugins/dependencies/src/main/java/ApplicationServices.kt
-  grep 'mozilla_glean =' build/org.mozilla.fennec_fdroid/android-components/plugins/dependencies/src/main/java/DependenciesPlugin.kt
-  grep 'version =' build/org.mozilla.fennec_fdroid/android-components/plugins/dependencies/src/main/java/Gecko.kt
+  MozFennec:
+  https://hg.mozilla.org/releases/mozilla-release/tags
 
-  FirefoxAndroidAS version:
-  grep 'android_components_version =' build/srclib/MozAppServices/build.gradle
+  MozAppServices, Glean versions:
+  grep 'VERSION =' build/srclib/MozFennec/mobile/android/android-components/plugins/dependencies/src/main/java/ApplicationServices.kt
+  grep 'mozilla_glean =' build/srclib/MozFennec/mobile/android/android-components/plugins/dependencies/src/main/java/DependenciesPlugin.kt
 
   MozGleanAS version:
-  grep 'mozilla_glean =' build/srclib/FirefoxAndroidAS/android-components/plugins/dependencies/src/main/java/DependenciesPlugin.kt
+  grep '^glean =' build/srclib/MozAppServices/gradle/libs.versions.toml
 
   wasi-sdk version:
-  grep -A5 '^wasi-sdk:' build/srclib/MozFennec/taskcluster/ci/fetch/toolchains.yml
+  grep -A5 '^wasi-sdk:' build/srclib/MozFennec/taskcluster/kinds/fetch/toolchains.yml
 
   Rust:
   * https://github.com/rust-lang/rustup/tags
-  * https://www.rust-lang.org/
+  * https://firefox-source-docs.mozilla.org/writing-rust-code/update-policy.html#schedule
 
   Scanner detects 'com/google/firebase/messaging/FirebaseMessagingService' from stubs and 'com/google/android/gms/...' from microG libs for webauth
 
 ArchivePolicy: 6
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 124.1.0
-CurrentVersionCode: 1241020
+CurrentVersion: 128.0.3
+CurrentVersionCode: 1280320

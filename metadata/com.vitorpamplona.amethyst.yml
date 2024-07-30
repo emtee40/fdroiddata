@@ -798,6 +798,142 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/enable true/d' build.gradle
 
+  - versionName: 0.86.2
+    versionCode: 365
+    commit: 0854bd34ffb92b84290533919b5fc00a0f9fdad6
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.86.3
+    versionCode: 366
+    commit: d8e9b4773b8a35d00703a2a96e92605c9198b49c
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.86.5
+    versionCode: 368
+    commit: 8c9800664f1f541df1336fc39c489fc9ab8ca097
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.87.2
+    versionCode: 371
+    commit: 0c48366d563cc3d4c588f58762f07e5f1586c045
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.87.5
+    versionCode: 374
+    commit: ae418f9d45c7c59fc8cbbb32eb6376052e909c37
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.87.6
+    versionCode: 375
+    commit: eea8b99622c1090a8090898ad2bdb6e67beee0df
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.87.7
+    versionCode: 376
+    commit: 609faf245a45742c31beb485f954affe8954d493
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.88.0
+    versionCode: 377
+    commit: d28f20519b982fb42cb50836f580410ba9a52bf1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.88.2
+    versionCode: 379
+    commit: 0e1e379c7dc65a99d0fabaf5fe228bca7ed310a8
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.88.4
+    versionCode: 381
+    commit: c37adfc6a2d72a0721b30e99a88ea813a80de63e
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.88.8
+    versionCode: 385
+    commit: 5c21e219fe586def5e743b9b28891e6e7542df53
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.89.1
+    versionCode: 387
+    commit: ce839ed6d9a3d086b105c85d7c3c08f146cd81ef
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.89.2
+    versionCode: 388
+    commit: 75c7d40f4e4294dac93e6c911288d5a1934f9f2e
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.89.4
+    versionCode: 390
+    commit: c128e43fe56145bd278cbc56070d153b52b79f57
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.89.5
+    versionCode: 391
+    commit: a5c6f86b35c9e2937f18a29e16152a5021838cb6
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.89.6
+    versionCode: 392
+    commit: 62ae43e863af6417da1eba17a250cecb2dcb4be7
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.89.7
+    versionCode: 393
+    commit: dbaadb459555b75094a2888499bcecccd144f4f4
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
 AllowedAPKSigningKeys: c2d0aa86bcb6b62090561a41bbe336e98b78c2d0210a498dc885f28e1348cf17
 
 MaintainerNotes: see https://gitlab.com/fdroid/fdroiddata/-/issues/2973#note_1428295385
@@ -805,5 +941,5 @@ MaintainerNotes: see https://gitlab.com/fdroid/fdroiddata/-/issues/2973#note_142
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.85.3
-CurrentVersionCode: 362
+CurrentVersion: 0.89.7
+CurrentVersionCode: 393

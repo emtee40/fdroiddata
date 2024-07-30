@@ -5,7 +5,7 @@ SourceCode: https://github.com/RohitKushvaha01/Xed-Editor
 IssueTracker: https://github.com/RohitKushvaha01/Xed-Editor/issues
 Changelog: https://github.com/RohitKushvaha01/Xed-Editor/releases
 
-AutoName: Xed Editor
+AutoName: Karbon
 
 RepoType: git
 Repo: https://github.com/RohitKushvaha01/Xed-Editor.git
@@ -47,9 +47,109 @@ Builds:
     scanignore:
       - app/src/main/assets/files.zip
 
-  - versionName: 1.1.2
-    versionCode: 12
-    commit: caf9c9ee8b0f492937e6da8eb4575060620abaa2
+  - versionName: 1.1.4
+    versionCode: 14
+    commit: 7c9190c6ac129abba0679b04a823da6d00e45019
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.5
+    versionCode: 15
+    commit: 31444d719d9633be6c6f799028c06700d4911ccc
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.7
+    versionCode: 17
+    commit: 6e839691140f0bcfafad253701b291acd130c95f
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.8
+    versionCode: 18
+    commit: dac4f2541bc73d44e7c1680b232ffb6f6ce574e0
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.9
+    versionCode: 19
+    commit: 65965ffd435d8563223bfc9cc2f7ab8e1283931d
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.0.0
+    versionCode: 20
+    commit: d119bd596829f01f3ccd241df1e7819b8d00f47e
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.0.1
+    versionCode: 21
+    commit: 31151e47273a9f2011fde6a0488e63324b7802ce
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.1.0
+    versionCode: 22
+    commit: 92e52d71d371cfca346b9a759579663922f03a87
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.2.0
+    versionCode: 23
+    commit: bcaa77b42c704131594b97d3310ad0cf170e484d
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.2.1
+    versionCode: 24
+    commit: e775b226d42c4de2adf8fdd6e676966cb26c9962
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.3.0
+    versionCode: 25
+    commit: 7d8c6882beec40ea628f506043a27316c793ec35
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.5.0
+    versionCode: 29
+    disable: https://github.com/RohitKushvaha01/Xed-Editor/issues/47#issuecomment-2256396342
+    commit: 56ed301969c4e5dc938c64db6b4db0026e29edaa
     subdir: app
     gradle:
       - yes
@@ -60,5 +160,5 @@ AllowedAPKSigningKeys: 8ad6b593b0772c96f9d05e923b610f16aed2792c664f0cd91f0dfd627
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.1.2
-CurrentVersionCode: 12
+CurrentVersion: 2.5.0
+CurrentVersionCode: 29

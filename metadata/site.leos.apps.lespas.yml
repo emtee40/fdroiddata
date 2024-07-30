@@ -818,7 +818,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.9.9
+    versionCode: 98
+    commit: becd0513102fda1b9ac28a1052ef33cdf4bf2912
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.10
+    versionCode: 99
+    commit: b1957564a94b17751f91764abea05ab85f5a43fc
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.9.8
-CurrentVersionCode: 97
+CurrentVersion: 2.9.10
+CurrentVersionCode: 99

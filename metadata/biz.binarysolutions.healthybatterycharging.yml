@@ -1,0 +1,78 @@
+Categories:
+  - System
+License: MIT
+AuthorName: Binary Solutions
+AuthorEmail: support+hbc@binarysolutions.biz
+AuthorWebSite: https://binarysolutions.biz
+SourceCode: https://github.com/vbresan/HealthyBatteryCharging
+IssueTracker: https://github.com/vbresan/HealthyBatteryCharging/issues
+Changelog: https://github.com/vbresan/HealthyBatteryCharging/releases
+
+AutoName: Healthy Battery Charging
+
+RepoType: git
+Repo: https://github.com/vbresan/HealthyBatteryCharging.git
+Binaries: https://github.com/vbresan/HealthyBatteryCharging/releases/download/%c/biz.binarysolutions.healthybatterycharging-%v-release.apk
+
+Builds:
+  - versionName: 2.0.1
+    versionCode: 3
+    commit: f73baf3f50f6f05aea4e16c1089358f0cb20a6b5
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 4 fix-newlines
+      $$OUT$$ 'META-INF/services/*'
+
+  - versionName: 2.0.2
+    versionCode: 4
+    commit: fed44b8d72b4547852fe496a18160e9c584dcc88
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 4 fix-newlines
+      $$OUT$$ 'META-INF/services/*'
+
+  - versionName: 2.0.3
+    versionCode: 5
+    commit: 5fccd90bc1665399860ddb108b423033acdf9740
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 4 fix-newlines
+      $$OUT$$ 'META-INF/services/*'
+
+  - versionName: 2.0.4
+    versionCode: 6
+    commit: cc1719fde54e5f43a22716a578b21875f6e4ec53
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 4 fix-newlines
+      $$OUT$$ 'META-INF/services/*'
+
+  - versionName: 2.0.5
+    versionCode: 7
+    commit: c12decf5dc0c02c64e957174f6d27f2c77c45afc
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 4 fix-newlines
+      $$OUT$$ 'META-INF/services/*'
+
+AllowedAPKSigningKeys: eaf45266864c7fdb07eb33bb8c4a1c87259f7ee28f7d3089100336ad265293c6
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.0.5
+CurrentVersionCode: 7

@@ -5589,9 +5589,359 @@ Builds:
       - desktop
     prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
 
+  - versionName: 4.10.22
+    versionCode: 982
+    commit: eefce7f484d25db6ea9302b31c7597e219107567
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.0
+    versionCode: 983
+    commit: c2a2bcb417a793cbd10375d29d346d795ee03860
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.1
+    versionCode: 984
+    commit: 802a206c5336659af2550dbec98e9c545f788522
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.3
+    versionCode: 986
+    commit: 5a40c4f56395a77ace6ac0b056bef3db1dbcf1d7
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.4
+    versionCode: 987
+    commit: 43e38e38694d9850a177547f0a9bc408f7bc2523
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.5
+    versionCode: 988
+    commit: f69539ab9208ebb87d776997ea13a7d316db36aa
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.6
+    versionCode: 989
+    commit: 6b2fe878876b7bc806118cfd48e705100037a9d0
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.7-patch1
+    versionCode: 991
+    commit: a58e09f6213abe8c36665749def282482e4bc875
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.8
+    versionCode: 992
+    commit: 235921e3151239b3b42381e8d29b870804e0ce73
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.9
+    versionCode: 993
+    commit: 5291c5b79a8df683d7be2acb12424fc57706eae9
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.10
+    versionCode: 994
+    commit: dee12bf23d6995db24ef63d1007f7d8f0151b9d6
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.12
+    versionCode: 996
+    commit: 66634dba0e9f122bd08be076384176d875bd323e
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.13
+    versionCode: 997
+    commit: 4d728914f457ec1f85bb7838c874cd600e42808a
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.14-patch1
+    versionCode: 999
+    commit: f1c0288a43021be0a3b98be9ee00b4656aae9aac
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.16
+    versionCode: 1001
+    commit: 5404b9700954dcb39314207f2eb4753c2e8543f1
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.17
+    versionCode: 1002
+    commit: 1296b16f90f8cdf9d6641431018624e512d1ec9a
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.18-patch1
+    versionCode: 1004
+    commit: 78ac58fe3982d59f664e9b13ddda23935a7ee36f
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.11.19-patch1
+    versionCode: 1006
+    commit: db85cee3e5ef72137652bde3e9a99ed7e1ff6c9e
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.0
+    versionCode: 1007
+    commit: 9dfd82e002cd3518eba6d3a97b7d27c1ab8235e9
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.0-patch1
+    versionCode: 1008
+    commit: 498c22396ad7b5d9c5625b41688a65a6a85b1fc3
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.1
+    versionCode: 1009
+    commit: e61c6c2a90ef96d34c155858f685d6eacc1d68ab
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.2-patch1
+    versionCode: 1011
+    commit: 30a91f2f4a1e5d26dd52b8eb6f8cb74cb4260e69
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.3
+    versionCode: 1012
+    commit: f7f5ab78d3dfadb52370c177e4af6d7bbbca9e88
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.5-patch1
+    versionCode: 1015
+    commit: 34c19398ae97045ebb99304162a843ad006f6a39
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.6-patch1
+    versionCode: 1017
+    commit: 0f07ec93e427948d83bd4f2cf7e7454a539ac740
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.7
+    versionCode: 1018
+    commit: 9c864c34f0d7a65daed1395cce0137a57c108b73
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.8
+    versionCode: 1019
+    commit: 39a303358b2f46744a35b8ba8a64ccd6c79e4905
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.9
+    versionCode: 1020
+    commit: dbc990401f346f4ce20b13cfe678bcb7d6972667
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.10-patch1
+    versionCode: 1022
+    commit: d9dd7c93f89f123465b73408382ad294e2e02168
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.11
+    versionCode: 1023
+    commit: 41bd1314b9908267218ef42d48269c5839167fb6
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.11-patch1
+    versionCode: 1024
+    commit: ef38007729195c199113850efba71eccae4ac006
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.12-patch1
+    versionCode: 1026
+    commit: 77c802ed9f38ad03a849da0f37363c79b3457215
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.12-patch2
+    versionCode: 1027
+    commit: 37b4bcbda8951202ada93d6fbc580afa4e468af9
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.13
+    versionCode: 1028
+    commit: 2d1a69e7f5af877b55aa0d88b257ec675474110b
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
+  - versionName: 4.12.14
+    versionCode: 1029
+    commit: e42e3273fe9a3233773a89a0cc0cec609b96016c
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sdkmanager 'platforms;android-33' 'build-tools;33.0.2'
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: buildSrc/src/main/kotlin/BuildConfig.kt|appCodeNumber = (\d+)|.|appVersion
   = "(.*)"
-CurrentVersion: 4.10.21
-CurrentVersionCode: 981
+CurrentVersion: 4.12.14
+CurrentVersionCode: 1029

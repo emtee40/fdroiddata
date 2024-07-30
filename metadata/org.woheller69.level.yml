@@ -130,7 +130,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.8'
+    versionCode: 28
+    commit: 76ee9272c4f77ce5226d9f19e67a1c0b77d85b64
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.9'
+    versionCode: 29
+    commit: b2f54e413c52f4d99e78516098ace388c2d7f0eb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 30
+    commit: 702a3e2cf69b6aea768dd37f20b190e7bdebef74
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.7'
-CurrentVersionCode: 27
+CurrentVersion: '3.0'
+CurrentVersionCode: 30

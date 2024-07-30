@@ -3077,7 +3077,200 @@ Builds:
     gradleprops:
       - android.builder.sdkDownload=true
 
+  - versionName: 20240409-02
+    versionCode: 414
+    commit: 0c8f3405550229f974f34128dec11b980905f8a0
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240412-01
+    versionCode: 415
+    commit: 50bf2e709e1299cbbca69bbb8dc0105784f85bef
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240419-01
+    versionCode: 416
+    commit: 38e369a03f3b48f8a78f398ea696856537609e0b
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240426-01
+    versionCode: 417
+    commit: 3e92358727972782fd2a3323d108ae97d3b8ccd9
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240502-01
+    versionCode: 418
+    commit: 759f6b8fa98781f94ae835733ae09c3d07e41d7c
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240507-02
+    versionCode: 421
+    commit: 855e20513adf817b8ad4d53f1e17c7b9f20ecc68
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240521-01
+    versionCode: 422
+    commit: 16d9a0a4714da493583eb0e839aafef940a2ba0b
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240529-01
+    versionCode: 423
+    commit: bdff4eed557f032b48c8875d1cbc1640674f52b3
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240620-01
+    versionCode: 424
+    commit: 84ea28b2b7f5147ec6a4aa649c2b6d8116f20aa5
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 swig yasm
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240705-01
+    versionCode: 425
+    commit: 7bb31398388fac1974c23f8f5205f2c7e648f06e
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
+  - versionName: 20240718-01
+    versionCode: 426
+    commit: 96fa2cfedb1da7fbf6edb176f26625b3e0e4e155
+    timeout: 10800
+    subdir: jami-android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint bzip2 cmake g++ gettext libtool libyaml-cpp-dev
+        make pkg-config python-is-python3 yasm
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie swig
+    gradle:
+      - withUnifiedPush
+    prebuild: sed -i -e "/android {/a lint { abortOnError = false }" build.gradle.kts
+    build:
+      - cd ../../daemon/bin/jni
+      - PACKAGEDIR=../../../jami-android/libjamiclient/src/main/java ./make-swig.sh
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 20240321-01
-CurrentVersionCode: 411
+CurrentVersion: 20240718-01
+CurrentVersionCode: 426

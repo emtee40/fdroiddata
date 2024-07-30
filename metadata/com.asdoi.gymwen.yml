@@ -5,18 +5,18 @@ Categories:
   - Internet
   - Science & Education
 License: GPL-3.0-or-later
-AuthorName: Felix Hollederer
-AuthorEmail: asdoi@t-online.de
-WebSite: https://asdoi.gitlab.io/gymwenapp.html
-SourceCode: https://gitlab.com/asdoi/GymWen
-IssueTracker: https://gitlab.com/asdoi/GymWen/issues
-Changelog: https://gitlab.com/asdoi/GymWen/-/releases
+AuthorName: flxholle
+AuthorEmail: flxholle@posteo.com
+WebSite: https://flxholle.gitlab.io/gymwenapp.html
+SourceCode: https://gitlab.com/flxholle/GymWen
+IssueTracker: https://gitlab.com/flxholle/GymWen/issues
+Changelog: https://gitlab.com/flxholle/GymWen/-/releases
 Donate: https://www.buymeacoffee.com/asdoi
 
 AutoName: GymWen
 
 RepoType: git
-Repo: https://gitlab.com/asdoi/GymWen.git
+Repo: https://gitlab.com/flxholle/GymWen.git
 
 Builds:
   - versionName: 1.0.3
@@ -151,7 +151,17 @@ Builds:
       - releases/GymWenApp.zip
     prebuild: sed -i -e '/android {/a lintOptions{abortOnError false}' build.gradle
 
+  - versionName: 1.4.5
+    versionCode: 145
+    commit: 60512324be9763ef318679040e358cdc895277ee
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - releases/GymWenApp.zip
+    prebuild: sed -i -e '/android {/a lintOptions{abortOnError false}' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.4
-CurrentVersionCode: 144
+CurrentVersion: 1.4.5
+CurrentVersionCode: 145

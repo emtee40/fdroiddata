@@ -19,6 +19,7 @@ Repo: https://github.com/rustdesk/rustdesk
 Builds:
   - versionName: 1.1.10-1
     versionCode: 28
+    disable: downloads binaries, known vulnerabilities
     commit: 6ae988ba88cfcf454db7118cd186e73f8805ce5b
     subdir: flutter
     sudo:
@@ -79,9 +80,12 @@ Builds:
       - flutter packages pub get
       - flutter build apk --release --target-platform android-arm64,android-arm
     ndk: r22b
+    antifeatures:
+      - KnownVuln
 
   - versionName: 1.2.3-1
     versionCode: 12301
+    disable: downloads binaries, known vulnerabilities
     commit: 45dbea57f1c509875e4340254eeb252c657e15a1
     timeout: 14400
     subdir: flutter
@@ -210,9 +214,12 @@ Builds:
       - echo "# Delete built flutter engine"
       - rm -rf ../flutter-sdk
     ndk: r26b
+    antifeatures:
+      - KnownVuln
 
   - versionName: 1.2.3-1
     versionCode: 12302
+    disable: downloads binaries, known vulnerabilities
     commit: 45dbea57f1c509875e4340254eeb252c657e15a1
     timeout: 3600
     subdir: flutter
@@ -288,9 +295,12 @@ Builds:
       - echo "# Build apk"
       - flutter build apk $FLUTTER_APK_CMD --target-platform "$FLUTTER_PLATFORM"
     ndk: r26b
+    antifeatures:
+      - KnownVuln
 
   - versionName: 1.2.3-1
     versionCode: 12303
+    disable: downloads binaries, known vulnerabilities
     commit: 45dbea57f1c509875e4340254eeb252c657e15a1
     timeout: 3600
     subdir: flutter
@@ -365,9 +375,12 @@ Builds:
       - echo "# Build apk"
       - flutter build apk $FLUTTER_APK_CMD --target-platform "$FLUTTER_PLATFORM"
     ndk: r26b
+    antifeatures:
+      - KnownVuln
 
   - versionName: 1.2.3-1
     versionCode: 12304
+    disable: downloads binaries, known vulnerabilities
     commit: 45dbea57f1c509875e4340254eeb252c657e15a1
     timeout: 3600
     subdir: flutter
@@ -442,9 +455,12 @@ Builds:
       - echo "# Build apk"
       - flutter build apk $FLUTTER_APK_CMD --target-platform "$FLUTTER_PLATFORM"
     ndk: r26b
+    antifeatures:
+      - KnownVuln
 
   - versionName: 1.2.3-2
     versionCode: 12305
+    disable: downloads binaries, known vulnerabilities
     commit: 3a6f56ebbca1a9a05e644b9b2e4c33d551964e34
     timeout: 14400
     subdir: flutter
@@ -573,9 +589,12 @@ Builds:
       - echo "# Delete built flutter engine"
       - rm -rf ../flutter-sdk
     ndk: r26b
+    antifeatures:
+      - KnownVuln
 
   - versionName: 1.2.3-2
     versionCode: 12306
+    disable: downloads binaries, known vulnerabilities
     commit: 3a6f56ebbca1a9a05e644b9b2e4c33d551964e34
     timeout: 3600
     subdir: flutter
@@ -651,9 +670,12 @@ Builds:
       - echo "# Build apk"
       - flutter build apk $FLUTTER_APK_CMD --target-platform "$FLUTTER_PLATFORM"
     ndk: r26b
+    antifeatures:
+      - KnownVuln
 
   - versionName: 1.2.3-2
     versionCode: 12307
+    disable: downloads binaries, known vulnerabilities
     commit: 3a6f56ebbca1a9a05e644b9b2e4c33d551964e34
     timeout: 3600
     subdir: flutter
@@ -728,9 +750,12 @@ Builds:
       - echo "# Build apk"
       - flutter build apk $FLUTTER_APK_CMD --target-platform "$FLUTTER_PLATFORM"
     ndk: r26b
+    antifeatures:
+      - KnownVuln
 
   - versionName: 1.2.3-2
     versionCode: 12308
+    disable: downloads binaries, known vulnerabilities
     commit: 3a6f56ebbca1a9a05e644b9b2e4c33d551964e34
     timeout: 3600
     subdir: flutter
@@ -805,6 +830,134 @@ Builds:
       - echo "# Build apk"
       - flutter build apk $FLUTTER_APK_CMD --target-platform "$FLUTTER_PLATFORM"
     ndk: r26b
+    antifeatures:
+      - KnownVuln
+
+  - versionName: 1.2.6
+    versionCode: 102060001
+    commit: 5e8fe239fa334a6159d91c0f8ea748556156d52f
+    timeout: 14400
+    sudo:
+      - apt-get update
+      - apt-get -y install cmake/bookworm-backports cmake-data/bookworm-backports
+      - apt-get -y install clang libclang-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+        libgtk-3-dev make nasm ninja-build patchelf pkg-config wget xz-utils yasm
+        yq zip
+    output: flutter/build/app/outputs/flutter-apk/app-release.apk
+    prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" armeabi-v7a prebuild
+    build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" armeabi-v7a build
+
+  - versionName: 1.2.6
+    versionCode: 102060002
+    commit: 5e8fe239fa334a6159d91c0f8ea748556156d52f
+    timeout: 14400
+    sudo:
+      - apt-get update
+      - apt-get -y install cmake/bookworm-backports cmake-data/bookworm-backports
+      - apt-get -y install clang libclang-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+        libgtk-3-dev make nasm ninja-build patchelf pkg-config wget xz-utils yasm
+        yq zip
+    output: flutter/build/app/outputs/flutter-apk/app-release.apk
+    prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" arm64-v8a prebuild
+    build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" arm64-v8a build
+
+  - versionName: 1.2.6
+    versionCode: 102060003
+    commit: 5e8fe239fa334a6159d91c0f8ea748556156d52f
+    timeout: 14400
+    sudo:
+      - apt-get update
+      - apt-get -y install cmake/bookworm-backports cmake-data/bookworm-backports
+      - apt-get -y install clang libclang-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+        libgtk-3-dev make nasm ninja-build patchelf pkg-config wget xz-utils yasm
+        yq zip
+    output: flutter/build/app/outputs/flutter-apk/app-release.apk
+    prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" x86_64 prebuild
+    build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" x86_64 build
+
+  - versionName: 1.2.6-0.1
+    versionCode: 102060004
+    commit: 188f85b042595d045043d9c17211cba2b5e2dc4d
+    timeout: 14400
+    sudo:
+      - apt-get update
+      - apt-get -y install cmake/bookworm-backports cmake-data/bookworm-backports
+      - apt-get -y install clang libclang-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+        libgtk-3-dev make nasm ninja-build patchelf pkg-config wget xz-utils yasm
+        yq zip
+    output: flutter/build/app/outputs/flutter-apk/app-release.apk
+    prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" armeabi-v7a prebuild
+    build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" armeabi-v7a build
+
+  - versionName: 1.2.6-0.1
+    versionCode: 102060005
+    commit: 188f85b042595d045043d9c17211cba2b5e2dc4d
+    timeout: 14400
+    sudo:
+      - apt-get update
+      - apt-get -y install cmake/bookworm-backports cmake-data/bookworm-backports
+      - apt-get -y install clang libclang-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+        libgtk-3-dev make nasm ninja-build patchelf pkg-config wget xz-utils yasm
+        yq zip
+    output: flutter/build/app/outputs/flutter-apk/app-release.apk
+    prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" arm64-v8a prebuild
+    build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" arm64-v8a build
+
+  - versionName: 1.2.6-0.1
+    versionCode: 102060006
+    commit: 188f85b042595d045043d9c17211cba2b5e2dc4d
+    timeout: 14400
+    sudo:
+      - apt-get update
+      - apt-get -y install cmake/bookworm-backports cmake-data/bookworm-backports
+      - apt-get -y install clang libclang-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+        libgtk-3-dev make nasm ninja-build patchelf pkg-config wget xz-utils yasm
+        yq zip
+    output: flutter/build/app/outputs/flutter-apk/app-release.apk
+    prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" x86_64 prebuild
+    build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" x86_64 build
+
+  - versionName: 1.2.7
+    versionCode: 102070001
+    commit: a72a8906b060c691624da1fa187558d5885ec9e9
+    timeout: 14400
+    sudo:
+      - apt-get update
+      - apt-get -y install cmake/bookworm-backports cmake-data/bookworm-backports
+      - apt-get -y install clang libclang-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+        libgtk-3-dev make nasm ninja-build patchelf pkg-config wget xz-utils yasm
+        yq zip
+    output: flutter/build/app/outputs/flutter-apk/app-release.apk
+    prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" armeabi-v7a prebuild
+    build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" armeabi-v7a build
+
+  - versionName: 1.2.7
+    versionCode: 102070002
+    commit: a72a8906b060c691624da1fa187558d5885ec9e9
+    timeout: 14400
+    sudo:
+      - apt-get update
+      - apt-get -y install cmake/bookworm-backports cmake-data/bookworm-backports
+      - apt-get -y install clang libclang-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+        libgtk-3-dev make nasm ninja-build patchelf pkg-config wget xz-utils yasm
+        yq zip
+    output: flutter/build/app/outputs/flutter-apk/app-release.apk
+    prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" arm64-v8a prebuild
+    build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" arm64-v8a build
+
+  - versionName: 1.2.7
+    versionCode: 102070003
+    commit: a72a8906b060c691624da1fa187558d5885ec9e9
+    timeout: 14400
+    sudo:
+      - apt-get update
+      - apt-get -y install cmake/bookworm-backports cmake-data/bookworm-backports
+      - apt-get -y install clang libclang-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+        libgtk-3-dev make nasm ninja-build patchelf pkg-config wget xz-utils yasm
+        yq zip
+    output: flutter/build/app/outputs/flutter-apk/app-release.apk
+    prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" x86_64 prebuild
+    build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" x86_64 build
 
 MaintainerNotes: |-
   Licaon_Kter: Tracking AF applied because Rustdesk connects to rustdesk.com on start and sends a
@@ -831,9 +984,8 @@ MaintainerNotes: |-
     (0003-x86-no-debuggable.patch)
   - build jit_release APK using 'flutter build apk --debug --local-engine= --local-engine-src-path='
   .
-  basilgello: rustdesk version codes do not sequentially grow so I set up the simple versioner
-  CI job under https://gitlab.com/basilgello/rustdesk-fdroid-versioner until upstream accepts
-  my proposed change.
+  basilgello: The build script for F-Droid was refactored by me to be included into upstream
+  RustDesk tree in order to minimize the changes needed on F-Droid side and facilitate auto-updates.
 
 AutoUpdateMode: Version %v
 UpdateCheckMode: HTTP
@@ -841,7 +993,6 @@ VercodeOperation:
   - 100 * %c + 1
   - 100 * %c + 2
   - 100 * %c + 3
-  - 100 * %c + 4
-UpdateCheckData: https://gitlab.com/basilgello/rustdesk-fdroid-versioner/-/releases/rolling/downloads/rustdesk-version.txt|versionCode=(\d+)|.|versionName=(.*)
-CurrentVersion: 1.2.3-2
-CurrentVersionCode: 12308
+UpdateCheckData: https://github.com/rustdesk/rustdesk/releases/download/fdroid-version/rustdesk-version.txt|versionCode=(\d+)|.|versionName=(.*)
+CurrentVersion: 1.2.7
+CurrentVersionCode: 102070003

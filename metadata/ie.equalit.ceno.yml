@@ -1,7 +1,8 @@
 AntiFeatures:
   UpstreamNonFree:
-    en-US: Ceno is based on Firefox which has non-free libs. These libs are removed
-      in Ceno.
+    en-US: Upstream Ceno source code uses pre-built libraries from Mozilla which are
+      not entirely free. For the F-Droid release of Ceno Browser, we patch the non-free
+      parts and build these libraries from scratch.
 Categories:
   - Internet
 License: MPL-2.0
@@ -503,38 +504,306 @@ Builds:
     build: $$CenoBuild$$/build.sh
     ndk: r25c
 
+  - versionName: 2.1.0
+    versionCode: 2015971272
+    commit: v2.1.0
+    timeout: 18000
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y bc cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - CenoBuild@v2.1.0
+      - FirefoxAndroid@components-v123.1.0
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v123.0.1
+      - MozFennec@FIREFOX_123_0_1_RELEASE
+      - MozGlean@v56.1.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild:
+      - $$CenoBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+      - $$CenoBuild$$/precenobuild.sh $$VERSION$$ $$VERCODE$$ 123
+    build: $$CenoBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 2.1.0
+    versionCode: 2015971274
+    commit: v2.1.0
+    timeout: 18000
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y bc cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - CenoBuild@v2.1.0
+      - FirefoxAndroid@components-v123.1.0
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v123.0.1
+      - MozFennec@FIREFOX_123_0_1_RELEASE
+      - MozGlean@v56.1.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild:
+      - $$CenoBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+      - $$CenoBuild$$/precenobuild.sh $$VERSION$$ $$VERCODE$$ 123
+    build: $$CenoBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 2.1.1
+    versionCode: 2015973928
+    commit: v2.1.1
+    timeout: 18000
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y bc cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - CenoBuild@v2.1.1
+      - FirefoxAndroid@components-v123.1.0
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v123.0.1
+      - MozFennec@FIREFOX_123_0_1_RELEASE
+      - MozGlean@v56.1.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild:
+      - $$CenoBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+      - $$CenoBuild$$/precenobuild.sh $$VERSION$$ $$VERCODE$$ 123
+    build: $$CenoBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 2.1.1
+    versionCode: 2015973930
+    commit: v2.1.1
+    timeout: 18000
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y bc cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - CenoBuild@v2.1.1
+      - FirefoxAndroid@components-v123.1.0
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v123.0.1
+      - MozFennec@FIREFOX_123_0_1_RELEASE
+      - MozGlean@v56.1.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild:
+      - $$CenoBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+      - $$CenoBuild$$/precenobuild.sh $$VERSION$$ $$VERCODE$$ 123
+    build: $$CenoBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 2.1.4
+    versionCode: 2015980504
+    commit: v2.1.4
+    timeout: 18000
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y bc cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - CenoBuild@v2.1.4
+      - FirefoxAndroid@components-v125.3.0
+      - FirefoxAndroidAS@components-v123.0
+      - MozAppServices@v125.0.1
+      - MozFennec@FIREFOX_125_0_3_RELEASE
+      - MozGlean@v58.1.0
+      - MozGleanAS@v56.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild:
+      - $$CenoBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+      - $$CenoBuild$$/precenobuild.sh $$VERSION$$ $$VERCODE$$ 125
+    build: $$CenoBuild$$/build.sh
+    ndk: r26c
+
+  - versionName: 2.1.4
+    versionCode: 2015980506
+    commit: v2.1.4
+    timeout: 18000
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y bc cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - CenoBuild@v2.1.4
+      - FirefoxAndroid@components-v125.3.0
+      - FirefoxAndroidAS@components-v123.0
+      - MozAppServices@v125.0.1
+      - MozFennec@FIREFOX_125_0_3_RELEASE
+      - MozGlean@v58.1.0
+      - MozGleanAS@v56.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild:
+      - $$CenoBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+      - $$CenoBuild$$/precenobuild.sh $$VERSION$$ $$VERCODE$$ 125
+    build: $$CenoBuild$$/build.sh
+    ndk: r26c
+
+  - versionName: 2.1.5
+    versionCode: 2015982600
+    commit: v2.1.5
+    timeout: 18000
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y bc cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - CenoBuild@v2.1.5
+      - MozFennec@FIREFOX-ANDROID_126_0_RELEASE
+      - FirefoxAndroidAS@components-v124.1.0
+      - MozAppServices@v126.0
+      - MozGlean@v59.0.0
+      - MozGleanAS@v57.0.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild:
+      - $$CenoBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+      - $$CenoBuild$$/precenobuild.sh $$VERSION$$ $$VERCODE$$ 126
+    build: $$CenoBuild$$/build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 2.1.5
+    versionCode: 2015982602
+    commit: v2.1.5
+    timeout: 18000
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y bc cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - CenoBuild@v2.1.5
+      - MozFennec@FIREFOX-ANDROID_126_0_RELEASE
+      - FirefoxAndroidAS@components-v124.1.0
+      - MozAppServices@v126.0
+      - MozGlean@v59.0.0
+      - MozGleanAS@v57.0.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild:
+      - $$CenoBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+      - $$CenoBuild$$/precenobuild.sh $$VERSION$$ $$VERCODE$$ 126
+    build: $$CenoBuild$$/build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 2.1.6
+    versionCode: 2015988504
+    commit: v2.1.6
+    timeout: 18000
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y bc cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - CenoBuild@v2.1.6
+      - MozFennec@FIREFOX_127_0_1_RELEASE
+      - FirefoxAndroidAS@components-v125.2.0
+      - MozAppServices@v127.0
+      - MozGlean@v60.0.1
+      - MozGleanAS@v58.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild:
+      - $$CenoBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+      - $$CenoBuild$$/precenobuild.sh $$VERSION$$ $$VERCODE$$
+    build: $$CenoBuild$$/build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 2.1.6
+    versionCode: 2015988506
+    commit: v2.1.6
+    timeout: 18000
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y bc cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - CenoBuild@v2.1.6
+      - MozFennec@FIREFOX_127_0_1_RELEASE
+      - FirefoxAndroidAS@components-v125.2.0
+      - MozAppServices@v127.0
+      - MozGlean@v60.0.1
+      - MozGleanAS@v58.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild:
+      - $$CenoBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+      - $$CenoBuild$$/precenobuild.sh $$VERSION$$ $$VERCODE$$
+    build: $$CenoBuild$$/build.sh
+    ndk: 26.2.11394342
+
 MaintainerNotes: |-
   Version code scheme:
   CENO uses the same method as Mozilla for generating verisonCodes found in android_version_code.py
   Read more about the values encoded in the version code here, https://github.com/mozilla/gecko-dev/blob/master/python/mozbuild/mozbuild/android_version_code.py#L38
-  For our purposes it is enough to know that the architecture is encoded in the second LSB, such that
-  * Example: 2015873545 = 0111 1000 0010 0111 1100 1010 0000 1001 = armeabi-v7a
-  * Example: 2015873547 = 0111 1000 0010 0111 1100 1010 0000 1011 = arm64-v8a
+  For our purposes it is enough to know that the architecture is encoded in the second LSB,
+  and (as of v2.1.0) the release platform (f-droid/play store) is encoded in the first LSB, such that
+  * Example: 2015971272 = 0111 1000 0010 1001 0100 0111 1100 1000 = armeabi-v7a - f-droid release
+  * Example: 2015971273 = 0111 1000 0010 1001 0100 0111 1100 1001 = armeabi-v7a - play store release
+  * Example: 2015971274 = 0111 1000 0010 1001 0100 0111 1100 1010 = arm64-v8a - f-droid release
+  * Example: 2015971275 = 0111 1000 0010 1001 0100 0111 1100 1011 = arm64-v8a - play store release
 
-  Android Components version:
-  grep VERSION build/org.mozilla.fennec_fdroid/buildSrc/src/main/java/AndroidComponents.kt
+  Determining versions:
+  * MozFennec: https://hg.mozilla.org/releases/mozilla-release/tags
+  * MozAppServices: `mozilla_appservices` in https://hg.mozilla.org/releases/mozilla-release/file/$tag/mobile/android/android-components/plugins/dependencies/src/main/java/ApplicationServices.kt
+  * MozGlean: `mozilla_glean` in https://hg.mozilla.org/releases/mozilla-release/file/$tag/mobile/android/android-components/plugins/dependencies/src/main/java/DependenciesPlugin.kt
+  * FirefoxAndroidAS: `android-components` in https://github.com/mozilla/application-services/blob/$MozAppServices/gradle/libs.versions.toml
+  * MozGleanAS: `mozilla_glean` in https://github.com/mozilla-mobile/firefox-android/blob/$MozAndroidComponentsAS/android-components/plugins/dependencies/src/main/java/DependenciesPlugin.kt
+  * rustup: https://github.com/rust-lang/rustup/tags
+  * wasi-sdk: https://github.com/WebAssembly/wasi-sdk/releases
 
-  Application Services, Glean and GeckoView versions:
-  grep 'mozilla_appservices =' build/srclib/MozAndroidComponents/buildSrc/src/main/java/Dependencies.kt
-  grep 'mozilla_glean =' build/srclib/MozAndroidComponents/buildSrc/src/main/java/Dependencies.kt
-  grep 'version =' build/srclib/MozAndroidComponents/buildSrc/src/main/java/Gecko.kt
-
-  Android Components (AS) version:
-  grep 'android_components_version =' build/srclib/MozAppServices/build.gradle
-
-  Glean (AS) version:
-  grep 'mozilla_glean =' build/srclib/MozAndroidComponentsAS/buildSrc/src/main/java/Dependencies.kt
-
-  Python:
-  * https://github.com/pyenv/pyenv/releases
-  * https://www.python.org/downloads/
-
-  Rust:
-  * https://github.com/rust-lang/rustup/releases
-  * https://www.rust-lang.org/
+  Scanner detects 'com/google/firebase/messaging/FirebaseMessagingService' from stubs and 'com/google/android/gms/...' from microG libs for webauth
 
 ArchivePolicy: 6
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 2.0.9
-CurrentVersionCode: 2015962043
+CurrentVersion: 2.1.6
+CurrentVersionCode: 2015988506

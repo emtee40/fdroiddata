@@ -239,7 +239,34 @@ Builds:
       - yes
     ndk: r21d
 
+  - versionName: v1.25
+    versionCode: 38
+    commit: 642e91dcaf6014295088773c3b9b7f8a9ea1a6e4
+    subdir: aat-android
+    gradle:
+      - yes
+    prebuild: sed -i -e '/maven-local/d' ../{settings,build}.gradle.kts
+    ndk: r21d
+
+  - versionName: v1.25.2
+    versionCode: 39
+    commit: 37f1e753597597be07b8cd0da255b58a5dbea394
+    subdir: aat-android
+    gradle:
+      - yes
+    prebuild: sed -i -e '/maven-local/d' ../{settings,build}.gradle.kts
+    ndk: r21d
+
+  - versionName: v1.26
+    versionCode: 40
+    commit: 122fa650877f276e20eb958f77c2d4b06dc27b3b
+    subdir: aat-android
+    gradle:
+      - yes
+    prebuild: sed -i -e '/maven-local/d' ../{settings,build}.gradle.kts
+    ndk: r21d
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v1.24.1
-CurrentVersionCode: 37
+CurrentVersion: v1.26
+CurrentVersionCode: 40

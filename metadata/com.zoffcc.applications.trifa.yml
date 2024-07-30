@@ -1634,11 +1634,65 @@ Builds:
     prebuild: sdkmanager 'cmake;3.10.2.4988404'
     ndk: r23c
 
+  - versionName: 1.0.228
+    versionCode: 10228
+    commit: f51f2890d58dc4236b0dabb1bbe0edba4a1af937
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.229
+    versionCode: 10229
+    commit: 21fa44b81ac08e5de93f9f52f07be1e84a9106df
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.231
+    versionCode: 10231
+    commit: 060029bff69f88b1f88da69ae0bbfb5aca28e815
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.232
+    versionCode: 10232
+    commit: ee104e5876c73004d235994417ad70805265e1d8
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.233
+    versionCode: 10233
+    commit: c57136720ccfe1cac6eaca00baa90661d3869896
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.234
+    versionCode: 10234
+    commit: 2e38a4f58e7bebe48818a9e41fd5514750223f58
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
 MaintainerNotes: |-
   There was an issue with proprietary emoji, see https://github.com/zoff99/ToxAndroidRefImpl/issues/139
   This was fixed starting from version 1.0.96 and the NonFreeAssets tag was removed.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9].*
-CurrentVersion: 1.0.227
-CurrentVersionCode: 10227
+CurrentVersion: 1.0.234
+CurrentVersionCode: 10234

@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  TetheredNet:
+    en-US: Rely on knmi.nl
 Categories:
   - Science & Education
 License: MIT
@@ -94,9 +95,21 @@ Builds:
     gradle:
       - yes
 
-MaintainerNotes: NonFreeNet should be TetheredNet, see the discussion at https://gitlab.com/fdroid/fdroiddata/-/merge_requests/5886#note_253169621
+  - versionName: 1.10.1
+    versionCode: 13
+    commit: 1e7568feda782e9dd16a4034b11496ea371dee4d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.2
+    versionCode: 14
+    commit: 7285715130ec406fae2f821c4e80bd30963df11b
+    subdir: app
+    gradle:
+      - yes
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.10.0
-CurrentVersionCode: 12
+CurrentVersion: 1.10.2
+CurrentVersionCode: 14

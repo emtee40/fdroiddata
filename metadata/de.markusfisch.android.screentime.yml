@@ -8,6 +8,9 @@ AuthorWebSite: https://www.markusfisch.de/
 SourceCode: https://github.com/markusfisch/ScreenTime
 IssueTracker: https://github.com/markusfisch/ScreenTime/issues
 Changelog: https://github.com/markusfisch/ScreenTime/releases
+Donate: https://www.buymeacoffee.com/markusfisch
+Liberapay: markusfisch
+Bitcoin: bc1q2guk2rpll587aymrfadkdtpq32448x5khk5j8z
 
 AutoName: Screen Time
 
@@ -84,7 +87,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.3.0
+    versionCode: 14
+    commit: 3e168d4ff4a7ffa51a16ffbbbf4bfc0664c12b19
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.2.0
-CurrentVersionCode: 13
+CurrentVersion: 1.3.0
+CurrentVersionCode: 14

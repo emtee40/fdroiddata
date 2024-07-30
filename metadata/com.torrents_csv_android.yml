@@ -152,7 +152,23 @@ Builds:
       - yes
     prebuild: sed -i -e '/keystoreProperties.load/d' build.gradle
 
+  - versionName: 2.2.2
+    versionCode: 20
+    commit: b96d904696d3eb0728bce9d00a8b35fbd8608ce2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties.load/d' build.gradle
+
+  - versionName: 3.0.1
+    versionCode: 21
+    commit: 57ee2d3ba4c08e40b06e15f70ed9ffee4c9fceee
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystoreProperties.load/d' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.2.1
-CurrentVersionCode: 19
+CurrentVersion: 3.0.1
+CurrentVersionCode: 21

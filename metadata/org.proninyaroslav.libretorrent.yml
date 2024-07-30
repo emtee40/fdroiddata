@@ -198,7 +198,16 @@ Builds:
       - main
     prebuild: sed -i -e '/enable true/d' build.gradle
 
+  - versionName: '3.5'
+    versionCode: 5000027
+    disable: https://gitlab.com/fdroid/fdroiddata/-/merge_requests/15479
+    commit: 05494cc03b2ddc9c706159ca4e394f54ae454988
+    subdir: app
+    gradle:
+      - main
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.5-beta01
-CurrentVersionCode: 26
+CurrentVersion: '3.5'
+CurrentVersionCode: 5000027

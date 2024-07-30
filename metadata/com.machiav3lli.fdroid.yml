@@ -137,7 +137,43 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.0.0
+    versionCode: 1012
+    commit: 067e0ac679a69d03909b5575d9b29fd1c91a2e1b
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 1013
+    commit: 588548a6edf5e69fa44f19ec458d2e7d1cbd63ea
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 1014
+    commit: abae89112dab359632b9dd89be27a4f36788731b
+    gradle:
+      - yes
+
+  - versionName: 1.0.3
+    versionCode: 1015
+    commit: 37a5626701f71c493aae579c707c63a0f1bbb610
+    gradle:
+      - yes
+
+  - versionName: 1.0.4
+    versionCode: 1016
+    commit: cc3d09b2eac2ed96f6cb0981a669e4ce8827a32a
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 1017
+    commit: 4f30e6b9d7d42fb6a16d547260ca49377541f967
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[\d.]+$
-CurrentVersion: 0.9.15
-CurrentVersionCode: 927
+CurrentVersion: 1.0.5
+CurrentVersionCode: 1017

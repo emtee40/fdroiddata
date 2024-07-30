@@ -235,7 +235,23 @@ Builds:
       - yes
     output: app/build/outputs/apk/release/app-release-unsigned.apk
 
+  - versionName: 0.8.10
+    versionCode: 76
+    commit: 9b59b018f1dd14e3464a059c028aed52d8ef0fe0
+    subdir: AndorsTrail
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: 0.8.11
+    versionCode: 77
+    commit: a64c45586fec67e63b8185f0de72b966f7cf8db1
+    subdir: AndorsTrail
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.8.9
-CurrentVersionCode: 75
+CurrentVersion: 0.8.11
+CurrentVersionCode: 77

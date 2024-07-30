@@ -183,9 +183,63 @@ Builds:
     scandelete:
       - build-logic/convention/build
 
+  - versionName: 1.15.3
+    versionCode: 153
+    commit: a7bcf6b086b21a9c08ce9a4eac5ce0c0475672a2
+    subdir: app
+    gradle:
+      - prod
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.15.4
+    versionCode: 154
+    commit: 6d421ad351d9bc91416b3d5e0f8b83a0efa98cde
+    subdir: app
+    gradle:
+      - prod
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.15.5
+    versionCode: 155
+    commit: ab918ebee8ab77548d425262d9bfb50a79f8c075
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.15.6
+    versionCode: 156
+    commit: a6a4c7f5cd68b47300aa2d05dc555514752ae757
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.15.7
+    versionCode: 157
+    commit: ec616ffcba53d7d31cce2933cd4c7ea4eb0d12e7
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 1.15.8
+    versionCode: 158
+    commit: 14dc21efbfe14a261bafcbe7822e4bf765327704
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/convention/build
+
 AllowedAPKSigningKeys: 94a9d87cc8f0c33191a233ac74ed5c9e4e1afd556a9d916ac533bc50083a8dff
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.15.2
-CurrentVersionCode: 152
+CurrentVersion: 1.15.8
+CurrentVersionCode: 158

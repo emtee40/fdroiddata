@@ -2226,6 +2226,600 @@ Builds:
     gradleprops:
       - abiFilters=x86_64
 
+  - versionName: 1.2.43
+    versionCode: 260
+    commit: 16a1b778013fc5c7d501a38e85cb988ab217f1b0
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3-cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.43
+    versionCode: 261
+    commit: 16a1b778013fc5c7d501a38e85cb988ab217f1b0
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3-cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.43
+    versionCode: 262
+    commit: 16a1b778013fc5c7d501a38e85cb988ab217f1b0
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3-cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.44
+    versionCode: 263
+    commit: dd32ed949e4eec3ab5e11f78fb3d17c03c6f83d1
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3-cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.44
+    versionCode: 264
+    commit: dd32ed949e4eec3ab5e11f78fb3d17c03c6f83d1
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3-cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.44
+    versionCode: 265
+    commit: dd32ed949e4eec3ab5e11f78fb3d17c03c6f83d1
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3-cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.46
+    versionCode: 269
+    commit: f29fd567189f883ce9c81a6df383e7cb4a3f88d4
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.46
+    versionCode: 270
+    commit: f29fd567189f883ce9c81a6df383e7cb4a3f88d4
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.46
+    versionCode: 271
+    commit: f29fd567189f883ce9c81a6df383e7cb4a3f88d4
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.47
+    versionCode: 272
+    commit: 0480d822f9ca5f53a29c18b741fca52a53f848a2
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.47
+    versionCode: 273
+    commit: 0480d822f9ca5f53a29c18b741fca52a53f848a2
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.47
+    versionCode: 274
+    commit: 0480d822f9ca5f53a29c18b741fca52a53f848a2
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.49
+    versionCode: 278
+    commit: 47ffe8cab98e7a55c6552ad958f192c6cc75fba9
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.49
+    versionCode: 279
+    commit: 47ffe8cab98e7a55c6552ad958f192c6cc75fba9
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.49
+    versionCode: 280
+    commit: 47ffe8cab98e7a55c6552ad958f192c6cc75fba9
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.50
+    versionCode: 281
+    commit: 1e814870d8e69afed64f48edce4ec563b23ddd10
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.50
+    versionCode: 282
+    commit: 1e814870d8e69afed64f48edce4ec563b23ddd10
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.50
+    versionCode: 283
+    commit: 1e814870d8e69afed64f48edce4ec563b23ddd10
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.51
+    versionCode: 284
+    commit: 1b9d2b6d8dccde52897ed9082e82eff1f3ed0b03
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.51
+    versionCode: 285
+    commit: 1b9d2b6d8dccde52897ed9082e82eff1f3ed0b03
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.51
+    versionCode: 286
+    commit: 1b9d2b6d8dccde52897ed9082e82eff1f3ed0b03
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.52
+    versionCode: 287
+    commit: e749f5dd4a24ba375ffc62487530849600a4d86d
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.52
+    versionCode: 288
+    commit: e749f5dd4a24ba375ffc62487530849600a4d86d
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.52
+    versionCode: 289
+    commit: e749f5dd4a24ba375ffc62487530849600a4d86d
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.53
+    versionCode: 290
+    commit: bcec1c805473b14f20dca6d931d6df0a984e1884
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.53
+    versionCode: 291
+    commit: bcec1c805473b14f20dca6d931d6df0a984e1884
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.53
+    versionCode: 292
+    commit: bcec1c805473b14f20dca6d931d6df0a984e1884
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.55
+    versionCode: 296
+    commit: 2cfbf6d75c2fa5f19087a877ba84dbe867b47c03
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.55
+    versionCode: 297
+    commit: 2cfbf6d75c2fa5f19087a877ba84dbe867b47c03
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.55
+    versionCode: 298
+    commit: 2cfbf6d75c2fa5f19087a877ba84dbe867b47c03
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.57
+    versionCode: 302
+    commit: f3a1fd1729aa3cd45380d6b750f1af36ef4ce222
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.57
+    versionCode: 303
+    commit: f3a1fd1729aa3cd45380d6b750f1af36ef4ce222
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.57
+    versionCode: 304
+    commit: f3a1fd1729aa3cd45380d6b750f1af36ef4ce222
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.2.58
+    versionCode: 305
+    commit: 82fa523f95f2546c60edf585c63002ffc48936c4
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.2.58
+    versionCode: 306
+    commit: 82fa523f95f2546c60edf585c63002ffc48936c4
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.2.58
+    versionCode: 307
+    commit: 82fa523f95f2546c60edf585c63002ffc48936c4
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.3.0
+    versionCode: 311
+    commit: 92a5fedc7c0b082a36100c88775601ad86e01d5e
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.3.0
+    versionCode: 312
+    commit: 92a5fedc7c0b082a36100c88775601ad86e01d5e
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.3.0
+    versionCode: 313
+    commit: 92a5fedc7c0b082a36100c88775601ad86e01d5e
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.3.1
+    versionCode: 314
+    commit: c509a8bdc92bb0c9fb013aaffe777ccc51cad0bc
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.3.1
+    versionCode: 315
+    commit: c509a8bdc92bb0c9fb013aaffe777ccc51cad0bc
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.3.1
+    versionCode: 316
+    commit: c509a8bdc92bb0c9fb013aaffe777ccc51cad0bc
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.3.2
+    versionCode: 317
+    commit: 5f4e199b9c2b77eb85025e8ff7374e1a1facf821
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.3.2
+    versionCode: 318
+    commit: 5f4e199b9c2b77eb85025e8ff7374e1a1facf821
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.3.2
+    versionCode: 319
+    commit: 5f4e199b9c2b77eb85025e8ff7374e1a1facf821
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.3.3
+    versionCode: 320
+    commit: ffde1463a3915640f38489bae003f53469fe1771
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.3.3
+    versionCode: 321
+    commit: ffde1463a3915640f38489bae003f53469fe1771
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.3.3
+    versionCode: 322
+    commit: ffde1463a3915640f38489bae003f53469fe1771
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.3.4
+    versionCode: 323
+    commit: 5f84ed32c5b88f368399b697cddb5916709b8862
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.3.4
+    versionCode: 324
+    commit: 5f84ed32c5b88f368399b697cddb5916709b8862
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.3.4
+    versionCode: 325
+    commit: 5f84ed32c5b88f368399b697cddb5916709b8862
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
+  - versionName: 1.3.5
+    versionCode: 326
+    commit: 8a57111cf333a90c8ca100039ed04e2d9f7531fe
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=armeabi-v7a
+
+  - versionName: 1.3.5
+    versionCode: 327
+    commit: 8a57111cf333a90c8ca100039ed04e2d9f7531fe
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=arm64-v8a
+
+  - versionName: 1.3.5
+    versionCode: 328
+    commit: 8a57111cf333a90c8ca100039ed04e2d9f7531fe
+    subdir: app
+    gradle:
+      - github
+    prebuild: sed -i -e '/com.google.gms/d' -e '/firebase/d' -e '/CrashlyticsExtension/,+2d'
+      -e '/media3.cast/d' {..,.}/build.gradle.kts
+    gradleprops:
+      - abiFilters=x86_64
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v\d+\.\d+(\.\d+)?
 VercodeOperation:
@@ -2233,5 +2827,5 @@ VercodeOperation:
   - '%c - 1'
   - '%c - 0'
 UpdateCheckData: app/build.gradle.kts|val vCode = (\d+)|.|versionName = "([\d.]+)"
-CurrentVersion: 1.2.42
-CurrentVersionCode: 259
+CurrentVersion: 1.3.5
+CurrentVersionCode: 328

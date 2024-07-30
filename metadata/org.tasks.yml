@@ -2523,11 +2523,102 @@ Builds:
     gradleprops:
       - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
 
+  - versionName: '13.8'
+    versionCode: 130803
+    commit: cf30b56098c0e12585cc695bbe1168a89aae4dae
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.8.1
+    versionCode: 130804
+    commit: 06a9626052768834f519d0d02dc5361737d84f26
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.9.7
+    versionCode: 130907
+    commit: 1a93c87ad932d16af924167ac7d45405f41a83fe
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.9.9
+    versionCode: 130909
+    commit: 1d8d2efce6b5f4a9466517249bfdce88bd2abb7f
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: '13.10'
+    versionCode: 131007
+    commit: 053cffd389ab503c105627490c122c592bfc660a
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: '13.11'
+    versionCode: 131104
+    commit: c2bd95ed069cc74c8d15260472e8698498ec6201
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.11.1
+    versionCode: 131106
+    commit: 2566b86fec601663791b16e769fce5e2f7e57da1
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
 MaintainerNotes: |-
   * Upstream releases multiple version with changed vercode. Looks like repushing tags.
   * 2021-03-11: disabled builds 531,632,633,645, see https://gitlab.com/fdroid/fdroiddata/-/issues/2294
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '13.7'
-CurrentVersionCode: 130700
+CurrentVersion: 13.11.1
+CurrentVersionCode: 131106

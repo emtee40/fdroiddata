@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  TetheredNet:
+    en-US: Rely on wikipedia.org and proxy services not changeable
 Categories:
   - Internet
 License: Apache-2.0
@@ -18,6 +19,7 @@ Binaries: https://github.com/greatfire/apps-android-wikipedia-envoy/releases/dow
 Builds:
   - versionName: 3.8-fdroid
     versionCode: 1003801
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: 398517293e8608f8cc1ff01d5f85d6c1532d9589
     subdir: app
     gradle:
@@ -27,6 +29,7 @@ Builds:
 
   - versionName: 3.8-fdroid
     versionCode: 1003802
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: 398517293e8608f8cc1ff01d5f85d6c1532d9589
     subdir: app
     gradle:
@@ -36,6 +39,7 @@ Builds:
 
   - versionName: 3.8-fdroid
     versionCode: 1003803
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: 398517293e8608f8cc1ff01d5f85d6c1532d9589
     subdir: app
     gradle:
@@ -45,6 +49,7 @@ Builds:
 
   - versionName: 3.8-fdroid
     versionCode: 1003804
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: 398517293e8608f8cc1ff01d5f85d6c1532d9589
     subdir: app
     gradle:
@@ -54,6 +59,7 @@ Builds:
 
   - versionName: 3.9-fdroid
     versionCode: 1003901
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: 08e52d489a1db5e0b1fe9a76d66c679fe9743639
     subdir: app
     gradle:
@@ -69,6 +75,7 @@ Builds:
 
   - versionName: 3.9-fdroid
     versionCode: 1003902
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: 08e52d489a1db5e0b1fe9a76d66c679fe9743639
     subdir: app
     gradle:
@@ -78,6 +85,7 @@ Builds:
 
   - versionName: 3.9-fdroid
     versionCode: 1003903
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: 08e52d489a1db5e0b1fe9a76d66c679fe9743639
     subdir: app
     gradle:
@@ -87,6 +95,7 @@ Builds:
 
   - versionName: 3.9-fdroid
     versionCode: 1003904
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: 08e52d489a1db5e0b1fe9a76d66c679fe9743639
     subdir: app
     gradle:
@@ -96,6 +105,7 @@ Builds:
 
   - versionName: 4.0-fdroid
     versionCode: 1004001
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: b552566adcc6d6fa503018e346ceabc5870f3848
     subdir: app
     gradle:
@@ -105,6 +115,7 @@ Builds:
 
   - versionName: 4.0-fdroid
     versionCode: 1004002
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: b552566adcc6d6fa503018e346ceabc5870f3848
     subdir: app
     gradle:
@@ -114,6 +125,7 @@ Builds:
 
   - versionName: 4.0-fdroid
     versionCode: 1004003
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: b552566adcc6d6fa503018e346ceabc5870f3848
     subdir: app
     gradle:
@@ -123,6 +135,7 @@ Builds:
 
   - versionName: 4.0-fdroid
     versionCode: 1004004
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
     commit: b552566adcc6d6fa503018e346ceabc5870f3848
     subdir: app
     gradle:

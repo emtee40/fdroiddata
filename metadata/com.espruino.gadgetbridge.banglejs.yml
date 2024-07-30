@@ -246,8 +246,44 @@ Builds:
       - cd ../external
       - ./build_fossil_hr_gbapps.sh
 
+  - versionName: 0.80.0-banglejs
+    versionCode: 231
+    commit: f05043481ce85a80db3a8c93efbcc14f7d7da963
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc gcc-multilib make python3-crc32c
+    gradle:
+      - banglejs
+    scandelete:
+      - app/src/main/assets/fossil_hr
+      - external/fossil-hr-gbapps/watchface/build/files/icons
+      - external/fossil-hr-gbapps/navigationApp/build/files/icons
+    build:
+      - cd ../external
+      - ./build_fossil_hr_gbapps.sh
+
+  - versionName: 0.81.0-banglejs
+    versionCode: 232
+    commit: 16018879ba3873a28a5f88d523dd189a7d5cd6d9
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc gcc-multilib make python3-crc32c
+    gradle:
+      - banglejs
+    scandelete:
+      - app/src/main/assets/fossil_hr
+      - external/fossil-hr-gbapps/watchface/build/files/icons
+      - external/fossil-hr-gbapps/navigationApp/build/files/icons
+    build:
+      - cd ../external
+      - ./build_fossil_hr_gbapps.sh
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckName: nodomain.freeyourgadget.gadgetbridge
-CurrentVersion: 0.79.1-banglejs
-CurrentVersionCode: 230
+CurrentVersion: 0.81.0-banglejs
+CurrentVersionCode: 232

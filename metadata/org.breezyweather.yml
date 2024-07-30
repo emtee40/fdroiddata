@@ -1,0 +1,78 @@
+Categories:
+  - Internet
+License: LGPL-3.0-only
+SourceCode: https://github.com/breezy-weather/breezy-weather
+IssueTracker: https://github.com/breezy-weather/breezy-weather/issues
+Translation: https://hosted.weblate.org/projects/breezy-weather/breezy-weather-android/#information
+Changelog: https://github.com/breezy-weather/breezy-weather/releases
+
+AutoName: Breezy Weather
+
+RepoType: git
+Repo: https://github.com/breezy-weather/breezy-weather.git
+
+Builds:
+  - versionName: 5.1.8_fdroid
+    versionCode: 50108
+    commit: ee0473cc54392bdcdc43ebddca62ef112cb7a2eb
+    subdir: app
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-universal-release-unsigned.apk
+    binary: https://github.com/breezy-weather/breezy-weather/releases/download/v5.1.8/breezy-weather-v%v.apk
+
+  - versionName: 5.2.0_freenet
+    versionCode: 50200
+    commit: 06cc250cee535919933aa8131d52b69b9306deb3
+    subdir: app
+    gradle:
+      - freenet
+    output: build/outputs/apk/freenet/release/app-freenet-universal-release-unsigned.apk
+    binary: https://github.com/breezy-weather/breezy-weather/releases/download/v5.2.0/breezy-weather-v%v.apk
+
+  - versionName: 5.2.1_freenet
+    versionCode: 50201
+    commit: b82786dc2d4138305c0f88d0c97388ac299e27ef
+    subdir: app
+    gradle:
+      - freenet
+    output: build/outputs/apk/freenet/release/app-freenet-universal-release-unsigned.apk
+    binary: https://github.com/breezy-weather/breezy-weather/releases/download/v5.2.1/breezy-weather-v%v.apk
+    prebuild: sed -i -e 's/--short/--short=7/g' ../buildSrc/src/main/kotlin/Commands.kt
+
+  - versionName: 5.2.3_freenet
+    versionCode: 50203
+    commit: 47eb87fec94efd623fcfb77bd488f6639c1b118a
+    subdir: app
+    gradle:
+      - freenet
+    binary: https://github.com/breezy-weather/breezy-weather/releases/download/v5.2.3/breezy-weather-v%v.apk
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 5.2.5_freenet
+    versionCode: 50205
+    commit: f06f323bff9c533d49fbe69c6ea660c583f38e39
+    subdir: app
+    gradle:
+      - freenet
+    binary: https://github.com/breezy-weather/breezy-weather/releases/download/v5.2.5/breezy-weather-v%v.apk
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 5.2.6_freenet
+    versionCode: 50206
+    commit: 11c2c6cdb7a6f9fb27f814cc25eb828d4b7af1fc
+    subdir: app
+    gradle:
+      - freenet
+    binary: https://github.com/breezy-weather/breezy-weather/releases/download/v5.2.6/breezy-weather-v%v.apk
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+AllowedAPKSigningKeys: 29d435f70aa9aec3c1faff7f7ffa6e15785088d87f06ecfcab9c3cc62dc269d8
+
+MaintainerNotes: Per flavor versionName suffix does not allow to template the Binaries
+  URL for autoupdates
+
+AutoUpdateMode: None
+UpdateCheckMode: Tags ^v[\d.]+$
+CurrentVersion: 5.2.6_freenet
+CurrentVersionCode: 50206

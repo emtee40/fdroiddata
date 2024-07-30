@@ -876,7 +876,43 @@ Builds:
     scandelete:
       - build-cache
 
+  - versionName: 5.10.0
+    versionCode: 118
+    commit: fbb24fcda9d99d9833adac8a6636a8913f86e822
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 6.0.0
+    versionCode: 119
+    commit: 87aee5519b2b8363d11a888273baa018c572d4e0
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 6.1.0
+    versionCode: 120
+    commit: a51c08a70859a89742ba03b2338fddc85f032b72
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 6.2.1
+    versionCode: 122
+    commit: 1aaeda9c92f43cfbd526232c4eb770c16cc58e32
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 5.9.0
-CurrentVersionCode: 117
+CurrentVersion: 6.2.1
+CurrentVersionCode: 122

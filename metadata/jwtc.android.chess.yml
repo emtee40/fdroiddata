@@ -379,7 +379,31 @@ Builds:
     prebuild: sed -i -e 's/3.5.4/7.0.4/' ../build.gradle
     ndk: r25b
 
+  - versionName: 9.4.1
+    versionCode: 199
+    commit: 07fa60b981c400a8ad8c0412fef2423d5abaf13c
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/src/main/assets/db.bin
+      - native/project/jni/db.bin
+      - gradle
+    prebuild: sed -i -e 's/3.5.4/7.0.4/' ../build.gradle
+    ndk: r25b
+
+  - versionName: 9.4.2
+    versionCode: 200
+    commit: c3ba946a89dd23f2cb180c959432590e4f9f83d1
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/src/main/assets/db.bin
+      - native/project/jni/db.bin
+    ndk: r25b
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 9.3.15
-CurrentVersionCode: 197
+CurrentVersion: 9.4.2
+CurrentVersionCode: 200

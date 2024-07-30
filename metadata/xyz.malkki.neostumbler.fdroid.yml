@@ -1,0 +1,69 @@
+Categories:
+  - Connectivity
+  - Internet
+License: MIT
+AuthorName: Jaakko Malkki
+AuthorWebSite: https://malkki.xyz/
+SourceCode: https://github.com/mjaakko/NeoStumbler
+IssueTracker: https://github.com/mjaakko/NeoStumbler/issues
+Changelog: https://github.com/mjaakko/NeoStumbler/releases
+
+AutoName: NeoStumbler
+
+RepoType: git
+Repo: https://github.com/mjaakko/NeoStumbler.git
+Binaries: https://github.com/mjaakko/NeoStumbler/releases/download/%v/app-fdroid-release.apk
+
+Builds:
+  - versionName: 1.1.3
+    versionCode: 6
+    commit: 0e41b1b37d766f2195c329bf418c74ce3ec16d30
+    subdir: app
+    gradle:
+      - fdroid
+    antifeatures:
+      NonFreeNet:
+        en-US: Sends data collected by the user to Mozilla Location Services (location.services.mozilla.com)
+
+  - versionName: 1.2.0
+    versionCode: 7
+    commit: 3a42a6f58fe59231ef80ecac3a0a9940a869a1ec
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.2.1
+    versionCode: 8
+    commit: c0d91988799894bfc7e94ad96a44dd715cd17ae6
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.2.2
+    versionCode: 9
+    commit: 8682067fea75c2f19bd2c26498d1b26d2adf004f
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.2.3
+    versionCode: 10
+    commit: c727cd2becdefa76e9a6d95531e709fc088ab6eb
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.0
+    versionCode: 11
+    commit: 469aee7cea8e2af53cf5b9ffc47ed6dfb579718c
+    subdir: app
+    gradle:
+      - fdroid
+
+AllowedAPKSigningKeys: 7f839ac7afc4ff6f1c7fb1348ac10de2f17de8a78d0d812c1f43ae835a5111df
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckName: xyz.malkki.neostumbler
+CurrentVersion: 1.3.0
+CurrentVersionCode: 11

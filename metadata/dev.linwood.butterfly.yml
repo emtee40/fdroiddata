@@ -432,28 +432,6 @@ Builds:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor development
 
-  - versionName: 1.4.0-alpha.1
-    versionCode: 28
-    commit: d6eaeb8a77d0a9ebee226cae3187382cc622ceb1
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    output: build/app/outputs/flutter-apk/app-development-release.apk
-    srclibs:
-      - flutter@3.0.2
-    rm:
-      - app/ios
-      - app/linux
-      - app/macos
-      - app/web
-      - app/windows
-    prebuild: sed -i -e '/applicationIdSuffix/d' android/app/build.gradle
-    build:
-      - $$flutter$$/bin/flutter config --no-analytics
-      - $$flutter$$/bin/flutter build apk --flavor development
-
   - versionName: 1.4.0-alpha.2
     versionCode: 29
     commit: a49cbe6560a622a87e404505b7f5fa1f3e222eb6
@@ -496,6 +474,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.0
     versionCode: 37
@@ -517,6 +500,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.1
     versionCode: 38
@@ -538,6 +526,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.2
     versionCode: 39
@@ -559,6 +552,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.3
     versionCode: 40
@@ -580,6 +578,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.4.4
     versionCode: 44
@@ -601,6 +604,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.0
     versionCode: 50
@@ -622,6 +630,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.5.1
     versionCode: 51
@@ -639,6 +652,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.6.0
     versionCode: 57
@@ -656,6 +674,11 @@ Builds:
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 1.6.1
     versionCode: 58
@@ -678,6 +701,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.0
     versionCode: 85
@@ -704,6 +732,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.1
     versionCode: 88
@@ -730,6 +763,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.2
     versionCode: 90
@@ -756,6 +794,11 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
 
   - versionName: 2.0.3
     versionCode: 93
@@ -782,9 +825,60 @@ Builds:
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor production
+    antifeatures:
+      NonFreeNet:
+        en-US: Connects to developer server for changelog
+      Tracking:
+        en-US: Connects to developer server to check version
+
+  - versionName: 2.1.0
+    versionCode: 104
+    commit: 5e32dfacd6c30d2b97dbbc76e92ca24d7667b31c
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - git -C $$flutter$$ checkout -f $(cat ../FLUTTER_VERSION)
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor production
+
+  - versionName: 2.1.1
+    versionCode: 108
+    commit: 6058fe4cc9ae7905dc398b330b751d361525e942
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-production-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - git -C $$flutter$$ checkout -f $(cat ../FLUTTER_VERSION)
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor production
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+$
 UpdateCheckData: app/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 2.0.3
-CurrentVersionCode: 93
+CurrentVersion: 2.1.1
+CurrentVersionCode: 108

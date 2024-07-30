@@ -90,9 +90,23 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 3.0.0
+    versionCode: 27
+    commit: 9ae21666fdc11c99d43dddc61ebb57c446118037
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.1
+    versionCode: 28
+    commit: 437a94c52420934a5e469551c0a2cabb8c7bc373
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: 7eef49f0e016026000f00da20120632b90d898640b65d785caf6a587c382724f
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.4.2
-CurrentVersionCode: 26
+CurrentVersion: 3.0.1
+CurrentVersionCode: 28

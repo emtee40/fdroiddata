@@ -93,9 +93,31 @@ Builds:
     scandelete:
       - build-logic/convention/build
 
+  - versionName: 0.11.0
+    versionCode: 15
+    commit: c60cefd4130e78ae67641e3f833c0669b6ecb0c7
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+      - sed -i -e 's/\\\\\././g' ../feature/player/src/main/AndroidManifest.xml
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.11.1
+    versionCode: 16
+    commit: 1d70d728df34048c84c85988ae879151e41ff190
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+      - sed -i -e 's/\\\\\././g' ../feature/player/src/main/AndroidManifest.xml
+
 AllowedAPKSigningKeys: d37cabf3676cf58224fb242c8dd209129d05880379295faaa6d0fb607bec131b
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.10.2
-CurrentVersionCode: 14
+CurrentVersion: 0.11.1
+CurrentVersionCode: 16

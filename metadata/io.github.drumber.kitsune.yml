@@ -1,0 +1,62 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Rely on kitsu.io.
+Categories:
+  - Internet
+  - Multimedia
+  - Reading
+License: Apache-2.0
+AuthorName: Drumber
+SourceCode: https://github.com/Drumber/Kitsune
+IssueTracker: https://github.com/Drumber/Kitsune/issues
+
+AutoName: Kitsune
+
+RepoType: git
+Repo: https://github.com/Drumber/Kitsune.git
+Binaries: https://github.com/Drumber/Kitsune/releases/download/v%v/kitsune-release-v%v.apk
+
+Builds:
+  - versionName: 1.10.4-2
+    versionCode: 28
+    commit: v1.10.4-2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.5
+    versionCode: 29
+    commit: 6ab88cfacd8ee4daad23edbe4a134ab1f2b1f62c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/uri("")/d' ../plugin/settings.gradle.kts ../settings.gradle.kts
+    scandelete:
+      - plugin
+
+  - versionName: 1.10.6
+    versionCode: 30
+    commit: 4d99aea8b7d5732472cd3a7dca1942753cb911bd
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/uri("")/d' ../plugin/settings.gradle.kts ../settings.gradle.kts
+    scandelete:
+      - plugin
+
+  - versionName: 1.10.7
+    versionCode: 31
+    commit: d897c821f842f66d0e395d3769327703f2717f90
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/uri("")/d' ../plugin/settings.gradle.kts ../settings.gradle.kts
+    scandelete:
+      - plugin
+
+AllowedAPKSigningKeys: 6a6e74f103c06f22b648b2a3b09630a62684936f94ea766ab0e3b9337774e634
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.10.7
+CurrentVersionCode: 31

@@ -7,7 +7,7 @@ IssueTracker: https://github.com/AnaelMobilia/NextINpact-Unofficial/issues
 AutoName: Next Actualités informatiques
 
 RepoType: git
-Repo: https://github.com/AnaelMobilia/NextINpact-Unofficial
+Repo: https://github.com/AnaelMobilia/NextINpact-Unofficial.git
 
 Builds:
   - versionName: 2.2.5
@@ -257,7 +257,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.7.8
+    versionCode: 278
+    commit: 615418ad579bf8c8e166c6644102d749e3e6165e
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.7.6
-CurrentVersionCode: 276
+CurrentVersion: 2.7.8
+CurrentVersionCode: 278

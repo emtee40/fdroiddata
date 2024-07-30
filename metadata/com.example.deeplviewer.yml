@@ -222,7 +222,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '8.2'
+    versionCode: 34
+    commit: 1f51399e8a4c4540aeb708d3edc62c8fb7326db7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.3'
+    versionCode: 36
+    commit: 9ced89c65db41f6d337707616878cd0645e2785f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.4'
+    versionCode: 37
+    commit: 140e892231110a4ceb616a70d4c91be5c9b667cf
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '8.1'
-CurrentVersionCode: 33
+CurrentVersion: '8.4'
+CurrentVersionCode: 37

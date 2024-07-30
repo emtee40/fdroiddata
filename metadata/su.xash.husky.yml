@@ -2,14 +2,14 @@ Categories:
   - Internet
 License: GPL-3.0-only
 WebSite: https://husky.adol.pw
-SourceCode: https://codeberg.org/husky/husky
-IssueTracker: https://codeberg.org/husky/husky/issues
-Changelog: https://codeberg.org/husky/husky/src/branch/master/HISTORY
+SourceCode: https://github.com/captainepoch/husky
+IssueTracker: https://github.com/captainepoch/husky/issues
+Changelog: https://github.com/captainepoch/husky/blob/HEAD/HISTORY
 
 AutoName: Husky
 
 RepoType: git
-Repo: https://codeberg.org/husky/husky
+Repo: https://github.com/captainepoch/husky
 
 Builds:
   - versionName: 1.1.2
@@ -205,9 +205,16 @@ Builds:
     gradle:
       - huskyStable
 
+  - versionName: 1.6.0
+    versionCode: 203
+    commit: 09a78d71bc2c3e7466e4ab4975aef676298d1d40
+    subdir: husky/app
+    gradle:
+      - huskyStable
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9.]+$
 UpdateCheckData: husky/appinfo.gradle|buildVersions.versionCode = (\d+)|.|buildVersions.versionName
   = "(.*)"
-CurrentVersion: 1.5.4
-CurrentVersionCode: 202
+CurrentVersion: 1.6.0
+CurrentVersionCode: 203

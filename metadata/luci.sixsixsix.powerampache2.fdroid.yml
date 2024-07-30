@@ -1,0 +1,84 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Icefields
+AuthorEmail: powerampache.music944@slmails.com
+WebSite: https://icefields.github.io/powerampache
+SourceCode: https://github.com/icefields/Power-Ampache-2
+IssueTracker: https://github.com/icefields/Power-Ampache-2/issues
+Donate: https://paypal.me/powerampache
+Bitcoin: bc1qm9dvdrukgrqpg5f7466u4cy7tfvwcsc8pqshl4
+
+RepoType: git
+Repo: https://github.com/icefields/Power-Ampache-2
+
+Builds:
+  - versionName: 1.00-55-fdroid
+    versionCode: 55
+    commit: 00f12849d50858c5fc58f6f6abf0d473373acd40
+    subdir: app
+    gradle:
+      - FDroid
+    output: build/outputs/apk/FDroid/release/*.apk
+
+  - versionName: 1.00-56-fdroid
+    versionCode: 56
+    commit: db4cc6f8d30b94b966a2003f7f7e80f805822a9d
+    subdir: app
+    gradle:
+      - FDroid
+    output: build/outputs/apk/FDroid/release/*.apk
+
+  - versionName: 1.00-58-fdroid
+    versionCode: 58
+    commit: 62165a8fcf739d4d461530462948437abf36cd31
+    subdir: app
+    gradle:
+      - FDroid
+    output: build/outputs/apk/FDroid/release/*.apk
+
+  - versionName: 1.00-59-fdroid
+    versionCode: 59
+    commit: fe1269bb8aad87cd830a187b86511a477ed85d32
+    subdir: app
+    gradle:
+      - FDroid
+    output: build/outputs/apk/FDroid/release/*.apk
+
+  - versionName: 1.00-60-fdroid
+    versionCode: 60
+    commit: a38b78088983beceb229cfbac2284ba312a1632b
+    subdir: app
+    gradle:
+      - FDroid
+    output: build/outputs/apk/FDroid/release/*.apk
+
+  - versionName: 1.00-61-fdroid
+    versionCode: 61
+    commit: 26c3acd2d36cccf8856d4f58e308afdf5b3af2d6
+    subdir: app
+    gradle:
+      - FDroid
+    output: build/outputs/apk/FDroid/release/*.apk
+
+  - versionName: 1.00-62-fdroid
+    versionCode: 62
+    commit: cff6e5bbe8c916a76118dcdbda248e06a0a381a1
+    subdir: app
+    gradle:
+      - FDroid
+    output: build/outputs/apk/FDroid/release/*.apk
+
+  - versionName: 1.00-64-fdroid
+    versionCode: 64
+    commit: 1ca91bcad5ea40c17d5f9805df745aa78727e747
+    subdir: app
+    gradle:
+      - FDroid
+    output: build/outputs/apk/FDroid/release/*.apk
+
+AutoUpdateMode: Version +-fdroid %v
+UpdateCheckMode: Tags
+UpdateCheckData: '|v[\d.]+-(\d+)||v([\d.]+-\d+)'
+CurrentVersion: 1.00-64
+CurrentVersionCode: 64

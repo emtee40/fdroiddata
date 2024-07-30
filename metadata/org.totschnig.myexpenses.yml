@@ -2638,10 +2638,142 @@ Builds:
       - tests
     build: gradle :myExpenses:packageExternReleaseUniversalApk
 
+  - versionName: 3.7.9
+    versionCode: 723
+    commit: f2d16ca4f0b2d76a9403ec2d9aea24106753231e
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.0
+    versionCode: 725
+    commit: 03144f4c8ba381374a753da4a5f6564aae634146
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.1
+    versionCode: 727
+    commit: 252320811a100236f78320672a5aaa68d1f0a2fc
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.2
+    versionCode: 731
+    commit: e6fc37ee2021bfa7e6a3e009baf7b73485f31b4e
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.2.1
+    versionCode: 733
+    commit: 47abb1e96f7bb8a454ce8909e1bbfedf141535db
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.3
+    versionCode: 735
+    commit: 7effe275d7d0040a2e849a0187350834c160c42a
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.4
+    versionCode: 737
+    commit: b401d9e366ead8bb437bd9da51e04e006cef3dd5
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.5
+    versionCode: 739
+    commit: a358931b7e94c140fd2a21f7ff8b6d582c05c5f5
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.6
+    versionCode: 743
+    commit: f12372b5e6abe44c30dcdf6744721f3253b2c72c
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.6.1
+    versionCode: 744
+    commit: 89fd550563354cc15534f3be138036523a9ce86b
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.7
+    versionCode: 748
+    commit: c166c0839516131970839dc47c2d826981318688
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
 MaintainerNotes: '* Ads: https://github.com/mtotschnig/MyExpenses/blob/b4237aabf8924614251d14fb18ce274ec0f934f7/myExpenses/src/main/java/org/totschnig/myexpenses/di/UiModule.java#L26-L33'
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^r.*$
 UpdateCheckData: build.gradle|versionCode = (\d+)|.|versionName = '(.*)'
-CurrentVersion: 3.7.8
-CurrentVersionCode: 718
+CurrentVersion: 3.8.7
+CurrentVersionCode: 748

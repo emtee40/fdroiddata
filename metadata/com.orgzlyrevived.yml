@@ -52,9 +52,76 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 1.8.19
+    versionCode: 198
+    commit: 170436f178cc48622d8763fb7550e0953ad83f6a
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.21
+    versionCode: 202
+    commit: 5b64921eb769c8f156843344f65f59a086138414
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.22
+    versionCode: 208
+    commit: ec740101639974849ecdab2010e683446956f2df
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.23
+    versionCode: 210
+    commit: 6eff256f83e1961a05b1b8e5aef5eabb1e186ee0
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.24
+    versionCode: 212
+    commit: 201a086b123a24e7e0e3909091fe4d4c7b766c37
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+    srclibs:
+      - reproducible-apk-tools@719c3471fd1bcb807510dc8e035a69e395ca37f4
+    ndk: 26.3.11579264
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
 AllowedAPKSigningKeys: 6fc9c2e22d07d25ce77e2e963455053c38b8318a1a2491b3ed95d50cba85493d
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9\.]+$
-CurrentVersion: 1.8.18
-CurrentVersionCode: 196
+CurrentVersion: 1.8.24
+CurrentVersionCode: 212

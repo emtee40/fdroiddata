@@ -7,7 +7,7 @@ SourceCode: https://github.com/aivanovski/kpassnotes
 IssueTracker: https://github.com/aivanovski/kpassnotes/issues
 Changelog: https://github.com/aivanovski/kpassnotes/releases
 
-AutoName: KPassNotes
+AutoName: KeePassVault
 
 RepoType: git
 Repo: https://github.com/aivanovski/kpassnotes.git
@@ -97,8 +97,64 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 1.4.0
+    versionCode: 10400
+    commit: 4aed6244687f11b58f6deb71a5a3c6a53d77e36b
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.1
+    versionCode: 10401
+    commit: 3947dd57a473289b889725656398945163026006
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.2
+    versionCode: 10402
+    commit: 563a12edead94c3f3bbb6b8200614499c2947f00
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.5.0
+    versionCode: 10500
+    commit: c861bc3c6f877aa3452b1e18f8f0c7ec00c4d3ad
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.6.0
+    versionCode: 10600
+    commit: b52e7408a84b01781b9d832ae82fd5ff19308053
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.6.1
+    versionCode: 10601
+    commit: 0285ebb4fbb32cf6d322b3e0fd686d4ec7c54675
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.7.0
+    versionCode: 10700
+    commit: 9bad73a2c6b557ccf5f2bf5c4fd17e2428c689be
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.8.0
+    versionCode: 10800
+    commit: 870d2f421fbf3fa1c4911588dc2d441874fe6b40
+    subdir: app
+    gradle:
+      - fdroid
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: version.properties|versionCode=(\d+)|.|versionName=(.*)
-CurrentVersion: 1.3.1
-CurrentVersionCode: 10301
+CurrentVersion: 1.8.0
+CurrentVersionCode: 10800

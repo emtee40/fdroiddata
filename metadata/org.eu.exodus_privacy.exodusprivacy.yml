@@ -174,7 +174,39 @@ Builds:
       - yes
     prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
 
+  - versionName: 3.2.3
+    versionCode: 20
+    commit: 53b1972728733bce2dcc2cbfa512f1b805950716
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
+  - versionName: 3.3.0
+    versionCode: 21
+    commit: 39b3f5aae0f0ee04c2892a406b83aac8e9d43cc7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
+  - versionName: 3.3.1
+    versionCode: 22
+    commit: de1348bea53cd849cfd747bc846c341ed9fe3ad2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
+  - versionName: 3.3.2
+    versionCode: 23
+    commit: a507b729be1bd3983fbc0828eb445e7cd1dd093e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.2.2
-CurrentVersionCode: 19
+CurrentVersion: 3.3.2
+CurrentVersionCode: 23

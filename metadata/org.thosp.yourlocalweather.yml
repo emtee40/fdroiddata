@@ -1,6 +1,6 @@
 AntiFeatures:
   NonFreeNet:
-    en-US: Depends on OpenWeatherMap, which is not libre.
+    en-US: Depends on OpenWeatherMap
 Categories:
   - Internet
 License: GPL-3.0-or-later
@@ -923,10 +923,34 @@ Builds:
       - yes
     prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
 
+  - versionName: 6.0.0
+    versionCode: 173
+    commit: a9e0a1269a1fc7614f65c0f64cd65ba5e7f810a4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 6.0.1
+    versionCode: 174
+    commit: 1a416cf5e674e4e57d2b6b5396c904a27aa51869
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
+  - versionName: 6.0.2
+    versionCode: 175
+    commit: 41bc47f2d1aa5860062ede9965dd916df6b22e0c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lint {abortOnError false}' build.gradle
+
 MaintainerNotes: NonFreeNet for OWM; also uses Mozilla location service (libre or
   not?)
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 5.8.24
-CurrentVersionCode: 172
+CurrentVersion: 6.0.2
+CurrentVersionCode: 175

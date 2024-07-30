@@ -8,7 +8,7 @@ IssueTracker: https://github.com/Futsch1/medTimer/issues
 AutoName: MedTimer
 
 RepoType: git
-Repo: https://github.com/Futsch1/medTimer
+Repo: https://github.com/Futsch1/medTimer.git
 Binaries: https://github.com/Futsch1/medTimer/releases/download/v%v/MedTimer-release-signed.apk
 
 Builds:
@@ -33,9 +33,171 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.5.0
+    versionCode: 24
+    commit: 62fae33bf39c412f5431d142e04cdbebd25646c3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 25
+    commit: 0577b3ed7cae65b022067ec6e8a997ae1402015f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 26
+    commit: c332f9f5e45fd67e5b16941cfd86e9cef62a1071
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 27
+    commit: f4b92755605c009ec6a516cac3aa196d8b4baf1d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 28
+    commit: f09fc9658f6cdf77541e31011038815513b7595c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 30
+    commit: 049cda8e9a53478d4e48263a73d263b8c66d4093
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.2
+    versionCode: 32
+    commit: b694d3345441292377cd0bacf372ead53e1b3b27
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.3
+    versionCode: 33
+    commit: 21e5cdfe0736f69fdba7059e85810999f75bd820
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.5
+    versionCode: 35
+    commit: 86129987b546cc93ae27ef0ea0101129510886c4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 44
+    commit: f89605cb068b28eb351c49448d832f44fd447754
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.2
+    versionCode: 46
+    commit: d2a4a0b57ae42d6b30e787ba1e55bd57f9bbf4f8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.3
+    versionCode: 47
+    commit: 09f24c2a138d8ba4fc97f5ba1676456f8f014c5b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.4
+    versionCode: 48
+    commit: c7c3ed5611bc425ba469af4c5e0df9f00c9af23a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.7
+    versionCode: 52
+    commit: ba6a3ceebba0e04e73db680bbad07a62d5b24a4f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.8
+    versionCode: 54
+    commit: bf6a339015c4734b244688b2bcaa8757eb69ec27
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.9
+    versionCode: 55
+    commit: c2941855a93b255344ecde469bf927f2f2d961ad
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.10
+    versionCode: 56
+    disable: https://github.com/Futsch1/medTimer/issues/169
+    commit: 97ed4f580e7a1d533b353f67bc60ce7941c907e7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.11
+    versionCode: 57
+    commit: 427ee995ae99eba478a59c437a73bc2ca036acd2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.12
+    versionCode: 58
+    commit: fa2ac9eabbb7b9c1cc7088bf1c417fcb2180de98
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.13
+    versionCode: 60
+    commit: d66ace5943b6ae01939f8c7d87a95644fed10348
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.14
+    versionCode: 62
+    commit: 5e4f93688be6afe06c15a6160e409930d6d60532
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.15
+    versionCode: 63
+    commit: 854e7d69176581fcf08b1752590c45498088e257
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.16
+    versionCode: 65
+    commit: 662e46496562e8f1048fe356e17d41fd20fc319e
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: 69bc7c72e499045b44c87fc8463f599472deb408c48de38de8554ae7754b9d84
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.2
-CurrentVersionCode: 23
+CurrentVersion: 1.8.16
+CurrentVersionCode: 65

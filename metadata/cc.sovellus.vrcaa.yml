@@ -1,0 +1,48 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Uses VRChat proprietary service endpoints for real-time communication.
+Categories:
+  - Games
+License: Apache-2.0
+SourceCode: https://github.com/Nyabsi/VRCAA
+IssueTracker: https://github.com/Nyabsi/VRCAA/issues
+Translation: https://crowdin.com/project/vrcaa
+
+AutoName: VRChat Android Assistant
+
+RepoType: git
+Repo: https://github.com/Nyabsi/VRCAA.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 100000
+    commit: 870a532efb1cfa7387564374dfecfa7ba4908b3f
+    subdir: app
+    gradle:
+      - standard
+
+  - versionName: 1.1.0
+    versionCode: 100100
+    commit: 9675ea4777d5f890e7fee96a9e41164ba28ec1f9
+    subdir: app
+    gradle:
+      - standard
+
+  - versionName: 1.2.0
+    versionCode: 100200
+    commit: 09f77de9481ceebd824ee133cc33b483e255f315
+    subdir: app
+    gradle:
+      - standard
+
+  - versionName: 1.2.1
+    versionCode: 100210
+    commit: c114248069f30c32f4df1dfb942c314ff02f717b
+    subdir: app
+    gradle:
+      - standard
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.2.1
+CurrentVersionCode: 100210

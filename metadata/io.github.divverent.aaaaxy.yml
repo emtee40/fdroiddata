@@ -10,7 +10,7 @@ Changelog: https://github.com/divVerent/aaaaxy/releases
 AutoName: AAAAXY
 
 RepoType: git
-Repo: https://github.com/divVerent/aaaaxy
+Repo: https://github.com/divVerent/aaaaxy.git
 
 Builds:
   - versionName: 1.2.265+20220815.2279.d1e4f3ce
@@ -2153,6 +2153,322 @@ Builds:
       - aaaaxy_build_use_version_file=true
       - aaaaxy_build_versioncode_add=4
 
+  - versionName: 1.5.54+20240407.3373.3f58f518
+    versionCode: 105300541
+    commit: a247dd4b83928fe88e04e9400617c9c3898da048
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp build-essential golang-go
+    gradle:
+      - yes
+    ndk: 25.1.8937393
+    gradleprops:
+      - aaaaxy_build_gomobile_targets=android/386
+      - aaaaxy_build_tags=embed
+      - aaaaxy_build_use_version_file=true
+      - aaaaxy_build_versioncode_add=1
+
+  - versionName: 1.5.54+20240407.3373.3f58f518
+    versionCode: 105300542
+    commit: a247dd4b83928fe88e04e9400617c9c3898da048
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp build-essential golang-go
+    gradle:
+      - yes
+    ndk: 25.1.8937393
+    gradleprops:
+      - aaaaxy_build_gomobile_targets=android/amd64
+      - aaaaxy_build_tags=embed
+      - aaaaxy_build_use_version_file=true
+      - aaaaxy_build_versioncode_add=2
+
+  - versionName: 1.5.54+20240407.3373.3f58f518
+    versionCode: 105300543
+    commit: a247dd4b83928fe88e04e9400617c9c3898da048
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp build-essential golang-go
+    gradle:
+      - yes
+    ndk: 25.1.8937393
+    gradleprops:
+      - aaaaxy_build_gomobile_targets=android/arm
+      - aaaaxy_build_tags=embed
+      - aaaaxy_build_use_version_file=true
+      - aaaaxy_build_versioncode_add=3
+
+  - versionName: 1.5.54+20240407.3373.3f58f518
+    versionCode: 105300544
+    commit: a247dd4b83928fe88e04e9400617c9c3898da048
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp build-essential golang-go
+    gradle:
+      - yes
+    ndk: 25.1.8937393
+    gradleprops:
+      - aaaaxy_build_gomobile_targets=android/arm64
+      - aaaaxy_build_tags=embed
+      - aaaaxy_build_use_version_file=true
+      - aaaaxy_build_versioncode_add=4
+
+  - versionName: 1.5.129+20240501.3448.7f89a0d3
+    versionCode: 105301291
+    commit: 7e451daaa6a80b2577a35f8d539ec7cf96b4c869
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make
+      - apt-get install -t bookworm-backports golang-go
+    gradle:
+      - yes
+    ndk: 25.1.8937393
+    gradleprops:
+      - aaaaxy_build_gomobile_targets=android/386
+      - aaaaxy_build_tags=embed
+      - aaaaxy_build_use_version_file=true
+      - aaaaxy_build_versioncode_add=1
+
+  - versionName: 1.5.129+20240501.3448.7f89a0d3
+    versionCode: 105301292
+    commit: 7e451daaa6a80b2577a35f8d539ec7cf96b4c869
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make
+      - apt-get install -t bookworm-backports golang-go
+    gradle:
+      - yes
+    ndk: 25.1.8937393
+    gradleprops:
+      - aaaaxy_build_gomobile_targets=android/amd64
+      - aaaaxy_build_tags=embed
+      - aaaaxy_build_use_version_file=true
+      - aaaaxy_build_versioncode_add=2
+
+  - versionName: 1.5.129+20240501.3448.7f89a0d3
+    versionCode: 105301293
+    commit: 7e451daaa6a80b2577a35f8d539ec7cf96b4c869
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make
+      - apt-get install -t bookworm-backports golang-go
+    gradle:
+      - yes
+    ndk: 25.1.8937393
+    gradleprops:
+      - aaaaxy_build_gomobile_targets=android/arm
+      - aaaaxy_build_tags=embed
+      - aaaaxy_build_use_version_file=true
+      - aaaaxy_build_versioncode_add=3
+
+  - versionName: 1.5.129+20240501.3448.7f89a0d3
+    versionCode: 105301294
+    commit: 7e451daaa6a80b2577a35f8d539ec7cf96b4c869
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make
+      - apt-get install -t bookworm-backports golang-go
+    gradle:
+      - yes
+    ndk: 25.1.8937393
+    gradleprops:
+      - aaaaxy_build_gomobile_targets=android/arm64
+      - aaaaxy_build_tags=embed
+      - aaaaxy_build_use_version_file=true
+      - aaaaxy_build_versioncode_add=4
+
+  - versionName: 1.5.139+20240603.3458.879ed991
+    versionCode: 105301391
+    commit: a6ecd5a1de8f283476a2a1ba73ab0c8f789aaac1
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make gcc libc-dev
+      - apt-get install -y -t bookworm-backports golang-go
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - go@go1.22.3
+    prebuild: gradle clean
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export PATH=$$go$$/bin:$PATH
+      - gradle assembleRelease -Paaaaxy_build_gomobile_targets='android/386' -Paaaaxy_build_tags='embed'
+        -Paaaaxy_build_use_version_file='true' -Paaaaxy_build_versioncode_add='1'
+    ndk: 25.1.8937393
+
+  - versionName: 1.5.139+20240603.3458.879ed991
+    versionCode: 105301392
+    commit: a6ecd5a1de8f283476a2a1ba73ab0c8f789aaac1
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make gcc libc-dev
+      - apt-get install -y -t bookworm-backports golang-go
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - go@go1.22.3
+    prebuild: gradle clean
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export PATH=$$go$$/bin:$PATH
+      - gradle assembleRelease -Paaaaxy_build_gomobile_targets='android/amd64' -Paaaaxy_build_tags='embed'
+        -Paaaaxy_build_use_version_file='true' -Paaaaxy_build_versioncode_add='2'
+    ndk: 25.1.8937393
+
+  - versionName: 1.5.139+20240603.3458.879ed991
+    versionCode: 105301393
+    commit: a6ecd5a1de8f283476a2a1ba73ab0c8f789aaac1
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make gcc libc-dev
+      - apt-get install -y -t bookworm-backports golang-go
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - go@go1.22.3
+    prebuild: gradle clean
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export PATH=$$go$$/bin:$PATH
+      - gradle assembleRelease -Paaaaxy_build_gomobile_targets='android/arm' -Paaaaxy_build_tags='embed'
+        -Paaaaxy_build_use_version_file='true' -Paaaaxy_build_versioncode_add='3'
+    ndk: 25.1.8937393
+
+  - versionName: 1.5.139+20240603.3458.879ed991
+    versionCode: 105301394
+    commit: a6ecd5a1de8f283476a2a1ba73ab0c8f789aaac1
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make gcc libc-dev
+      - apt-get install -y -t bookworm-backports golang-go
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - go@go1.22.3
+    prebuild: gradle clean
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export PATH=$$go$$/bin:$PATH
+      - gradle assembleRelease -Paaaaxy_build_gomobile_targets='android/arm64' -Paaaaxy_build_tags='embed'
+        -Paaaaxy_build_use_version_file='true' -Paaaaxy_build_versioncode_add='4'
+    ndk: 25.1.8937393
+
+  - versionName: 1.5.173+20240708.3492.2c86309a
+    versionCode: 105301731
+    commit: c89cd4981873d2438cceed04f4373870c922e036
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make gcc libc-dev
+      - apt-get install -y -t bookworm-backports golang-go
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - go@go1.22.3
+    prebuild: gradle clean
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export PATH=$$go$$/bin:$PATH
+      - gradle assembleRelease -Paaaaxy_build_gomobile_targets='android/386' -Paaaaxy_build_tags='embed'
+        -Paaaaxy_build_use_version_file='true' -Paaaaxy_build_versioncode_add='1'
+    ndk: 25.1.8937393
+
+  - versionName: 1.5.173+20240708.3492.2c86309a
+    versionCode: 105301732
+    commit: c89cd4981873d2438cceed04f4373870c922e036
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make gcc libc-dev
+      - apt-get install -y -t bookworm-backports golang-go
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - go@go1.22.3
+    prebuild: gradle clean
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export PATH=$$go$$/bin:$PATH
+      - gradle assembleRelease -Paaaaxy_build_gomobile_targets='android/amd64' -Paaaaxy_build_tags='embed'
+        -Paaaaxy_build_use_version_file='true' -Paaaaxy_build_versioncode_add='2'
+    ndk: 25.1.8937393
+
+  - versionName: 1.5.173+20240708.3492.2c86309a
+    versionCode: 105301733
+    commit: c89cd4981873d2438cceed04f4373870c922e036
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make gcc libc-dev
+      - apt-get install -y -t bookworm-backports golang-go
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - go@go1.22.3
+    prebuild: gradle clean
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export PATH=$$go$$/bin:$PATH
+      - gradle assembleRelease -Paaaaxy_build_gomobile_targets='android/arm' -Paaaaxy_build_tags='embed'
+        -Paaaaxy_build_use_version_file='true' -Paaaaxy_build_versioncode_add='3'
+    ndk: 25.1.8937393
+
+  - versionName: 1.5.173+20240708.3492.2c86309a
+    versionCode: 105301734
+    commit: c89cd4981873d2438cceed04f4373870c922e036
+    subdir: AndroidStudioProjects/AAAAXY/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y advancecomp make gcc libc-dev
+      - apt-get install -y -t bookworm-backports golang-go
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - go@go1.22.3
+    prebuild: gradle clean
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export PATH=$$go$$/bin:$PATH
+      - gradle assembleRelease -Paaaaxy_build_gomobile_targets='android/arm64' -Paaaaxy_build_tags='embed'
+        -Paaaaxy_build_use_version_file='true' -Paaaaxy_build_versioncode_add='4'
+    ndk: 25.1.8937393
+
 MaintainerNotes: |
   third_party/gnu_unifont/assets/fonts/unifont-15.0.01.bdf.gz is scanignore'd
   as a third party asset that is unlikely to receive updates and gzip'd to
@@ -2166,5 +2482,5 @@ VercodeOperation:
   - '%c + 3'
   - '%c + 4'
 UpdateCheckData: .lastreleaseversioncode|(\d+)|.lastreleaseversion|(\S+)
-CurrentVersion: 1.5.42+20240304.3361.65bd9a62
-CurrentVersionCode: 105300424
+CurrentVersion: 1.5.173+20240708.3492.2c86309a
+CurrentVersionCode: 105301734

@@ -1,5 +1,5 @@
 AntiFeatures:
-  NonFreeNet:
+  TetheredNet:
     en-US: Tethered to the XRCB servers (you cannot change the instance).
   Tracking:
     en-US: Uses Matomo to track statistics (cannot be disabled).
@@ -196,9 +196,39 @@ Builds:
       - XrcbApp/node_modules/
     ndk: r20b
 
-MaintainerNotes: XRCB server soft is FOSS, so this should become TetheredNet later.
+  - versionName: 1.7.9
+    versionCode: 22
+    commit: 491b9d4117de455a704772c3b27b54330c9c846c
+    subdir: XrcbApp/android/app
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y npm
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    init: npm install --no-optional --build-from-source
+    gradle:
+      - yes
+    rm:
+      - XrcbApp/ios
+    prebuild: sed -i -e '/signingConfig signingConfigs/d' -e '/project.ext.react =
+      \[/a nodeExecutableAndArgs:["node","--openssl-legacy-provider"],' build.gradle
+    scanignore:
+      - XrcbApp/android/build.gradle
+      - XrcbApp/node_modules/jsc-android/
+      - XrcbApp/node_modules/react-native/android/
+      - XrcbApp/node_modules/react-native-localize/android/build.gradle
+      - XrcbApp/node_modules/react-native/ReactAndroid/build.gradle
+      - XrcbApp/node_modules/react-native-safe-area-context/android/build.gradle
+      - XrcbApp/node_modules/react-native-screens/android/build.gradle
+      - XrcbApp/node_modules/react-native-svg/android/build.gradle
+      - XrcbApp/node_modules/react-native-track-player/android/build.gradle
+    scandelete:
+      - XrcbApp/node_modules/
+    ndk: 20.1.5948944
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.7.7
-CurrentVersionCode: 20
+CurrentVersion: 1.7.9
+CurrentVersionCode: 22

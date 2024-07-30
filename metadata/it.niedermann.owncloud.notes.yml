@@ -974,7 +974,37 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 4.2.0
+    versionCode: 40020090
+    commit: a9201eda2df572ded720fcd08dd34e1ce851fe5f
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.1
+    versionCode: 40020190
+    commit: 5d8c7e4f90cf195261902bccc5000b7e9ea8a45e
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.0
+    versionCode: 40030090
+    commit: 308125aead479dfcd691cf22e343a237046af68c
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.1
+    versionCode: 40030190
+    commit: 78812882a80cd51f01d8bf3d145b86adfdcff20b
+    subdir: app
+    gradle:
+      - fdroid
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[\d.]+$
-CurrentVersion: 4.1.0
-CurrentVersionCode: 40010090
+CurrentVersion: 4.3.1
+CurrentVersionCode: 40030190

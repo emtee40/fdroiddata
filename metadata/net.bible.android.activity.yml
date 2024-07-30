@@ -1576,7 +1576,73 @@ Builds:
       - standard
       - fdroid
 
+  - versionName: 5.0.805
+    versionCode: 805
+    commit: ede43af3585d4b4c6a56d5c0bb45e907d2c5b651
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.806
+    versionCode: 806
+    commit: a303445b01b4b6915b08be48db9fce5f373a44a0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.807
+    versionCode: 807
+    commit: 0dd4475693eeca02f86219a188241d4078c9a52b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.809
+    versionCode: 809
+    commit: 4ea6430b1de9390104d1764a1dd892a2e549928a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.827
+    versionCode: 827
+    commit: a0f61dbc422ef5e2a4acf9ff526978b6a5198b30
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
+  - versionName: 5.0.828
+    versionCode: 828
+    commit: 2e1582ad58b6140b3cf55c6249b5962d3206a2ee
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y npm
+    gradle:
+      - standard
+      - fdroid
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+-fdroid$
-CurrentVersion: 5.0.804
-CurrentVersionCode: 804
+CurrentVersion: 5.0.828
+CurrentVersionCode: 828

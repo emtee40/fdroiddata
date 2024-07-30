@@ -119,7 +119,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.3.8
+    versionCode: 23800
+    commit: 070f8436ef06b215dea4182060e5f78d781f7ceb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.0
+    versionCode: 24000
+    commit: 146a05ebfc17b7b0b3731a11a52ea838e476495b
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.3.7
-CurrentVersionCode: 23700
+CurrentVersion: 2.4.0
+CurrentVersionCode: 24000

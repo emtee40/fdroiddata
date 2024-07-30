@@ -251,9 +251,124 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.7.2
+    versionCode: 71
+    commit: 2271625a3efc7c50655e35f87b2fda0fa681906a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.3
+    versionCode: 72
+    commit: 235bb8a0ecc97ae9a5999d5a882c54c0e34d501c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.6
+    versionCode: 75
+    commit: 173f118f1e9be51866411c60b55cfdab66f84366
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.4
+    versionCode: 81
+    commit: 3dd891c1c4d71f5c66e46e6c27ec959f0364b4f1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.5
+    versionCode: 82
+    commit: 3693d0ed914fc05783d2bcc3ec713396486f337f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.9
+    versionCode: 86
+    commit: bbe00e07111785d0f8651afab273c4784ae64825
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1024/2048/' ../gradle.properties
+
+  - versionName: 3.2.3
+    versionCode: 90
+    commit: 36c436d462bd3c4d8b8e2c85864e0e9cba126199
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1024/2048/' ../gradle.properties
+
+  - versionName: 3.2.4
+    versionCode: 91
+    commit: 4c8d9676ee9c0b76b859a8f3b78c83738e115c14
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1024/2048/' ../gradle.properties
+
+  - versionName: 3.2.5
+    versionCode: 92
+    commit: bad99dc3cbda923626eb600ff6c495c49503f11d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1024/2048/' ../gradle.properties
+
+  - versionName: 3.2.6
+    versionCode: 93
+    commit: bde110de3af24276bb2cb7dd1f67f0c05433e6f5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1024/2048/' ../gradle.properties
+
+  - versionName: 3.3.0
+    versionCode: 94
+    commit: 9e4abd73ce4b62bbf66c8d455b2c39624c1c570d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1024/2048/' ../gradle.properties
+
+  - versionName: 3.3.1
+    versionCode: 95
+    commit: 4ff8f61920fb0a391fc7ee92845039f870ef3741
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1024/2048/' ../gradle.properties
+
+  - versionName: 3.3.2
+    versionCode: 96
+    commit: 6ef2c14f4bb359166c47d9ea7641005fc645c866
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1024/2048/' ../gradle.properties
+
+  - versionName: 3.3.3
+    versionCode: 97
+    commit: bc9199e3d232f8652cd36621e44cd224c5c4dc41
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1024/2048/' ../gradle.properties
+
+  - versionName: 3.3.4
+    versionCode: 98
+    commit: 10b77b57de0ca31d4d88e1d50d7ba730b6c1d131
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1024/2048/' ../gradle.properties
+
 AllowedAPKSigningKeys: ea7195cfce638ae6b1a8002ddc0d4863366095ea5b8d95c1cd5e25db0fe2e7c3
 
-AutoUpdateMode: None
+AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.7.1
-CurrentVersionCode: 70
+CurrentVersion: 3.3.4
+CurrentVersionCode: 98

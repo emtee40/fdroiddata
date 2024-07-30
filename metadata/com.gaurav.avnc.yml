@@ -314,7 +314,34 @@ Builds:
       - yes
     prebuild: sdkmanager 'cmake;3.22.1'
 
+  - versionName: 2.5.0
+    versionCode: 32
+    commit: f8ab674355e51b29f87ea36da02e2cf20fab0038
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+
+  - versionName: 2.5.1
+    versionCode: 33
+    commit: a16c8c336568b2efbbff9f21f547f23edad5b2ca
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+
+  - versionName: 2.5.2
+    versionCode: 34
+    commit: 5e85fe40febf180915c6ce55ce51f9d1328da0b7
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.4.2
-CurrentVersionCode: 31
+CurrentVersion: 2.5.2
+CurrentVersionCode: 34

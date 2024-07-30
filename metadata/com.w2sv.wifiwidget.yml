@@ -7,6 +7,7 @@ AuthorName: Janek Zangenberg
 AuthorEmail: zangenbergjanek@googlemail.com
 SourceCode: https://github.com/w2sv/WiFi-Widget
 IssueTracker: https://github.com/w2sv/WiFi-Widget/issues
+Donate: https://buymeacoffee.com/w2sv
 
 AutoName: WiFi Widget
 
@@ -210,10 +211,64 @@ Builds:
     scandelete:
       - plugins
 
+  - versionName: 1.4.12
+    versionCode: 53
+    commit: 2ac9460829a9a842d4f84856b78aa3130470549b
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - plugins
+
+  - versionName: 1.4.13
+    versionCode: 54
+    commit: c91372ee1f98f6dccc3d9d51552b8b1b1ffa2475
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - plugins
+
+  - versionName: 1.4.14
+    versionCode: 55
+    commit: cd78d31b01c4defd5dc5b7f813798ded54562287
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - plugins
+
+  - versionName: 1.5.0
+    versionCode: 56
+    commit: ff92a4b51fc61ecb24fe83d154688db41d13b52d
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - plugins
+
+  - versionName: 1.5.01
+    versionCode: 57
+    commit: 10e7fecd3829da9a2322fa105df68ba60070837c
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - plugins
+
+  - versionName: 1.5.02
+    versionCode: 58
+    commit: 96ebe56e2b4052412b2422c2422f641b815f55ca
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - plugins
+
 AllowedAPKSigningKeys: e22bed7909bce21fa5bc900a8c056eaa0773761f70774d1d808bbbafb3aa1958
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: gradle.properties|versionCode=(\d+)|.|version=([\d.]+)
-CurrentVersion: 1.4.11
-CurrentVersionCode: 52
+CurrentVersion: 1.5.02
+CurrentVersionCode: 58

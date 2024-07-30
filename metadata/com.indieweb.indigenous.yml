@@ -3,15 +3,15 @@ Categories:
 License: GPL-3.0-only
 AuthorName: marksuth
 AuthorEmail: mark@marksuth.dev
-WebSite: https://indigenous.marksuth.dev
-SourceCode: https://github.com/marksuth/indigenous-android
-IssueTracker: https://github.com/marksuth/indigenous-android/issues
-Changelog: https://github.com/marksuth/indigenous-android/releases
+WebSite: https://indiepass.app
+SourceCode: https://github.com/IndiePass/indiepass-android
+IssueTracker: https://github.com/IndiePass/indiepass-android/issues
+Changelog: https://github.com/IndiePass/indiepass-android/releases
 
 AutoName: IndiePass
 Description: |-
   An app with extensions for sharing information using your IndieWeb domain or Fediverse account like Mastodon or Pixelfed. More information on
-  https://indigenous.marksuth.dev and https://indieweb.org/Indigenous
+  https://indiepass.app and https://indieweb.org/IndiePass
 
 
   <b>General Functionality:</b>
@@ -42,7 +42,7 @@ Description: |-
   * view fullscreen images, zoom and pinch
 
 RepoType: git
-Repo: https://github.com/marksuth/indigenous-android.git
+Repo: https://github.com/IndiePass/indiepass-android.git
 
 Builds:
   - versionName: '0.31'
@@ -75,6 +75,7 @@ Builds:
 
   - versionName: '0.46'
     versionCode: 46
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.46'
     subdir: app
     gradle:
@@ -82,6 +83,7 @@ Builds:
 
   - versionName: '0.47'
     versionCode: 47
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.47'
     subdir: app
     gradle:
@@ -89,6 +91,7 @@ Builds:
 
   - versionName: '0.48'
     versionCode: 48
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.48'
     subdir: app
     gradle:
@@ -96,6 +99,7 @@ Builds:
 
   - versionName: '0.49'
     versionCode: 49
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.49'
     subdir: app
     gradle:
@@ -103,6 +107,7 @@ Builds:
 
   - versionName: '0.50'
     versionCode: 50
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.50'
     subdir: app
     gradle:
@@ -110,6 +115,7 @@ Builds:
 
   - versionName: '0.52'
     versionCode: 52
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.52'
     subdir: app
     gradle:
@@ -117,6 +123,7 @@ Builds:
 
   - versionName: '0.57'
     versionCode: 57
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.57'
     subdir: app
     gradle:
@@ -124,6 +131,7 @@ Builds:
 
   - versionName: '0.58'
     versionCode: 58
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.58'
     subdir: app
     gradle:
@@ -131,6 +139,7 @@ Builds:
 
   - versionName: '0.59'
     versionCode: 59
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.59'
     subdir: app
     gradle:
@@ -138,6 +147,7 @@ Builds:
 
   - versionName: '0.60'
     versionCode: 60
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.60'
     subdir: app
     gradle:
@@ -145,6 +155,7 @@ Builds:
 
   - versionName: '0.62'
     versionCode: 62
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.62'
     subdir: app
     gradle:
@@ -152,6 +163,7 @@ Builds:
 
   - versionName: '0.63'
     versionCode: 63
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1996891902
     commit: '0.63'
     subdir: app
     gradle:

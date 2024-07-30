@@ -265,7 +265,56 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.5.0
+    versionCode: 40500
+    commit: 154b52b522aed6a44c87e75755f84453c8174809
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.0
+    versionCode: 40600
+    commit: 08772b844ba04089ad91b7dd4c79fc1231531aac
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.1
+    versionCode: 40601
+    commit: 4c82c00edbc89161c96271ffcae55a4e71bc78ad
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.2
+    versionCode: 40602
+    commit: 6715644b6fa1f8c81b28a433f31bc89c36a7468b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.3
+    versionCode: 40603
+    commit: 2097297f1b02fb2c29a2cff42c2da299f66eec14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.8.0
+    versionCode: 40800
+    commit: 3b889ca65f2f5cd509ad8024cf56ffdeb028db17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.9.1
+    versionCode: 40901
+    commit: 5d1316c7af8df1a4030231bc65291f62801c8d28
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.4.1
-CurrentVersionCode: 40401
+CurrentVersion: 4.9.1
+CurrentVersionCode: 40901

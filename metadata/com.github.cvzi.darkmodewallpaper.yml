@@ -450,7 +450,57 @@ Builds:
     rm:
       - app/publish.gradle
 
+  - versionName: 1.6.7
+    versionCode: 55
+    commit: 524e7fd71e0f7fb6d68d33bf60bfa910d38856bc
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/publish.gradle
+
+  - versionName: 1.6.8
+    versionCode: 56
+    commit: e6c0c7521f693cf5955fe3a2c43e1379e1ce684b
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/publish.gradle
+
+  - versionName: 1.6.9
+    versionCode: 57
+    commit: a25a63a55db9e2c03901719ae1dd7c960efbe813
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/publish.gradle
+
+  - versionName: 1.6.10
+    versionCode: 58
+    commit: 98ae53b171c45f80a4b4b6a9cc11864cb93b494d
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/publish.gradle
+
+  - versionName: 1.6.11
+    versionCode: 59
+    commit: 184d8b2df4ede770680533fba24454ae60d1523c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 60
+    commit: 8dabd762e0aa65df8747dd935c191ebe0251931d
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.6.5
-CurrentVersionCode: 53
+CurrentVersion: 1.7.0
+CurrentVersionCode: 60

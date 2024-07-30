@@ -1,0 +1,82 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Xilin Jia
+AuthorWebSite: https://xilinjia.github.io/
+SourceCode: https://github.com/XilinJia/Podcini
+IssueTracker: https://github.com/XilinJia/Podcini/issues
+
+RepoType: git
+Repo: https://github.com/XilinJia/Podcini.git
+Binaries: https://github.com/XilinJia/Podcini/releases/download/%v/Podcini.R_release_free_%v.apk
+
+Builds:
+  - versionName: 6.0.12
+    versionCode: 3020212
+    commit: b4b850baba652bc9a5b35f3f26dd9252f82b994e
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/wearable/d' build.gradle
+    ndk: r26d
+
+  - versionName: 6.0.13
+    versionCode: 3020213
+    commit: 91423f9267ec4c2e7d4e051ad7581faf50a97dbd
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/wearable/d' build.gradle
+    ndk: r26d
+
+  - versionName: 6.1.1
+    versionCode: 3020215
+    commit: d47bdab9710ade72744b8d37527550a270d5e516
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/wearable/d' build.gradle
+    ndk: r26d
+
+  - versionName: 6.1.2
+    versionCode: 3020216
+    commit: 3c2618a29a8756d06518111420229bedb1b0bc18
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/wearable/d' build.gradle
+    ndk: r26d
+
+  - versionName: 6.1.4
+    versionCode: 3020218
+    commit: 08dfdf8bb169bdb32874f8cc4eac87e9ecbe2e7b
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/wearable/d' build.gradle
+    ndk: r26d
+
+  - versionName: 6.1.6
+    versionCode: 3020220
+    commit: b9b7a9e5ee6ed8ca432c28d33ff34db901e1baff
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/wearable/d' build.gradle
+    ndk: r26d
+
+  - versionName: 6.2.2
+    versionCode: 3020223
+    commit: 5a40c6ac232b71f8fbb223b7aef65e5bc04467ba
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/wearable/d' build.gradle
+    ndk: r26d
+
+AllowedAPKSigningKeys: cd1328fb5c2ccf50cb99e3ff076eb5fe88298fe28366989dcf9d9899d5eb6940
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 6.2.2
+CurrentVersionCode: 3020223

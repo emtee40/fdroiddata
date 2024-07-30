@@ -88,7 +88,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.8'
+    versionCode: 2800
+    commit: c0822292ee91fb024264c3f45aa2c277171731a7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.9'
+    versionCode: 2900
+    commit: 47f6400cd2d346028637275864241365a664c723
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.7'
-CurrentVersionCode: 2700
+CurrentVersion: '2.9'
+CurrentVersionCode: 2900

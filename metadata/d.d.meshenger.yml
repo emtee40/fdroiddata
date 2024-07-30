@@ -238,7 +238,37 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 4.2.8
+    versionCode: 428
+    commit: 406ca380016c3d11628ce8b9c58310908f634964
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.0
+    versionCode: 430
+    commit: f5ec7d90d5ec2c97d5954bda9682d930d2f77125
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.1
+    versionCode: 431
+    disable: https://github.com/meshenger-app/meshenger-android/issues/140
+    commit: 084a0dda9bd7ecd785bc6e9bd8218ed8692a07f3
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.2
+    versionCode: 432
+    disable: webrtc.aar
+    commit: 27a8508481c6f0905be95de3fb23fad09da0ee2d
+    subdir: app
+    gradle:
+      - fdroid
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.2.7
-CurrentVersionCode: 427
+CurrentVersion: 4.3.2
+CurrentVersionCode: 432

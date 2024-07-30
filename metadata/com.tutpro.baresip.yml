@@ -3754,10 +3754,100 @@ Builds:
       - make all
     ndk: 26.2.11394342
 
+  - versionName: 60.1.0
+    versionCode: 397
+    commit: cd04d600c159d7d2136d18562426c5a296bb6a58
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android/Makefile
+    build:
+      - cd ../libbaresip-android
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 60.2.0
+    versionCode: 398
+    commit: 70fa8dbe310a7ed383208258c483f734a36dad52
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android/Makefile
+    build:
+      - cd ../libbaresip-android
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 60.3.0
+    versionCode: 399
+    commit: 90a357dc29775ba3915bc105c8ff9a3089623f24
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android/Makefile
+    build:
+      - cd ../libbaresip-android
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 60.4.0
+    versionCode: 400
+    commit: 3c23c7041a319a14a3b755b13c0b5de734178630
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android/Makefile
+    build:
+      - cd ../libbaresip-android
+      - make download-sources
+      - make all
+    ndk: 26.3.11579264
+
+  - versionName: 60.4.1
+    versionCode: 401
+    commit: 2d18365d26b725b8e9cb92c8a5a23fc96c472016
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android/Makefile
+    build:
+      - cd ../libbaresip-android
+      - make download-sources
+      - make all
+    ndk: 26.3.11579264
+
 MaintainerNotes: make download-sources checks out master branches of several libraries;
   this can cause build failures.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9.]+$
-CurrentVersion: 60.0.0
-CurrentVersionCode: 396
+CurrentVersion: 60.4.1
+CurrentVersionCode: 401

@@ -163,7 +163,31 @@ Builds:
     gradle:
       - foss
 
+  - versionName: 1.6.2
+    versionCode: 20
+    commit: c10dda87251d560bc1d32c7cdf677a3136993453
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/jvm/s/11/17/g' -e '/JavaVersion/s/11/17/g' build.gradle.kts
+
+  - versionName: 1.6.3
+    versionCode: 21
+    commit: 0faeb40710d3872aa769becf650e1380a1212264
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/jvm/s/11/17/g' -e '/JavaVersion/s/11/17/g' build.gradle.kts
+
+  - versionName: 1.6.4
+    versionCode: 22
+    commit: e58deda62f28f7a2e02af731d32e8535f7a2e963
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/jvm/s/11/17/g' -e '/JavaVersion/s/11/17/g' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.6.1
-CurrentVersionCode: 19
+CurrentVersion: 1.6.4
+CurrentVersionCode: 22

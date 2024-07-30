@@ -1,5 +1,5 @@
 AntiFeatures:
-  NonFreeNet:
+  TetheredNet:
     en-US: Rely on dictionaryapi.dev.
 Categories:
   - Reading
@@ -15,7 +15,7 @@ AutoName: freeDictionary
 
 RepoType: git
 Repo: https://github.com/yamin8000/freeDictionaryApp.git
-Binaries: https://github.com/yamin8000/freeDictionaryApp/releases/download/%v/io.github.yamin8000.owl-v%c.%v.-release.apk
+Binaries: https://github.com/yamin8000/freeDictionaryApp/releases/download/%v/io.github.yamin8000.owl-v%c-n%v-release.apk
 
 Builds:
   - versionName: 1.5.5
@@ -80,9 +80,32 @@ Builds:
     postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
       'META-INF/services/*'
 
+  - versionName: 1.6.4
+    versionCode: 41
+    commit: b143f5128273a0e58ed32bc836597df2d7dfd0d5
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
+  - versionName: 1.6.5
+    versionCode: 42
+    commit: 22832f93588ab35e15d09d2dbd4d3e6fb02d82d8
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines '$$OUT$$'
+      'META-INF/services/*'
+
 AllowedAPKSigningKeys: c5fc36a2d18057155a471f456216f0b1f07755f33147f938c92ea6275dced4d2
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.5.8
-CurrentVersionCode: 34
+UpdateCheckData: app/build.gradle.kts|versionCode\s=\s(\d+)|.|versionName\s=\s"([\d.]+)"
+CurrentVersion: 1.6.5
+CurrentVersionCode: 42

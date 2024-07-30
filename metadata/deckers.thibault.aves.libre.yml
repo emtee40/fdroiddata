@@ -1793,6 +1793,627 @@ Builds:
       - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
         --target-platform="android-x64"
 
+  - versionName: 1.10.8
+    versionCode: 11701
+    commit: 2619613ee53c586914fec0f2a7afb54a924b7440
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm"
+
+  - versionName: 1.10.8
+    versionCode: 11702
+    commit: 2619613ee53c586914fec0f2a7afb54a924b7440
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm64"
+
+  - versionName: 1.10.8
+    versionCode: 11704
+    commit: 2619613ee53c586914fec0f2a7afb54a924b7440
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-x64"
+
+  - versionName: 1.10.9
+    versionCode: 11801
+    commit: ed75dba228746032bcc324a205c70644a5129e06
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm"
+
+  - versionName: 1.10.9
+    versionCode: 11802
+    commit: ed75dba228746032bcc324a205c70644a5129e06
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm64"
+
+  - versionName: 1.10.9
+    versionCode: 11804
+    commit: ed75dba228746032bcc324a205c70644a5129e06
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-x64"
+
+  - versionName: 1.11.0
+    versionCode: 11901
+    commit: 645c199b335820f6eed47a9eac50f3dae6465c3d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm"
+
+  - versionName: 1.11.0
+    versionCode: 11902
+    commit: 645c199b335820f6eed47a9eac50f3dae6465c3d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm64"
+
+  - versionName: 1.11.0
+    versionCode: 11904
+    commit: 645c199b335820f6eed47a9eac50f3dae6465c3d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-x64"
+
+  - versionName: 1.11.1
+    versionCode: 12001
+    commit: 07ac7b3fda5d1c29b6df330f2162dcd80b6b8dd5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm"
+
+  - versionName: 1.11.1
+    versionCode: 12002
+    commit: 07ac7b3fda5d1c29b6df330f2162dcd80b6b8dd5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm64"
+
+  - versionName: 1.11.1
+    versionCode: 12004
+    commit: 07ac7b3fda5d1c29b6df330f2162dcd80b6b8dd5
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-x64"
+
+  - versionName: 1.11.2
+    versionCode: 12101
+    commit: ce11587482fd4c0b2665e263e7092cb13995d78b
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm"
+
+  - versionName: 1.11.2
+    versionCode: 12102
+    commit: ce11587482fd4c0b2665e263e7092cb13995d78b
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm64"
+
+  - versionName: 1.11.2
+    versionCode: 12104
+    commit: ce11587482fd4c0b2665e263e7092cb13995d78b
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-x64"
+
+  - versionName: 1.11.3
+    versionCode: 12201
+    commit: 90fa60df6981c41e7728b00e4631b76e4d3e8bb1
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm"
+
+  - versionName: 1.11.3
+    versionCode: 12202
+    commit: 90fa60df6981c41e7728b00e4631b76e4d3e8bb1
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm64"
+
+  - versionName: 1.11.3
+    versionCode: 12204
+    commit: 90fa60df6981c41e7728b00e4631b76e4d3e8bb1
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-x64"
+
+  - versionName: 1.11.4
+    versionCode: 12301
+    commit: a396635639c1b0635d04f2d82e30e006dface72d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm"
+
+  - versionName: 1.11.4
+    versionCode: 12302
+    commit: a396635639c1b0635d04f2d82e30e006dface72d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm64"
+
+  - versionName: 1.11.4
+    versionCode: 12304
+    commit: a396635639c1b0635d04f2d82e30e006dface72d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-x64"
+
+  - versionName: 1.11.5
+    versionCode: 12401
+    commit: 6d4c7656130176d560bee05ffbd8ff7818c8b613
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm"
+
+  - versionName: 1.11.5
+    versionCode: 12402
+    commit: 6d4c7656130176d560bee05ffbd8ff7818c8b613
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm64"
+
+  - versionName: 1.11.5
+    versionCode: 12404
+    commit: 6d4c7656130176d560bee05ffbd8ff7818c8b613
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-x64"
+
+  - versionName: 1.11.8
+    versionCode: 12701
+    commit: 9ea43d951cce25a4535b00278407d6d9676980b9
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm"
+
+  - versionName: 1.11.8
+    versionCode: 12702
+    commit: 9ea43d951cce25a4535b00278407d6d9676980b9
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-arm64"
+
+  - versionName: 1.11.8
+    versionCode: 12704
+    commit: 9ea43d951cce25a4535b00278407d6d9676980b9
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-*-libre-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw config --no-analytics
+      - scripts/update_flutter_version.sh
+      - scripts/apply_flavor_libre.sh
+    scanignore:
+      - .flutter/bin/cache/artifacts
+      - .flutter/bin/cache/dart-sdk
+      - .flutter/packages/flutter_tools/gradle
+      - android/build.gradle
+    scandelete:
+      - .flutter/dev/integration_tests
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutterw build apk -t lib/main_libre.dart --flavor libre --split-per-abi
+        --target-platform="android-x64"
+
 MaintainerNotes: scanignore is used to skip lint false positives triggered by Google/Huawei
   repos and dependencies used by other flavors.
 
@@ -1803,5 +2424,5 @@ VercodeOperation:
   - '%c * 100 + 2'
   - '%c * 100 + 4'
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 1.10.7
-CurrentVersionCode: 11604
+CurrentVersion: 1.11.8
+CurrentVersionCode: 12704

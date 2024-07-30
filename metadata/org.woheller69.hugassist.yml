@@ -1,6 +1,6 @@
 AntiFeatures:
-  NonFreeNet:
-    en-US: TetheredNet - Relies on HuggingChat which itself is open-source
+  TetheredNet:
+    en-US: Relies on HuggingChat which itself is open-source
 Categories:
   - Science & Education
 License: GPL-3.0-only
@@ -36,7 +36,35 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.7'
+    versionCode: 17
+    commit: 386e1a2265ceac65a713a983de3077575612a3e5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 18
+    commit: 9ed6b09f401b8a713ef23055e5e92664b4c78eda
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.9'
+    versionCode: 19
+    commit: b86f1fb1ca2ed4a6a8d20cd036c2b92f9ef358eb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 20
+    commit: 12233c53abb2eaa5fbd64fb160c73868e1f51216
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags V.*
-CurrentVersion: '1.6'
-CurrentVersionCode: 16
+CurrentVersion: '2.0'
+CurrentVersionCode: 20

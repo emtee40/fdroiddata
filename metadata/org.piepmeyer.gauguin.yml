@@ -217,9 +217,65 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.24.0
+    versionCode: 27
+    commit: 998aa8b5461f9da9422270ff0854794fd24cba1d
+    subdir: gauguin-app
+    gradle:
+      - yes
+
+  - versionName: 0.24.1
+    versionCode: 28
+    commit: c95dc7fbed5e2bd71e91f2afe84dc41a30232a10
+    subdir: gauguin-app
+    gradle:
+      - yes
+
+  - versionName: 0.24.2
+    versionCode: 29
+    commit: 84990bb9218e38745d3a14087cc0c93bb35e3759
+    subdir: gauguin-app
+    gradle:
+      - yes
+
+  - versionName: 0.25.0
+    versionCode: 30
+    commit: e041abdc60ed078614258144613ff87ac5f5f3ac
+    subdir: gauguin-app
+    gradle:
+      - yes
+
+  - versionName: 0.26.0
+    versionCode: 31
+    commit: 56874b0e79764b787247adc34f9e4c7b9f8f8018
+    subdir: gauguin-app
+    gradle:
+      - yes
+
+  - versionName: 0.27.0
+    versionCode: 32
+    commit: f2e04567cb03f816ffee1d66f1252da1c104901e
+    subdir: gauguin-app
+    gradle:
+      - yes
+
+  - versionName: 0.28.0
+    versionCode: 33
+    commit: ba28b99a23ce2c00d5a83c5bc1e0938a10f85be6
+    subdir: gauguin-app
+    gradle:
+      - yes
+
+  - versionName: 0.29.0
+    versionCode: 35
+    commit: 317a3860d16e587577dc9726106a2528a760af77
+    subdir: gauguin-app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: e3b52addda7ef701e1a42e0bc3b8b4443a5eb29cbf62a47492b9ee697438da62
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v.*[0-9]$
-CurrentVersion: 0.23.0
-CurrentVersionCode: 26
+CurrentVersion: 0.29.0
+CurrentVersionCode: 35

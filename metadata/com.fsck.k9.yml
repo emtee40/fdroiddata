@@ -1379,6 +1379,70 @@ Builds:
     scandelete:
       - build-plugin/build
 
+  - versionName: '6.802'
+    versionCode: 38002
+    commit: '6.802'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.803'
+    versionCode: 38003
+    commit: '6.803'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.804'
+    versionCode: 38004
+    commit: '6.804'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.901'
+    versionCode: 39001
+    commit: '6.901'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.902'
+    versionCode: 39002
+    disable: crashes
+    commit: '6.902'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.903'
+    versionCode: 39003
+    commit: '6.903'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.904'
+    versionCode: 39004
+    commit: '6.904'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
 MaintainerNotes: |-
   Use output instead of subdir to make gradlew-fdroid correctly determine the gradle version to be used.
   It doesn't work when using subdir because we are two levels deep into the directory structure.
@@ -1386,5 +1450,5 @@ MaintainerNotes: |-
 
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: '6.801'
-CurrentVersionCode: 38001
+CurrentVersion: '6.804'
+CurrentVersionCode: 38004

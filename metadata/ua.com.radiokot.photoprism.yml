@@ -1,7 +1,7 @@
 Categories:
   - Graphics
   - Multimedia
-License: Apache-2.0
+License: GPL-3.0-only
 AuthorEmail: oleg@radiokot.com.ua
 AuthorWebSite: https://radiokot.com.ua/
 SourceCode: https://github.com/Radiokot/photoprism-android-client
@@ -466,9 +466,54 @@ Builds:
     postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
       'assets/app.properties'
 
+  - versionName: 1.26.0
+    versionCode: 40
+    commit: b969703d85b83a29985ea77485bbde97ff477d87
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/app.properties'
+
+  - versionName: 1.27.0
+    versionCode: 41
+    commit: 2674291f0b0d048b5549af26743c9482af129ac3
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/app.properties' 'assets/open_source_licenses.html'
+
+  - versionName: 1.28.0
+    versionCode: 42
+    commit: 5cc718659671a02053bbe7989822e190e1dc3fd4
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/app.properties' 'assets/open_source_licenses.html'
+
+  - versionName: 1.28.1
+    versionCode: 43
+    disable: https://github.com/Radiokot/photoprism-android-client/issues/147
+    commit: 90797053e795241acad9d58f46013393a9c2a3c2
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/app.properties' 'assets/open_source_licenses.html'
+
 AllowedAPKSigningKeys: e7da1b20559ba52c615cfddeb770e59db792718637678ae635e357a472455d0a
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.25.0
-CurrentVersionCode: 39
+CurrentVersion: 1.28.1
+CurrentVersionCode: 43

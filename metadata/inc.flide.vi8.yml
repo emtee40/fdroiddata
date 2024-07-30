@@ -138,8 +138,29 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.17.3
+    versionCode: 170300
+    commit: v0.17.3
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: 0.17.4
+    versionCode: 170400
+    commit: v0.17.4
+    subdir: 8vim
+    gradle:
+      - yes
+
+  - versionName: 0.17.5
+    versionCode: 170500
+    commit: v0.17.5
+    subdir: 8vim
+    gradle:
+      - yes
+
 AutoUpdateMode: Version v%v
 UpdateCheckMode: HTTP
 UpdateCheckData: https://8vim.github.io/version.json|"version_code":\s*(\d+)|.|"version_name":\s*"(.*)"
-CurrentVersion: 0.16.3
-CurrentVersionCode: 160300
+CurrentVersion: 0.17.5
+CurrentVersionCode: 170500

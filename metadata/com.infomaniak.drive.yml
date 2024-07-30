@@ -1030,7 +1030,115 @@ Builds:
       - sed -i -e '/geniusscansdk/d' build.gradle
     ndk: r25b
 
+  - versionName: 4.4.8
+    versionCode: 40400801
+    commit: da9d9c56d72cfbddf355b2d21e62d9d5e45b0b28
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/amazonaws/d' ../build.gradle
+      - sed -i -e '/geniusscansdk/d' build.gradle
+    ndk: r25b
+
+  - versionName: 4.4.9
+    versionCode: 40400901
+    commit: 9d90c3105223784928d51db5292f5d534262cf89
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/amazonaws/d' ../build.gradle
+      - sed -i -e '/geniusscansdk/d' build.gradle
+    ndk: r25b
+
+  - versionName: 4.4.10
+    versionCode: 40401001
+    commit: 7556bbc723cd7fcc797a0489555745928237926e
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/amazonaws/d' ../build.gradle
+      - sed -i -e '/geniusscansdk/d' build.gradle
+    ndk: r25b
+
+  - versionName: 4.4.11
+    versionCode: 40401101
+    commit: a198735be7bc17a8d2adfb4d40b16badab58f0a0
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/amazonaws/d' ../build.gradle
+      - sed -i -e '/geniusscansdk/d' build.gradle
+    ndk: r25b
+
+  - versionName: 4.4.12
+    versionCode: 40401201
+    commit: 0f57399e44ed9d8d23af63f4e23456dbb06dee0f
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/amazonaws/d' ../build.gradle
+      - sed -i -e '/geniusscansdk/d' build.gradle
+    ndk: r25b
+
+  - versionName: 4.4.13
+    versionCode: 40401301
+    commit: 167662f5b86b280623e49839fd7e790d71ee950c
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/amazonaws/d' ../build.gradle
+      - sed -i -e '/geniusscansdk/d' build.gradle
+    ndk: r25b
+
+  - versionName: 4.4.14
+    versionCode: 40401401
+    commit: 040973900569a7379b086d0ebcce06daecb6de64
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/amazonaws/d' ../build.gradle
+      - sed -i -e '/geniusscansdk/d' build.gradle
+    ndk: r25b
+
+  - versionName: 5.0.0
+    versionCode: 50000001
+    commit: 5f45dc69bc927931e7b2a6d5dd59bef83ae8b886
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/amazonaws/d' ../build.gradle
+      - sed -i -e '/geniusscansdk/d' build.gradle
+    ndk: r25b
+
+  - versionName: 5.0.2
+    versionCode: 50000201
+    commit: 0924e52d3ef268681cedc9937569b66c99b22f31
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/amazonaws/d' ../build.gradle
+      - sed -i -e '/geniusscansdk/d' build.gradle
+    ndk: r25b
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.4.7
-CurrentVersionCode: 40400701
+CurrentVersion: 5.0.2
+CurrentVersionCode: 50000201

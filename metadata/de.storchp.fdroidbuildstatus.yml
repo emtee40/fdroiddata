@@ -1,3 +1,6 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Relies on https://f-droid.org's repo API, cannot be changed.
 Categories:
   - Development
 License: MIT
@@ -512,7 +515,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 5.3.0
+    versionCode: 102
+    commit: 7c6e2d0df4b9bfecca855f67e7592ea1ce74fb38
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.4.0
+    versionCode: 103
+    commit: 13e6390a9f0fee6063db3174dfb76d938c3f83d1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.5.0
+    versionCode: 104
+    commit: e35ee906a136a1da8191bb3ab221e1763c105551
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 5.2.0
-CurrentVersionCode: 101
+CurrentVersion: 5.5.0
+CurrentVersionCode: 104

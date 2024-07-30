@@ -5,14 +5,13 @@ Categories:
   - Multimedia
 License: GPL-3.0-or-later
 AuthorName: NullPointerException
-SourceCode: https://codeberg.org/NullPointerException/PipePipe
-IssueTracker: https://codeberg.org/NullPointerException/PipePipe/issues
-Translation: https://codeberg.org/NullPointerException/PipePipe/src/branch/main/TRANSLATION.md
-Changelog: https://codeberg.org/NullPointerException/PipePipe/releases
+SourceCode: https://github.com/InfinityLoop1308/PipePipe
+IssueTracker: https://github.com/InfinityLoop1308/PipePipe/issues
+Translation: https://github.com/InfinityLoop1308/PipePipe/blob/main/TRANSLATION.md
+Changelog: https://github.com/InfinityLoop1308/PipePipe/releases
 
 RepoType: git
-Repo: https://codeberg.org/NullPointerException/PipePipe.git
-Binaries: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-universal-release.apk
+Repo: https://github.com/InfinityLoop1308/PipePipe.git
 
 Builds:
   - versionName: 2.1.1
@@ -933,6 +932,462 @@ Builds:
     scandelete:
       - PipePipeExtractor/extractor/src/test
 
+  - versionName: 3.4.1
+    versionCode: 104901
+    commit: b71c44e4615ba53598bc80dc81713cee42550bf1
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-armeabi-v7a-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-armeabi-v7a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.4.1
+    versionCode: 104902
+    commit: b71c44e4615ba53598bc80dc81713cee42550bf1
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-x86-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.4.1
+    versionCode: 104903
+    commit: b71c44e4615ba53598bc80dc81713cee42550bf1
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86_64-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-x86_64-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.4.1
+    versionCode: 104904
+    commit: b71c44e4615ba53598bc80dc81713cee42550bf1
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-arm64-v8a-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-arm64-v8a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.4.3
+    versionCode: 105101
+    commit: b7c92b195da11f7c6547d312e2508f1826fe0559
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-armeabi-v7a-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-armeabi-v7a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.4.3
+    versionCode: 105102
+    commit: b7c92b195da11f7c6547d312e2508f1826fe0559
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-x86-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.4.3
+    versionCode: 105103
+    commit: b7c92b195da11f7c6547d312e2508f1826fe0559
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86_64-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-x86_64-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.4.3
+    versionCode: 105104
+    commit: b7c92b195da11f7c6547d312e2508f1826fe0559
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-arm64-v8a-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-arm64-v8a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.5.0
+    versionCode: 105201
+    commit: d583431cbe06e06666ec2cdaea688f8010f7dd62
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-armeabi-v7a-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-armeabi-v7a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.5.0
+    versionCode: 105202
+    commit: d583431cbe06e06666ec2cdaea688f8010f7dd62
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-x86-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.5.0
+    versionCode: 105203
+    commit: d583431cbe06e06666ec2cdaea688f8010f7dd62
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86_64-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-x86_64-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.5.0
+    versionCode: 105204
+    commit: d583431cbe06e06666ec2cdaea688f8010f7dd62
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-arm64-v8a-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-arm64-v8a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.5.1
+    versionCode: 105301
+    commit: 6afa43fa08e4a2c6706cbe606ecb8150e965c980
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-armeabi-v7a-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-armeabi-v7a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.5.1
+    versionCode: 105302
+    commit: 6afa43fa08e4a2c6706cbe606ecb8150e965c980
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-x86-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.5.1
+    versionCode: 105303
+    commit: 6afa43fa08e4a2c6706cbe606ecb8150e965c980
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86_64-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-x86_64-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.5.1
+    versionCode: 105304
+    commit: 6afa43fa08e4a2c6706cbe606ecb8150e965c980
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-arm64-v8a-release-unsigned.apk
+    binary: https://codeberg.org/NullPointerException/PipePipe/releases/download/v%v/PipePipe_%v-arm64-v8a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.6.0
+    versionCode: 105401
+    commit: 5d0a95bf15f710dfdba45cde132a04c6b1d5757d
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/InfinityLoop1308/PipePipe/releases/download/v%v/PipePipe_%v-armeabi-v7a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.6.0
+    versionCode: 105402
+    commit: 5d0a95bf15f710dfdba45cde132a04c6b1d5757d
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86-release-unsigned.apk
+    binary: https://github.com/InfinityLoop1308/PipePipe/releases/download/v%v/PipePipe_%v-x86-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.6.0
+    versionCode: 105403
+    commit: 5d0a95bf15f710dfdba45cde132a04c6b1d5757d
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86_64-release-unsigned.apk
+    binary: https://github.com/InfinityLoop1308/PipePipe/releases/download/v%v/PipePipe_%v-x86_64-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.6.0
+    versionCode: 105404
+    commit: 5d0a95bf15f710dfdba45cde132a04c6b1d5757d
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/InfinityLoop1308/PipePipe/releases/download/v%v/PipePipe_%v-arm64-v8a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.6.1
+    versionCode: 105501
+    commit: 6ea285fd0cea28bff6201200a5537d12e179080b
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/InfinityLoop1308/PipePipe/releases/download/v%v/PipePipe_%v-armeabi-v7a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.6.1
+    versionCode: 105502
+    commit: 6ea285fd0cea28bff6201200a5537d12e179080b
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86-release-unsigned.apk
+    binary: https://github.com/InfinityLoop1308/PipePipe/releases/download/v%v/PipePipe_%v-x86-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.6.1
+    versionCode: 105503
+    commit: 6ea285fd0cea28bff6201200a5537d12e179080b
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-x86_64-release-unsigned.apk
+    binary: https://github.com/InfinityLoop1308/PipePipe/releases/download/v%v/PipePipe_%v-x86_64-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
+  - versionName: 3.6.1
+    versionCode: 105504
+    commit: 6ea285fd0cea28bff6201200a5537d12e179080b
+    subdir: PipePipeClient/app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    output: build/outputs/apk/release/PipePipe_*-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/InfinityLoop1308/PipePipe/releases/download/v%v/PipePipe_%v-arm64-v8a-release.apk
+    rm:
+      - PipePipeClient/doc
+    scandelete:
+      - PipePipeExtractor/extractor/src/test
+
 AllowedAPKSigningKeys: dec73429ce2563275f5ed19825e44652b32b363a46f38bdff9ad6dcde4842d88
 
 AutoUpdateMode: Version
@@ -942,5 +1397,5 @@ VercodeOperation:
   - 100 * %c + 2
   - 100 * %c + 3
   - 100 * %c + 4
-CurrentVersion: 3.3.1
-CurrentVersionCode: 104704
+CurrentVersion: 3.6.1
+CurrentVersionCode: 105504

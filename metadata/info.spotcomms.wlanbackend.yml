@@ -1,6 +1,6 @@
 Categories:
   - System
-License: GPL-3.0-or-later
+License: AGPL-3.0-or-later
 AuthorName: Divested Computing Group
 AuthorWebSite: https://divestos.org
 SourceCode: https://gitlab.com/divested-mobile/wlanbackend
@@ -46,7 +46,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.0'
+    versionCode: 27
+    commit: 77f39a627c3f1f067f43d42164e2ae831699c9fd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 28
+    commit: 086ec34c22a66c6d2df400de8f04ede9307f7200
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.0'
-CurrentVersionCode: 26
+CurrentVersion: '2.1'
+CurrentVersionCode: 28

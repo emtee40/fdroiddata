@@ -376,7 +376,77 @@ Builds:
     gradle:
       - yes
 
+  - versionName: MatriX.131.F-Droid
+    versionCode: 157
+    commit: f886efbba116d004e176a749e0b7554f763060cc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: MatriX.132.F-Droid
+    versionCode: 158
+    commit: f4d2c4778dbc61d87d72cd1cb9b49ceddd379bb7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: MatriX.132.1.F-Droid
+    versionCode: 159
+    commit: 4d734ed28da376bb21ca0bdc71c4e51014ffdde1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: MatriX.132.2.F-Droid
+    versionCode: 160
+    commit: a672998d9db670d291f96ae4c4290900fffc4e38
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: MatriX.133.F-Droid
+    versionCode: 162
+    commit: f813f13a85e17eda75870c55848fab6fcd18e17d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: MatriX.133.1.F-Droid
+    versionCode: 163
+    commit: 4768821074100da4e68e879277ffab83d12a20e6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: MatriX.133t.F-Droid
+    versionCode: 164
+    commit: 357003b1d92d0a1178fbe2528384f7ea604b8bf1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: MatriX.133t.F-Droid
+    versionCode: 166
+    commit: cdf4dcc8d409468b9f508ec590a603015b2680a7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: MatriX.133t.F-Droid
+    versionCode: 167
+    commit: 4a2ee64863023e4f631bed92f021462500a479bf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: MatriX.134.F-Droid
+    versionCode: 168
+    commit: 6f4dd7880d2fd16e4f2959a7f7f880f5383b9485
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*\.F-Droid$
-CurrentVersion: MatriX.130.F-Droid
-CurrentVersionCode: 156
+CurrentVersion: MatriX.134.F-Droid
+CurrentVersionCode: 168

@@ -553,9 +553,97 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 1.2.4
+    versionCode: 10200401
+    commit: 56b6d07fe81bc804ceb43ece387671d60415dce7
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.0
+    versionCode: 10300001
+    commit: 2aa05f7cf93bfffc060921e2dd88185767e3b7b1
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.1
+    versionCode: 10300101
+    commit: 7d7eda2e14ff7bed6ea3b44a9fc79b927a5dc97b
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.2
+    versionCode: 10300201
+    commit: de8f8e1678d75882df70f23a9b3a6c7023fceaf8
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.3
+    versionCode: 10300301
+    commit: 3b088a5b6d9edc315abd7a687b6b7a3bd1ea8818
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.4
+    versionCode: 10300401
+    commit: d4f0885b18aadffc7ec840253cd8a4220246865c
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.5
+    versionCode: 10300501
+    commit: 08ed9f1c6a1b1fdf0c369b4fc44bc7318aa55ad9
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.3.6
+    versionCode: 10300601
+    commit: 90f20bd7db4f90a55479db017ec3698cbcd04d06
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.0
+    versionCode: 10400001
+    commit: 83654805be3d39a0cb3b8e61e942510896738740
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.1
+    versionCode: 10400101
+    commit: 537c23ae727b178379e118e912259bb670f71a7d
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.2
+    versionCode: 10400201
+    commit: c4f3f7cbca9a7b7bbe3c92ffeda76c307d07c507
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
 MaintainerNotes: on tracking see https://gitlab.com/fdroid/fdroiddata/-/merge_requests/12696#note_1303894823
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.2.3
-CurrentVersionCode: 10200301
+CurrentVersion: 1.4.2
+CurrentVersionCode: 10400201

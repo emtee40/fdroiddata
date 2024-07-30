@@ -932,15 +932,30 @@ Builds:
       - doc
       - app/src/test
 
-  - versionName: 0.26.1
-    versionCode: 996
-    disable: https://github.com/TeamNewPipe/NewPipe/issues/10746
-    commit: 49429ff40a93662ccf719794fe9747a3c56bbd36
+  - versionName: 0.27.0
+    versionCode: 997
+    commit: 9828586762997ef1d0ada61cf8a8cd42c0f18800
     subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-17-jdk-headless
-      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - doc
+      - app/src/test
+
+  - versionName: 0.27.1
+    versionCode: 998
+    commit: 0f64158469d42a37df5c8ef200f7963cafabe361
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - doc
+      - app/src/test
+
+  - versionName: 0.27.2
+    versionCode: 999
+    commit: d442b458361b002ab90d9608db223203601ee2cc
+    subdir: app
     gradle:
       - yes
     rm:
@@ -956,5 +971,5 @@ MaintainerNotes: ACRA is only used via email the users have to send themselves, 
 
 AutoUpdateMode: None
 UpdateCheckMode: Tags .*[0-9]$
-CurrentVersion: 0.26.1
-CurrentVersionCode: 996
+CurrentVersion: 0.27.2
+CurrentVersionCode: 999

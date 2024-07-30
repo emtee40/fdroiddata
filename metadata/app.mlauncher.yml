@@ -2,18 +2,18 @@ Categories:
   - System
   - Theming
 License: GPL-3.0-only
-AuthorName: Wayne Wesley
+AuthorName: DroidWorksStudio
 AuthorEmail: wayne6324@gmail.com
-SourceCode: https://github.com/HeAndroids2Much/mLauncher
-IssueTracker: https://github.com/HeAndroids2Much/mLauncher/issues
+SourceCode: https://github.com/DroidWorksStudio/mLauncher
+IssueTracker: https://github.com/DroidWorksStudio/mLauncher/issues
 Translation: https://crowdin.com/project/mlauncher
-Changelog: https://github.com/HeAndroids2Much/mLauncher/blob/HEAD/CHANGELOG.md
+Changelog: https://github.com/DroidWorksStudio/mLauncher/blob/HEAD/CHANGELOG.md
 
 AutoName: mLauncher
 
 RepoType: git
-Repo: https://github.com/HeAndroids2Much/mLauncher.git
-Binaries: https://github.com/HeAndroids2Much/mLauncher/releases/download/%v/mLauncher-%v-Signed.apk
+Repo: https://github.com/DroidWorksStudio/mLauncher.git
+Binaries: https://github.com/DroidWorksStudio/mLauncher/releases/download/%v/mLauncher-%v-Signed.apk
 
 Builds:
   - versionName: 1.1.1
@@ -87,9 +87,129 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.4.4
+    versionCode: 144
+    commit: 798faafe4c08b53a3dbc2c0dfbadef46def6e90c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.6
+    versionCode: 146
+    commit: b09e2a58f048372e91f8f1fad5025fc7233f8c0a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.7
+    versionCode: 147
+    commit: 3fdaeab898e11360ae1e8ac6b9f9479147983dae
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.9
+    versionCode: 149
+    commit: f23a71226c84abdedbbd8e586d7bdd026e0862d7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 151
+    commit: b79236c6ab1e9a297f97d6f981a91d1f6087f28f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 152
+    commit: 0ac3d9fb4a30cf43b26bd44904698486c734fd00
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.3
+    versionCode: 153
+    commit: 2d6bb0d728ebad10ee96dcde801eb43fe9eae86c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 154
+    commit: 29c2b852e01cdc332991893f9d61819db438277f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.5
+    versionCode: 155
+    commit: bfcfb95160c9352a938f14dba5f83a06f749613e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.8
+    versionCode: 158
+    commit: 5bf8f74e1a0ab585f515359c5c0ab9073eeeeb6a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.9
+    versionCode: 159
+    commit: 4a92403845fd74848379f920b6285fdecf2c1774
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 160
+    commit: 98ae777646dba5f305c8410a3751709a091f6adf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 161
+    commit: 34454baae46e0ca91d57545f6c8d29f6b3ec7f5e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 162
+    commit: 57fa78fcaa84b9ccddbd7877260fdb8789a778ee
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 163
+    commit: bd86afe7267110d456fa4869ac9033ee41da9dc3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.4
+    versionCode: 164
+    commit: dcbebc21d86260a11adc309c69722303bc165446
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.6
+    versionCode: 166
+    disable: https://github.com/DroidWorksStudio/mLauncher/issues/543
+    commit: f6f0720eb306a8630938b639ba5c39b5bfc73cbf
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: 88585139eac6d8d5922ce7af80a0f2acd9280371676014a114d5e3bf34904ae0
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.3
-CurrentVersionCode: 143
+CurrentVersion: 1.6.6
+CurrentVersionCode: 166

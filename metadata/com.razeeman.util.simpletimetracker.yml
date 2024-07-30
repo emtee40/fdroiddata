@@ -244,10 +244,48 @@ Builds:
       - sed -e 's/\s\+"/implementation "/g' ../buildSrc/src/main/kotlin/com/example/util/simpletimetracker/Deps.kt
         > deps.gradle
 
-  - versionName: '1.40'
-    versionCode: 43
-    disable: https://github.com/Razeeman/Android-SimpleTimeTracker/issues/89#issuecomment-2017737970
-    commit: 4bb9e7b1d67ed1f0431a1a7dc3c80c2178907bc6
+  - versionName: '1.41'
+    versionCode: 45
+    commit: 7d04fa2b0369070f8bccaf999c5d8366e3782463
+    subdir: app
+    gradle:
+      - base
+    binary: https://github.com/Razeeman/Android-SimpleTimeTracker/releases/download/v%v/%v-stt-base-release.apk
+    prebuild:
+      - sed -i -e '/services/d' ../features/feature_wear/build.gradle.kts ../wear/build.gradle.kts
+        ../buildSrc/src/main/kotlin/com/example/util/simpletimetracker/Deps.kt
+      - sed -e 's/\s\+"/implementation "/g' ../buildSrc/src/main/kotlin/com/example/util/simpletimetracker/Deps.kt
+        > deps.gradle
+
+  - versionName: '1.42'
+    versionCode: 47
+    commit: fddff73ea58f422f0c2d415e10fa1cd881515503
+    subdir: app
+    gradle:
+      - base
+    binary: https://github.com/Razeeman/Android-SimpleTimeTracker/releases/download/v%v/%v-stt-base-release.apk
+    prebuild:
+      - sed -i -e '/services/d' ../features/feature_wear/build.gradle.kts ../wear/build.gradle.kts
+        ../buildSrc/src/main/kotlin/com/example/util/simpletimetracker/Deps.kt
+      - sed -e 's/\s\+"/implementation "/g' ../buildSrc/src/main/kotlin/com/example/util/simpletimetracker/Deps.kt
+        > deps.gradle
+
+  - versionName: '1.43'
+    versionCode: 55
+    commit: 77e76efd6ea4b095f58afcd8eb5cb88d500ee0f8
+    subdir: app
+    gradle:
+      - base
+    binary: https://github.com/Razeeman/Android-SimpleTimeTracker/releases/download/v%v/%v-stt-base-release.apk
+    prebuild:
+      - sed -i -e '/services/d' ../features/feature_wear/build.gradle.kts ../wear/build.gradle.kts
+        ../buildSrc/src/main/kotlin/com/example/util/simpletimetracker/Deps.kt
+      - sed -e 's/\s\+"/implementation "/g' ../buildSrc/src/main/kotlin/com/example/util/simpletimetracker/Deps.kt
+        > deps.gradle
+
+  - versionName: '1.44'
+    versionCode: 61
+    commit: e1d0ff04b77a864e3397f6e161a13cfd00ee1ac6
     subdir: app
     gradle:
       - base
@@ -264,5 +302,5 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: buildSrc/src/main/kotlin/com/example/util/simpletimetracker/Base.kt|versionCode
   = (\d+)|.|versionName = "(.*)"
-CurrentVersion: '1.40'
-CurrentVersionCode: 43
+CurrentVersion: '1.44'
+CurrentVersionCode: 61

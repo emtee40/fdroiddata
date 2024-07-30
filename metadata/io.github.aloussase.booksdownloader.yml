@@ -7,13 +7,13 @@ Categories:
 License: MIT
 AuthorName: Alexander Goussas
 AuthorEmail: goussasalexander@gmail.com
-SourceCode: https://github.com/aloussase/alexandria-app
-IssueTracker: https://github.com/aloussase/alexandria-app/issues
+SourceCode: https://github.com/aloussase/AlexandriaApp
+IssueTracker: https://github.com/aloussase/AlexandriaApp/issues
 
 AutoName: Alexandria
 
 RepoType: git
-Repo: https://github.com/aloussase/alexandria-app
+Repo: https://github.com/aloussase/AlexandriaApp
 
 Builds:
   - versionName: 0.1.1
@@ -52,7 +52,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.3.3
+    versionCode: 6
+    commit: d3d05c1f7a6566d7d0ff80f43cec994f9dac7290
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.5
+    versionCode: 7
+    commit: 010dcdcb3cca09cff1e01f4166cb015c29b20762
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.3.2
-CurrentVersionCode: 5
+CurrentVersion: 0.3.5
+CurrentVersionCode: 7

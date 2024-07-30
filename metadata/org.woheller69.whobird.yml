@@ -99,7 +99,70 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.6'
+    versionCode: 26
+    commit: a01b6a100205fca63e8de250b74591b283df64de
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 27
+    commit: c9269763486613bb264429bcd8ca2a5da37c1267
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 28
+    commit: 54396b0c530fab9b5f6464d52713a48ea491daf6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.9'
+    versionCode: 29
+    commit: 2bf436f7c10012339dc60a053b81e90be936d9c3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 30
+    commit: 0d288e4d270a9076c69a14e9a3547d8bebc69a7b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.1'
+    versionCode: 31
+    commit: 91e7a5c295740803e9ef8742bd5c048677682f66
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.2'
+    versionCode: 32
+    commit: 635cf7a4e1747653d33028ee1e30b8ecf72eebe3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.3'
+    versionCode: 33
+    commit: a3a809dde9b5eeb9baca4b2283167f050592a37f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.4'
+    versionCode: 34
+    commit: 8facc9ade87202b5144011a7be97fd2e2e7103ca
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags V.*
-CurrentVersion: '2.5'
-CurrentVersionCode: 25
+CurrentVersion: '3.4'
+CurrentVersionCode: 34

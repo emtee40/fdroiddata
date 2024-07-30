@@ -251,7 +251,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 3.0.1
+    versionCode: 65
+    commit: f44fe389d7916042788ccf4b64d72a936a4961a8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.1'
+    versionCode: 67
+    commit: 29ebe31f8a525fc20b2667ddc05cb9703e139478
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.1.1
+    versionCode: 70
+    commit: 8960ffffb4251fbb1b202a6bb210e21c2a5a4234
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^((?!alpha|beta).)*$
-CurrentVersion: '3.0'
-CurrentVersionCode: 64
+CurrentVersion: 3.1.1
+CurrentVersionCode: 70

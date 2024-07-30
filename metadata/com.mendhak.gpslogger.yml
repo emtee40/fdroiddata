@@ -208,7 +208,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '130'
+    versionCode: 130
+    commit: 8561aa870ad1e56c5cabc32cb3aec66c2bc1ec1c
+    subdir: gpslogger
+    gradle:
+      - yes
+
+  - versionName: 131-rc2
+    versionCode: 131
+    commit: 67fa9918631b9584aa9113fe46b8b1dca7b4eb5a
+    subdir: gpslogger
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[.0-9]*$
-CurrentVersion: '129'
-CurrentVersionCode: 129
+CurrentVersion: 131-rc2
+CurrentVersionCode: 131

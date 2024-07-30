@@ -126,10 +126,47 @@ Builds:
     scandelete:
       - build-logic/build
 
+  - versionName: 2.5.0
+    versionCode: 40
+    commit: v2.5.0
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.5.1
+    versionCode: 41
+    commit: v2.5.1
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.6.1
+    versionCode: 43
+    commit: v2.6.1
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/build
+
+  - versionName: 2.6.2
+    versionCode: 45
+    disable: https://github.com/hushenghao/AndroidEasterEggs/issues/322
+    commit: d54714f686565bf2e633c8f2271b92c5ed278bab
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/build
+
 AllowedAPKSigningKeys: 2e9e0ce7c37d0502aa5173ae9f96a190005099f1adb9f89c68d0ca01f63fa61d
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-UpdateCheckData: app/build.gradle.kts|versionCode\s=\s(\d+)||
-CurrentVersion: 2.4.1
-CurrentVersionCode: 39
+UpdateCheckData: app/build.gradle.kts|versionCode\s=\s(\d+)||v([\d.]+)
+CurrentVersion: 2.6.2
+CurrentVersionCode: 45

@@ -5,13 +5,12 @@ Categories:
   - Reading
 License: Apache-2.0
 AuthorName: Starry Shivam
-AuthorEmail: krshivam24@proton.me
+AuthorEmail: starry@krsh.dev
 AuthorWebSite: https://github.com/starry-shivam
 SourceCode: https://github.com/Pool-Of-Tears/Myne
 IssueTracker: https://github.com/Pool-Of-Tears/Myne/issues
 Changelog: https://github.com/Pool-Of-Tears/Myne/releases
 Donate: https://github.com/Pool-Of-Tears/Myne#donations
-Bitcoin: bc1q82qh9hw5xupwlf0f3ddfud63sek53lavk6cf0k
 
 AutoName: Myne
 
@@ -175,9 +174,87 @@ Builds:
     prebuild: echo R09PR0xFX0FQSV9LRVk9IkFJemFTeUE0alB3dS00RFZONzNLbk9TZFN0b0NSeUxPdE54bkxnWSIK
       | base64 --decode >> ../local.properties
 
+  - versionName: 3.3.0
+    versionCode: 330
+    commit: 2e8301310bfd5b1f6d80c15716ed3d2fe09bd201
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo R09PR0xFX0FQSV9LRVk9IkFJemFTeUE0alB3dS00RFZONzNLbk9TZFN0b0NSeUxPdE54bkxnWSIK
+      | base64 --decode >> ../local.properties
+
+  - versionName: 3.4.0
+    versionCode: 340
+    commit: 4b7d0f1dec519a5b57058213699c4f018a724411
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo R09PR0xFX0FQSV9LRVk9IkFJemFTeUE0alB3dS00RFZONzNLbk9TZFN0b0NSeUxPdE54bkxnWSIK
+      | base64 --decode >> ../local.properties
+
+  - versionName: 3.5.1
+    versionCode: 351
+    commit: 4857529e406d4b4902ba555ca4aac1d100b81065
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo R09PR0xFX0FQSV9LRVk9IkFJemFTeUE0alB3dS00RFZONzNLbk9TZFN0b0NSeUxPdE54bkxnWSIK
+      | base64 --decode >> ../local.properties
+
+  - versionName: 3.6.0
+    versionCode: 360
+    commit: 98c05c1b881d16644ca22b1190d65c199f627602
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo R09PR0xFX0FQSV9LRVk9IkFJemFTeUE0alB3dS00RFZONzNLbk9TZFN0b0NSeUxPdE54bkxnWSIK
+      | base64 --decode >> ../local.properties
+
+  - versionName: 3.7.0
+    versionCode: 370
+    commit: b3d9c92ef9a5143402c272b4e93126ce48907c60
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo R09PR0xFX0FQSV9LRVk9IkFJemFTeUE0alB3dS00RFZONzNLbk9TZFN0b0NSeUxPdE54bkxnWSIK
+      | base64 --decode >> ../local.properties
+
+  - versionName: 3.8.0
+    versionCode: 380
+    commit: 5b312629fa3257d9022cd22c3534fa3695bd2bce
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo R09PR0xFX0FQSV9LRVk9IkFJemFTeUE0alB3dS00RFZONzNLbk9TZFN0b0NSeUxPdE54bkxnWSIK
+      | base64 --decode >> ../local.properties
+
+  - versionName: 3.9.0
+    versionCode: 390
+    commit: 99417c39c563d1f96e402c1b8f04957c9c5075a4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo R09PR0xFX0FQSV9LRVk9IkFJemFTeUE0alB3dS00RFZONzNLbk9TZFN0b0NSeUxPdE54bkxnWSIK
+      | base64 --decode >> ../local.properties
+
+  - versionName: 3.9.1
+    versionCode: 391
+    commit: 1268294b8fca3a5d76131ac9154d1901950d384a
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@719c3471fd1bcb807510dc8e035a69e395ca37f4
+    prebuild: echo R09PR0xFX0FQSV9LRVk9IkFJemFTeUE0alB3dS00RFZONzNLbk9TZFN0b0NSeUxPdE54bkxnWSIK
+      | base64 --decode >> ../local.properties
+    postbuild:
+      - mv $$OUT$$ unaligned.apk
+      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
+        --replace unaligned.apk $$OUT$$
+
 AllowedAPKSigningKeys: 5dfe06da0fe3b0813f3f3dc5305699c2dbb9dfdbab1349da7c41c59d2fcf319c
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.2.5
-CurrentVersionCode: 325
+CurrentVersion: 3.9.1
+CurrentVersionCode: 391

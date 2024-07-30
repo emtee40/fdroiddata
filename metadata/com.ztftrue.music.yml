@@ -1,0 +1,56 @@
+Categories:
+  - Multimedia
+License: Apache-2.0
+AuthorName: ztftrue
+AuthorEmail: ztftrue@gmail.com
+SourceCode: https://github.com/ZTFtrue/MonsterMusic
+IssueTracker: https://github.com/ZTFtrue/MonsterMusic/issues
+
+AutoName: MonsterMusic
+
+RepoType: git
+Repo: https://github.com/ZTFtrue/MonsterMusic
+Binaries: https://github.com/ZTFtrue/MonsterMusic/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 0.1.17
+    versionCode: 17
+    commit: e4a1c3d55163128c1a280ed946d4a3b44d5c183c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.18
+    versionCode: 18
+    commit: c1550007c281a4723aeca11dd13e1a641e1d49a3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.20
+    versionCode: 20
+    commit: 999facac047b787e3ea3e5bd8c813fc8e55f7c51
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.21
+    versionCode: 21
+    commit: bb1a9c8929d628778b4c6bffc20fa6be3676fb87
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.1.22
+    versionCode: 22
+    commit: d39cb5fbdf7d921958c78079ec5df9affaa14c8a
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: d71ec62f1bbbeae918ef9828fdc5184462acb2f1781d0ee649577cb96872495d
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.1.22
+CurrentVersionCode: 22

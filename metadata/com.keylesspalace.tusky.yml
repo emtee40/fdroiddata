@@ -642,8 +642,50 @@ Builds:
     gradle:
       - blue
 
+  - versionName: 25.0 beta 1
+    versionCode: 118
+    commit: v25.0-beta.1
+    subdir: app
+    gradle:
+      - blue
+
+  - versionName: '25.0'
+    versionCode: 119
+    commit: e96ca01dec325e9852d42c39cb8d14f45cdb1226
+    subdir: app
+    gradle:
+      - blue
+
+  - versionName: '25.1'
+    versionCode: 120
+    commit: 7e9e729331bbb5bbe7fc8b09108b6c4636f76c68
+    subdir: app
+    gradle:
+      - blue
+
+  - versionName: '25.2'
+    versionCode: 121
+    commit: bf9be47f0f5a1382ad9cbda1f927929c22a3fcd8
+    subdir: app
+    gradle:
+      - blue
+
+  - versionName: 26.0 beta 1
+    versionCode: 122
+    commit: v26.0-beta.1
+    subdir: app
+    gradle:
+      - blue
+
+  - versionName: '26.0'
+    versionCode: 123
+    commit: 000af7fb94140d0433c6f4c87e0bece73ca12676
+    subdir: app
+    gradle:
+      - blue
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+$
 UpdateCheckData: app/build.gradle|versionCode\s(\d+)|.|versionName\s"([\d.]+)"
-CurrentVersion: '24.1'
-CurrentVersionCode: 117
+CurrentVersion: '26.0'
+CurrentVersionCode: 123

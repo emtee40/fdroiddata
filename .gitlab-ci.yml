@@ -1,6 +1,3 @@
-include:
-  - template: Security/SAST.gitlab-ci.yml
-
 workflow:
   rules:
     # required to enable merge request pipelines: https://docs.gitlab.com/ee/ci/pipelines/merge_request_pipelines.html#prerequisites
@@ -96,9 +93,9 @@ variables:
 checkupdates:
   stage: test
   needs: []
-  image: debian:bookworm-slim
   tags:
-    - saas-linux-medium-amd64
+    - saas-linux-large-amd64
+  image: debian:bookworm-slim
   rules: *app_verification_rules
   before_script:
     - *install_fdroid_server_deb
@@ -118,8 +115,6 @@ git redirect:
   stage: test
   needs: []
   image: debian:bookworm-slim
-  tags:
-    - saas-linux-medium-amd64
   rules: *app_verification_rules
   script:
     - apt-get -qy update
@@ -137,14 +132,13 @@ fdroid lint:
   stage: test
   needs: []
   image: debian:bookworm-slim
-  tags:
-    - saas-linux-medium-amd64
   rules: *app_verification_rules
   before_script:
     - *install_fdroid_server_deb
     - export fdroidserver=$PWD/fdroidserver
     - *install_fdroid_server
   script:
+    - cp tools/lint_config.yml config.yml
     - *get_changed_apps
     - export EXITVALUE=0
     - function set_error() { export EXITVALUE=1; printf "\x1b[31mERROR `history|tail -2|head -1|cut -b 6-500`\x1b[0m\n"; }
@@ -173,9 +167,9 @@ fdroid lint config:
         ca-certificates
         curl
         git
+        python3-asn1crypto
         python3-defusedxml
         python3-git
-        python3-pyasn1-modules
         python3-pycountry
         python3-qrcode
         python3-requests
@@ -187,6 +181,7 @@ fdroid lint config:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_PIPELINE_SOURCE == "push"
       changes:
         paths:
+          - .gitlab-ci.yml
           - config.yml
           - config/*.yml
           - config/*/*.yml
@@ -201,8 +196,6 @@ lint:
   stage: test
   needs: []
   image: debian:bookworm-slim
-  tags:
-    - saas-linux-medium-amd64
   rules: *app_verification_rules
   script:
     - apt-get -qy update
@@ -262,7 +255,7 @@ trigger-issuebot:
 schedule-issuebot:
   stage: test
   needs: []
-  image: alpine
+  image: debian:bookworm-slim
   only:
     variables:
       - $SCHEDULE_ISSUEBOT
@@ -277,9 +270,8 @@ schedule-issuebot:
   script:
     - mkdir logs
     - export | grep -F CI_ | grep -vFi -e password -e token > logs/export.txt
-    - apk add --no-cache bash curl ca-certificates python3
-    - python3 -m ensurepip
-    - $pip install python-gitlab
+    - apt-get update
+    - apt-get -qy install --no-install-recommends bash curl ca-certificates python3-gitlab
     - ./tools/schedule-issuebot.py
 
 checkupdates_runner:
@@ -362,11 +354,11 @@ checkupdates_runner:
 fdroid build:
   stage: build
   needs: []
+  tags:
+    - saas-linux-large-amd64
   # Some env vars are setup in https://gitlab.com/fdroid/fdroidserver/-/blob/master/buildserver/setup-env-vars
   # home_vagrant=/home/vagrant
   image: registry.gitlab.com/fdroid/fdroidserver:buildserver-bookworm
-  tags:
-    - saas-linux-medium-amd64
   artifacts:
     name: "${CI_PROJECT_PATH}_${CI_JOB_STAGE}_${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHA}"
     paths:
@@ -394,9 +386,8 @@ fdroid build:
 
     - test -n "$fdroidserver" || source /etc/profile.d/bsenv.sh
 
-    - rm -rf $ANDROID_HOME/tools  # TODO remove once sdkmanager can upgrade installed packages
     # These packages are needed to make this env like the production buildserver.
-    - sdkmanager "tools" "platform-tools" "build-tools;31.0.0"
+    - sdkmanager "platform-tools" "build-tools;31.0.0"
 
     - *install_fdroid_server
 
@@ -456,7 +447,7 @@ fdroid build:
           update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java;
           ./tools/build-contains-signatures.py $build || continue;
           apt-get install sudo;
-          $fdroid publish --verbose $build;
+          $fdroid publish --verbose --error-on-failed $build;
       done
 
     - ./tools/audit-gradle.py $CHANGED;
@@ -474,6 +465,8 @@ fdroid build:
 # to GitLab Pages.
 pages:
   stage: deploy
+  tags:
+    - saas-linux-large-amd64
   image: registry.gitlab.com/fdroid/fdroidserver:buildserver-bookworm
   only:
     refs:
@@ -496,6 +489,7 @@ pages:
     - apt-get install
          python3-github
          python3-gitlab
+         python3-defusedxml
          python3-javaproperties
          python3-requests-cache
          python3-venv
@@ -544,35 +538,3 @@ check_git_repos:
     - test -d public || mkdir public
     - cp `git status | grep -Eo 'metadata/.*\.yml'` public/ || true
     - exit $EXITVALUE
-
-sast:
-  stage: report
-  tags:
-    - saas-linux-medium-amd64
-  needs:
-    - fdroid build
-  dependencies:
-    - fdroid build
-  variables:
-    GIT_DEPTH: "1"
-
-    MOBSF_API_KEY: key
-    SAST_EXPERIMENTAL_FEATURES: "true"
-    SAST_EXCLUDED_ANALYZERS:
-      bandit, brakeman, eslint, flawfinder, gosec, kubesec,
-      nodejs-scan, phpcs-security-audit, pmd-apex, security-code-scan, semgrep, sobelow,
-      spotbugs
-
-    # Make sure the apk is searched before the manifest, so only apks are scanned
-    ANALYZER_TARGET_DIR: $CI_PROJECT_DIR/tmp/
-  allow_failure: true
-  after_script:
-    # GitLab can only display reports at this exact path
-    - mv $ANALYZER_TARGET_DIR/gl-sast-report.json gl-sast-report.json
-
-mobsf-ios-sast:
-  rules:
-    - when: never
-
-mobsf-android-sast:
-  rules: *app_verification_rules

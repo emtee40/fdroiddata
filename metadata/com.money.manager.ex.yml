@@ -85,7 +85,139 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2024.03.26
+    versionCode: 1025
+    commit: ebc8c5654c877012d7d0e9c5226cf9f42f2e6da4
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.01
+    versionCode: 1026
+    commit: 19481714d11bf5aba622161181717ec02ff3ce9a
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.15
+    versionCode: 1027
+    commit: c5c86daaa2bae57b45b25f5705ebab97f3a440d6
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.16
+    versionCode: 1028
+    commit: c1bbbef9b1e6dd770adc20efdec71a23b05bec1b
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.21
+    versionCode: 1029
+    commit: 4315d721b64307cc164c132a49cb9b2723867cd6
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.29
+    versionCode: 1030
+    commit: 3c98b92d34d9fe69ad7fce2300f600fbac2c4295
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.05.02
+    versionCode: 1031
+    commit: b36d937ce67740fbc36165d845112fee34f646e3
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.05.09
+    versionCode: 1032
+    commit: f551406664bc992edecde10d6efec106c2cea120
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.06.14
+    versionCode: 1033
+    commit: f6e8d005340b7f462e441e97f195f4e3c5ab99ce
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.06.25
+    versionCode: 1034
+    commit: 336db174cf9f4dc265141abb432b3d43cc966311
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.07.04
+    versionCode: 1035
+    commit: 0f412c9441326751622926ea4a3ba69e4cebbb50
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9.]*$
-CurrentVersion: 2024.03.24
-CurrentVersionCode: 1024
+CurrentVersion: 2024.07.04
+CurrentVersionCode: 1035

@@ -177,7 +177,59 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.4.2
+    versionCode: 16
+    commit: 0b23eeee72f302bb4f57bbc2238460e3733cd670
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 17
+    commit: 2a1244c68fd0f8807a7bc6176d42a9126e08ecf8
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.5.0
+    versionCode: 18
+    commit: 35445bba2fbcbe645a1a99afc4d799bf685d7f0b
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.5.1
+    versionCode: 19
+    commit: 37cb202ade9204329fbdc6be2faf213fcf4d36c3
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.5.2
+    versionCode: 20
+    commit: 83f2253819fd89b00a9dd2ae6b1afb94255c2f6e
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
+  - versionName: 1.5.3
+    versionCode: 21
+    commit: 37a0e4f6ba17851b29f172b1f1a3918afc56e634
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]+$
-CurrentVersion: 1.4.1
-CurrentVersionCode: 15
+CurrentVersion: 1.5.3
+CurrentVersionCode: 21

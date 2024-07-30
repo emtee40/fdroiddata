@@ -1,0 +1,63 @@
+Categories:
+  - Writing
+License: AGPL-3.0-only
+SourceCode: https://github.com/dessalines/rank-my-favs
+IssueTracker: https://github.com/dessalines/rank-my-favs/issues
+Changelog: https://github.com/dessalines/rank-my-favs/blob/HEAD/RELEASES.md
+Donate: https://www.patreon.com/dessalines
+
+AutoName: Rank My Favs
+
+RepoType: git
+Repo: https://github.com/dessalines/rank-my-favs.git
+Binaries: https://github.com/dessalines/rank-my-favs/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 0.0.4
+    versionCode: 4
+    commit: 288bbd56a4c848b5a6b71d391f71ef8dc720300a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.5
+    versionCode: 5
+    commit: ab55c85b773dc85bb636aefb4c1b9fbeb1eb1f86
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.6
+    versionCode: 6
+    commit: 31b53289b4ae2d341f2c5dc505eab3ba1f8cfc75
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.2.2
+    versionCode: 11
+    commit: 7aeb205b4e80b943e97768884ebf5ec49abf5fd5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.0
+    versionCode: 12
+    commit: c4baa66de119e93bea78400ceaddef0f763687cf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.3.1
+    versionCode: 13
+    commit: 69d0db9fdfa8ba2792a7d85adb228bd0915e3b51
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: ea7195cfce638ae6b1a8002ddc0d4863366095ea5b8d95c1cd5e25db0fe2e7c3
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.3.1
+CurrentVersionCode: 13

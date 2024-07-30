@@ -7,6 +7,9 @@ AuthorWebSite: https://www.markusfisch.de
 SourceCode: https://github.com/markusfisch/PieLauncher
 IssueTracker: https://github.com/markusfisch/PieLauncher/issues
 Changelog: https://github.com/markusfisch/PieLauncher/releases
+Donate: https://www.buymeacoffee.com/markusfisch
+Liberapay: markusfisch
+Bitcoin: bc1q2guk2rpll587aymrfadkdtpq32448x5khk5j8z
 
 AutoName: Pie Launcher
 
@@ -207,7 +210,35 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.19.1
+    versionCode: 42
+    commit: fa49f1821d0814a89eddd95c4e436550d30746ee
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.19.2
+    versionCode: 43
+    commit: 88b298adaab6ea9bb1cc0094951c52c66520892b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.19.3
+    versionCode: 44
+    commit: e4afb8274a9b6e5ad34d3fe8a9b6307a2bef516b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.19.4
+    versionCode: 45
+    commit: 3e911c9ac65d26ec70ba1aaccbfe40f09e8900fd
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.18.5
-CurrentVersionCode: 40
+CurrentVersion: 1.19.4
+CurrentVersionCode: 45

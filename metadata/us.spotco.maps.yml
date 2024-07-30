@@ -3,7 +3,7 @@ AntiFeatures:
     en-US: App depends on Google Maps website.
 Categories:
   - Navigation
-License: GPL-3.0-or-later
+License: AGPL-3.0-or-later
 AuthorName: Divested Computing Group
 AuthorWebSite: https://divestos.org
 SourceCode: https://gitlab.com/divested-mobile/maps
@@ -120,7 +120,35 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.9'
+    versionCode: 33
+    commit: ea7ea81c81a8481022279b9fad94781d18d9250f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 34
+    commit: ac880f52d9e7f83a96d94aa18091a16e0f6d744c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.10'
+    versionCode: 35
+    commit: 748265bef62bb151ce945f5307067f99d665164a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.11'
+    versionCode: 36
+    commit: f162a251ed0277b67061db75b99a84e0e90d7bcb
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.8'
-CurrentVersionCode: 32
+CurrentVersion: '1.11'
+CurrentVersionCode: 36

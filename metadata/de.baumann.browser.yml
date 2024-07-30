@@ -854,7 +854,23 @@ Builds:
       - yes
     prebuild: sed -i -e '/jitpack.de/d' ../build.gradle
 
+  - versionName: '14'
+    versionCode: 145
+    commit: 3687ef78b0cddc4bc87a8730bad7a9ba87d67490
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jitpack.de/d' ../build.gradle
+
+  - versionName: '15'
+    versionCode: 146
+    commit: 8bd912a52c38a3cfedaa810110c41cd25f2ccae3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jitpack.de/d' ../build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '13'
-CurrentVersionCode: 144
+CurrentVersion: '15'
+CurrentVersionCode: 146

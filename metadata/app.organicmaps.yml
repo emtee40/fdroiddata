@@ -1,8 +1,9 @@
 AntiFeatures:
+  TetheredNet:
+    en-US: Map download service (cdn*.organicmaps.app).
   NonFreeNet:
-    en-US: Map download service (cdn*.organicmaps.app) is free and open source, but
-      not user changeable. Hotel widget includes a link to kayak.com not contained
-      in original map data.
+    en-US: Hotel widget includes a link to kayak.com not contained in original map
+      data.
 Categories:
   - Navigation
 License: Apache-2.0
@@ -1515,8 +1516,188 @@ Builds:
       - ./b2 headers
     ndk: r26b
 
+  - versionName: 2024.03.31-8-FDroid
+    versionCode: 24033108
+    commit: 20e3941241658cd9f480f59255898a1ac5ac9b0d
+    subdir: android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ ninja-build cmake
+    gradle:
+      - fdroid
+    rm:
+      - iphone
+      - qt
+      - tools/shaders_compiler
+      - xcode
+    prebuild:
+      - sed -i -e '/com.google.firebase/d; /gms/d' build.gradle
+      - touch secure.properties
+      - echo '<?xml version="1.0" encoding="utf-8"?><network-security-config/>' >
+        src/main/res/xml/network_security_config.xml
+      - cp ../../private_default.h ../../private.h
+    scanignore:
+      - data/*.bin
+    scandelete:
+      - 3party
+    build:
+      - cd ../../3party/boost
+      - ./bootstrap.sh
+      - ./b2 headers
+
+  - versionName: 2024.05.11-3-FDroid
+    versionCode: 24051103
+    commit: d8a071a02319e1d724ae6677c148c57fdb159337
+    subdir: android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ ninja-build cmake
+    gradle:
+      - fdroid
+    rm:
+      - iphone
+      - qt
+      - tools/shaders_compiler
+      - xcode
+    prebuild:
+      - sed -i -e '/com.google.firebase/d; /gms/d' build.gradle
+      - touch secure.properties
+      - echo '<?xml version="1.0" encoding="utf-8"?><network-security-config/>' >
+        src/main/res/xml/network_security_config.xml
+      - cp ../../private_default.h ../../private.h
+    scanignore:
+      - data/*.bin
+    scandelete:
+      - 3party
+    build:
+      - cd ../../3party/boost
+      - ./bootstrap.sh
+      - ./b2 headers
+
+  - versionName: 2024.06.02-12-FDroid
+    versionCode: 24060212
+    commit: 0e60a7cf9042a36f1c1735c7ca7333a02199cc0d
+    subdir: android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ ninja-build cmake
+    gradle:
+      - fdroid
+    rm:
+      - iphone
+      - qt
+      - tools/shaders_compiler
+      - xcode
+    prebuild:
+      - sed -i -e '/com.google.firebase/d; /gms/d' build.gradle
+      - touch secure.properties
+      - echo '<?xml version="1.0" encoding="utf-8"?><network-security-config/>' >
+        src/main/res/xml/network_security_config.xml
+      - cp ../../private_default.h ../../private.h
+    scanignore:
+      - data/*.bin
+    scandelete:
+      - 3party
+    build:
+      - cd ../../3party/boost
+      - ./bootstrap.sh
+      - ./b2 headers
+
+  - versionName: 2024.06.19-3-FDroid
+    versionCode: 24061903
+    commit: ffdabc035c2ef85295e7cc84cbc8837b9f4d5ea3
+    subdir: android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ ninja-build cmake
+    gradle:
+      - fdroid
+    rm:
+      - iphone
+      - qt
+      - tools/shaders_compiler
+      - xcode
+    prebuild:
+      - sed -i -e '/com.google.firebase/d; /gms/d' build.gradle
+      - touch secure.properties
+      - echo '<?xml version="1.0" encoding="utf-8"?><network-security-config/>' >
+        src/main/res/xml/network_security_config.xml
+      - cp ../../private_default.h ../../private.h
+    scanignore:
+      - data/*.bin
+    scandelete:
+      - 3party
+    build:
+      - cd ../../3party/boost
+      - ./bootstrap.sh
+      - ./b2 headers
+
+  - versionName: 2024.07.08-3-FDroid
+    versionCode: 24070803
+    commit: 147662ee5bb26e1365f07d9ecad0c97508a6133d
+    subdir: android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ ninja-build cmake
+    gradle:
+      - fdroid
+    rm:
+      - iphone
+      - qt
+      - tools/shaders_compiler
+      - xcode
+    prebuild:
+      - sed -i -e '/com.google.firebase/d; /gms/d' build.gradle
+      - touch secure.properties
+      - echo '<?xml version="1.0" encoding="utf-8"?><network-security-config/>' >
+        src/main/res/xml/network_security_config.xml
+      - cp ../../private_default.h ../../private.h
+    scanignore:
+      - data/*.bin
+    scandelete:
+      - 3party
+    build:
+      - cd ../../3party/boost
+      - ./bootstrap.sh
+      - ./b2 headers
+
+  - versionName: 2024.07.27-8-FDroid
+    versionCode: 24072708
+    commit: bb64ec49e778242317b0a8a556b5e3cef617c3df
+    subdir: android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ ninja-build cmake
+    gradle:
+      - fdroid
+    rm:
+      - iphone
+      - qt
+      - tools/shaders_compiler
+      - xcode
+    prebuild:
+      - sed -i -e '/com.google.firebase/d; /gms/d' build.gradle
+      - touch secure.properties
+      - echo '<?xml version="1.0" encoding="utf-8"?><network-security-config/>' >
+        src/main/res/xml/network_security_config.xml
+      - cp ../../private_default.h ../../private.h
+    scanignore:
+      - data/*.bin
+    scandelete:
+      - 3party
+    build:
+      - cd ../../3party/boost
+      - ./bootstrap.sh
+      - ./b2 headers
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*android$
 UpdateCheckData: android/app/src/fdroid/play/version.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 2024.03.05-4-FDroid
-CurrentVersionCode: 24030504
+CurrentVersion: 2024.07.27-8-FDroid
+CurrentVersionCode: 24072708

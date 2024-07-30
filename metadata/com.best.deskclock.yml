@@ -1,13 +1,13 @@
 Categories:
   - Time
 License: Apache-2.0
-SourceCode: https://github.com/qw123wh/new-clock-fdroid
-IssueTracker: https://github.com/qw123wh/new-clock-fdroid/issues
+SourceCode: https://github.com/BlackyHawky/Clock
+IssueTracker: https://github.com/BlackyHawky/Clock/issues
 
 AutoName: Clock
 
 RepoType: git
-Repo: https://github.com/qw123wh/new-clock-fdroid
+Repo: https://github.com/BlackyHawky/Clock
 
 Builds:
   - versionName: '1.2'
@@ -17,7 +17,56 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.0'
+    versionCode: 2001
+    commit: 6e11408d4ec53bb9e351f288bf8ce68c107f2549
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 2002
+    commit: 125bc7ad017ac4169994db85274784953d94b8b7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 2003
+    commit: 2861685c00b0079ca9607397d7243ca0607bc401
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 2004
+    commit: 086eed2d3730306a9a23886cf7e86b871dcd9cb0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 2005
+    commit: ef7e4b9d8a6664c5fd74ac66460b23f8e2d29686
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 2006
+    commit: 8630515c7c8f7769e84f8316cc813a46abb47508
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 2007
+    commit: 6148d320b945ac021076acba0845ab27da0e27bd
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.2'
-CurrentVersionCode: 3
+CurrentVersion: '2.6'
+CurrentVersionCode: 2007

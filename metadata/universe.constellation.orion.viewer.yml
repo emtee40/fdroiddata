@@ -168,6 +168,1650 @@ Builds:
       - nativeLibs/mupdf
     ndk: 23.2.8568313
 
+  - versionName: 0.90.1
+    versionCode: 2095
+    commit: b7a516744da86637aca322d0d7e2ea581821aff8
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.1
+    versionCode: 2096
+    commit: b7a516744da86637aca322d0d7e2ea581821aff8
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.1
+    versionCode: 2097
+    commit: b7a516744da86637aca322d0d7e2ea581821aff8
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.1
+    versionCode: 2098
+    commit: b7a516744da86637aca322d0d7e2ea581821aff8
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.2
+    versionCode: 2099
+    commit: 207fcf3716d558d7ab98b5d3b638a41a8cbfeec0
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.2
+    versionCode: 2100
+    commit: 207fcf3716d558d7ab98b5d3b638a41a8cbfeec0
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.2
+    versionCode: 2101
+    commit: 207fcf3716d558d7ab98b5d3b638a41a8cbfeec0
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.2
+    versionCode: 2102
+    commit: 207fcf3716d558d7ab98b5d3b638a41a8cbfeec0
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.3
+    versionCode: 2107
+    commit: 5609fe48982163eb600ff3fa5b66904ff645aaa7
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.3
+    versionCode: 2108
+    commit: 5609fe48982163eb600ff3fa5b66904ff645aaa7
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.3
+    versionCode: 2109
+    commit: 5609fe48982163eb600ff3fa5b66904ff645aaa7
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.90.3
+    versionCode: 2110
+    commit: 5609fe48982163eb600ff3fa5b66904ff645aaa7
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.91.2
+    versionCode: 2123
+    commit: 039a2ef57ea2e252ba01584f0dc9612085d17b89
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.91.2
+    versionCode: 2124
+    commit: 039a2ef57ea2e252ba01584f0dc9612085d17b89
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.91.2
+    versionCode: 2125
+    commit: 039a2ef57ea2e252ba01584f0dc9612085d17b89
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.91.2
+    versionCode: 2126
+    commit: 039a2ef57ea2e252ba01584f0dc9612085d17b89
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.91.3
+    versionCode: 2131
+    commit: 98e3c8939001688cbef315a2a30d8da651ceeefe
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.91.3
+    versionCode: 2132
+    commit: 98e3c8939001688cbef315a2a30d8da651ceeefe
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.91.3
+    versionCode: 2133
+    commit: 98e3c8939001688cbef315a2a30d8da651ceeefe
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.91.3
+    versionCode: 2134
+    commit: 98e3c8939001688cbef315a2a30d8da651ceeefe
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.0
+    versionCode: 2143
+    commit: 6611a2b9b606ab08cf45611da4f9b7ae3db982e9
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.0
+    versionCode: 2144
+    commit: 6611a2b9b606ab08cf45611da4f9b7ae3db982e9
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.0
+    versionCode: 2145
+    commit: 6611a2b9b606ab08cf45611da4f9b7ae3db982e9
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.0
+    versionCode: 2146
+    commit: 6611a2b9b606ab08cf45611da4f9b7ae3db982e9
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.1
+    versionCode: 2163
+    commit: abf4448f6754f50d34f103ca9d77f7e65d9e18a6
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.1
+    versionCode: 2164
+    commit: abf4448f6754f50d34f103ca9d77f7e65d9e18a6
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.1
+    versionCode: 2165
+    commit: abf4448f6754f50d34f103ca9d77f7e65d9e18a6
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.1
+    versionCode: 2166
+    commit: abf4448f6754f50d34f103ca9d77f7e65d9e18a6
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.2
+    versionCode: 2179
+    commit: 49d83814419bd26dcdcf9a26d24b9cd7ef6088e2
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.2
+    versionCode: 2180
+    commit: 49d83814419bd26dcdcf9a26d24b9cd7ef6088e2
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.2
+    versionCode: 2181
+    commit: 49d83814419bd26dcdcf9a26d24b9cd7ef6088e2
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.2
+    versionCode: 2182
+    commit: 49d83814419bd26dcdcf9a26d24b9cd7ef6088e2
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.3
+    versionCode: 2199
+    commit: 230aa5a4c28aae589dcbb3c764a53b9696e27ea4
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.3
+    versionCode: 2200
+    commit: 230aa5a4c28aae589dcbb3c764a53b9696e27ea4
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.3
+    versionCode: 2201
+    commit: 230aa5a4c28aae589dcbb3c764a53b9696e27ea4
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.3
+    versionCode: 2202
+    commit: 230aa5a4c28aae589dcbb3c764a53b9696e27ea4
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.4
+    versionCode: 2203
+    commit: a9dfd41b08860f568628b2074d2509ac37c914ca
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.4
+    versionCode: 2204
+    commit: a9dfd41b08860f568628b2074d2509ac37c914ca
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.4
+    versionCode: 2205
+    commit: a9dfd41b08860f568628b2074d2509ac37c914ca
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.92.4
+    versionCode: 2206
+    commit: a9dfd41b08860f568628b2074d2509ac37c914ca
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs/mupdf
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.1
+    versionCode: 2223
+    commit: 9bd1e2640fbd2422348f8c6f8810a40d3912663c
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.1
+    versionCode: 2224
+    commit: 9bd1e2640fbd2422348f8c6f8810a40d3912663c
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.1
+    versionCode: 2225
+    commit: 9bd1e2640fbd2422348f8c6f8810a40d3912663c
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.1
+    versionCode: 2226
+    commit: 9bd1e2640fbd2422348f8c6f8810a40d3912663c
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.2
+    versionCode: 2235
+    commit: fdccf8f7f51bc6fb7d639d60790742d7e059be2f
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.2
+    versionCode: 2236
+    commit: fdccf8f7f51bc6fb7d639d60790742d7e059be2f
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.2
+    versionCode: 2237
+    commit: fdccf8f7f51bc6fb7d639d60790742d7e059be2f
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.2
+    versionCode: 2238
+    commit: fdccf8f7f51bc6fb7d639d60790742d7e059be2f
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.3
+    versionCode: 2251
+    commit: e7771880100270588697aba2b6645872f6c6d5ec
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.3
+    versionCode: 2252
+    commit: e7771880100270588697aba2b6645872f6c6d5ec
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.3
+    versionCode: 2253
+    commit: e7771880100270588697aba2b6645872f6c6d5ec
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.3
+    versionCode: 2254
+    commit: e7771880100270588697aba2b6645872f6c6d5ec
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.4
+    versionCode: 2259
+    commit: aba41bbc13a82a025c302aaae7cc6f77ff813b27
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.4
+    versionCode: 2260
+    commit: aba41bbc13a82a025c302aaae7cc6f77ff813b27
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.4
+    versionCode: 2261
+    commit: aba41bbc13a82a025c302aaae7cc6f77ff813b27
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.93.4
+    versionCode: 2262
+    commit: aba41bbc13a82a025c302aaae7cc6f77ff813b27
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.0
+    versionCode: 2275
+    commit: 1ae9c5ea85d441cd7c5267ab6b2d3d3ebb817c1d
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.0
+    versionCode: 2276
+    commit: 1ae9c5ea85d441cd7c5267ab6b2d3d3ebb817c1d
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.0
+    versionCode: 2277
+    commit: 1ae9c5ea85d441cd7c5267ab6b2d3d3ebb817c1d
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.0
+    versionCode: 2278
+    commit: 1ae9c5ea85d441cd7c5267ab6b2d3d3ebb817c1d
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.1
+    versionCode: 2287
+    commit: 21623ea9c36700970ee130fb3413045bc7869619
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.1
+    versionCode: 2288
+    commit: 21623ea9c36700970ee130fb3413045bc7869619
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.1
+    versionCode: 2289
+    commit: 21623ea9c36700970ee130fb3413045bc7869619
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.1
+    versionCode: 2290
+    commit: 21623ea9c36700970ee130fb3413045bc7869619
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.2
+    versionCode: 2299
+    commit: 4ce7bff26d00cdf9c7d1462d48e5b72509321a72
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.2
+    versionCode: 2300
+    commit: 4ce7bff26d00cdf9c7d1462d48e5b72509321a72
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.2
+    versionCode: 2301
+    commit: 4ce7bff26d00cdf9c7d1462d48e5b72509321a72
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.2
+    versionCode: 2302
+    commit: 4ce7bff26d00cdf9c7d1462d48e5b72509321a72
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.3
+    versionCode: 2307
+    commit: ed2f96a1c400ce065dd7f2fa96f66fae376336e5
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.3
+    versionCode: 2308
+    commit: ed2f96a1c400ce065dd7f2fa96f66fae376336e5
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.3
+    versionCode: 2309
+    commit: ed2f96a1c400ce065dd7f2fa96f66fae376336e5
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.3
+    versionCode: 2310
+    commit: ed2f96a1c400ce065dd7f2fa96f66fae376336e5
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.4
+    versionCode: 2355
+    commit: 7e676130b57f131ee09ddbb7c8365aa556f59d45
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.4
+    versionCode: 2356
+    commit: 7e676130b57f131ee09ddbb7c8365aa556f59d45
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.4
+    versionCode: 2357
+    commit: 7e676130b57f131ee09ddbb7c8365aa556f59d45
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.4
+    versionCode: 2358
+    commit: 7e676130b57f131ee09ddbb7c8365aa556f59d45
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.5
+    versionCode: 2363
+    commit: 3a4f7b98e32f5d5fffa92a20831ec6da6450c00f
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.5
+    versionCode: 2364
+    commit: 3a4f7b98e32f5d5fffa92a20831ec6da6450c00f
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.5
+    versionCode: 2365
+    commit: 3a4f7b98e32f5d5fffa92a20831ec6da6450c00f
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.5
+    versionCode: 2366
+    commit: 3a4f7b98e32f5d5fffa92a20831ec6da6450c00f
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.6
+    versionCode: 2369
+    commit: 974baf591631ff82b42fe8b09973d3765a5242fa
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.6
+    versionCode: 2370
+    commit: 974baf591631ff82b42fe8b09973d3765a5242fa
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.6
+    versionCode: 2371
+    commit: 974baf591631ff82b42fe8b09973d3765a5242fa
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.6
+    versionCode: 2372
+    commit: 974baf591631ff82b42fe8b09973d3765a5242fa
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.7
+    versionCode: 2373
+    commit: ed84b5b9a41f14bae020375c608d906b63992eb8
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.7
+    versionCode: 2374
+    commit: ed84b5b9a41f14bae020375c608d906b63992eb8
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.7
+    versionCode: 2375
+    commit: ed84b5b9a41f14bae020375c608d906b63992eb8
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.7
+    versionCode: 2376
+    commit: ed84b5b9a41f14bae020375c608d906b63992eb8
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.8
+    versionCode: 2381
+    commit: 4aed7fe632850eadb44ee12ff46b0754e2ee3b72
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.8
+    versionCode: 2382
+    commit: 4aed7fe632850eadb44ee12ff46b0754e2ee3b72
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.8
+    versionCode: 2383
+    commit: 4aed7fe632850eadb44ee12ff46b0754e2ee3b72
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-x86_64-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
+  - versionName: 0.94.8
+    versionCode: 2384
+    commit: 4aed7fe632850eadb44ee12ff46b0754e2ee3b72
+    subdir: orion-viewer
+    sudo:
+      - apt-get update
+      - apt-get install -y make g++ pkg-config
+    gradle:
+      - yes
+    output: build/outputs/apk/release/orion-viewer-$$VERSION$$-arm64-v8a-release-unsigned.apk
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - cd ..
+      - gradle -b thirdparty_build.gradle downloadAndPatchDjvu downloadAndMakeMupdf
+    scandelete:
+      - nativeLibs
+    ndk: 23.2.8568313
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 VercodeOperation:
@@ -176,5 +1820,5 @@ VercodeOperation:
   - 3 + %c
   - 4 + %c
 UpdateCheckData: orion-viewer/version.properties|orion\.version\.code\s*=\s*([0-9]+)|.|orion.version.name\s*=\s*(.+)
-CurrentVersion: 0.90.0
-CurrentVersionCode: 2082
+CurrentVersion: 0.94.8
+CurrentVersionCode: 2384

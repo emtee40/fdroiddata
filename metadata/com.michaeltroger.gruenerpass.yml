@@ -188,7 +188,41 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.0.0
+    versionCode: 55
+    commit: ebcd05877311f5228d9ddee3327d1d9f1e37017c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.0
+    versionCode: 56
+    commit: 2bd913d406c68e05e47a7cba17ce7eb3ec4b5a7e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfigs {/,/^            }/d' -e '/signingConfigs/d'
+      ../buildSrc/src/main/kotlin/greenpass.app-conventions.gradle.kts
+
+  - versionName: 4.1.1
+    versionCode: 57
+    commit: 42f0403a9d1aeb4ab1fd23ac5e6431ce9f92b1b2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfigs {/,/^            }/d' -e '/signingConfigs/d'
+      ../buildSrc/src/main/kotlin/greenpass.app-conventions.gradle.kts
+
+  - versionName: 4.2.0
+    versionCode: 58
+    commit: 2ef63516c60c872a064ba5a266a8a419e29f06f4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfigs {/,/^            }/d' -e '/signingConfigs/d'
+      ../buildSrc/src/main/kotlin/greenpass.app-conventions.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.4.4
-CurrentVersionCode: 54
+CurrentVersion: 4.2.0
+CurrentVersionCode: 58

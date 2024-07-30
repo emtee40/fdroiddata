@@ -440,7 +440,63 @@ Builds:
       - yes
     prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
 
+  - versionName: 2.6.5
+    versionCode: 85
+    commit: 1c21078b442b3ec1aa1820e8a6ba188fd2f34828
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.6
+    versionCode: 86
+    commit: f3c867c6fe6fc2dee5b9f5ce69ccba72c9d44e6b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.8
+    versionCode: 88
+    commit: 9b334e1dd5c857470669b5ec8467ebe01ef0d482
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.9
+    versionCode: 89
+    commit: ea6d4d2df3fb73caf3606fe99936d1142a80e0be
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.10
+    versionCode: 90
+    commit: 3afaa69b6172dae500b4863b42742cb1875200ff
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.11
+    versionCode: 91
+    commit: 694adb9aa33369d1df3fd845f350d3062850ad1f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.7.0
+    versionCode: 93
+    commit: 4082404588e5a7bfe08a04233cb5497e9aa727ad
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.6.4
-CurrentVersionCode: 82
+CurrentVersion: 2.7.0
+CurrentVersionCode: 93

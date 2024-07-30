@@ -1,3 +1,6 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Rely on OpenStreetMap
 Categories:
   - Navigation
 License: MIT
@@ -342,7 +345,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.2.1
+    versionCode: 52
+    commit: d5f8ccfeaf5009dbaf9dc04b3e4a7327f145ee44
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.2
+    versionCode: 53
+    commit: 7d15292ad07a8e2af566b663179de95dbde0024e
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.2.0
-CurrentVersionCode: 51
+CurrentVersion: 2.2.2
+CurrentVersionCode: 53

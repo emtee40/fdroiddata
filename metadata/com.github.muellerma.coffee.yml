@@ -354,7 +354,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.22'
+    versionCode: 42
+    commit: 156801982afa00e3ad61acc423f254da6407acb1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.24'
+    versionCode: 44
+    commit: e16c8bbdcf9a162439b7f5bfc34f1657dc9a4bf1
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.21'
-CurrentVersionCode: 41
+CurrentVersion: '2.24'
+CurrentVersionCode: 44

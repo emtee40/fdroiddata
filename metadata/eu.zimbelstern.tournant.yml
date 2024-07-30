@@ -108,9 +108,52 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.5.1
+    versionCode: 20
+    commit: 6db806056ee8abe8ac809084aa9c3c5bddeedd47
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.6.0
+    versionCode: 21
+    commit: 37cfb67b80488a47ff06399e2ad60a1e122999b6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.0
+    versionCode: 22
+    commit: dee58841a7c6d0f7ad6b94387306fb90b875cc0d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.1
+    versionCode: 23
+    commit: d75ada0622b699ef2d1284ca80c170e175cab379
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.2
+    versionCode: 24
+    commit: 3a466cc13f659d134eab3e5f6b4f7fa1ea1cbcb8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.0
+    versionCode: 25
+    commit: 9d6cb471d6a3d04506bcefc50cfd13a339f6caa6
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/relativePath/s|app/||' build.gradle.kts
+
 AllowedAPKSigningKeys: a23db5fd8aab1b88051125e127600577e3dcbc80ff73ddfc4a8d245b1765c13f
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.5.0
-CurrentVersionCode: 19
+CurrentVersion: 2.8.0
+CurrentVersionCode: 25

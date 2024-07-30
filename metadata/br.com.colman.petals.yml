@@ -399,7 +399,95 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/sonatype/d' build.gradle.kts
 
+  - versionName: 3.21.2
+    versionCode: 321002
+    commit: b83d3fd4d534ab18f0a736697014c99b5c0fe057
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.21.5
+    versionCode: 321005
+    commit: 4ea235e0b19cad326afb88209d3064805d152155
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.22.1
+    versionCode: 322001
+    commit: ca51dc17ca50db1657e792ebffe140d4f28baef1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.23.0
+    versionCode: 323000
+    commit: 3f3d2cbbac3e3e5c9ba653c4b51f85ed00c54c15
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.23.1
+    versionCode: 323001
+    commit: 0b8cb273b9c01ce8e2d413278edc755b70082fac
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.23.2
+    versionCode: 323002
+    commit: 8db40be15964babd0253d108c9759df5f744bcb1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.24.0
+    versionCode: 324000
+    commit: 0e21749301738531962170216632324b6ba9b531
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.25.0
+    versionCode: 325000
+    commit: 0976ca71866c0593feadd142278805a26bf262c2
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.25.2
+    versionCode: 325002
+    commit: df535429e4820e6420b93a8bf38ade026489c4a7
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.26.0
+    versionCode: 326000
+    commit: f74f4671d21445407827d640f3670b6a0f5862b0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.26.1
+    versionCode: 326001
+    commit: 528a440aeb098b7c97ee835326bd85b9918fe4c1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.21.1
-CurrentVersionCode: 321001
+CurrentVersion: 3.26.1
+CurrentVersionCode: 326001

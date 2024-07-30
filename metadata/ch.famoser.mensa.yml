@@ -1,6 +1,8 @@
 AntiFeatures:
   NonFreeNet:
     en-US: The ETH/UZH backends are proprietary
+  TetheredNet:
+    en-US: Relies on ETH/UZH backends.
 Categories:
   - Internet
   - Sports & Health
@@ -82,7 +84,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.8.3
+    versionCode: 25
+    commit: a2292b7ca8269e98ab46a611965e599a88f4a22f
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.8.2
-CurrentVersionCode: 24
+CurrentVersion: 1.8.3
+CurrentVersionCode: 25

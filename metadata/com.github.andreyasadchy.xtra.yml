@@ -1368,9 +1368,114 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.30.6
+    versionCode: 233
+    commit: 4c47a982d3810eb477a8395c0550a65c59a01aa2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.30.7
+    versionCode: 234
+    commit: 98c1f606d1848763f737da2a01ad9f047bbac918
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.31.0
+    versionCode: 235
+    commit: fb1d1247bf15a06d37d672914cbb205c90113bb7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.31.1
+    versionCode: 236
+    commit: 8b774f61a28f975c33b63e643931a87bb2aa32bd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.31.2
+    versionCode: 237
+    commit: cd41511ace28633cf9399430cbcc3ec556cf228e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.31.3
+    versionCode: 238
+    commit: b8b78e0e253b73f58da59d42da3f144e2acd16f9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.0
+    versionCode: 239
+    commit: 622060fde0cfce6830ccb9dc32fffbc3bda2a3ad
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.1
+    versionCode: 240
+    commit: 6d27ec9874c8f17828fc69a74641f45a13e72c7a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.2
+    versionCode: 241
+    commit: 6fa06c0763c824563d74ed6559a71f020e05be1d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.3
+    versionCode: 242
+    commit: dda35b3c6d6924189c06fd0a67d377573a7de856
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.4
+    versionCode: 243
+    commit: 35dbfa49ae75839dfa9bb25d3cad0a484841184d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.6
+    versionCode: 245
+    commit: 1c3100a040dd21d2a5b78a97ef744d5825cc1dc2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.0
+    versionCode: 246
+    commit: 0729e5bdd8107688f97975d2b6724321904121fe
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.1
+    versionCode: 247
+    commit: 956a3b12d2134fee2de4d14dba1059696fb333ee
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.2
+    versionCode: 248
+    commit: 231e069bb53bcacbe15f138bbf31672d8cfda59f
+    subdir: app
+    gradle:
+      - yes
+
 MaintainerNotes: TTV.lol leaking see https://github.com/TTV-LOL/extensions/issues/8
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.30.5
-CurrentVersionCode: 232
+CurrentVersion: 2.33.2
+CurrentVersionCode: 248

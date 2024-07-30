@@ -6,7 +6,7 @@ AuthorEmail: Arndt.Brenschede@web.de
 WebSite: https://brouter.de/brouter
 SourceCode: https://github.com/abrensch/brouter
 IssueTracker: https://github.com/abrensch/brouter/issues
-Changelog: http://brouter.de/brouter/revisions.html
+Changelog: https://github.com/abrensch/brouter/releases
 
 AutoName: BRouter
 Description: |-
@@ -189,12 +189,42 @@ Builds:
     scanignore:
       - brouter-routing-app/src/main/assets/*.zip
 
+  - versionName: 1.7.4
+    versionCode: 51
+    commit: f3af9d6f4bf12ec70be3ea7da4b601174c286c8e
+    subdir: brouter-routing-app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/publishing {/,/^    }/d' ../build.gradle
+    scanignore:
+      - brouter-routing-app/src/main/assets/*.zip
+
+  - versionName: 1.7.6
+    versionCode: 53
+    commit: 9dcb7ca92e2811a379b24f1981a8f5eaa6d5f0ab
+    subdir: brouter-routing-app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/publishing {/,/^}/d' ../buildSrc/src/main/groovy/brouter.library-conventions.gradle
+    scanignore:
+      - brouter-routing-app/src/main/assets/*.zip
+
+  - versionName: 1.7.7
+    versionCode: 54
+    commit: e63cc9888fcada42464dc9b0114ec20c1736e7fb
+    subdir: brouter-routing-app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/publishing {/,/^}/d' ../buildSrc/src/main/groovy/brouter.library-conventions.gradle
+    scanignore:
+      - brouter-routing-app/src/main/assets/*.zip
+
 MaintainerNotes: |-
   We need to upgrade the android maven plugin for the build to work: https://github.com/abrensch/brouter/issues/178
   The other sed's remove signing stuff.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-UpdateCheckData: brouter-routing-app/build.gradle|versionCode\s(\d+)|build.gradle|project.version\s+"([\d.]+)"
-CurrentVersion: 1.7.3
-CurrentVersionCode: 50
+UpdateCheckData: brouter-routing-app/build.gradle|versionCode\s(\d+)|buildSrc/src/main/groovy/brouter.version-conventions.gradle|version\s+'([\d.]+)'
+CurrentVersion: 1.7.7
+CurrentVersionCode: 54

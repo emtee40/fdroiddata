@@ -5,7 +5,6 @@ AuthorName: Yaroslav Shuliak
 AuthorEmail: shuliak.yaroslav@gmail.com
 SourceCode: https://github.com/syt0r/Kanji-Dojo
 IssueTracker: https://github.com/syt0r/Kanji-Dojo/issues
-Donate: https://ko-fi.com/syt0r
 
 AutoName: Kanji Dojo
 
@@ -102,11 +101,59 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
 
+  - versionName: 2.0.3
+    versionCode: 2030
+    commit: 5a0bee8d6fab986f0cd1489a642c5d48a1e2c663
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.4
+    versionCode: 2040
+    commit: 45a93c9041f995e5666a17e4dcd4c3657fe53489
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.5
+    versionCode: 2050
+    commit: b8fa4bef06e507bf4c40aa233ebf29f40df84f62
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.7
+    versionCode: 2070
+    commit: e3400622e06827329f512073180d0423b7c16f2f
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.8
+    versionCode: 2080
+    commit: bd6c294f206565f18b94f32e7e4e2839fe94b377
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.0.9
+    versionCode: 2090
+    commit: 8b54aa8c566182f03620099653b55556380166e1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
 AllowedAPKSigningKeys: 5ad10466f09ea3c4f7c5004268cd54da7af37c094e2d94cd91dd8894d99fb0dd
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: buildSrc/src/main/kotlin/AppVersion.kt|versionCode = (\d+)|.|versionName
   = "(.*)"
-CurrentVersion: 2.0.2
-CurrentVersionCode: 2020
+CurrentVersion: 2.0.9
+CurrentVersionCode: 2090

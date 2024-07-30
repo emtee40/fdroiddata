@@ -8,7 +8,6 @@ AuthorWebSite: https://ghostsinthelab.org/
 SourceCode: https://github.com/hiroshiyui/GuilelessBopomofo
 IssueTracker: https://github.com/hiroshiyui/GuilelessBopomofo/issues
 Changelog: https://github.com/hiroshiyui/GuilelessBopomofo/releases
-Donate: https://paypal.me/hiroshiyui
 
 AutoName: Guileless Bopomofo
 
@@ -966,7 +965,123 @@ Builds:
       - yes
     ndk: 23.2.8568313
 
+  - versionName: 1.9.47
+    versionCode: 117
+    commit: c5121241fbeafd69dc53e2444e491af137855589
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    ndk: 23.2.8568313
+
+  - versionName: 1.9.48
+    versionCode: 118
+    commit: 2118a55d2caab3b53b1e3d7f826effd568e41906
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    ndk: 23.2.8568313
+
+  - versionName: 1.9.51
+    versionCode: 121
+    commit: 9ed03844c8dc2b625ace5582de1a3dac945a5090
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - libchewingAndroidAppModule@0.8.2
+    rm:
+      - app/libs/*.aar
+    build:
+      - pushd $$libchewingAndroidAppModule$$
+      - gradle bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.0.0
+    versionCode: 122
+    commit: 3fc46a98f0a950fa1085bbc3f93439094c1daed6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.8.4
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.0.2
+    versionCode: 124
+    commit: f8f85da5de61327840a361ce9c6c2d9281b871a9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.8.4
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
+  - versionName: 2.0.3
+    versionCode: 125
+    commit: 7d22879f5c43f8d8e512267053afffaf1502b55e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake g++ libsqlite3-dev libtool make ninja-build cmake
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.27.1
+      - libchewingAndroidAppModule@0.8.4
+    rm:
+      - app/libs/*.aar
+    build:
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.78.0 --target aarch64-linux-android
+        armv7-linux-androideabi i686-linux-android x86_64-linux-android
+      - source $HOME/.cargo/env
+      - pushd $$libchewingAndroidAppModule$$
+      - ../gradlew bundleReleaseAar
+      - popd
+      - cp $$libchewingAndroidAppModule$$/build/outputs/aar/*.aar libs
+    ndk: 23.2.8568313
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.9.46
-CurrentVersionCode: 116
+CurrentVersion: 2.0.3
+CurrentVersionCode: 125

@@ -5,7 +5,7 @@ AuthorName: Remmer Wilts
 SourceCode: https://gitlab.com/remmer.wilts/ipfs-lite
 IssueTracker: https://gitlab.com/remmer.wilts/ipfs-lite/issues
 
-AutoName: IPFS Lite
+AutoName: Odin
 
 RepoType: git
 Repo: https://gitlab.com/remmer.wilts/ipfs-lite.git
@@ -746,7 +746,71 @@ Builds:
       - yes
     prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
 
+  - versionName: 3.3.2
+    versionCode: 332
+    commit: 70786d4a33a42608a8fd2b34f8f44a591158753c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 3.3.4
+    versionCode: 334
+    commit: 441b8ad945806e0a267010e2ecc123f4c5339359
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 3.3.5
+    versionCode: 335
+    commit: d22cb5c4efb64458168a8590ef4f077c86ff393a
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 3.3.6
+    versionCode: 336
+    commit: 63d7cd44c87cc5b237ad9e8bcd3308e860027bbf
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 3.3.7
+    versionCode: 337
+    commit: 55ba2b64606c126735431cbf7d6e33a9bb97ea95
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 3.3.8
+    versionCode: 338
+    commit: 676cece0ce244b9bc1c261e16885da6358b58ee5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 3.3.9
+    versionCode: 339
+    commit: 84e7e7dba1484b9ae2f6b5b9c0e8c1ed6c10d107
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 3.4.0
+    versionCode: 340
+    commit: 6ea6e540f19b4c12b7bf22edd7e153550022803a
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.2.9
-CurrentVersionCode: 329
+CurrentVersion: 3.4.0
+CurrentVersionCode: 340

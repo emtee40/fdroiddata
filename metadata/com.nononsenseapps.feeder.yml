@@ -2073,7 +2073,97 @@ Builds:
     rm:
       - graphics
 
+  - versionName: 2.6.21
+    versionCode: 306
+    commit: de58d93e6bbaf57a20c1114094802f445b60363c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.22
+    versionCode: 307
+    commit: cdd90d4cf84a39a8212fd438fa3b0fbd3ba3f79a
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.23
+    versionCode: 308
+    commit: 313e91b2fc21aea69e7abac17966a5eb1a2d7d9e
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.24
+    versionCode: 309
+    commit: 378f5cf9257fc28ecc85d109a0f6d7e04141710c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.25
+    versionCode: 310
+    commit: 347ed83f7125696dc8d5cedc11e0dd4d585f8e83
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.26
+    versionCode: 311
+    commit: 1ec4a6475b22ffb689a5aefa20de116167388ea8
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.27
+    versionCode: 312
+    commit: 5633df46221dee2ec9a4bf85569fbd4045bb853f
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.28
+    versionCode: 313
+    commit: e89aa72b707012f50bdfc1f4e134b490fffaf272
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.29
+    versionCode: 314
+    commit: cf6cf1df99bb3897081ffa5b8496eafa695eadae
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.6.20
-CurrentVersionCode: 305
+CurrentVersion: 2.6.29
+CurrentVersionCode: 314

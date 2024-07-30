@@ -1,6 +1,3 @@
-AntiFeatures:
-  NonFreeNet:
-    en-US: Loads its user guide from the developers’ server when you start the app.
 Categories:
   - Security
   - System
@@ -30,6 +27,10 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Loads its user guide from the developers’ server when you start the
+          app.
 
   - versionName: '1.5'
     versionCode: 6
@@ -37,6 +38,10 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Loads its user guide from the developers’ server when you start the
+          app.
 
   - versionName: '1.6'
     versionCode: 7
@@ -48,11 +53,22 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Loads its user guide from the developers’ server when you start the
+          app.
+
+  - versionName: '1.7'
+    versionCode: 8
+    commit: 76aaa45cdd677a26d692c13524e6d14c15e95195
+    subdir: app
+    gradle:
+      - yes
 
 MaintainerNotes: Upstream does not respond. Instead of them, you may find @proletarius101
   if there are questions/issues on our side.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.6'
-CurrentVersionCode: 7
+CurrentVersion: '1.7'
+CurrentVersionCode: 8

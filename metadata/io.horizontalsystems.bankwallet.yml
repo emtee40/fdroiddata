@@ -502,7 +502,89 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.37.6
+    versionCode: 100
+    commit: 454cb88a3f4687d77ffc3d2d878462f23b4b9dab
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.38.0
+    versionCode: 101
+    commit: fc4a87726933508118a39b351d9ae262eec9f9ea
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.38.1
+    versionCode: 103
+    commit: ddda2cdff54111beb362700e7711d4fac20967d9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.38.1
+    versionCode: 104
+    commit: 29e87a524ed8578b820453029e31382dccf47350
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.38.2
+    versionCode: 105
+    commit: 66c4095c82a71a66f5c3b4c738533f78eba69200
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.38.3
+    versionCode: 106
+    commit: d3e3074b97f6980d6354a16a406f994c09144a11
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.38.4
+    versionCode: 107
+    commit: 399fd8dc84c249dd1094fee0a7a043ec5e4ffa90
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/statsManager.sendStats/d' src/main/java/io/horizontalsystems/bankwallet/core/managers/BackgroundStateChangeListener.kt
+
+  - versionName: 0.38.5
+    versionCode: 108
+    commit: 6fe7bc3d52968dd00e194a3a2c49040fb5a4a2da
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/statsManager.sendStats/d' src/main/java/io/horizontalsystems/bankwallet/core/managers/BackgroundStateChangeListener.kt
+
+  - versionName: 0.39.0
+    versionCode: 110
+    commit: ceae7cbffe6319432840cd33d0d65210c3e5a908
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/statsManager.sendStats/d' src/main/java/io/horizontalsystems/bankwallet/core/managers/BackgroundStateChangeListener.kt
+
+  - versionName: 0.39.1
+    versionCode: 111
+    commit: 0650230024c68b0509b72a2a9eaeb5433427e0da
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/statsManager.sendStats/d' src/main/java/io/horizontalsystems/bankwallet/core/managers/BackgroundStateChangeListener.kt
+
+  - versionName: 0.39.2
+    versionCode: 112
+    commit: d9d1b855a7a4df87278941264ed2da2b1f4aae00
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/statsManager.sendStats/d' src/main/java/io/horizontalsystems/bankwallet/core/managers/BackgroundStateChangeListener.kt
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.37.5
-CurrentVersionCode: 99
+CurrentVersion: 0.39.2
+CurrentVersionCode: 112

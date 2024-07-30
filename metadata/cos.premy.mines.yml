@@ -7,9 +7,6 @@ SourceCode: https://github.com/stastnypremysl/Mines3D
 IssueTracker: https://github.com/stastnypremysl/Mines3D/issues
 
 AutoName: Mines3D
-Description: |-
-  Do you like challenges? Let's try one harder. The first task is to
-  understand the rules of the game. The second one is to win it.
 
 RepoType: git
 Repo: https://github.com/stastnypremysl/Mines3D.git
@@ -53,7 +50,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.4.4
+    versionCode: 9
+    commit: b8eb83957e94af79163e90e03f5b89f18dd4c406
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 10
+    commit: ee89ccf32c49dd144d948c1fc8ee7d69d449e923
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 11
+    commit: 5522ebbb1c408a2ca62c5192ea758a676ae423b6
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.3
-CurrentVersionCode: 8
+CurrentVersion: 1.5.1
+CurrentVersionCode: 11

@@ -280,8 +280,56 @@ Builds:
       - yes
     prebuild: sed -i -e '/pkg.jetbrains/d' ../settings.gradle.kts
 
+  - versionName: 1.4.25
+    versionCode: 1425
+    commit: 1ce1b4f8c82990affe1f128ad5d36940c5950b36
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/pkg.jetbrains/d' ../settings.gradle.kts
+
+  - versionName: 1.4.26
+    versionCode: 1426
+    commit: 54882c5455cd5c36b88808595c830ebd7f3732c9
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/pkg.jetbrains/d' ../settings.gradle.kts
+
+  - versionName: 1.4.27
+    versionCode: 1427
+    commit: c139cad899e4c513f1965626bdd3da66edc5f13f
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/pkg.jetbrains/d' ../settings.gradle.kts
+
+  - versionName: 1.4.28
+    versionCode: 1428
+    commit: 88515323bb300b9892e85d45d5850a103e6a92e9
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/pkg.jetbrains/d' ../settings.gradle.kts
+
+  - versionName: 1.4.29
+    versionCode: 1429
+    commit: 8d97d01faff564ee5483804c91f0cfef9e1613cc
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/pkg.jetbrains/d' ../settings.gradle.kts
+
+  - versionName: 1.4.30
+    versionCode: 1430
+    commit: 3e21a12ea5e24217ea10edac9b66f8bf2eb8f0f2
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/pkg.jetbrains/d' ../settings.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v.*[0-9]$
 UpdateCheckData: app/build.gradle.kts|versionCode =\s(\d+)|.|versionName = "(\d.+)+"
-CurrentVersion: 1.4.23
-CurrentVersionCode: 1423
+CurrentVersion: 1.4.30
+CurrentVersionCode: 1430

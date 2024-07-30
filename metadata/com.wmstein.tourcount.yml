@@ -349,7 +349,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 3.4.7
+    versionCode: 347
+    commit: 681268f835819b091fd912ae70c3fdd13eabb3fc
+    subdir: tourcount
+    gradle:
+      - yes
+
+  - versionName: 3.4.8
+    versionCode: 348
+    commit: 112eaaed3bf0074d9b3fa5274e88d85a14cc3d78
+    subdir: tourcount
+    gradle:
+      - yes
+
+  - versionName: 3.4.9
+    versionCode: 349
+    commit: 448071f36c6cadc5cba50c4064679cf79806ec25
+    subdir: tourcount
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.4.6
-CurrentVersionCode: 346
+CurrentVersion: 3.4.9
+CurrentVersionCode: 349

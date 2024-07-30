@@ -875,7 +875,39 @@ Builds:
     gradle:
       - foss
 
+  - versionName: 1.4.308.202406030
+    versionCode: 308
+    commit: b0aed0a9df0e4577f77902be73d043e3d2e1bfcf
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
+  - versionName: 1.4.309.202406100
+    versionCode: 309
+    commit: f8322f1eeb878c4fcf2a2c51af56b20ea939a780
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
+  - versionName: 1.4.311.202406190
+    versionCode: 311
+    commit: 88906927442374868b6eec88972a83667a875e63
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
+  - versionName: 1.4.312.202406200
+    versionCode: 312
+    commit: 7f1e9e5c5464e7f8333c8e62b86cc30f7434707c
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.306.202402250
-CurrentVersionCode: 306
+CurrentVersion: 1.4.312.202406200
+CurrentVersionCode: 312

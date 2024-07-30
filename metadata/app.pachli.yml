@@ -145,8 +145,63 @@ Builds:
       - plugins/markdown2resource/build
       - build-logic/convention/build
 
+  - versionName: 2.4.0
+    versionCode: 13
+    commit: c2db3dfbcc5e3804e81d460da221335a5a751908
+    subdir: app
+    gradle:
+      - blue
+      - fdroid
+    scandelete:
+      - plugins/markdown2resource/build
+      - build-logic/convention/build
+
+  - versionName: 2.5.1
+    versionCode: 15
+    commit: c6d6f0f810b9eb17e4950aeea4c37a25a7b9991a
+    subdir: app
+    gradle:
+      - blue
+      - fdroid
+    scandelete:
+      - plugins/markdown2resource/build
+      - build-logic/convention/build
+
+  - versionName: 2.5.2
+    versionCode: 16
+    commit: 7f094b1781f382d976d0698ca316315dc09e7b7d
+    subdir: app
+    gradle:
+      - blue
+      - fdroid
+    scandelete:
+      - plugins/markdown2resource/build
+      - build-logic/convention/build
+
+  - versionName: 2.6.0
+    versionCode: 17
+    commit: 1b7c90896b3d8f23c5c9a914fb6bd96a42ba4017
+    subdir: app
+    gradle:
+      - blue
+      - fdroid
+    scandelete:
+      - plugins/markdown2resource/build
+      - build-logic/convention/build
+
+  - versionName: 2.7.0
+    versionCode: 18
+    commit: a0b3b1ffac70661ba74aac88f21e4dcb6de0d586
+    subdir: app
+    gradle:
+      - blue
+      - fdroid
+    scandelete:
+      - plugins/markdown2resource/build
+      - build-logic/convention/build
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+$
 UpdateCheckData: app/build.gradle.kts|versionCode\s=\s(\d+)|.|versionName\s=\s"([\d.]+)"
-CurrentVersion: 2.3.0
-CurrentVersionCode: 12
+CurrentVersion: 2.7.0
+CurrentVersionCode: 18

@@ -822,7 +822,95 @@ Builds:
       - yes
     prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
 
+  - versionName: 4.5.1c
+    versionCode: 1325
+    commit: 620798320695cfd1943ae270e21d3fe3c65814c2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.1d
+    versionCode: 1326
+    commit: dadfc0b896de2449dd6c3c15da816126b383402e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2
+    versionCode: 1327
+    commit: a510c4661ba642a1ed59fc560f2e37c6ca64918d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2a
+    versionCode: 1328
+    commit: bccc0b99249fcc25f3a014805cdd1ce6b503cb70
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2b
+    versionCode: 1329
+    commit: a9c19128a2f52911b4fcae1566de07fd7e0e3790
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2c
+    versionCode: 1330
+    commit: 1340555d6678b1fec2c83578fbd7f4dc59549f87
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2e
+    versionCode: 1332
+    commit: e6f63bf7ff3aa3043f57c245f2cc1e19611450f3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2f
+    versionCode: 1333
+    commit: 72135082db409dbd04757eaaef2075050ba4cba1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2g
+    versionCode: 1334
+    commit: 714b17bc1f8730829ad6d74820bf778628e8857f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2i
+    versionCode: 1336
+    commit: f07b69d6d54b4a096a602c370ec7174bb406cf59
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2m
+    versionCode: 1340
+    commit: 2f3dc4ccb48625997138302cccb97af899ece11b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.5.1b
-CurrentVersionCode: 1324
+CurrentVersion: 4.5.2m
+CurrentVersionCode: 1340

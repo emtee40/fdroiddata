@@ -43,21 +43,20 @@ Builds:
     postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
       'META-INF/services/*'
 
-  - versionName: 1.1.1
-    versionCode: 5
-    disable: https://github.com/devhyper/open-video-editor/issues/63
-    commit: 5c1afbf5f0491274bf5e5d2faf2be347c8f5e6ed
+  - versionName: 1.1.2
+    versionCode: 6
+    commit: ece0f0de4e5cec4c5ca5103160ccf0726270a0b6
     subdir: app
     gradle:
       - yes
     srclibs:
-      - reproducible-apk-tools@v0.2.3
-    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
-      'META-INF/services/*'
+      - reproducible-apk-tools@v0.2.7
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 4 fix-newlines
+      $$OUT$$ 'META-INF/services/*'
 
 AllowedAPKSigningKeys: 84df644cc5dbd4ea50602b9f23e4fbf3b22ee5cd2182437bef72c7c799f12db6
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.1.1
-CurrentVersionCode: 5
+CurrentVersion: 1.1.2
+CurrentVersionCode: 6

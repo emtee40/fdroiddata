@@ -160,8 +160,32 @@ Builds:
       - yes
     prebuild: sed -i -e '/opennms/d' ../build.gradle.kts
 
+  - versionName: 2.2.0
+    versionCode: 27
+    commit: f024a3bea5f8c226a2704116fb4db79b78e64c4f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/opennms/d' ../build.gradle.kts
+
+  - versionName: 2.2.1
+    versionCode: 28
+    commit: acd4bec5fb04e78531462af243532d94c0742498
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/opennms/d' ../build.gradle.kts
+
+  - versionName: 2.3.0
+    versionCode: 29
+    commit: 1145bebed366f707c1c07bc9e2102322e59f9b61
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/opennms/d' ../build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: gradle/libs.versions.toml|appVersionCode\s=\s"(\d+)"|.|appVersionName\s=\s"(.*)"
-CurrentVersion: 2.1.1
-CurrentVersionCode: 26
+CurrentVersion: 2.3.0
+CurrentVersionCode: 29

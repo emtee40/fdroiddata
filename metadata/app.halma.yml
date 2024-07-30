@@ -33,7 +33,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '12.0'
+    versionCode: 12
+    commit: b0cd13a01199f5dcb06de70888766cc4db3c5b2e
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: '13.0'
+    versionCode: 13
+    commit: 49c4d753280cdc33047121a54339f0677da08921
+    subdir: android
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '11.0'
-CurrentVersionCode: 11
+CurrentVersion: '13.0'
+CurrentVersionCode: 13
