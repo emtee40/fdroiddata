@@ -10,7 +10,7 @@ Repo: https://github.com/FaradayApp/Faraday-android
 Builds:
   - versionName: 1.1.1
     versionCode: 401010501
-    commit: f7a760732744d25e43e145fa15ba551c92329567
+    commit: d765bc66c3dc1ee2ab2e54f3d1f7bc09896b3708
     subdir: vector-app
     sudo:
       - apt-get update
@@ -56,7 +56,7 @@ Builds:
 
   - versionName: 1.1.1
     versionCode: 401010502
-    commit: f7a760732744d25e43e145fa15ba551c92329567
+    commit: d765bc66c3dc1ee2ab2e54f3d1f7bc09896b3708
     subdir: vector-app
     sudo:
       - apt-get update
@@ -102,7 +102,7 @@ Builds:
 
   - versionName: 1.1.1
     versionCode: 401010503
-    commit: f7a760732744d25e43e145fa15ba551c92329567
+    commit: d765bc66c3dc1ee2ab2e54f3d1f7bc09896b3708
     subdir: vector-app
     sudo:
       - apt-get update
@@ -147,7 +147,7 @@ Builds:
 
   - versionName: 1.1.1
     versionCode: 401010504
-    commit: f7a760732744d25e43e145fa15ba551c92329567
+    commit: d765bc66c3dc1ee2ab2e54f3d1f7bc09896b3708
     subdir: vector-app
     sudo:
       - apt-get update
