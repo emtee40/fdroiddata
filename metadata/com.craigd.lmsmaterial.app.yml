@@ -112,7 +112,56 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.6.0
+    versionCode: 600
+    commit: 140c4d1d0ea3e6d8627a56c2af11c8d0d8eb22bc
+    subdir: lms-material
+    gradle:
+      - yes
+
+  - versionName: 0.6.2
+    versionCode: 602
+    commit: a916fd34678f496925133d3a1cc798ce4a0a3b48
+    subdir: lms-material
+    gradle:
+      - yes
+
+  - versionName: 0.6.3
+    versionCode: 603
+    commit: a79a095c5fbdd37001804695fa0bb76b1831bce5
+    subdir: lms-material
+    gradle:
+      - yes
+
+  - versionName: 0.7.0
+    versionCode: 700
+    commit: 3443ad23229a7a42c44b20be83ceed0ed48b0383
+    subdir: lms-material
+    gradle:
+      - yes
+
+  - versionName: 0.8.0
+    versionCode: 800
+    commit: e58cdbc953e29c2e30ff39063f1f9a6e6d73a367
+    subdir: lms-material
+    gradle:
+      - yes
+
+  - versionName: 0.8.1
+    versionCode: 801
+    commit: 9ee1968f7b899a80d25fc8bc27e702cd3148e302
+    subdir: lms-material
+    gradle:
+      - yes
+
+  - versionName: 0.8.2
+    versionCode: 802
+    commit: b51f5aa85358ac5ab6d9b1014b0b253ff7cd8a83
+    subdir: lms-material
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.5.0
-CurrentVersionCode: 500
+CurrentVersion: 0.8.2
+CurrentVersionCode: 802

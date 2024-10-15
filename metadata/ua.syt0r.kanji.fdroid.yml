@@ -149,11 +149,43 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
 
+  - versionName: 2.1.0
+    versionCode: 2100
+    commit: a76488a22cbff696b71b6399d60ac5736dfe520a
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.1
+    versionCode: 2110
+    commit: b7ca65780d74c1d0234c599da9b029ec5263f8fa
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.2
+    versionCode: 2120
+    commit: d3ca9b52d5789dabc6f2d0e8968131518589415a
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
+  - versionName: 2.1.3
+    versionCode: 2130
+    commit: ea436b0bcbb5ec0b523f0698202d6ff0fd3869fe
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' build.gradle.kts ../settings.gradle.kts
+
 AllowedAPKSigningKeys: 5ad10466f09ea3c4f7c5004268cd54da7af37c094e2d94cd91dd8894d99fb0dd
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: buildSrc/src/main/kotlin/AppVersion.kt|versionCode = (\d+)|.|versionName
   = "(.*)"
-CurrentVersion: 2.0.9
-CurrentVersionCode: 2090
+CurrentVersion: 2.1.3
+CurrentVersionCode: 2130

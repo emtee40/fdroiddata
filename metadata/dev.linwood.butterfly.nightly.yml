@@ -2255,8 +2255,260 @@ Builds:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --flavor nightly
 
+  - versionName: 2.2.0-beta.1
+    versionCode: 110
+    commit: 114d042191e28a681901ff1f7d0763e5ea9f9cdd
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - sdkmanager 'ndk;23.1.7779620' 'ndk;26.1.10909125'
+      - export version=$(cat ../FLUTTER_VERSION)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.2.0-beta.2
+    versionCode: 111
+    commit: 59fd77f1d4072db660305cc4f50102fd0099b381
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - sdkmanager 'ndk;23.1.7779620' 'ndk;26.1.10909125'
+      - export version=$(grep "^  flutter:" pubspec.yaml | cut -d ":" -f2|head -n1)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.2.0-beta.3
+    versionCode: 112
+    commit: 842e13d0bb0f157eec56ab261f1ec6508adbd905
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - sdkmanager 'ndk;23.1.7779620' 'ndk;26.1.10909125'
+      - export version=$(grep "^  flutter:" pubspec.yaml | cut -d ":" -f2|head -n1)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.2.0-rc.0
+    versionCode: 113
+    commit: 6ba7ccc802db58c3763698a99487cba83b22802c
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - sdkmanager 'ndk;23.1.7779620' 'ndk;26.1.10909125'
+      - export version=$(grep "^  flutter:" pubspec.yaml | cut -d ":" -f2|head -n1)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.2.0-rc.1
+    versionCode: 114
+    commit: e4d8f3b9c2da7a1588e657e92c6b16ff045b4603
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - sdkmanager 'ndk;23.1.7779620' 'ndk;26.1.10909125'
+      - export version=$(grep "^  flutter:" pubspec.yaml | cut -d ":" -f2|head -n1)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.2.0-rc.3
+    versionCode: 115
+    commit: bce426abf790571f77fd7ab34fac0f4b1b3d24a5
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - sdkmanager 'ndk;23.1.7779620' 'ndk;26.1.10909125'
+      - export version=$(grep "^  flutter:" pubspec.yaml | cut -d ":" -f2|head -n1)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.2.0
+    versionCode: 116
+    commit: 44a29d3dd4ba25b98f6ad1eb1cdea1c33d124d07
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - sdkmanager 'ndk;23.1.7779620' 'ndk;26.1.10909125'
+      - export version=$(grep "^  flutter:" pubspec.yaml | cut -d ":" -f2|head -n1)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.2.1-rc.0
+    versionCode: 117
+    commit: d51bad088b262dfe31df9218e608e109ff10d77b
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - sdkmanager 'ndk;23.1.7779620' 'ndk;26.1.10909125'
+      - export version=$(grep "^  flutter:" pubspec.yaml | cut -d ":" -f2|head -n1)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
+  - versionName: 2.2.1-rc.1
+    versionCode: 118
+    commit: d58418e405e2a255fa8783209dbab41ee32a2d9b
+    subdir: app
+    output: build/app/outputs/flutter-apk/app-nightly-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - app/ios
+      - app/linux
+      - app/macos
+      - app/web
+      - app/windows
+    prebuild:
+      - sdkmanager 'ndk;23.1.7779620' 'ndk;26.1.10909125'
+      - export version=$(grep "^  flutter:" pubspec.yaml | cut -d ":" -f2|head -n1)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --flavor nightly
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v.+$
 UpdateCheckData: app/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 2.2.0-beta.0
-CurrentVersionCode: 109
+CurrentVersion: 2.2.1-rc.1
+CurrentVersionCode: 118

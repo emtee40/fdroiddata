@@ -314,7 +314,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.9.3
+    versionCode: 40903
+    commit: f0a5f1a57c831b48700fd603b5c50b805e13d608
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.9.4
+    versionCode: 40904
+    commit: dcbf3b5a243485f0a9b13e4565813fb0ea5dc9e5
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.9.1
-CurrentVersionCode: 40901
+CurrentVersion: 4.9.4
+CurrentVersionCode: 40904

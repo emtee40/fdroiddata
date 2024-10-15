@@ -200,8 +200,52 @@ Builds:
       - plugins/markdown2resource/build
       - build-logic/convention/build
 
+  - versionName: 2.7.1
+    versionCode: 19
+    commit: c0ff44741554a2c345a457c9880b4060268b9a4b
+    subdir: app
+    gradle:
+      - blue
+      - fdroid
+    scandelete:
+      - plugins/markdown2resource/build
+      - build-logic/convention/build
+
+  - versionName: 2.8.0
+    versionCode: 20
+    commit: c90445364b18116b89be4e501e59b29167fcf0ee
+    subdir: app
+    gradle:
+      - blue
+      - fdroid
+    scandelete:
+      - plugins/markdown2resource/build
+      - build-logic/convention/build
+
+  - versionName: 2.8.1
+    versionCode: 21
+    commit: 70529ffd8ac9050090e063ddf614b894a0f92b41
+    subdir: app
+    gradle:
+      - blue
+      - fdroid
+    scandelete:
+      - plugins/markdown2resource/build
+      - build-logic/convention/build
+
+  - versionName: 2.8.2
+    versionCode: 22
+    commit: f9ca3cd700c7fd2609f0831f60da40fd944ec97e
+    subdir: app
+    gradle:
+      - blue
+      - fdroid
+    scandelete:
+      - plugins/markdown2resource/build
+      - build-logic/convention/build
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+$
 UpdateCheckData: app/build.gradle.kts|versionCode\s=\s(\d+)|.|versionName\s=\s"([\d.]+)"
-CurrentVersion: 2.7.0
-CurrentVersionCode: 18
+CurrentVersion: 2.8.2
+CurrentVersionCode: 22

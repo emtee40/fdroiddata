@@ -522,7 +522,25 @@ Builds:
     prebuild: sed -i -e '/com.google.gms/d' -e '/com.google.firebase/d' -e '/fabric/d'
       -e '/crashlytics/d' ../build.gradle build.gradle
 
+  - versionName: '7.6'
+    versionCode: 87
+    commit: 4d328df111abebc84db08828b99634e613487100
+    subdir: app
+    gradle:
+      - regular
+    prebuild: sed -i -e '/com.google.gms/d' -e '/com.google.firebase/d' -e '/fabric/d'
+      -e '/crashlytics/d' ../build.gradle build.gradle
+
+  - versionName: '7.7'
+    versionCode: 88
+    commit: d4a4dbfd56c5a7ea19391bb5de252c9cd8aa7938
+    subdir: app
+    gradle:
+      - regular
+    prebuild: sed -i -e '/com.google.gms/d' -e '/com.google.firebase/d' -e '/fabric/d'
+      -e '/crashlytics/d' ../build.gradle build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '7.5'
-CurrentVersionCode: 86
+CurrentVersion: '7.7'
+CurrentVersionCode: 88

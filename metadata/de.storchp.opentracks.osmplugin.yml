@@ -324,7 +324,19 @@ Builds:
     gradle:
       - full
 
+  - versionName: 4.2.0
+    versionCode: 43
+    commit: c725b7541d7c4a94117dc16839fb19d8955f58c5
+    gradle:
+      - full
+
+  - versionName: 4.3.0
+    versionCode: 44
+    commit: a1c03d89fba0597650d3917f8ff916dcc1d0b766
+    gradle:
+      - full
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.1.0
-CurrentVersionCode: 42
+CurrentVersion: 4.3.0
+CurrentVersionCode: 44

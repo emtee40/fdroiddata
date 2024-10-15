@@ -94,7 +94,7 @@ checkupdates:
   stage: test
   needs: []
   tags:
-    - saas-linux-large-amd64
+    - saas-linux-medium-amd64
   image: debian:bookworm-slim
   rules: *app_verification_rules
   before_script:
@@ -144,14 +144,14 @@ fdroid lint:
     - function set_error() { export EXITVALUE=1; printf "\x1b[31mERROR `history|tail -2|head -1|cut -b 6-500`\x1b[0m\n"; }
     - |
       if [ -n "$CHANGED" ]; then
-        fdroid lint -f $CHANGED || {
-            set_error;
-            printf "\nThese files have lint issues:\n";
-            fdroid rewritemeta -l $CHANGED;
-            printf "\nThese are the formatting issues:\n";
-            fdroid rewritemeta $CHANGED;
-            git --no-pager diff --color=always;
-        }
+          fdroid rewritemeta $CHANGED;
+          git diff --exit-code > /dev/null || {
+              set_error;
+              printf "\nThese files have lint issues:\n";
+              git diff --name-only;
+              printf "\nThese are the formatting issues:\n";
+              printf "$(git --no-pager diff --color=always --ws-error-highlight=all | sed -e 's/\r/^M/' -e 's/%/%%/g')";
+          }
       fi
     - exit $EXITVALUE
 
@@ -178,8 +178,17 @@ fdroid lint config:
     - export fdroidserver=$CI_PROJECT_DIR/fdroidserver
     - *install_fdroid_server
   rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
       changes:
+        paths:
+          - .gitlab-ci.yml
+          - config.yml
+          - config/*.yml
+          - config/*/*.yml
+    # only check pushes to fdroids own repo
+    - if: $CI_PIPELINE_SOURCE == "push" && $CI_PROJECT_PATH == "fdroid/fdroiddata"
+      changes:
+        compare_to: 'refs/heads/master'
         paths:
           - .gitlab-ci.yml
           - config.yml
@@ -337,9 +346,8 @@ checkupdates_runner:
     - echo "${#CHECKUPDATES_APPIDS[@]}"
 
     - fdroid checkupdates --allow-dirty --auto --commit "${CHECKUPDATES_APPIDS[@]}" 2>&1 | tee /tmp/out || true
-    - git pull --rebase origin master
     # when two jobs try to push at the same time they occasionally fail, so try it again
-    - while ! git push origin HEAD:master; do git pull --rebase origin master; done
+    - while ! git push origin HEAD:master; do git pull --rebase --strategy-option=ours origin master; done
     - echo "============== Summary ====================="
     - 'grep -v "INFO: Processing" /tmp/out || true'
 
@@ -355,7 +363,7 @@ fdroid build:
   stage: build
   needs: []
   tags:
-    - saas-linux-large-amd64
+    - saas-linux-medium-amd64
   # Some env vars are setup in https://gitlab.com/fdroid/fdroidserver/-/blob/master/buildserver/setup-env-vars
   # home_vagrant=/home/vagrant
   image: registry.gitlab.com/fdroid/fdroidserver:buildserver-bookworm
@@ -466,7 +474,7 @@ fdroid build:
 pages:
   stage: deploy
   tags:
-    - saas-linux-large-amd64
+    - saas-linux-medium-amd64
   image: registry.gitlab.com/fdroid/fdroidserver:buildserver-bookworm
   only:
     refs:

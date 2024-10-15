@@ -454,7 +454,24 @@ Builds:
       - yes
     prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
 
+  - versionName: 0.25.1
+    versionCode: 56
+    commit: 54b31c11eec3c46ad31f24a611e82f216ec547be
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.25.2
+    versionCode: 57
+    disable: https://github.com/libre-tube/LibreTube/issues/6455
+    commit: c47009c33fb9f955b116432520d033d482facb5b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*[0-9]$
-CurrentVersion: 0.24.0
-CurrentVersionCode: 54
+CurrentVersion: 0.25.2
+CurrentVersionCode: 57

@@ -4,7 +4,7 @@ License: GPL-3.0-only
 AuthorName: Marcel Bokhorst (M66B)
 WebSite: https://email.faircode.eu/
 SourceCode: https://github.com/M66B/FairEmail
-IssueTracker: https://forum.xda-developers.com/android/apps-games/source-email-t3824168
+IssueTracker: https://contact.faircode.eu/?product=fairemailsupport
 Translation: https://crowdin.com/project/open-source-email
 Changelog: https://github.com/M66B/FairEmail/blob/HEAD/CHANGELOG.md
 Donate: https://email.faircode.eu/pro/
@@ -7592,8 +7592,173 @@ Builds:
     scandelete:
       - app/lib
 
+  - versionName: '1.2217'
+    versionCode: 2217
+    commit: 4ceeb78c6ed55f9568a46af27d70eb6169f3147c
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2219'
+    versionCode: 2219
+    commit: c57bb59dea3d6b96ca8a28a2dae3d36f30458233
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2220'
+    versionCode: 2220
+    commit: c610b52201ef40644c06fbe556c84812d5aa2216
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2221'
+    versionCode: 2221
+    commit: 2925806575c6e6e84c1954c21d181710979291fb
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2223'
+    versionCode: 2223
+    commit: df896966ad3dc6636ff69c355d87ec6a59a8bc81
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2224'
+    versionCode: 2224
+    commit: 7802e1030e9ded301f2a555a828f0a9a78ff153b
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2225'
+    versionCode: 2225
+    commit: 7cdde769f013ee897ff8073eacd6ab2acbf767fe
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2227'
+    versionCode: 2227
+    commit: 6610dfe1f3c64b1bff4835e100a8242bcf7aed01
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2230'
+    versionCode: 2230
+    commit: bbf41e0085d0822d2eb70fa706c81f36ce152f17
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2232'
+    versionCode: 2232
+    commit: 8980d5698634975d92332fabc880009dd82e9bf0
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2233'
+    versionCode: 2233
+    commit: d67dda22041aea768f0eebe3109d45c784cb7690
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2234'
+    versionCode: 2234
+    commit: 6b83ab53e99dafaba9557b6f45c91137bf6e0abe
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2235'
+    versionCode: 2235
+    commit: 49e3c652cd9206eab26b4c8fbc315c5d47657031
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2236'
+    versionCode: 2236
+    commit: 8298efe45157fb2759c8fc5c48c6e6bea57a4505
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2237'
+    versionCode: 2237
+    commit: 7d5b874ecfb51de84e86ef259063584810eb8c0f
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: app/build.gradle|getVersionCode.*return (\d+)||([\d.]+)
-CurrentVersion: '1.2216'
-CurrentVersionCode: 2216
+CurrentVersion: '1.2237'
+CurrentVersionCode: 2237

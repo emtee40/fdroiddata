@@ -211,7 +211,21 @@ Builds:
       - mvn install -f ../Jaku/pom.xml -Dmaven.test.skip=true
       - cp ~/.m2/repository/com/wseemann/jaku/1.6/jaku-1.6.jar src/main/libs/
 
+  - versionName: 1.0.26
+    versionCode: 26
+    commit: 1074e19f4cdf70df9a4e7b060239dde50d6a25cc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.27
+    versionCode: 27
+    commit: 1738b16620016b67e9adb4090e8ebd4ea79588d9
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.25
-CurrentVersionCode: 25
+CurrentVersion: 1.0.27
+CurrentVersionCode: 27

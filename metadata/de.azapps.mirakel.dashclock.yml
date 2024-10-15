@@ -6,7 +6,6 @@ SourceCode: https://github.com/MirakelX/mirakel-android
 IssueTracker: https://mirakel.atlassian.net/issues
 Changelog: https://github.com/MirakelX/mirakel-android/releases
 Donate: https://mirakel.azapps.de/help_us.html#donate
-FlattrID: '2188714'
 
 AutoName: Mirakel-Dashclock
 Description: |-
@@ -57,7 +56,8 @@ MaintainerNotes: |-
   :helper provides joda-time:joda-time:2.4
   :model provides com.google.code.gson:gson:2.2.2
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags ^v[0-9.]*-dashclock$
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '2.2'
 CurrentVersionCode: 13

@@ -591,5 +591,6 @@ Builds:
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v[\d.]+-\w+$
 UpdateCheckName: Ignore
+UpdateCheckData: assembly/build.gradle|versionCode\s(\d+)|.|versionName\s'(.*)'
 CurrentVersion: 6.4-66cd8034
 CurrentVersionCode: 51777

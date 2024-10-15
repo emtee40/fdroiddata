@@ -582,15 +582,21 @@ Builds:
       - yes
     prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
 
-  - versionName: '13.6'
-    versionCode: 136
-    disable: https://github.com/izivkov/CasioGShockSmartSync/issues/87#issuecomment-2245415498
-    commit: 4a67d586e8eb94a4d5dba2120101e92a8fe513e7
+  - versionName: '14.1'
+    versionCode: 141
+    commit: 8a04e7985ce260090cbe206800aff04684bd0dc4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '14.2'
+    versionCode: 142
+    commit: e7afd2ebe033d2ff2cb94e6eb642a056235a1be6
     subdir: app
     gradle:
       - yes
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '13.6'
-CurrentVersionCode: 136
+CurrentVersion: '14.2'
+CurrentVersionCode: 142

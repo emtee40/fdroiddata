@@ -81,7 +81,16 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '20240826'
+    versionCode: 20240826
+    commit: a57a7c302eef65119cf655b7c38fb463cd4605aa
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - documentation
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '20240330'
-CurrentVersionCode: 20240330
+CurrentVersion: '20240826'
+CurrentVersionCode: 20240826

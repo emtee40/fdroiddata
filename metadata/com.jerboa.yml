@@ -583,7 +583,35 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.0.73
+    versionCode: 73
+    commit: 2c6790e9279f366b4090512c6ded6b0420aaab05
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.75
+    versionCode: 75
+    commit: 10e6559e42c90496cf26b9ea0e7074cb42c8816f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.76-gplay
+    versionCode: 76
+    commit: 4871d7a787f8a48c7ea22352515c64fa64e0a959
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.0.77
+    versionCode: 77
+    commit: 8d5cdaf3a559e30b522ed4ff146b3a3c6d5627ae
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.0.71
-CurrentVersionCode: 71
+CurrentVersion: 0.0.77
+CurrentVersionCode: 77

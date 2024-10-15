@@ -79,10 +79,37 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 0.4.3
-    versionCode: 40400
-    disable: https://github.com/chvp/NanoLedger/issues/138
-    commit: 22ff246aead79ae57073b8ee741a65d361b7a9ba
+  - versionName: 0.4.5
+    versionCode: 40600
+    commit: 3b592dde3614017730ef8424b7ec7afea4b90f4b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.4.6
+    versionCode: 40700
+    commit: ea4b1d3bff32689b6bd1ed26344da6bdaadba782
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.0
+    versionCode: 60100
+    commit: 53690599ad13c9d92e6cce991265702df8b474f1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.1
+    versionCode: 60200
+    commit: 20f8135c2e1bd1397691b83591b668e04ece82b1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.2
+    versionCode: 60300
+    commit: e0ae07e62b558d15ac62d08f7393e087628e2bf9
     subdir: app
     gradle:
       - yes
@@ -91,5 +118,5 @@ AllowedAPKSigningKeys: 541fad2ab16c1fd8d464b28ee7031849ea1333a8e8e3016cd460fe22c
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.4.3
-CurrentVersionCode: 40400
+CurrentVersion: 0.6.2
+CurrentVersionCode: 60300

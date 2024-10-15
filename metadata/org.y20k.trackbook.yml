@@ -7,7 +7,6 @@ License: MIT
 AuthorName: y20k
 WebSite: https://codeberg.org/y20k/trackbook
 SourceCode: https://codeberg.org/y20k/trackbook
-IssueTracker: https://codeberg.org/y20k/trackbook/issues
 Translation: https://hosted.weblate.org/projects/trackbook/strings/
 Changelog: https://codeberg.org/y20k/trackbook/releases
 
@@ -359,7 +358,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.2.3
+    versionCode: 54
+    commit: 79d75e0f3f3d6810e23e8c8d9eed32221eb3d33b
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.2.2
-CurrentVersionCode: 53
+CurrentVersion: 2.2.3
+CurrentVersionCode: 54

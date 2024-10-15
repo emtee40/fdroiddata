@@ -1000,7 +1000,34 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
 
+  - versionName: 4.43.0-fdroid
+    versionCode: 1762434
+    commit: f687095536a9b8468a033eb3814adc3ab488f87f
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.43.1-fdroid
+    versionCode: 1772434
+    commit: 4f7de6c10e2df8fc6081f294cf1af852fe1e1514
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.44.0-fdroid
+    versionCode: 1782435
+    commit: 4c7495248b5a63f98c4784cd465dcd75682b43bf
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*-fdroid$
-CurrentVersion: 4.42.0-fdroid
-CurrentVersionCode: 1752434
+CurrentVersion: 4.44.0-fdroid
+CurrentVersionCode: 1782435

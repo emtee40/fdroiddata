@@ -1,3 +1,6 @@
+AntiFeatures:
+  Ads:
+    en-US: Has a banner with donation links to some unrelated NGOs
 Categories:
   - Multimedia
   - System
@@ -1039,7 +1042,25 @@ Builds:
     rm:
       - .github
 
+  - versionName: 2.11.1
+    versionCode: 123
+    commit: 52ba3b804e1ba7f71cafa02b9104c885c1f9021c
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.11.2
+    versionCode: 124
+    commit: a38655623d9d02fc44d6111757863f350c4c3d28
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.11.0
-CurrentVersionCode: 122
+CurrentVersion: 2.11.2
+CurrentVersionCode: 124

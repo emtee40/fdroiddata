@@ -618,15 +618,35 @@ Builds:
       - fdroid
     forceversion: true
 
-  - versionName: r/2.7.50494-r-2024-07-16
-    versionCode: 50494
-    disable: installreferrer
-    commit: f207b2afbc8ee194e52654329657e90217430f85
+  - versionName: r/2.7.50495-r-2024-07-23
+    versionCode: 50495
+    commit: f34eb5f9bf95baacdc7c005128e4a69ae5e734bd
     subdir: app
     gradle:
       - fdroid
     forceversion: true
     prebuild: echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+
+  - versionName: r/2.7.50498-r-2024-08-19
+    versionCode: 50498
+    commit: f5177a97ace43e1b9bd2c88f819315df2478c11a
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild: echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+
+  - versionName: r/2.7.50504-r-2024-10-01
+    versionCode: 50504
+    commit: 0ff4e478eb131bd697eba9144abffb252648fc5e
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+    prebuild:
+      - echo 'android { lintOptions { abortOnError false } }' >> build.gradle
+      - sed -i -e '/libs.google.services/d' -e '/com.google.gms.google-services/d'
+        build.gradle ../build.gradle
 
 MaintainerNotes: |-
   * whitelist app/build.gradle for microsoft appcenter SDK. It's actually open source but might
@@ -639,5 +659,5 @@ MaintainerNotes: |-
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^r
-CurrentVersion: r/2.7.50494-r-2024-07-16
-CurrentVersionCode: 50494
+CurrentVersion: r/2.7.50504-r-2024-10-01
+CurrentVersionCode: 50504

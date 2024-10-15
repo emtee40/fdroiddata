@@ -1415,16 +1415,6 @@ Builds:
     scandelete:
       - build-plugin/build
 
-  - versionName: '6.902'
-    versionCode: 39002
-    disable: crashes
-    commit: '6.902'
-    subdir: app-k9mail
-    gradle:
-      - yes
-    scandelete:
-      - build-plugin/build
-
   - versionName: '6.903'
     versionCode: 39003
     commit: '6.903'
@@ -1440,6 +1430,19 @@ Builds:
     subdir: app-k9mail
     gradle:
       - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 8.0b2
+    versionCode: 39006
+    commit: K9MAIL_8_0b2
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
     scandelete:
       - build-plugin/build
 

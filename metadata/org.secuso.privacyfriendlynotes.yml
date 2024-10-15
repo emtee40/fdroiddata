@@ -169,7 +169,23 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.0.0
+    versionCode: 19
+    commit: 316d0936c4e599bbe0def5af8e13e5a53cae6021
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 20
+    commit: bda8af52d907ba9ef9397fecf83ab2d1b92d6f38
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.5
-CurrentVersionCode: 18
+CurrentVersion: 2.0.1
+CurrentVersionCode: 20

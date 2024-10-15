@@ -1,12 +1,13 @@
 AntiFeatures:
   NonFreeNet:
-    en-US: App depends on Youtube.
+    en-US: App depends on YouTube.
 Categories:
   - Multimedia
 License: GPL-3.0-only
 AuthorName: Zion Huang
 SourceCode: https://github.com/z-huang/InnerTune
 IssueTracker: https://github.com/z-huang/InnerTune/issues
+Translation: https://hosted.weblate.org/engage/innertune/
 Changelog: https://github.com/z-huang/InnerTune/releases
 
 AutoName: InnerTune
@@ -56,9 +57,49 @@ Builds:
       - foss
     prebuild: sed -i -e '/google.services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
 
+  - versionName: 0.5.4
+    versionCode: 20
+    commit: 72de5d4f352c99fb4e9a5da67c2a69810bcedf0f
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/google.services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 0.5.7
+    versionCode: 23
+    commit: f3ba2519de37fc4bffc7c3ed0f812efc398bf2dc
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/google.services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 0.5.8
+    versionCode: 24
+    commit: 17c5ed01acb752732a2de2d75639d9ac35b8215e
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/google.services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 0.5.9
+    versionCode: 25
+    commit: 17be9cd128d6de2738960a8603de738afa565ce8
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/google.services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 0.5.10
+    versionCode: 26
+    commit: e65e6bf435c50c25e0be52213692d1e0967772c0
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/google.services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+
 AllowedAPKSigningKeys: 5d55f9086e9543ee4d9e5f50bd60595ed4e9ac842de334fde900f3c616e32af2
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.5.3
-CurrentVersionCode: 19
+CurrentVersion: 0.5.10
+CurrentVersionCode: 26

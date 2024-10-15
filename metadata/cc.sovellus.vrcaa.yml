@@ -42,7 +42,28 @@ Builds:
     gradle:
       - standard
 
+  - versionName: 2.0.0
+    versionCode: 200000
+    commit: 4bc184465573703d2562fcf429005de0114dcb5a
+    subdir: app
+    gradle:
+      - standard
+
+  - versionName: 2.0.1
+    versionCode: 200001
+    commit: 4ae7f858b5fa66dda181e04ca95b68666bbf7bb3
+    subdir: app
+    gradle:
+      - standard
+
+  - versionName: 2.1.0
+    versionCode: 200100
+    commit: 1f7549729ae681ad787087c0a305523756fca959
+    subdir: app
+    gradle:
+      - standard
+
 AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 1.2.1
-CurrentVersionCode: 100210
+UpdateCheckMode: Tags ^[\d.]+$
+CurrentVersion: 2.1.0
+CurrentVersionCode: 200100

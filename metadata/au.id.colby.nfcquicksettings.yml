@@ -19,7 +19,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.4.2
+    versionCode: 12
+    commit: 67a20d20575567ceb9b336d0d564226d96680d5c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 13
+    commit: 9f0ca157d9d6217513850285844003a92d4035f8
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.1
-CurrentVersionCode: 11
+CurrentVersion: 1.4.3
+CurrentVersionCode: 13

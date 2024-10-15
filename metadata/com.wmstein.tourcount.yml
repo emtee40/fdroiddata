@@ -370,7 +370,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 3.5.0
+    versionCode: 350
+    commit: 3189c40f0d04c2d346fb7696f69c240c21033947
+    subdir: tourcount
+    gradle:
+      - yes
+
+  - versionName: 3.5.1
+    versionCode: 351
+    commit: 28bf72f84c51db7655ba6ab383dd0ce87109e7f6
+    subdir: tourcount
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.4.9
-CurrentVersionCode: 349
+CurrentVersion: 3.5.1
+CurrentVersionCode: 351

@@ -6,7 +6,6 @@ AuthorName: deadlockz
 WebSite: https://no-go.github.io/RickApp/
 SourceCode: https://github.com/no-go/RickApp
 IssueTracker: https://github.com/no-go/RickApp/issues
-FlattrID: '5197343'
 
 AutoName: Rick App
 Description: |-
@@ -68,7 +67,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '2.0'
 CurrentVersionCode: 20

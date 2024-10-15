@@ -795,7 +795,24 @@ Builds:
       - aria2lib/src/main/jniLibs
     ndk: r25
 
+  - versionName: 5.9.18
+    versionCode: 230
+    commit: 5c85948d549ab2a9de65012bd6cfb14d8bc20671
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint dpkg-dev file libtool pkg-config
+    gradle:
+      - foss
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' -e '/signingConfigs.release/d' {..,.}/build.gradle
+      - sed -i -e '/android {/a ndkVersion "25.2.9519653"' build.gradle
+    scandelete:
+      - aria2lib/src/main/jniLibs
+    ndk: r25c
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 5.9.16
-CurrentVersionCode: 228
+CurrentVersion: 5.9.18
+CurrentVersionCode: 230

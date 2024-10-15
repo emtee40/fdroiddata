@@ -934,12 +934,84 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/enable true/d' build.gradle
 
+  - versionName: 0.89.8
+    versionCode: 394
+    commit: 3c034ca8af67f5e7f550bfae232ddea93cf5ef3e
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.89.9
+    versionCode: 395
+    commit: e8872321323397d35c5acfe9877b672981b019da
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.89.10
+    versionCode: 396
+    commit: 4c6842faf4bbedf082666b8571ec7b90e9ba4a93
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.90.4
+    versionCode: 401
+    commit: b1f1466e6b998db2cb680186469e414c2c83e162
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.90.6
+    versionCode: 403
+    commit: d5a98db67ceb4d87d261f74ec9a6d94a0baf95ca
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.91.0
+    versionCode: 404
+    commit: 065cf83b68afb509d7fa84c987c34123f4dbb20b
+    subdir: amethyst
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/enable true/d' build.gradle
+
+  - versionName: 0.92.2
+    versionCode: 407
+    disable: https://github.com/vitorpamplona/amethyst/issues/1113
+    commit: b4eba2da026823a3ed3a9454e9b345668e917053
+    subdir: amethyst
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autogen libtool gettext-base autopoint make g++
+        pkg-config
+    gradle:
+      - fdroid
+    srclibs:
+      - tor-android@0de17c1863c3e0c0a49fdf8ad7ed341d69534492
+    prebuild:
+      - sed -i -e '/githubusercontent/d' -e '/repositories {/a mavenLocal()' ../settings.gradle
+      - sed -i -e '/enable true/d' -e '/googleServices/d' {..,.}/build.gradle
+    build:
+      - pushd $$tor-android$$
+      - ./tor-droid-make.sh build -b release | tee tor-android.log >/dev/null ; tail
+        -n 100 tor-android.log
+      - gradle :tor-android-binary:publishToMavenLocal
+      - popd
+    ndk: r25c
+
 AllowedAPKSigningKeys: c2d0aa86bcb6b62090561a41bbe336e98b78c2d0210a498dc885f28e1348cf17
 
 MaintainerNotes: see https://gitlab.com/fdroid/fdroiddata/-/issues/2973#note_1428295385
   on NonFreeNet
 
-AutoUpdateMode: Version
+AutoUpdateMode: None
 UpdateCheckMode: Tags
-CurrentVersion: 0.89.7
-CurrentVersionCode: 393
+CurrentVersion: 0.92.2
+CurrentVersionCode: 407

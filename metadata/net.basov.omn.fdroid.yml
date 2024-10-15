@@ -65,10 +65,24 @@ Builds:
       - sed -i -e '/versionNameSuffix/d' build.gradle
       - git submodule update --init --recursive
 
+  - versionName: 00.34.00
+    versionCode: 3400
+    commit: d49b7e287e3c0878221d07d3c682dfe1a39f5f9b
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -t trixie node-uglify
+      - apt-get install -y npm make wget ruby-mustache
+    gradle:
+      - yes
+    prebuild: sed -i -e '/versionNameSuffix/d' build.gradle
+
 MaintainerNotes: We clone submodules in recipe as host git fsck config might interfere
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v[\d.]+f
 UpdateCheckName: net.basov.omn
-CurrentVersion: 00.33.00
-CurrentVersionCode: 3300
+CurrentVersion: 00.34.00
+CurrentVersionCode: 3400

@@ -145,14 +145,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 1.8.10
-    versionCode: 56
-    disable: https://github.com/Futsch1/medTimer/issues/169
-    commit: 97ed4f580e7a1d533b353f67bc60ce7941c907e7
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: 1.8.11
     versionCode: 57
     commit: 427ee995ae99eba478a59c437a73bc2ca036acd2
@@ -195,9 +187,58 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.9.0
+    versionCode: 66
+    commit: 7159f2fd4bb822ffe7ef28d279ba0abe11572d84
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.2
+    versionCode: 68
+    commit: e29c769c17a3f2173ef344f864c42cf0141c069a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.3
+    versionCode: 69
+    commit: fbb892737c852f8bb0765ec4a8c8841b7a7b97c9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.4
+    versionCode: 70
+    commit: aff09b97a6e82cacaa42c3c588907afdba8a1f8e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.5
+    versionCode: 71
+    commit: 5253ffc797ece82ac762f5ded4aae05ad59ad435
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.0
+    versionCode: 73
+    commit: 3dc938aecd166df49a99efefb22642d49baa26e3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.2
+    versionCode: 76
+    commit: e8b93f0814c48f18d43d543af21cf642212cc490
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: 69bc7c72e499045b44c87fc8463f599472deb408c48de38de8554ae7754b9d84
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.8.16
-CurrentVersionCode: 65
+CurrentVersion: 1.10.2
+CurrentVersionCode: 76

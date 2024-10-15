@@ -328,7 +328,27 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 5.7.2
+    versionCode: 121
+    commit: 977d2bbe690d68b217bb76477a0f1832788e3159
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+
+  - versionName: 5.7.4
+    versionCode: 123
+    commit: d8aa3e5d64d3a72e428aba51111a6e34aa98ed74
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*$
-CurrentVersion: 5.7.1
-CurrentVersionCode: 120
+CurrentVersion: 5.7.4
+CurrentVersionCode: 123

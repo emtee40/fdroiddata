@@ -523,7 +523,71 @@ Builds:
       - yes
     prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
 
+  - versionName: 3.0.0
+    versionCode: 5453
+    commit: 7e33ebf164a7ad9089d183af5d5eea77c4f4ef57
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.1
+    versionCode: 5454
+    commit: 31caae350fef39c0b24ce3e2b6326d19060c3014
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.3
+    versionCode: 5456
+    commit: ede575ce724c41b3abcd4e06acef72f97cfd6b72
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.7.4
+    versionCode: 5457
+    commit: 06e22b3729865690244b15a07b7c07ea84a1451c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.4
+    versionCode: 5458
+    commit: 19cfc0f294593c074c5772bf66754409ea3a0c2a
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.5
+    versionCode: 5459
+    commit: 835db3b17c6d9bdd267fb628f5f4965416a17c65
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.6
+    versionCode: 5461
+    commit: 313a9ca2ea0654c6dabd7b2be6e0e52b7266ade2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.7
+    versionCode: 5462
+    commit: ad36343ab7c3d2d3fac57686967c382294474fe0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.7.3
-CurrentVersionCode: 5447
+CurrentVersion: 3.0.7
+CurrentVersionCode: 5462

@@ -80,10 +80,31 @@ Builds:
     gradle:
       - lite
 
+  - versionName: '37.0'
+    versionCode: 643
+    commit: 008880a6448dd8b15d301074409df45b1b063adc
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '38.0'
+    versionCode: 694
+    commit: e5b9beb84e2b5bd232286b1f9737c3e950ac7480
+    subdir: app
+    gradle:
+      - lite
+
+  - versionName: '39.0'
+    versionCode: 743
+    commit: 22d0d73e2946eeffbf61a4f92b1edea8487d7b72
+    subdir: app
+    gradle:
+      - lite
+
 AllowedAPKSigningKeys: 57f09ab8dcfedbb63fa309362fedbbb0d8026cada8b2dc78ff00057f98c6020b
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[a-z0-9.]*$
 UpdateCheckData: app/src/main/AndroidManifest.xml|versionCode="(\d+)"|.|versionName="(.+)"
-CurrentVersion: '36.0'
-CurrentVersionCode: 612
+CurrentVersion: '39.0'
+CurrentVersionCode: 743

@@ -83,14 +83,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 1.5.4
-    versionCode: 44
-    disable: https://github.com/nuclearfog/Apollo-Music/issues/33
-    commit: bad26a5cd2e9c9dbe4c04b25b5d0d936a04bf495
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: 1.5.5
     versionCode: 45
     commit: 17cc2744c231f83ac906bb5c0aaaf1fe54716da1
@@ -126,9 +118,51 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.5.10
+    versionCode: 50
+    commit: 2087c98db5e6f57340725bb52a00475c956cf331
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.11
+    versionCode: 51
+    commit: c0fbb8aec774d81d9c7576001b89d166b33e62b9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.12
+    versionCode: 52
+    commit: 7e7a1984b1f775b1046e1528ebab072a97b457e2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.13
+    versionCode: 53
+    commit: de71ce78af5a9eef57e26617120cd8c5de796cc0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.14
+    versionCode: 54
+    commit: 33d10507fcfae6aacf45ff4dbba67292079c4143
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.15
+    versionCode: 55
+    commit: dcf331a7b6749dc4da223d32861898fb0455b45d
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: e1a418c51baa829917daa2e86d7509a8a10470e44280c20146b70ea550bfe1ab
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.5.9
-CurrentVersionCode: 49
+CurrentVersion: 1.5.15
+CurrentVersionCode: 55

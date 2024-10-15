@@ -58,7 +58,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '4'
+    versionCode: 26
+    commit: aaaefe415183cf2d930fe6a3cfdfc76fce92169e
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: None
 UpdateCheckMode: RepoManifest
 CurrentVersion: '4'
-CurrentVersionCode: 24
+CurrentVersionCode: 26

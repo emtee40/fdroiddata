@@ -5,7 +5,7 @@ AuthorName: Daniel Kao
 AuthorEmail: daniel.kao@gmail.com
 SourceCode: https://github.com/plateaukao/einkbro
 IssueTracker: https://github.com/plateaukao/einkbro/issues
-Changelog: https://github.com/plateaukao/einkbro/blob/HEAD/CHANGELOG.md
+Changelog: https://github.com/plateaukao/einkbro/releases
 
 AutoName: EinkBro
 
@@ -869,7 +869,63 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 11.13.0
+    versionCode: 111300
+    commit: 5db00c5b1979ffddeab5a4f9c650a176e7905252
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.14.0
+    versionCode: 111400
+    commit: 39834fb30cbf8fe19daf1593b3c649be5d977b59
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.15.0
+    versionCode: 111500
+    commit: 25af17fe8a6ad4d4e39a3acf9e575ad0da8ef8d4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.16.0
+    versionCode: 111600
+    commit: c6523f2a9bedf4ffcaa982977598fe0c17a92faa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.17.0
+    versionCode: 111700
+    commit: bbfc6b680d3fe87f0bcff4860f2e037c7041500d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 12.0.0
+    versionCode: 120000
+    commit: 8b6612cc7005f382ca3e7ce3e00d3ebd266299b2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 12.1.0
+    versionCode: 120100
+    commit: db2772d37ac84bd83a4493e71a1ec6d9a08a8f9a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 12.2.0
+    versionCode: 120200
+    commit: 9905a47beb2d3a5f6560d1420c8a49abc93198e6
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 11.11.0
-CurrentVersionCode: 111100
+CurrentVersion: 12.2.0
+CurrentVersionCode: 120200

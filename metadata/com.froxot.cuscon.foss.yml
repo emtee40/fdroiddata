@@ -359,10 +359,9 @@ Builds:
     postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
       'META-INF/services/*'
 
-  - versionName: 4.0.3.0
-    versionCode: 4030
-    disable: https://github.com/MiepHD/cuscon/issues/35
-    commit: f8b1cf9a042704e046e8c43de4f8eec86d8a8321
+  - versionName: 4.0.3.1
+    versionCode: 4031
+    commit: 677d86703fe131fb45efdaa82ba0d95d07bc3485
     subdir: app
     gradle:
       - foss
@@ -373,9 +372,48 @@ Builds:
     postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
       'META-INF/services/*'
 
-  - versionName: 4.0.3.1
-    versionCode: 4031
-    commit: 677d86703fe131fb45efdaa82ba0d95d07bc3485
+  - versionName: 4.0.3.2
+    versionCode: 4032
+    commit: bbd628da2fa37ba529cb3a200340cf0b0dae2c1c
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.3.4
+    versionCode: 4034
+    commit: 80636562f5b4d1122ed5cc9d46b3d216c1342d05
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.3.7
+    versionCode: 4037
+    commit: 8a3c252c0a7b5c3774f7e75849e73d348f67a6c7
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.3.9
+    versionCode: 4039
+    commit: 71ab49a4420a50f5c7b89ca8e3121f8828c6cefa
     subdir: app
     gradle:
       - foss
@@ -390,5 +428,5 @@ AllowedAPKSigningKeys: d5389d12207abb575db074d7d00798328aa328fa8a1d25d12234e354a
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.0.3.1
-CurrentVersionCode: 4031
+CurrentVersion: 4.0.3.9
+CurrentVersionCode: 4039

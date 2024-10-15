@@ -487,7 +487,55 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/sonatype/d' build.gradle.kts
 
+  - versionName: 3.27.2
+    versionCode: 327002
+    commit: ce61b8c74c3f98b4d5cfc23dbb04ebf32490397b
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.28.0-SNAPSHOT.0
+    versionCode: 328001
+    commit: b97a845a9f2ffe3f99513ae735020b5119a48867
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.28.0
+    versionCode: 328002
+    commit: a3b123ec0ea3f613d18930172ddc860a6b94a41c
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.28.1
+    versionCode: 328003
+    commit: 7494fc6f3ad6c5f66fd42699da5385d3b3fd29b5
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.29.0
+    versionCode: 329000
+    commit: 5731095dcf43dc7b155ad6daa50a3b5703aec384
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
+  - versionName: 3.30.0
+    versionCode: 330000
+    commit: 1286a161f5a82f78da20c0a79ef5d769f352ffed
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/sonatype/d' build.gradle.kts
+
 AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 3.26.1
-CurrentVersionCode: 326001
+UpdateCheckMode: Tags ^[\d.]+$
+CurrentVersion: 3.30.0
+CurrentVersionCode: 330000

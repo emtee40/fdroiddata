@@ -6,7 +6,7 @@ WebSite: https://docs.metacubex.one
 SourceCode: https://github.com/MetaCubeX/ClashMetaForAndroid
 IssueTracker: https://github.com/MetaCubeX/ClashMetaForAndroid/issues
 
-Name: ClashMetaForAndroid
+Name: Clash Meta For Android
 
 RepoType: git
 Repo: https://github.com/MetaCubeX/ClashMetaForAndroid.git
@@ -508,8 +508,76 @@ Builds:
         -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
     ndk: r23
 
-AutoUpdateMode: Version +.Meta v%v
+  - versionName: 2.10.3.Meta
+    versionCode: 210003
+    commit: 08f87e27ed3923b0c7ad1a553ffcc85d33bdbbf1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+    gradle:
+      - meta
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|raw.githubusercontent.com/.*/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.10.4.Meta
+    versionCode: 210004
+    commit: 4df39342a2b88ce2c6fd367a81f3ae6c8dadeef3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+    gradle:
+      - meta
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|raw.githubusercontent.com/.*/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.11.0.Meta
+    versionCode: 211000
+    commit: e966e52b774b00ea621e1e5e8cd740c650e37766
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+    gradle:
+      - meta
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|raw.githubusercontent.com/.*/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.11.1.Meta
+    versionCode: 211001
+    commit: 2ac1ade18815748ff12910cdcbbe225678c004e9
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+    gradle:
+      - meta
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|raw.githubusercontent.com/.*/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckName: com.github.metacubex.clash
-CurrentVersion: 2.10.2
-CurrentVersionCode: 210002
+CurrentVersion: 2.11.1.Meta
+CurrentVersionCode: 211001

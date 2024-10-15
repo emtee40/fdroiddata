@@ -641,9 +641,101 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 1.4.3
+    versionCode: 10400301
+    commit: 08091da1b637fec818f465da8bfe062b4781a6c2
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.4
+    versionCode: 10400401
+    commit: f303cfd96204af9fba11ef67d0c4748b59e95853
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.5
+    versionCode: 10400501
+    commit: da410bd69ff7a079e3c778bacdf4d1f342ae603b
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.6
+    versionCode: 10400601
+    commit: 9a003cbfafe95530a6bffc56f94e64f99bb67d5a
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.7
+    versionCode: 10400701
+    commit: ab4a4d45e5ce75194493b50ec96d48c58de95a67
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.8
+    versionCode: 10400801
+    commit: f08275ceecaa3c1035146dd0b1a14cc5bbedfed5
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.4.9
+    versionCode: 10400901
+    commit: 398e301f7ed00addf9dae3ff598a403793bd3ad5
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 1.5.0
+    versionCode: 10500001
+    commit: 54dc654f7e495384061230ab40a73266c0eb959d
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/google.services/d' ../build.gradle build.gradle
+
+  - versionName: 1.5.1
+    versionCode: 10500101
+    commit: 6cfd7a0fe988ed2de5eee6dcaf42832c4e6a01df
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/google.services/d' ../build.gradle build.gradle
+
+  - versionName: 1.6.0
+    versionCode: 10600001
+    commit: a94d70ae487ed78ed9e2bf28525152c1826f34da
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/google.services/d' ../build.gradle build.gradle
+
+  - versionName: 1.6.1
+    versionCode: 10600101
+    commit: 5d79bce4f518691215bff967482f15d0de90aa07
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/google.services/d' ../build.gradle build.gradle
+
 MaintainerNotes: on tracking see https://gitlab.com/fdroid/fdroiddata/-/merge_requests/12696#note_1303894823
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.2
-CurrentVersionCode: 10400201
+CurrentVersion: 1.6.1
+CurrentVersionCode: 10600101

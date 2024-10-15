@@ -8,7 +8,6 @@ IssueTracker: https://github.com/nilsbraden/ttrss-reader-fork/issues
 Translation: https://github.com/nilsbraden/ttrss-reader-fork/wiki/Developer-Information#Language_and_Translations
 Changelog: https://github.com/nilsbraden/ttrss-reader-fork/wiki/Changelog
 Donate: https://github.com/nilsbraden/ttrss-reader-fork/wiki/Donations
-FlattrID: '382465'
 
 AutoName: TTRSS-Reader
 Description: |-
@@ -717,6 +716,40 @@ Builds:
       - gradle publishToMavenLocal
       - popd
 
+  - versionName: 1.97.5
+    versionCode: 1975
+    commit: 4ecf65751f7125dce88842be15e189917e8f0871
+    subdir: ttrssreader
+    gradle:
+      - fdroid
+    srclibs:
+      - twofortyfouram-monorepo@4023d30d5b44b2fd15206c3435829e999e7bbd02
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i -e '/maven {/,+8d' -e '/repositories {/amavenLocal()' ../settings.gradle
+    build:
+      - pushd $$twofortyfouram-monorepo$$
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+
+  - versionName: 1.97.6
+    versionCode: 1976
+    commit: 23f67a177606d9fbad8d889b8cf3b1b5d95098ae
+    subdir: ttrssreader
+    gradle:
+      - fdroid
+    srclibs:
+      - twofortyfouram-monorepo@4023d30d5b44b2fd15206c3435829e999e7bbd02
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i -e '/maven {/,+8d' -e '/repositories {/amavenLocal()' ../settings.gradle
+    build:
+      - pushd $$twofortyfouram-monorepo$$
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+
 MaintainerNotes: |-
   Upstream mistags often and retags, so never use tags directly.
 
@@ -729,5 +762,5 @@ MaintainerNotes: |-
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.97.4
-CurrentVersionCode: 1974
+CurrentVersion: 1.97.6
+CurrentVersionCode: 1976

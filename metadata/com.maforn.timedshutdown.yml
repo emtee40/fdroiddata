@@ -93,7 +93,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: v2.60
+    versionCode: 26
+    commit: ca7a9f6cf6d16b3cb23452f24136b1c3c4ae4409
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v2.70
+    versionCode: 27
+    commit: 9fd26b34f1403b93f09cb8f3a046f421d2c18216
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v2.56
-CurrentVersionCode: 25
+CurrentVersion: v2.70
+CurrentVersionCode: 27

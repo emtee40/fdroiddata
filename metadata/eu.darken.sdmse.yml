@@ -54,10 +54,64 @@ Builds:
       - crowdin-cli.jar
       - tooling/testdata-generator/dirt-sources.zip
 
+  - versionName: 1.2.2-rc0
+    versionCode: 10202000
+    commit: 2215a0eb864316d1e70f23945911cb62d2077ed5
+    subdir: app
+    sudo:
+      - export CPUS_MAX=1
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - foss
+    rm:
+      - crowdin-cli.jar
+      - tooling/testdata-generator/dirt-sources.zip
+
+  - versionName: 1.2.5-rc0
+    versionCode: 10205000
+    commit: 81e75e4ede1c76c3e35944be4f75397b08759015
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install zip
+    gradle:
+      - foss
+    rm:
+      - crowdin-cli.jar
+      - tooling/testdata-generator/dirt-sources.zip
+
+  - versionName: 1.2.6-rc0
+    versionCode: 10206000
+    commit: c3ecae5fb533929c1fda5aec55a229e16cda2ef8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install zip
+    gradle:
+      - foss
+    rm:
+      - crowdin-cli.jar
+      - tooling/testdata-generator/dirt-sources.zip
+
+  - versionName: 1.2.7-rc0
+    versionCode: 10207000
+    commit: 42f7ffd9b06fa3d536ef844cb37e1a952a295395
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install zip
+    gradle:
+      - foss
+    rm:
+      - crowdin-cli.jar
+      - tooling/testdata-generator/dirt-sources.zip
+
 AllowedAPKSigningKeys: f490032be5383f55900495fa7fc207ece2e786a5c2c6cc52027b99548a9ce938
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*(|-rc[0-9])$
 UpdateCheckData: VERSION|.* (\d+)|.|(.*) \d+
-CurrentVersion: 1.2.1-rc0
-CurrentVersionCode: 10201000
+CurrentVersion: 1.2.7-rc0
+CurrentVersionCode: 10207000

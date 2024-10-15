@@ -37,15 +37,11 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 1.2.1
-    versionCode: 4
-    disable: https://github.com/willbsp/habits/issues/32#issuecomment-1739203630
-    commit: 5a91e179ab0b07ea90d27bc8c015770039264d3d
+  - versionName: 1.2.2
+    versionCode: 5
+    disable: https://github.com/willbsp/habits/issues/32#issuecomment-2309694362
+    commit: 2c1f3a32c75b17d1e42926d0e16089cec6e5bbce
     subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-17-jdk-headless
-      - update-alternatives --auto java
     gradle:
       - yes
 
@@ -53,5 +49,5 @@ AllowedAPKSigningKeys: 154566e63326573a97bdfcb52b0bac36963d6be08aab3f4870629948e
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.2.1
-CurrentVersionCode: 4
+CurrentVersion: 1.2.2
+CurrentVersionCode: 5

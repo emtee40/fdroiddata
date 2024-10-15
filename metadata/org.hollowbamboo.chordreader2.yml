@@ -87,7 +87,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.3.1
+    versionCode: 11
+    commit: 3ddec21dc44ac01c59dba6fef329513da1e24934
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.2.0
-CurrentVersionCode: 9
+CurrentVersion: 2.3.1
+CurrentVersionCode: 11

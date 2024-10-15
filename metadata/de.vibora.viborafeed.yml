@@ -4,7 +4,6 @@ License: Unlicense
 AuthorName: deadlockz
 WebSite: http://vibora.de
 SourceCode: https://github.com/no-go/ViboraFeed
-FlattrID: '5194982'
 
 AutoName: Single-Feed
 Description: |-
@@ -154,7 +153,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '2.8'
 CurrentVersionCode: 28

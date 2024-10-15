@@ -305,7 +305,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.9.0
+    versionCode: 43
+    commit: 2fc5993c8416aa990b90e041b73a8be4fe7ecebe
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.1
+    versionCode: 44
+    commit: 29e9d596efff1eff75a50cc617fc037f693599b0
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.8.0
-CurrentVersionCode: 42
+CurrentVersion: 1.9.1
+CurrentVersionCode: 44

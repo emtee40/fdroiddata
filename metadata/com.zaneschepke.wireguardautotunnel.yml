@@ -354,8 +354,43 @@ Builds:
 
   - versionName: 3.4.8
     versionCode: 34800
-    disable: https://github.com/zaneschepke/wgtunnel/issues/47#issuecomment-2258732472
-    commit: 431b2f90611d58ad9986c4c3191a2161e07cd424
+    commit: 594834a9081dec238433438fd6f20e5a9b079a82
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/com.google.gms/d' -e '/com.google.firebase/d' -e '/libs.androidx.core.google.shortcuts/d'
+        build.gradle.kts
+      - sed -i -e '/libs.google.services/d' -e '/libs.firebase/d' ../build.gradle.kts
+      - sed -i -e '/gitea.zaneschepke.com/d' ../settings.gradle.kts
+
+  - versionName: 3.5.0
+    versionCode: 35000
+    commit: 0c1cb40add8a1716761de2890d963e93e6848b1f
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/com.google.gms/d' -e '/com.google.firebase/d' -e '/libs.androidx.core.google.shortcuts/d'
+        build.gradle.kts
+      - sed -i -e '/libs.google.services/d' -e '/libs.firebase/d' ../build.gradle.kts
+      - sed -i -e '/gitea.zaneschepke.com/d' ../settings.gradle.kts
+
+  - versionName: 3.5.1
+    versionCode: 35100
+    commit: 30851a7d7bb2a42003aa8bda931ad101c2682bd8
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/com.google.gms/d' -e '/com.google.firebase/d' -e '/libs.androidx.core.google.shortcuts/d'
+        build.gradle.kts
+      - sed -i -e '/libs.google.services/d' -e '/libs.firebase/d' ../build.gradle.kts
+      - sed -i -e '/gitea.zaneschepke.com/d' ../settings.gradle.kts
+
+  - versionName: 3.5.2
+    versionCode: 35200
+    commit: 47f619ff07c3034eee52562a3ede0dd606ab0ec3
     subdir: app
     gradle:
       - fdroid
@@ -369,5 +404,5 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[\d.]+$
 UpdateCheckData: buildSrc/src/main/kotlin/Constants.kt|VERSION_CODE = (\d+)|.|VERSION_NAME
   = "(.+)"
-CurrentVersion: 3.4.8
-CurrentVersionCode: 34800
+CurrentVersion: 3.5.2
+CurrentVersionCode: 35200

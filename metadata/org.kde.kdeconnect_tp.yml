@@ -3,7 +3,7 @@ Categories:
 License: GPL-3.0-only
 WebSite: https://kdeconnect.kde.org/
 SourceCode: https://invent.kde.org/network/kdeconnect-android
-IssueTracker: https://bugs.kde.org
+IssueTracker: https://bugs.kde.org/buglist.cgi?component=android-application&product=kdeconnect
 
 AutoName: KDE Connect
 
@@ -744,7 +744,37 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.32.0
+    versionCode: 13200
+    commit: aed2b64416d6a8e34a14b2f2b47b84f86fdee2b6
+    gradle:
+      - yes
+
+  - versionName: 1.32.1
+    versionCode: 13201
+    commit: eb6784b626209eeba08c50c36e9ea5efc2a66541
+    gradle:
+      - yes
+
+  - versionName: 1.32.2
+    versionCode: 13202
+    commit: 80cf238354325972411677fbd9c788cb1dff26ba
+    gradle:
+      - yes
+
+  - versionName: 1.32.5
+    versionCode: 13205
+    commit: 0ffd9cd9dc25914d411f90e6262ebe019315693c
+    gradle:
+      - yes
+
+  - versionName: 1.32.7
+    versionCode: 13207
+    commit: deee9cc2e22b0b961b2ceecbdcb8bb724aae398e
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.31.1
-CurrentVersionCode: 13101
+CurrentVersion: 1.32.7
+CurrentVersionCode: 13207

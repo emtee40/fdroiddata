@@ -2314,10 +2314,9 @@ Builds:
       - mv /home/brandon/fitbook com.presley.fit_book
     ndk: r21e
 
-  - versionName: 1.0.78
-    versionCode: 831
-    disable: https://github.com/brandonp2412/FitBook/issues/26
-    commit: 34cbf42e7f8582dd5802eba1238b7dbf6a0cd241
+  - versionName: 1.0.81
+    versionCode: 881
+    commit: cd3535ba6487e6518f66c80e3b12db979694cb20
     submodules: true
     sudo:
       - apt-get update
@@ -2357,10 +2356,9 @@ Builds:
       - mv /home/brandon/fitbook com.presley.fit_book
     ndk: r21e
 
-  - versionName: 1.0.78
-    versionCode: 832
-    disable: https://github.com/brandonp2412/FitBook/issues/26
-    commit: 34cbf42e7f8582dd5802eba1238b7dbf6a0cd241
+  - versionName: 1.0.81
+    versionCode: 882
+    commit: cd3535ba6487e6518f66c80e3b12db979694cb20
     submodules: true
     sudo:
       - apt-get update
@@ -2400,10 +2398,9 @@ Builds:
       - mv /home/brandon/fitbook com.presley.fit_book
     ndk: r21e
 
-  - versionName: 1.0.78
-    versionCode: 833
-    disable: https://github.com/brandonp2412/FitBook/issues/26
-    commit: 34cbf42e7f8582dd5802eba1238b7dbf6a0cd241
+  - versionName: 1.0.81
+    versionCode: 883
+    commit: cd3535ba6487e6518f66c80e3b12db979694cb20
     submodules: true
     sudo:
       - apt-get update
@@ -2445,12 +2442,12 @@ Builds:
 
 AllowedAPKSigningKeys: 011ee1a6e4e5ecd675f67fbf3d78ad82614a7a7a3f24ed71cc9c417154a0f0fd
 
-AutoUpdateMode: None
+AutoUpdateMode: Version
 UpdateCheckMode: Tags
 VercodeOperation:
   - 10 * %c + 1
   - 10 * %c + 2
   - 10 * %c + 3
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 1.0.79
-CurrentVersionCode: 843
+CurrentVersion: 1.0.81
+CurrentVersionCode: 883

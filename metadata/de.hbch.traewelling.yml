@@ -132,10 +132,59 @@ Builds:
     gradle:
       - foss
 
+  - versionName: 2.11.2
+    versionCode: 159
+    commit: fa850b77201d706c5682a544857e9f08fb083f65
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.12.0
+    versionCode: 160
+    commit: bdd5894de3b59ba2ffc99dfb767509d6dece8d73
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.13.1
+    versionCode: 162
+    commit: a0e0dd1e16b096aed12340808f803897da12e3fd
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.13.2
+    versionCode: 163
+    commit: 6921f7cb87b72f9cf4f8b2f704bd5e22962287e0
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.14.1
+    versionCode: 165
+    commit: 872e646af8a63c96649323f809653e7692c0f7a0
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.15.1
+    versionCode: 167
+    commit: d3f5208dc349b2b7f8cba1afe7020e78829e3c16
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.15.4
+    versionCode: 170
+    commit: b22cb641fa90dfd278ac8f242d407c31de1c6e20
+    subdir: app
+    gradle:
+      - foss
+
 AllowedAPKSigningKeys: 989fb4f387a7ea95f56405841bbae8af0c14ddff0462a1c919d9119944b20efc
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: app/build.gradle|code = (\d+)|.|name = "(\d+.\d+.\d+)"
-CurrentVersion: 2.11.0
-CurrentVersionCode: 157
+CurrentVersion: 2.15.4
+CurrentVersionCode: 170

@@ -1,0 +1,51 @@
+Categories:
+  - Games
+License: Apache-2.0
+AuthorName: James HN Sears
+AuthorEmail: james.hn.sears@gmail.com
+SourceCode: https://github.com/jameshnsears/Chance
+IssueTracker: https://github.com/jameshnsears/Chance/issues
+
+AutoName: Chance
+
+RepoType: git
+Repo: https://github.com/jameshnsears/Chance.git
+Binaries: https://github.com/jameshnsears/Chance/releases/download/%v-fdroid/app-fdroid-release-signed.apk
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 12435
+    commit: a625ba6b055bf44986d73651a8e6adba47b4cf10
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.1.0
+    versionCode: 22435
+    commit: a6543c4faf73bba1bbabe410ce84681ad55a1d4e
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.2.0
+    versionCode: 32435
+    commit: 7da92a58ecec3b5c6f8efcbe208fba6e7839bfc0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d;/firebase/d' ../build.gradle.kts
+
+  - versionName: 1.2.1
+    versionCode: 42435
+    commit: 3abfa1d918d8d34dadc2498888793726cba508a0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/gms/d;/firebase/d' ../build.gradle.kts
+
+AllowedAPKSigningKeys: c7fcd608df781a7293b97101bdf47153c1a90613cc4514174b9c1d51b7de4147
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags .*-fdroid$
+CurrentVersion: 1.2.1
+CurrentVersionCode: 42435

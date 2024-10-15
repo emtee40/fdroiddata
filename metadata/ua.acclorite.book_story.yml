@@ -1,0 +1,62 @@
+Categories:
+  - Reading
+License: GPL-3.0-only
+AuthorName: Acclorite
+SourceCode: https://github.com/Acclorite/book-story
+IssueTracker: https://github.com/Acclorite/book-story/issues
+Translation: https://hosted.weblate.org/projects/book-story/
+Changelog: https://github.com/Acclorite/book-story/releases
+
+AutoName: Book's Story
+
+RepoType: git
+Repo: https://github.com/Acclorite/book-story.git
+Binaries: https://github.com/Acclorite/book-story/releases/download/v%v/book-story.apk
+
+Builds:
+  - versionName: 1.1.0
+    versionCode: 5
+    commit: v1.1.0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 6
+    commit: 0e5c4a13e878790300647324fa535b9454875e60
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign --page-size 16
+      fix-newlines $$OUT$$ 'META-INF/services/*' 'res/M7.json'
+
+  - versionName: 1.2.0
+    versionCode: 7
+    commit: 4e849d94a792e5fd9175355809eb3fa9e0c2d018
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign --page-size 16
+      fix-newlines $$OUT$$ 'META-INF/services/*'
+
+  - versionName: 1.3.0
+    versionCode: 8
+    commit: 82d8fa8e3bef9b889b370202b34260ed61ff1fe3
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign --page-size 16
+      fix-newlines $$OUT$$ 'META-INF/services/*'
+
+AllowedAPKSigningKeys: a661a0c81f138e53dff32f8fdc1dd19f8130523914027e2c0296fe245131a7d4
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.3.0
+CurrentVersionCode: 8

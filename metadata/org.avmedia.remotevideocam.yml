@@ -85,7 +85,22 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '3.3'
+    versionCode: 33
+    commit: e994ac4581042384502f4543ef5588d36192f80b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.4'
+    versionCode: 34
+    disable: https://github.com/izivkov/RemoteVideoCam/issues/28
+    commit: b9c7c7d29f71158b3844007dbd61eab0fc6a80eb
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '3.2'
-CurrentVersionCode: 32
+CurrentVersion: '3.4'
+CurrentVersionCode: 34

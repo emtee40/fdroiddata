@@ -3,7 +3,6 @@ Categories:
 License: GPL-3.0-only
 SourceCode: https://gitorious.org/~macno/mustard/macnos-clone
 IssueTracker: https://bugs.launchpad.net/mustardroid
-FlattrID: '7104'
 
 AutoName: Mustard
 Description: |-
@@ -32,6 +31,7 @@ Builds:
       - sed -i '3d;6d' res/values/keys-example.xml
       - mv res/values/keys-example.xml res/values/keys.xml
 
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 0.4.1

@@ -11,7 +11,7 @@ Changelog: https://github.com/pacien/tincapp/blob/HEAD/changelog.md
 Donate: https://paypal.me/pacien/15
 Bitcoin: 152t9TEBBhEescQx5gG7T5wHaJVeupAXQm
 
-AutoName: Tinc App
+AutoName: Tinc Mesh VPN
 Description: |-
   Main features:
 
@@ -352,7 +352,43 @@ Builds:
     prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
     ndk: r22b
 
+  - versionName: '0.40'
+    versionCode: 40
+    commit: 4c6a2a879a5847b369d5b889452bf96c3d610463
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.41'
+    versionCode: 41
+    commit: c2cee114110679b989dd583c690ddb9c76599f2b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: 26.1.10909125
+
+  - versionName: '0.42'
+    versionCode: 42
+    commit: 2975156d3f667728b67963d84727da459c290fe1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: 26.1.10909125
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '0.39'
-CurrentVersionCode: 39
+CurrentVersion: '0.42'
+CurrentVersionCode: 42

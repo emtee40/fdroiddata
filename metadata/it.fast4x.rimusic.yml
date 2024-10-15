@@ -217,7 +217,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -231,7 +230,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -245,7 +243,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -259,7 +256,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -273,7 +269,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -287,7 +282,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -301,7 +295,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -315,7 +308,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -329,7 +321,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -343,7 +334,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -357,7 +347,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -371,7 +360,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -385,7 +373,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.3
     prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
@@ -399,7 +386,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.7
     rm:
@@ -415,7 +401,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.7
     rm:
@@ -431,7 +416,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.7
     rm:
@@ -441,26 +425,135 @@ Builds:
     postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
       'META-INF/services/*'
 
-  - versionName: 0.6.45.1
-    versionCode: 46
-    disable: https://github.com/fast4x/RiMusic/issues/2179#issuecomment-2258740426
-    commit: f55affa8ac651175a1f426be2ab58861219e2658
+  - versionName: 0.6.47.1
+    versionCode: 49
+    commit: baf44a3379911f00d7d8358f870c48f8936721b4
     subdir: app
     gradle:
-      - yes
-    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-release.apk
+      - foss
+    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-foss-release.apk
     srclibs:
       - reproducible-apk-tools@v0.2.7
     rm:
       - bundletool.jar
-    prebuild: sed -i -e '/android {/a lintOptions {isCheckReleaseBuilds = false}'
-      build.gradle.kts
     postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
       'META-INF/services/*'
+
+  - versionName: 0.6.48
+    versionCode: 50
+    commit: f8b8a97239c35aa3fa1168fbbe8897cd9e8b61bf
+    subdir: app
+    gradle:
+      - foss
+    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-foss-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - bundletool.jar
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.6.49.2
+    versionCode: 53
+    commit: 769745fabe86b26988d8622a096da87bc69e02fd
+    subdir: app
+    gradle:
+      - foss
+    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-foss-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - bundletool.jar
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.6.50
+    versionCode: 54
+    commit: b44659fb1ea2f1be03cc19dfca2468c68b9aa2c7
+    subdir: app
+    gradle:
+      - foss
+    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-foss-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - bundletool.jar
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.6.51
+    versionCode: 55
+    commit: c0e7f4d5a3125aa1231953c1aca6555922a3828b
+    subdir: app
+    gradle:
+      - foss
+    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-foss-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - bundletool.jar
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.6.52
+    versionCode: 56
+    commit: f35e21ba2cf09315b7e3138eda5ec39cc1c6aad8
+    subdir: app
+    gradle:
+      - foss
+    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-foss-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - bundletool.jar
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 0.6.55
+    versionCode: 60
+    commit: 065fb55f33a0dcf4e1f0fb63bd7733ffa7493713
+    subdir: composeApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-foss-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - bundletool.jar
+    prebuild: sed -i -e '/jetbrains.space/d' -e '/androidx.dev/d' ../settings.gradle.kts
+      build.gradle.kts
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*' 'res/m0.html' 'res/lM.json' 'composeResources/rimusic.composeapp.generated.resources/drawable/*.xml'
+
+  - versionName: 0.6.56.1
+    versionCode: 62
+    commit: bef1d51aa30a86bbca4db30f06b6c9b71bf41c6c
+    subdir: composeApp
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    binary: https://github.com/fast4x/RiMusic/releases/download/v%v/app-foss-release.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - bundletool.jar
+    prebuild: sed -i -e '/jetbrains.space/d' -e '/androidx.dev/d' ../settings.gradle.kts
+      build.gradle.kts
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*' 'res/m0.html' 'res/lM.json' 'composeResources/rimusic.composeapp.generated.resources/drawable/*.xml'
 
 AllowedAPKSigningKeys: a1ba8bd74af8f92cb3719a072113a218cfaec02bce2b736a280e31d8cd11808c
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.6.45.1
-CurrentVersionCode: 46
+CurrentVersion: 0.6.56.1
+CurrentVersionCode: 62

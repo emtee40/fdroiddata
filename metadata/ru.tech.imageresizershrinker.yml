@@ -440,10 +440,9 @@ Builds:
     scandelete:
       - build-logic/convention/build
 
-  - versionName: 2.9.0
-    versionCode: 144
-    disable: https://github.com/T8RIN/ImageToolbox/discussions/151#discussioncomment-9960488
-    commit: c0c5991edd60ad9c23c6caf2ac0c07f43f7f5ed8
+  - versionName: 3.0.0
+    versionCode: 152
+    commit: 9a564e3e1158e63b4a987c73496fc0458ee0e4bc
     subdir: app
     gradle:
       - foss
@@ -460,5 +459,5 @@ AllowedAPKSigningKeys: 20d7689de0874f00015ea3e31fa067c15c03457d362d41d5e793db3a8
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: gradle/libs.versions.toml|versionCode = "(\d+)"|.|versionName = "([\d.]+)"
-CurrentVersion: 2.9.0
-CurrentVersionCode: 144
+CurrentVersion: 3.0.0
+CurrentVersionCode: 152

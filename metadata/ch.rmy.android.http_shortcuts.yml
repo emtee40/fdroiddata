@@ -635,7 +635,46 @@ Builds:
       - HTTPShortcuts/app/src/main/assets/icons_keywords
     ndk: 23.2.8568313
 
+  - versionName: 3.16.0
+    versionCode: 1103160002
+    commit: f60e8e2e402508000432a7a33aa35810f82f1d39
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: 23.2.8568313
+
+  - versionName: 3.17.0
+    versionCode: 1103170000
+    commit: 2827a324d8f61247c320c47c3f9e8d2672aa94a3
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: 23.2.8568313
+
+  - versionName: 3.18.0
+    versionCode: 1103180000
+    commit: c75aafc8d369ad07b9c9da5c8c1cb3510cb9a31c
+    subdir: HTTPShortcuts/app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable = true/d' -e 's:File("app/:File(":' -e 's:inputFile
+      = ":inputFile = "../:g' -e 's:templateFile = ":templateFile = "../:g' -e '/googleShortcuts/d'
+      build.gradle.kts
+    scanignore:
+      - HTTPShortcuts/app/src/main/assets/icons_keywords
+    ndk: 23.2.8568313
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.15.0
-CurrentVersionCode: 1103150003
+CurrentVersion: 3.18.0
+CurrentVersionCode: 1103180000
