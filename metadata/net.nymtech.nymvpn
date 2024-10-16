@@ -1,0 +1,41 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on the Nym network.
+Categories:
+  - Connectivity
+  - Internet
+  - Security
+  - System
+
+WebSite: https://nym.com
+License: GPL-3.0
+SourceCode: https://github.com/nymtech/nym-vpn-client
+IssueTracker: https://github.com/nymtech/nym-vpn-client/issues
+Changelog: https://github.com/nymtech/nym-vpn-client/releases
+Translation: https://weblate.nymte.ch/projects/nymvpn
+
+AutoName: NymVPN
+
+RepoType: git
+Repo: https://github.com/nymtech/nym-vpn-client.git
+
+Builds:
+  - versionName: v1.1.2
+    versionCode: 11200
+    commit: 1714618f0c237d69fd94197730c96d3cf5af377a
+    subdir: nym-vpn-android
+    gradle:
+      - fdroid
+    prebuild:
+      - ./scripts/fdroid-prebuild.sh
+    ndk: r25c
+    rm:
+      - nym-vpn-apple
+      - nym-vpn-app
+      - proto
+
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags nym-vpn-android-v\d+\.\d+\.\d+$
+CurrentVersion: nym-vpn-android-v1.1.2
+CurrentVersionCode: 11200
