@@ -22,12 +22,13 @@ Repo: https://github.com/nymtech/nym-vpn-client.git
 Builds:
   - versionName: v1.1.2
     versionCode: 11200
-    commit: e01391ed5f2fc64e257cbb1522259dde5d5a3e0f
+    commit: 3f9fd3b88287e7149d0078aedf61654732eb467e
     subdir: nym-vpn-android
     gradle:
       - fdroid
     sudo:
-      - sh $PWD/nym-vpn-client/nym-vpn-android/scripts/fdroid-prebuild.sh
+      - apt-get update && sudo apt-get install -y libdbus-1-dev libmnl-dev libnftnl-dev protobuf-compiler git curl gcc g++ make unzip
+    init: ./scripts/fdroid-prebuild.sh
     ndk: r25c
     rm:
       - nym-vpn-apple
