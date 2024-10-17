@@ -30,6 +30,9 @@ Builds:
       - apt-get update && sudo apt-get install -y libdbus-1-dev libmnl-dev libnftnl-dev protobuf-compiler git curl gcc g++ make unzip
     init: bash scripts/fdroid-prebuild.sh
     ndk: r25c
+    scanignore:
+      - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
+
     rm:
       - nym-vpn-apple
       - nym-vpn-app
