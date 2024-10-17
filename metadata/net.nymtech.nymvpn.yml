@@ -27,7 +27,9 @@ Builds:
     gradle:
       - fdroid
     sudo:
-      - ./scripts/fdroid-prebuild.sh
+      - echo $PWD
+      - echo $(ls)
+      - sh $PWD/nym-vpn-client/nym-vpn-ndroid/scripts/fdroid-prebuild.sh
     ndk: r25c
     rm:
       - nym-vpn-apple
