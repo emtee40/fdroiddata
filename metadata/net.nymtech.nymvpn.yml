@@ -26,8 +26,7 @@ Builds:
     subdir: nym-vpn-android
     gradle:
       - fdroid
-    prebuild:
-      - ./scripts/fdroid-prebuild.sh
+    init: ./scripts/fdroid-prebuild.sh
     ndk: r25c
     rm:
       - nym-vpn-apple
