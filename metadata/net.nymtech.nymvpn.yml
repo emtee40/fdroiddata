@@ -28,7 +28,7 @@ Builds:
       - fdroid
     sudo:
       - apt-get update && sudo apt-get install -y libdbus-1-dev libmnl-dev libnftnl-dev protobuf-compiler git curl gcc g++ make unzip
-    init: bash /scripts/fdroid-prebuild.sh
+    init: bash scripts/fdroid-prebuild.sh
     ndk: r25c
     rm:
       - nym-vpn-apple
