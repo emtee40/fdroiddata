@@ -28,13 +28,15 @@ Builds:
       - apt-get update && sudo apt-get install -y libdbus-1-dev libmnl-dev libnftnl-dev protobuf-compiler git curl gcc g++ make unzip
     init: bash scripts/fdroid-prebuild.sh
     ndk: r25c
+    gradle:
+      - fdroid
     scanignore:
       - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
     rm:
       - nym-vpn-apple
       - nym-vpn-app
       - proto
-    build:
+    prebuild:
       - echo "Building WireGuard dep"
       - echo "Working dir: $PWD"
       - export GOROOT="$HOME/go"
@@ -52,7 +54,6 @@ Builds:
       - cargo license -j --avoid-dev-deps --current-dir ../nym-vpn-core/crates/nym-vpn-lib --filter-platform aarch64-linux-android --avoid-build-deps > ./nym-vpn-client/src/main/assets/licenses_rust.json
       - mv $PWD/nym-vpn-client/src/main/jniLibs/arm64-v8a/libnym_vpn_lib.so $PWD/nym-vpn-client/src/main/jniLibs/arm64-v8a/libnym_vpn_lib.so
       - mv $PWD/../android/app/build/extraJni/arm64-v8a/libwg.so $PWD/nym-vpn-client/src/main/jniLibs/arm64-v8a/
-      - gradle assembleFdroidRelease
 
 
 AutoUpdateMode: Version
