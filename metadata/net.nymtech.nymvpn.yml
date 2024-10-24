@@ -41,9 +41,7 @@ Builds:
       - export GOROOT="$HOME/go"
       - export PATH="$PATH:$GOROOT/bin"
       - source "$HOME/.cargo/env"
-      - archDir=$(basename $$NDK$$/toolchains/llvm/prebuilt/*/)
-      - echo "archdir: ${archDir}"
-      - export NDK_TOOLCHAIN_DIR="$$NDK$$/toolchains/llvm/prebuilt/${archDir}/bin"
+      - export NDK_TOOLCHAIN_DIR="$$NDK$$/toolchains/llvm/prebuilt/$(basename $$NDK$$/toolchains/llvm/prebuilt/*/)/bin"
       - bash ../wireguard/build-wireguard-go.sh
       - bash ../wireguard/libwg/build-android.sh
       - export RUSTFLAGS="-L ../build/lib/aarch64-linux-android -L ../build/lib/x86_64-unknown-linux-gnu"
