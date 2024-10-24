@@ -41,7 +41,7 @@ Builds:
       - export GOROOT="$HOME/go"
       - export PATH="$PATH:$GOROOT/bin"
       - source "$HOME/.cargo/env"
-      - archDir=$(basename $1/toolchains/llvm/prebuilt/*/)
+      - archDir=$(basename $$NDK$$/toolchains/llvm/prebuilt/*/)
       - echo "archdir: ${archDir}"
       - export NDK_TOOLCHAIN_DIR="$$NDK$$/toolchains/llvm/prebuilt/${archDir}/bin"
       - bash ../wireguard/build-wireguard-go.sh
