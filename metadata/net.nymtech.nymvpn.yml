@@ -39,6 +39,7 @@ Builds:
     prebuild:
       - echo "Building WireGuard dep"
       - export GOROOT="$HOME/go"
+      - export GOMODCACHE=$HOME/go/mod
       - export PATH="$PATH:$GOROOT/bin"
       - source "$HOME/.cargo/env"
       - export NDK_TOOLCHAIN_DIR="$$NDK$$/toolchains/llvm/prebuilt/$(basename $$NDK$$/toolchains/llvm/prebuilt/*/)/bin"
