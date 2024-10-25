@@ -22,7 +22,7 @@ Repo: https://github.com/nymtech/nym-vpn-client.git
 Builds:
   - versionName: v1.1.2
     versionCode: 11200
-    commit: f23cc12d75551c403474325d9226124e52b8cb9b
+    commit: fef9224eaaff3194d8d77427d2b375df9a966da2
     subdir: nym-vpn-android
     sudo:
       - apt-get update && sudo apt-get install -y libdbus-1-dev libmnl-dev libnftnl-dev protobuf-compiler git curl gcc g++ make unzip
@@ -47,7 +47,6 @@ Builds:
       - (cd ../nym-vpn-core/crates/nym-vpn-lib; cargo ndk -t arm64-v8a -o ../../../nym-vpn-android/nym-vpn-client/src/main/jniLibs build --release)
       - (cd ../nym-vpn-core; cargo run --bin uniffi-bindgen generate --library ./target/aarch64-linux-android/release/libnym_vpn_lib.so  --language kotlin --out-dir ../nym-vpn-android/nym-vpn-client/src/main/java/net/nymtech/vpn -n)
       - cargo license -j --avoid-dev-deps --current-dir ../nym-vpn-core/crates/nym-vpn-lib --filter-platform aarch64-linux-android --avoid-build-deps > ./nym-vpn-client/src/main/assets/licenses_rust.json
-      - mv /nym-vpn-client/src/main/jniLibs/arm64-v8a/libnym_vpn_lib.so /nym-vpn-client/src/main/jniLibs/arm64-v8a/libnym_vpn_lib.so
       - mv ../android/app/build/extraJni/arm64-v8a/libwg.so /nym-vpn-client/src/main/jniLibs/arm64-v8a/
 
 
