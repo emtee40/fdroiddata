@@ -22,7 +22,7 @@ Repo: https://github.com/nymtech/nym-vpn-client.git
 Builds:
   - versionName: v1.1.2
     versionCode: 11200
-    commit: 46c367b1e60941b906c7a562c79faf7fe62b8e3e
+    commit: f23cc12d75551c403474325d9226124e52b8cb9b
     subdir: nym-vpn-android
     sudo:
       - apt-get update && sudo apt-get install -y libdbus-1-dev libmnl-dev libnftnl-dev protobuf-compiler git curl gcc g++ make unzip
@@ -40,6 +40,7 @@ Builds:
       - echo "Building WireGuard dep"
       - export GOROOT="$HOME/go"
       - export GOMODCACHE=$HOME/go/mod
+      - export GOPATH=$GOROOT/bin/go
       - export PATH="$PATH:$GOROOT/bin"
       - source "$HOME/.cargo/env"
       - export NDK_TOOLCHAIN_DIR="$$NDK$$/toolchains/llvm/prebuilt/$(basename $$NDK$$/toolchains/llvm/prebuilt/*/)/bin"
