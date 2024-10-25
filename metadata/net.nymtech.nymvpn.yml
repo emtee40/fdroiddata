@@ -30,6 +30,7 @@ Builds:
     ndk: r25c
     gradle:
       - fdroid
+    output: app/build/outputs/apk/fdroid/release/nymvpn-fdroid-release-*.apk
     scanignore:
       - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
       - android/app/build/extraJni
