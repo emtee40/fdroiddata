@@ -6,7 +6,6 @@ Categories:
   - Internet
   - Security
   - System
-
 License: GPL-3.0-only
 WebSite: https://nym.com
 SourceCode: https://github.com/nymtech/nym-vpn-client
@@ -43,7 +42,6 @@ Builds:
       - build/android-go-path
       - build/lib
     ndk: r25c
-
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags nym-vpn-android-v\d+\.\d+\.\d+$
