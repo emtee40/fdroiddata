@@ -25,7 +25,7 @@ Builds:
     commit: b44f7455cc7b55ab0b0d58ff82e5818697294e48
     subdir: nym-vpn-android
     sudo:
-      - apt-get update 
+      - apt-get update
       - apt-get install -y libdbus-1-dev libmnl-dev libnftnl-dev protobuf-compiler
     init: bash scripts/fdroid-init.sh
     gradle:
@@ -35,8 +35,7 @@ Builds:
       - nym-vpn-apple
       - nym-vpn-app
       - proto
-    prebuild:
-      - NDK_PATH="$$NDK$$" bash scripts/fdroid-prebuild.sh
+    prebuild: NDK_PATH="$$NDK$$" bash scripts/fdroid-prebuild.sh
     scanignore:
       - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
       - android/app/build/extraJni
