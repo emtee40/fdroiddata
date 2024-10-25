@@ -35,6 +35,7 @@ Builds:
       - android/app/build/extraJni
       - nym-vpn-core/target
       - build/android-go-path
+      - build/lib
     rm:
       - nym-vpn-apple
       - nym-vpn-app
