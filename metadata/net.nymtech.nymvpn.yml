@@ -21,7 +21,7 @@ Repo: https://github.com/nymtech/nym-vpn-client.git
 Builds:
   - versionName: v1.1.2
     versionCode: 11200
-    commit: 80f5ea69c90dad9c76f9f00e6a5b9b0335010d53
+    commit: 3e69e2bde84945603c73a8fbabfa42e082489e0e
     subdir: nym-vpn-android
     sudo:
       - apt-get update
