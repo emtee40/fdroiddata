@@ -8,7 +8,7 @@ Categories:
   - System
 
 WebSite: https://nym.com
-License: GPL-3.0
+License: GPL-3.0-only
 SourceCode: https://github.com/nymtech/nym-vpn-client
 IssueTracker: https://github.com/nymtech/nym-vpn-client/issues
 Changelog: https://github.com/nymtech/nym-vpn-client/releases
