@@ -39,7 +39,7 @@ Builds:
     prebuild:
       - echo "Building WireGuard dep"
       - source "$HOME/.cargo/env"
-      - export PATH="$PATH:/$HOME/go/bin"
+      - export PATH="$PATH:$HOME/go/bin"
       - export NDK_TOOLCHAIN_DIR="$$NDK$$/toolchains/llvm/prebuilt/$(basename $$NDK$$/toolchains/llvm/prebuilt/*/)/bin"
       - bash ../wireguard/build-wireguard-go.sh
       - bash ../wireguard/libwg/build-android.sh
