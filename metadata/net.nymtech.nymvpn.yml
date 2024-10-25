@@ -25,7 +25,7 @@ Builds:
     subdir: nym-vpn-android
     sudo:
       - apt-get update
-      - apt-get install -y libdbus-1-dev libmnl-dev libnftnl-dev protobuf-compiler
+      - apt-get install -y libdbus-1-dev libmnl-dev libnftnl-dev protobuf-compiler make
     init: bash scripts/fdroid-init.sh
     gradle:
       - fdroid
