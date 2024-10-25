@@ -25,8 +25,8 @@ Builds:
     subdir: nym-vpn-android
     sudo:
       - apt-get update
-      - apt-get install -y libdbus-1-dev 
-      - apt-get install -y libmnl-dev libnftnl-dev protobuf-compiler make 
+      - apt-get install -y libdbus-1-dev
+      - apt-get install -y libmnl-dev libnftnl-dev protobuf-compiler make
     init: bash scripts/fdroid-init.sh
     gradle:
       - fdroid
@@ -49,7 +49,6 @@ Builds:
         -n)
       - cargo license -j --avoid-dev-deps --current-dir ../nym-vpn-core/crates/nym-vpn-lib
         --filter-platform aarch64-linux-android --avoid-build-deps > ./nym-vpn-client/src/main/assets/licenses_rust.json
-
     scanignore:
       - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
       - android/app/build/extraJni
