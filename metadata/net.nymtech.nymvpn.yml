@@ -59,5 +59,4 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags nym-vpn-android-v\d+\.\d+\.\d+$
 CurrentVersion: nym-vpn-android-v1.1.2
 CurrentVersionCode: 11200
-UpdateCheckData: buildSrc/src/main/kotlin/Constants.kt|VERSION_CODE = (\d+)|.|VERSION_NAME
-  = "(.+)"
+UpdateCheckData: buildSrc/src/main/kotlin/Constants.kt|VERSION_CODE = (\d+)|.|VERSION_NAME = "(.+)"
