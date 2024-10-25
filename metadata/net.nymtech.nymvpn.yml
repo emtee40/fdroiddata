@@ -32,6 +32,8 @@ Builds:
       - fdroid
     scanignore:
       - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
+      - nym-vpn-core/target
+      - build/android-go-path
     rm:
       - nym-vpn-apple
       - nym-vpn-app
