@@ -38,10 +38,8 @@ Builds:
       - proto
     prebuild:
       - echo "Building WireGuard dep"
-      - export GOROOT="$HOME/go"
-      - export GOMODCACHE=$HOME/go/mod
-      - export GOPATH=$GOROOT/bin/go
-      - export PATH="$PATH:$GOROOT/bin"
+      - export GOPATH="$HOME/go"
+      - export PATH="$PATH:$GOPATH"
       - source "$HOME/.cargo/env"
       - export NDK_TOOLCHAIN_DIR="$$NDK$$/toolchains/llvm/prebuilt/$(basename $$NDK$$/toolchains/llvm/prebuilt/*/)/bin"
       - bash ../wireguard/build-wireguard-go.sh
