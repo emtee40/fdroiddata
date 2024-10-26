@@ -18,6 +18,18 @@ Builds:
   - versionName: '1.0.1'
     versionCode: 2
     commit: V1.0.1
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.24.3
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter packages pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
 
 AllowedAPKSigningKeys: 07b5786c894912159e290d7fe14cec472a4051ca61aeb809941a96c8a64a48ca
 
