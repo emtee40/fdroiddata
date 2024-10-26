@@ -25,14 +25,6 @@ Builds:
     # This must be set else the build will fail.
     # The output path can be found in the log.
     output: build/app/outputs/flutter-apk/app-release.apk
-    # Deletes unrelated directories,
-    # remove those not needed from the list.
-    rm:
-      - ios
-      - linux
-      - macos
-      - web
-      - windows
     prebuild:
       # Extract the flutter version and then checkout it in the flutter srclib
       # Only needed when flutter srclib is used
