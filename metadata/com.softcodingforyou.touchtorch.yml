@@ -21,7 +21,7 @@ Builds:
     srclibs:
       - flutter@3.22.3
     # Flutter should be added as a git submodule at e.g. .flutter
-    submodules: true
+    submodules: false
     # This must be set else the build will fail.
     # The output path can be found in the log.
     output: build/app/outputs/flutter-apk/app-release.apk
