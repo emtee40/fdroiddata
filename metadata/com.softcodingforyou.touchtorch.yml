@@ -20,15 +20,44 @@ Builds:
     commit: V1.0.1
     srclibs:
       - flutter@3.22.3
+    # Flutter should be added as a git submodule at e.g. .flutter
+    submodules: true
+    # This must be set else the build will fail.
+    # The output path can be found in the log.
+    output: build/app/outputs/flutter-apk/app-release.apk
+    # Deletes unrelated directories,
+    # remove those not needed from the list.
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
     prebuild:
+      # Extract the flutter version and then checkout it in the flutter srclib
+      # Only needed when flutter srclib is used
+      - flutterVersion=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - '[[ $flutterVersion ]] || exit 1'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      # Change pub cache location so that the dart packages are scanned by the scanner
       - export PUB_CACHE=$(pwd)/.pub-cache
-      - $$flutter$$/bin/flutter config --no-analytics
-      - $$flutter$$/bin/flutter packages pub get
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      # Ignore a maven repo for Flutter engine for Flutter 3.12 or older
+      # - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      # Ignore the downloaded dart tools
+      - .flutter/bin/cache
+    # Other binaries should be deleted
     scandelete:
+      - .flutter
       - .pub-cache
     build:
+      # Make Flutter use the scanned cache
       - export PUB_CACHE=$(pwd)/.pub-cache
-      - $$flutter$$/bin/flutter build apk --release
+      # Split per abi to reduce the apk size.
+      # This is only for one abi. Please added other build blocks accordingly.
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
     ndk: '26.1.10909125'
 
 AllowedAPKSigningKeys: 07b5786c894912159e290d7fe14cec472a4051ca61aeb809941a96c8a64a48ca
