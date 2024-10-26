@@ -26,9 +26,9 @@ Builds:
     # The output path can be found in the log.
     output: build/app/outputs/flutter-apk/app-release.apk
     prebuild:
-      - .flutter/bin/flutter pub get
+      - flutter pub get
     build:
-      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+      - flutter build apk --release --split-per-abi --target-platform="android-arm64"
     ndk: '26.1.10909125'
 
 AllowedAPKSigningKeys: 07b5786c894912159e290d7fe14cec472a4051ca61aeb809941a96c8a64a48ca
