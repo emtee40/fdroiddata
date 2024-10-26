@@ -31,8 +31,7 @@ Builds:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --release
       - mv ./build/app/outputs/flutter-apk/app-release.apk .
-    ndk:
-      - '26.1.10909125'
+    ndk: '26.1.10909125'
 
 AllowedAPKSigningKeys: 07b5786c894912159e290d7fe14cec472a4051ca61aeb809941a96c8a64a48ca
 
