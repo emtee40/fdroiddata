@@ -18,25 +18,6 @@ Builds:
   - versionName: '1.0.1'
     versionCode: 2
     commit: V1.0.1
-    subdir: app
-    submodules: true
-    output: build/app/outputs/flutter-apk/app-release.apk
-    rm:
-      - ios
-    prebuild:
-      - export PUB_CACHE=$(pwd)/.pub-cache
-      - .flutter/bin/flutter config --no-analytics
-      - .flutter/bin/flutter pub get
-    scanignore:
-      - .flutter/packages/flutter_tools/gradle/flutter.gradle
-      - .flutter/bin/cache
-    scandelete:
-      - .flutter
-      - .pub-cache
-    build:
-      - export PUB_CACHE=$(pwd)/.pub-cache
-      - .flutter/bin/flutter build apk
-    ndk: r26
 
 AllowedAPKSigningKeys: 07b5786c894912159e290d7fe14cec472a4051ca61aeb809941a96c8a64a48ca
 
