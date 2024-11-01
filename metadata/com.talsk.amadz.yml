@@ -1,0 +1,27 @@
+Categories:
+  - Phone & SMS
+License: GPL-3.0-only
+SourceCode: https://github.com/msusman1/Amadz
+IssueTracker: https://github.com/msusman1/Amadz/issues
+
+AutoName: Amadz
+Description: |-
+  Welcome to Amadz! An alternative to the original ‘Phone’ app, designed to enhance the calling experience with rich customization options and a variety of additional features. 
+  
+  Make it your own by adding new functionalities like call screening, call blocking, caller name announcement, and more. 
+  
+
+RepoType: git
+Repo: https://github.com/msusman1/Amadz.git
+
+Builds:
+  - versionName: '1.0.0'
+    versionCode: 1
+    commit: 048ef80bc0d776a204e2adb9f55dfd29223b1e39
+    gradle:
+      - yes
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.0.0'
+CurrentVersionCode: 1
