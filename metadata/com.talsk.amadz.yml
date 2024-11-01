@@ -10,7 +10,6 @@ AutoName: Amadz
 
 RepoType: git
 Repo: https://github.com/msusman1/Amadz.git
-Binaries: https://github.com/msusman1/Amadz/releases/download/1.0.0/amadz.apk
 
 Builds:
   - versionName: '1.0.0'
