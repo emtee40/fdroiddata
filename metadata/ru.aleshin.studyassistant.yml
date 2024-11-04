@@ -18,10 +18,6 @@ Builds:
     versionCode: 2
     commit: 4c95f5aad095515d8fe4b2f68232d0ec4f56b073
     subdir: androidApp
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-17-jdk-headless
-      - update-java-alternatives -a
     gradle:
       - fdroid
 
