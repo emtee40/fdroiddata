@@ -17,7 +17,7 @@ Binaries: https://github.com/SoftcodingForYou/touchtorch/releases/download/V%v/T
 Builds:
   - versionName: 1.0.1
     versionCode: 2
-    commit: V1.0.1
+    commit: 7814a3c7ace9e2b233ab82086e6db077185b5e43
     output: build/app/outputs/flutter-apk/app-release.apk
     srclibs:
       - flutter@3.22.3
