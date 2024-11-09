@@ -12,17 +12,13 @@ Donate: https://zephyrsoft.org/contribute
 AutoName: Track Work Time
 
 RepoType: git
-Repo: https://github.com/mathisdt/trackworktime
+Repo: https://github.com/mathisdt/trackworktime.git
 
 Builds:
   - versionName: 0.5.11
     versionCode: 14
     commit: '476'
     forceversion: true
-
-  - versionName: 0.5.12
-    versionCode: 15
-    disable: not a release yet
 
   - versionName: 0.5.15
     versionCode: 18
@@ -52,41 +48,6 @@ Builds:
       - mvn package
       - popd
       - cp $$CommonsLang$$/target/commons-lang3-3.2.1.jar libs/
-      - pushd $$JUnit$$
-      - mvn package
-      - popd
-      - cp $$JUnit$$/target/junit-4.12-SNAPSHOT.jar libs/
-      - cp -fR $$Date4J-1.2.0$$/classes/hirondelle src/
-
-  - versionName: 0.5.17
-    versionCode: 20
-    disable: java build fails
-    commit: release-build-37
-    srclibs:
-      - ACRA@acra-4.6.2
-      - CommonsLang@LANG_3_4
-      - SuperCSV@v2.3.1
-      - Date4J-johanley@cadb47a4882859a558b58ee25483100525cac325
-      - JUnit@127f1bb2a137d611e98277a0d1e9184efc47bc05
-    forceversion: true
-    rm:
-      - libs/acra*jar
-      - libs/commons*jar
-      - libs/super*jar
-      - libs/date4j*jar
-    prebuild:
-      - pushd $$ACRA$$
-      - mvn package
-      - popd
-      - cp $$ACRA$$/target/acra-4.6.2.jar libs/
-      - pushd $$SuperCSV$$
-      - mvn package
-      - popd
-      - cp $$SuperCSV$$/super-csv/target/super-csv-2.3.1.jar libs/
-      - pushd $$CommonsLang$$
-      - mvn package
-      - popd
-      - cp $$CommonsLang$$/target/commons-lang3-3.4.jar libs/
       - pushd $$JUnit$$
       - mvn package
       - popd
@@ -314,7 +275,54 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.1.21
+    versionCode: 65
+    commit: 4ead8ff979488e3e91a4a8824e8283dc18a2eb8f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.22
+    versionCode: 67
+    commit: c06b2714739b2d0f737de6ab821fc3b75295cdce
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.23
+    versionCode: 68
+    commit: ecf654eae6b42b2f1d4b4c23e047cfa09e67180f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.24
+    versionCode: 69
+    commit: 642702e1f8b638c0f16e499cdc432d9b6d164469
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.25
+    versionCode: 70
+    commit: 86dd6b1544b7b6fd6cb4931289633a792f35b521
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.1.20
-CurrentVersionCode: 64
+CurrentVersion: 1.1.25
+CurrentVersionCode: 70

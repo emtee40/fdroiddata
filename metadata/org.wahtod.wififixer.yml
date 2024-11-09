@@ -10,18 +10,18 @@ Donate: https://wififixer.wordpress.com/donate
 
 AutoName: Wifi Fixer
 Description: |-
-    Detects and resets a broken WiFi connection.
+  Detects and resets a broken WiFi connection.
 
-    Wifi Fixer is a background service that works around several problems with
-    Android wifi, including: Wifi shows connected but internet data not available
-    Known network in range but not detected Best network not used Supplicant frozen
-    Supplicant in likely failure state
+  Wifi Fixer is a background service that works around several problems with
+  Android wifi, including: Wifi shows connected but internet data not available
+  Known network in range but not detected Best network not used Supplicant frozen
+  Supplicant in likely failure state
 
-    Apps can’t prevent disconnections or boost low signals. Wifi Fixer will detect
-    and attempt recovery when these problems are detected.
+  Apps can't prevent disconnections or boost low signals. Wifi Fixer will detect
+  and attempt recovery when these problems are detected.
 
-    You can tune your Wifi Acess Point’s settings to minimize disconnections. Please
-    refer to Wifi Fixer’s help documents for more information.
+  You can tune your Wifi Acess Point's settings to minimize disconnections. Please
+  refer to Wifi Fixer's help documents for more information.
 
 RepoType: git
 Repo: https://github.com/Zanshinmu/Wifi-Fixer.git
@@ -69,11 +69,6 @@ Builds:
     subdir: wififixer
     target: android-8
 
-  - versionName: 0.9.0.1
-    versionCode: 915
-    disable: commit 7155ca938dc1 but can't compile for some reason
-    commit: unknown - see disabled
-
   - versionName: 0.9.0.2
     versionCode: 922
     commit: b354e4538bf242f10125af49050e36126b668972
@@ -101,13 +96,6 @@ Builds:
   - versionName: 0.9.5.3
     versionCode: 970
     commit: e1c737b53ebae7368b0f24c90593fe493b126edd
-    subdir: wififixer
-    target: android-15
-
-  - versionName: 0.9.5.4
-    versionCode: 978
-    disable: "can't update yet: patched support jar"
-    commit: unknown - see disabled
     subdir: wififixer
     target: android-15
 
@@ -147,14 +135,6 @@ Builds:
   - versionName: 1.0.3.2
     versionCode: 1081
     commit: v1.0.3.2
-    subdir: wififixer
-    gradle:
-      - yes
-
-  - versionName: 1.0.3.3
-    versionCode: 1112
-    disable: build fails
-    commit: v1.0.3.3
     subdir: wififixer
     gradle:
       - yes

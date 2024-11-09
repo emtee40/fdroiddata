@@ -11,19 +11,19 @@ Changelog: https://raw.github.com/ilijamt/android-adbm/HEAD/changelog.md
 
 AutoName: ADB Manager
 Description: |-
-    * Easy control and access details from notification bar
-    * Auto connect on saved WiFi networks
-    * Auto start on boot, you can select if you want to or not from the preferences screen
-    * Automatically switch between USB and NETWORK when you disconnect/connect from/to WiFi
-    * Configurable service management
-    * Different color coded icons depending on the state of the ADB
-    * Keep screen on while the service is running
-    * Wake the screen when new package is installed
-    * You can toggle the ADB state by touching the image in the notification bar
+  * Easy control and access details from notification bar
+  * Auto connect on saved WiFi networks
+  * Auto start on boot, you can select if you want to or not from the preferences screen
+  * Automatically switch between USB and NETWORK when you disconnect/connect from/to WiFi
+  * Configurable service management
+  * Different color coded icons depending on the state of the ADB
+  * Keep screen on while the service is running
+  * Wake the screen when new package is installed
+  * You can toggle the ADB state by touching the image in the notification bar
 
-    <b>Requires root</b>
+  <b>Requires root</b>
 
-RequiresRoot: 'yes'
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/ilijamt/android-adbm.git
@@ -71,6 +71,7 @@ Builds:
     gradle:
       - yes
 
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 1.2.2

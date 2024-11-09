@@ -1,6 +1,6 @@
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-only
 AuthorName: segler.alex
 AuthorEmail: segler.alex@gmail.com
@@ -11,18 +11,18 @@ Changelog: https://github.com/segler-alex/RadioDroid/releases
 
 AutoName: RadioDroid
 Description: |-
-    Look up online radio streams at <a href="http://www.radio-browser.info">RadioBrowser</a> and
-    listen to them. RadioBrowser is a wiki like aproach to collect as much online
-    radio stations as possible. Every one can help by not only adding new stations
-    but also tagging existing ones.
+  Look up online radio streams at <a href="http://www.radio-browser.info">RadioBrowser</a> and
+  listen to them. RadioBrowser is a wiki like aproach to collect as much online
+  radio stations as possible. Every one can help by not only adding new stations
+  but also tagging existing ones.
 
-    <b>Features:</b>
+  <b>Features:</b>
 
-    * Everyone can add stations easily
-    * Sleep timer
-    * Alarm clock
-    * Record streams
-    * Music Player Daemon support
+  * Everyone can add stations easily
+  * Sleep timer
+  * Alarm clock
+  * Record streams
+  * Music Player Daemon support
 
 RepoType: git
 Repo: https://github.com/segler-alex/RadioDroid
@@ -266,26 +266,9 @@ Builds:
     gradle:
       - yes
 
-  - versionName: '0.36'
-    versionCode: 46
-    disable: includes proprietary Google Play Services Cast libs
-    commit: '0.36'
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: '0.37'
     versionCode: 47
     commit: '0.37'
-    subdir: app
-    gradle:
-      - free
-    prebuild: sed -i -e '/playCompile/d' build.gradle
-
-  - versionName: '0.46'
-    versionCode: 56
-    disable: Could not find com.android.tools.build:gradle:3.0.1
-    commit: '0.46'
     subdir: app
     gradle:
       - free
@@ -475,7 +458,15 @@ Builds:
       - free
     prebuild: sed -i -e '/playCompile/d' build.gradle
 
+  - versionName: '0.86'
+    versionCode: 96
+    commit: bafa5f30d1ce9c31beb1700b953e0a6a93320a5f
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/playCompile/d' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '0.84'
-CurrentVersionCode: 94
+CurrentVersion: '0.86'
+CurrentVersionCode: 96

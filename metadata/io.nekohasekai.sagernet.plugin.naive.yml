@@ -303,10 +303,125 @@ Builds:
       - plugin
     ndk: r25
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags ^naive-plugin-.*
+  - versionName: 109.0.5414.74-2
+    versionCode: 120
+    commit: 682d889dd7fdb95f67915c098d836e516b39ce2e
+    subdir: plugin/naive
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make tcl gettext libcurl4-openssl-dev ninja-build pkg-config
+        bzip2 gcc-multilib
+    gradle:
+      - fdroid
+    scandelete:
+      - external
+      - plugin
+    ndk: r25
+
+  - versionName: 110.0.5481.100-1
+    versionCode: 125
+    commit: 3eae8cff4779d4a8de1ce237780fafd9565cdda7
+    subdir: plugin/naive
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make tcl gettext libcurl4-openssl-dev ninja-build pkg-config
+        bzip2 gcc-multilib
+    gradle:
+      - fdroid
+    prebuild: cp -R ../../gradle ./
+    scandelete:
+      - external
+      - plugin
+    ndk: r25
+
+  - versionName: 111.0.5563.64-1
+    versionCode: 130
+    commit: f8e8a82e95432e21f39a6c569339b31608175cdd
+    subdir: plugin/naive
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make tcl gettext libcurl4-openssl-dev ninja-build pkg-config
+        bzip2 gcc-multilib
+    gradle:
+      - fdroid
+    prebuild: cp -R ../../gradle ./
+    scandelete:
+      - external
+      - plugin
+    ndk: r25
+
+  - versionName: 113.0.5672.62-2
+    versionCode: 135
+    commit: a82ccbad5564bee038b513eac033f17e48fee706
+    subdir: plugin/naive
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make tcl gettext libcurl4-openssl-dev ninja-build pkg-config
+        bzip2 gcc-multilib
+    gradle:
+      - fdroid
+    prebuild: cp -R ../../gradle ./
+    scandelete:
+      - plugin
+    ndk: r25
+
+  - versionName: 114.0.5735.91-3
+    versionCode: 140
+    commit: 445168db556698f68e4464e5e862a0c7b4bd89e1
+    subdir: plugin/naive
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make tcl gettext libcurl4-openssl-dev ninja-build pkg-config
+        bzip2 gcc-multilib
+    gradle:
+      - fdroid
+    prebuild: cp -R ../../gradle ./
+    scandelete:
+      - plugin
+    ndk: r25
+
+  - versionName: 115.0.5790.166-1
+    versionCode: 145
+    commit: 3d8821888d6dc93d6402873e510689ed884aae6f
+    subdir: plugin/naive
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make tcl gettext libcurl4-openssl-dev ninja-build pkg-config
+        bzip2 gcc-multilib
+    gradle:
+      - fdroid
+    prebuild: cp -R ../../gradle ./
+    scandelete:
+      - plugin
+    ndk: r25
+
+  - versionName: 116.0.5845.92-2
+    versionCode: 155
+    commit: 186b284619eeadbed55538973715654402a19d2b
+    subdir: plugin/naive
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make tcl gettext libcurl4-openssl-dev ninja-build pkg-config
+        bzip2 gcc-multilib
+    gradle:
+      - fdroid
+    prebuild: cp -R ../../gradle ./
+    scandelete:
+      - plugin
+    ndk: r25
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 VercodeOperation:
   - '%c * 5'
 UpdateCheckData: sager.properties|NAIVE_VERSION=(\d+)|.|NAIVE_VERSION_NAME=(.*)
-CurrentVersion: 109.0.5414.74-1
-CurrentVersionCode: 115
+CurrentVersion: 116.0.5845.92-2
+CurrentVersionCode: 155

@@ -1,7 +1,7 @@
 Categories:
-  - System
-  - Multimedia
   - Graphics
+  - Multimedia
+  - System
 License: GPL-3.0-or-later
 SourceCode: https://github.com/k3b/CameraFolder
 IssueTracker: https://github.com/k3b/CameraFolder/issues
@@ -22,7 +22,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.0.3
+    versionCode: 4
+    commit: da72e420252748d3ffd08751503d813755619679
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.0'
-CurrentVersionCode: 1
+CurrentVersion: 1.0.3
+CurrentVersionCode: 4

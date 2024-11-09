@@ -12,7 +12,7 @@ Changelog: https://github.com/Kaljurand/K6nele/releases
 AutoName: Kõnele
 
 RepoType: git
-Repo: https://github.com/Kaljurand/K6nele
+Repo: https://github.com/Kaljurand/K6nele.git
 
 Builds:
   - versionName: 1.2.04
@@ -165,7 +165,15 @@ Builds:
       - yes
     prebuild: echo "android.useAndroidX=true" > ../gradle.properties
 
+  - versionName: 1.9.16
+    versionCode: 1916
+    commit: 9373f11ed04113dee6ef0197d2bb5171ed550d17
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.8.14
-CurrentVersionCode: 1814
+CurrentVersion: 1.9.16
+CurrentVersionCode: 1916

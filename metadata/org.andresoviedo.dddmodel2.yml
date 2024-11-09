@@ -8,38 +8,38 @@ Changelog: https://github.com/the3deers/android-3D-model-viewer/releases
 
 AutoName: 3D Model Viewer
 Description: |-
-    Load 3D models and see how to do it with this open source
-    code application.
+  Load 3D models and see how to do it with this open source
+  code application.
 
-    Features:
-    * Supports >= Android 4.0.1 (Ice Cream Sandwich) - Min API Level 14 -> Target API Level 28
-    * OpenGL ES 2.0 API
-    * Formats: OBJ (wavefront), STL (STereoLithography) & DAE (Collada-BETA)
-    * Calculation of normals
-    * Transformations: scaling, rotation, translation
-    * Colors
-    * Textures
-    * Lighting
-    * Wireframe + points mode
-    * Holes
-    * Smoothing
-    * Bounding box
-    * Skybox
-    * Object pick
-    * Skeletal animations (collada dae)
-    * Ray collision detection
-    * Stereoscopic 3D: anaglyph + cardboard
+  Features:
+  * Supports >= Android 4.0.1 (Ice Cream Sandwich) - Min API Level 14 -> Target API Level 28
+  * OpenGL ES 2.0 API
+  * Formats: OBJ (wavefront), STL (STereoLithography) & DAE (Collada-BETA)
+  * Calculation of normals
+  * Transformations: scaling, rotation, translation
+  * Colors
+  * Textures
+  * Lighting
+  * Wireframe + points mode
+  * Holes
+  * Smoothing
+  * Bounding box
+  * Skybox
+  * Object pick
+  * Skeletal animations (collada dae)
+  * Ray collision detection
+  * Stereoscopic 3D: anaglyph + cardboard
 
-    Camera support:
-    * Tap to select object
-    * Drag to move camera
-    * Rotate with 2 fingers to rotate camera
-    * Pinch & spread to zoom in/out the camera
+  Camera support:
+  * Tap to select object
+  * Drag to move camera
+  * Rotate with 2 fingers to rotate camera
+  * Pinch & spread to zoom in/out the camera
 
-    Other:
-    * Texture loader
-    * Lightweight: only 1 Megabyte
-    * File explorer
+  Other:
+  * Texture loader
+  * Lightweight: only 1 Megabyte
+  * File explorer
 
 RepoType: git
 Repo: https://github.com/the3deers/android-3D-model-viewer
@@ -65,21 +65,17 @@ Builds:
     scanignore:
       - models/parts/parts.index.icons.zip
 
-  - versionName: 3.3.1
+  - versionName: 4.0.0
     versionCode: 33
-    disable: https://github.com/the3deer/android-3D-model-viewer/issues/222
-    commit: 619ce95af27a670b4c35bcfdaab07dfa69c62711
+    commit: d4d20e1fa8a596c2622589f95fdfc6288cba4acb
     subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
     gradle:
       - yes
     scanignore:
       - models/parts/parts.index.icons.zip
+      - app/src/main/assets/models/Avocado.bin
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.3.1
+CurrentVersion: 4.0.0
 CurrentVersionCode: 33

@@ -13,24 +13,24 @@ Liberapay: AndStatus
 
 AutoName: AndStatus
 Description: |-
-    AndStatus is a multiple accounts client for multiple Social networks, including
-    <a href="http://gnu.io/social">GNU social</a>, <a href="https://github.com/tootsuite/documentation">Mastodon</a>, <a href="https://twitter.com">Twitter</a> and <a href="http://pump.io">Pump.io</a>. AndStatus
-    can combine your feeds from all networks into one Timeline, and it allows you to
-    read and post even when you are offline.
+  AndStatus is a multiple accounts client for multiple Social networks, including
+  <a href="http://gnu.io/social">GNU social</a>, <a href="https://github.com/tootsuite/documentation">Mastodon</a>, <a href="https://twitter.com">Twitter</a> and <a href="http://pump.io">Pump.io</a>. AndStatus
+  can combine your feeds from all networks into one Timeline, and it allows you to
+  read and post even when you are offline.
 
-    For Android v.7.0+ devices. Free/Libre and Open Source License.
+  For Android v.7.0+ devices. Free/Libre and Open Source License.
 
-    Differentiating features of AndStatus:
+  Differentiating features of AndStatus:
 
-    * Many accounts in different Social networks. You may have several accounts in each, write/reply as any "You" and share between accounts and networks.
-    * You don’t need to be online to read timelines and to post your updates: drafts and unsent posts are kept even after reboot. They will be sent when your device is Online.
-    * Convenient tree-like "Conversation view".
-    * "Global search" allowing you to search public notes in all networks with one query.
-    * Lists of Friends and Followers, presented as User Lists and as Timelines (with the latest note by each User).
-    * Notes (tweets)/avatars/attached images are being synced in a background, when your device has a good connection. By default, attachments are downloaded via WiFi only.
-    * Cached data may be stored for years or for several days only - it’s your choice.
-    * Backup accounts and notes and Restore them on any of your devices. Own your data!
-    * Free and without ads, community supported.
+  * Many accounts in different Social networks. You may have several accounts in each, write/reply as any "You" and share between accounts and networks.
+  * You don't need to be online to read timelines and to post your updates: drafts and unsent posts are kept even after reboot. They will be sent when your device is Online.
+  * Convenient tree-like "Conversation view".
+  * "Global search" allowing you to search public notes in all networks with one query.
+  * Lists of Friends and Followers, presented as User Lists and as Timelines (with the latest note by each User).
+  * Notes (tweets)/avatars/attached images are being synced in a background, when your device has a good connection. By default, attachments are downloaded via WiFi only.
+  * Cached data may be stored for years or for several days only - it's your choice.
+  * Backup accounts and notes and Restore them on any of your devices. Own your data!
+  * Free and without ads, community supported.
 
 RepoType: git
 Repo: https://github.com/andstatus/andstatus.git
@@ -49,11 +49,6 @@ Builds:
     extlibs:
       - android/android-support-v4.jar
     target: android-15
-
-  - versionName: 1.10.2
-    versionCode: 64
-    disable: not a release
-    commit: unknown - see disabled
 
   - versionName: 1.11.4
     versionCode: 69
@@ -338,14 +333,6 @@ Builds:
   - versionName: '19.0'
     versionCode: 128
     commit: AndStatus-19.0
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: '19.2'
-    versionCode: 130
-    disable: mistagged
-    commit: AndStatus-19.2
     subdir: app
     gradle:
       - yes
@@ -1125,7 +1112,29 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '60.04'
+    versionCode: 364
+    commit: 3c86093af6514c0e436f965d8f921e47ab0c0e1e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '61.00'
+    versionCode: 365
+    commit: 3647e2ed1c9e17d3b8877dbdb8c0ef4adc73b3c1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9.]+-release$
-CurrentVersion: '60.03'
-CurrentVersionCode: 363
+CurrentVersion: '61.00'
+CurrentVersionCode: 365

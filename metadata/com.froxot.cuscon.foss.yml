@@ -1,0 +1,445 @@
+Categories:
+  - Theming
+License: Apache-2.0
+AuthorName: MiepHD
+AuthorEmail: cuscon@froxot.de
+WebSite: https://miep-hd.froxot.com/cuscon
+SourceCode: https://github.com/MiepHD/cuscon
+IssueTracker: https://github.com/MiepHD/cuscon/issues
+Changelog: https://github.com/MiepHD/cuscon/releases
+Donate: https://www.buymeacoffee.com/yazazuyo
+
+AutoName: Cuscon
+
+RepoType: git
+Repo: https://github.com/MiepHD/cuscon.git
+Binaries: https://github.com/MiepHD/cuscon/releases/download/v%v/Cuscon-v%c-foss-release.apk
+
+Builds:
+  - versionName: 3.0.2.7
+    versionCode: 3027
+    commit: v3.0.2.7
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 3.0.2.8
+    versionCode: 3028
+    commit: a2f6871e741172725be3650b7ca0c73109f66849
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 3.0.2.9
+    versionCode: 3029
+    commit: 722a2c426ca283ac21d858641ce419491dd22944
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 3.0.3.3
+    versionCode: 3033
+    commit: 390aeff5b0a3fe0c2d3396da6f66115ae404469c
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 3.0.3.4
+    versionCode: 3034
+    commit: 606220997346beaf031b1eb215efb82da2e12d17
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 3.0.3.5
+    versionCode: 3035
+    commit: a3243a82fac2dda4ad22f485e570eee12c960392
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.0.2
+    versionCode: 4002
+    commit: 3c0272e5a0a4e970aa9cbc18a96ffc2faa56cc08
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.0.3
+    versionCode: 4003
+    commit: 0dd3259204b9809c5705bc5bf9bd729ba3ee5a4a
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.0.5
+    versionCode: 4005
+    commit: f146f94123734464a5e1c80b671eabca087bf546
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.0.6
+    versionCode: 4006
+    commit: 2b6bf6b298ad17221f67865c6bbbbed835a81249
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.0.7
+    versionCode: 4007
+    commit: 780468740d7be9c323112523dbf91e4ccfe38263
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.0.9
+    versionCode: 4009
+    commit: 957d979583b752f33fab58a627fb76987206cc46
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.1.0
+    versionCode: 4010
+    commit: a23b98764ac5cd7045789080fe889448e977a9af
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.1.2
+    versionCode: 4012
+    commit: bad80285204fa2a97ca72b41101daec1ef50f40f
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.1.3
+    versionCode: 4013
+    commit: 27e71c22e5696a32ac2f4a931ff89e939a6a017f
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.1.4
+    versionCode: 4014
+    commit: cb78a03e7c60b9ca9d7ae851f6aa21565df6acbb
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.1.6
+    versionCode: 4016
+    commit: e3f3e3f0149854ea4eef1ccbc36a2218a3b9d586
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.1.7
+    versionCode: 4017
+    commit: dae5f1ca12b40d56ff53828e3dda5c24c82ea360
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.1.8
+    versionCode: 4018
+    commit: 21c194968b3ec8786c8d56688a721f8dddadf6cd
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.1.9
+    versionCode: 4019
+    commit: ee5c76a5c755c4557188fe6e1e61cbe6ba29b0d1
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.2.0
+    versionCode: 4020
+    commit: ca2638e0e5892f00d4d99403f02529fc197a7bad
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.2.1
+    versionCode: 4021
+    commit: 5b6b6564cbee77409695676b6455dec7f990f382
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.2.4
+    versionCode: 4024
+    commit: 8a2e2e976a3a3f5f33c036cee38dd465a7d0a8cb
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.2.5
+    versionCode: 4025
+    commit: 0382958d9707957afe9cbb62b974ee5d22643ec0
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.2.6
+    versionCode: 4026
+    commit: eb5b5d1a26ee441ee9db21b443de25928937b646
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.2.8
+    versionCode: 4028
+    commit: d998238c49f8118200490b66ae1a7a60acd0b99d
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.2.9
+    versionCode: 4029
+    commit: e70fcc6a793ac021778548c5d189206ac447991f
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.3.1
+    versionCode: 4031
+    commit: 677d86703fe131fb45efdaa82ba0d95d07bc3485
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.3.2
+    versionCode: 4032
+    commit: bbd628da2fa37ba529cb3a200340cf0b0dae2c1c
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.3.4
+    versionCode: 4034
+    commit: 80636562f5b4d1122ed5cc9d46b3d216c1342d05
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.3.7
+    versionCode: 4037
+    commit: 8a3c252c0a7b5c3774f7e75849e73d348f67a6c7
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.3.9
+    versionCode: 4039
+    commit: 71ab49a4420a50f5c7b89ca8e3121f8828c6cefa
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+  - versionName: 4.0.4.1
+    versionCode: 4041
+    commit: d5e7a265ba158f9338a782ad1770a806a6eb648f
+    subdir: app
+    gradle:
+      - foss
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - requests
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'META-INF/services/*'
+
+AllowedAPKSigningKeys: d5389d12207abb575db074d7d00798328aa328fa8a1d25d12234e354adae1514
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 4.0.4.1
+CurrentVersionCode: 4041

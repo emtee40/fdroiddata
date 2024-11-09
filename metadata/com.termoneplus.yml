@@ -6,14 +6,14 @@ IssueTracker: https://gitlab.com/termapps/termoneplus/issues
 
 AutoName: Terminal Emulator
 Description: |-
-    "TermOne Plus" is a terminal emulator for communicating with the built-in
-    Android shell. It emulates a reasonably large subset of Digital Equipment
-    Corporation VT-100 terminal codes. Supported terminal types include vt100,
-    screen (default), linux and xterm. As result console programs like "vi"
-    (unix visual editor), "emacs", "mc" (Midnight Commander file manager), nano
-    (Nano's ANOther editor) and other work smoothly.
+  "TermOne Plus" is a terminal emulator for communicating with the built-in
+  Android shell. It emulates a reasonably large subset of Digital Equipment
+  Corporation VT-100 terminal codes. Supported terminal types include vt100,
+  screen (default), linux and xterm. As result console programs like "vi"
+  (unix visual editor), "emacs", "mc" (Midnight Commander file manager), nano
+  (Nano's ANOther editor) and other work smoothly.
 
-    This application is a clone of Jack Palevich's https://f-droid.org/packages/jackpal.androidterm.
+  This application is a clone of Jack Palevich's https://f-droid.org/packages/jackpal.androidterm.
 
 RepoType: git
 Repo: https://gitlab.com/termapps/termoneplus.git
@@ -243,7 +243,105 @@ Builds:
       - full
     ndk: r23c
 
+  - versionName: 4.3.1/X
+    versionCode: 431
+    commit: 677156206bde8abac75bf93af2a04a14e836e3e6
+    subdir: term
+    gradle:
+      - full
+    prebuild: sed -i -e 's/elf-cleaner/echo/' build.gradle
+    ndk: r23c
+
+  - versionName: 4.4.0/X
+    versionCode: 440
+    commit: 5eb93382b8acd5c4c7f5dbc3e7d7b85e53935405
+    subdir: term
+    gradle:
+      - full
+    prebuild: sed -i -e 's/elf-cleaner/echo/' build.gradle
+    ndk: r23c
+
+  - versionName: 4.5.0/X
+    versionCode: 450
+    commit: 4c26212437f0c191843337f3db7444fa5c511d34
+    subdir: term
+    gradle:
+      - full
+    prebuild: sed -i -e 's/elf-cleaner/echo/' build.gradle
+    ndk: r23c
+
+  - versionName: 4.6.0/X
+    versionCode: 460
+    commit: 7b81c76f1e29f59b6fc6c2c8622b06ac67e929ff
+    subdir: term
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    prebuild: sed -i -e 's/elf-cleaner/echo/' build.gradle
+    ndk: r23c
+
+  - versionName: 4.7.0/X
+    versionCode: 470
+    commit: 4fbdc59407645a906c6b26b05d87a2cb2ff87b39
+    subdir: term
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - full
+    prebuild: sed -i -e 's/elf-cleaner/echo/' build.gradle
+    ndk: r23c
+
+  - versionName: 4.7.1/X
+    versionCode: 471
+    commit: 5b72c8a267bddb01676bbe05ce7e7803e65132d4
+    subdir: term
+    gradle:
+      - full
+    prebuild: sed -i -e 's/elf-cleaner/echo/' build.gradle
+    ndk: r23c
+
+  - versionName: 5.0.0/X
+    versionCode: 500
+    commit: c65c1fdde3b008d202b4b1100ec699ec8056dbb2
+    subdir: term
+    gradle:
+      - full
+    prebuild: sed -i -e 's/elf-cleaner/echo/' build.gradle
+    ndk: r23c
+
+  - versionName: 5.0.1/X
+    versionCode: 501
+    commit: 6827ef23af2b42e474f1906e447b8325701d3db6
+    subdir: term
+    gradle:
+      - full
+    prebuild: sed -i -e 's/elf-cleaner/echo/' build.gradle
+    ndk: r23c
+
+  - versionName: 5.1.0/X
+    versionCode: 510
+    commit: 5b574113be172b357f4e737bd6d2f40d2dbc3182
+    subdir: term
+    gradle:
+      - full
+    prebuild: sed -i -e 's/elf-cleaner/echo/' build.gradle
+    ndk: r23c
+
+  - versionName: 5.2.0/X
+    versionCode: 520
+    commit: 3aea5867bedb2ffb9eab6f43eca0376b580643be
+    subdir: term
+    gradle:
+      - full
+    prebuild: sed -i -e 's/elf-cleaner/echo/' build.gradle
+    ndk: r23c
+
 AutoUpdateMode: Version +/X v%v
 UpdateCheckMode: Tags
-CurrentVersion: 4.3.0
-CurrentVersionCode: 430
+CurrentVersion: 5.2.0
+CurrentVersionCode: 520

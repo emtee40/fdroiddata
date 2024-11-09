@@ -13,20 +13,20 @@ Changelog: https://github.com/mpcjanssen/simpletask-android/blob/HEAD/app/src/ma
 Name: Simpletask
 AutoName: Simpletask donation key
 Description: |-
-    A simple task list manager that strives to have just enough features to do GTD
-    (the Getting Things Done methodology), but no more.
+  A simple task list manager that strives to have just enough features to do GTD
+  (the Getting Things Done methodology), but no more.
 
-    Based on the <a href="http://todotxt.com">todo.txt</a> app so all info is stored in a single
-    text file called todo.txt.
+  Based on the <a href="http://todotxt.com">todo.txt</a> app so all info is stored in a single
+  text file called todo.txt.
 
-    Note that, with this version, you will need to take care of backups yourself.
+  Note that, with this version, you will need to take care of backups yourself.
 
-    * Todo list stored in the documented todo.txt format
-    * Comprehensive filtering and multi sort
-    * Create calendar reminders for specific tasks directly from the app
-    * Select on or more tasks and press overflow menu->Add reminder
-    * Share the complete tasklist or selected tasks using the Android share feature
-    * Tasks can deferred into the future. Combined with the "Creation date in future" sort it allows you to get tasks out of your face (as in 1MTD/MYN)
+  * Todo list stored in the documented todo.txt format
+  * Comprehensive filtering and multi sort
+  * Create calendar reminders for specific tasks directly from the app
+  * Select on or more tasks and press overflow menu->Add reminder
+  * Share the complete tasklist or selected tasks using the Android share feature
+  * Tasks can deferred into the future. Combined with the "Creation date in future" sort it allows you to get tasks out of your face (as in 1MTD/MYN)
 
 RepoType: git
 Repo: https://github.com/mpcjanssen/simpletask-android.git
@@ -59,13 +59,6 @@ Builds:
   - versionName: 4.0.7
     versionCode: 1062
     commit: '4_0_7'
-    gradle:
-      - cloudless
-
-  - versionName: 4.0.10
-    versionCode: 1065
-    disable: insists on having old gradle version
-    commit: '4_0_10'
     gradle:
       - cloudless
 
@@ -362,16 +355,6 @@ Builds:
     scanignore:
       - pelican
 
-  - versionName: 5.2.6
-    versionCode: 1534
-    disable: jar
-    commit: 5.2.6
-    init: rm libs/*.jar
-    gradle:
-      - cloudless
-    scanignore:
-      - pelican
-
   - versionName: 5.2.8
     versionCode: 1536
     commit: 5.2.8
@@ -599,14 +582,6 @@ Builds:
   - versionName: 6.0.8
     versionCode: 1582
     commit: 6.0.8
-    init: rm libs/*.jar
-    gradle:
-      - cloudless
-
-  - versionName: 6.1.1
-    versionCode: 3000
-    disable: bad tag
-    commit: 6.1.1
     init: rm libs/*.jar
     gradle:
       - cloudless
@@ -858,26 +833,6 @@ Builds:
     rm:
       - app/libs/*.jar
 
-  - versionName: 9.0.5
-    versionCode: 3059
-    disable: binary at .gradle/3.5/file-changes/last-build.bin
-    commit: 9.0.5
-    subdir: app
-    gradle:
-      - cloudless
-    rm:
-      - app/libs/*.jar
-
-  - versionName: 9.0.6
-    versionCode: 3060
-    disable: binary at .gradle/3.5/file-changes/last-build.bin
-    commit: 9.0.6
-    subdir: app
-    gradle:
-      - cloudless
-    rm:
-      - app/libs/*.jar
-
   - versionName: 9.0.7
     versionCode: 3061
     commit: 9.0.7
@@ -890,15 +845,6 @@ Builds:
   - versionName: 10.0.3
     versionCode: 3069
     commit: 10.0.3
-    subdir: app
-    gradle:
-      - cloudless
-
-  - versionName: 10.0.4
-    versionCode: 3072
-    disable: Could not get unknown property 'storeServiceAccount' for object of type
-        de.triplet.gradle.play.PlayAccountConfig
-    commit: 10.0.4
     subdir: app
     gradle:
       - cloudless
@@ -1116,7 +1062,8 @@ Builds:
       - cloudless
     prebuild: echo -e '\n' 'org.gradle.jvmargs=-Xmx2048m' >> ../gradle.properties
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 11.0.1
 CurrentVersionCode: 11000001

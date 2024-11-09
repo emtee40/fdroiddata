@@ -4,19 +4,20 @@ License: GPL-2.0-only
 WebSite: https://www.roguetemple.com/z/hyper.php
 SourceCode: https://github.com/zenorogue/hyperrogue
 IssueTracker: https://github.com/zenorogue/hyperrogue/issues
+Changelog: https://github.com/zenorogue/hyperrogue/releases
 Donate: https://www.roguetemple.com/z/donate.php?id=HyperRogue
 
 AutoName: HyperRogue
 Description: |-
-    You are a lone outsider in a strange, non-Euclidean world. As a Rogue, your goal
-    is to collect as many treasures as possible. However, collecting treasures
-    attracts dangerous monsters (on the other hand, killing the monsters allows more
-    treasures to be generated).
+  You are a lone outsider in a strange, non-Euclidean world. As a Rogue, your goal
+  is to collect as many treasures as possible. However, collecting treasures
+  attracts dangerous monsters (on the other hand, killing the monsters allows more
+  treasures to be generated).
 
-    You can kill most monsters by moving into them. Similarly, if the monster was
-    next to you at the end of your turn, it would kill you. The game protects you
-    from getting yourself killed accidentally by ignoring moves which lead to
-    instant death (similar to the check rule from Chess).
+  You can kill most monsters by moving into them. Similarly, if the monster was
+  next to you at the end of your turn, it would kill you. The game protects you
+  from getting yourself killed accidentally by ignoring moves which lead to
+  instant death (similar to the check rule from Chess).
 
 RepoType: git
 Repo: https://github.com/zenorogue/hyperrogue.git
@@ -74,7 +75,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e "s/abiFilters .*/abiFilters 'x86', 'x86_64', 'armeabi-v7a',
-        'arm64-v8a'/" build.gradle
+      'arm64-v8a'/" build.gradle
     scandelete:
       - hyper.exe
     build:
@@ -93,7 +94,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e "s/abiFilters .*/abiFilters 'x86', 'x86_64', 'armeabi-v7a',
-        'arm64-v8a'/" build.gradle
+      'arm64-v8a'/" build.gradle
     build:
       - pushd ..
       - bash copy.sh
@@ -110,7 +111,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e "s/abiFilters .*/abiFilters 'x86', 'x86_64', 'armeabi-v7a',
-        'arm64-v8a'/" build.gradle
+      'arm64-v8a'/" build.gradle
     build:
       - pushd ..
       - bash copy.sh
@@ -127,7 +128,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e "s/abiFilters .*/abiFilters 'x86', 'x86_64', 'armeabi-v7a',
-        'arm64-v8a'/" build.gradle
+      'arm64-v8a'/" build.gradle
     build:
       - pushd ..
       - bash copy.sh
@@ -144,7 +145,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e "s/abiFilters .*/abiFilters 'x86', 'x86_64', 'armeabi-v7a',
-        'arm64-v8a'/" build.gradle
+      'arm64-v8a'/" build.gradle
     build:
       - pushd ..
       - bash copy.sh
@@ -153,6 +154,7 @@ Builds:
 
   - versionName: 12.0u
     versionCode: 12070
+    disable: doesn't work
     commit: 0bcf2ca0abdc8693fd69e38435ec15121fb59353
     subdir: hyperroid/app
     sudo:
@@ -166,17 +168,19 @@ Builds:
       - bash copy.sh
     ndk: r21e
 
-  - versionName: 12.0v
-    versionCode: 12080
-    disable: https://github.com/zenorogue/hyperrogue/issues/286
-    commit: b0577deb9a88d1f17a0577ddb69c6bc622b92fa2
+  - versionName: 13.0a
+    versionCode: 13001
+    commit: 51f59cc2facc800cbae75fa9c1027025b4db2eb4
     subdir: hyperroid/app
     sudo:
       - apt-get update
-      - apt-get install -y g++ libsdl1.2-dev libsdl-ttf2.0-dev libsdl-gfx1.2-dev libsdl-mixer1.2-dev
-        libglew-dev libpng-dev
+      - apt-get install -y make g++ libsdl1.2-dev libsdl-ttf2.0-dev libsdl-gfx1.2-dev
+        libsdl-mixer1.2-dev libglew-dev libpng-dev
     gradle:
       - yes
+    prebuild:
+      - sed -i -e 's/4.9/7.3.3/' ../gradle/wrapper/gradle-wrapper.properties
+      - sed -i -e 's/3.2.0/7.2.0/' ../build.gradle
     build:
       - cd ..
       - bash copy.sh
@@ -184,5 +188,5 @@ Builds:
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 12.0v
-CurrentVersionCode: 12080
+CurrentVersion: 13.0a
+CurrentVersionCode: 13001

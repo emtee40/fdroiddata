@@ -4,7 +4,6 @@ Categories:
 License: GPL-3.0-only
 AuthorName: EthACK
 AuthorWebSite: https://www.ethack.org/
-WebSite: https://orwall.org/
 SourceCode: https://github.com/EthACKdotOrg/orWall
 IssueTracker: https://github.com/EthACKdotOrg/orWall/issues
 Bitcoin: 1Kriu9owRhEsFkj8Lc6Wr5xTv8YTNphhXn
@@ -12,28 +11,30 @@ Litecoin: LXjW5tKRHbrbxwTZmitj4JeBqcm4xpqvJ2
 
 AutoName: orWall
 Description: |-
-    Force selected applications through Orbot while preventing unchecked
-    applications to have network access.
+  <b>NOTE:</b> App repo is archived by dev. No longer maintained.
 
-    In short, orWall will add special iptables rules in order to redirect traffic
-    for applications through Tor; it will also add required rules in order to block
-    traffic for other apps. The redirection is based on the application user id.
-    Each android application runs as a dedicated user, and iptables has support for
-    traffic filtering based on the process owner, meaning it’s really easy and
-    pretty safe to do this kind of thing on an Android device.
+  Force selected applications through Orbot while preventing unchecked
+  applications to have network access.
 
-    The application works in two stages: first, an init-script will block all
-    incoming and outgoing traffic. This should prevent leaks, knowing Android sends
-    stuff before you can even access the device. Second stage comes once the device
-    is fully booted: orWall itself takes the lead on the firewall, and add required
-    rules in order to allow Orbot traffic, and redirect selected application to
-    Orbot TransPort.
+  In short, orWall will add special iptables rules in order to redirect traffic
+  for applications through Tor; it will also add required rules in order to block
+  traffic for other apps. The redirection is based on the application user id.
+  Each android application runs as a dedicated user, and iptables has support for
+  traffic filtering based on the process owner, meaning it's really easy and
+  pretty safe to do this kind of thing on an Android device.
 
-    Limitations: init-script works only on Android <= 4.4.x
+  The application works in two stages: first, an init-script will block all
+  incoming and outgoing traffic. This should prevent leaks, knowing Android sends
+  stuff before you can even access the device. Second stage comes once the device
+  is fully booted: orWall itself takes the lead on the firewall, and add required
+  rules in order to allow Orbot traffic, and redirect selected application to
+  Orbot TransPort.
 
-    Conflict: all other firewall application such as AFWall, DroidWall, etc
+  Limitations: init-script works only on Android <= 4.4.x
 
-RequiresRoot: 'yes'
+  Conflict: all other firewall application such as AFWall, DroidWall, etc
+
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/EthACKdotOrg/orWall.git
@@ -281,24 +282,6 @@ Builds:
       - external/super-commands/ExampleApp/libs
       - external/i2p/client/src/main/jniLibs/armeabi
 
-  - versionName: 1.1.2
-    versionCode: 39
-    disable: broken sed commands
-    commit: 1.1.2
-    subdir: app
-    submodules: true
-    gradle:
-      - yes
-    prebuild:
-      - sed -i -e '/classpath/s/gradle:1\.0\.0-rc2/gradle:2.1.2/g' ../external/NetCipher/libnetcipher/build.gradle
-        ../external/super-commands/libraries/RootCommands/build.gradle
-      - sed -i -e '/classpath/s/gradle:0\.5\.\+/gradle:2.1.2/g' ../external/super-commands/build.gradle
-    scanignore:
-      - external/NetCipher/libnetcipher/external/pinning/res/raw/cacerts
-    scandelete:
-      - external/super-commands/ExampleApp/libs
-      - external/i2p/client/src/main/jniLibs/armeabi
-
   - versionName: 1.2.0
     versionCode: 40
     commit: 1.2.0
@@ -306,7 +289,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.2.0
 CurrentVersionCode: 40

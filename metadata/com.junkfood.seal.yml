@@ -122,7 +122,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/youtubedlAndroidVersion/s/0.13.3/42c7dfcee1/'
-        build.gradle.kts
+      build.gradle.kts
     gradleprops:
       - noSplits
 
@@ -137,7 +137,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/youtubedlAndroidVersion/s/0.13.3/42c7dfcee1/'
-        build.gradle.kts
+      build.gradle.kts
     gradleprops:
       - noSplits
 
@@ -152,7 +152,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/youtubedlAndroidVersion/s/0.13.3/42c7dfcee1/'
-        build.gradle.kts
+      build.gradle.kts
     gradleprops:
       - noSplits
 
@@ -167,7 +167,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/youtubedlAndroidVersion/s/0.13.3/42c7dfcee1/'
-        build.gradle.kts
+      build.gradle.kts
     gradleprops:
       - noSplits
 
@@ -182,7 +182,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/youtubedlAndroidVersion/s/0.13.3/42c7dfcee1/'
-        build.gradle.kts
+      build.gradle.kts
     gradleprops:
       - noSplits
 
@@ -197,7 +197,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/youtubedlAndroidVersion/s/0.13.3/42c7dfcee1/'
-        build.gradle.kts
+      build.gradle.kts
     gradleprops:
       - noSplits
 
@@ -212,7 +212,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/youtubedlAndroidVersion/s/0.13.3/42c7dfcee1/'
-        build.gradle.kts
+      build.gradle.kts
     gradleprops:
       - noSplits
 
@@ -227,7 +227,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/youtubedlAndroidVersion/s/0.13.3/42c7dfcee1/'
-        build.gradle.kts
+      build.gradle.kts
     gradleprops:
       - noSplits
 
@@ -238,7 +238,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -250,7 +250,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -262,7 +262,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -274,7 +274,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
@@ -286,7 +286,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -298,7 +298,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
@@ -310,7 +310,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -322,7 +322,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -334,7 +334,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -346,7 +346,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
@@ -358,7 +358,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -370,7 +370,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -382,7 +382,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -394,7 +394,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -406,7 +406,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -418,7 +418,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
@@ -430,7 +430,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -442,7 +442,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -454,7 +454,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -466,7 +466,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
@@ -478,7 +478,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -490,7 +490,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -502,7 +502,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -514,7 +514,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
@@ -526,7 +526,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -538,7 +538,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -550,7 +550,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -562,7 +562,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
@@ -574,7 +574,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -586,7 +586,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -598,7 +598,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -610,7 +610,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
@@ -622,7 +622,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -634,7 +634,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -646,7 +646,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -658,7 +658,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
@@ -670,7 +670,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -682,7 +682,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -694,7 +694,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -706,7 +706,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
@@ -718,7 +718,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86
@@ -730,7 +730,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=x86_64
@@ -742,7 +742,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=armeabi-v7a
@@ -754,10 +754,581 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
-        .*/= $$VERCODE$$/' build.gradle.kts
+      .*/= $$VERCODE$$/' build.gradle.kts
     gradleprops:
       - noSplits
       - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.8.3-(F-Droid)
+    versionCode: 10831
+    commit: f2774355f6d3782e6a133b8f0c518f51701d8867
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.8.3-(F-Droid)
+    versionCode: 10832
+    commit: f2774355f6d3782e6a133b8f0c518f51701d8867
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.8.3-(F-Droid)
+    versionCode: 10833
+    commit: f2774355f6d3782e6a133b8f0c518f51701d8867
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.8.3-(F-Droid)
+    versionCode: 10834
+    commit: f2774355f6d3782e6a133b8f0c518f51701d8867
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.9.0-(F-Droid)
+    versionCode: 10901
+    commit: 13c715c65a3143cb0ff92b9302a468c8cca895d5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.9.0-(F-Droid)
+    versionCode: 10902
+    commit: 13c715c65a3143cb0ff92b9302a468c8cca895d5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.9.0-(F-Droid)
+    versionCode: 10903
+    commit: 13c715c65a3143cb0ff92b9302a468c8cca895d5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.9.0-(F-Droid)
+    versionCode: 10904
+    commit: 13c715c65a3143cb0ff92b9302a468c8cca895d5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.9.1-(F-Droid)
+    versionCode: 10911
+    commit: ae72ea320f3d04e4dcd98adb6b9141bcbff4580d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.9.1-(F-Droid)
+    versionCode: 10912
+    commit: ae72ea320f3d04e4dcd98adb6b9141bcbff4580d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.9.1-(F-Droid)
+    versionCode: 10913
+    commit: ae72ea320f3d04e4dcd98adb6b9141bcbff4580d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.9.1-(F-Droid)
+    versionCode: 10914
+    commit: ae72ea320f3d04e4dcd98adb6b9141bcbff4580d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.9.2-(F-Droid)
+    versionCode: 10921
+    commit: 03546b6777f84cd377348b8bea1870e8da145fc5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.9.2-(F-Droid)
+    versionCode: 10922
+    commit: 03546b6777f84cd377348b8bea1870e8da145fc5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.9.2-(F-Droid)
+    versionCode: 10923
+    commit: 03546b6777f84cd377348b8bea1870e8da145fc5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.9.2-(F-Droid)
+    versionCode: 10924
+    commit: 03546b6777f84cd377348b8bea1870e8da145fc5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.10.0-(F-Droid)
+    versionCode: 11001
+    commit: bba0a60b3830d29b6f22211a3ec0fe1c07a36c7b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.10.0-(F-Droid)
+    versionCode: 11002
+    commit: bba0a60b3830d29b6f22211a3ec0fe1c07a36c7b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.10.0-(F-Droid)
+    versionCode: 11003
+    commit: bba0a60b3830d29b6f22211a3ec0fe1c07a36c7b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.10.0-(F-Droid)
+    versionCode: 11004
+    commit: bba0a60b3830d29b6f22211a3ec0fe1c07a36c7b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.11.0-(F-Droid)
+    versionCode: 11101
+    commit: 04598a1b3fcfb51f096e47085d4133cf86fa200f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.11.0-(F-Droid)
+    versionCode: 11102
+    commit: 04598a1b3fcfb51f096e47085d4133cf86fa200f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.11.0-(F-Droid)
+    versionCode: 11103
+    commit: 04598a1b3fcfb51f096e47085d4133cf86fa200f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.11.0-(F-Droid)
+    versionCode: 11104
+    commit: 04598a1b3fcfb51f096e47085d4133cf86fa200f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.11.1-(F-Droid)
+    versionCode: 11111
+    commit: 081f058a80313db8ade0e8002db7e18207758200
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.11.1-(F-Droid)
+    versionCode: 11112
+    commit: 081f058a80313db8ade0e8002db7e18207758200
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.11.1-(F-Droid)
+    versionCode: 11113
+    commit: 081f058a80313db8ade0e8002db7e18207758200
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.11.1-(F-Droid)
+    versionCode: 11114
+    commit: 081f058a80313db8ade0e8002db7e18207758200
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' -e '/versionCode/s/=
+      .*/= $$VERCODE$$/' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.11.3-(F-Droid)
+    versionCode: 11132
+    commit: 64a11d39aae8ecf96620cf7177ddcf9a77532fa4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.12.0-(F-Droid)
+    versionCode: 11201
+    commit: e016faab64c10f5a2498cd2b7c19b58871eccf96
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.12.0-(F-Droid)
+    versionCode: 11202
+    commit: e016faab64c10f5a2498cd2b7c19b58871eccf96
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.12.0-(F-Droid)
+    versionCode: 11203
+    commit: e016faab64c10f5a2498cd2b7c19b58871eccf96
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.12.0-(F-Droid)
+    versionCode: 11204
+    commit: e016faab64c10f5a2498cd2b7c19b58871eccf96
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.12.1-(F-Droid)
+    versionCode: 11211
+    commit: 0b8f25a54f3269ac39bdcaf0de5795a682a603a1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.12.1-(F-Droid)
+    versionCode: 11212
+    commit: 0b8f25a54f3269ac39bdcaf0de5795a682a603a1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.12.1-(F-Droid)
+    versionCode: 11213
+    commit: 0b8f25a54f3269ac39bdcaf0de5795a682a603a1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.12.1-(F-Droid)
+    versionCode: 11214
+    commit: 0b8f25a54f3269ac39bdcaf0de5795a682a603a1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.13.0-(F-Droid)
+    versionCode: 11301
+    commit: 5b07b32bead6e26f19fc5c94398404fe5c49a174
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.13.0-(F-Droid)
+    versionCode: 11302
+    commit: 5b07b32bead6e26f19fc5c94398404fe5c49a174
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.13.0-(F-Droid)
+    versionCode: 11303
+    commit: 5b07b32bead6e26f19fc5c94398404fe5c49a174
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.13.0-(F-Droid)
+    versionCode: 11304
+    commit: 5b07b32bead6e26f19fc5c94398404fe5c49a174
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.13.1-(F-Droid)
+    versionCode: 11311
+    commit: a2d7e5d5819d0aa8b4f5dbb906731da283a28ed1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.13.1-(F-Droid)
+    versionCode: 11312
+    commit: a2d7e5d5819d0aa8b4f5dbb906731da283a28ed1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.13.1-(F-Droid)
+    versionCode: 11313
+    commit: a2d7e5d5819d0aa8b4f5dbb906731da283a28ed1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86
+
+  - versionName: 1.13.1-(F-Droid)
+    versionCode: 11314
+    commit: a2d7e5d5819d0aa8b4f5dbb906731da283a28ed1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/(keystorePropertiesFile.exists())$/d' build.gradle.kts
+    gradleprops:
+      - noSplits
+      - ABI_FILTERS=x86_64
 
 AutoUpdateMode: Version +-(F-Droid) %v
 UpdateCheckMode: Tags ^v[0-9.]+$
@@ -767,5 +1338,5 @@ VercodeOperation:
   - 3+%c
   - 4+%c
 UpdateCheckData: app/build.gradle.kts|versionCode\s=\s(\d+)||v(.*)
-CurrentVersion: 1.8.2
-CurrentVersionCode: 10824
+CurrentVersion: 1.13.1
+CurrentVersionCode: 11314

@@ -5,7 +5,7 @@ SourceCode: https://github.com/enricocid/JellyRevenge-CM11-theme
 
 AutoName: JellyRevenge
 Description: Simple, dark theme with Holo accent compatible with Cyanogenmod 11 theme
-    engine.
+  engine.
 
 Builds:
   - versionName: '11'
@@ -14,6 +14,7 @@ Builds:
 
 MaintainerNotes: Github project deleted or made private.
 
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '11'

@@ -1,0 +1,78 @@
+Categories:
+  - Graphics
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Fossify
+AuthorEmail: hello@fossify.org
+WebSite: https://www.fossify.org
+SourceCode: https://github.com/FossifyOrg/Gallery
+IssueTracker: https://github.com/FossifyOrg/Gallery/issues
+Donate: https://www.fossify.org/donate
+Liberapay: naveensingh
+Bitcoin: bc1q5flmuh5f3canqza07cfekjn64p2aqvd2w7pnn3
+
+RepoType: git
+Repo: https://github.com/FossifyOrg/Gallery.git
+Binaries: https://github.com/FossifyOrg/Gallery/releases/download/%v/gallery-%c-foss-release.apk
+
+Builds:
+  - versionName: 1.1.0
+    versionCode: 4
+    commit: 91c5afe13daf2e93455900dbbb171664a7590877
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    output: build/outputs/apk/foss/release/gallery-*-foss-release-unsigned.apk
+
+  - versionName: 1.1.1
+    versionCode: 5
+    commit: 60f9f9292a16179ffc20679ad0c60c7325b511c0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    output: build/outputs/apk/foss/release/gallery-*-foss-release-unsigned.apk
+
+  - versionName: 1.1.2
+    versionCode: 6
+    commit: 6fb3b12be806bc03464ce51ffd34163b594b2fe7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    output: build/outputs/apk/foss/release/gallery-*-foss-release-unsigned.apk
+
+  - versionName: 1.1.3
+    versionCode: 7
+    commit: 6d9d09b11488d1a9507bac47423885cebe571e3f
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/foss/release/gallery-*-foss-release-unsigned.apk
+
+  - versionName: 1.2.1
+    versionCode: 9
+    commit: 08cc4fc39ba2d1756aa148f1322150623d3c48e0
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/foss/release/gallery-*-foss-release-unsigned.apk
+    ndk: r26b
+
+AllowedAPKSigningKeys: affdb124d3f4720c2f98dbca9eacba0514fba4306e20a2786c861c3c0d6ff292
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 1.2.1
+CurrentVersionCode: 9

@@ -1,9 +1,12 @@
 AntiFeatures:
-  - NonFreeNet
-  - Tracking
+  NonFreeNet:
+    en-US: LBRY itself is not libre.
+  Tracking:
+    en-US: is sending some data to LBRY servers while not allowing user to disable
+      it.
 Categories:
-  - Multimedia
   - Money
+  - Multimedia
 License: MIT
 SourceCode: https://github.com/lbryio/lbry-fdroid
 IssueTracker: https://github.com/lbryio/lbry-fdroid/issues
@@ -199,30 +202,6 @@ Builds:
     prebuild: sed -r "s:29.0.1:29.0.2:" -i build.gradle
     ndk: r21d
 
-  - versionName: 0.16.13
-    versionCode: 16131
-    disable: Runtime issues
-    commit: v0.16.13-fdroid
-    subdir: app
-    gradle:
-      - __32bit
-    rm:
-      - .gitsecret/keys/random_seed
-    prebuild: sed -r "s:29.0.1:29.0.2:" -i build.gradle
-    ndk: r21d
-
-  - versionName: 0.16.14
-    versionCode: 16141
-    disable: Runtime issues
-    commit: v0.16.14-fdroid
-    subdir: app
-    gradle:
-      - __32bit
-    rm:
-      - .gitsecret/keys/random_seed
-    prebuild: sed -r "s:29.0.1:29.0.2:" -i build.gradle
-    ndk: r21d
-
   - versionName: 0.16.15
     versionCode: 16151
     commit: v0.16.15-fdroid
@@ -255,12 +234,14 @@ Builds:
     ndk: r21e
 
 MaintainerNotes: |-
-    +0: - (upstream)
-    +1: armv7 (CV)
-    +2: armv8
+  +0: - (upstream)
+  +1: armv7 (CV)
+  +2: armv8
+  AF see https://gitlab.com/fdroid/fdroiddata/-/merge_requests/7173
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags v\d+.\d+.\d+[a-z]?-fdroid
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 VercodeOperation:
   - '%c*10 + 1'
 CurrentVersion: 0.17.1

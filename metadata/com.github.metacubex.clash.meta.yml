@@ -6,7 +6,7 @@ WebSite: https://docs.metacubex.one
 SourceCode: https://github.com/MetaCubeX/ClashMetaForAndroid
 IssueTracker: https://github.com/MetaCubeX/ClashMetaForAndroid/issues
 
-Name: ClashMetaForAndroid
+Name: Clash Meta For Android
 
 RepoType: git
 Repo: https://github.com/MetaCubeX/ClashMetaForAndroid.git
@@ -187,7 +187,414 @@ Builds:
         -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
     ndk: r23
 
+  - versionName: 2.6.7.Meta-Alpha
+    versionCode: 206007
+    commit: 1d86190f8f2612f3d8956d199d2db94b6bf6d684
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports golang-go
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.6.8.Meta-Alpha
+    versionCode: 206008
+    commit: 7ea6edf58241cd1e7bd40954a286441647922cb1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports golang-go
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.6.9.Meta-Alpha
+    versionCode: 206009
+    commit: 1ed08ef97f54b49daeb128568e7d7fa61c075f04
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports golang-go
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.7.0.Meta-Alpha
+    versionCode: 207000
+    commit: a4c733e87b8b4634f90f360eaac36bf488e3c932
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports golang-go
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.7.1.Meta-Alpha
+    versionCode: 207001
+    commit: 7b144a84e51b97ee08bf58513297607c60d000c8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports golang-go
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.7.2.Meta-Alpha
+    versionCode: 207002
+    commit: a4cfe1eb7da8e0d628f2a76a34295bd4f56df639
+    subdir: app
+    submodules: true
+    sudo:
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+      - echo "979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.7.3.Meta-Alpha
+    versionCode: 207003
+    commit: 4a71c6ad119782ab02481eb1e40890c787359c00
+    subdir: app
+    submodules: true
+    sudo:
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+      - echo "979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.7.4.Meta-Alpha
+    versionCode: 207004
+    commit: 2229b04f27ef1ef4468bc8b2b5726444d3de193e
+    subdir: app
+    submodules: true
+    sudo:
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+      - echo "979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.8.2.Meta-Alpha
+    versionCode: 208002
+    commit: ec489ab491968da22f6b559447bcb22c826fec73
+    subdir: app
+    submodules: true
+    sudo:
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+      - echo "979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.8.5.Meta-Alpha
+    versionCode: 208005
+    commit: a4d77470785c1f2429d745707de0b6bf197bcb86
+    subdir: app
+    sudo:
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+      - echo "979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    init: git submodule update --init --recursive --remote
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.8.6.Meta-Alpha
+    versionCode: 208006
+    commit: d6a33bc81b389c1d09498ade7a16ef0171d46cd7
+    subdir: app
+    sudo:
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+      - echo "979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    init: git submodule update --init --recursive --remote
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.8.7.Meta-Alpha
+    versionCode: 208007
+    commit: 6d5dd875517bd7ca88c06dec86720c992b247b6a
+    subdir: app
+    sudo:
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+      - echo "979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    init: git submodule update --init --recursive --remote
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.8.8.Meta-Alpha
+    versionCode: 208008
+    commit: fd433244c75c5305eaad1695e203b308e1409e3a
+    subdir: app
+    sudo:
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+      - echo "979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    init: git submodule update --init --recursive --remote
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.8.10.Meta-Alpha
+    versionCode: 208010
+    commit: 79366ba9c19da06f7130055d180e36e35147e1b9
+    subdir: app
+    sudo:
+      - curl -Lso go.tar.gz https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+      - echo "979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca go.tar.gz"
+        | sha256sum -c -
+      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
+    init: git submodule update --init --recursive --remote
+    gradle:
+      - meta-alpha
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.10.0.Meta
+    versionCode: 210000
+    commit: 4dd7aec7ec3cee98828dece5d21aad4ca5e0ef0b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    output: build/outputs/apk/meta/release/*.apk
+    srclibs:
+      - go@go1.20.13
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - PATH=$$go$$/bin:$PATH gradle assembleMetaRelease
+    ndk: r23
+
+  - versionName: 2.10.1.Meta
+    versionCode: 210001
+    commit: c7c13b3a89ec66df8d5a698630a53cf0f9af51f8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    output: build/outputs/apk/meta/release/*.apk
+    srclibs:
+      - go@go1.20.13
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|maven.kr328.app/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - PATH=$$go$$/bin:$PATH gradle assembleMetaRelease
+    ndk: r23
+
+  - versionName: 2.10.2.Meta
+    versionCode: 210002
+    commit: 143c84d47b6e636195bbdc8ca89b8617c84e4196
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+    gradle:
+      - meta
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|raw.githubusercontent.com/.*/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.10.3.Meta
+    versionCode: 210003
+    commit: 08f87e27ed3923b0c7ad1a553ffcc85d33bdbbf1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+    gradle:
+      - meta
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|raw.githubusercontent.com/.*/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.10.4.Meta
+    versionCode: 210004
+    commit: 4df39342a2b88ce2c6fd367a81f3ae6c8dadeef3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+    gradle:
+      - meta
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|raw.githubusercontent.com/.*/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.11.0.Meta
+    versionCode: 211000
+    commit: e966e52b774b00ea621e1e5e8cd740c650e37766
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+    gradle:
+      - meta
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|raw.githubusercontent.com/.*/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.11.1.Meta
+    versionCode: 211001
+    commit: 2ac1ade18815748ff12910cdcbbe225678c004e9
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+    gradle:
+      - meta
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|raw.githubusercontent.com/.*/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
+  - versionName: 2.11.2.Meta
+    versionCode: 211002
+    commit: 94489d1dcaa937ad96ce655910e5d027f6ef5e43
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+    gradle:
+      - meta
+    prebuild:
+      - sed -i -e '/isEnable = true/d' -e 's|raw.githubusercontent.com/.*/releases|jitpack.io|'
+        ../build.gradle.kts
+      - sed -i -e 's/com.github.kr328.golang:gradle-plugin:$golang/com.github.Kr328.golang-android-plugin:gradle-plugin:cc84891461/'
+        -e 's/:$kaidl/:7710f4347c/' ../settings.gradle.kts
+    ndk: r23
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.6.6.Meta-Alpha
-CurrentVersionCode: 206006
+UpdateCheckName: com.github.metacubex.clash
+CurrentVersion: 2.11.2.Meta
+CurrentVersionCode: 211002

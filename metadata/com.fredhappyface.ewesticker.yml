@@ -9,7 +9,7 @@ Changelog: https://github.com/FredHappyface/Android.EweSticker/blob/HEAD/CHANGEL
 AutoName: EweSticker
 
 RepoType: git
-Repo: https://github.com/fredhappyface/android.EweSticker
+Repo: https://github.com/fredhappyface/android.EweSticker.git
 
 Builds:
   - versionName: 2021.07.23
@@ -118,7 +118,40 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '20230828'
+    versionCode: 20230828
+    commit: c7030d8d5f4fd1b2be56901672974b2d9ba13c2e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '20240322'
+    versionCode: 20240322
+    commit: 84b8c2c6f22f5e27b00a1c576f0a7a7fcc972a62
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - documentation
+      - example-files
+      - readme-assets
+
+  - versionName: '20240825'
+    versionCode: 20240825
+    commit: 9c73832ad33eeda6b356f3165203884b39fb684c
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - documentation
+      - example-files
+      - readme-assets
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2022.03.11
-CurrentVersionCode: 20220311
+CurrentVersion: '20240825'
+CurrentVersionCode: 20240825

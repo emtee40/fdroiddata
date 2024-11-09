@@ -7,13 +7,13 @@ IssueTracker: https://github.com/Vilbrekin/tinc_gui/issues
 
 AutoName: Tinc
 Description: |-
-    Tinc GUI for Android is a (slightly modified) cross-compiled version of tincd,
-    associated with a basic GUI for daemon management.
+  Tinc GUI for Android is a (slightly modified) cross-compiled version of tincd,
+  associated with a basic GUI for daemon management.
 
-    Root is not needed, even if highly recommended for correct tinc daemon usage.
+  Root is not needed, even if highly recommended for correct tinc daemon usage.
 
-    Starting from version 0.9.8, all main architectures (ARM, X86 and MIPS) are
-    supported.
+  Starting from version 0.9.8, all main architectures (ARM, X86 and MIPS) are
+  supported.
 
 RepoType: git
 Repo: https://github.com/Vilbrekin/tinc_gui.git
@@ -52,15 +52,6 @@ Builds:
       - libs
     build: $$NDK$$/ndk-build
 
-  - versionName: 0.9.13
-    versionCode: 14
-    disable: https://github.com/Vilbrekin/tinc_gui/issues/32
-    commit: RELEASE_0.9.13
-    subdir: app
-    submodules: true
-    gradle:
-      - yes
-
   - versionName: 0.9.14
     versionCode: 15
     commit: RELEASE_0.9.14
@@ -70,13 +61,14 @@ Builds:
       - yes
 
 MaintainerNotes: |-
-    Uses native binaries (armeabi, x86 and misp) in the assets dir, thus the apk
-    has no native-code. Not that bad since it supports all the architectures and
-    should run everywhere. Should in the future use libs/<arch>/.
+  Uses native binaries (armeabi, x86 and misp) in the assets dir, thus the apk
+  has no native-code. Not that bad since it supports all the architectures and
+  should run everywhere. Should in the future use libs/<arch>/.
 
-    Wait for https://github.com/Vilbrekin/tinc_gui/issues/32 .
+  Wait for https://github.com/Vilbrekin/tinc_gui/issues/32 .
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: 0.9.14
 CurrentVersionCode: 15

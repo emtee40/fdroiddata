@@ -5,45 +5,20 @@ Categories:
   - Science & Education
 License: GPL-3.0-only
 AuthorName: DanXi-Dev
-AuthorEmail: danxi_dev@pm.me
+AuthorEmail: dev@fduhole.com
 AuthorWebSite: https://github.com/DanXi-Dev
 WebSite: https://danxi.fduhole.com/
 SourceCode: https://github.com/DanXi-Dev/DanXi/tree/foss-build
 IssueTracker: https://github.com/DanXi-Dev/DanXi/issues
+Translation: https://crowdin.com/project/danxi
+Donate: https://afdian.net/a/danxi-dev
 
 AutoName: 旦夕
 
 RepoType: git
-Repo: https://github.com/DanXi-Dev/DanXi
+Repo: https://github.com/DanXi-Dev/DanXi.git
 
 Builds:
-  - versionName: 1.3.5
-    versionCode: 143
-    disable: GMS
-    commit: 5f4eeec48d2a390a771e131e8b2f9f042f3bae46
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    output: build/app/outputs/flutter-apk/app-release.apk
-    srclibs:
-      - flutter@2.10.0
-    rm:
-      - .github
-      - .gradle
-      - CI
-      - ios
-      - macos
-      - test
-      - web
-      - windows
-    build:
-      - $$flutter$$/bin/flutter config --no-analytics
-      - $$flutter$$/bin/flutter pub get
-      - $$flutter$$/bin/flutter pub global activate intl_utils
-      - $$flutter$$/bin/flutter pub global run intl_utils:generate
-      - $$flutter$$/bin/flutter build apk
-
   - versionName: 1.3.10
     versionCode: 178
     commit: 389b802b52fbc286e17ac6b948b5a7084e25da01
@@ -104,8 +79,103 @@ Builds:
       - .flutter/bin/flutter pub global run intl_utils:generate
       - .flutter/bin/flutter build apk --release
 
+  - versionName: 1.3.13
+    versionCode: 335
+    commit: 36ee2ef8de608c1fae0f6cfddcae03e72f5ec696
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .github
+      - .gradle
+      - CI
+      - ios
+      - macos
+      - test
+      - web
+      - windows
+      - android/app/proguard-rules.pro
+    prebuild:
+      - sed -i -e '/minifyEnabled/,+2d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter pub global activate intl_utils
+      - .flutter/bin/flutter pub global run intl_utils:generate
+      - .flutter/bin/flutter build apk --release
+
+  - versionName: 1.4.0
+    versionCode: 336
+    commit: b2b8ea43c97654cda941d2b9f6000f1d3551808d
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .github
+      - .gradle
+      - CI
+      - ios
+      - macos
+      - test
+      - web
+      - windows
+      - android/app/proguard-rules.pro
+    prebuild:
+      - sed -i -e '/minifyEnabled/,+2d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter pub global activate intl_utils
+      - .flutter/bin/flutter pub global run intl_utils:generate
+      - .flutter/bin/flutter build apk --release
+
+  - versionName: 1.4.2
+    versionCode: 338
+    commit: f11cae6e0ea8bb4304bc491b8d75cc993cb7833f
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - .github
+      - CI
+      - ios
+      - linux
+      - macos
+      - test
+      - web
+      - windows
+      - android/app/proguard-rules.pro
+    prebuild:
+      - sed -i -e '/minifyEnabled/,+2d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter config --no-analytics
+      - .flutter/bin/flutter pub get
+    scanignore:
+      - .flutter/bin/cache
+    scandelete:
+      - .flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - .flutter/bin/flutter pub global activate intl_utils
+      - .flutter/bin/flutter pub global run intl_utils:generate
+      - .flutter/bin/dart build_release.dart --target android --versionCode dummy
+        --flutterPath .flutter/bin/flutter --dartPath .flutter/bin/dart
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^foss-v
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 1.3.11
-CurrentVersionCode: 333
+CurrentVersion: 1.4.2
+CurrentVersionCode: 338

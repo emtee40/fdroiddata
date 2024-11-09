@@ -1,0 +1,180 @@
+Categories:
+  - Writing
+License: MIT
+AuthorEmail: kushvahar173@gmail.com
+SourceCode: https://github.com/Xed-Editor/Xed-Editor
+IssueTracker: https://github.com/Xed-Editor/Xed-Editor/issues
+Changelog: https://github.com/Xed-Editor/Xed-Editor/releases
+
+AutoName: Karbon
+
+RepoType: git
+Repo: https://github.com/Xed-Editor/Xed-Editor.git
+Binaries: https://github.com/Xed-Editor/Xed-Editor/releases/download/v%v/xed-editor-v%v.apk
+
+Builds:
+  - versionName: 1.0.9
+    versionCode: 9
+    commit: 4f0717722197d00eae8f2714b80cb43dce1d2a6f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.0
+    versionCode: 10
+    commit: 0ff0bf03f87460160df42d86da20b30205b6c254
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.1
+    versionCode: 11
+    commit: b77146f8b12a7cc9978c734143a45d6371ec654d
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.4
+    versionCode: 14
+    commit: 7c9190c6ac129abba0679b04a823da6d00e45019
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.5
+    versionCode: 15
+    commit: 31444d719d9633be6c6f799028c06700d4911ccc
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.7
+    versionCode: 17
+    commit: 6e839691140f0bcfafad253701b291acd130c95f
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.8
+    versionCode: 18
+    commit: dac4f2541bc73d44e7c1680b232ffb6f6ce574e0
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 1.1.9
+    versionCode: 19
+    commit: 65965ffd435d8563223bfc9cc2f7ab8e1283931d
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.0.0
+    versionCode: 20
+    commit: d119bd596829f01f3ccd241df1e7819b8d00f47e
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.0.1
+    versionCode: 21
+    commit: 31151e47273a9f2011fde6a0488e63324b7802ce
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.1.0
+    versionCode: 22
+    commit: 92e52d71d371cfca346b9a759579663922f03a87
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.2.0
+    versionCode: 23
+    commit: bcaa77b42c704131594b97d3310ad0cf170e484d
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.2.1
+    versionCode: 24
+    commit: e775b226d42c4de2adf8fdd6e676966cb26c9962
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.3.0
+    versionCode: 25
+    commit: 7d8c6882beec40ea628f506043a27316c793ec35
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.6.0
+    versionCode: 30
+    commit: 31e1191ab18ac5308d1df221830dd0affe35d5d9
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/assets/files.zip
+
+  - versionName: 2.7.3
+    versionCode: 33
+    commit: fa7e9f8d66e6999caeb6eabd40afe1862c516be3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jetbrains/d' ../settings.gradle.kts
+
+  - versionName: 2.8.0
+    versionCode: 35
+    commit: 444054b3e8f3e12bfc87241e33c4fe70ae03289e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jetbrains/d' ../settings.gradle.kts
+
+AllowedAPKSigningKeys: 8ad6b593b0772c96f9d05e923b610f16aed2792c664f0cd91f0dfd627098346f
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.8.0
+CurrentVersionCode: 35

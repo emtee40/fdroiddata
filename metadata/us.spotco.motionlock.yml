@@ -1,6 +1,6 @@
 Categories:
   - Security
-License: GPL-3.0-or-later
+License: AGPL-3.0-or-later
 AuthorName: Divested Computing Group
 AuthorWebSite: https://divestos.org
 SourceCode: https://gitlab.com/divested-mobile/motionlock
@@ -12,7 +12,7 @@ Bitcoin: bc1qkjtp2k7cc4kuv8k9wjdlxkeuqczenrpv5mwasl
 AutoName: MotionLock
 
 RepoType: git
-Repo: https://gitlab.com/divested-mobile/motionlock
+Repo: https://gitlab.com/divested-mobile/motionlock.git
 
 Builds:
   - versionName: '1.1'
@@ -54,7 +54,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.1'
+    versionCode: 19
+    commit: 1accea9dddc986deec6a308d936d700619ac7b86
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.1'
+    versionCode: 20
+    commit: 15bdcfb836c969936d03259407d092e0af3398eb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 21
+    commit: 33be836a9f9d3e2efc78ea057f982f61ff310ddd
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.1'
-CurrentVersionCode: 18
+CurrentVersion: '1.2'
+CurrentVersionCode: 21

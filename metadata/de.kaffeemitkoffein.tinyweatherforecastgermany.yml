@@ -55,14 +55,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 0.54.0
-    versionCode: 18
-    disable: cannot find symbol TEXT_PAINT
-    commit: 0.54.0
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: 0.54.1
     versionCode: 19
     commit: 0.54.1
@@ -203,7 +195,108 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.59.5
+    versionCode: 41
+    commit: dfa590f631ba5246ff7244512abea26c65cfc366
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.59.6
+    versionCode: 42
+    commit: 38a6fc4248bc3bebbcc1e0b0946d379c3d792d68
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.60.0
+    versionCode: 43
+    commit: 9f062e2a565e66b87ebd1043f3ae0213e07d1633
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.61.0
+    versionCode: 44
+    commit: 9251ef89762967852f6d20a2f16e75eee2a75bf1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.61.1
+    versionCode: 45
+    commit: 9cecb3e765e4137484fbfcb0ec0d682b80e459f7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.61.2
+    versionCode: 46
+    commit: 3f5564aa9db9c7a3369a8db0684bb9eb59221359
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.61.3
+    versionCode: 47
+    commit: c209baed4c93af460f847882c903388e1f7b3522
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.61.4
+    versionCode: 48
+    commit: 0569b706c5104a809865db745a6edfffb0384472
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.62.0
+    versionCode: 49
+    commit: 16b67e7d7cd5c20c0fe58627f7c49c7eee0b6f4e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.62.2
+    versionCode: 51
+    commit: 819f51d7c4b4874734da8e96909664eb04eccdad
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 0.62.3
+    versionCode: 52
+    commit: 240668fe5816f1fcf78570b831bfb705549752a8
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 0.62.4
+    versionCode: 53
+    commit: 996d133155fb54345eb4f793ba1be74406e1286a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.62.5
+    versionCode: 54
+    commit: d8715c76fe0ef77f57a386e3082f5a03ebeebe87
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.59.4
-CurrentVersionCode: 40
+CurrentVersion: 0.62.5
+CurrentVersionCode: 54

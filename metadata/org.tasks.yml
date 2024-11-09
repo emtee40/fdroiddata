@@ -9,7 +9,6 @@ IssueTracker: https://github.com/tasks/tasks/issues
 Translation: https://hosted.weblate.org/projects/tasks/
 Changelog: https://github.com/tasks/tasks/blob/HEAD/CHANGELOG.md
 Donate: https://tasks.org/donate
-FlattrID: '2308341'
 Liberapay: tasks
 Bitcoin: 136mW34jW3cmZKhxuTDn3tHXMRwbbaRU8s
 
@@ -46,7 +45,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc1/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
+      -e '/2.2.1/d' build.gradle
 
   - versionName: 4.7.1
     versionCode: 337
@@ -54,7 +53,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc1/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
+      -e '/2.2.1/d' build.gradle
 
   - versionName: 4.7.2
     versionCode: 338
@@ -62,7 +61,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc1/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
+      -e '/2.2.1/d' build.gradle
 
   - versionName: 4.7.3
     versionCode: 339
@@ -70,7 +69,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
+      -e '/2.2.1/d' build.gradle
 
   - versionName: 4.7.4
     versionCode: 341
@@ -78,7 +77,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
+      -e '/2.2.1/d' build.gradle
 
   - versionName: 4.7.5
     versionCode: 342
@@ -86,7 +85,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
+      -e '/2.2.1/d' build.gradle
 
   - versionName: 4.7.5
     versionCode: 345
@@ -94,7 +93,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
+      -e '/2.2.1/d' build.gradle
 
   - versionName: 4.7.5
     versionCode: 346
@@ -102,7 +101,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
+      -e '/2.2.1/d' build.gradle
 
   - versionName: 4.7.7
     versionCode: 348
@@ -110,43 +109,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
-
-  - versionName: 4.7.8
-    versionCode: 350
-    disable: builds locally
-    commit: 4.7.8
-    gradle:
-      - yes
-    prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
-
-  - versionName: 4.7.8
-    versionCode: 351
-    disable: builds locally
-    commit: 4.7.8
-    gradle:
-      - yes
-    prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
-
-  - versionName: 4.7.9
-    versionCode: 352
-    disable: builds locally
-    commit: 4.7.9
-    gradle:
-      - yes
-    prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
-
-  - versionName: 4.7.9
-    versionCode: 356
-    disable: builds locally
-    commit: 4.7.9
-    gradle:
-      - yes
-    prebuild: sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g'
-        -e '/2.2.1/d' build.gradle
+      -e '/2.2.1/d' build.gradle
 
   - versionName: 4.7.9
     versionCode: 357
@@ -158,14 +121,6 @@ Builds:
   - versionName: 4.7.10
     versionCode: 359
     commit: 4.7.10-fdroid
-    gradle:
-      - generic
-    prebuild: sed -i -e '/wrapper/,+2d' -e '/googleplayCompile/d' build.gradle
-
-  - versionName: 4.7.11
-    versionCode: 360
-    disable: retagged by upstream
-    commit: 4.7.11-fdroid
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/googleplayCompile/d' build.gradle
@@ -294,7 +249,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -304,7 +259,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -314,7 +269,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -324,7 +279,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -334,7 +289,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -344,7 +299,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -354,7 +309,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -364,7 +319,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -374,7 +329,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -384,7 +339,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -394,40 +349,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
-    scanignore:
-      - src/main/res/raw/gestures
-
-  - versionName: 4.8.6
-    versionCode: 394
-    disable: java build fails
-    commit: 4.8.6
-    gradle:
-      - generic
-    prebuild: sed -i -e '/wrapper/,+2d' -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
-    scanignore:
-      - src/main/res/raw/gestures
-
-  - versionName: 4.8.7
-    versionCode: 395
-    disable: java build fails
-    commit: 4.8.7
-    gradle:
-      - generic
-    prebuild: sed -i -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
-    scanignore:
-      - src/main/res/raw/gestures
-
-  - versionName: 4.8.8
-    versionCode: 396
-    disable: java build fails
-    commit: 4.8.8
-    gradle:
-      - generic
-    prebuild: sed -i -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -437,7 +359,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -447,7 +369,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -457,7 +379,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -467,7 +389,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -477,7 +399,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -487,7 +409,7 @@ Builds:
     gradle:
       - generic
     prebuild: sed -i -e '/org.mockito:mockito-core/i*/' -e '/com.google.android.gms:play-services-location/i/*'
-        build.gradle
+      build.gradle
     scanignore:
       - src/main/res/raw/gestures
 
@@ -658,24 +580,6 @@ Builds:
     prebuild: sed -i -e '/googleplayCompile/d' -e '/amazonCompile/d' build.gradle
     antifeatures:
       - Tracking
-
-  - versionName: 4.9.11
-    versionCode: 450
-    disable: jack compilation fails
-    commit: 4.9.11
-    gradle:
-      - generic
-      - prod
-    prebuild: sed -i -e '/googleplayCompile/d' -e '/amazonCompile/d' build.gradle
-
-  - versionName: 4.9.12
-    versionCode: 453
-    disable: jack compilation fails
-    commit: 4.9.12
-    gradle:
-      - generic
-      - prod
-    prebuild: sed -i -e '/googleplayCompile/d' -e '/amazonCompile/d' build.gradle
 
   - versionName: 4.9.13
     versionCode: 455
@@ -850,20 +754,6 @@ Builds:
     antifeatures:
       - Tracking
 
-  - versionName: 6.0.5
-    versionCode: 531
-    disable: Google API client
-    commit: 6.0.5
-    subdir: app
-    submodules: true
-    gradle:
-      - generic
-    prebuild:
-      - sed -i -e '/maven {/,/}/d' -e '/com.google.gms/d' -e '/io.fabric.tools/d'
-        ../build.gradle
-      - sed -i -e '/io.fabric/d' -e '/googleplayImplementation/d' -e '/amazonImplementation/d'
-        -e '/com.google.gms/d' build.gradle
-
   - versionName: 6.0.6
     versionCode: 532
     commit: 6.0.6
@@ -984,20 +874,6 @@ Builds:
   - versionName: 6.4.5
     versionCode: 552
     commit: 6.4.5
-    subdir: app
-    submodules: true
-    gradle:
-      - generic
-    prebuild:
-      - sed -i -e '/maven {/,/}/d' -e '/com.google.gms/d' -e '/io.fabric.tools/d'
-        ../build.gradle
-      - sed -i -e '/io.fabric/d' -e '/googleplayImplementation(.*) {/,/}/d; /googleplayImplementation/d'
-        -e '/amazonImplementation/d' -e '/com.google.gms/d' build.gradle
-
-  - versionName: '6.5'
-    versionCode: 562
-    disable: https://github.com/tasks/tasks/issues/781
-    commit: '6.5'
     subdir: app
     submodules: true
     gradle:
@@ -1174,63 +1050,6 @@ Builds:
   - versionName: 7.1.1
     versionCode: 621
     commit: 7.1.1
-    subdir: app
-    submodules: true
-    gradle:
-      - generic
-    prebuild:
-      - sed -i -e '/maven/d' -e '/com.google.gms/d' -e '/io.fabric.tools/d' ../build.gradle.kts
-      - sed -i -e '/io.fabric/d' -e '/googleplayImplementation(.*) {/,/}/d; /googleplayImplementation/d'
-        -e '/amazonImplementation/d' -e '/com.google.gms/d' -e '/signingConfig =/d'
-        build.gradle.kts
-    scandelete:
-      - buildSrc
-      - .gradle
-    gradleprops:
-      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
-
-  - versionName: 7.3.1
-    versionCode: 632
-    disable: Google API client
-    commit: 7.3.1
-    subdir: app
-    submodules: true
-    gradle:
-      - generic
-    prebuild:
-      - sed -i -e '/maven/d' -e '/com.google.gms/d' -e '/io.fabric.tools/d' ../build.gradle.kts
-      - sed -i -e '/io.fabric/d' -e '/googleplayImplementation(.*) {/,/}/d; /googleplayImplementation/d'
-        -e '/amazonImplementation/d' -e '/com.google.gms/d' -e '/signingConfig =/d'
-        build.gradle.kts
-    scandelete:
-      - buildSrc
-      - .gradle
-    gradleprops:
-      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
-
-  - versionName: 7.3.2
-    versionCode: 633
-    disable: Google API client
-    commit: 7.3.2
-    subdir: app
-    submodules: true
-    gradle:
-      - generic
-    prebuild:
-      - sed -i -e '/maven/d' -e '/com.google.gms/d' -e '/io.fabric.tools/d' ../build.gradle.kts
-      - sed -i -e '/io.fabric/d' -e '/googleplayImplementation(.*) {/,/}/d; /googleplayImplementation/d'
-        -e '/amazonImplementation/d' -e '/com.google.gms/d' -e '/signingConfig =/d'
-        build.gradle.kts
-    scandelete:
-      - buildSrc
-      - .gradle
-    gradleprops:
-      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
-
-  - versionName: 7.4.2
-    versionCode: 645
-    disable: Google API client
-    commit: 7.4.2
     subdir: app
     submodules: true
     gradle:
@@ -2541,11 +2360,277 @@ Builds:
     gradleprops:
       - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
 
+  - versionName: 13.1.2
+    versionCode: 130102
+    commit: 0c2b31b84bab0755a22cb337f06b790c0dbdeb24
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.2.4
+    versionCode: 130207
+    commit: f1790b574fdae8e04d1eea90d665cf49f2ac8e1a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.3.2
+    versionCode: 130302
+    commit: 1811eb561f9fa27cf26ab860acce895afacb3d31
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: '13.4'
+    versionCode: 130400
+    commit: 166635e18ba3b8314a1535ab5c90d3384ed44c1b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: '13.5'
+    versionCode: 130500
+    commit: ce2bc812763231c5093e54fb884372565106e65f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.5.1
+    versionCode: 130501
+    commit: dbcaa368126263a668546414dccade876440f67f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: '13.6'
+    versionCode: 130601
+    commit: abc099c309f6feb1dafa9ccbd847021a36f440c6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.6.2
+    versionCode: 130604
+    commit: 14599eb3c09393fc0e147b18f45e5ea47ce188f6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.6.3
+    versionCode: 130605
+    commit: ee21cc660eb5ccea11ed011d23aab33d7e06bb40
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: '13.7'
+    versionCode: 130700
+    commit: 43db712f6421a92eaa1d8c520fb4a1b24cdb3405
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: '13.8'
+    versionCode: 130803
+    commit: cf30b56098c0e12585cc695bbe1168a89aae4dae
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.8.1
+    versionCode: 130804
+    commit: 06a9626052768834f519d0d02dc5361737d84f26
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.9.7
+    versionCode: 130907
+    commit: 1a93c87ad932d16af924167ac7d45405f41a83fe
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.9.9
+    versionCode: 130909
+    commit: 1d8d2efce6b5f4a9466517249bfdce88bd2abb7f
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: '13.10'
+    versionCode: 131007
+    commit: 053cffd389ab503c105627490c122c592bfc660a
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: '13.11'
+    versionCode: 131104
+    commit: c2bd95ed069cc74c8d15260472e8698498ec6201
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.11.1
+    versionCode: 131106
+    commit: 2566b86fec601663791b16e769fce5e2f7e57da1
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
+  - versionName: 13.11.2
+    versionCode: 131107
+    commit: 58dc1427a8dd9b78ba19df9b4d20fcdbddbe47bc
+    subdir: app
+    gradle:
+      - generic
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' ../build.gradle.kts
+      - sed -i -e '/gms/d' -e '/signingConfig /d' -e '/configure<CrashlyticsExtension>
+        {/,/}/d' -e '/crashlytics/Id' build.gradle.kts
+    gradleprops:
+      - tasks_mapbox_key="pk.eyJ1IjoiYmFrZXJiYSIsImEiOiJjanUxZG51dDUwMGttNDlvN3p3cHZzaXB3In0.1UWYV5dhTKiw_MkHNkA1jA"
+
 MaintainerNotes: |-
-    * Upstream releases multiple version with changed vercode. Looks like repushing tags.
-    * 2021-03-11: disabled builds 531,632,633,645, see https://gitlab.com/fdroid/fdroiddata/-/issues/2294
+  * Upstream releases multiple version with changed vercode. Looks like repushing tags.
+  * 2021-03-11: disabled builds 531,632,633,645, see https://gitlab.com/fdroid/fdroiddata/-/issues/2294
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 13.1.1
-CurrentVersionCode: 130101
+CurrentVersion: 13.11.2
+CurrentVersionCode: 131107

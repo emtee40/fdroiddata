@@ -7,11 +7,10 @@ SourceCode: https://github.com/nextcloud/passman-android
 IssueTracker: https://github.com/nextcloud/passman-android/issues
 Translation: https://www.transifex.com/nextcloud/nextcloud/passman-android/
 Changelog: https://github.com/nextcloud/passman-android/releases
-Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6YS8F97PETVU2
-Bitcoin: 1H2c5tkGX54n48yEtM4Wm4UrAGTW85jQpe
+Donate: https://passman.cc/#donate
 
 RepoType: git
-Repo: https://github.com/nextcloud/passman-android
+Repo: https://github.com/nextcloud/passman-android.git
 
 Builds:
   - versionName: 1.2.0
@@ -124,7 +123,53 @@ Builds:
       - android.useAndroidX=true
       - android.enableJetifier=true
 
+  - versionName: 1.4.1
+    versionCode: 17
+    commit: 2a37efa1cc52791cdbdd6d09ad6199aaf336de90
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc cmake make
+    gradle:
+      - yes
+    rm:
+      - app/src/main/cpplibs/openssl/boringssl/fuzz
+      - app/src/main/cpplibs/openssl/fuzz
+    prebuild: sed -i -e '/enable true/d' build.gradle
+    build:
+      - cd ..
+      - ./build-openssl.sh
+    ndk: r21e
+    gradleprops:
+      - android.useAndroidX=true
+      - android.enableJetifier=true
+
+  - versionName: 1.5.0
+    versionCode: 18
+    commit: 2ecebc8a55bda88494c1e9ab270543e51e9f0552
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc cmake make
+    gradle:
+      - yes
+    rm:
+      - app/src/main/cpplibs/openssl/boringssl/fuzz
+      - app/src/main/cpplibs/openssl/fuzz
+    prebuild: sed -i -e '/enable true/d' build.gradle
+    build:
+      - cd ..
+      - ./build-openssl.sh
+    ndk: 21.4.7075529
+    gradleprops:
+      - android.useAndroidX=true
+      - android.enableJetifier=true
+      - android.nonTransitiveRClass=false
+      - android.nonFinalResIds=false
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.0
-CurrentVersionCode: 16
+CurrentVersion: 1.5.0
+CurrentVersionCode: 18

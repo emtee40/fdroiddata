@@ -14,57 +14,35 @@ RepoType: git
 Repo: https://github.com/owntracks/android/
 
 Builds:
-  - versionName: 2.4.7
-    versionCode: 24700
-    disable: https://github.com/owntracks/android/issues/1298
-    commit: v2.4.7
+  - versionName: 2.5.0
+    versionCode: 420500014
+    commit: a03f0fd81ac923f0f4a95621c25a329735da962f
     subdir: project/app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
     gradle:
       - oss
+    prebuild:
+      - sed -i -e 's/storage.*"/jitpack.io"/' ../build.gradle.kts
+      - echo "org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError"
+        > $HOME/.gradle/gradle.properties
+      - "sed -i -r 's/(val packageVersionCode: Int =.* ?: )[0-9]+/\\1$$VERCODE$$/'\
+        \ build.gradle.kts"
 
-  - versionName: 2.4.8
-    versionCode: 20408000
-    disable: https://github.com/owntracks/android/issues/1298
-    commit: e6bfb14ea534b7d23d34a25ea12f25becada8463
+  - versionName: 2.5.3
+    versionCode: 420503003
+    commit: v2.5.3
     subdir: project/app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
     gradle:
       - oss
+    prebuild:
+      - sed -i -e 's/storage.*"/jitpack.io"/' ../build.gradle.kts
+      - echo "org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError"
+        > $HOME/.gradle/gradle.properties
+      - "sed -i -r 's/(val packageVersionCode: Int =.* ?: )[0-9]+/\\1$$VERCODE$$/'\
+        \ build.gradle.kts"
 
-  - versionName: 2.4.9
-    versionCode: 20409000
-    disable: https://github.com/owntracks/android/issues/1298
-    commit: 4de691b0a78d07d3430447c32408ba6817fedc7c
-    subdir: project/app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - oss
-    prebuild: sed -i -e 's/storage.*"/jitpack.io"/' ../build.gradle.kts
-
-  - versionName: 2.4.10
-    versionCode: 20410000
-    disable: https://github.com/owntracks/android/issues/1298
-    commit: bb280f33fbf4414cf6f4b39e4592ab11a36add89
-    subdir: project/app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - oss
-    prebuild: sed -i -e 's/storage.*"/jitpack.io"/' ../build.gradle.kts
-
-AutoUpdateMode: None
-UpdateCheckMode: Tags ^v[0-9]+.[0-9]+.[0-9]+$
-CurrentVersion: 2.4.10
-CurrentVersionCode: 20410000
+AutoUpdateMode: Version v%v
+UpdateCheckMode: HTTP
+UpdateCheckData: 'https://raw.githubusercontent.com/owntracks/android/master/latest-version.yaml|versionCode:
+  (\d+)|.|versionName: (\d+.\d+.\d+)'
+CurrentVersion: 2.5.3
+CurrentVersionCode: 420503003

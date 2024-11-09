@@ -6,10 +6,10 @@ IssueTracker: https://github.com/uatach/reminders/issues
 
 AutoName: Reminders
 Description: |-
-    Reminders is intended for students from UNICAMP as a simple reminder of the
-    daily meal. In portuguese "Lembretes". It connects to the webpage of the
-    university's restaurant to retrieve the meal and according to user preferences,
-    it reminds him.
+  Reminders is intended for students from UNICAMP as a simple reminder of the
+  daily meal. In portuguese "Lembretes". It connects to the webpage of the
+  university's restaurant to retrieve the meal and according to user preferences,
+  it reminds him.
 
 RepoType: git
 Repo: https://github.com/uatach/reminders.git
@@ -19,25 +19,25 @@ Builds:
     versionCode: 1
     commit: v0.8
     srclibs:
-      - 1:appcompat@ad5a63f
+      - appcompat@ad5a63f
 
   - versionName: 0.8.1
     versionCode: 20
     commit: v0.8.1
     srclibs:
-      - 1:appcompat@ad5a63f
+      - appcompat@ad5a63f
 
   - versionName: 0.8.3
     versionCode: 22
     commit: v0.8.3
     srclibs:
-      - 1:appcompat@ad5a63f
+      - appcompat@ad5a63f
 
   - versionName: 0.8.4
     versionCode: 23
     commit: v0.8.4
     srclibs:
-      - 1:appcompat@ad5a63f
+      - appcompat@ad5a63f
 
   - versionName: 1-beta
     versionCode: 69
@@ -53,7 +53,8 @@ Builds:
     gradle:
       - yes
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: v1-beta3-10-gc048e80-dirty
 CurrentVersionCode: 93

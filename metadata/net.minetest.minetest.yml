@@ -6,25 +6,25 @@ SourceCode: https://github.com/minetest/minetest
 IssueTracker: http://www.minetest.net/development/#reporting-issues
 Translation: https://hosted.weblate.org/projects/minetest/
 Changelog: https://dev.minetest.net/Changelog
-Donate: https://www.minetest.net/development/#donate
-Liberapay: celeron55
+Donate: https://www.minetest.net/get-involved/#donate
+Liberapay: Minetest
 
 Name: Minetest
 AutoName: Minetest
 Description: |-
-    Minetest is a near infinite world block sandbox game and a game engine, inspired
-    by InfiniMiner, Minecraft and the like.
+  Minetest is a near infinite world block sandbox game and a game engine, inspired
+  by InfiniMiner, Minecraft and the like.
 
-    Features:
+  Features:
 
-    * Explore, dig and build in a voxel world, and craft stuff from raw materials to help you along the way.
-    * Play with your friends on public servers or self hosted servers
-    * Easy plugin based Modding API used to add blocks, tools and features to the game.
-    * Voxel based lighting with gameplay consequences (light caves and buildings with torches)
-    * Almost infinite world and several beautiful map generators.
-    * Runs natively on Windows, Linux, OS X, FreeBSD and Android
-    * Supports multiple languages, translated by the community.
-    * A constant development to add new functionalities for end-users
+  * Explore, dig and build in a voxel world, and craft stuff from raw materials to help you along the way.
+  * Play with your friends on public servers or self hosted servers
+  * Easy plugin based Modding API used to add blocks, tools and features to the game.
+  * Voxel based lighting with gameplay consequences (light caves and buildings with torches)
+  * Almost infinite world and several beautiful map generators.
+  * Runs natively on Windows, Linux, OS X, FreeBSD and Android
+  * Supports multiple languages, translated by the community.
+  * A constant development to add new functionalities for end-users
 
 RepoType: git
 Repo: https://github.com/minetest/minetest.git
@@ -242,8 +242,145 @@ Builds:
       - mv $$minetest_android_deps$$/deps ../native
     ndk: r23c
 
+  - versionName: 5.7.0
+    versionCode: 44
+    commit: 5.7.0
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc-multilib gettext make wget xz-utils
+    gradle:
+      - yes
+    srclibs:
+      - MinetestGame@5.7.0
+      - minetest_android_deps@48ef4978ec967018991ef01fbdfc9c418fc67368
+    prebuild:
+      - sed -i -e 's/enable true/enable false/' build.gradle ../native/build.gradle
+      - sed -i -e '/preBuild.dependsOn getDeps/d' ../native/build.gradle
+      - cp -R $$MinetestGame$$ ../../games/minetest_game
+    build:
+      - pushd $$minetest_android_deps$$
+      - ./build.sh --all armeabi-v7a
+      - ./build.sh --all arm64-v8a
+      - ./build.sh --all x86
+      - ./build.sh --all x86_64
+      - popd
+      - mv $$minetest_android_deps$$/deps ../native
+    ndk: r25c
+
+  - versionName: 5.8.0
+    versionCode: 46
+    commit: 49ce5a2de633d751080a0c97b802ae48190bf911
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc-multilib gettext make wget xz-utils
+    gradle:
+      - yes
+    srclibs:
+      - minetest_android_deps@48ef4978ec967018991ef01fbdfc9c418fc67368
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/preBuild.dependsOn getDeps/d'
+      build.gradle ../native/build.gradle
+    build:
+      - export ndkversion=$(grep "ndk_version = " ../build.gradle | cut -d "'" -f
+        2)
+      - sdkmanager "ndk;$ndkversion"
+      - export ANDROID_NDK=$$SDK$$/ndk/$ndkversion
+      - pushd $$minetest_android_deps$$
+      - git checkout -f $$VERSION$$
+      - ./build.sh --all armeabi-v7a
+      - ./build.sh --all arm64-v8a
+      - ./build.sh --all x86
+      - ./build.sh --all x86_64
+      - popd
+      - mv $$minetest_android_deps$$/deps ../native
+
+  - versionName: 5.8.1
+    versionCode: 48
+    commit: d445638265886ed9f0ae680eebc18c976d7e5387
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc-multilib gettext make wget xz-utils
+    gradle:
+      - yes
+    srclibs:
+      - minetest_android_deps@48ef4978ec967018991ef01fbdfc9c418fc67368
+    prebuild:
+      - sed -i -e 's/enable true/enable false/' -e '/preBuild.dependsOn getDeps/d'
+        build.gradle ../native/build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=..//g' ../gradle.properties
+    build:
+      - export ndkversion=$(grep "ndk_version = " ../build.gradle | cut -d "'" -f
+        2)
+      - sdkmanager "ndk;$ndkversion"
+      - export ANDROID_NDK=$$SDK$$/ndk/$ndkversion
+      - pushd $$minetest_android_deps$$
+      - git checkout -f 5.8.1-android
+      - ./build.sh --all armeabi-v7a
+      - ./build.sh --all arm64-v8a
+      - ./build.sh --all x86
+      - ./build.sh --all x86_64
+      - popd
+      - mv $$minetest_android_deps$$/deps ../native
+
+  - versionName: 5.9.0
+    versionCode: 51
+    commit: 835dd01fa163df815215b8c694af0910657602b6
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc-multilib gettext make wget xz-utils
+    gradle:
+      - yes
+    srclibs:
+      - minetest_android_deps@48ef4978ec967018991ef01fbdfc9c418fc67368
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/preBuild.dependsOn getDeps/d'
+      -e 's/versionCode .*/versionCode $$VERCODE$$/' build.gradle ../native/build.gradle
+    build:
+      - export ndkversion=$(grep "ndk_version = " ../build.gradle | cut -d "'" -f
+        2)
+      - sdkmanager "ndk;$ndkversion"
+      - export ANDROID_NDK=$$SDK$$/ndk/$ndkversion
+      - pushd $$minetest_android_deps$$
+      - git checkout -f $$VERSION$$
+      - ./build.sh --all armeabi-v7a
+      - ./build.sh --all arm64-v8a
+      - ./build.sh --all x86
+      - ./build.sh --all x86_64
+      - popd
+      - mv $$minetest_android_deps$$/deps ../native
+
+  - versionName: 5.9.1
+    versionCode: 5090100
+    commit: 71d9f1771c356c377f556748b05d77deb2c6ca86
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc-multilib gettext make wget xz-utils
+    gradle:
+      - yes
+    srclibs:
+      - minetest_android_deps@5dcfde6acde07788fb3b0ed340f472c31a79b7d3
+    prebuild: sed -i -e 's/enable true/enable false/' -e '/preBuild.dependsOn getDeps/d'
+      -e 's/versionCode .*/versionCode $$VERCODE$$/' build.gradle ../native/build.gradle
+    build:
+      - export ndkversion=$(grep "ndk_version = " ../build.gradle | cut -d "'" -f
+        2)
+      - sdkmanager "ndk;$ndkversion"
+      - export ANDROID_NDK=$$SDK$$/ndk/$ndkversion
+      - pushd $$minetest_android_deps$$
+      - ./build.sh --all armeabi-v7a
+      - ./build.sh --all arm64-v8a
+      - ./build.sh --all x86
+      - ./build.sh --all x86_64
+      - popd
+      - mv $$minetest_android_deps$$/deps ../native
+
+MaintainerNotes: No AUM as the deps repo does not get tagged on app release, also
+  dynamic versions.
+
 AutoUpdateMode: None
-UpdateCheckMode: Tags
-UpdateCheckData: android/build.gradle|"versionCode", (\d+)||(.*)
-CurrentVersion: 5.6.1
-CurrentVersionCode: 42
+UpdateCheckMode: None
+CurrentVersion: 5.9.1
+CurrentVersionCode: 5090100

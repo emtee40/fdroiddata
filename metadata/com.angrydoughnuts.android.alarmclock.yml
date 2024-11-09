@@ -6,16 +6,16 @@ IssueTracker: https://github.com/kraigs-android/kraigsandroid/issues
 
 AutoName: Alarm Klock
 Description: |-
-    * Global and per-alarm settings
-    * Repeats for days of the week
-    * Ringtone and/or vibrate
-    * Use MP3s/Media library as alarms
-    * Variable snooze time
-    * Variable volume adjustment
-    * Localizations: it, nl, pt, de, sr, hr, fr, es
+  * Global and per-alarm settings
+  * Repeats for days of the week
+  * Ringtone and/or vibrate
+  * Use MP3s/Media library as alarms
+  * Variable snooze time
+  * Variable volume adjustment
+  * Localizations: it, nl, pt, de, sr, hr, fr, es
 
 RepoType: git
-Repo: https://github.com/kraigs-android/kraigsandroid
+Repo: https://github.com/kraigs-android/kraigsandroid.git
 
 Builds:
   - versionName: '1.7'
@@ -62,7 +62,18 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.11'
+    versionCode: 25
+    commit: 4259b4e35f03eaa3334c9c47a6fba116d714f404
+    subdir: android/alarmclock/klock
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*[0-9]$
-CurrentVersion: '2.10'
-CurrentVersionCode: 24
+CurrentVersion: '2.11'
+CurrentVersionCode: 25

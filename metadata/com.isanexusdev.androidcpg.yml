@@ -1,16 +1,16 @@
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: LGPL-3.0-only
 SourceCode: https://github.com/IsaNexusDev/androidcpg
 IssueTracker: https://github.com/IsaNexusDev/androidcpg/issues
 
 AutoName: AndroidCPG
 Description: |-
-    Upload photos and videos to your coppermine gallery through the standard "Share"
-    menu.
+  Upload photos and videos to your coppermine gallery through the standard "Share"
+  menu.
 
-    See: <a href="http://forum.coppermine-gallery.net/index.php/topic,77788">Coppermine</a>
+  See: <a href="http://forum.coppermine-gallery.net/index.php/topic,77788">Coppermine</a>
 
 RepoType: git
 Repo: https://github.com/IsaNexusDev/androidcpg

@@ -61,14 +61,282 @@ Builds:
     gradle:
       - yes
 
-  - versionName: '0.14'
-    versionCode: 14
-    commit: 2fcb3018b2ff0d9e47879696059428aeb73f5343
+  - versionName: '0.15'
+    versionCode: 15
+    commit: 5b0158c2f05d897e620b4c013dbc12648d046726
     subdir: app
     gradle:
       - yes
 
+  - versionName: '0.16'
+    versionCode: 16
+    commit: fc2990e9bb965a2163d9164340c7b634f116f196
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.17'
+    versionCode: 17
+    commit: 425581e23cbf8775c1a4fcbfff2de7bc03f9c177
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.18'
+    versionCode: 18
+    commit: 2f2b2493a3e3f29c4fb00b4b05d56586bd1f7eca
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.19'
+    versionCode: 19
+    commit: 1c92c3b4d36ef61d35149ceab5f40280cfc90bff
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.20'
+    versionCode: 20
+    commit: 434656144429d3ec38fefab055a8144e1dc4e50f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.21'
+    versionCode: 21
+    commit: cef72034c86432c24d1635327fa2fceb0dcde68a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.0'
+    versionCode: 22
+    commit: fc8b3c2e5ffa55fd29f0fe854e1f4c9d61baac96
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.1
+    versionCode: 23
+    commit: ddc4a238af142c8ee816cc5c07d7db6fa8d6fb65
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.2
+    versionCode: 24
+    commit: 2ec3ad2b2739250b416e7c6f51ac7019943f594a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.0.3
+    versionCode: 25
+    commit: 9ffbf20b7b5833c13851fce188163be7f74d227c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.0.4
+    versionCode: 26
+    commit: cbec5c0d44c93e1461b700c3d5dabd436d30f90a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.0.5
+    versionCode: 27
+    commit: 76a7866d21937870bd26bd5ed13c75af3f2e4add
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.0.6
+    versionCode: 28
+    commit: 7f268dfa9295c451356a73f2eefdce37009970fe
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.0.7
+    versionCode: 29
+    commit: 51a706aa60c777355302b2244171a1d956b90003
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.1.1
+    versionCode: 31
+    commit: bda002bd43a5424478d7a32f3413e2a1e8d95c00
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.1.3
+    versionCode: 33
+    commit: 492d309a9de0210d8ab370ece38be2a95fe5e314
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.2.0
+    versionCode: 34
+    commit: f0c4e4dcce67ac5861f80abc790cc13d970be27f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.2.2
+    versionCode: 36
+    commit: 272778d1513c758cecb97c0d3f46f5e5f2d8d8e0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.3.0
+    versionCode: 37
+    commit: 89eea11417c5e871fb6d9e5df7c8660c18d43bcc
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.3.1
+    versionCode: 38
+    commit: b6df089200868c6d7ddd2059330fd32e1a9012ee
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.3.2
+    versionCode: 39
+    commit: f302cef32a42ba217984a364e839a777a36f51e6
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.4.0
+    versionCode: 40
+    commit: 4d84678dde0edf0b03b6b4c70f4feadfb6c5d674
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.4.1
+    versionCode: 41
+    commit: 2a29058f92c78869a6a32a77184f970f25981b39
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.4.2
+    versionCode: 42
+    commit: cca185cedc6ff8b81a9025e08babdd7d649e0175
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: '1.5'
+    versionCode: 43
+    commit: 368092814e9c037233eee3b8048b6f0a73a24601
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.5.1
+    versionCode: 44
+    commit: 680ced86fe0aaa405149d56a0b52c5b621a861be
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.5.2
+    versionCode: 45
+    commit: d72a21ec748a5480fd21990f2f317ef7c8fc99f9
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.5.3
+    versionCode: 46
+    commit: ba45ff2c3acab4f5c9c8bc71bbbba6aca7bbedc2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
+  - versionName: 1.5.5
+    versionCode: 48
+    commit: cb5b7418b8248edb1c6664c2dbc433fb52b49559
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/org.gradle.java.home/d' ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '0.14'
-CurrentVersionCode: 14
+CurrentVersion: 1.5.5
+CurrentVersionCode: 48

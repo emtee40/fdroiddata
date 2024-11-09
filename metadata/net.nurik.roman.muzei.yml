@@ -1,6 +1,6 @@
 AntiFeatures:
-  - UpstreamNonFree
   - NonFreeNet
+  - UpstreamNonFree
 Categories:
   - Multimedia
   - Theming
@@ -13,20 +13,20 @@ IssueTracker: https://github.com/romannurik/muzei/issues
 
 AutoName: Muzei
 Description: |-
-    Muzei is a live wallpaper that gently refreshes your home screen each day with
-    famous works of art. It also recedes into the background, blurring and dimming
-    artwork to keep your icons and widgets in the spotlight. Simply double touch the
-    wallpaper or open the Muzei app to enjoy and explore the artwork in its full
-    glory.
+  Muzei is a live wallpaper that gently refreshes your home screen each day with
+  famous works of art. It also recedes into the background, blurring and dimming
+  artwork to keep your icons and widgets in the spotlight. Simply double touch the
+  wallpaper or open the Muzei app to enjoy and explore the artwork in its full
+  glory.
 
-    Alternatively, you can choose your favorite photos from your own gallery or
-    other apps to use on your home screen. To keep your wallpaper fresh, Muzei will
-    rotate through your favorite photos every few hours.
+  Alternatively, you can choose your favorite photos from your own gallery or
+  other apps to use on your home screen. To keep your wallpaper fresh, Muzei will
+  rotate through your favorite photos every few hours.
 
-    The default source downloads images from Google storage.
+  The default source downloads images from Google storage.
 
-    The F-Droid version of this app is patched by F-Droid contributors
-    and not maintained by the origin developers.
+  The F-Droid version of this app is patched by F-Droid contributors
+  and not maintained by the origin developers.
 
 RepoType: git
 Repo: https://github.com/romannurik/muzei.git
@@ -41,18 +41,6 @@ Builds:
     prebuild:
       - echo sdk.dir=$$SDK$$ >> ../local.properties
       - sed -i '/archivesBaseName/d' build.gradle
-
-  - versionName: 2.0.2
-    versionCode: 2003
-    disable: play-services
-    commit: v2.0.2
-    subdir: main
-    gradle:
-      - prod
-    prebuild:
-      - sed -i -e '/wearable/d' build.gradle
-      - rm -fR ../wearable ../example-watchface
-      - sed -i -e "s/':wearable',//g" -e "s/, 'example-watchface'//g" ../settings.gradle
 
   - versionName: '2.3'
     versionCode: 23015
@@ -251,15 +239,211 @@ Builds:
         />' src/main/AndroidManifest.xml
       - sed -i -e '/signing {/,/^}/d' -e '/afterEvaluate/,/^}/d' ../muzei-api/build.gradle
 
-MaintainerNotes: |-
-    Custom version format, use the tag name as version name.
+  - versionName: 3.5.0-alpha04
+    versionCode: 350007
+    commit: 1f27ad1f1221eb8573ca9693e5a7c42254383982
+    subdir: main
+    gradle:
+      - yes
+    forceversion: true
+    rm:
+      - wearable
+      - example-watchface
+      - legacy-standalone
+      - example-unsplash
+      - main/google-services.json
+      - android-client-common/src/main/java/com/google/android/apps/muzei/wearable
+      - main/src/main/java/com/google/android/apps/muzei/wearable
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' -e '/libs.coroutines.playservices/d' -e
+        '/libs.wearable.playservices/d' ../build.gradle ../*/build.gradle
+      - sed -i -e '/signingConfigs.release/d' -e '/FirebasePerformance/,/}$/d' -e
+        '/kotlinx-coroutines-play-services/d' build.gradle
+      - sed -i -e '/props/d' ../muzei-api/build.gradle
+      - pushd src/main/java/com/google/android/apps/muzei
+      - sed -i -e '/com.google.firebase/d' -e '/Firebase.analytics.logEvent.*)$/d'
+        -e '/Firebase.analytics.logEvent.*{$/,/}$/d' -e '/Firebase.analytics.logEvent($/,/)$/d'
+        -e '/Firebase/d' *.kt */*.kt
+      - sed -i -e '/WearableController/d' MuzeiWallpaperService.kt
+      - popd
+      - sed -i -z -E -e 's/<service\s+\S+wearable.*service>//' src/main/AndroidManifest.xml
+      - sed -i -e '/<queries>/i <uses-permission android:name="android.permission.INTERNET"
+        />' src/main/AndroidManifest.xml
+      - sed -i -e '/signing {/,/^}/d' -e '/afterEvaluate/,/^}/d' ../muzei-api/build.gradle
 
-    Since 2.0, source code needs to be patched to get rid of Google Play Services.
-    The "wearable" and "example-watchface" components should be removed
-    completely, the rest of the code has to be cleaned up from FirebaseAnalytics.
+  - versionName: 3.5.0-alpha05
+    versionCode: 350009
+    commit: 44e84a2f62a97248ee62092e9c3a398c1c0f616d
+    subdir: main
+    gradle:
+      - yes
+    forceversion: true
+    rm:
+      - wearable
+      - example-watchface
+      - legacy-standalone
+      - example-unsplash
+      - main/google-services.json
+      - android-client-common/src/main/java/com/google/android/apps/muzei/wearable
+      - main/src/main/java/com/google/android/apps/muzei/wearable
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' -e '/libs.coroutines.playservices/d' -e
+        '/libs.wearable.playservices/d' ../build.gradle ../*/build.gradle
+      - sed -i -e '/signingConfigs.release/d' -e '/FirebasePerformance/,/}$/d' -e
+        '/kotlinx-coroutines-play-services/d' build.gradle
+      - sed -i -e '/props/d' ../muzei-api/build.gradle
+      - pushd src/main/java/com/google/android/apps/muzei
+      - sed -i -e '/com.google.firebase/d' -e '/Firebase.analytics.logEvent.*)$/d'
+        -e '/Firebase.analytics.logEvent.*{$/,/}$/d' -e '/Firebase.analytics.logEvent($/,/)$/d'
+        -e '/Firebase/d' *.kt */*.kt
+      - sed -i -e '/WearableController/d' MuzeiWallpaperService.kt
+      - popd
+      - sed -i -z -E -e 's/<service\s+\S+wearable.*service>//' src/main/AndroidManifest.xml
+      - sed -i -e '/<queries>/i <uses-permission android:name="android.permission.INTERNET"
+        />' src/main/AndroidManifest.xml
+      - sed -i -e '/signing {/,/^}/d' -e '/afterEvaluate/,/^}/d' ../muzei-api/build.gradle
+
+  - versionName: 3.5.0-rc01
+    versionCode: 350011
+    commit: de14a6773ebca9318bed2f818db2d48de7f3c1aa
+    subdir: main
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    forceversion: true
+    rm:
+      - wearable
+      - example-watchface
+      - legacy-standalone
+      - example-unsplash
+      - main/google-services.json
+      - android-client-common/src/main/java/com/google/android/apps/muzei/wearable
+      - main/src/main/java/com/google/android/apps/muzei/wearable
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' -e '/libs.coroutines.playservices/d' -e
+        '/libs.wearable.playservices/d' ../build.gradle ../*/build.gradle
+      - sed -i -e '/signingConfigs.release/d' -e '/FirebasePerformance/,/}$/d' -e
+        '/kotlinx-coroutines-play-services/d' build.gradle
+      - sed -i -e '/props/d' ../muzei-api/build.gradle
+      - pushd src/main/java/com/google/android/apps/muzei
+      - sed -i -e '/com.google.firebase/d' -e '/Firebase.analytics.logEvent.*)$/d'
+        -e '/Firebase.analytics.logEvent.*{$/,/}$/d' -e '/Firebase.analytics.logEvent($/,/)$/d'
+        -e '/Firebase/d' *.kt */*.kt
+      - sed -i -e '/WearableController/d' MuzeiWallpaperService.kt
+      - popd
+      - sed -i -z -E -e 's/<service\s+\S+wearable.*service>//' src/main/AndroidManifest.xml
+      - sed -i -e '/<queries>/i <uses-permission android:name="android.permission.INTERNET"
+        />' src/main/AndroidManifest.xml
+      - sed -i -e '/signing {/,/^}/d' -e '/^publishing {/,/^}/d' ../muzei-api/build.gradle
+
+  - versionName: 3.6.0-rc01
+    versionCode: 360001
+    commit: c4f08baab7bbe7d2a780906c331797b193d2de7b
+    subdir: main
+    gradle:
+      - yes
+    forceversion: true
+    rm:
+      - wearable
+      - example-watchface
+      - legacy-standalone
+      - example-unsplash
+      - main/google-services.json
+      - android-client-common/src/main/java/com/google/android/apps/muzei/wearable
+      - main/src/main/java/com/google/android/apps/muzei/wearable
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' -e '/libs.coroutines.playservices/d' -e
+        '/libs.wearable.playservices/d' ../build.gradle ../*/build.gradle
+      - sed -i -e '/signingConfigs.release/d' -e '/FirebasePerformance/,/}$/d' -e
+        '/kotlinx-coroutines-play-services/d' build.gradle
+      - sed -i -e '/props/d' ../muzei-api/build.gradle
+      - pushd src/main/java/com/google/android/apps/muzei
+      - sed -i -e '/com.google.firebase/d' -e '/Firebase.analytics.logEvent.*)$/d'
+        -e '/Firebase.analytics.logEvent.*{$/,/}$/d' -e '/Firebase.analytics.logEvent($/,/)$/d'
+        -e '/Firebase/d' *.kt */*.kt
+      - sed -i -e '/WearableController/d' MuzeiWallpaperService.kt
+      - popd
+      - sed -i -z -E -e 's/<service\s+\S+wearable.*service>//' src/main/AndroidManifest.xml
+      - sed -i -e '/<queries>/i <uses-permission android:name="android.permission.INTERNET"
+        />' src/main/AndroidManifest.xml
+      - sed -i -e '/signing {/,/^}/d' -e '/^publishing {/,/^}/d' ../muzei-api/build.gradle
+
+  - versionName: 3.6.1
+    versionCode: 360003
+    commit: 0f5899e3461ce29249c9be0b09aef387b34726ce
+    subdir: main
+    gradle:
+      - yes
+    forceversion: true
+    rm:
+      - wearable
+      - example-watchface
+      - legacy-standalone
+      - example-unsplash
+      - main/google-services.json
+      - android-client-common/src/main/java/com/google/android/apps/muzei/wearable
+      - main/src/main/java/com/google/android/apps/muzei/wearable
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' -e '/libs.coroutines.playservices/d' -e
+        '/libs.wearable.playservices/d' ../build.gradle ../*/build.gradle
+      - sed -i -e '/signingConfigs.release/d' -e '/FirebasePerformance/,/}$/d' -e
+        '/kotlinx-coroutines-play-services/d' build.gradle
+      - sed -i -e '/props/d' ../muzei-api/build.gradle
+      - pushd src/main/java/com/google/android/apps/muzei
+      - sed -i -e '/com.google.firebase/d' -e '/Firebase.analytics.logEvent.*)$/d'
+        -e '/Firebase.analytics.logEvent.*{$/,/}$/d' -e '/Firebase.analytics.logEvent($/,/)$/d'
+        -e '/Firebase/d' *.kt */*.kt
+      - sed -i -e '/WearableController/d' MuzeiWallpaperService.kt
+      - popd
+      - sed -i -z -E -e 's/<service\s+\S+wearable.*service>//' src/main/AndroidManifest.xml
+      - sed -i -e '/<queries>/i <uses-permission android:name="android.permission.INTERNET"
+        />' src/main/AndroidManifest.xml
+      - sed -i -e '/signing {/,/^}/d' -e '/^publishing {/,/^}/d' ../muzei-api/build.gradle
+
+  - versionName: 3.6.2
+    versionCode: 360005
+    commit: 82f4a194fe34572e4a3fa4670d64560f15d99bb3
+    subdir: main
+    gradle:
+      - yes
+    forceversion: true
+    rm:
+      - wearable
+      - example-watchface
+      - legacy-standalone
+      - example-unsplash
+      - main/google-services.json
+      - android-client-common/src/main/java/com/google/android/apps/muzei/wearable
+      - main/src/main/java/com/google/android/apps/muzei/wearable
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' -e '/libs.coroutines.playservices/d' -e
+        '/libs.wearable.playservices/d' ../build.gradle ../*/build.gradle
+      - sed -i -e '/signingConfigs.release/d' -e '/FirebasePerformance/,/}$/d' -e
+        '/kotlinx-coroutines-play-services/d' build.gradle
+      - sed -i -e '/props/d' ../muzei-api/build.gradle
+      - pushd src/main/java/com/google/android/apps/muzei
+      - sed -i -e '/com.google.firebase/d' -e '/Firebase.analytics.logEvent.*)$/d'
+        -e '/Firebase.analytics.logEvent.*{$/,/}$/d' -e '/Firebase.analytics.logEvent($/,/)$/d'
+        -e '/Firebase/d' *.kt */*.kt
+      - sed -i -e '/WearableController/d' MuzeiWallpaperService.kt
+      - popd
+      - sed -i -z -E -e 's/<service\s+\S+wearable.*service>//' src/main/AndroidManifest.xml
+      - sed -i -e '/<queries>/i <uses-permission android:name="android.permission.INTERNET"
+        />' src/main/AndroidManifest.xml
+      - sed -i -e '/signing {/,/^}/d' -e '/^publishing {/,/^}/d' ../muzei-api/build.gradle
+
+MaintainerNotes: |-
+  Custom version format, use the tag name as version name.
+
+  Since 2.0, source code needs to be patched to get rid of Google Play Services.
+  The "wearable" and "example-watchface" components should be removed
+  completely, the rest of the code has to be cleaned up from FirebaseAnalytics.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v.*$
 UpdateCheckData: version.properties|code\s=\s(\d+)||v(.*)
-CurrentVersion: 3.5.0-alpha03
-CurrentVersionCode: 350004
+CurrentVersion: 3.6.2
+CurrentVersionCode: 360005

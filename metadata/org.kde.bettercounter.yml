@@ -1,6 +1,6 @@
 Categories:
-  - Time
   - Sports & Health
+  - Time
 License: GPL-2.0-only
 AuthorName: Albert Vaca Cintora
 AuthorEmail: albertvaka@gmail.com
@@ -141,7 +141,194 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.4.2
+    versionCode: 24020
+    commit: 49a5a1c76834827b5152d7ff16bde4712d73569c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.0
+    versionCode: 25030
+    commit: 3cd2c857ae7ae83c05953cd2ee03f43ee186e918
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.0
+    versionCode: 30000
+    commit: c835f268b936f5e045d44f41b0631bdf9a1d8ff6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.0.1
+    versionCode: 30001
+    commit: f5a7363160321385c01b7e23f3e6f9372e74ad6c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.1.0
+    versionCode: 30100
+    commit: 9c7e2e59e6ab0bf8da6fe30232f1d8619466fd2c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.2.0
+    versionCode: 30200
+    commit: 9d101b6689c87fadf99e401e1bcad76828cc5041
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.0.0
+    versionCode: 40000
+    commit: 34c21700a0212c7779db948182cf7a3da6972606
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.0.1
+    versionCode: 40001
+    commit: fd3dcbfb5a601956e6a1e6659dc8476a13b7a25f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.1.0
+    versionCode: 40100
+    commit: 89e3cf7c043295f4535032de4609e19b00b2406e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.3.0
+    versionCode: 40300
+    commit: 6db07e2101b43032e8fbdf5bc285361f6c734b8c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.3.1
+    versionCode: 40301
+    commit: 84493c9e593212441553b2242fcdd05d8f17d6de
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.4.1
+    versionCode: 40401
+    commit: 183c3972f028a44aac19819119a0a1e8c1404704
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.5.0
+    versionCode: 40500
+    commit: 154b52b522aed6a44c87e75755f84453c8174809
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.0
+    versionCode: 40600
+    commit: 08772b844ba04089ad91b7dd4c79fc1231531aac
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.1
+    versionCode: 40601
+    commit: 4c82c00edbc89161c96271ffcae55a4e71bc78ad
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.2
+    versionCode: 40602
+    commit: 6715644b6fa1f8c81b28a433f31bc89c36a7468b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.3
+    versionCode: 40603
+    commit: 2097297f1b02fb2c29a2cff42c2da299f66eec14
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.8.0
+    versionCode: 40800
+    commit: 3b889ca65f2f5cd509ad8024cf56ffdeb028db17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.9.1
+    versionCode: 40901
+    commit: 5d1316c7af8df1a4030231bc65291f62801c8d28
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.9.3
+    versionCode: 40903
+    commit: f0a5f1a57c831b48700fd603b5c50b805e13d608
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.9.4
+    versionCode: 40904
+    commit: dcbf3b5a243485f0a9b13e4565813fb0ea5dc9e5
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.4.1
-CurrentVersionCode: 24010
+CurrentVersion: 4.9.4
+CurrentVersionCode: 40904

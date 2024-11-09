@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App depends on a non-free NHS server.
 Categories:
   - Sports & Health
 License: GPL-3.0-or-later
@@ -19,7 +20,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.0.0
 CurrentVersionCode: 1

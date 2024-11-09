@@ -1,6 +1,9 @@
 AntiFeatures:
-  - Tracking
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App depends on a proprietary backend made by IN Groupe.
+  Tracking:
+    en-US: App uses a custom analytics backend, and there is centralized contact tracing
+      as made by the ROBERT protocol.
 Categories:
   - Sports & Health
 License: MPL-2.0
@@ -14,11 +17,11 @@ Changelog: https://gitlab.inria.fr/stopcovid19/stopcovid-android/-/commits/maste
 Name: TousAntiCovid
 AutoName: AntiCovid
 Description: |-
-    Using TousAntiCovid helps to protect your loved ones, yourself and everybody else by alerting you if you have been close to a user who tests positive.
+  Using TousAntiCovid helps to protect your loved ones, yourself and everybody else by alerting you if you have been close to a user who tests positive.
 
-    The TousAntiCovid application is designed for use in France.
+  The TousAntiCovid application is designed for use in France.
 
-    Let’s protect our loved ones, ourselves and everybody else.
+  Let's protect our loved ones, ourselves and everybody else.
 
 RepoType: git
 Repo: https://gitlab.inria.fr/stopcovid19/stopcovid-android.git
@@ -232,7 +235,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml
+      ../coreui/src/main/res/values/styles.xml
 
   - versionName: 3.2.0
     versionCode: 276
@@ -245,7 +248,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml
+      ../coreui/src/main/res/values/styles.xml
 
   - versionName: 3.3.0
     versionCode: 292
@@ -258,7 +261,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml
+      ../coreui/src/main/res/values/styles.xml
 
   - versionName: 3.3.4
     versionCode: 298
@@ -271,7 +274,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml
+      ../coreui/src/main/res/values/styles.xml
 
   - versionName: 3.3.5
     versionCode: 304
@@ -284,7 +287,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml
+      ../coreui/src/main/res/values/styles.xml
 
   - versionName: 3.4.0
     versionCode: 310
@@ -297,7 +300,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml
+      ../coreui/src/main/res/values/styles.xml
 
   - versionName: 3.5.0
     versionCode: 316
@@ -310,7 +313,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml
+      ../coreui/src/main/res/values/styles.xml
 
   - versionName: 3.5.2
     versionCode: 322
@@ -323,7 +326,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml
+      ../coreui/src/main/res/values/styles.xml
 
   - versionName: 3.6.1
     versionCode: 326
@@ -340,7 +343,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
+      ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
 
   - versionName: 3.7.0
     versionCode: 328
@@ -357,7 +360,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
+      ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
 
   - versionName: 3.7.1
     versionCode: 330
@@ -374,7 +377,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
+      ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
 
   - versionName: 3.7.2
     versionCode: 332
@@ -391,7 +394,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
+      ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
 
   - versionName: 3.7.3
     versionCode: 334
@@ -408,7 +411,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
+      ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
 
   - versionName: 3.7.4
     versionCode: 344
@@ -425,7 +428,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
+      ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
 
   - versionName: 3.8.5
     versionCode: 400
@@ -442,7 +445,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
+      ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
 
   - versionName: 3.8.6
     versionCode: 406
@@ -459,7 +462,7 @@ Builds:
       - coreui/src/main/res/font/marianne_*.otf
       - coreui/src/main/res/font/marianne.xml
     prebuild: sed -i -e '/fontFamily.*marianne/d' ../coreui/src/main/res/values/styles_text.xml
-        ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
+      ../coreui/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
 
   - versionName: 4.0.2
     versionCode: 432
@@ -895,13 +898,32 @@ Builds:
       - sed -i -e 's/<lint>/<lint>\n    <issue id="NullSafeMutableLiveData" severity="warning"
         \/>/g' ../lint.xml
 
-MaintainerNotes: |-
-    * Tracking – uses custom Analytics
-    * NonFreeNet – uses proprietary backend server
-    * see https://gitlab.com/fdroid/fdroiddata/-/merge_requests/9345
+  - versionName: 6.0.0
+    versionCode: 584
+    commit: f2789230b652160e009bcac549a947e2b13008b7
+    subdir: stopcovid
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - core-android/src/main/res/font/marianne_*.otf
+      - core-android/src/main/res/font/marianne.xml
+    prebuild:
+      - sed -i -e '/fontFamily.*marianne/d' ../core-android/src/main/res/values/styles_text.xml
+        ../core-android/src/main/res/values/styles.xml ../stopcovid/src/main/res/layout/dcc_widget_no_fav_widget.xml
+      - sed -i -e 's/<lint>/<lint>\n    <issue id="NullSafeMutableLiveData" severity="warning"
+        \/>/g' ../lint.xml
+    scanignore:
+      - dgca-app-core-android/dokka/html/decoder/package-list
+      - stopcovid/src/main/assets/infos/key-figures-map.pb.gz
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-UpdateCheckData: buildSrc/src/main/kotlin/AndroidConfig.kt|VERSION_CODE:\sInt\s=\s(\d+)|.|VERSION_NAME:\sString\s=\s"([\d.]+)"
-CurrentVersion: 4.5.0
-CurrentVersionCode: 583
+MaintainerNotes: |-
+  * Tracking – uses custom Analytics
+  * NonFreeNet – uses proprietary backend server
+  * see https://gitlab.com/fdroid/fdroiddata/-/merge_requests/9345
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 6.0.0
+CurrentVersionCode: 584

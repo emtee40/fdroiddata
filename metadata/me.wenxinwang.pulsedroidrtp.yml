@@ -6,8 +6,8 @@ IssueTracker: https://github.com/wenxin-wang/PulseDroidRtp/issues
 
 AutoName: PulseAudio Rtp Receiver
 Description: |-
-    An audio player used in pair with PulseAudio's `module-rtp-send`,
-    a UDP counterpart to <a href="https://github.com/dront78/PulseDroid">PulseDroid</a>.
+  An audio player used in pair with PulseAudio's `module-rtp-send`,
+  a UDP counterpart to <a href="https://github.com/dront78/PulseDroid">PulseDroid</a>.
 
 RepoType: git
 Repo: https://github.com/wenxin-wang/PulseDroidRtp/
@@ -16,17 +16,6 @@ Builds:
   - versionName: 1.0.1
     versionCode: 1
     commit: v1.0.1
-    subdir: app
-    submodules: true
-    gradle:
-      - yes
-    ndk: r20b
-
-  - versionName: 1.0.2
-    versionCode: 2
-    disable: 'AndroidManifest.xml; lineNumber: 1; columnNumber: 22; XML version "1.0.2"
-        is not supported, only XML 1.0 is supported'
-    commit: v1.0.2
     subdir: app
     submodules: true
     gradle:
@@ -60,7 +49,8 @@ Builds:
       - yes
     ndk: r20b
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.0.6
 CurrentVersionCode: 6

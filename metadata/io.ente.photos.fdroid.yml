@@ -1,19 +1,19 @@
-AntiFeatures:
-  - NonFreeNet
 Categories:
   - Multimedia
 License: AGPL-3.0-only
 AuthorName: ente
-AuthorEmail: support+fdroid@ente.io
+AuthorEmail: support@ente.io
 AuthorWebSite: https://ente.io
 WebSite: https://ente.io
-SourceCode: https://github.com/ente-io/photos-app
-IssueTracker: https://roadmap.ente.io
+SourceCode: https://github.com/ente-io/ente
+IssueTracker: https://github.com/ente-io/ente/issues
+Translation: https://crowdin.com/project/ente-photos-app
+Changelog: https://github.com/ente-io/ente/releases?q=tag%3Aphotos-v0
 
 AutoName: ente
 
 RepoType: git
-Repo: https://github.com/ente-io/photos-app
+Repo: https://github.com/ente-io/ente.git
 
 Builds:
   - versionName: 0.5.16
@@ -35,6 +35,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.5.35
     versionCode: 315
@@ -55,6 +58,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.3
     versionCode: 333
@@ -76,6 +82,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.11
     versionCode: 341
@@ -97,6 +106,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.11
     versionCode: 342
@@ -118,6 +130,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.13
     versionCode: 343
@@ -139,28 +154,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
-
-  - versionName: 0.6.17
-    versionCode: 347
-    disable: https://github.com/ente-io/frame/issues/411
-    commit: 17f1de69e6b4f1ee7d0bf3a390e8eb98ef298a47
-    submodules: true
-    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
-    srclibs:
-      - flutter@3.0.2
-    rm:
-      - ios
-      - thirdparty/extended_image/example
-    build:
-      - cd thirdparty/transistor-background-fetch/android
-      - gradle :tsbackgroundfetch:publishRelease
-      - cd ../../../
-      - export PATH=$$flutter$$/bin:$PATH
-      - flutter config --no-analytics
-      - flutter packages pub get
-      - flutter packages pub run flutter_launcher_icons:main
-      - flutter build apk --flavor fdroid -t lib/main.dart
-    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.19
     versionCode: 349
@@ -182,6 +178,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.34
     versionCode: 364
@@ -203,6 +202,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.35
     versionCode: 365
@@ -224,6 +226,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.38
     versionCode: 368
@@ -245,6 +250,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.45
     versionCode: 375
@@ -266,6 +274,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.51
     versionCode: 381
@@ -287,6 +298,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.52
     versionCode: 382
@@ -308,6 +322,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.55
     versionCode: 385
@@ -329,6 +346,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.70
     versionCode: 390
@@ -350,6 +370,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.6.74
     versionCode: 394
@@ -371,6 +394,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.7.0
     versionCode: 400
@@ -392,6 +418,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.7.8
     versionCode: 408
@@ -413,6 +442,9 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
 
   - versionName: 0.7.20
     versionCode: 420
@@ -434,9 +466,2618 @@ Builds:
       - flutter packages pub run flutter_launcher_icons:main
       - flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.30
+    versionCode: 430
+    commit: ade81ffbbba5b2aa9a69bc13ebda0ee48ea77cb2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.5/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.32
+    versionCode: 432
+    commit: 4cf6bb46636757f5daaf63a5df671cf4cd10efc7
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.5/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.36
+    versionCode: 436
+    commit: f64f1ba58d1cfba21abd274aa0337bfc24c01b4e
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.5/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.43
+    versionCode: 443
+    commit: 0504563434cedcbede075563d01561a0cbe72f37
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.5/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.44
+    versionCode: 444
+    commit: 488c001663e72dca192134431575ac4fecfdf9e2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.5/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.48
+    versionCode: 448
+    commit: 1bab4021945929314e08482fd01a8cd80aeddb93
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.5/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.62
+    versionCode: 462
+    commit: bf09dc4ffe5c390150a6e4c6f2d94dcf113a0d73
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.66
+    versionCode: 466
+    commit: fdb883715678350b7a3d7b68c0f79cb52826ef84
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.74
+    versionCode: 474
+    commit: 4362c166fd141ad0b53f63acd49080bf8e06fa82
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.77
+    versionCode: 477
+    commit: d2e6ffb195b59cbaacf7c2c19e78f19d01c2262a
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.80
+    versionCode: 480
+    commit: 0c1f956f4f52ebdeaf79254964e6e57f238f7217
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.89
+    versionCode: 489
+    commit: 640a43d524dbf772b91bfe33f6a2d80498187eaf
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.92
+    versionCode: 492
+    commit: dc6ebe0a541747aa2a8c388de4ea228851b0f635
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.93
+    versionCode: 493
+    commit: e78d2d693bbbea0a80b23b2f9ecf67eb004b59a7
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - thirdparty/extended_image/example
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/packages/flutter_tools/gradle/flutter.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.100
+    versionCode: 500
+    commit: 58d767c5795413f645c941cd13278bfc7bf81957
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.102
+    versionCode: 502
+    commit: 99cccab2a9fae1b154726e9a2a11574ff6d77f29
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter packages pub run flutter_launcher_icons:main
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.108
+    versionCode: 508
+    commit: b1fa16964dd0ebcad0769d57f01d037133676ef1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.7.116
+    versionCode: 516
+    commit: a1374ac6dd834c4b2b3ab0acc64b500d20abf14f
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.0
+    versionCode: 520
+    commit: a0a01787f584b3ffed2eaae4e870e2383439865a
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.1
+    versionCode: 521
+    commit: 5d6407adc55d2c014d12b6ec9de6d3477b6a071d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.4
+    versionCode: 524
+    commit: 9c6c7f400541873a85ad375e984777571fcbefd9
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.11
+    versionCode: 531
+    commit: 211665f9ee4f5958804f0e8fee1379be367c8416
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.13
+    versionCode: 533
+    commit: 90a1d08ceccaa173a4305607263a7412db263b58
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@fb883de16ff3fbaaaa5ce84d829911c8a5894d2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.1.6/android/libs/com/transistorsoft/tsbackgroundfetch/0.5.7/tsbackgroundfetch-0.5.7.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r21
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.44
+    versionCode: 564
+    commit: fdd61926ed5a73bf7ce92cac86a0aa753df177bd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make gcc-multilib libc-dev
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - rustup@1.25.2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.75.0 -t i686-linux-android
+        x86_64-linux-android -t armv7-linux-androideabi aarch64-linux-androi
+      - source $HOME/.cargo/env
+      - bash ./scripts/build_isar.sh
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.2.1/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r25c
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.48
+    versionCode: 568
+    commit: 719e7cace3a43786a5430bce7209433cfa585832
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make gcc-multilib libc-dev
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - rustup@1.25.2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.75.0 -t i686-linux-android
+        x86_64-linux-android -t armv7-linux-androideabi aarch64-linux-androi
+      - source $HOME/.cargo/env
+      - bash ./scripts/build_isar.sh
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.2.1/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r25c
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.55
+    versionCode: 575
+    commit: abb3f15f4876c05839ce9c66e4a6f126bb956b62
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make gcc-multilib libc-dev
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - rustup@1.25.2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.75.0 -t i686-linux-android
+        x86_64-linux-android -t armv7-linux-androideabi aarch64-linux-androi
+      - source $HOME/.cargo/env
+      - bash ./scripts/build_isar.sh
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.2.1/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r25c
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.56
+    versionCode: 576
+    commit: 14f773e7c2825833602f346abbcc7a6c2dd276fd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make gcc-multilib libc-dev
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - rustup@1.25.2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.75.0 -t i686-linux-android
+        x86_64-linux-android -t armv7-linux-androideabi aarch64-linux-androi
+      - source $HOME/.cargo/env
+      - bash ./scripts/build_isar.sh
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.2.1/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r25c
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.62
+    versionCode: 582
+    commit: 5ad92d0603d12d455a702079d6dda1c05d4bb318
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make gcc-multilib libc-dev
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - rustup@1.25.2
+    rm:
+      - ios
+      - android/app/src/main/jniLibs/*/*libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - .pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - thirdparty/flutter/bin/cache
+    scandelete:
+      - thirdparty/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.75.0 -t i686-linux-android
+        x86_64-linux-android -t armv7-linux-androideabi aarch64-linux-androi
+      - source $HOME/.cargo/env
+      - bash ./scripts/build_isar.sh
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.2.1/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: r25c
+    antifeatures:
+      NonFreeNet:
+        en-US: App uses non-libre sync server.
+
+  - versionName: 0.8.71
+    versionCode: 591
+    commit: 1e1633bb456c2df12bb0648adb0a758b092ff2d8
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make gcc-multilib libc-dev
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - rustup@1.25.2
+    rm:
+      - auth
+      - cli
+      - desktop
+      - mobile/ios
+      - server
+      - web
+      - mobile/android/app/src/main/jniLibs/*/libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.75.0 -t i686-linux-android
+        x86_64-linux-android -t armv7-linux-androideabi aarch64-linux-androi
+      - source $HOME/.cargo/env
+      - bash ./scripts/build_isar.sh
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.2.1/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Tethered to developer server
+
+  - versionName: 0.8.74
+    versionCode: 594
+    commit: 07808d6139b21b8b2d4a4765039ce85089724e45
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make gcc-multilib libc-dev
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - rustup@1.25.2
+    rm:
+      - auth
+      - cli
+      - desktop
+      - mobile/ios
+      - server
+      - web
+      - mobile/android/app/src/main/jniLibs/*/libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.75.0 -t i686-linux-android
+        x86_64-linux-android -t armv7-linux-androideabi aarch64-linux-androi
+      - source $HOME/.cargo/env
+      - bash ./scripts/build_isar.sh
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.2.1/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Tethered to developer server
+
+  - versionName: 0.8.75
+    versionCode: 595
+    commit: a8e9934a8ac088f1efe1c91ba61fe7b6d1c48c58
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make gcc-multilib libc-dev
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - rustup@1.25.2
+    rm:
+      - auth
+      - cli
+      - desktop
+      - mobile/ios
+      - server
+      - web
+      - mobile/android/app/src/main/jniLibs/*/libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.75.0 -t i686-linux-android
+        x86_64-linux-android -t armv7-linux-androideabi aarch64-linux-androi
+      - source $HOME/.cargo/env
+      - bash ./scripts/build_isar.sh
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.2.1/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Tethered to developer server
+
+  - versionName: 0.8.79
+    versionCode: 599
+    commit: d9a93ddad68aa938f0382033cea23be7b80cc0ec
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make gcc-multilib libc-dev
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - rustup@1.25.2
+    rm:
+      - auth
+      - cli
+      - desktop
+      - mobile/ios
+      - server
+      - web
+      - mobile/android/app/src/main/jniLibs/*/libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.75.0 -t i686-linux-android
+        x86_64-linux-android -t armv7-linux-androideabi aarch64-linux-androi
+      - source $HOME/.cargo/env
+      - bash ./scripts/build_isar.sh
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.2.1/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Tethered to developer server
+
+  - versionName: 0.8.82
+    versionCode: 602
+    commit: 60b0f4920b46c6f6c95fd32a012dd54c8cb8a052
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make gcc-multilib libc-dev
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - rustup@1.25.2
+    rm:
+      - auth
+      - cli
+      - desktop
+      - mobile/ios
+      - server
+      - web
+      - mobile/android/app/src/main/jniLibs/*/libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.75.0 -t i686-linux-android
+        x86_64-linux-android -t armv7-linux-androideabi aarch64-linux-androi
+      - source $HOME/.cargo/env
+      - bash ./scripts/build_isar.sh
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.2/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Tethered to developer server
+
+  - versionName: 0.8.95
+    versionCode: 615
+    commit: d16f98cf07a5104c1a249bbcdf3b896066dbecdf
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - mobile/ios
+      - server
+      - web
+      - mobile/android/app/src/main/jniLibs/*/libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.2/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
+
+  - versionName: 0.9.0
+    versionCode: 700
+    commit: cfcbd0fbb2895d36ab7c0a590f1bbc5949251c97
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - mobile/ios
+      - server
+      - web
+      - mobile/android/app/src/main/jniLibs/*/libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.2/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
+
+  - versionName: 0.9.16
+    versionCode: 916
+    commit: e41f306ac822b1a666bc45d35ce23f8dde65226c
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - mobile/ios
+      - server
+      - web
+      - mobile/android/app/src/main/jniLibs/*/libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.2/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
+
+  - versionName: 0.9.27
+    versionCode: 927
+    commit: 2c0209bf58fb82294ec26ca0040b144100f8b6c2
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - mobile/ios
+      - server
+      - web
+      - mobile/android/app/src/main/jniLibs/*/libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.2/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
+
+  - versionName: 0.9.35
+    versionCode: 935
+    commit: 193b27a18634b37a73ead5adecd79e0a348bf520
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - docs
+      - infra
+      - mobile/ios
+      - server
+      - web
+      - mobile/android/app/src/main/jniLibs/*/libtensor*.so
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.2/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
+
+  - versionName: 0.9.42
+    versionCode: 942
+    commit: 6e0990d6584dc6275659fcff6e456b5f1060ca75
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - docs
+      - infra
+      - mobile/ios
+      - server
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.2/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
+
+  - versionName: 0.9.46
+    versionCode: 946
+    commit: f995589a02a422bb6aa379d9b090228813946483
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@6feb11c93f4e5debf7792e7e7c444f3d62ac733c
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - docs
+      - infra
+      - mobile/ios
+      - server
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e '/debug-symbols-default/d' bundle_default.sh
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' -e 's/single-branch --branch main/single-branch
+        --branch media_kit-v1.1.10/' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.2/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.2/tsbackgroundfetch-1.0.2.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
+
+  - versionName: 0.9.47
+    versionCode: 947
+    commit: 1a1b3ebf12e99c6231b2d6b3708104bc2de44056
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@ca8d2f7a9cf1880dfaf9bcb2c2176fab19e0b124
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - docs
+      - infra
+      - mobile/ios
+      - server
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e '/debug-symbols-default/d' bundle_default.sh
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' -e 's/single-branch --branch main/single-branch
+        --branch media_kit-v1.1.10/' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.7/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.4/tsbackgroundfetch-1.0.4.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
+
+  - versionName: 0.9.49
+    versionCode: 949
+    commit: f0c29fef5c6a79c43f9b64abb10f47e7e36aeaf2
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@ca8d2f7a9cf1880dfaf9bcb2c2176fab19e0b124
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - docs
+      - infra
+      - mobile/ios
+      - server
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e '/debug-symbols-default/d' bundle_default.sh
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' -e 's/single-branch --branch main/single-branch
+        --branch media_kit-v1.1.10/' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.7/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.4/tsbackgroundfetch-1.0.4.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
+
+  - versionName: 0.9.53
+    versionCode: 953
+    commit: 7e0a3cdd6c4a273a23cbaf376b8374773b26250a
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@ca8d2f7a9cf1880dfaf9bcb2c2176fab19e0b124
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - docs
+      - infra
+      - mobile/ios
+      - server
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e '/debug-symbols-default/d' bundle_default.sh
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' -e 's/single-branch --branch main/single-branch
+        --branch media_kit-v1.1.10/' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.7/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.4/tsbackgroundfetch-1.0.4.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
+
+  - versionName: 0.9.58
+    versionCode: 958
+    commit: 224b79b64800921ec5b339c1d02e70fa17395819
+    subdir: mobile
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
+        nasm python3-jsonschema wget meson python3-jinja2 zip
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+      - transistor-background-fetch@ca8d2f7a9cf1880dfaf9bcb2c2176fab19e0b124
+      - media-kit-libmpv-android-video-build@v1.1.5
+      - mpv@056072bf958ffeaadd2f5a69e37f3079f18d4ead
+    rm:
+      - auth
+      - cli
+      - desktop
+      - docs
+      - infra
+      - mobile/ios
+      - server
+      - web
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - thirdparty/flutter/bin/flutter config --no-analytics
+      - thirdparty/flutter/bin/flutter pub get
+      - export file=$(ls .pub-cache/hosted/pub.dev/media_kit_libs_android_video-*/android/build.gradle)
+      - export tag=$(sed -n -E 's|.*download/(v[0-9.]+)/.*|\1|p' $file | head -n 1)
+      - sed -i -e '/downloadDependencies/,/dependsOn/d' $file
+      - cd $$media-kit-libmpv-android-video-build$$
+      - git checkout -f $tag
+      - cd buildscripts
+      - sed -i -e '/debug-symbols-default/d' bundle_default.sh
+      - sed -i -e 's/sudo//g' -e 's|./gradlew|gradle|g' *.sh
+      - sed -i -e '/download-sdk/d' download.sh
+      - sed -i -e '/mkdir -p deps/a mv $$mpv$$ mpv' -e 's/single-branch --branch main/single-branch
+        --branch media_kit-v1.1.10/' include/download-deps.sh
+      - sed -i -e '/git reset --hard/d' patch.sh
+    scanignore:
+      - mobile/.pub-cache/hosted/pub.dev/background_fetch-*/android/build.gradle
+      - mobile/thirdparty/flutter/bin/cache
+    scandelete:
+      - mobile/thirdparty/flutter
+      - mobile/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export FLUTTER=$(pwd)/thirdparty/flutter/bin/
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/armeabi-v7a/
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86_64/
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/arm64-v8a/
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so $PUB_CACHE/hosted/pub.dev/flutter_sodium-0.2.0/android/src/main/jniLibs/x86/
+      - pushd $$transistor-background-fetch$$/android/tsbackgroundfetch/
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+      - mv $$transistor-background-fetch$$/android/tsbackgroundfetch/build/outputs/aar/tsbackgroundfetch-release.aar
+        $PUB_CACHE/hosted/pub.dev/background_fetch-1.3.7/android/libs/com/transistorsoft/tsbackgroundfetch/1.0.4/tsbackgroundfetch-1.0.4.aar
+      - pushd $$media-kit-libmpv-android-video-build$$/buildscripts
+      - mkdir sdk
+      - ln -s $$SDK$$ ./sdk/android-sdk-linux
+      - PATH=$FLUTTER:$PATH bash bundle_default.sh
+      - popd
+      - mkdir -p build/media_kit_libs_android_video/output
+      - cp $$media-kit-libmpv-android-video-build$$/output/default-*.jar build/media_kit_libs_android_video/output
+      - thirdparty/flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
+    ndk: 25.2.9519653
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads assets (like ML models, release info and FAQs) from Ente's
+          CDN
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^fdroid-
-UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 0.7.20
-CurrentVersionCode: 420
+UpdateCheckData: mobile/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 0.9.58
+CurrentVersionCode: 958

@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: OpenWeatherMap service itself is not open source
 Categories:
   - Science & Education
 License: MIT
@@ -9,10 +10,10 @@ IssueTracker: https://github.com/sanderbaas/WeatherWidget/issues
 Name: Weather Widget
 AutoName: Weather
 Description: |-
-    Add one or more widgets to home screen with weather 5 to 7 day weather forecast
-    in a location.
+  Add one or more widgets to home screen with weather 5 to 7 day weather forecast
+  in a location.
 
-    <i>NonFreeNet:</i> OpenWeatherMap service itself is not open source.
+  <i>NonFreeNet:</i> OpenWeatherMap service itself is not open source.
 
 RepoType: git
 Repo: https://github.com/sanderbaas/WeatherWidget.git
@@ -35,14 +36,6 @@ Builds:
   - versionName: 1.2.0
     versionCode: 12
     commit: v1.2.0
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 1.3.0
-    versionCode: 13
-    disable: lintVitalRelease fails
-    commit: v1.3.0
     subdir: app
     gradle:
       - yes
@@ -124,7 +117,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.5.1
 CurrentVersionCode: 24

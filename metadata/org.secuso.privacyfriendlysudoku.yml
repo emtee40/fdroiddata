@@ -3,8 +3,8 @@ Categories:
 License: GPL-3.0-only
 AuthorName: SECUSO - Security Usability Society
 AuthorEmail: contact@secuso.org
-AuthorWebSite: https://secuso.aifb.kit.edu/english/
-WebSite: https://secuso.org/pfa
+AuthorWebSite: https://secuso.aifb.kit.edu/english/105.php
+WebSite: https://secuso.aifb.kit.edu/english/Sudoku.php
 SourceCode: https://github.com/SecUSo/privacy-friendly-sudoku
 IssueTracker: https://github.com/SecUSo/privacy-friendly-sudoku/issues
 Changelog: https://github.com/SecUSo/privacy-friendly-sudoku/blob/HEAD/CHANGELOG.md
@@ -39,14 +39,6 @@ Builds:
   - versionName: 2.1.1
     versionCode: 5
     commit: v2.1.1
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 2.1.2
-    versionCode: 6
-    disable: google() missing
-    commit: v2.1.2
     subdir: app
     gradle:
       - yes
@@ -93,7 +85,23 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '3.1'
+    versionCode: 13
+    commit: f876af0aae27299e6945d0c9c4136d498eebefeb
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 3.1.1
+    versionCode: 14
+    commit: 579b5364f1c1a977f45424ca1892e924fe74b7a4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.0.3
-CurrentVersionCode: 12
+CurrentVersion: 3.1.1
+CurrentVersionCode: 14

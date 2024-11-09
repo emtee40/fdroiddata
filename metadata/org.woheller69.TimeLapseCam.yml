@@ -25,7 +25,56 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.2'
+    versionCode: 12
+    commit: e8eff4a5690e03ec40ec7929264004061710ff1d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.3'
+    versionCode: 13
+    commit: eebb105d8dc6e12bce112869bc2076db46c71a72
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.4'
+    versionCode: 14
+    commit: 0c16d57b8cd3f7d175f4da99f0252a9bc5ea23bc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 15
+    commit: cb788a5293649c9049668ceae466c651b9e40b68
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 16
+    commit: 4a8d858627b79dfcd103b7d97f3d3ccf28a07ee2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 17
+    commit: 74aeaaa1e0b03dea3743e03b4a3c3ac7e1d38276
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.8'
+    versionCode: 18
+    commit: 6c645b3c2dd38818091ce890dfcaffe1631e2af0
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags V.*
-CurrentVersion: '1.1'
-CurrentVersionCode: 11
+CurrentVersion: '1.8'
+CurrentVersionCode: 18

@@ -53,7 +53,54 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.8'
+    versionCode: 28
+    commit: 095d2352a21e418c3c3c841a4965eec7f09c70ef
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 30
+    commit: cf9f0edd0b0e7983059b2827ec43135af7a74fa7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '3.1'
+    versionCode: 31
+    commit: 3e56b4cf986310f2cd9a8875f3f00cba6eb9fc45
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.2'
+    versionCode: 32
+    commit: 16847426b39195246a54636466fb63b42b83e1f1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.3'
+    versionCode: 33
+    commit: e994ac4581042384502f4543ef5588d36192f80b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.4'
+    versionCode: 34
+    disable: https://github.com/izivkov/RemoteVideoCam/issues/28
+    commit: b9c7c7d29f71158b3844007dbd61eab0fc6a80eb
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.7'
-CurrentVersionCode: 27
+CurrentVersion: '3.4'
+CurrentVersionCode: 34

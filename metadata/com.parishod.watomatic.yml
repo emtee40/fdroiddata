@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeDep
+  NonFreeDep:
+    en-US: Requires WhatsApp to be present on the device.
 Categories:
   - Internet
   - Phone & SMS
@@ -10,6 +11,8 @@ AuthorWebSite: https://twitter.com/adeekshith
 WebSite: https://adeekshith.github.io/watomatic
 SourceCode: https://github.com/adeekshith/watomatic
 IssueTracker: https://github.com/adeekshith/watomatic/issues
+Translation: https://translate.watomatic.app
+Changelog: https://github.com/adeekshith/watomatic/releases
 Donate: https://paypal.me/deek
 Liberapay: dk
 Bitcoin: bc1qv6zmgw845pktq9jr5qztup80qufu0yg46ur2kw
@@ -17,7 +20,7 @@ Bitcoin: bc1qv6zmgw845pktq9jr5qztup80qufu0yg46ur2kw
 AutoName: Watomatic
 
 RepoType: git
-Repo: https://github.com/adeekshith/watomatic
+Repo: https://github.com/adeekshith/watomatic.git
 
 Builds:
   - versionName: '1.9'
@@ -137,7 +140,15 @@ Builds:
       - Default
     output: build/outputs/apk/Default/release/app-Default-release-unsigned.apk
 
+  - versionName: '1.29'
+    versionCode: 29
+    commit: 8f0c9897202bd2669676b66ada7579e3c32b9576
+    subdir: app
+    gradle:
+      - Default
+    output: build/outputs/apk/Default/release/app-Default-release-unsigned.apk
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.21'
-CurrentVersionCode: 26
+CurrentVersion: '1.29'
+CurrentVersionCode: 29

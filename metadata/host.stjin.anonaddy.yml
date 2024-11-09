@@ -3,13 +3,13 @@ Categories:
 License: MIT
 AuthorName: Stjin
 AuthorWebSite: https://stjin.host/
-SourceCode: https://gitlab.com/Stjin/anonaddy-android
-IssueTracker: https://gitlab.com/Stjin/anonaddy-android/-/issues
+SourceCode: https://github.com/anonaddy/addy-android
+IssueTracker: https://github.com/anonaddy/addy-android/issues
 
-AutoName: AnonAddy
+AutoName: addy.io
 
 RepoType: git
-Repo: https://gitlab.com/Stjin/anonaddy-android.git
+Repo: https://github.com/anonaddy/addy-android.git
 
 Builds:
   - versionName: 1.0.2
@@ -18,6 +18,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: 1.1.1
     versionCode: 9
@@ -25,6 +28,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: 1.1.2
     versionCode: 11
@@ -32,6 +38,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: 1.1.3
     versionCode: 12
@@ -39,6 +48,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: 2.0.0
     versionCode: 16
@@ -46,6 +58,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: 2.0.1
     versionCode: 18
@@ -53,6 +68,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: 2.0.2
     versionCode: 19
@@ -60,6 +78,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: 2.0.3
     versionCode: 20
@@ -67,6 +88,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v3.0.0
     versionCode: 23
@@ -78,6 +102,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - main
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v3.1.0
     versionCode: 24
@@ -89,6 +116,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - main
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v3.1.1
     versionCode: 25
@@ -100,6 +130,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - main
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v3.1.2
     versionCode: 26
@@ -111,6 +144,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - main
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v3.1.3
     versionCode: 27
@@ -122,6 +158,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - main
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v3.2.1
     versionCode: 29
@@ -133,6 +172,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - main
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v3.3.5
     versionCode: 35
@@ -144,6 +186,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - main
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v3.3.6
     versionCode: 36
@@ -155,6 +200,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - main
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v4.0.2
     versionCode: 334020100
@@ -169,6 +217,9 @@ Builds:
     rm:
       - app-wearos
     prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v4.1.0
     versionCode: 334100200
@@ -183,6 +234,9 @@ Builds:
     rm:
       - app-wearos
     prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v4.2.0
     versionCode: 334200100
@@ -197,6 +251,9 @@ Builds:
     rm:
       - app-wearos
     prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v4.2.1
     versionCode: 334210100
@@ -211,6 +268,9 @@ Builds:
     rm:
       - app-wearos
     prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v4.3.0
     versionCode: 334300100
@@ -225,6 +285,9 @@ Builds:
     rm:
       - app-wearos
     prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v4.3.1
     versionCode: 334310100
@@ -239,6 +302,9 @@ Builds:
     rm:
       - app-wearos
     prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v4.3.2
     versionCode: 334320100
@@ -253,6 +319,9 @@ Builds:
     rm:
       - app-wearos
     prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v4.4.0
     versionCode: 334400100
@@ -263,6 +332,9 @@ Builds:
     rm:
       - app-wearos
     prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v4.5.0
     versionCode: 334500100
@@ -273,6 +345,9 @@ Builds:
     rm:
       - app-wearos
     prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
 
   - versionName: v4.5.1
     versionCode: 334510100
@@ -283,11 +358,333 @@ Builds:
     rm:
       - app-wearos
     prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v4.5.2
+    versionCode: 334520100
+    commit: cc8ea00e6d54f130c77cadaac6d770b66dda1c22
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v4.5.3
+    versionCode: 334530100
+    commit: a6858226999737fe627d9af3f8e468df2e09a4be
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v4.6.0
+    versionCode: 334600100
+    commit: 4681818fea9fb7a6d0691ed8a53db97dc7dba1d8
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v4.6.1
+    versionCode: 334610100
+    commit: 9b39df0db30da78396f525bbe1820afa50688ff2
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v4.6.2
+    versionCode: 334620100
+    commit: e967c0edc115a61beb045369e9ffd7bde11c97ac
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v4.6.3
+    versionCode: 334630100
+    commit: 3a016e698fb2d10b6cc90a2b8ba2a6da478e97cc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v4.6.4
+    versionCode: 334640100
+    commit: a1ca260e0ed4e57141cb66d70f191598c7bd50ff
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v4.7.0
+    versionCode: 344700100
+    commit: 5dab6a8980b668f19418b4d0746d1b281f43c7a6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v4.8.0
+    versionCode: 344800100
+    commit: 2469d19adb2a151c4e0be7d0e10a1ba55bc9f4f9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v4.8.1
+    versionCode: 344810200
+    commit: 005ad60fb12fde63d564fb01a81831831891dd0c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v5.0.0
+    versionCode: 345000100
+    commit: abbc63818ca83ad2cac59748461a65358de41ec4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+    antifeatures:
+      NonFreeNet:
+        en-US: Checks for updates on gitlab.com
+
+  - versionName: v5.0.1
+    versionCode: 345010100
+    commit: 0c329e2b5e26cc86d6648e26543a7f2d43fc2ca6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.0.2
+    versionCode: 345020100
+    commit: 026787156c8a544a8fea840e8d1c56f5124dc4a3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.1.0
+    versionCode: 345100200
+    commit: 098f934961ec03e912072c03e96f01685ef1986b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.2.0
+    versionCode: 345200100
+    commit: c8d7079fa025ad31de472328f5f3634dbd0a2566
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.2.1
+    versionCode: 345210100
+    commit: a35387335adfcea4b42c64c0553a9d423bd79811
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.2.2
+    versionCode: 345220100
+    commit: c8bbc518046a1c9bc7967e46814a4ad39a853245
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.2.3
+    versionCode: 345230100
+    commit: 58824511abbda7f407ed50ea956acd721e650bf9
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.2.6
+    versionCode: 345260100
+    commit: 0b17fb06a059b67ec7e7e45aa2c5db77770ad5e0
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.2.8
+    versionCode: 345280100
+    commit: 588d8eae2c05e52d3ddf35bd4ed1215a21fe0407
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.2.9
+    versionCode: 345290200
+    commit: f553812637942929811839127e5d2f0541b3f1bc
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.3.0
+    versionCode: 355300100
+    commit: ca3123c3f402cacb01871ff6e30e51366b0a196d
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.3.1
+    versionCode: 355310100
+    commit: 931afad34f3197454ee9eb2edc6a35bd21bda04c
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.3.2
+    versionCode: 355320200
+    commit: ac5d5ee3d7ca14cf88711c1c92ec991fb1ce5ef3
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
+
+  - versionName: v5.4.0
+    versionCode: 355400600
+    commit: a54fcb54fef09871b1e8165c535756de66e66e93
+    subdir: app
+    gradle:
+      - gplayless
+    rm:
+      - app-wearos
+    prebuild: sed -i -e '/app-wearos/d' ../settings.gradle.kts build.gradle.kts
 
 MaintainerNotes: com/google/android/gms/wearable and com/google/android/gms/tasks/Task
-    are stub classes.
+  are stub classes. Check for update feature is opt-in.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v4.5.1
-CurrentVersionCode: 334510100
+CurrentVersion: v5.4.0
+CurrentVersionCode: 355400600

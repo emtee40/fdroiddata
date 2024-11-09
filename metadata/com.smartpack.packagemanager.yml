@@ -13,7 +13,7 @@ Donate: https://smartpack.github.io/PackageManager/donations
 AutoName: Package Manager
 
 RepoType: git
-Repo: https://github.com/SmartPack/PackageManager
+Repo: https://github.com/SmartPack/PackageManager.git
 
 Builds:
   - versionName: v3.0
@@ -321,7 +321,46 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: v6.8
+    versionCode: 68
+    commit: 171ed09ec36c9a9d849e1cacd58b35326e7e9d5c
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v6.9
+    versionCode: 69
+    commit: 1eb80d2fc61eea7d9b0ce4ecdcf00992d6ae162a
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v7.0
+    versionCode: 70
+    commit: f13008b9204ce916fc9773b8ae52376db585457b
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: v7.1
+    versionCode: 71
+    commit: 0f10bdbef7f80d293f9e84374b92c0312cee71ec
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v7.2
+    versionCode: 72
+    commit: ae05038ff9ca1844937638d9f89c6feb48cf6c9e
+    subdir: app
+    gradle:
+      - fdroid
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v6.7
-CurrentVersionCode: 67
+CurrentVersion: v7.2
+CurrentVersionCode: 72

@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Fetches app news from Github.
 Categories:
   - Connectivity
 License: GPL-3.0-or-later
@@ -12,7 +13,7 @@ Changelog: https://github.com/fesch/CanZE/blob/HEAD/app/src/main/java/lu/fisch/c
 AutoName: CanZE
 
 RepoType: git
-Repo: https://github.com/fesch/CanZE
+Repo: https://github.com/fesch/CanZE.git
 
 Builds:
   - versionName: '1.62'

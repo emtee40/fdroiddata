@@ -4,7 +4,6 @@ License: MIT
 AuthorName: y20k
 WebSite: https://codeberg.org/y20k/transistor
 SourceCode: https://codeberg.org/y20k/transistor
-IssueTracker: https://codeberg.org/y20k/transistor/issues
 Translation: https://hosted.weblate.org/projects/transistor/strings/
 Changelog: https://codeberg.org/y20k/transistor/releases
 
@@ -304,14 +303,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 3.0.4
-    versionCode: 54
-    disable: 'error: cannot find symbol import android.support.v4.BuildConfig'
-    commit: v3.0.4
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: 3.0.5
     versionCode: 55
     commit: v3.0.5
@@ -598,7 +589,73 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.1.4
+    versionCode: 94
+    commit: 78afc5d26c426d2b8b31a2cb57abac72ee0dd487
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.5
+    versionCode: 95
+    commit: 60ffea48e91b40c9a0b43c7468b85b7c1c8b5588
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.6
+    versionCode: 96
+    commit: 25994258c7a3886655c778bcf811e2b9b4c19d37
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.1.7
+    versionCode: 97
+    commit: 57a6904ad89dd3f817f49ed262732401a714aed2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.1.8
+    versionCode: 98
+    commit: e4ad7ba810226bc94d2b6eb89d8d56972d31934e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.1.9
+    versionCode: 99
+    commit: 5e1ecbf17758a073124ac22fe7db685091b943f1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.1
+    versionCode: 101
+    commit: 02f1ff847cd2095f51dac94d944fd1d53a3014f0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/media3-cast/d' build.gradle
+
+  - versionName: 4.2.2
+    versionCode: 102
+    commit: 59eb94e4ab5917ae84fb5445891d73c05b3dfe9f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/media3-cast/d' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.1.3
-CurrentVersionCode: 93
+CurrentVersion: 4.2.2
+CurrentVersionCode: 102

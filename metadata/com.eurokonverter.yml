@@ -1,14 +1,16 @@
 Categories:
   - Money
 License: MIT
-SourceCode: https://github.com/vbresan/eurokonverter_android
-IssueTracker: https://github.com/vbresan/eurokonverter_android/issues
+WebSite: https://eurokonverter.com
+SourceCode: https://github.com/vbresan/eurokonverter
+IssueTracker: https://github.com/vbresan/eurokonverter/issues
+Changelog: https://github.com/vbresan/eurokonverter/releases
 
 AutoName: Euro konverter
 
 RepoType: git
-Repo: https://github.com/vbresan/eurokonverter_android
-Binaries: https://github.com/vbresan/eurokonverter_android/releases/download/%c/com.eurokonverter-%v-fdroid-release.apk
+Repo: https://github.com/vbresan/eurokonverter.git
+Binaries: https://github.com/vbresan/eurokonverter/releases/download/%c/com.eurokonverter-%v-fdroid-release.apk
 
 Builds:
   - versionName: '1.1'
@@ -112,6 +114,8 @@ Builds:
       - $$reproducible-apk-tools$$/fix-newlines.py build/outputs/apk/fdroid/release/*.apk
         fixed.apk 'META-INF/services/*'
       - zipalign 4 fixed.apk out.apk
+
+AllowedAPKSigningKeys: 5dd357de3e2e5c878138e852beea31745dec0ba5b75a20c25cad1c8e3e63ddef
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags

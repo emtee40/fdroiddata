@@ -1,43 +1,45 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on non-free data sources.
 Categories:
   - Money
 License: GPL-3.0-or-later
-WebSite: http://boilr.mobi
+WebSite: https://boilr.mobi
 SourceCode: https://github.com/drpout/boilr
 IssueTracker: https://github.com/drpout/boilr/issues
 Translation: https://hosted.weblate.org/engage/boilr/?
 Changelog: https://github.com/drpout/boilr/releases
 Donate: https://boilr.mobi/#donate
 Bitcoin: 1PHuSWfuAwR6oz9qV93rTdMVozfM85Qqxx
+Litecoin: LUC5BRtvrJRTcp2LAP1XJe2h718rchQXuR
 
 AutoName: Boilr
 Description: |-
-    Monitor Bitcoin, cryptocurrencies, cryptoassets, futures and options, and
-    trigger alarms according to user settings. 90+ exchanges and counting.
+  Monitor Bitcoin, cryptocurrencies, cryptoassets, futures and options, and
+  trigger alarms according to user settings. 90+ exchanges and counting.
 
-    Supports 2 alarm types:
+  Supports 2 alarm types:
 
-    * Price Hit - Triggered when price crosses the alarm’s upper or lower limit.
-    * Price Change - Triggered when price changes more than X amount (in currency or percentage)
+  * Price Hit - Triggered when price crosses the alarm's upper or lower limit.
+  * Price Change - Triggered when price changes more than X amount (in currency or percentage)
 
-    in a specified time frame (e.g. 15 min). It uses a rolling time frame: price is
-    fetched with a given update interval (e.g. 30 s) and compared with the price
-    fetched one time frame ago (e.g. 15 min ago).
+  in a specified time frame (e.g. 15 min). It uses a rolling time frame: price is
+  fetched with a given update interval (e.g. 30 s) and compared with the price
+  fetched one time frame ago (e.g. 15 min ago).
 
-    Sound and vibration are configurable globally, and individually for each alarm.
-    Lists of exchanges, pairs and alarms are fully searchable, allowing quick setup
-    and configuration. The alarm list behaves as your ticker, where you can reorder
-    your alarms and directly change their limits. Triggered alarms ring, displaying
-    their status, until you turn them off. Just like an alarm clock. Alarms can also
-    be set to snooze automatically on price retrace. Market data is retrieved
-    directly from the exchanges via Wi-Fi or Mobile Data (if allowed).
+  Sound and vibration are configurable globally, and individually for each alarm.
+  Lists of exchanges, pairs and alarms are fully searchable, allowing quick setup
+  and configuration. The alarm list behaves as your ticker, where you can reorder
+  your alarms and directly change their limits. Triggered alarms ring, displaying
+  their status, until you turn them off. Just like an alarm clock. Alarms can also
+  be set to snooze automatically on price retrace. Market data is retrieved
+  directly from the exchanges via Wi-Fi or Mobile Data (if allowed).
 
-    Boilr supports all <a href="https://github.com/drpout/libdynticker/#supported-exchanges
-    exchanges">available on libdynticker</a>, as all their pairs.
+  Boilr supports all <a href="https://github.com/drpout/libdynticker/#supported-exchanges
+  exchanges">available on libdynticker</a>, as all their pairs.
 
-    For a version history check the <a href="https://github.com/drpout/boilr/releases">GitHub
-    releases page</a>.
+  For a version history check the <a href="https://github.com/drpout/boilr/releases">GitHub
+  releases page</a>.
 
 RepoType: git
 Repo: https://github.com/drpout/boilr.git
@@ -46,7 +48,7 @@ Builds:
   - versionName: 0.0.0
     versionCode: 1
     commit: 0.0.0
-    maven: 'yes'
+    maven: yes
     srclibs:
       - libdynticker@0.0.0
       - libpricealarm@0.0.0
@@ -63,7 +65,7 @@ Builds:
   - versionName: 0.2.0
     versionCode: 3
     commit: 0.2.0
-    maven: 'yes'
+    maven: yes
     srclibs:
       - libdynticker@0.2.0
       - libpricealarm@0.0.1
@@ -80,7 +82,7 @@ Builds:
   - versionName: 0.2.1
     versionCode: 4
     commit: 0.2.1
-    maven: 'yes'
+    maven: yes
     srclibs:
       - libdynticker@0.2.0
       - libpricealarm@0.0.1
@@ -97,7 +99,7 @@ Builds:
   - versionName: 0.3.0
     versionCode: 5
     commit: 0.3.0
-    maven: 'yes'
+    maven: yes
     srclibs:
       - libdynticker@0.3.0
       - libpricealarm@0.1.0
@@ -114,7 +116,7 @@ Builds:
   - versionName: 0.4.0
     versionCode: 6
     commit: 0.4.0
-    maven: 'yes'
+    maven: yes
     srclibs:
       - libdynticker@0.4.0
       - libpricealarm@0.1.0
@@ -131,7 +133,7 @@ Builds:
   - versionName: 0.5.0
     versionCode: 7
     commit: 0.5.0
-    maven: 'yes'
+    maven: yes
     prebuild:
       - mvn install:install-file -DgroupId=android -DartifactId=android -Dversion=5.1_r1
         -Dpackaging=jar -Dfile=$$SDK$$/platforms/android-22/android.jar
@@ -141,7 +143,7 @@ Builds:
   - versionName: 0.6.0
     versionCode: 8
     commit: 0.6.0
-    maven: 'yes'
+    maven: yes
     prebuild:
       - mvn install:install-file -DgroupId=android -DartifactId=android -Dversion=5.1_r1
         -Dpackaging=jar -Dfile=$$SDK$$/platforms/android-22/android.jar
@@ -151,14 +153,14 @@ Builds:
   - versionName: 0.7.0
     versionCode: 9
     commit: 0.7.0
-    maven: 'yes'
+    maven: yes
     prebuild:
       - mvn install:install-file -DgroupId=android -DartifactId=android -Dversion=7.0_r2
         -Dpackaging=jar -Dfile=$$SDK$$/platforms/android-24/android.jar
       - mvn install:install-file -Dfile=$$SDK$$/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar
         -DpomFile=$$SDK$$/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.pom
 
-ArchivePolicy: 2 versions
+ArchivePolicy: 2
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 CurrentVersion: 0.7.0

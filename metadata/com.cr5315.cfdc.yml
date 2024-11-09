@@ -7,8 +7,8 @@ IssueTracker: https://github.com/cr5315/countdown-for-dashclock/issues
 
 AutoName: Countdown for DashClock
 Description: |-
-    Extension for https://f-droid.org/packages/net.nurik.roman.dashclock that displays the time remaining
-    until an event.
+  Extension for https://f-droid.org/packages/net.nurik.roman.dashclock that displays the time remaining
+  until an event.
 
 RepoType: git
 Repo: https://github.com/cr5315/countdown-for-dashclock.git
@@ -22,10 +22,11 @@ Builds:
       - yes
 
 MaintainerNotes: |-
-    Upstream deleted repo and pushed a new one by the same name which only
-    contains 2.1+.
+  Upstream deleted repo and pushed a new one by the same name which only
+  contains 2.1+.
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: '2.1'
 CurrentVersionCode: 27

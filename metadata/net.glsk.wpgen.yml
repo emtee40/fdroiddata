@@ -8,9 +8,9 @@ Donate: https://glsk.net/donate/
 
 AutoName: WPGen
 Description: |-
-    Android app which can generate solid color, diagonal gradient or plasma effect
-    static multicolor wallpapers. You can choose from a number of pre-defined colors
-    or add your own.
+  Android app which can generate solid color, diagonal gradient or plasma effect
+  static multicolor wallpapers. You can choose from a number of pre-defined colors
+  or add your own.
 
 RepoType: git
 Repo: https://gitlab.com/glsk/wpgen.git
@@ -33,22 +33,6 @@ Builds:
   - versionName: '1.2'
     versionCode: 12
     commit: v1.2
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: '1.3'
-    versionCode: 13
-    disable: missing @drawable/ic_action_content_save resource
-    commit: v1.3
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 1.3.2
-    versionCode: 132
-    disable: lint error
-    commit: v1.3.2
     subdir: app
     gradle:
       - yes

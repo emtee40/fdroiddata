@@ -1,50 +1,44 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on openfoodfacts.net/.org, openproductfacts.org, openstreetmap.org
+      and sentry.io servers
+  Tracking:
+    en-US: Analytics are opt-in but the app connects to sentry.io from the start,
+      and connects even if rejected
 Categories:
   - Sports & Health
 License: Apache-2.0
 AuthorName: Open Food Facts
-AuthorEmail: contact@openfoodfacts.org
+AuthorEmail: mobile@openfoodfacts.org
 AuthorWebSite: https://world.openfoodfacts.org/
-SourceCode: https://github.com/openfoodfacts/openfoodfacts-androidapp
-IssueTracker: https://github.com/openfoodfacts/openfoodfacts-androidapp/issues
+SourceCode: https://github.com/openfoodfacts/smooth-app
+IssueTracker: https://github.com/openfoodfacts/smooth-app/issues
 Translation: https://translate.openfoodfacts.org/
-Changelog: https://github.com/openfoodfacts/openfoodfacts-androidapp/blob/HEAD/CHANGELOG.md
+Changelog: https://github.com/openfoodfacts/smooth-app/blob/develop/CHANGELOG.md
 Donate: https://donate.openfoodfacts.org
 
-AutoName: Open Food
+AutoName: Open Food Facts
 Description: |-
-    Scan food products or their barcode to obtain data on ingredients, additives,
-    allergens, nutrition facts…
-    The app allows to view the 1.500.000 products already contained in the free and open database Open Food Facts.
-    More importantly, it also lets you easily be part of the solution:
-    * contribute pictures and data for missing products
-    * team up with the Open Food Facts Artificial Intelligence by answering its blue questions
+  Scan food products or their barcode to obtain data on ingredients, additives, allergens, nutrition facts…
+  The app allows to view the 3.000.000 products already contained in the free and open database Open Food Facts.
+  More importantly, it also lets you easily be part of the solution:
+  * contribute pictures and data for missing products
+  * team up with the Open Food Facts Artificial Intelligence by answering its blue questions
 
-    You will get:
-    * The Nutri-Score grade, from A to E : Nutritional quality
-    * NOVA groups, from 1 to 4 : Avoid ultra-processed foods (Group 4)
-    * CO2 levels and Eco-Score: find the environmental impact of food
-    * Vegan, vegetarian and palm-oil detector
-    * Allergens, labels (bio, gluten free, vegan, vegetarian, halal, kosher ...), traceability information (packaging codes, origins of ingredients).
+  You will get:
+  * The Nutri-Score grade, from A to E : Nutritional quality
+  * NOVA groups, from 1 to 4 : Avoid ultra-processed foods (Group 4)
+  * CO2 levels and Eco-Score: find the environmental impact of food
+  * Vegan, vegetarian and palm-oil detector
+  * Allergens, labels (bio, gluten free, vegan, vegetarian, halal, kosher ...), traceability information (packaging codes, origins of ingredients).
 
-    To discover the Open Food Facts and Open Beauty Facts projects and help us open food and cosmetics,
-    please visit <a href="https://world.openfoodfacts.org/discover">openfoodfacts.org</a> where you can discover how to contribute.
+  To discover the Open Food Facts and Open Beauty Facts projects and help us open food and cosmetics,
+  please visit <a href="https://world.openfoodfacts.org/discover">openfoodfacts.org</a> where you can discover how to contribute.
 
 RepoType: git
-Repo: https://github.com/openfoodfacts/openfoodfacts-androidapp
+Repo: https://github.com/openfoodfacts/smooth-app.git
 
 Builds:
-  - versionName: 0.1.5
-    versionCode: 5
-    disable: https://github.com/openfoodfacts/OpenFoodFacts-androidApp/issues/25
-    commit: 0.1.5
-    subdir: app
-    gradle:
-      - yes
-    prebuild:
-      - sed -i -e "/support-v4/s/21.1.1/21.0.3/g" -e "/support-v4/acompile('com.github.afollestad.material-dialogs:commons:0.8.5.7@aar')
-        {\ntransitive = true\n}\n" -e '/com.afollestad:material-dialogs/d' build.gradle
-      - sed -i -e '/jcenter/amaven { url "https://jitpack.io" }' ../build.gradle
-
   - versionName: 0.1.5-dev
     versionCode: 6
     commit: 4c5c210fbcfa42f84daf26a1ad5e500c302be85c
@@ -185,7 +179,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.7.3
     versionCode: 36
@@ -193,7 +187,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.7.4
     versionCode: 37
@@ -201,7 +195,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.8.2
     versionCode: 40
@@ -209,7 +203,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.8.5
     versionCode: 41
@@ -217,7 +211,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.8.6
     versionCode: 42
@@ -225,7 +219,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.8.7
     versionCode: 43
@@ -233,7 +227,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.8.8
     versionCode: 44
@@ -241,7 +235,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.8.9
     versionCode: 46
@@ -249,7 +243,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.9.0
     versionCode: 50
@@ -257,7 +251,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.9.0.1
     versionCode: 51
@@ -265,7 +259,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.9.0.2
     versionCode: 52
@@ -273,7 +267,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 0.9.0.3
     versionCode: 53
@@ -281,7 +275,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 2.7.7
     versionCode: 277
@@ -289,16 +283,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
-
-  - versionName: 2.7.9
-    versionCode: 279
-    disable: Could not find com.mikepenz:materialdrawer:6.0.2
-    commit: 2.7.9
-    subdir: app
-    init: sed -i '/javaMaxHeapSize/d' build.gradle
-    gradle:
-      - 'off'
+      - off
 
   - versionName: 2.8.2
     versionCode: 282
@@ -306,7 +291,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 2.8.5
     versionCode: 285
@@ -314,7 +299,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 2.8.7
     versionCode: 287
@@ -322,7 +307,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 2.8.8
     versionCode: 288
@@ -330,7 +315,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 2.9.0
     versionCode: 290
@@ -338,7 +323,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 2.9.7
     versionCode: 297
@@ -346,7 +331,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 2.9.8
     versionCode: 298
@@ -354,7 +339,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 3.1.0
     versionCode: 310
@@ -362,7 +347,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 3.1.2
     versionCode: 312
@@ -370,7 +355,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 3.1.6
     versionCode: 316
@@ -378,7 +363,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 3.1.7
     versionCode: 317
@@ -386,7 +371,7 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 3.2.2
     versionCode: 322
@@ -394,14 +379,14 @@ Builds:
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
-      - 'off'
+      - off
 
   - versionName: 3.2.5
     versionCode: 325
     commit: 3.2.5
     subdir: app
     gradle:
-      - 'off'
+      - off
     prebuild:
       - sed -i 's/\r$//' ../gradle/wrapper/gradle-wrapper.properties
       - sed -i '/javaMaxHeapSize/d' build.gradle
@@ -411,7 +396,7 @@ Builds:
     commit: 3.2.8
     subdir: app
     gradle:
-      - 'off'
+      - off
     prebuild:
       - sed -i 's/\r$//' ../gradle/wrapper/gradle-wrapper.properties
       - sed -i '/javaMaxHeapSize/d' build.gradle
@@ -421,7 +406,7 @@ Builds:
     commit: 3.6.8
     subdir: app
     gradle:
-      - 'off'
+      - off
     prebuild:
       - sed -i 's/\r$//' ../gradle/wrapper/gradle-wrapper.properties
       - sed -i '/sentry-android-gradle-plugin/d' ../build.gradle.kts
@@ -437,8 +422,289 @@ Builds:
       - offFdroid
     prebuild: sed -i -e '/play:core/d' -e '/libs.barcode.scanning/d' build.gradle.kts
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-UpdateCheckData: app/build.gradle.kts|versionCode = (\d+)|.|versionName = "(.*)"
-CurrentVersion: 3.9.0
-CurrentVersionCode: 582
+  - versionName: 4.8.0
+    versionCode: 1149
+    commit: v4.8.0
+    subdir: packages/smooth_app
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - packages/smooth_app/ios
+      - packages/scanner/ml_kit
+    prebuild:
+      - version=$(cat ../../flutter-version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - sed -i -e '/ml_kit/d' -e '/apple_/d' -e '/google_play/d' -e 's/version:.*/version:\
+        $$VERSION$$+$$VERCODE$$/' pubspec.yaml
+      - pushd android
+      - grep -rli 'org.openfoodfacts.scanner' * | xargs -i@ sed -i 's/org.openfoodfacts.scanner/openfoodfacts.github.scrachx.openfood/g'
+        @
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub upgrade
+    scandelete:
+      - packages/smooth_app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk -t lib/entrypoints/android/main_fdroid.dart
+
+  - versionName: 4.9.0
+    versionCode: 1228
+    commit: v4.9.0
+    subdir: packages/smooth_app
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - packages/smooth_app/ios
+      - packages/scanner/ml_kit
+    prebuild:
+      - version=$(cat ../../flutter-version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - sed -i -e '/ml_kit/d' -e '/apple_/d' -e '/google_play/d' -e 's/version:.*/version:\
+        $$VERSION$$+$$VERCODE$$/' pubspec.yaml
+      - pushd android
+      - grep -rli 'org.openfoodfacts.scanner' * | xargs -i@ sed -i 's/org.openfoodfacts.scanner/openfoodfacts.github.scrachx.openfood/g'
+        @
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub upgrade
+    scandelete:
+      - packages/smooth_app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk -t lib/entrypoints/android/main_fdroid.dart
+
+  - versionName: 4.10.0
+    versionCode: 1230
+    commit: v4.10.0
+    subdir: packages/smooth_app
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - packages/smooth_app/ios
+      - packages/scanner/ml_kit
+    prebuild:
+      - version=$(cat ../../flutter-version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - sed -i -e '/ml_kit/d' -e '/apple_/d' -e '/google_play/d' -e 's/version:.*/version:\
+        $$VERSION$$+$$VERCODE$$/' pubspec.yaml
+      - pushd android
+      - grep -rli 'org.openfoodfacts.scanner' * | xargs -i@ sed -i 's/org.openfoodfacts.scanner/openfoodfacts.github.scrachx.openfood/g'
+        @
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub upgrade
+    scandelete:
+      - packages/smooth_app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk -t lib/entrypoints/android/main_fdroid.dart
+
+  - versionName: 4.11.0
+    versionCode: 1242
+    commit: v4.11.0
+    subdir: packages/smooth_app
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - packages/smooth_app/ios
+      - packages/scanner/ml_kit
+    prebuild:
+      - version=$(cat ../../flutter-version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - sed -i -e '/ml_kit/d' -e '/apple_/d' -e '/google_play/d' -e 's/version:.*/version:\
+        $$VERSION$$+$$VERCODE$$/' pubspec.yaml
+      - pushd android
+      - grep -rli 'org.openfoodfacts.scanner' * | xargs -i@ sed -i 's/org.openfoodfacts.scanner/openfoodfacts.github.scrachx.openfood/g'
+        @
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub upgrade
+    scandelete:
+      - packages/smooth_app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk -t lib/entrypoints/android/main_fdroid.dart
+
+  - versionName: 4.12.0
+    versionCode: 1251
+    commit: v4.12.0
+    subdir: packages/smooth_app
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - packages/smooth_app/ios
+      - packages/scanner/ml_kit
+    prebuild:
+      - version=$(cat ../../flutter-version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - sed -i -e '/ml_kit/d' -e '/apple_/d' -e '/google_play/d' -e 's/version:.*/version:\
+        $$VERSION$$+$$VERCODE$$/' pubspec.yaml
+      - pushd android
+      - grep -rli 'org.openfoodfacts.scanner' * | xargs -i@ sed -i 's/org.openfoodfacts.scanner/openfoodfacts.github.scrachx.openfood/g'
+        @
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub upgrade
+    scandelete:
+      - packages/smooth_app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk -t lib/entrypoints/android/main_fdroid.dart
+
+  - versionName: 4.14.0
+    versionCode: 1280
+    commit: v4.14.0
+    subdir: packages/smooth_app
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - packages/smooth_app/ios
+      - packages/scanner/ml_kit
+    prebuild:
+      - version=$(cat ../../flutter-version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - sed -i -e '/ml_kit/d' -e '/apple_/d' -e '/google_play/d' -e 's/version:.*/version:\
+        $$VERSION$$+$$VERCODE$$/' pubspec.yaml
+      - sed -i -e 's|app_flutter/smoothie.db|smoothie.db|' android/app/src/main/res/xml/backup_scheme.xml
+      - pushd android
+      - grep -rli 'org.openfoodfacts.scanner' * | xargs -i@ sed -i 's/org.openfoodfacts.scanner/openfoodfacts.github.scrachx.openfood/g'
+        @
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub upgrade
+    scandelete:
+      - packages/smooth_app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk -t lib/entrypoints/android/main_fdroid.dart
+
+  - versionName: 4.15.0
+    versionCode: 1331
+    commit: v4.15.0
+    subdir: packages/smooth_app
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - packages/smooth_app/ios
+      - packages/scanner/ml_kit
+    prebuild:
+      - version=$(cat ../../flutter-version.txt)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - sed -i -e '/ml_kit/d' -e '/apple_/d' -e '/google_play/d' -e 's/version:.*/version:\
+        $$VERSION$$+$$VERCODE$$/' pubspec.yaml
+      - sed -i -e 's|app_flutter/smoothie.db|smoothie.db|' android/app/src/main/res/xml/backup_scheme.xml
+      - pushd android
+      - grep -rli 'org.openfoodfacts.scanner' * | xargs -i@ sed -i 's/org.openfoodfacts.scanner/openfoodfacts.github.scrachx.openfood/g'
+        @
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scanignore:
+      - packages/smooth_app/assets/animations/off
+    scandelete:
+      - packages/smooth_app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk -t lib/entrypoints/android/main_fdroid.dart
+
+  - versionName: 4.16.0
+    versionCode: 1346
+    commit: v4.16.0
+    subdir: packages/smooth_app
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - packages/smooth_app/ios
+      - packages/scanner/ml_kit
+      - packages/app_store/google_play
+      - packages/app_store/apple_app_store
+    prebuild:
+      - git -C $$flutter$$ checkout -f $(cat ../../flutter-version.txt)
+      - sed -i -e '/ml_kit/d' -e '/apple_/d' -e '/google_play/d' -e 's/version:.*/version:\
+        $$VERSION$$+$$VERCODE$$/' pubspec.yaml
+      - sed -i -e 's|app_flutter/smoothie.db|smoothie.db|' android/app/src/main/res/xml/backup_scheme.xml
+      - pushd android
+      - grep -rli 'org.openfoodfacts.scanner' * | xargs -i@ sed -i 's/org.openfoodfacts.scanner/openfoodfacts.github.scrachx.openfood/g'
+        @
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scanignore:
+      - packages/app_store/uri_store/pubspec.yaml
+      - packages/app_store/shared/pubspec.yaml
+      - packages/scanner/shared/pubspec.yaml
+      - packages/scanner/zxing/pubspec.yaml
+    scandelete:
+      - packages/smooth_app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk -t lib/entrypoints/android/main_fdroid.dart
+
+  - versionName: 4.16.0
+    versionCode: 1348
+    commit: v4.16.0
+    subdir: packages/smooth_app
+    output: build/app/outputs/apk/release/app-release-unsigned.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - packages/smooth_app/ios
+      - packages/scanner/ml_kit
+      - packages/app_store/google_play
+      - packages/app_store/apple_app_store
+    prebuild:
+      - git -C $$flutter$$ checkout -f $(cat ../../flutter-version.txt)
+      - sed -i -e '/ml_kit/d' -e '/apple_/d' -e '/google_play/d' -e 's/version:.*/version:\
+        $$VERSION$$+$$VERCODE$$/' pubspec.yaml
+      - sed -i -e 's|app_flutter/smoothie.db|smoothie.db|' android/app/src/main/res/xml/backup_scheme.xml
+      - pushd android
+      - grep -rli 'org.openfoodfacts.scanner' * | xargs -i@ sed -i 's/org.openfoodfacts.scanner/openfoodfacts.github.scrachx.openfood/g'
+        @
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+    scanignore:
+      - packages/app_store/uri_store/pubspec.yaml
+      - packages/app_store/shared/pubspec.yaml
+      - packages/scanner/shared/pubspec.yaml
+      - packages/scanner/zxing/pubspec.yaml
+    scandelete:
+      - packages/smooth_app/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk -t lib/entrypoints/android/main_fdroid.dart
+
+AutoUpdateMode: Version v%v
+UpdateCheckMode: HTTP
+UpdateCheckData: https://github.com/openfoodfacts/smooth-app/releases/latest/download/version-code.txt|(\d+)|https://github.com/openfoodfacts/smooth-app/releases/latest|releases/tag/v([\d.]+)
+CurrentVersion: 4.16.0
+CurrentVersionCode: 1348

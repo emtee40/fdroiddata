@@ -6,9 +6,9 @@ IssueTracker: https://github.com/jevonlongdell/nztides/issues
 
 AutoName: NZ Tides
 Description: |-
-    Based on lookup table of official LINZ tide predictions so should be accurate.
-    Transcription errors are unlikely but possible. This program shouldn't be used
-    where life or property is at risk.
+  Based on lookup table of official LINZ tide predictions so should be accurate.
+  Transcription errors are unlikely but possible. This program shouldn't be used
+  where life or property is at risk.
 
 RepoType: git
 Repo: https://github.com/jevonlongdell/nztides
@@ -82,7 +82,29 @@ Builds:
       - packages
       - tidelookup
 
+  - versionName: '19'
+    versionCode: 19
+    commit: 84e2d488daae48c3686b3626424f5e3688f96a65
+    subdir: nztides_app/app
+    gradle:
+      - yes
+    rm:
+      - nztides_app_eclipse_obselete
+      - packages
+      - tidelookup
+
+  - versionName: '21'
+    versionCode: 21
+    commit: f7f2ffc8c375e51783bbdc7073c82568beb1e5a3
+    subdir: nztides_app/app
+    gradle:
+      - yes
+    rm:
+      - nztides_app_eclipse_obselete
+      - packages
+      - tidelookup
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '18'
-CurrentVersionCode: 18
+CurrentVersion: '21'
+CurrentVersionCode: 21

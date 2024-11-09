@@ -1,8 +1,9 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on Youtube for music
 Categories:
   - Multimedia
-License: Apache-2.0
+License: GPL-3.0-only
 AuthorName: vfsfitvnm
 SourceCode: https://github.com/vfsfitvnm/ViMusic
 IssueTracker: https://github.com/vfsfitvnm/ViMusic/issues
@@ -155,7 +156,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 0.5.4
 CurrentVersionCode: 20

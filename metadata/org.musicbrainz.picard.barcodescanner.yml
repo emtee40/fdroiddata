@@ -11,7 +11,7 @@ Liberapay: phw
 AutoName: Picard Barcode Scanner
 
 RepoType: git
-Repo: https://github.com/phw/PicardBarcodeScanner
+Repo: https://github.com/phw/PicardBarcodeScanner.git
 
 Builds:
   - versionName: '1.1'
@@ -97,7 +97,40 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.6.2
+    versionCode: 30
+    commit: b2d084eca747cbd88931e13b17ab8fd766b3a815
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 32
+    commit: 790cfaa97829e4eec3bde9a8af5cb03b0adb905d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.6.4
+    versionCode: 33
+    commit: d407b83db739844656d4c9203688e6d8b5b30a01
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.6.1
-CurrentVersionCode: 29
+CurrentVersion: 1.6.4
+CurrentVersionCode: 33

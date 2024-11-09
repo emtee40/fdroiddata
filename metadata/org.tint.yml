@@ -6,14 +6,14 @@ IssueTracker: https://github.com/Anasthase/TintBrowser/issues
 
 AutoName: Tint Browser
 Description: |-
-    Enhanced version of the stock browser, featuring:
+  Enhanced version of the stock browser, featuring:
 
-    * All basic browser features
-    * Auto-hiding controls
-    * Import/export bookmarks from/to SD card
-    * Disable search suggestions
-    * Custom search engines
-    * Addons e.g https://f-droid.org/packages/org.tint.adblock
+  * All basic browser features
+  * Auto-hiding controls
+  * Import/export bookmarks from/to SD card
+  * Disable search suggestions
+  * Custom search engines
+  * Addons e.g https://f-droid.org/packages/org.tint.adblock
 
 RepoType: git
 Repo: https://github.com/Anasthase/TintBrowser.git
@@ -51,9 +51,10 @@ Builds:
     versionCode: 10
     commit: '1.8'
     srclibs:
-      - 1:TintAddon@1.8
+      - TintAddon@1.8
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: '1.8'
 CurrentVersionCode: 10

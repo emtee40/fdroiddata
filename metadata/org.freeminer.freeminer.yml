@@ -8,19 +8,19 @@ Changelog: https://github.com/freeminer/freeminer/blob/HEAD/CHANGELOG.md#changel
 
 Name: freeminer
 Description: |-
-    Fork of https://f-droid.org/packages/net.minetest.minetest, a block sandbox game and a game engine
-    inspired by InfiniMiner, Minecraft and the like.
+  Fork of https://f-droid.org/packages/net.minetest.minetest, a block sandbox game and a game engine
+  inspired by InfiniMiner, Minecraft and the like.
 
-    Features:
+  Features:
 
-    * Explore, dig and build in a voxel world, and craft stuff from raw materials to help you along the way.
-    * Play with your friends on public servers or self hosted servers
-    * Easy plugin based Modding API used to add blocks, tools and features to the game.
-    * Voxel based lighting with gameplay consequences (light caves and buildings with torches)
-    * Almost infinite world and several beautiful map generators.
-    * Runs natively on Windows, Linux, OS X, FreeBSD and Android
-    * Supports multiple languages, translated by the community.
-    * A constant development to add new functionalities for end-users
+  * Explore, dig and build in a voxel world, and craft stuff from raw materials to help you along the way.
+  * Play with your friends on public servers or self hosted servers
+  * Easy plugin based Modding API used to add blocks, tools and features to the game.
+  * Voxel based lighting with gameplay consequences (light caves and buildings with torches)
+  * Almost infinite world and several beautiful map generators.
+  * Runs natively on Windows, Linux, OS X, FreeBSD and Android
+  * Supports multiple languages, translated by the community.
+  * A constant development to add new functionalities for end-users
 
 RepoType: git
 Repo: https://github.com/freeminer/freeminer.git
@@ -43,36 +43,6 @@ Builds:
   - versionName: 0.4.12.6.15
     versionCode: 15
     commit: 65dd040a3ef160e8967e96b2c6abf7c772859d30
-    subdir: build/android
-    submodules: true
-    output: bin/freeminer-release-unsigned.apk
-    scanignore:
-      - build/windows
-    build:
-      - printf "%s\n%s\n%s" "ANDROID_NDK = $$NDK$$" "NDK_MODULE_PATH = $$NDK$$/toolchains"
-        "SDKFOLDER = $$SDK$$" > path.cfg
-      - for n in 1 2 3; do make release
-      - break; done
-
-  - versionName: 0.4.12.6.25
-    versionCode: 25
-    disable: build fails
-    commit: 70af3286ae50eb640463c32bb0a9cd5941bf6e94
-    subdir: build/android
-    submodules: true
-    output: bin/freeminer-release-unsigned.apk
-    scanignore:
-      - build/windows
-    build:
-      - printf "%s\n%s\n%s" "ANDROID_NDK = $$NDK$$" "NDK_MODULE_PATH = $$NDK$$/toolchains"
-        "SDKFOLDER = $$SDK$$" > path.cfg
-      - for n in 1 2 3; do make release
-      - break; done
-
-  - versionName: 0.4.13.7.48
-    versionCode: 48
-    disable: requires freetype
-    commit: d6191aa610df21720d0f13650e51772d23df1e52
     subdir: build/android
     submodules: true
     output: bin/freeminer-release-unsigned.apk
@@ -189,19 +159,6 @@ Builds:
       - break; done
 
   - versionName: 0.4.14.8.120
-    versionCode: 120
-    disable: build error
-    commit: a6624b0fc4efd0e242bd937bc431dd3871e55557
-    subdir: build/android_fm
-    submodules: true
-    output: bin/freeminer-release-unsigned.apk
-    build:
-      - printf "%s\n%s\n%s" "ANDROID_NDK = $$NDK$$" "NDK_MODULE_PATH = $$NDK$$/toolchains"
-        "SDKFOLDER = $$SDK$$" > path.cfg
-      - for n in 1 2 3; do make -j $(nproc || sysctl -n hw.ncpu || echo 2)
-      - break; done
-
-  - versionName: 0.4.14.8.120
     versionCode: 121
     commit: a6624b0fc4efd0e242bd937bc431dd3871e55557
     subdir: build/android_fm
@@ -213,33 +170,7 @@ Builds:
       - for n in 1 2 3; do make -j $(nproc || sysctl -n hw.ncpu || echo 2) TARGET_arm64=1
       - break; done
 
-  - versionName: 0.4.14.8.120
-    versionCode: 122
-    disable: build error
-    commit: a6624b0fc4efd0e242bd937bc431dd3871e55557
-    subdir: build/android_fm
-    submodules: true
-    output: bin/freeminer-release-unsigned.apk
-    build:
-      - printf "%s\n%s\n%s" "ANDROID_NDK = $$NDK$$" "NDK_MODULE_PATH = $$NDK$$/toolchains"
-        "SDKFOLDER = $$SDK$$" > path.cfg
-      - for n in 1 2 3; do make -j $(nproc || sysctl -n hw.ncpu || echo 2) TARGET_x86=1
-      - break; done
-
-  - versionName: 0.4.14.8.120
-    versionCode: 123
-    disable: build error
-    commit: a6624b0fc4efd0e242bd937bc431dd3871e55557
-    subdir: build/android_fm
-    submodules: true
-    output: bin/freeminer-release-unsigned.apk
-    build:
-      - printf "%s\n%s\n%s" "ANDROID_NDK = $$NDK$$" "NDK_MODULE_PATH = $$NDK$$/toolchains"
-        "SDKFOLDER = $$SDK$$" > path.cfg
-      - for n in 1 2 3; do make -j $(nproc || sysctl -n hw.ncpu || echo 2) TARGET_x86_64=1
-      - break; done
-
-ArchivePolicy: 4 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 0.4.14.8.120

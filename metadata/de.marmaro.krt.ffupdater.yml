@@ -870,7 +870,300 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
+  - versionName: 77.7.6
+    versionCode: 132
+    commit: f912ca7d36583a12b2cc6ea4c91aab85c6d19510
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 77.7.7
+    versionCode: 133
+    commit: 43cc68b49ade076686136ffcb9c4928a0a5b077e
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 77.7.9
+    versionCode: 135
+    commit: 1d4203ef2bcc6badffe6feb18b5583059d759fa9
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 77.7.10
+    versionCode: 136
+    commit: 9d7e2dfaa35e2a4e8fd7ba3e61ad497744422061
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 77.7.11
+    versionCode: 137
+    commit: 5f6c92d4b701e1c89eee4dfb30c70183d4ccbcc3
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 77.7.12
+    versionCode: 138
+    commit: d923122cce3beea7f95994aab045418328703fdb
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 77.7.14
+    versionCode: 140
+    commit: 7f729927e0454c550a0c062f8dd2052559d69ea3
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 77.7.15
+    versionCode: 141
+    commit: 4d50f20fbd800a19ba0222792397bd3bc186394f
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 78.0.1
+    versionCode: 143
+    commit: d67d0d7120a53b1893b8b6a7b2c7ad1bd28c768c
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.0.3
+    versionCode: 145
+    commit: da46e9a4ab9edd65652df38aba92b94b516b367a
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.0.5
+    versionCode: 147
+    commit: a45d29311344168924fdb06dc42bae864812c6b8
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.0.6
+    versionCode: 148
+    commit: ee2bf26a4591f805f5a96b9e9bf8b643862e163c
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.1.0
+    versionCode: 149
+    commit: 3f330844d10ed354709b514f0819ca07b0095656
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.1.1
+    versionCode: 150
+    commit: 0cae39632d9342bfd163572cc2d6771a7ad4c095
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.1.2
+    versionCode: 151
+    commit: b59d449ac0875c1763f0e1338bd1ab98b8734115
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.1.3
+    versionCode: 152
+    commit: 25c852aac226c57ba95c09537587a5c706c04dd7
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.1.5
+    versionCode: 154
+    commit: f75d6746be518e20270670b15de6a5ea5c5c02f8
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.1.6
+    versionCode: 155
+    commit: 03f1fac0315d92086e7049685d81539c7c7c7867
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.1.7
+    versionCode: 156
+    commit: db68c7cb9281fb344f40340577dfb4c45fa7b60f
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.2.4
+    versionCode: 161
+    commit: 7a16398b371d9e36d3d73d0045781c128de01fda
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.2.5
+    versionCode: 162
+    commit: d00ff8cafa5fe18be132450606bc1006a0fe7882
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.3.0
+    versionCode: 164
+    commit: 26bd9847135f47cbbd1c6768d8a607e799f8acc3
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 78.4.0
+    versionCode: 165
+    commit: 327e8a25bd69bfa98314186b9c5323eef0de8c11
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 79.0.1
+    versionCode: 167
+    commit: cf33f93466f86cb3dc3439c62b7698dafe302508
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 79.1.0
+    versionCode: 168
+    commit: b35603c8795695c5cbba8545dd9cb38ee29d63af
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 79.1.1
+    versionCode: 169
+    commit: 139efd2725f60015b63c3a6a73dd5405a49d8b26
+    subdir: ffupdater
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 79.2.0
+    versionCode: 170
+    commit: d5951737f6f06e854ac4a6690854201b653b22e7
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 79.2.2
+    versionCode: 172
+    commit: 0ccc0bc6569c6e0f7a9b08c7c96d3d7abcf37c5f
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 79.2.3
+    versionCode: 173
+    commit: a7c8d0b7b5ed825a481d12e97f7db9b48dcc4d28
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 79.2.4
+    versionCode: 174
+    commit: 40d89766da478470172e4eb03c9138efae2f392c
+    subdir: ffupdater
+    gradle:
+      - yes
+
+  - versionName: 79.2.5
+    versionCode: 175
+    commit: 3d6f6331c749c6317259b9e4353fa2ec22f3c396
+    subdir: ffupdater
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys:
+  - f4e642bb85cbbcfd7302b2cbcbd346993a41067c27d995df492c9d0d38747e62
+  - 194370c0f729e44ec16c9f7308df645a6b086a071a770e431db5d2eb567be7be
+
+AutoUpdateMode: None
 UpdateCheckMode: Tags
-CurrentVersion: 77.7.5
-CurrentVersionCode: 131
+CurrentVersion: 79.2.5
+CurrentVersionCode: 175

@@ -140,7 +140,470 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '6.3'
+    versionCode: 63
+    commit: a83428ec79dbe45c9cfb33f79edf62a293ca1c23
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.5'
+    versionCode: 65
+    commit: a8609e619d4d0bbdeab3d35a4281a68ef49b7c9c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.6'
+    versionCode: 66
+    commit: 8e6ba8eb6c4be527fdacba505089c0c562d21d98
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.7'
+    versionCode: 67
+    commit: 17240c9fe1f54e691da81e279affcf919e220277
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.0'
+    versionCode: 70
+    commit: 551a1c7d73c23775b5ce54ed0e96b9d8f66586f7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.2'
+    versionCode: 72
+    commit: f5966d4a3d2a14f0c67bfefbb4e9c1e63014f01f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.3'
+    versionCode: 73
+    commit: ec2eeb820303b13dbe4368ec3b4fc114aa1f9c3b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.5'
+    versionCode: 75
+    commit: 94dbf38bee8d33611981bd59c7e6e77cef7f94cc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.8'
+    versionCode: 78
+    commit: 3b6ae3c5f4d64be498e67e8ab80818f42c9313ac
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '7.9'
+    versionCode: 79
+    commit: 5c9f0e9d1c8961f89ce618d881beb4d74a38e669
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.2'
+    versionCode: 82
+    commit: 532004aff971ef45374bf0b20d4db45f3f392ca2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.3'
+    versionCode: 83
+    commit: 390b0e51887d97730a772760ffdf14a0553c6e43
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.4'
+    versionCode: 84
+    commit: b9fca96edfa75bdc89d15c36f62ed8130572da02
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.6'
+    versionCode: 86
+    commit: ba048e51ef1982152f8ec2de3a5cb15d34442f2f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.7'
+    versionCode: 87
+    commit: 713104653bd33ffeaaef9d1c5f60781641edb105
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.8'
+    versionCode: 88
+    commit: 20a552a232ad828afa4c56e5f5739e36a5674002
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.9'
+    versionCode: 89
+    commit: ecc0732567fe8d4c815e6fb77b6e98e095cf683b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '9.2'
+    versionCode: 92
+    commit: 78baf47c8dc345c7e7ac713680d033a651f38831
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '9.3'
+    versionCode: 93
+    commit: f0b846b1559a7e44d018b47f26611cc3150faf77
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '9.4'
+    versionCode: 94
+    commit: b8f2a821aedfdc81f4f58c0f82f335a9a9b6ab8b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '9.5'
+    versionCode: 95
+    commit: ec9b6596639d0f861ebc7ed18295afa3c76d5e4d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '9.7'
+    versionCode: 97
+    commit: ee24e208819e999e4eaf2bb29f44ab230e71367e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '9.8'
+    versionCode: 98
+    commit: 453264c484abd8a34032163f97311d47890de4a1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '9.9'
+    versionCode: 99
+    commit: 393df6e40df82ccda11066aa84a3086139ca6c36
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '10.0'
+    versionCode: 100
+    commit: 30c843d033be0208dd28d77baf48b7b1f227ee68
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '10.1'
+    versionCode: 101
+    commit: 6531b03d6a36409987cd87deab661a013f0def72
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '10.3'
+    versionCode: 103
+    commit: bb9e320485c177fffb4a80f3815bef628fda4fc7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '10.5'
+    versionCode: 105
+    commit: bb2de5edbcd0b0523eceac8ff27ce746feb6e006
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '10.6'
+    versionCode: 106
+    commit: e1e4df64eb61b25047805805f8b01129b8dde3a2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '10.7'
+    versionCode: 107
+    commit: 8fd635851831af83d4c7e407499b796bcd1b12b1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '10.8'
+    versionCode: 108
+    commit: f290cd6cbd08d5bde44df110f77c84f447233131
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '10.9'
+    versionCode: 109
+    commit: dfa3d229bde3955b70755331a74022c698fff90b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '11.0'
+    versionCode: 110
+    commit: 3fafd4fadf1c65285dca2b7a691cd092badf6e60
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '11.1'
+    versionCode: 111
+    commit: 02d98aeb91a4f32e5f04c62b19194c4924122c76
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '11.3'
+    versionCode: 113
+    commit: 747f2da597a2cfd637c24d4d62888fb196bead98
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '11.4'
+    versionCode: 114
+    commit: 19a93a7485e49c78ad827dfd692d6c37a2329a19
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '11.5'
+    versionCode: 115
+    commit: b397e09a0ad3aedb9467adf249f967db179b2d5b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '11.6'
+    versionCode: 116
+    commit: 1a199aadc09fff7670004b9f1adce6afb311f3d8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '11.7'
+    versionCode: 117
+    commit: 467ec16c5ac94d78597267b291118e2875765ff8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '11.9'
+    versionCode: 119
+    commit: 5a5aab262d934bb986294c9cf45e310e064e031e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '12.0'
+    versionCode: 120
+    commit: 0a50ec2fd8ca5e2ba9847bc87471a7af13120549
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '12.1'
+    versionCode: 121
+    commit: 219cd8b13d3e699738709bf320d11f7acfa55d7d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '12.2'
+    versionCode: 122
+    commit: 09f8ddb5f439b2759cc29d08068785bad0f819df
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '12.5'
+    versionCode: 125
+    commit: b4c94c10aefbc47f02f782ca2507dbe23710bcdc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '12.6'
+    versionCode: 126
+    commit: 230213dd2e29bfaed36e3d22b0895d03aa8208f0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '12.7'
+    versionCode: 127
+    commit: 005ce0a7fcbf4f5571074a204730533ff323fe9a
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '13.0'
+    versionCode: 130
+    commit: 198c817f7e06905af0f5fa8fda112673f00b1b9a
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '13.1'
+    versionCode: 131
+    commit: 2a557d8c4a6512671475e46c8ce096f0eefaf693
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '13.2'
+    versionCode: 132
+    commit: f0bb117efc20408f1972ee9416be97e2ad7dbd86
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.3-rc-2/8.3/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '14.1'
+    versionCode: 141
+    commit: 8a04e7985ce260090cbe206800aff04684bd0dc4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '14.2'
+    versionCode: 142
+    commit: e7afd2ebe033d2ff2cb94e6eb642a056235a1be6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '14.3'
+    versionCode: 143
+    commit: 6cbf5d4ba946f2635316340e298a088e5ed481cb
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '6.1'
-CurrentVersionCode: 61
+CurrentVersion: '14.3'
+CurrentVersionCode: 143

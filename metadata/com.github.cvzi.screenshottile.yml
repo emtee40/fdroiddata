@@ -1,6 +1,9 @@
+AntiFeatures:
+  Ads:
+    en-US: Has a banner with donation links to some unrelated NGOs
 Categories:
-  - System
   - Multimedia
+  - System
 License: GPL-3.0-only
 AuthorEmail: cuzi-android@openmail.cc
 SourceCode: https://github.com/cvzi/ScreenshotTile
@@ -13,7 +16,7 @@ Bitcoin: 3KDs3RjvsKzbFQ8XoHkGqZxQtSxn2WYbn1
 AutoName: Screenshot Tile
 
 RepoType: git
-Repo: https://github.com/cvzi/ScreenshotTile
+Repo: https://github.com/cvzi/ScreenshotTile.git
 
 Builds:
   - versionName: 1.0.0
@@ -736,26 +739,6 @@ Builds:
     rm:
       - .github
 
-  - versionName: 2.0.6
-    versionCode: 89
-    disable: dead lock during build
-    commit: 4d190797602b7bc8ea3104528d6ac7eda9d2f797
-    subdir: app
-    gradle:
-      - yes
-    rm:
-      - .github
-
-  - versionName: 2.0.7
-    versionCode: 90
-    disable: dead lock during build
-    commit: 63b9c1e229ec79909e639cf69f606efa6ec7f319
-    subdir: app
-    gradle:
-      - yes
-    rm:
-      - .github
-
   - versionName: 2.0.8
     versionCode: 91
     commit: 17d5e4d0d10d75c4103a08a3acac390478a68cfe
@@ -765,7 +748,319 @@ Builds:
     rm:
       - .github
 
+  - versionName: 2.1.0
+    versionCode: 92
+    commit: 9079ad5651da0bb6572f320f13bb13f6a001e8af
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.2.2
+    versionCode: 95
+    commit: 9605dc792b584a135c56a9e5adea2aeac6631052
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.2.3
+    versionCode: 96
+    commit: 0444bbe8eb17ed9df2efe58b76de79e79e662e8f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.3.0
+    versionCode: 97
+    commit: dd9e8eb33d39177ac9f802952f1556cf2615e1c6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.3.1
+    versionCode: 98
+    commit: 6800232cd7cf7b95fa081bc29c6c55eebab349ca
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.3.2
+    versionCode: 99
+    commit: 548f9347b33c19c9397edf1b74f14f885ebba5d7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.3.3
+    versionCode: 100
+    commit: 58ddf9878b45dae858a808768f1659d6c49c7433
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.3.4
+    versionCode: 101
+    commit: c4036290bf8b77eaac2ad9e350cdff3d40fb337f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.3.5
+    versionCode: 102
+    commit: 3c77093a24fc79746002bd7895db29af8cdf32cd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.3.7
+    versionCode: 104
+    commit: 670fa92bafe9aa87e1803bb9d6563b281e38521a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.4.0
+    versionCode: 105
+    commit: 0132141dbc963daba4fd6ea9efa21456d7ee1430
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.5.2
+    versionCode: 108
+    commit: c06d342e7511fdad1c693cd57055b35d6f5a8bb7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.6.0
+    versionCode: 109
+    commit: 3d50e22b3c8d9c3d2bfce7a5c9c8afcee6e74aa3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.6.1
+    versionCode: 110
+    commit: b8616723a6e0407775a808a6c93d90a82f23d9ea
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.6.2
+    versionCode: 111
+    commit: a60653e0ac109b56724fcb5d3cf83a9826231f3c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.7.0
+    versionCode: 112
+    commit: cb00b2875b34830900670f5da93f183e8d4b42b2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.8.0
+    versionCode: 113
+    commit: 2b2966e885ded07aeead9950214997a6294dab7e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.8.1
+    versionCode: 114
+    commit: f132ed55fd0ca4a0febd09cd49c705d3db05d786
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.8.2
+    versionCode: 115
+    commit: 829e2673d57b653c3cdf17fa3b586334201b64d3
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.8.3
+    versionCode: 116
+    commit: edf30cd859bae1f6424bac556c641cd664ba8f6f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.8.4
+    versionCode: 117
+    commit: 447bf037dc24fc443b130f7981a055cb9c14446f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.9.0
+    versionCode: 118
+    commit: 5ce469d6c01a7310a927e6c40cdc4cace49baa4c
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.9.1
+    versionCode: 119
+    commit: 217cc76cd74740564a1db31bdbc1292e1dac7d90
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.9.2
+    versionCode: 120
+    commit: 0fd285ac4e9925c660d352a7a718a4854619a2d6
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.10.0
+    versionCode: 121
+    commit: d1004751c25d519b62ec4a0e0a8da274d8793f91
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.11.0
+    versionCode: 122
+    commit: 49a2dcd8be57012fdcfafc3bb8a901ce7c3ad063
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.11.1
+    versionCode: 123
+    commit: 52ba3b804e1ba7f71cafa02b9104c885c1f9021c
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
+  - versionName: 2.11.2
+    versionCode: 124
+    commit: a38655623d9d02fc44d6111757863f350c4c3d28
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .github
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.8
-CurrentVersionCode: 91
+CurrentVersion: 2.11.2
+CurrentVersionCode: 124

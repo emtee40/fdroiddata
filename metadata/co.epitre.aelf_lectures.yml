@@ -9,29 +9,29 @@ IssueTracker: https://github.com/HackMyChurch/aelf-dailyreadings/issues
 
 AutoName: AELF
 Description: |-
-    <b>The Word of God, nothing but the Word of God</b>
+  <b>The Word of God, nothing but the Word of God</b>
 
-    * Find the entire Mass and liturgy of the hours from the liturgical translation. Mass, readings, lauds, third, sexte, none, vespers, complies.
-    * Meditate on speech, without distractions. Sober and unique full screen display, with no risk of going into standby.
-    * Do not look, there is no flourish, no distraction, just the Word.
+  * Find the entire Mass and liturgy of the hours from the liturgical translation. Mass, readings, lauds, third, sexte, none, vespers, complies.
+  * Meditate on speech, without distractions. Sober and unique full screen display, with no risk of going into standby.
+  * Do not look, there is no flourish, no distraction, just the Word.
 
-    <b>Accessible, for everyone</b>
+  <b>Accessible, for everyone</b>
 
-    * Use your phone, it is compatible. Without sacrificing the look. (Android 2.2+ to Android 5.1)
-    * Adjust the text size according to your preferences, depending on your screen.
-    * Let us guide you with "Talkback". The application is compatible.
-    * Read without suffering. The texts are formatted.
+  * Use your phone, it is compatible. Without sacrificing the look. (Android 2.2+ to Android 5.1)
+  * Adjust the text size according to your preferences, depending on your screen.
+  * Let us guide you with "Talkback". The application is compatible.
+  * Read without suffering. The texts are formatted.
 
-    <b>Anytime, anywhere</b>
+  <b>Anytime, anywhere</b>
 
-    * Automatically synchronize texts to meditate on them even from a cave... or the countryside.
-    * Navigate through time, the date is adjustable at least one month in advance.
+  * Automatically synchronize texts to meditate on them even from a cave... or the countryside.
+  * Navigate through time, the date is adjustable at least one month in advance.
 
-    <b>In a land of trust</b>
+  <b>In a land of trust</b>
 
-    * This application uses the Internet for only one thing: to load the texts of the Word. No data other than Android automatic error reports, whether personal or statistical, is transmitted by the application.
-    * Application proposed on a voluntary basis, without any publicity with the support of the <i>Association épiscopale liturgique pour les pays francophones</i> (http://www.aelf.org)
-    * Texts and logo reproduced with the kind permission of the AELF.
+  * This application uses the Internet for only one thing: to load the texts of the Word. No data other than Android automatic error reports, whether personal or statistical, is transmitted by the application.
+  * Application proposed on a voluntary basis, without any publicity with the support of the <i>Association épiscopale liturgique pour les pays francophones</i> (http://www.aelf.org)
+  * Texts and logo reproduced with the kind permission of the AELF.
 
 RepoType: git
 Repo: https://github.com/HackMyChurch/aelf-dailyreadings
@@ -144,7 +144,57 @@ Builds:
       - yes
     ndk: r21
 
+  - versionName: 2.8.3
+    versionCode: 76
+    commit: 3f62caa8f11781603bc4442832c3b9e156a88958
+    subdir: app
+    gradle:
+      - yes
+    ndk: r25b
+
+  - versionName: 2.8.4
+    versionCode: 77
+    commit: da4ec4d6d2278a87e4c7fbbcc0f7199e59839e19
+    subdir: app
+    gradle:
+      - yes
+    ndk: r25b
+
+  - versionName: 2.8.5
+    versionCode: 78
+    commit: 7fd9b34606ed52a949d1c8bbc609591c11a693ea
+    subdir: app
+    gradle:
+      - yes
+    ndk: r26b
+
+  - versionName: 2.8.6
+    versionCode: 79
+    commit: fda3acfc139a2e40c5cb578efde6ea90b34effde
+    subdir: app
+    gradle:
+      - yes
+    ndk: r26b
+
+  - versionName: 2.8.7
+    versionCode: 80
+    commit: fcd90f92b44279e5db8c63d9dd6c95156a6e9323
+    subdir: app
+    gradle:
+      - yes
+    ndk: r26b
+
+  - versionName: 2.9.1
+    versionCode: 83
+    commit: 9cbf953e5253280231e967351028d0e00651d258
+    subdir: app
+    gradle:
+      - yes
+    ndk: r26b
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.7.5
-CurrentVersionCode: 72
+UpdateCheckData: app/src/main/AndroidManifest.xml|android:versionCode="(\d+)"|app/src/main/res/values/strings.xml|<!ENTITY
+  app_version\s+"([.\d]+)">
+CurrentVersion: 2.9.1
+CurrentVersionCode: 83

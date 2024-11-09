@@ -99,15 +99,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 3.2.2
-    versionCode: 561
-    disable: crashlytics
-    commit: 3.2.2
-    subdir: app
-    gradle:
-      - rel
-    prebuild: sed -i -e '/buildTypes {/i/*' -e '/productFlavors/i*/' -e '/defaultSigningVariable/d'  build.gradle
-
   - versionName: 3.2.9
     versionCode: 568
     commit: da0803cc70722221d10fc3a1d195ebe6d7986a93
@@ -134,7 +125,7 @@ Builds:
     gradle:
       - rel
     prebuild: sed -i -e '/applicationVariants.all/,+8d' -e '/signingConfigs {/,+11d'
-        -e '/defaultSigningVariable/d' build.gradle
+      -e '/defaultSigningVariable/d' build.gradle
 
   - versionName: 3.4.8.1
     versionCode: 595
@@ -143,7 +134,7 @@ Builds:
     gradle:
       - rel
     prebuild: sed -i -e '/applicationVariants.all/,+8d' -e '/signingConfigs {/,+11d'
-        -e '/defaultSigningVariable/d' build.gradle
+      -e '/defaultSigningVariable/d' build.gradle
 
   - versionName: 3.4.8.2
     versionCode: 596
@@ -152,7 +143,7 @@ Builds:
     gradle:
       - rel
     prebuild: sed -i -e '/applicationVariants.all/,+8d' -e '/signingConfigs {/,+11d'
-        -e '/defaultSigningVariable/d' build.gradle
+      -e '/defaultSigningVariable/d' build.gradle
 
   - versionName: 3.5.2.7
     versionCode: 615
@@ -161,7 +152,7 @@ Builds:
     gradle:
       - rel
     prebuild: sed -i -e '/applicationVariants.all/,+5d' -e '/signingConfigs {/,+11d'
-        -e '/defaultSigningVariable/d' build.gradle
+      -e '/defaultSigningVariable/d' build.gradle
 
   - versionName: 3.5.2.8
     versionCode: 616
@@ -203,20 +194,32 @@ Builds:
       - rel
     prebuild: sed -i -e '/applicationVariants.all/,/^    }/d; /signingConfigs/d' build.gradle
 
-  - versionName: 3.5.8.9
-    versionCode: 659
-    disable: https://github.com/slartus/4pdaClient-plus/issues/116
-    commit: 7bd2ad2023d5093f4c14a267ca7e5f0b83a1e24c
+  - versionName: 3.6.4
+    versionCode: 678
+    commit: 2f2f61898f532eca569a517ba4ff86c49f7cd9d7
     subdir: app
     gradle:
       - rel
-    prebuild: sed -i -e '/applicationVariants.all/,/^    }/d' -e '/signingConfig/d'
-        build.gradle
+    prebuild:
+      - sed -i -e '/applicationVariants.all/,/^    }/d' -e '/signingConfig/d' build.gradle
+      - sed -i -e 's/4.1.3/4.0.2/' ../build.gradle
     scanignore:
       - app/src/main/assets/databases/*.zip
 
-AutoUpdateMode: None
-UpdateCheckMode: None
-UpdateCheckData: updateinfo.json|"versionCode":\s*(\d+)|.|"ver":\s*"([\d.]+)
-CurrentVersion: 3.5.8.9
-CurrentVersionCode: 659
+  - versionName: 3.6.6
+    versionCode: 680
+    commit: 1578acaa330b353121715605698b021cc1f2b8e9
+    subdir: app
+    gradle:
+      - rel
+    prebuild:
+      - sed -i -e '/applicationVariants.all/,/^    }/d' -e '/signingConfig/d' build.gradle
+      - sed -i -e 's/4.1.3/4.0.2/' ../build.gradle
+    scanignore:
+      - app/src/main/assets/databases/*.zip
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/build.gradle|appVersionCode = (\d+)|.|appVersionName = "(.*)"
+CurrentVersion: 3.6.6
+CurrentVersionCode: 680

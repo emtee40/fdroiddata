@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App retrieves wallpapers from theverge.com, which is not libre.
 Categories:
   - Multimedia
   - Theming
@@ -28,7 +29,29 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.0.4
+    versionCode: 10004
+    commit: 755a02a8b3286ca3cc5f067baf1bb8b8690348af
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 10005
+    commit: 186b88a51ba241baad1fc92b80276997f06c0127
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags \d+\.\d+\.\d+
-CurrentVersion: 1.0.3
-CurrentVersionCode: 10003
+CurrentVersion: 1.0.5
+CurrentVersionCode: 10005

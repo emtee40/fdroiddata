@@ -3,37 +3,21 @@ Categories:
 License: GPL-3.0-only
 AuthorName: Brady Trainor
 AuthorEmail: cone@tangential.info
-WebSite: https://cone.tangential.info/
 SourceCode: https://github.com/bradyt/cone
 IssueTracker: https://github.com/bradyt/cone/issues
 Changelog: https://github.com/bradyt/cone/blob/HEAD/cone_flutter/CHANGELOG.md
 
 AutoName: cone
 Description: |
-    Whereas ledger-cli is the original ledger app, and hledger, beancount
-    and transity are a few of the number of ledger-likes, cone brings the
-    data entry aspect to your mobile phone. We hope to add features to show
-    balances, etc.
+  Whereas ledger-cli is the original ledger app, and hledger, beancount
+  and transity are a few of the number of ledger-likes, cone brings the
+  data entry aspect to your mobile phone. We hope to add features to show
+  balances, etc.
 
 RepoType: git
-Repo: https://github.com/bradyt/cone
+Repo: https://github.com/bradyt/cone.git
 
 Builds:
-  - versionName: 0.0.0
-    versionCode: 1
-    disable: flutter sample app
-    commit: v0.0.0
-    output: build/app/outputs/apk/release/app-release.apk
-    srclibs:
-      - flutter@v1.2.1
-    prebuild:
-      - echo 'android.applicationVariants.all { variant -> variant.outputs.all { output
-        -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
-      - $$flutter$$/bin/flutter pub get
-    build:
-      - $$flutter$$/bin/flutter config --no-analytics
-      - $$flutter$$/bin/flutter build apk
-
   - versionName: 0.1.0
     versionCode: 2
     commit: v0.1.0
@@ -55,7 +39,7 @@ Builds:
     srclibs:
       - flutter@v1.2.1
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -67,7 +51,7 @@ Builds:
     srclibs:
       - flutter@v1.5.4
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -79,7 +63,7 @@ Builds:
     srclibs:
       - flutter@v1.5.4
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -91,7 +75,7 @@ Builds:
     srclibs:
       - flutter@v1.5.4
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -105,7 +89,7 @@ Builds:
     rm:
       - ios
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -250,9 +234,7 @@ Builds:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk --flavor=fdroid
 
-AutoUpdateMode: None
-UpdateCheckMode: None
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]*$
 CurrentVersion: 0.2.20
 CurrentVersionCode: 28
-
-NoSourceSince: 0.2.20

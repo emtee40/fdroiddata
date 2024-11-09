@@ -7,6 +7,9 @@ AuthorWebSite: https://www.markusfisch.de
 SourceCode: https://github.com/markusfisch/Libra
 IssueTracker: https://github.com/markusfisch/Libra/issues
 Changelog: https://github.com/markusfisch/Libra/releases
+Donate: https://www.buymeacoffee.com/markusfisch
+Liberapay: markusfisch
+Bitcoin: bc1q2guk2rpll587aymrfadkdtpq32448x5khk5j8z
 
 AutoName: Decisions
 
@@ -60,7 +63,32 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.12.5
+    versionCode: 21
+    commit: 6f3fe071186fe48e5b6415b048971772374a6699
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.12.6
+    versionCode: 22
+    commit: 03a1e05a6243433790c7e97e2210232efc964858
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.13.0
+    versionCode: 23
+    commit: 1371b406247c31388b93b59dcbba88aba5297265
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.12.4
-CurrentVersionCode: 20
+CurrentVersion: 1.13.0
+CurrentVersionCode: 23

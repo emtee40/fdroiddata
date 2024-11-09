@@ -6,43 +6,39 @@ License: GPL-3.0-only
 AuthorName: Joshua Tee
 SourceCode: https://gitlab.com/joshua.tee/wx
 IssueTracker: https://gitlab.com/joshua.tee/wx/issues
-Changelog: https://drive.google.com/drive/folders/0B9OogdTO1kXqcVJwekpwemFwSXM
+Changelog: https://gitlab.com/joshua.tee/wx/-/blob/HEAD/doc/ChangeLog_User.md
 
 AutoName: wX
 Description: |-
-    NWS ( National Weather Service ) data is optimized for mobile format and provided for divisions not normally covered together in the mobile space: SPC, WPC, NHC, OPC, etc. Level 3 and Level 2 Nexrad radar ( single, dual, quad pane ) are provided and displayed using the mobile variant of OpenGL. This weather app is not affiliated with NOAA or the National Weather Service.
+  NWS ( United State's National Weather Service ) data is optimized for mobile format and provided for divisions not normally covered together in the mobile space: SPC, WPC, NHC, OPC, etc. Level 3 and Level 2 Nexrad radar ( single, dual, quad pane ) are provided and displayed using the mobile variant of OpenGL. This weather app is not affiliated with NOAA or the National Weather Service.
 
-    If you *only* need current conditions and your local 7 day forecast then this app is probably more then you need although it will easily provide those 2 things as well. If you are looking for wasted screen real estate or fancy graphics this app is not for you. Given the depth of information covered there is a steep learning curve if you seek to use the program in it’s entirety, help information is available and touched on below. Common weather acronyms are used throughout so you should be familiar with those as well. Currently United States locations are supported. Canada is also supported but is be considered in Beta for now.
+  If you *only* need current conditions and your local 7 day forecast then this app is probably more then you need although it will easily provide those 2 things as well. If you are looking for wasted screen real estate or fancy graphics this app is not for you. Given the depth of information covered there is a steep learning curve if you seek to use the program in it's entirety, help information is available and touched on below. Common weather acronyms are used throughout so you should be familiar with those as well. Currently United States locations are supported.
 
-    HELP is available from the main menu and by tapping on any text in the settings activities.
+  HELP is available from the main menu and by tapping on any text in the settings activities.
 
-    Features:
-    * Current forecast, 7 day conditions, sounding data for an unlimited number of locations from NWS.
-    * Customizable home screen
-    * (Android only) Tiles can be rearranged by long press and then drag and drop on Tabs: SPC, MISC, and IMAGES
-    * OpenGL based Nexrad radar interface with numerous options. Level 2 in the lowest tilt for base reflectivity/velocity is also available. 2 pane and 4 pane version also available in MISC tab.
-    * Optimized text product viewer for easy access to AFD,HWO and others from any NWS WFO.
-    * Vis/IR/WV/Radar mosaic viewer ( with animations ).
-    * Widgets ( nexrad radar, radar mosaic, vis, afd/hwo )
-    * SPC products ( such as Watches/MCDs/Convective Outlooks/Mesoanalysis )
-    * WPC products
-    * Weather models
-    * NHC products
+  Features:
+  * Current forecast, 7 day conditions, sounding data for an unlimited number of USA locations from NWS.
+  * Customizable home screen
+  * (Android only) Tiles can be rearranged by long press and then drag and drop on Tabs: SPC, MISC, and IMAGES
+  * OpenGL based Nexrad radar interface with numerous options. Level 2 in the lowest tilt for base reflectivity/velocity is also available. 2 pane and 4 pane version also available in MISC tab.
+  * Optimized text product viewer for easy access to AFD,HWO and others from any NWS WFO.
+  * Vis/IR/WV/Radar mosaic viewer ( with animations ).
+  * Widgets ( nexrad radar, radar mosaic, vis, afd/hwo )
+  * SPC products ( such as Watches/MCDs/Convective Outlooks/Mesoanalysis )
+  * WPC products
+  * Weather models
+  * NHC products
 
-    Notifications:
-    * Local alerts
-    * MCDs impacting your location
-    * MPDs impacting your location
-    * Convective outlooks for your location
-    * US MCD/Watches
-    * US tornadoes
-    * US MCD
-    * US MPD
-    * NHC Atlantic and EPAC advisories
-
-    NOTE about Canada: Canadian locations can be added under Settings -> Location -> "plus" symbol but you need to access the options under the sub-menu. You can also use the main search bar at the top but for now you must use a suggested location and can’t add an arbitrary location.
-
-    See <a href="https://docs.google.com/document/d/1OQrviP10XBvQZ7QKh5R4bsd72ZKffK5f0ISRuCaSk5k/edit">here</a> for a list of often asked questions.
+  Notifications:
+  * Local alerts
+  * MCDs impacting your location
+  * MPDs impacting your location
+  * Convective outlooks for your location
+  * US MCD/Watches
+  * US tornadoes
+  * US MCD
+  * US MPD
+  * NHC Atlantic and EPAC advisories
 
 RepoType: git
 Repo: https://gitlab.com/joshua.tee/wx.git
@@ -819,13 +815,445 @@ Builds:
       - doc/SCRIPTS/Gaz_places_national.txt.gz
     ndk: r22b
 
+  - versionName: '55787'
+    versionCode: 55787
+    commit: 15027ef668f131603e2fc3d3bafd1664afc61697
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55791'
+    versionCode: 55791
+    commit: 91a71c7d458a469d31afca253e4e05cf607ad68d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55795'
+    versionCode: 55795
+    commit: 5d2acbf02559990c4e46ed4dddd5c2940f5f94bd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55797'
+    versionCode: 55797
+    commit: c3663b320c5b321f8ca4aeedf223dc16d03d28d2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55803'
+    versionCode: 55803
+    commit: 3e96d1c0dadc7ecc1f10e33e64b73087ef78342e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55805'
+    versionCode: 55805
+    commit: cf3c049599fbc8dd97e6f39fb4c1c014c859706c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55815'
+    versionCode: 55815
+    commit: 7faeccf3a869a40a1f97873850ddc05ce295fcbd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55826'
+    versionCode: 55826
+    commit: eb81711c05e347ba61b9580d6fecfb3da44ab727
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55835'
+    versionCode: 55835
+    commit: d437920fd128914400da8528399baae37a12b03a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55836'
+    versionCode: 55836
+    commit: 62c22207a71dd4b7de1bae187321851a5dcb7469
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55853'
+    versionCode: 55853
+    commit: 48debe9469995c5e1054adedf2fa35bb3f8dac50
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55854'
+    versionCode: 55854
+    commit: 0fc4768b2d3b8075f166e06910112fb2090f1d9d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = ".*"|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: r22b
+
+  - versionName: '55856'
+    versionCode: 55856
+    commit: 8a525e7320a0cdaf9f9d1a3c08fdff3deb9836e7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55857'
+    versionCode: 55857
+    commit: 3925e530dc512a59331bb299cc58109015d6a359
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55862'
+    versionCode: 55862
+    commit: ea409c8129dc4e99f7fac2cd04792c2e5dc354d4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55872'
+    versionCode: 55872
+    commit: 23796b0923412023110f2fc990fee27172c8b79c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55877'
+    versionCode: 55877
+    commit: f270b48e3d0888f5091f380602e33ff1938225ed
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55881'
+    versionCode: 55881
+    commit: cda8c310a954926b930979c64ecb2fa124fcf7f9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55883'
+    versionCode: 55883
+    commit: 740e27d48f9f35e7eb06a79a435d0c0cde4d59d9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55892'
+    versionCode: 55892
+    commit: edd5971208dd174384c6576a4b9fce9a847e9eab
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55893'
+    versionCode: 55893
+    commit: 74a349ca02ab3a2755ed8c80fc49a69058ca6a1d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55901'
+    versionCode: 55901
+    commit: 16ccd4b7e11ea0fdc056e8448e2e3d880e332afb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=2048m\ //' ../gradle.properties
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55902'
+    versionCode: 55902
+    commit: ba7feae1394ebdccffb6784202eee1ff3ab5ba8f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
+  - versionName: '55920'
+    versionCode: 55920
+    commit: 330ef7df7b3c840ddb9ccce8fed56a43dd4e9830
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y file
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|def ndkDir = .*|def ndkDir = "$$NDK$$"|' build.gradle
+    scanignore:
+      - app/src/main/res/raw/*
+      - doc/SCRIPTS/Gaz_places_national.txt.gz
+    ndk: 26.1.10909125
+
 MaintainerNotes: |-
-    app/src/main/res/raw are not executable files and they're from US GOVT so they should be very open:
-    https://catalog.data.gov/dataset (license: https://www.usa.gov/government-works)
-    https://www.nohrsc.noaa.gov/gisdatasets/ (license: https://www.weather.gov/disclaimer)
-    doc/SCRIPTS/Gaz_places_national.txt.gz is a compressed text file.
+  app/src/main/res/raw are not executable files and they're from US GOVT so they should be very open:
+  https://catalog.data.gov/dataset (license: https://www.usa.gov/government-works)
+  https://www.nohrsc.noaa.gov/gisdatasets/ (license: https://www.weather.gov/disclaimer)
+  doc/SCRIPTS/Gaz_places_national.txt.gz is a compressed text file.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '55782'
-CurrentVersionCode: 55782
+CurrentVersion: '55920'
+CurrentVersionCode: 55920

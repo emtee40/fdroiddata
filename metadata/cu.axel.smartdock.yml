@@ -1,0 +1,54 @@
+Categories:
+  - System
+License: GPL-3.0-only
+AuthorName: Axel358
+SourceCode: https://github.com/axel358/smartdock
+IssueTracker: https://github.com/axel358/smartdock/issues
+Changelog: https://github.com/axel358/smartdock/releases
+Donate: https://paypal.me/KSMaan7
+
+AutoName: Smart Dock
+
+RepoType: git
+Repo: https://github.com/axel358/smartdock
+
+Builds:
+  - versionName: 1.9.8
+    versionCode: 198
+    commit: 4405d02bc167c04c63666e3de60e55041b3d1a74
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.0
+    versionCode: 1100
+    commit: 75460b558ec213b8a37148b3d5b81511bebde294
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.11.0
+    versionCode: 1110
+    commit: f1dad5eeadb2a2eb6ce5fb55abab14cd6511b204
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.12.0
+    versionCode: 1120
+    commit: 2dffb2cc13ae5575a663c5e8288f4609bba8330d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.12.1
+    versionCode: 1121
+    commit: d58c23ddb01252afb0a302a15ca08c28bb02d50e
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.12.1
+CurrentVersionCode: 1121

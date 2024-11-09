@@ -6,14 +6,14 @@ IssueTracker: https://github.com/marunjar/anewjkuapp/issues
 
 AutoName: JKU App
 Description: |-
-    This is an app for the students of JKU Linz that provides most of the data from
-    KUSSS and also information from ÖH and the JKU in general:
+  This is an app for the students of JKU Linz that provides most of the data from
+  KUSSS and also information from ÖH and the JKU in general:
 
-    * synchronize timetable with local or Google Calendar.
-    * access Exams, Grades, Courses.
-    * get notifications for new exams, grades and changed course dates
-    * included campus map for "navigation"
-    * shows menu for JKU Mensa, Raab Mensa and KHG Mensa
+  * synchronize timetable with local or Google Calendar.
+  * access Exams, Grades, Courses.
+  * get notifications for new exams, grades and changed course dates
+  * included campus map for "navigation"
+  * shows menu for JKU Mensa, Raab Mensa and KHG Mensa
 
 RepoType: git
 Repo: https://github.com/marunjar/anewjkuapp.git
@@ -108,7 +108,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/applicationVariants/,+2d' -e '/def appendVersionNameVersionCode/,+7d'
-        -e 's|googleCompile|//googleCompile|g' build.gradle
+      -e 's|googleCompile|//googleCompile|g' build.gradle
 
   - versionName: 0.43.1
     versionCode: 140049
@@ -119,7 +119,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/applicationVariants/,+2d' -e '/def appendVersionNameVersionCode/,+7d'
-        -e 's|googleCompile|//googleCompile|g' build.gradle
+      -e 's|googleCompile|//googleCompile|g' build.gradle
 
   - versionName: 0.44.1
     versionCode: 140053
@@ -130,19 +130,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/applicationVariants/,+2d' -e '/def appendVersionNameVersionCode/,+7d'
-        -e 's|googleCompile|//googleCompile|g' build.gradle
-
-  - versionName: 0.45.1
-    versionCode: 140055
-    disable: constraint-layout
-    commit: 0.45.1
-    subdir: aNewJKUApp
-    gradle:
-      - fdroid
-    rm:
-      - tools
-    prebuild: sed -i -e '/applicationVariants/,+6d' -e 's|googleCompile|//googleCompile|g'
-        build.gradle
+      -e 's|googleCompile|//googleCompile|g' build.gradle
 
   - versionName: 0.45.2
     versionCode: 140056
@@ -153,7 +141,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/applicationVariants/,+6d' -e 's|googleCompile|//googleCompile|g'
-        build.gradle
+      build.gradle
 
   - versionName: 0.45.3
     versionCode: 140057
@@ -164,7 +152,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/applicationVariants/,+6d' -e 's|googleCompile|//googleCompile|g'
-        build.gradle
+      build.gradle
 
   - versionName: 0.50.0
     versionCode: 140059
@@ -175,7 +163,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/applicationVariants/,+4d' -e 's|googleCompile|//googleCompile|g'
-        build.gradle
+      build.gradle
 
   - versionName: 0.50.2
     versionCode: 140061
@@ -186,7 +174,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/applicationVariants/,+4d' -e 's|googleCompile|//googleCompile|g'
-        build.gradle
+      build.gradle
 
   - versionName: 0.51.1
     versionCode: 140064
@@ -197,7 +185,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/applicationVariants/,+4d' -e 's|googleCompile|//googleCompile|g'
-        build.gradle
+      build.gradle
 
   - versionName: 0.51.3
     versionCode: 140066
@@ -208,7 +196,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/applicationVariants/,+4d' -e 's|googleCompile|//googleCompile|g'
-        build.gradle
+      build.gradle
 
   - versionName: 0.51.9
     versionCode: 140072
@@ -219,7 +207,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/applicationVariants/,+4d' -e 's|googleCompile|//googleCompile|g'
-        build.gradle
+      build.gradle
 
   - versionName: 0.52.4
     versionCode: 140077
@@ -321,25 +309,21 @@ Builds:
       - sed -i -e '/maven {$/,/}/d; /com.google.gms/d; /io.fabric.tools/d' ../build.gradle
       - sed -i -e '/applicationVariants/,+4d; /googleImplementation/d' build.gradle
 
-  - versionName: 0.54.0-fdroid
-    versionCode: 140086
-    commit: 94c4cf35bef299a8b74b7671ce97ae8b5a10abce
+  - versionName: 0.55.0-fdroid
+    versionCode: 140087
+    commit: 56f9ac54ab3243831e016f7972034e1dced6d7c9
     subdir: app
     sudo:
       - apt-get update
-      - apt-get install -y openjdk-11-jdk
+      - apt-get install -y openjdk-17-jdk-headless
       - update-alternatives --auto java
     gradle:
       - fdroid
     rm:
       - tools
-    prebuild:
-      - sed -i -e '/maven {$/,/}/d; /com.google.gms/d; /io.fabric.tools/d' ../build.gradle
-      - sed -i -e '/applicationVariants/,+4d; /googleImplementation/d' build.gradle
-
-MaintainerNotes: Disable AUM when build/sed proves to be to fragile.
+    prebuild: sed -i -e '/gms/d' -e '/com.google.firebase/d' {.,..}/build.gradle
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.54.0-fdroid
-CurrentVersionCode: 140086
+CurrentVersion: 0.55.0-fdroid
+CurrentVersionCode: 140087

@@ -9,9 +9,9 @@ Changelog: https://github.com/XCSoar/XCSoar/blob/HEAD/NEWS.txt
 
 AutoName: XCSoar
 Description: |-
-    XCSoar is a tactical glide computer for soaring and para glider pilots. It
-    supports navigation, airspace warnings, final glide calculations, wind
-    calculation, collision avoidance and many many more features.
+  XCSoar is a tactical glide computer for soaring and para glider pilots. It
+  supports navigation, airspace warnings, final glide calculations, wind
+  calculation, collision avoidance and many many more features.
 
 RepoType: git
 Repo: https://github.com/XCSoar/XCSoar
@@ -321,7 +321,7 @@ Builds:
     srclibs:
       - cpython@v3.9.6
     prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-29' 'build-tools;29.0.3'
-        > /dev/null
+      > /dev/null
     scandelete:
       - android/ioio
       - android/UsbSerial/usbserial/eclipse_lib
@@ -347,7 +347,7 @@ Builds:
     srclibs:
       - cpython@v3.9.6
     prebuild: $$SDK$$/tools/bin/sdkmanager 'platforms;android-29' 'build-tools;29.0.3'
-        > /dev/null
+      > /dev/null
     scandelete:
       - android/ioio
       - android/UsbSerial/usbserial/eclipse_lib
@@ -381,15 +381,303 @@ Builds:
       - apt-get update
       - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
         gettext quilt sox m4 xsltproc cmake xz-utils pkg-config
-    output: output/ANDROID/opt/build/unsigned.apk
-    prebuild: sdkmanager 'platforms;android-30' 'build-tools;29.0.3'
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
     scandelete:
       - android/ioio
       - android/UsbSerial/usbserial/eclipse_lib
     build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
     ndk: r25b
 
+  - versionName: '7.29'
+    versionCode: 150
+    commit: 4b9c0b048ba250526c7f504f7ff79dbab8c85193
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox m4 xsltproc cmake xz-utils pkg-config
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r25b
+
+  - versionName: '7.30'
+    versionCode: 151
+    commit: b32faf31a537471c6863efffe0cb1e0a90a598e4
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox m4 xsltproc cmake xz-utils pkg-config
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r25b
+
+  - versionName: '7.31'
+    versionCode: 152
+    commit: 83e6916ec9fd9b4d16abab4efb6712a90d773a2f
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r25b
+
+  - versionName: '7.32'
+    versionCode: 153
+    commit: e3c5a68c37c9f5b7b7a8265159ed25726fe44b8c
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r25b
+
+  - versionName: '7.33'
+    versionCode: 154
+    commit: e122cbc553a49af473ab35c8109e6e9491727e92
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r25b
+
+  - versionName: '7.34'
+    versionCode: 155
+    commit: 9987faaef8b07f711031d13a303a4bf0729c485d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r25b
+
+  - versionName: '7.35'
+    versionCode: 156
+    commit: c5c49879417dda654534795db92e14526e373794
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r25b
+
+  - versionName: '7.36'
+    versionCode: 157
+    commit: a626d3efe0fdc723a855b1db45665e0218e34962
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r25b
+
+  - versionName: '7.37'
+    versionCode: 158
+    commit: 33fbf7be6d14a9b067dec92a703f6f4a30515665
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r26-beta1
+
+  - versionName: '7.38'
+    versionCode: 159
+    commit: 7f3184b8f40f0a72a2f86ecca9b1a6e07f54b038
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r26-beta1
+
+  - versionName: '7.39'
+    versionCode: 160
+    commit: 1418e0dceb48bc5797185efa1bbbcfb425df2dac
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r26-beta1
+
+  - versionName: '7.40'
+    versionCode: 161
+    commit: 1164801fe9b16f203b65c0e305a9ba43256c977c
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r26-beta1
+
+  - versionName: '7.41'
+    versionCode: 162
+    commit: 96457465d0a676c25bc98c8d42fb2c0e540b3d27
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r26-beta1
+
+  - versionName: '7.42'
+    versionCode: 163
+    commit: 9ee29aa606f7ebc44604b51c966882a3b9d7c953
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build g++ vorbis-tools librsvg2-bin imagemagick make
+        gettext quilt sox automake xsltproc cmake xz-utils pkg-config libtool
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: r26-beta1
+
+  - versionName: '7.43'
+    versionCode: 164
+    commit: 59ab9e337bf1808241409f5fd9d159160ffdfe0f
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake g++ gettext imagemagick librsvg2-bin libtool
+        make ninja-build pkg-config quilt sox vorbis-tools xsltproc xz-utils zip
+    output: output/ANDROID/opt/build/aligned.apk
+    prebuild:
+      - platforms=$(grep ANDROID_SDK_PLATFORM build/targets.mk | sed -E 's/.*android-([0-9]+)/\1/')
+      - build_tools=$(grep build-tools build/android.mk | sed -E 's/.*\/([0-9.]+)$/\1/')
+      - sdkmanager "platforms;android-$platforms" "build-tools;$build_tools"
+    scandelete:
+      - android/ioio
+      - android/UsbSerial/usbserial/eclipse_lib
+    build: make TARGET=ANDROIDFAT DEBUG=n TESTING=n -j`nproc`
+    ndk: 26.3.11579264
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '7.28'
-CurrentVersionCode: 149
+CurrentVersion: '7.43'
+CurrentVersionCode: 164

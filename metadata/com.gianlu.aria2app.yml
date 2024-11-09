@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on non-free services from gianlu.xyz, extreme-ip-lookup.com
 Categories:
   - Internet
 License: GPL-3.0-only
@@ -17,7 +18,7 @@ Bitcoin: 18rrPNGgz8UkzUYgAnqVye83xEe5fB7XfY
 AutoName: Aria2App
 
 RepoType: git
-Repo: https://github.com/devgianlu/Aria2App
+Repo: https://github.com/devgianlu/Aria2App.git
 
 Builds:
   - versionName: 4.0.2
@@ -28,7 +29,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.0.3
     versionCode: 145
@@ -38,7 +39,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.0.4
     versionCode: 146
@@ -48,7 +49,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.0.5
     versionCode: 147
@@ -58,7 +59,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.1.0
     versionCode: 148
@@ -68,7 +69,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.1.1
     versionCode: 149
@@ -78,7 +79,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.2.0
     versionCode: 150
@@ -88,7 +89,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.2.1
     versionCode: 151
@@ -98,7 +99,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.2.2
     versionCode: 152
@@ -108,7 +109,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.2.3
     versionCode: 153
@@ -118,7 +119,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.2.4
     versionCode: 154
@@ -128,7 +129,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.2.5
     versionCode: 155
@@ -138,7 +139,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.3.0-beta1
     versionCode: 156
@@ -148,7 +149,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.3.0-beta2
     versionCode: 157
@@ -158,7 +159,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.3.0-beta3
     versionCode: 158
@@ -168,7 +169,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.3.0
     versionCode: 159
@@ -178,7 +179,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.3.1
     versionCode: 160
@@ -188,7 +189,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.3.2
     versionCode: 161
@@ -198,7 +199,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.3.3
     versionCode: 162
@@ -208,7 +209,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.3.4
     versionCode: 163
@@ -218,7 +219,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.4.0
     versionCode: 164
@@ -228,7 +229,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.4.1
     versionCode: 165
@@ -238,7 +239,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.4.2
     versionCode: 166
@@ -248,7 +249,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 4.4.3
     versionCode: 167
@@ -258,7 +259,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.0.0-beta2
     versionCode: 169
@@ -268,7 +269,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.0.0
     versionCode: 170
@@ -278,7 +279,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.0.1
     versionCode: 171
@@ -288,7 +289,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.0.2
     versionCode: 172
@@ -298,7 +299,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.0.3
     versionCode: 173
@@ -308,7 +309,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.1.0
     versionCode: 174
@@ -318,7 +319,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.1.1
     versionCode: 175
@@ -328,7 +329,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.1.2
     versionCode: 176
@@ -338,7 +339,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.1.3
     versionCode: 177
@@ -348,7 +349,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.1.5
     versionCode: 179
@@ -358,7 +359,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.1.6
     versionCode: 180
@@ -368,7 +369,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.1.7
     versionCode: 181
@@ -378,7 +379,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.1.8
     versionCode: 182
@@ -388,7 +389,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.2.0
     versionCode: 183
@@ -398,7 +399,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.2.3
     versionCode: 186
@@ -408,7 +409,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.2.4
     versionCode: 187
@@ -418,7 +419,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.3.0
     versionCode: 188
@@ -428,7 +429,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.3.2
     versionCode: 190
@@ -438,7 +439,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.4.0
     versionCode: 191
@@ -448,7 +449,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.4.1
     versionCode: 192
@@ -458,7 +459,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.4.2
     versionCode: 193
@@ -468,7 +469,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.4.3
     versionCode: 194
@@ -478,7 +479,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.4.4
     versionCode: 195
@@ -488,7 +489,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.4.5
     versionCode: 196
@@ -498,7 +499,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
 
   - versionName: 5.6.6
     versionCode: 205
@@ -509,7 +510,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21
@@ -523,7 +524,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21
@@ -537,7 +538,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21
@@ -551,7 +552,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21
@@ -565,7 +566,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21b
@@ -579,7 +580,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -593,7 +594,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -607,7 +608,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -621,7 +622,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -635,7 +636,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -649,7 +650,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -663,7 +664,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -677,7 +678,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -691,7 +692,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -705,7 +706,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -723,7 +724,7 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r21d
@@ -741,12 +742,77 @@ Builds:
     gradle:
       - foss
     prebuild: sed -i -e '/maven.fabric.io/d' -e '/io.fabric/d' build.gradle ../build.gradle
-        ../CommonUtils/build.gradle
+      ../CommonUtils/build.gradle
     scandelete:
       - aria2lib/src/main/jniLibs
     ndk: r25
 
+  - versionName: 5.9.13
+    versionCode: 225
+    commit: fef64f23a5f9c83a5d14ef2d6f2fba3656ab9663
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint dpkg-dev file libtool pkg-config
+    gradle:
+      - foss
+    prebuild: sed -i -e '/maven.fabric.io/d; /io.fabric/d; /firebase/d; /google-services/d;
+      /signingConfigs.release/d' build.gradle ../build.gradle ../CommonUtils/build.gradle
+    scandelete:
+      - aria2lib/src/main/jniLibs
+    ndk: r25
+
+  - versionName: 5.9.14
+    versionCode: 226
+    commit: e78e15ed6b5366f50d20b0bd877176c6bff74ef8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint dpkg-dev file libtool pkg-config
+    gradle:
+      - foss
+    prebuild: sed -i -e '/maven.fabric.io/d; /io.fabric/d; /firebase/d; /google-services/d;
+      /signingConfigs.release/d' build.gradle ../build.gradle ../CommonUtils/build.gradle
+    scandelete:
+      - aria2lib/src/main/jniLibs
+    ndk: r25
+
+  - versionName: 5.9.16
+    versionCode: 228
+    commit: c4d63e993831274199c66767293c06993e74c81e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint dpkg-dev file libtool pkg-config
+    gradle:
+      - foss
+    prebuild: sed -i -e '/maven.fabric.io/d; /io.fabric/d; /firebase/d; /google-services/d;
+      /signingConfigs.release/d' build.gradle ../build.gradle ../CommonUtils/build.gradle
+    scandelete:
+      - aria2lib/src/main/jniLibs
+    ndk: r25
+
+  - versionName: 5.9.18
+    versionCode: 230
+    commit: 5c85948d549ab2a9de65012bd6cfb14d8bc20671
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint dpkg-dev file libtool pkg-config
+    gradle:
+      - foss
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' -e '/signingConfigs.release/d' {..,.}/build.gradle
+      - sed -i -e '/android {/a ndkVersion "25.2.9519653"' build.gradle
+    scandelete:
+      - aria2lib/src/main/jniLibs
+    ndk: r25c
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 5.9.12
-CurrentVersionCode: 224
+CurrentVersion: 5.9.18
+CurrentVersionCode: 230

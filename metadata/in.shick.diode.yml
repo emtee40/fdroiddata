@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App depends on Reddit.
 Categories:
   - Internet
 License: GPL-3.0-only
@@ -9,9 +10,9 @@ IssueTracker: https://github.com/zagaberoo/diode/issues
 
 AutoName: Diode
 Description: |-
-    Diode provides quick and easy access to Reddit on your device complete with
-    login, commenting and submissions. Discuss Diode with other users at the
-    official <a href="https://pay.reddit.com/r/diode.compact">subreddit</a>.
+  Diode provides quick and easy access to Reddit on your device complete with
+  login, commenting and submissions. Discuss Diode with other users at the
+  official <a href="https://pay.reddit.com/r/diode.compact">subreddit</a>.
 
 RepoType: git
 Repo: https://github.com/zagaberoo/diode.git
@@ -100,7 +101,8 @@ Builds:
         -e "/dependencies {/a implementation 'dk.brics:automaton:1.12-1'" build.gradle
       - sed -i -e '/libs-dependencies/d' proguard.cfg
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.3.2.2
 CurrentVersionCode: 26

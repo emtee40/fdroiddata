@@ -7,16 +7,16 @@ IssueTracker: https://github.com/martinmarinov/rtl_tcp_andro-/issues
 
 AutoName: Rtl-sdr driver
 Description: |-
-    Allows you to use I/Q packet source in your Android applications.
+  Allows you to use I/Q packet source in your Android applications.
 
-    All you need is to launch an intent in the form "iqsrc://rtl_tcp_arguments"
-    where you replace rtl_tcp_arguments with the arguments that you want your
-    application to run rtl_tcp with and the magic will be done behind the scenes.
+  All you need is to launch an intent in the form "iqsrc://rtl_tcp_arguments"
+  where you replace rtl_tcp_arguments with the arguments that you want your
+  application to run rtl_tcp with and the magic will be done behind the scenes.
 
-    This driver could be used by third party applications to implement Software
-    Defined Radio.
+  This driver could be used by third party applications to implement Software
+  Defined Radio.
 
-    It does not require root for Android 3.1 and above.
+  It does not require root for Android 3.1 and above.
 
 RepoType: git
 Repo: https://github.com/martinmarinov/rtl_tcp_andro-
@@ -42,17 +42,6 @@ Builds:
       - bin/*apk
     extlibs:
       - android/android-support-v4.jar
-    buildjni:
-      - yes
-    ndk: r12b
-
-  - versionName: '3.01'
-    versionCode: 17
-    disable: gradle and jni issues
-    commit: b4a0f49238aedf76a569fc9f84a5a73fd8e4ae3f
-    subdir: app
-    gradle:
-      - yes
     buildjni:
       - yes
     ndk: r12b
@@ -94,7 +83,28 @@ Builds:
       - yes
     ndk: r25b
 
+  - versionName: '3.15'
+    versionCode: 30
+    commit: 2843bb2cb6b568d42b5757445fc94a000f7ad182
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake libncurses5
+    gradle:
+      - yes
+    ndk: r25b
+
+  - versionName: '3.151'
+    versionCode: 31
+    commit: 08672ad9d4e72095bbe115dbbc920ecd90b8744f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake libncurses5
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '3.14'
-CurrentVersionCode: 29
+CurrentVersion: '3.151'
+CurrentVersionCode: 31

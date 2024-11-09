@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Image boards connected to are not libre.
 Categories:
   - Internet
 License: GPL-3.0-only
@@ -466,7 +467,103 @@ Builds:
     gradle:
       - fdroid
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags v\d+?\.\d{1,2}\.\d{1,2}-release$
-CurrentVersion: v1.3.22
-CurrentVersionCode: 10322
+  - versionName: v1.3.23
+    versionCode: 10323
+    commit: 7a4023d2c4df05cb0af0a992c64de1f689e4b8d3
+    subdir: Kuroba/app
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.25
+    versionCode: 10325
+    commit: d232f3960452da76a53eaa47b57965da1f8014e9
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.26
+    versionCode: 10326
+    commit: d4b092fd07a563ee54e9e381140ca0e3a1dd650c
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.27
+    versionCode: 10327
+    commit: 4f950407b61581ed3ebd90eff64dc195b9cea10c
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.28
+    versionCode: 10328
+    commit: fb43f896ffc08b8441208c6700463a6bc787c891
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.29
+    versionCode: 10329
+    commit: 1cf77299e2d23bdb50a65c70ab03e1a1f7e8b7b9
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.30
+    versionCode: 10330
+    commit: 856595f09bd7e17ed580343bdafda39c64f97a22
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.31
+    versionCode: 10331
+    commit: cff300a722a2dd6b6313c3d79eb537c7fd8bccb6
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: v1.3.33
+    versionCode: 10333
+    commit: 11f9cde1de7d10d7dd62f5a469dba81805c10ee7
+    subdir: Kuroba/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: v1.3.33
+CurrentVersionCode: 10333

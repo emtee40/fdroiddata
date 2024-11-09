@@ -298,7 +298,93 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 3.3.3
+    versionCode: 333
+    commit: 0992df4f4a1ca79e7ae33edc8e16ed7700751ae4
+    subdir: tourcount
+    gradle:
+      - yes
+
+  - versionName: 3.3.5
+    versionCode: 335
+    commit: c3920dcbd4e38165295a8aa2811a7f9c46187443
+    subdir: tourcount
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.2
+    versionCode: 342
+    commit: e61e21d9bc670a9f3ae12bcc316130cea9eb281f
+    subdir: tourcount
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.5
+    versionCode: 345
+    commit: c0d21198a3f1a9c478b9905c89df0e5052d84ef1
+    subdir: tourcount
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.6
+    versionCode: 346
+    commit: 1dca2f4780ffa9c4f0847ac245d35d38a8151167
+    subdir: tourcount
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.7
+    versionCode: 347
+    commit: 681268f835819b091fd912ae70c3fdd13eabb3fc
+    subdir: tourcount
+    gradle:
+      - yes
+
+  - versionName: 3.4.8
+    versionCode: 348
+    commit: 112eaaed3bf0074d9b3fa5274e88d85a14cc3d78
+    subdir: tourcount
+    gradle:
+      - yes
+
+  - versionName: 3.4.9
+    versionCode: 349
+    commit: 448071f36c6cadc5cba50c4064679cf79806ec25
+    subdir: tourcount
+    gradle:
+      - yes
+
+  - versionName: 3.5.0
+    versionCode: 350
+    commit: 3189c40f0d04c2d346fb7696f69c240c21033947
+    subdir: tourcount
+    gradle:
+      - yes
+
+  - versionName: 3.5.1
+    versionCode: 351
+    commit: 28bf72f84c51db7655ba6ab383dd0ce87109e7f6
+    subdir: tourcount
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.3.2
-CurrentVersionCode: 332
+CurrentVersion: 3.5.1
+CurrentVersionCode: 351

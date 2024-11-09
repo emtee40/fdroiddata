@@ -11,12 +11,12 @@ Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=KDYBGNUNMM
 Name: 'AnySoftKeyboard: Czech'
 AutoName: AnySoftKeyboard - Czech Language Pack
 Description: |-
-    Czech keyboard layout with dictionary.
+  Czech keyboard layout with dictionary.
 
-    Dictionary comes from AOSP. The source code is in another branch to the default.
+  Dictionary comes from AOSP. The source code is in another branch to the default.
 
-    Install https://f-droid.org/packages/com.menny.android.anysoftkeyboard first, then select the desired
-    layout from AnySoftKeyboard’s Settings->Keyboards menu.
+  Install https://f-droid.org/packages/com.menny.android.anysoftkeyboard first, then select the desired
+  layout from AnySoftKeyboard's Settings->Keyboards menu.
 
 RepoType: git
 Repo: https://github.com/AnySoftKeyboard/LanguagePack.git
@@ -63,6 +63,7 @@ Builds:
     gradleprops:
       - forceVersionBuildCount=2834
 
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 4.0.2234

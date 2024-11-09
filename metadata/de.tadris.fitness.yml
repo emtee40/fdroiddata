@@ -263,7 +263,49 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '15.3'
+    versionCode: 1530
+    commit: d6361a10cda911fcf8abd68048ba9b36d47a899c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y git-lfs openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '15.4'
+    versionCode: 1540
+    commit: d6eab5a07e729251ee24c06ffab332204677764c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y git-lfs openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '15.5'
+    versionCode: 1550
+    commit: 5c36cbdfeb888b6aa82daa49081d8d8067988eeb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y git-lfs
+    gradle:
+      - yes
+
+  - versionName: '15.6'
+    versionCode: 1560
+    commit: 8069075044efbd09978867aee0aeb68e87fd7f8a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y git-lfs
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '15.1'
-CurrentVersionCode: 1510
+CurrentVersion: '15.6'
+CurrentVersionCode: 1560

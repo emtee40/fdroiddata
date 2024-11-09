@@ -1,12 +1,11 @@
 AntiFeatures:
-  - Tracking
+  Tracking:
+    en-US: Pings donation.carnet.live and qn.phie.ovh without consent.
 Categories:
   - Writing
 License: GPL-3.0-only
-WebSite: https://github.com/CarnetApp/CarnetFdroid/blob/HEAD/README.md
 SourceCode: https://github.com/CarnetApp/CarnetFdroid
 IssueTracker: https://github.com/CarnetApp/CarnetFdroid/issues
-Changelog: https://github.com/CarnetApp/CarnetFdroid/blob/HEAD/app/src/main/assets/CHANGELOG.md
 Liberapay: Phie
 
 RepoType: git
@@ -443,7 +442,20 @@ Builds:
       - sed -i -e "s/, ':GoogleSync'//; /GoogleSync/d" ../settings.gradle
       - sed -i -e '/googleImplementation/d' build.gradle
 
+  - versionName: 0.25.1
+    versionCode: 251
+    commit: 67e7250aaceb31bfd2ff450b73b7323503514075
+    subdir: app/CarnetAndroid/app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e "s/, ':GoogleSync'//; /GoogleSync/d" ../settings.gradle
+      - sed -i -e '/googleImplementation/d' build.gradle
+
+MaintainerNotes: on Tracking, see https://github.com/CarnetApp/CarnetFdroid/issues/17
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.24.1
-CurrentVersionCode: 241
+CurrentVersion: 0.25.1
+CurrentVersionCode: 251

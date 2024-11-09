@@ -12,6 +12,8 @@ Builds:
     commit: aec14b3db581
 
 AutoUpdateMode: None
-UpdateCheckMode: Static
+UpdateCheckMode: None
 CurrentVersion: 1.1.6
 CurrentVersionCode: 116
+
+NoSourceSince: 1.1.6

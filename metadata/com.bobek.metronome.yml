@@ -49,7 +49,97 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.4'
+    versionCode: 5
+    commit: 3c5f18adee38541de293282a764f9d5cf9515af3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.1
+    versionCode: 6
+    commit: a03f1a63e319af0d85622605d33fd7ed0a2d8a8e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 7
+    commit: 8953fc8bfb849237e88eadb8d99ab4eb89f0005b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 8
+    commit: bce95216ba39a5f3963bcb364d86ca94410099da
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 9
+    commit: 56ce584b3a639ee366d2e321e1fc7cb0bbf55d14
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.5
+    versionCode: 10
+    commit: c8c701796ca28c9000f23466a18c1123519c2782
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 11
+    commit: 5f6a60e2cbe106608d4c080a42f6211e96a7f4db
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 12
+    commit: 98f7847787e77eff623af6b67b9cea17be2c49d8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 13
+    commit: 7feb1ec1d3447e0a37adeefd47b3297fa869c379
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 14
+    commit: 1792c3bdaa0259fe2ce6f96c70e327d22e0fba89
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.3'
-CurrentVersionCode: 4
+CurrentVersion: 1.6.2
+CurrentVersionCode: 14

@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: TV show data is downloaded from TheTVDB.com, which is proprietary.
 Categories:
   - Multimedia
 License: GPL-3.0-or-later
@@ -8,10 +9,6 @@ SourceCode: https://github.com/red-coracle/episodes
 IssueTracker: https://github.com/red-coracle/episodes/issues
 
 AutoName: Episodes
-Description: |-
-    Keep track of which episodes you’ve watched of your favourite TV shows. The data is sourced from TheTVDB.com
-
-    Anti-Feature: NonFreeNet - uses a non-free network service which is impossible, or not easy to replace without rebuilding the app
 
 RepoType: git
 Repo: https://github.com/red-coracle/episodes
@@ -96,7 +93,14 @@ Builds:
     gradle:
       - standard
 
+  - versionName: 0.16.0
+    versionCode: 24
+    commit: 85d92413a0814866f2349c1656983a99b3470a84
+    subdir: app
+    gradle:
+      - standard
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9]+\.[0-9]+\.[0-9]+$
-CurrentVersion: 0.15.1
-CurrentVersionCode: 23
+CurrentVersion: 0.16.0
+CurrentVersionCode: 24

@@ -3,29 +3,30 @@ Categories:
 License: GPL-3.0-or-later
 AuthorName: Felix Weilbach
 AuthorEmail: felix.weilbach@t-online.de
-WebSite: https://gitlab.com/flexw/splitbills
 SourceCode: https://gitlab.com/flexw/splitbills
 IssueTracker: https://gitlab.com/flexw/splitbills/issues
 Changelog: https://gitlab.com/flexw/splitbills/blob/HEAD/CHANGELOG.md
 
 AutoName: SplitBills
-Description: |
-    Use SplitBills to split bills with your friends or other people. You can
-    create groups with people, add bills to the group and view your
-    balances. SplitBills works without any server or registration and is
-    free software. Your expenses belong to you!
+Description: |-
+  <b>NOTE:</b> App is no longer maintained.
 
-    If you have any problems with the app please contact me or open a issue
-    here, rather than leave a one-star review:
-    https://gitlab.com/flexw/splitbills/issues
+  Use SplitBills to split bills with your friends or other people. You can
+  create groups with people, add bills to the group and view your
+  balances. SplitBills works without any server or registration and is
+  free software. Your expenses belong to you!
 
-    Features:
+  If you have any problems with the app please contact me or open a issue
+  here, rather than leave a one-star review:
+  https://gitlab.com/flexw/splitbills/issues
 
-    * Split bills with other people
-    * Sync your expenses with other people
-    * View balances
-    * No registration needed
-    * Dezentral
+  Features:
+
+  * Split bills with other people
+  * Sync your expenses with other people
+  * View balances
+  * No registration needed
+  * Dezentral
 
 RepoType: git
 Repo: https://gitlab.com/flexw/splitbills.git
@@ -101,7 +102,8 @@ Builds:
     gradle:
       - prod
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 0.3.10
 CurrentVersionCode: 22

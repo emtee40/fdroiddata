@@ -9,13 +9,15 @@ Changelog: https://github.com/openbmap/radiocells-nlp-android#history
 Name: Radiocells.org UnifiedNlp Backend
 AutoName: org.openbmap.unifiedNlpProvider
 Description: |-
-    https://f-droid.org/packages/com.google.android.gms wifi/cell geolocation backend that uses
-    <a href="https://radiocells.org">Radiocells.org</a> database for geolocation.
+  <b>NOTE:</b> Project is no longer developed, database is inaccessible.
 
-    Location can be retrieved either online or completely offline if a local
-    database is already present.
+  https://f-droid.org/packages/com.google.android.gms wifi/cell geolocation backend that uses
+  <a href="https://radiocells.org">Radiocells.org</a> database for geolocation.
 
-    https://f-droid.org/packages/org.openbmap can be used to gather wifi and cell information.
+  Location can be retrieved either online or completely offline if a local
+  database is already present.
+
+  https://f-droid.org/packages/org.openbmap can be used to gather wifi and cell information.
 
 RepoType: git
 Repo: https://github.com/openbmap/radiocells-nlp-android
@@ -60,16 +62,6 @@ Builds:
   - versionName: 0.1.4
     versionCode: 6
     commit: v0.1.4
-    submodules: true
-    gradle:
-      - yes
-    rm:
-      - libs/*
-
-  - versionName: 0.1.5
-    versionCode: 7
-    disable: broken
-    commit: v0.1.5
     submodules: true
     gradle:
       - yes
@@ -121,16 +113,6 @@ Builds:
     rm:
       - libs/*
 
-  - versionName: 0.2.5
-    versionCode: 17
-    disable: old failing build
-    commit: v0.2.5
-    submodules: true
-    gradle:
-      - yes
-    rm:
-      - libs/*
-
   - versionName: 0.2.6
     versionCode: 18
     commit: v0.2.6
@@ -167,7 +149,8 @@ Builds:
     rm:
       - libs/*
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 0.2.9
 CurrentVersionCode: 21

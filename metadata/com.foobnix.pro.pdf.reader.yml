@@ -44,6 +44,9 @@ Builds:
       - pushd ../Builder/
       - ./link_to_mupdf_1.20.0.sh
     ndk: r23c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.5.21-fdroid
     versionCode: 4400
@@ -75,6 +78,9 @@ Builds:
       - pushd ../Builder/
       - ./link_to_mupdf_1.20.0.sh
     ndk: r23c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.5.37-fdroid
     versionCode: 4550
@@ -106,6 +112,9 @@ Builds:
       - pushd ../Builder/
       - ./link_to_mupdf_1.20.0.sh
     ndk: r23c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.5.45-fdroid
     versionCode: 4586
@@ -136,6 +145,9 @@ Builds:
       - pushd ../Builder/
       - ./link_to_mupdf_1.20.2.sh
     ndk: r23c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.6.15-fdroid
     versionCode: 4690
@@ -166,6 +178,9 @@ Builds:
       - pushd ../Builder/
       - ./link_to_mupdf_1.20.2.sh
     ndk: r23c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.6.17-fdroid
     versionCode: 4695
@@ -196,6 +211,9 @@ Builds:
       - pushd ../Builder/
       - ./link_to_mupdf_1.20.2.sh
     ndk: r23c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.6.27-fdroid
     versionCode: 4730
@@ -226,6 +244,9 @@ Builds:
       - pushd ../Builder/
       - ./link_to_mupdf_1.20.2.sh
     ndk: r23c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.6.46-fdroid
     versionCode: 4814
@@ -256,6 +277,9 @@ Builds:
       - pushd ../Builder/
       - ./link_to_mupdf_1.20.2.sh
     ndk: r23c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.8.4-fdroid
     versionCode: 4852
@@ -293,6 +317,9 @@ Builds:
       - pushd ../Builder/
       - ./link_merge.sh
     ndk: r25b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.8.5-fdroid
     versionCode: 4855
@@ -331,7 +358,8 @@ Builds:
       - ./link_merge.sh
     ndk: r25b
     antifeatures:
-      - KnownVuln
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.8.15-fdroid
     versionCode: 4865
@@ -364,19 +392,940 @@ Builds:
       - pushd ../Builder/
       - ./link_to_mupdf_1.21.1.sh
     ndk: r25b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.8.30-fdroid
+    versionCode: 4895
+    commit: 438a8cb8d9a917bd34440c6e7303d2cd2219f115
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.21.1
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e '/mkdir mupdf/d' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' ../Builder/link_to_mupdf_1.21.1.sh
+      - cp -r $$MuPDF$$ mupdf-1.21.1
+      - rm -rf mupdf-1.21.1/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.21.1.sh
+    ndk: r25b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.8.40-fdroid
+    versionCode: 5098
+    commit: c80c701b891c5737001a4733f429b87c8f9686b1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.21.1
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e '/mkdir mupdf/d' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' ../Builder/link_to_mupdf_1.21.1.sh
+      - cp -r $$MuPDF$$ mupdf-1.21.1
+      - rm -rf mupdf-1.21.1/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.21.1.sh
+    ndk: r25b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.8.46-fdroid
+    versionCode: 5100
+    commit: 947e8ca120705711c053147053fbf615be0f7092
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.21.1
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e '/mkdir mupdf/d' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' ../Builder/link_to_mupdf_1.21.1.sh
+      - cp -r $$MuPDF$$ mupdf-1.21.1
+      - rm -rf mupdf-1.21.1/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.21.1.sh
+    ndk: r25b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.8.64-fdroid
+    versionCode: 5110
+    commit: 8ce7f0254ace7af2a63afe621d1b1c36470f2243
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.21.1
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e '/mkdir mupdf/d' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' ../Builder/link_to_mupdf_1.21.1.sh
+      - cp -r $$MuPDF$$ mupdf-1.21.1
+      - rm -rf mupdf-1.21.1/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - app/src/fdroid/assets/fonts.zip
+      - app/src/main/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.21.1.sh
+    ndk: r25b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.8.68-fdroid
+    versionCode: 5210
+    commit: 0c70e7f7e220b372f43d5697f27fc6deb5649a14
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.21.1
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e '/mkdir mupdf/d' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' ../Builder/link_to_mupdf_1.21.1.sh
+      - cp -r $$MuPDF$$ mupdf-1.21.1
+      - rm -rf mupdf-1.21.1/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - app/src/fdroid/assets/fonts.zip
+      - app/src/main/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.21.1.sh
+    ndk: r25b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.8.76-fdroid
+    versionCode: 5242
+    commit: 92368557afc153fec7826cfafe3373dceb54e949
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.21.1
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e '/mkdir mupdf/d' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' ../Builder/link_to_mupdf_1.21.1.sh
+      - cp -r $$MuPDF$$ mupdf-1.21.1
+      - rm -rf mupdf-1.21.1/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.21.1.sh
+    ndk: r25b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.8.98-fdroid
+    versionCode: 5330
+    commit: 17117c17063d1ca3ff25985d07decc8705a9ab25
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.21.1
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e '/mkdir mupdf/d' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' ../Builder/link_to_mupdf_1.21.1.sh
+      - cp -r $$MuPDF$$ mupdf-1.21.1
+      - rm -rf mupdf-1.21.1/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.21.1.sh
+    ndk: r25b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.8.107-fdroid
+    versionCode: 5366
+    commit: 576354d36053e54957bd0983de635d7d88ce44d4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.21.1
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e '/mkdir mupdf/d' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' ../Builder/link_to_mupdf_1.21.1.sh
+      - cp -r $$MuPDF$$ mupdf-1.21.1
+      - rm -rf mupdf-1.21.1/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.21.1.sh
+    ndk: r25b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.9.12-fdroid
+    versionCode: 5458
+    commit: 615787f14b965a4b466d00a562e4080d165e712d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.22.0
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e '/mkdir mupdf/d' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' ../Builder/link_to_mupdf_1.22.0.sh
+      - cp -r $$MuPDF$$ mupdf-1.22.0
+      - rm -rf mupdf-1.22.0/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.22.0.sh
+    ndk: r25c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.9.20-fdroid
+    versionCode: 5468
+    commit: 324e25fddf8e666b0591830076935aea211dcc40
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.22.2
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' link_to_mupdf_1.22.2.sh
+      - cp -r $$MuPDF$$ mupdf-1.22.2
+      - rm -rf mupdf-1.22.2/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.22.2.sh
+    ndk: r25c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.9.32-fdroid
+    versionCode: 5534
+    commit: 967d436924853a6f190abd2ad9751c360edbf0a2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.0
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/F-DROID REMOVE THIS LINE/,+1d' ../build.gradle
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|.*ndk-build|$$NDK$$/ndk-build
+        -j`nproc`|' link_to_mupdf_1.23.0.sh
+      - cp -r $$MuPDF$$ mupdf-1.23.0
+      - rm -rf mupdf-1.22.2/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    scandelete:
+      - Builder/mupdf-1.23.0/thirdparty/
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.0.sh
+    ndk: r25c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 8.9.46-fdroid
+    versionCode: 5594
+    commit: 3f07a743d53d5a576a8e7173ca1af6c0557e5a56
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.3
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_1.23.3.sh
+      - cp -r $$MuPDF$$ mupdf-1.23.3
+      - rm -rf mupdf-1.23.3/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.3.sh
+    ndk: r25c
+
+  - versionName: 8.9.58-fdroid
+    versionCode: 5654
+    commit: 92282622dafc342b3005adc543bdd8956317b12f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.5
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_1.23.5.sh
+      - cp -r $$MuPDF$$ mupdf-1.23.5
+      - rm -rf mupdf-1.23.5/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.5.sh
+    ndk: r26b
+
+  - versionName: 8.9.72-fdroid
+    versionCode: 5710
+    commit: 2783ee30e0299d7786e4ef1aaad12a04141a765d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.5
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_1.23.5.sh
+      - cp -r $$MuPDF$$ mupdf-1.23.5
+      - rm -rf mupdf-1.23.5/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.5.sh
+    ndk: r26b
+
+  - versionName: 8.9.85-fdroid
+    versionCode: 5766
+    commit: e2889fdc940520aeab070a5cdad5b6bc39076c2a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.5
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_1.23.5.sh
+      - cp -r $$MuPDF$$ mupdf-1.23.5
+      - rm -rf mupdf-1.23.5/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.5.sh
+    ndk: r26b
+
+  - versionName: 8.9.96-fdroid
+    versionCode: 5810
+    commit: cf5a07dfbf4c4d965dbd0c0f15ffac146c8813d6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.7
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - export MUPDF_VERSION=1.23.7
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.7.sh
+    ndk: r26b
+
+  - versionName: 8.9.105-fdroid
+    versionCode: 5846
+    commit: b05989021d286a3c54049e7f40d1c982857e6cc6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.7
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - export MUPDF_VERSION=1.23.7
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.7.sh
+    ndk: r26b
+
+  - versionName: 8.9.115-fdroid
+    versionCode: 5850
+    commit: f9c2d5dd2f00bd3ecca2c275b2668eda0bcf555e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.7
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - export MUPDF_VERSION=1.23.7
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.7.sh
+    ndk: r26b
+
+  - versionName: 8.9.126-fdroid
+    versionCode: 5882
+    commit: 4f03f6b89cc2d10ae924f85d54312f8e7a94704b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.7
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - export MUPDF_VERSION=1.23.7
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+      - app/src/fdroid/assets/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.7.sh
+    ndk: r26b
+
+  - versionName: 8.9.133-fdroid
+    versionCode: 5918
+    commit: 68d27c4fc26f9e4b0e404477b5c51c76d5abb9fa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.7
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - export MUPDF_VERSION=1.23.7
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.7.sh
+    ndk: r26b
+
+  - versionName: 8.9.147-fdroid
+    versionCode: 5974
+    commit: 5e19c28a426bd1caa769922b2df45f5d95745ede
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.7
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - export MUPDF_VERSION=1.23.7
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.7.sh
+    ndk: r26b
+
+  - versionName: 8.9.158-fdroid
+    versionCode: 6018
+    commit: 69bf56a196f9c26436dd002d3ca9ddc815a05d6a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.7
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - export MUPDF_VERSION=1.23.7
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.7.sh
+    ndk: r26b
+
+  - versionName: 8.9.161-fdroid
+    versionCode: 6030
+    commit: c3e117a1c47876163ca68225323378e9957eeec6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.7
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - export MUPDF_VERSION=1.23.7
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.7.sh
+    ndk: r26b
+
+  - versionName: 8.9.170-fdroid
+    versionCode: 6070
+    commit: a6f2367316f318d3f821eb58778d34e61bdbd2fc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.7
+    rm:
+      - Builder/src/libs
+    prebuild:
+      - export MUPDF_VERSION=1.23.7
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.7.sh
+    ndk: r26b
+
+  - versionName: 8.9.175-fdroid
+    versionCode: 6090
+    commit: 9357ea58a178cc044982f3b866b6c8d4fde27d9c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.24.1
+    rm:
+      - Builder/src/libs
+      - desctop
+    prebuild:
+      - export MUPDF_VERSION=1.24.1
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.24.1.sh
+    ndk: 26.3.11579264
+
+  - versionName: 8.9.181-fdroid
+    versionCode: 6102
+    commit: 4264e3baa4815884b4fce3d3eb298f214e3166d1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.24.6
+    rm:
+      - Builder/src/libs
+      - Builder/librara-chrome-extension.zip
+    prebuild:
+      - export MUPDF_VERSION=1.24.6
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.24.6.sh
+    ndk: r27
+
+  - versionName: 8.9.182-fdroid
+    versionCode: 6202
+    commit: a0458a2421b259b3fbd057613ad5e73a154b756d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libglu1-mesa-dev libxcursor-dev libxi-dev libxinerama-dev
+        libxrandr-dev make mesa-common-dev pkg-config xxd
+    gradle:
+      - fdroid
+    srclibs:
+      - MuPDF@1.23.7
+    rm:
+      - Builder/src/libs
+      - Builder/librara-chrome-extension.zip
+    prebuild:
+      - export MUPDF_VERSION=1.23.7
+      - sed -i -e '/^if.*Fdroid/,/^}/d' -e '/enable true/d' -e '/_appGdriveKey/d'
+        -e '/_admob/d' build.gradle
+      - mkdir src/main/jniLibs
+      - cd ../Builder
+      - sed -i -e '/^#!/a\set -e' -e '/git clone/d' -e 's/mkdir/mkdir -p/g' -e 's|".*ndk-build"|"$$NDK$$/ndk-build"|'
+        -e 's|^.*ndk-build$|$$NDK$$/ndk-build -j`nproc`|' link_to_mupdf_$MUPDF_VERSION.sh
+      - cp -r $$MuPDF$$ mupdf-$MUPDF_VERSION
+      - rm -rf mupdf-$MUPDF_VERSION/thirdparty/{harfbuzz/test,curl/tests,leptonica/prog/fuzzing}
+    scanignore:
+      - Builder/fonts/fonts.zip
+    scandelete:
+      - Builder/mupdf-*/platform/wasm/package.json
+    build:
+      - pushd ../Builder/
+      - ./link_to_mupdf_1.23.7.sh
+    ndk: r27c
 
 MaintainerNotes: |-
-    * Upstream builds separate APKs for each architecture but we build an universal APK.
-    * scanner will detect GMS (/com/google/android/gms) in these APKs; those are only stubs here, see https://gitlab.com/fdroid/fdroiddata/-/issues/2272#note_493741256
-
-    * KnownVuln: MuPDF 1.11 noted at below link
-    * https://github.com/foobnix/LibreraReader/blob/8.8.5/app/src/main/java/com/foobnix/pdf/info/AppsConfig.java#L30
-    * app includes both MuPDF 1.11 as the default for legacy Android 4.0 compatibility
-    * https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11496
+  * Upstream builds separate APKs for each architecture but we build an universal APK.
+  * scanner will detect GMS (/com/google/android/gms) in these APKs; those are only stubs here, see https://gitlab.com/fdroid/fdroiddata/-/issues/2272#note_493741256
+  * scanner will detect Junrar (com/github/junrar) in these APKs; they are only stubs
 
 AutoUpdateMode: Version +-fdroid %v
 UpdateCheckMode: Tags
 UpdateCheckData: app/build.gradle|\s+FDroidCodeNumber = (\d+)|.|\s+FDroidVersionNumber
-    = "([^\"]+)"
-CurrentVersion: 8.8.15
-CurrentVersionCode: 4865
+  = "([^\"]+)"
+CurrentVersion: 8.9.182
+CurrentVersionCode: 6202

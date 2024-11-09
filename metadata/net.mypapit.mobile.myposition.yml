@@ -1,3 +1,6 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Rely on OpenStreetMap
 Categories:
   - Navigation
 License: GPL-2.0-or-later
@@ -10,8 +13,8 @@ Changelog: https://github.com/gjedeer/mylocation/releases
 
 AutoName: My Position
 Description: |-
-    Share your location, easily and lightly. Supports plain coordinates, geo:-URI,
-    OpenStreetMap- and GoogleMaps-Links.
+  Share your location, easily and lightly. Supports plain coordinates, geo:-URI,
+  OpenStreetMap- and GoogleMaps-Links.
 
 RepoType: git
 Repo: https://github.com/gjedeer/mylocation

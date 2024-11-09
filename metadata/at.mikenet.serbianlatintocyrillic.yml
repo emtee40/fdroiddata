@@ -27,7 +27,25 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 5.4.2
+    versionCode: 59
+    commit: a9a08ffefc54af43a4103a532f666f48e6efd750
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.5.1
+    versionCode: 61
+    commit: fb92d9791b67508b701fb721a9213c2cf50eb680
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 5.4.1
-CurrentVersionCode: 58
+CurrentVersion: 5.5.1
+CurrentVersionCode: 61

@@ -7,7 +7,7 @@ AuthorWebSite: https://guardianproject.info
 SourceCode: https://gitlab.com/guardianproject/torservices
 IssueTracker: https://gitlab.com/guardianproject/torservices/issues
 Liberapay: GuardianProject
-Bitcoin: 1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk
+OpenCollective: GuardianProject
 
 AutoName: TorServices
 
@@ -59,12 +59,124 @@ Builds:
     prebuild: echo 'abi-splits=arm64-v8a' >> gradle.properties
     ndk: r21e
 
-MaintainerNotes: |
-    Each release has 8 APKs because there are 4 ABIs and 2 signing keys
-    (f-droid.org and upstream).
+  - versionName: 0.2.1
+    versionCode: 2011
+    commit: 42c8c9c1d9b220a488cb4f6390e46dc61919a7b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+    gradleprops:
+      - abi-splits=x86
 
-ArchivePolicy: 16 versions
+  - versionName: 0.2.1
+    versionCode: 2012
+    commit: 42c8c9c1d9b220a488cb4f6390e46dc61919a7b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+    gradleprops:
+      - abi-splits=x86_64
+
+  - versionName: 0.2.1
+    versionCode: 2013
+    commit: 42c8c9c1d9b220a488cb4f6390e46dc61919a7b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+    gradleprops:
+      - abi-splits=armeabi-v7a
+
+  - versionName: 0.2.1
+    versionCode: 2014
+    commit: 42c8c9c1d9b220a488cb4f6390e46dc61919a7b3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+    gradleprops:
+      - abi-splits=arm64-v8a
+
+  - versionName: 0.3.0
+    versionCode: 3001
+    commit: e04534f68999d9287a8fb46050488a113b80b12d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+    gradleprops:
+      - abi-splits=x86
+
+  - versionName: 0.3.0
+    versionCode: 3002
+    commit: e04534f68999d9287a8fb46050488a113b80b12d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+    gradleprops:
+      - abi-splits=x86_64
+
+  - versionName: 0.3.0
+    versionCode: 3003
+    commit: e04534f68999d9287a8fb46050488a113b80b12d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+    gradleprops:
+      - abi-splits=armeabi-v7a
+
+  - versionName: 0.3.0
+    versionCode: 3004
+    commit: e04534f68999d9287a8fb46050488a113b80b12d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: r21e
+    gradleprops:
+      - abi-splits=arm64-v8a
+
+MaintainerNotes: |
+  Each release has 8 APKs because there are 4 ABIs and 2 signing keys
+  (f-droid.org and upstream).
+
+ArchivePolicy: 16
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: '0.2'
-CurrentVersionCode: 2004
+CurrentVersion: 0.3.0
+CurrentVersionCode: 3004

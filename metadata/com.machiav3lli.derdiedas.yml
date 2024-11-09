@@ -9,7 +9,7 @@ Changelog: https://github.com/machiav3lli/DerDieDas/blob/HEAD/Changelog.md
 AutoName: Der Die Das
 
 RepoType: git
-Repo: https://github.com/machiav3lli/DerDieDas
+Repo: https://github.com/machiav3lli/DerDieDas.git
 
 Builds:
   - versionName: 1.2.0
@@ -73,7 +73,26 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.1.1
+    versionCode: 2101
+    commit: 3e920f471361e1516102c14e3c4ed3ad9be9e5b9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 2200
+    commit: 1af08d5eb9aa1b9b587637d633f123bc17ce53a5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/MaxPermSize/d'  ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.1.0
-CurrentVersionCode: 2100
+CurrentVersion: 2.2.0
+CurrentVersionCode: 2200

@@ -10,42 +10,20 @@ Donate: https://meefik.github.io/donate/
 
 AutoName: BusyBox
 Description: |-
-    Install a recent and un-crippled version of BusyBox.
+  Install a recent and un-crippled version of BusyBox.
 
-    BusyBox combines tiny versions of many common UNIX utilities into a single small
-    executable. It provides replacements for most of the utilities you usually find
-    in GNU fileutils, shellutils, etc. The utilities in BusyBox generally have fewer
-    options than their full-featured GNU cousins; however, the options that are
-    included provide the expected functionality and behave very much like their GNU
-    counterparts. BusyBox provides a fairly complete environment for any small or
-    embedded system.
+  BusyBox combines tiny versions of many common UNIX utilities into a single small
+  executable. It provides replacements for most of the utilities you usually find
+  in GNU fileutils, shellutils, etc. The utilities in BusyBox generally have fewer
+  options than their full-featured GNU cousins; however, the options that are
+  included provide the expected functionality and behave very much like their GNU
+  counterparts. BusyBox provides a fairly complete environment for any small or
+  embedded system.
 
 RepoType: git
 Repo: https://github.com/meefik/busybox
 
 Builds:
-  - versionName: 1.24.1
-    versionCode: 18
-    disable: fails on a 32-bit NDK
-    commit: 610d680fd603dc7b0a5c3a2d30f6d48e89811c0c
-    subdir: app
-    gradle:
-      - yes
-    scandelete:
-      - app/src/main/assets
-    build:
-      - cd ../contrib
-      - export ANDROID_NDK_ROOT=$$NDK$$
-      - ./bb-build.sh arm pie
-      - ./bb-build.sh arm
-      - cp -fR compiled/arm ../app/src/main/assets/
-      - ./bb-build.sh intel pie
-      - ./bb-build.sh intel
-      - cp -fR compiled/intel ../app/src/main/assets/
-      - ./bb-build.sh mips pie
-      - ./bb-build.sh mips
-      - cp -fR compiled/mips ../app/src/main/assets/
-
   - versionName: 1.24.1
     versionCode: 23
     commit: a0daeb3b5055f4786c54ce2beef3093440d7a82f
@@ -255,7 +233,7 @@ Builds:
       - app/src/main/assets/x86/bin
       - app/src/main/assets/x86_64/bin
     prebuild: sed -i -e '/android-ndk-r15c/d' -e 's!${BUILD_DIR}/${NDK}!$$NDK$$!'
-        -e '/dl.google.com/d' ../contrib/build.sh
+      -e '/dl.google.com/d' ../contrib/build.sh
     build:
       - pushd ..
       - gradle assets
@@ -278,7 +256,7 @@ Builds:
       - app/src/main/jniLibs/arm*/*
       - app/src/main/jniLibs/x8*/*
     prebuild: sed -i -e '/android-ndk-r15c/d' -e 's!${BUILD_DIR}/${NDK}!$$NDK$$!'
-        -e '/dl.google.com/d' ../contrib/build.sh
+      -e '/dl.google.com/d' ../contrib/build.sh
     build:
       - pushd ../contrib
       - ./build.sh all

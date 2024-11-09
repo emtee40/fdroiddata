@@ -9,11 +9,11 @@ IssueTracker: https://github.com/dsandler/markers/issues
 
 AutoName: Markers
 Description: |-
-    Uses the multitouch and pressure sensitivity of capactive screens but there are
-    differences in screen technology, so please see the website if you experience
-    problems.
+  Uses the multitouch and pressure sensitivity of capactive screens but there are
+  differences in screen technology, so please see the website if you experience
+  problems.
 
-    A tutorial on the website shows how to simulate layers.
+  A tutorial on the website shows how to simulate layers.
 
 RepoType: git
 Repo: https://github.com/dsandler/markers
@@ -26,11 +26,6 @@ Builds:
   - versionName: 1.0.4-beta
     versionCode: 37
     commit: 6ee885f07604
-
-  - versionName: 1.0.4
-    versionCode: 38
-    disable: Source code not published
-    commit: unknown - see disabled
 
   - versionName: '1.1'
     versionCode: 39

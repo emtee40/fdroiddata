@@ -7,24 +7,24 @@ IssueTracker: https://gitlab.com/droidtr/org.droidtr.keyboard/issues
 
 AutoName: DroidTR IME
 Description: |-
-    Features:
-    * Small size
-    * Full keyboard
-    * trf / trq / en layouts
-    * tra / aqvoid layouts (fantastic)
-    * Word suggestions
-    * Replace changing color and picture
-    * Low version android device support
-    * The intensity of the sound can be adjusted
-    * Emoji support
-    * Low power consumption
-    * Adjustable volume keys
-    * Right / left arrow keys
-    * Keyboard embedded settings
-    * Compatibility with small devices
-    * 6 different key styles
-    * Lava (Experimental)
-    * Standard structure
+  Features:
+  * Small size
+  * Full keyboard
+  * trf / trq / en layouts
+  * tra / aqvoid layouts (fantastic)
+  * Word suggestions
+  * Replace changing color and picture
+  * Low version android device support
+  * The intensity of the sound can be adjusted
+  * Emoji support
+  * Low power consumption
+  * Adjustable volume keys
+  * Right / left arrow keys
+  * Keyboard embedded settings
+  * Compatibility with small devices
+  * 6 different key styles
+  * Lava (Experimental)
+  * Standard structure
 
 RepoType: git
 Repo: https://gitlab.com/droidtr/org.droidtr.keyboard.git
@@ -159,21 +159,6 @@ Builds:
   - versionName: 7.6.3
     versionCode: 59
     commit: 7.6.3
-    output: bin/app.apk
-    rm:
-      - bin
-    prebuild:
-      - sed -i -e 's|~/Android/Sdk|$$SDK$$|' -e 's/ sign//' Makefile
-      - android update sdk --no-ui --filter android-28
-    build:
-      - JAVA_HOME=$(file /etc/alternatives/javac | cut -d " " -f 5|cut -d "/" -f 1-5)
-        make
-      - mv bin/app.ap_ bin/app.apk
-
-  - versionName: 7.6.5
-    versionCode: 60
-    disable: no tag
-    commit: 7.6.5
     output: bin/app.apk
     rm:
       - bin

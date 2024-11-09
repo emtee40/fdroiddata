@@ -1,5 +1,6 @@
 AntiFeatures:
-  - UpstreamNonFree
+  UpstreamNonFree:
+    en-US: We remove the proprietary Amazon Billing and MobAdMob libraries.
 Categories:
   - Internet
 License: GPL-3.0-only
@@ -11,11 +12,11 @@ IssueTracker: https://github.com/klassm/andFHEM/issues
 
 AutoName: andFHEM
 Description: |-
-    A client for the FHEM software for home automation.
+  A client for the FHEM software for home automation.
 
-    Admob and Amazon Billing nonfree libraries were removed in 2.2.8, which is what
-    the Premium version offers. Due to these proprietary dependencies, future
-    updates in F-Droid are unlikely.
+  Admob and Amazon Billing nonfree libraries were removed in 2.2.8, which is what
+  the Premium version offers. Due to these proprietary dependencies, future
+  updates in F-Droid are unlikely.
 
 RepoType: git
 Repo: https://github.com/klassm/andFHEM.git
@@ -28,7 +29,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@436230d
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
 
   - versionName: 1.5.8
     versionCode: 58
@@ -37,7 +38,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@436230d
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
 
   - versionName: 2.2.8
     versionCode: 128
@@ -68,6 +69,8 @@ Builds:
       - sed -i 's@\(.1=\).*@\1$$ActionBarSherlock$$@' project.properties
       - echo "android.library.reference.2=$$MobAdMob$$" >> project.properties
       - sed -i '184,190d' AndroidManifest.xml
+
+MaintainerNotes: GoogleAds are a stub
 
 AutoUpdateMode: None
 UpdateCheckMode: Static

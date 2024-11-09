@@ -14,7 +14,7 @@ Litecoin: LYACbHTKaM9ZubKQGxJ4NRyVy1gHUuztRP
 AutoName: Voice Recorder
 
 RepoType: git
-Repo: https://github.com/SimpleMobileTools/Simple-Voice-Recorder
+Repo: https://github.com/SimpleMobileTools/Simple-Voice-Recorder.git
 
 Builds:
   - versionName: 5.1.0
@@ -281,7 +281,74 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 5.11.1
-CurrentVersionCode: 34
+  - versionName: 5.11.2
+    versionCode: 35
+    commit: e90d2abdb8ebcc7dcd279c32a058cbf9cf231b84
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.11.3
+    versionCode: 36
+    commit: bbfec85d7163af939eabb5913855e793ba542fcb
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.11.4
+    versionCode: 37
+    commit: f202f127b04bddf8cce96295afcaf85a01cc2038
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.12.0
+    versionCode: 38
+    commit: a212b51e64c2f7f39f0765e00e5b6f85cf38c12c
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.12.1
+    versionCode: 39
+    commit: 2cea945f436b3d5c6bdcf43ddec9f3cafbced539
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 5.12.2
+    versionCode: 40
+    commit: 2311c17a03b7783f5e894798c8eb40018beeec82
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 5.12.3
+    versionCode: 41
+    commit: 4b1c045676ac43d36291fd41e5273f022f1f149f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 5.12.3
+CurrentVersionCode: 41

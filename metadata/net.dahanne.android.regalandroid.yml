@@ -6,14 +6,13 @@ AuthorEmail: anthony.dahanne@gmail.com
 AuthorWebSite: https://blog.dahanne.net/
 SourceCode: https://github.com/anthonydahanne/ReGalAndroid
 IssueTracker: https://github.com/anthonydahanne/ReGalAndroid/issues
-FlattrID: '93967'
 
 AutoName: ReGalAndroid
 Description: |-
-    A gallery client with support for G2 and G3 (also known as Menalto Gallery) and
-    Piwigo. A demo gallery is provided for trying it out. The manifest didn't
-    specify that a camera isn't required ; although the app may be marked as
-    incompatible, it can still be installed.
+  A gallery client with support for G2 and G3 (also known as Menalto Gallery) and
+  Piwigo. A demo gallery is provided for trying it out. The manifest didn't
+  specify that a camera isn't required ; although the app may be marked as
+  incompatible, it can still be installed.
 
 RepoType: git
 Repo: https://github.com/anthonydahanne/ReGalAndroid.git
@@ -24,7 +23,7 @@ Builds:
     commit: 9ec774b
     patch:
       - g2.patch
-    maven: 'yes'
+    maven: yes
     extlibs:
       - filedrop/filedrop.jar
     prebuild:
@@ -42,7 +41,7 @@ Builds:
     versionCode: 6
     commit: regalandroid-1.2.0
     subdir: regalandroid
-    maven: 'yes'
+    maven: yes
     prebuild: sed -i 's/3.9.0-rc.1/3.9.0-rc.3/g' ../regalandroid-parent/pom.xml
     build:
       - cd ../regalandroid-parent

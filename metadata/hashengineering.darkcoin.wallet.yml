@@ -8,42 +8,44 @@ AuthorEmail: support@dash.org
 WebSite: https://www.dash.org/dash-android-wallet/
 SourceCode: https://github.com/HashEngineeringSolutions/dash-wallet
 IssueTracker: https://github.com/HashEngineeringSolutions/dash-wallet/issues
-Translation: https://www.transifex.com/dash/dash-wallet/
+Translation: https://www.transifex.com/dash/dash-mobile-wallets
 Changelog: https://raw.github.com/HashEngineeringSolutions/dash-wallet/HEAD/wallet/CHANGES
 
 AutoName: Dash Wallet
 Description: |-
-    Have your Dash always with you, in your pocket! You pay by quickly scanning a QR
-    code. As a merchant, you receive payments reliably and instantly. Dash Wallet is
-    the first mobile Dash app, and arguably also the most secure!
+  Note: This is a fork of https://github.com/dashpay/dash-wallet build only from FOSS components.
 
-    FEATURES
+  Have your Dash always with you, in your pocket! You pay by quickly scanning a QR
+  code. As a merchant, you receive payments reliably and instantly. Dash Wallet is
+  the first mobile Dash app, and arguably also the most secure!
 
-    * No registration, web service or cloud needed! This wallet is de-centralized and peer to peer.
-    * Display of Dash amount in DASH, mDASH and µDASH.
-    * Conversion to and from national currencies.
-    * Sending and receiving of Dash via NFC, QR codes or Dash URLs.
-    * Address book for regularly used Dash addresses.
-    * When you’re offline, you can still pay via Bluetooth.
-    * System notification for received coins.
-    * Sweeping of paper wallets (e.g. those used for cold storage).
-    * App widget for Dash balance.
+  FEATURES
 
-    CONTRIBUTE
+  * No registration, web service or cloud needed! This wallet is de-centralized and peer to peer.
+  * Display of Dash amount in DASH, mDASH and µDASH.
+  * Conversion to and from national currencies.
+  * Sending and receiving of Dash via NFC, QR codes or Dash URLs.
+  * Address book for regularly used Dash addresses.
+  * When you're offline, you can still pay via Bluetooth.
+  * System notification for received coins.
+  * Sweeping of paper wallets (e.g. those used for cold storage).
+  * App widget for Dash balance.
 
-    All translations are managed via Transifex:
-    <a href="https://www.transifex.com/dash/dash-wallet/">https://www.transifex.com/dash/dash-wallet/</a>
+  CONTRIBUTE
 
-    You can find more about Dash at <a href="https://www.dash.org/">https://www.dash.org/</a>.
+  All translations are managed via Transifex:
+  <a href="https://www.transifex.com/dash/dash-wallet/">https://www.transifex.com/dash/dash-wallet/</a>
 
-    TESTIMONIALS
+  You can find more about Dash at <a href="https://www.dash.org/">https://www.dash.org/</a>.
 
-    * A recommended mobile wallet by <a href="https://www.dash.org">https://www.dash.org</a>
+  TESTIMONIALS
 
-    Use at your own risk!
+  * A recommended mobile wallet by <a href="https://www.dash.org">https://www.dash.org</a>
+
+  Use at your own risk!
 
 RepoType: git
-Repo: https://github.com/HashEngineeringSolutions/dash-wallet
+Repo: https://github.com/HashEngineeringSolutions/dash-wallet.git
 
 Builds:
   - versionName: 6.6.4
@@ -112,7 +114,98 @@ Builds:
       - wallet/test/de/schildbach/wallet/util/bitcoin-backup-protobuf-testnet
     ndk: r21d
 
+  - versionName: 8.1.3
+    versionCode: 80130
+    commit: 248ff06a01cfc3047c4fd1d39eada6ad3c6ab2ff
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+      - wallet/test/de/schildbach/wallet/util/bitcoin-backup-protobuf-testnet
+    ndk: r21d
+
+  - versionName: 9.0.6
+    versionCode: 90061
+    commit: c48b72f275fa39830a2a03642d144e08d256008a
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+      - wallet/test/de/schildbach/wallet/util/bitcoin-backup-protobuf-testnet
+    ndk: r21d
+
+  - versionName: 10.0.1
+    versionCode: 100010
+    commit: 97abc3cef5c7bf7035092d3fcacd701182e130e9
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/services/*testnet
+    ndk: r21d
+
+  - versionName: 10.0.2
+    versionCode: 100021
+    commit: 7b19dd68bf78d7924c67f5b322a3fc8d688f97ff
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/services/*testnet
+    ndk: r21d
+
+  - versionName: 10.1.1
+    versionCode: 101010
+    commit: ca783a4bff67c9ab27017261622368b48dd7e8dc
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/services/*testnet
+    ndk: r21d
+
+  - versionName: 10.2.0
+    versionCode: 102000
+    commit: 42467d0e71b182ece2c99dfb8388da3d268f45a1
+    subdir: wallet
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - foss
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/services/*testnet
+    ndk: r21d
+
 AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 7.3.2
-CurrentVersionCode: 70311
+UpdateCheckMode: Tags .*-foss$
+UpdateCheckData: wallet/build.gradle|versionCode.*\s(\d+)|.|versionName.*\s"(.*)"
+CurrentVersion: 10.2.0
+CurrentVersionCode: 102000

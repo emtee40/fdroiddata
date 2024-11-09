@@ -112,7 +112,84 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.8.0
+    versionCode: 108000
+    commit: 51d14877e8d305591ea0af3e7e25502dd7682464
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 108001
+    commit: 86445f62382854186919a6f13144505cfde8f6e1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.2
+    versionCode: 108002
+    commit: c6ba21faf623c1ba6c9b629bd17bdff3f34132cc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 109000
+    commit: 8614acd85e62b9969666b3051f04f9f03f1ec815
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.1
+    versionCode: 109001
+    commit: f813ee34e36bc8db4fe54047c31c7b68b70ef2aa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.2
+    versionCode: 109002
+    commit: 3c9078e1ad086cc94a4b4a6c4db7adf3a7f2da88
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.3
+    versionCode: 109003
+    commit: d4ff7b49bfcad92ca9d56ab8e077436cc0f93203
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.4
+    versionCode: 109004
+    commit: 21cb0e69cff2ac39b581116711dd090f5ccd4330
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.5
+    versionCode: 109005
+    commit: 7f32669bab7a7e41e77d448196e6712778f27af4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 200000
+    commit: 130a9bce093934e734d4ec6547308d44ee214933
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.2
+    versionCode: 200002
+    commit: f4b4a4d7d44d52de95fa5b9ce69d51709d735a4a
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.7.3
-CurrentVersionCode: 107003
+CurrentVersion: 2.0.2
+CurrentVersionCode: 200002

@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Currency converter uses an online service
 Categories:
   - Science & Education
 License: GPL-3.0-only
@@ -9,6 +10,8 @@ AuthorWebSite: https://sadellie.github.io/
 WebSite: https://sadellie.github.io/unitto/
 SourceCode: https://github.com/sadellie/unitto
 IssueTracker: https://github.com/sadellie/unitto/issues
+Translation: https://poeditor.com/join/project/T4zjmoq8dx
+Changelog: https://github.com/sadellie/unitto/releases
 
 AutoName: Unitto
 
@@ -56,7 +59,196 @@ Builds:
       - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
       - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: Fire engine red
-CurrentVersionCode: 13
+  - versionName: Hot magenta
+    versionCode: 16
+    commit: 3bc9891b81a9f85c18d56ab6852224ea50666a9b
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Illuminating emerald
+    versionCode: 17
+    commit: 0a9f94b919b031417ac4f83bd1d66e8c662aed24
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Illuminating emerald
+    versionCode: 18
+    commit: 0ef363322e56ce965d8b792a0a425a056b4c2144
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Jazzberry jam
+    versionCode: 19
+    commit: cd2b27c094bc4147f524386639039db19ce96978
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Kobicha
+    versionCode: 20
+    commit: fcebc14ffbca08640686500990ed9a065088837c
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Lilac Luster
+    versionCode: 22
+    commit: d6f8d2e9127ebaf30c77bdf8d4bbe69348b93481
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Mikado Yellow
+    versionCode: 24
+    commit: 7e6b158414e5e1caa6d4955d400062a15d791b0c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Nadeshiko Pink
+    versionCode: 25
+    commit: 0d26fb78a1a4eb6c4b87df627afcc3d18e1ffe67
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Nadeshiko Pink
+    versionCode: 26
+    commit: 9207906919ddef254720f156d222c54d72412a10
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Olive Green
+    versionCode: 29
+    commit: 48e75093bd2eb3677a626b9d198b736eee60c693
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Popstar
+    versionCode: 33
+    commit: f623e989e514edc5d86e00b0b67fc09461394acb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Quick Silver
+    versionCode: 35
+    commit: 99b0b37ad0313f66c922165b8df6db5c18f8f61b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+  - versionName: Quick Silver
+    versionCode: 36
+    commit: 32c8f3184d5d195a4b44f3efdb1056e89038a264
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/google-services/d' -e '/firebase/d' build.gradle.kts ../build.gradle.kts
+      - echo -e "\norg.gradle.unsafe.configuration-cache=false" >> ../gradle.properties
+    scandelete:
+      - build-logic/convention
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: Quick Silver
+CurrentVersionCode: 36

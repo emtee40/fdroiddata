@@ -3,6 +3,7 @@ Categories:
 License: Apache-2.0
 SourceCode: https://github.com/mueller-ma/PrepaidBalance
 IssueTracker: https://github.com/mueller-ma/PrepaidBalance/issues
+Translation: https://crowdin.com/project/prepaidbalance
 Changelog: https://github.com/mueller-ma/PrepaidBalance/releases
 
 AutoName: Prepaid Balance
@@ -231,7 +232,96 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.20'
+    versionCode: 28
+    commit: 3a1c465ac06bf1b06cd2b7523ae776baa055fdcb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 30
+    commit: e2f27388e567e2090fd6e10dd0b3fc168c5cd50f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 31
+    commit: 3343c44605a47c56c4e3bcceb71663801b5eb2b4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 32
+    commit: 97a8453a99ddde24b41afca97fcc0f1004adadac
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 33
+    commit: 3267b9e6df5a3c1fabf071dfe409c35564a43320
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 34
+    commit: 158096b6e4caa66f4f314e21bdc7984779311269
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 35
+    commit: d2d5940ec783d4ee96102da0c879f2821f105881
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 36
+    commit: f3e56a91bdbbf0ddc9dcc27a732af2be6a397a7e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 37
+    commit: 1f2edc1de8446e4bf34bd25004670bde3023b2fe
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.9'
+    versionCode: 38
+    commit: 2b866e6ee7d5e275ab52f23efb2a2d1877ee8d60
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.10'
+    versionCode: 39
+    commit: 8426db982b6c7c33ed83bcd0bb145fb31e55024a
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.19'
-CurrentVersionCode: 27
+CurrentVersion: '2.10'
+CurrentVersionCode: 39

@@ -9,7 +9,7 @@ IssueTracker: https://github.com/ligi/SCR/issues
 
 AutoName: 33c3 SCR
 Description: Mark the talks you want to see at 33C3 and prevent schedule conflicts
-    this way.
+  this way.
 
 RepoType: git
 Repo: https://github.com/ligi/SCR.git
@@ -55,7 +55,7 @@ Builds:
       - sed -i '/play_services/d' build.gradle
       - sed -i '/android-sdk-manager/d' build.gradle
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '3.1'

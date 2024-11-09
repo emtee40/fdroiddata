@@ -8,31 +8,31 @@ IssueTracker: https://bugs.ghostscript.com/
 
 AutoName: MuPDF mini
 Description: |-
-    <i>MuPDF Mini Viewer</i> is a minimalist Android app that uses the MuPDF library to
-    view PDF, XPS, CBZ, unprotected EPUB, and FB2 documents.
+  <i>MuPDF Mini Viewer</i> is a minimalist Android app that uses the MuPDF library to
+  view PDF, XPS, CBZ, unprotected EPUB, and FB2 documents.
 
-    This is a minimalist version of the MuPDF app, which focuses on reading only. It
-    does not support editing annotations or filling out forms.
+  This is a minimalist version of the MuPDF app, which focuses on reading only. It
+  does not support editing annotations or filling out forms.
 
-    The app will start with a file picker showing the contents of the external
-    storage directory. Only files that it can open will be listed.
+  The app will start with a file picker showing the contents of the external
+  storage directory. Only files that it can open will be listed.
 
-    Each document you open will start its own activity, so you can view many
-    documents at once. Use the Overview system button to switch between the file
-    picker and any open documents and other activities you have running.
+  Each document you open will start its own activity, so you can view many
+  documents at once. Use the Overview system button to switch between the file
+  picker and any open documents and other activities you have running.
 
-    Tapping on the left and right side of the screen will flip to the previous and
-    next pages. Tapping in the middle will bring up or hide the tool bars. A long
-    tap will toggle highlighting of links. When the links are highlighted they are
-    also active and tappable.
+  Tapping on the left and right side of the screen will flip to the previous and
+  next pages. Tapping in the middle will bring up or hide the tool bars. A long
+  tap will toggle highlighting of links. When the links are highlighted they are
+  also active and tappable.
 
-    You can pinch to zoom in. When zoomed in, tapping will scroll to advance the
-    next screenful of content.
+  You can pinch to zoom in. When zoomed in, tapping will scroll to advance the
+  next screenful of content.
 
-    In the toolbar there is a button to show the table of contents, if the document
-    has one. In EPUB and FB2 documents, there is also a menu item to pick the font
-    size. The scrubber at the bottom allows you to quickly jump to a given page in
-    the document.
+  In the toolbar there is a button to show the table of contents, if the document
+  has one. In EPUB and FB2 documents, there is also a menu item to pick the font
+  size. The scrubber at the bottom allows you to quickly jump to a given page in
+  the document.
 
 RepoType: git
 Repo: git://git.ghostscript.com/mupdf-android-viewer-mini.git
@@ -233,12 +233,306 @@ Builds:
     build: make -C ../jni/libmupdf generate
     ndk: r23c
 
+  - versionName: 1.21.0a
+    versionCode: 110
+    commit: cbd5aca2d34a2e80f871c494ee85b1e4ccc618bd
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r23c
+
+  - versionName: 1.22.0a
+    versionCode: 120
+    commit: 2f9fb3319920ebfa17246e6081c50b78a8094876
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r23c
+
+  - versionName: 1.23.0a
+    versionCode: 130
+    commit: 4e345453f0778c5747415e80ce4b156b65b7ee20
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r23c
+
+  - versionName: 1.23.3a
+    versionCode: 131
+    commit: e1e450f9c84f193cb55bfa8965aa6b7ed1d59a3a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r23c
+
+  - versionName: 1.23.4a
+    versionCode: 132
+    commit: e1804b8fd3f594c3b1f9c58184b125cdcbb22b80
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r23c
+
+  - versionName: 1.23.5a
+    versionCode: 133
+    commit: 2b4996048cf2229dc8a6b0a6888e09b1780920ec
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r23c
+
+  - versionName: 1.23.7a
+    versionCode: 134
+    commit: 25d3582ba16de5f61e4945de60bd3cb1a6230ac4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r23c
+
+  - versionName: 1.23.11a
+    versionCode: 135
+    commit: f18460df87fc34f5e680d34559d94a9f8c3c4220
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r23c
+
+  - versionName: 1.24.0a
+    versionCode: 140
+    commit: 4cc982d5980189589577fa53c6e9595eb1b10f19
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r23c
+
+  - versionName: 1.24.4a
+    versionCode: 141
+    commit: 25b2c0e5c101111f314146673655cafb4908aff6
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r23c
+
+  - versionName: 1.24.6a
+    versionCode: 142
+    commit: 1aaf0f6ae8c5be224f7a2cd30b49cefd910268ad
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r26c
+
+  - versionName: 1.24.8a
+    versionCode: 143
+    commit: 4efc24e7a5dbac2e6bf8390e4c80da7db4e9f9de
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r26c
+
+  - versionName: 1.24.9a
+    versionCode: 144
+    commit: 5e8215b1d62ddfb7b7142adefcd1eb81a554a4e3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r26c
+
+  - versionName: 1.24.10a
+    versionCode: 145
+    commit: 8d3c1a88984da71c42af6c84bbfd210b29002660
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/maven.ghostscript.com/d' -e '/user.home/d' -e '/url.*MAVEN_REPO/d'
+        ../build.gradle ../*/build.gradle
+      - sed -i -e 's/enable true/enable false/' build.gradle
+      - sed -i -e "s/'-j4'/'-j`nproc`'/" ../jni/build.gradle
+      - echo 'ABI_FILTERS=armeabi-v7a,arm64-v8a,x86' >> ../gradle.properties
+    scandelete:
+      - jni/libmupdf/thirdparty
+    build: make -C ../jni/libmupdf generate
+    ndk: r26c
+
 MaintainerNotes: |-
-    Upstream builds separate APKs for all target architectures supported by NDK
-    (7 as of r16). We build universal APK with armeabi-v7a, arm64-v8a and x86
-    support only.
+  Upstream builds separate APKs for all target architectures supported by NDK
+  (7 as of r16). We build universal APK with armeabi-v7a, arm64-v8a and x86
+  support only.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.20.2a
-CurrentVersionCode: 102
+CurrentVersion: 1.24.10a
+CurrentVersionCode: 145

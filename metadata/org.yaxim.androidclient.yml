@@ -12,13 +12,13 @@ Changelog: https://raw.githubusercontent.com/yaxim-org/yaxim/HEAD/ChangeLog
 
 AutoName: yaxim
 Description: |-
-    Yet Another XMPP Instant Messenger. Why pay for SMS if you can have unlimited
-    messaging on your data plan? yaxim aims at security, low overhead and keeping
-    your server connection open. So far, it only supports a single account.
+  Yet Another XMPP Instant Messenger. Why pay for SMS if you can have unlimited
+  messaging on your data plan? yaxim aims at security, low overhead and keeping
+  your server connection open. So far, it only supports a single account.
 
-    Features include: connecting to one Jabber or GMail server and staying
-    connected, chat with your contacts, change your roster, persistent Message
-    History and notifications it self-signed certificates need to be accepted.
+  Features include: connecting to one Jabber or GMail server and staying
+  connected, chat with your contacts, change your roster, persistent Message
+  History and notifications it self-signed certificates need to be accepted.
 
 RepoType: git
 Repo: https://github.com/yaxim-org/yaxim.git
@@ -69,11 +69,6 @@ Builds:
     submodules: true
     oldsdkloc: true
     target: android-10
-
-  - versionName: 0.8.3
-    versionCode: 12
-    disable: can't find corresponding source code
-    commit: unknown - see disabled
 
   - versionName: 0.8.4
     versionCode: 13
@@ -160,8 +155,9 @@ Builds:
 
 MaintainerNotes: Legacy with lots of jars, which was allowed back when it was added.
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 UpdateCheckData: AndroidManifest.xml|android:versionCode="([0-9]+)"|.|android:versionCode="([0-9]*)"
 CurrentVersion: '63'
 CurrentVersionCode: 63

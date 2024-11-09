@@ -525,21 +525,255 @@ Builds:
     scandelete:
       - gradlePlugins
 
-  - versionName: 7.8.5
-    versionCode: 785
-    disable: disable gradle issues
-    commit: c2681c5cc91aae34218e8c08a74b0829916a7987
+  - versionName: 7.9.0
+    versionCode: 790
+    commit: 4dbf8bed8bcdc4481b7a8fe4758ebcdc1831fc1d
     subdir: PersianCalendar
     submodules: true
     gradle:
       - minApi17
-    prebuild: sed -i -e 's/8.0-rc-1/7.6/' ../gradle/wrapper/gradle-wrapper.properties
-    scanignore:
-      - PersianCalendar/src/main/res/raw/worldmap.gz
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 7.9.5
+    versionCode: 795
+    commit: 104a31168cf31c9a1baa34becd1d001719a3990a
+    subdir: PersianCalendar
+    submodules: true
+    gradle:
+      - minApi17
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 8.0.1
+    versionCode: 801
+    commit: b9bd5e7ec1df8afc023da0e083946b546cd84cf2
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - minApi17
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 8.1.0
+    versionCode: 810
+    commit: d33e5602f30a193600abaeba24981aacb61a03d3
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - minApi17
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 8.1.5
+    versionCode: 815
+    commit: b09f82c8850073770d2200f37dc566d0259ec4ee
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - minApi17
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 8.2.0
+    versionCode: 820
+    commit: 06f7258273a4e9313a903da41f39544195656066
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - minApi17
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 8.2.5
+    versionCode: 825
+    commit: 5c0d44a6b8b0d0b68a1bb9566eee1f8b842e849d
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - minApi17
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 8.3.0
+    versionCode: 830
+    commit: 73d7d1b712233ebf81c89e0dbc624775db919966
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - minApi17
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 8.3.1
+    versionCode: 831
+    commit: f495321a0eb55ed9126f36db221d62ce8fa38d2b
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - minApi17
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 8.3.6
+    versionCode: 836
+    commit: 40204a3fa0d0ba2feb96a8687ec7f81b86d56dff
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - minApi17
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 8.4.0
+    versionCode: 840
+    commit: 79d2719190c78c5742de1a20450a75edde03294c
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - minApi17
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 9.0.0
+    versionCode: 900
+    commit: 7926c2385dc40da2c152faee01d08694f0c9a5fb
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 9.1.0
+    versionCode: 910
+    commit: 82b537833b8793026d80599e37a479a7da85d9d5
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 9.1.1
+    versionCode: 911
+    commit: 76449c02c42d6cc1929de9341ef578ce525b221d
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 9.1.2
+    versionCode: 912
+    commit: 9592412119cac8cc5340e899b443170eea5f1932
+    subdir: PersianCalendar
+    submodules: true
+    gradle:
+      - yes
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 9.1.5
+    versionCode: 915
+    commit: 0b6251e2e844ad30eca13bf24fe82fc7b09de7c0
+    subdir: PersianCalendar
+    submodules: true
+    gradle:
+      - yes
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 9.2.0
+    versionCode: 920
+    commit: e966aa53a81756baa196f6d81c11be90c1ee35a6
+    subdir: PersianCalendar
+    submodules: true
+    gradle:
+      - yes
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 9.3.0
+    versionCode: 930
+    commit: dd4782782954281a8b10bed5d381979faaa7067d
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - gradlePlugins
+
+  - versionName: 9.4.0
+    versionCode: 940
+    commit: dea699241fc9cdf2a03a445eb1f55e05c2e76c56
+    subdir: PersianCalendar
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
     scandelete:
       - gradlePlugins
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9.v]*$
-CurrentVersion: 7.8.5
-CurrentVersionCode: 785
+CurrentVersion: 9.4.0
+CurrentVersionCode: 940

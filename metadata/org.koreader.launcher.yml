@@ -9,7 +9,7 @@ Changelog: https://github.com/koreader/koreader/releases
 Liberapay: KOReader
 
 Description: |
-    <b>Note</b>: The appid was changed, please use <a href="https://f-droid.org/de/packages/org.koreader.launcher.fdroid/">this one</a> instead.
+  <b>Note</b>: The appid was changed, please use <a href="https://f-droid.org/packages/org.koreader.launcher.fdroid/">this one</a> instead.
 
 RepoType: git
 Repo: https://github.com/koreader/koreader.git
@@ -198,90 +198,6 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y gcc-multilib luarocks p7zip-full
-    output: koreader-android-*.apk
-    rm:
-      - platform/ubuntu-touch/
-      - platform/win32/
-    prebuild: sed -i -e 's#./gradlew#gradle#' platform/android/luajit-launcher/Makefile
-    scandelete:
-      - base/thirdparty/
-    build:
-      - NDK=$$NDK$$
-      - SDK=$$SDK$$
-      - ANDROID_FLAVOR=fdroid ./kodev release android
-    ndk: r15c
-
-  - versionName: v2019.12
-    versionCode: 7219
-    disable: Fetched in submodule path 'l10n', but it did not contain c848073a4c0c7a08b8a1c29f0686962a6e97af36
-    commit: v2019.12
-    submodules: true
-    sudo:
-      - apt-get update
-      - apt-get install -y gcc-multilib luarocks p7zip-full
-    output: koreader-android-*.apk
-    rm:
-      - platform/ubuntu-touch/
-      - platform/win32/
-    prebuild: sed -i -e 's#./gradlew#gradle#' platform/android/luajit-launcher/Makefile
-    scandelete:
-      - base/thirdparty/
-    build:
-      - NDK=$$NDK$$
-      - SDK=$$SDK$$
-      - ANDROID_FLAVOR=fdroid ./kodev release android
-    ndk: r15c
-
-  - versionName: v2020.01
-    versionCode: 7278
-    disable: fails to build
-    commit: v2020.01
-    submodules: true
-    sudo:
-      - apt-get update
-      - apt-get install -y gcc-multilib luarocks p7zip-full
-    output: koreader-android-*.apk
-    rm:
-      - platform/ubuntu-touch/
-      - platform/win32/
-    prebuild: sed -i -e 's#./gradlew#gradle#' platform/android/luajit-launcher/Makefile
-    scandelete:
-      - base/thirdparty/
-    build:
-      - NDK=$$NDK$$
-      - SDK=$$SDK$$
-      - ANDROID_FLAVOR=fdroid ./kodev release android
-    ndk: r15c
-
-  - versionName: v2020.03
-    versionCode: 7360
-    disable: mismatched versionCode waiting for upstream
-    commit: v2020.03
-    submodules: true
-    sudo:
-      - apt-get update
-      - apt-get install -y gcc-multilib luarocks p7zip-full ragel
-    output: koreader-android-*.apk
-    rm:
-      - platform/ubuntu-touch/
-      - platform/win32/
-    prebuild: sed -i -e 's#./gradlew#gradle#' platform/android/luajit-launcher/Makefile
-    scandelete:
-      - base/thirdparty/
-    build:
-      - NDK=$$NDK$$
-      - SDK=$$SDK$$
-      - ANDROID_FLAVOR=fdroid ./kodev release android
-    ndk: r15c
-
-  - versionName: v2020.03.2
-    versionCode: 7365
-    disable: versionCode different see upstream
-    commit: v2020.03.2
-    submodules: true
-    sudo:
-      - apt-get update
-      - apt-get install -y gcc-multilib luarocks p7zip-full ragel
     output: koreader-android-*.apk
     rm:
       - platform/ubuntu-touch/
@@ -689,7 +605,7 @@ Builds:
       - ANDROID_FLAVOR=fdroid ./kodev release android
     ndk: r15c
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: v2021.05

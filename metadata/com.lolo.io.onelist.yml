@@ -105,7 +105,28 @@ Builds:
       - sed -i -e '/google-services/d' ./build.gradle
       - sed -i -e '/firebase/d' ./build.gradle
 
+  - versionName: 1.4.2
+    versionCode: 19
+    commit: c7fb13249b44983cde088c88c14d84bb5e5ef7cb
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/google.services/d' -e '/firebase/d' {..,.}/build.gradle.kts
+
+  - versionName: 1.5.2
+    versionCode: 21
+    commit: ee51a991bee395a641dba82b2e8ab1a1636f5b66
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/TYPESAFE_PROJECT_ACCESSORS/a rootProject.name = "onelist"' ../settings.gradle.kts
+      - sed -i -e '/google.services/d' -e '/firebase/d' {..,.}/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^onelist-
-CurrentVersion: 1.3.1
-CurrentVersionCode: 14
+UpdateCheckData: app/build.gradle.kts|versionCodeCI \?:\ (\d+)|.|versionName = "([\d.]+)"
+CurrentVersion: 1.5.2
+CurrentVersionCode: 21

@@ -1,8 +1,8 @@
 AntiFeatures:
   - NonFreeNet
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-or-later
 AuthorName: Christian Schabesberger
 SourceCode: https://gitlab.com/derSchabi/OpenHitboxStreams
@@ -12,8 +12,8 @@ Bitcoin: 16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh
 
 AutoName: OpenHitboxStreams
 Description: |-
-    Opens Hitbox.tv streams from Intent. So for example open it from firefox, and
-    choose your favorite player.
+  Opens Hitbox.tv streams from Intent. So for example open it from firefox, and
+  choose your favorite player.
 
 RepoType: git
 Repo: https://gitlab.com/derSchabi/OpenHitboxStreams.git
@@ -26,7 +26,7 @@ Builds:
     gradle:
       - yes
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '1.0'

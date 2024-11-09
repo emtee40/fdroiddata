@@ -7,15 +7,15 @@ IssueTracker: https://github.com/MrDoomy/Torch/issues
 
 AutoName: Torch
 Description: |-
-    Use your phone as a flashlight.
+  Use your phone as a flashlight.
 
-    Features:
+  Features:
 
-    * Flash camera
-    * Display illumination
-    * SOS mode
-    * Widget flashlight
-    * Hide icon
+  * Flash camera
+  * Display illumination
+  * SOS mode
+  * Widget flashlight
+  * Hide icon
 
 RepoType: git
 Repo: https://github.com/MrDoomy/Torch
@@ -28,7 +28,8 @@ Builds:
     gradle:
       - yes
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: 1.1.0
 CurrentVersionCode: 11

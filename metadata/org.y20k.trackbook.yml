@@ -1,18 +1,20 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Rely on OpenStreetMap
 Categories:
   - Navigation
 License: MIT
 AuthorName: y20k
 WebSite: https://codeberg.org/y20k/trackbook
 SourceCode: https://codeberg.org/y20k/trackbook
-IssueTracker: https://codeberg.org/y20k/trackbook/issues
 Translation: https://hosted.weblate.org/projects/trackbook/strings/
 Changelog: https://codeberg.org/y20k/trackbook/releases
 
 AutoName: Trackbook
 Description: |-
-    Trackbook is a bare bones app for recording your movements. Trackbook is great
-    for hiking, vacation or workout. Once started it traces your movements on a map.
-    The map data is provided by OpenStreetMap (OSM).
+  Trackbook is a bare bones app for recording your movements. Trackbook is great
+  for hiking, vacation or workout. Once started it traces your movements on a map.
+  The map data is provided by OpenStreetMap (OSM).
 
 RepoType: git
 Repo: https://codeberg.org/y20k/trackbook.git
@@ -112,22 +114,6 @@ Builds:
   - versionName: 1.0.8
     versionCode: 15
     commit: v1.0.8
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 1.1.0
-    versionCode: 16
-    disable: missing google() repo
-    commit: v1.1.0
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 1.1.2
-    versionCode: 18
-    disable: missing google() repo
-    commit: v1.1.2
     subdir: app
     gradle:
       - yes
@@ -347,7 +333,39 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.2.0
+    versionCode: 51
+    commit: 9658aa47dd63a35776de3c2cda24d04a4cec3f9f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.1
+    versionCode: 52
+    commit: d5f8ccfeaf5009dbaf9dc04b3e4a7327f145ee44
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.2
+    versionCode: 53
+    commit: 7d15292ad07a8e2af566b663179de95dbde0024e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.3
+    versionCode: 54
+    commit: 79d75e0f3f3d6810e23e8c8d9eed32221eb3d33b
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.1.2
-CurrentVersionCode: 50
+CurrentVersion: 2.2.3
+CurrentVersionCode: 54

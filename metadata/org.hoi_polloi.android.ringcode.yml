@@ -10,24 +10,19 @@ Bitcoin: 18FLvxn8Vgz5DTgVH1kT4DRJoaANpWhqvP
 
 AutoName: RingCode
 Description: |-
-    If the normal ringtones are silenced, the application will notify incoming calls
-    with a Morse code associated with the calling number.
+  If the normal ringtones are silenced, the application will notify incoming calls
+  with a Morse code associated with the calling number.
 
-    The user assigns codes to phone numbers (either directly or based on contact
-    info). The list of assignments can be modified (entry activated, deactivated or
-    deleted).
+  The user assigns codes to phone numbers (either directly or based on contact
+  info). The list of assignments can be modified (entry activated, deactivated or
+  deleted).
 
-    The user can specify parameters like volume and Morse speed.
+  The user can specify parameters like volume and Morse speed.
 
 RepoType: git
 Repo: https://github.com/bfix/ringcode-android
 
 Builds:
-  - versionName: 1.1c
-    versionCode: 4
-    disable: make ucm happy
-    commit: '4'
-
   - versionName: '1.1'
     versionCode: 11
     commit: cea290e21969abb4fb931cf65b5f5b92576aaa47

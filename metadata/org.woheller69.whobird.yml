@@ -1,0 +1,182 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Download BirdNET model from GitHub
+  NonFreeAssets:
+    en-US: BirdNET model is published under CC-BY-NC-SA 4.0
+Categories:
+  - Science & Education
+License: GPL-3.0-only
+AuthorName: woheller69
+SourceCode: https://github.com/woheller69/whoBIRD
+IssueTracker: https://github.com/woheller69/whoBIRD/issues
+
+AutoName: whoBIRD
+
+RepoType: git
+Repo: https://github.com/woheller69/whoBIRD
+
+Builds:
+  - versionName: '1.5'
+    versionCode: 15
+    commit: V1.5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 16
+    commit: 54d7004569c6b4b99b68b6084842bb682dc4b7a4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.7'
+    versionCode: 17
+    commit: fdbeefb1bc38e42dc34b51b524daa2d1505983f7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 20
+    commit: f75bd2f3d4b4381b6319ecd9644a4ea220cb7831
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 21
+    commit: d5cccd63d9f14170cc3d7e091a62af3cf53e641b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 22
+    commit: 0f1adf03ad103f3299d94adf69f5128eb5c59731
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 23
+    commit: 47c56dda4952485c11e7b418676b6975f3e35115
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 24
+    commit: d70c68f00ffde24fd3f17728ca2db6033159efb1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 25
+    commit: 741fd9989cfef36ccf5b702f3f4f105053c390bb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 26
+    commit: a01b6a100205fca63e8de250b74591b283df64de
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 27
+    commit: c9269763486613bb264429bcd8ca2a5da37c1267
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 28
+    commit: 54396b0c530fab9b5f6464d52713a48ea491daf6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.9'
+    versionCode: 29
+    commit: 2bf436f7c10012339dc60a053b81e90be936d9c3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.0'
+    versionCode: 30
+    commit: 0d288e4d270a9076c69a14e9a3547d8bebc69a7b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.1'
+    versionCode: 31
+    commit: 91e7a5c295740803e9ef8742bd5c048677682f66
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.2'
+    versionCode: 32
+    commit: 635cf7a4e1747653d33028ee1e30b8ecf72eebe3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.3'
+    versionCode: 33
+    commit: a3a809dde9b5eeb9baca4b2283167f050592a37f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.4'
+    versionCode: 34
+    commit: 8facc9ade87202b5144011a7be97fd2e2e7103ca
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.5'
+    versionCode: 35
+    commit: 52e672047a796f5e85a4090bb2077f500c055f95
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.6'
+    versionCode: 36
+    commit: f82c667aea2a6e28746daf9bd777c37dcb4b7d52
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags V.*
+CurrentVersion: '3.6'
+CurrentVersionCode: 36

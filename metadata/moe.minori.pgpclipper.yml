@@ -7,11 +7,13 @@ Changelog: https://github.com/Mnkai/PGPClipper/releases
 
 AutoName: PGPClipper
 Description: |-
-    Use PGPClipper to easily and safely write and receive PGP messages in apps that
-    let you copy and paste text.
+  <b>NOTE:</b> App repo is archived by dev. No longer maintained.
 
-    PGPClipper monitors user clipboard, and notifies the user when possible PGP data
-    is available for decoding.
+  Use PGPClipper to easily and safely write and receive PGP messages in apps that
+  let you copy and paste text.
+
+  PGPClipper monitors user clipboard, and notifies the user when possible PGP data
+  is available for decoding.
 
 RepoType: git
 Repo: https://github.com/Mnkai/PGPClipper
@@ -59,7 +61,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags ^[0-9.]+$
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '0.22'
 CurrentVersionCode: 6

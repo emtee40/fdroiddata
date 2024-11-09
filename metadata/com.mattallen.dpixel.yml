@@ -1,6 +1,6 @@
 Categories:
-  - System
   - Multimedia
+  - System
 License: Apache-2.0
 SourceCode: https://github.com/matt-allen/dpixel
 IssueTracker: https://github.com/matt-allen/dpixel/issues
@@ -21,6 +21,8 @@ Builds:
       - android/android-support-v4.jar
 
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: '1.0'
 CurrentVersionCode: 1
+
+NoSourceSince: '1.0'

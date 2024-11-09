@@ -1,13 +1,13 @@
 AntiFeatures:
   - NonFreeNet
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-only
 AuthorName: SECUSO - Security Usability Society
 AuthorEmail: contact@secuso.org
-AuthorWebSite: https://secuso.aifb.kit.edu/english/
-WebSite: https://secuso.org/pfa
+AuthorWebSite: https://secuso.aifb.kit.edu/english/105.php
+WebSite: https://secuso.aifb.kit.edu/english/Weather.php
 SourceCode: https://github.com/SecUSo/privacy-friendly-weather
 IssueTracker: https://github.com/SecUSo/privacy-friendly-weather/issues
 Changelog: https://github.com/SecUSo/privacy-friendly-weather/blob/HEAD/CHANGELOG.md
@@ -106,19 +106,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 3.1.0
-    versionCode: 16
-    disable: https://github.com/SecUSo/privacy-friendly-weather/issues/195
-    commit: d791b2c5b63f987e2cc89537d4d60399722f6dc2
-    subdir: app
-    submodules: true
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - yes
-
   - versionName: 3.1.1
     versionCode: 17
     commit: a108f928aa0c9503c2e50e3ff0b742b582004976
@@ -131,7 +118,7 @@ Builds:
     gradle:
       - yes
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 3.1.1

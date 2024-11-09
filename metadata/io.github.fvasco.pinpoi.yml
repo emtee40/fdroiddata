@@ -10,14 +10,14 @@ Donate: https://www.paypal.me/FrancescoVasco/2
 
 AutoName: PinPoi
 Description: |-
-    PinPoi imports thousand points of interest for your gps navigator.
+  PinPoi imports thousand points of interest for your gps navigator.
 
-    You can import Google KML and KMZ, TomTom OV2, simple GeoRSS, Garmin GPX,
-    Navigon ASC, CSV and zipped collections directly into your phone and organize
-    them in collections.
+  You can import Google KML and KMZ, TomTom OV2, simple GeoRSS, Garmin GPX,
+  Navigon ASC, CSV and zipped collections directly into your phone and organize
+  them in collections.
 
-    PinPoi searches using your gps position or a custom location, you can choose
-    your destination from a map and open it with your preferred app.
+  PinPoi searches using your gps position or a custom location, you can choose
+  your destination from a map and open it with your preferred app.
 
 RepoType: git
 Repo: https://github.com/fvasco/pinpoi.git
@@ -296,7 +296,7 @@ Builds:
     gradle:
       - yes
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable
-        'ExtraTranslation' } }" >> build.gradle
+      'ExtraTranslation' } }" >> build.gradle
 
   - versionName: 1.4.9
     versionCode: 41
@@ -305,7 +305,7 @@ Builds:
     gradle:
       - yes
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable
-        'ExtraTranslation' } }" >> build.gradle
+      'ExtraTranslation' } }" >> build.gradle
 
   - versionName: 1.4.10
     versionCode: 42
@@ -314,7 +314,7 @@ Builds:
     gradle:
       - yes
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable
-        'ExtraTranslation' } }" >> build.gradle
+      'ExtraTranslation' } }" >> build.gradle
 
   - versionName: 1.4.11
     versionCode: 43
@@ -612,7 +612,80 @@ Builds:
       - yes
     prebuild: sed -i -e "s/gradleVersion = '2.14.1'/gradleVersion = '3.5'/" ../build.gradle
 
+  - versionName: 1.10.2
+    versionCode: 85
+    commit: 591cf87d3a7964631c4e44c2f90c02dd6bd4e0e6
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "s/gradleVersion = '2.14.1'/gradleVersion = '3.5'/" ../build.gradle
+
+  - versionName: 1.10.3
+    versionCode: 86
+    commit: 0d11e9e076d4d44ae2aa9a02bde56050514628ec
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "s/gradleVersion = '2.14.1'/gradleVersion = '3.5'/" ../build.gradle
+
+  - versionName: 1.10.4
+    versionCode: 87
+    commit: 3459468008c9e7e61466e933ced3df220c4e5c17
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e "s/gradleVersion = '2.14.1'/gradleVersion = '3.5'/" ../build.gradle
+
+  - versionName: 1.10.6
+    versionCode: 89
+    commit: 0ec5eb9d0f2aef4ebfc8f850e017980cfd59f407
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "s/gradleVersion = '2.14.1'/gradleVersion = '3.5'/" ../build.gradle
+
+  - versionName: 1.10.7
+    versionCode: 91
+    commit: cc4fb121220accc790718153839d7b09615ab1b8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "s/gradleVersion = '2.14.1'/gradleVersion = '3.5'/" ../build.gradle
+
+  - versionName: 1.11.1
+    versionCode: 94
+    commit: 66f9852b2663f80c8d80060b2faaef876727479e
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' build.gradle
+      - cd src/main/java/io/github/fvasco/pinpoi
+      - sed -i -e '/initAdMob/,/^}/d' -e '/gms/d' util/Util.kt
+      - sed -i -e '/initAdMob(/,+4d' -e '/initAdMob/d' -e '/gms/d' MainActivity.kt
+        PlacemarkDetailFragment.kt
+
+  - versionName: 1.11.3
+    versionCode: 96
+    commit: 5c8791bcec9da3429d71dc52c0503108ba9d6ab8
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' build.gradle
+      - cd src/main/java/io/github/fvasco/pinpoi
+      - sed -i -e '/initAdMob/,/^}/d' -e '/gms/d' -e '/ConsentInformation/d' -e '/ump/d'
+        util/Util.kt
+      - sed -i -e '/initAdMob(/,+4d' -e '/initAdMob/d' -e '/gms/d' PlacemarkDetailFragment.kt
+      - sed -i -e '/if (!PlacemarkDao/,/^        }/d' -e '/initAdMob/d' -e '/isPrivacyOptionsRequired/d'
+        -e '/UserMessagingPlatform/d' -e '/menu.findItem(R.id.privacy_settings)/d'
+        -e '/gms/d' -e '/ump/d' MainActivity.kt
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.10.1
-CurrentVersionCode: 84
+CurrentVersion: 1.11.3
+CurrentVersionCode: 96

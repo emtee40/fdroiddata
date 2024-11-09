@@ -8,6 +8,8 @@ Translation: https://hosted.weblate.org/engage/koreader/
 Changelog: https://github.com/koreader/koreader/releases
 Liberapay: KOReader
 
+AutoName: KOReader
+
 RepoType: git
 Repo: https://github.com/koreader/koreader.git
 
@@ -415,7 +417,7 @@ Builds:
       - base/thirdparty/
       - base/spec/unit/data/
     build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
-        release android
+      release android
     ndk: r15c
 
   - versionName: v2023.01
@@ -436,8 +438,823 @@ Builds:
       - base/thirdparty/
       - base/spec/unit/data/
     build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
-        release android
+      release android
     ndk: r15c
+
+  - versionName: v2023.03
+    versionCode: 96601
+    commit: v2023.03
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r15c
+
+  - versionName: v2023.03
+    versionCode: 96602
+    commit: v2023.03
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.03
+    versionCode: 96603
+    commit: v2023.03
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.04
+    versionCode: 97121
+    commit: v2023.04
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r15c
+
+  - versionName: v2023.04
+    versionCode: 97122
+    commit: v2023.04
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.04
+    versionCode: 97123
+    commit: v2023.04
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.05
+    versionCode: 97801
+    commit: v2023.05
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r15c
+
+  - versionName: v2023.05
+    versionCode: 97802
+    commit: v2023.05
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.05
+    versionCode: 97803
+    commit: v2023.05
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.05.1
+    versionCode: 97861
+    commit: v2023.05.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r15c
+
+  - versionName: v2023.05.1
+    versionCode: 97862
+    commit: v2023.05.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.05.1
+    versionCode: 97863
+    commit: v2023.05.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.06
+    versionCode: 98241
+    commit: v2023.06
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r15c
+
+  - versionName: v2023.06
+    versionCode: 98242
+    commit: v2023.06
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.06
+    versionCode: 98243
+    commit: v2023.06
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.06.1
+    versionCode: 98451
+    commit: v2023.06.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r15c
+
+  - versionName: v2023.06.1
+    versionCode: 98452
+    commit: v2023.06.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.06.1
+    versionCode: 98453
+    commit: v2023.06.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r15c
+
+  - versionName: v2023.08
+    versionCode: 99451
+    commit: v2023.08
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r23c
+
+  - versionName: v2023.08
+    versionCode: 99452
+    commit: v2023.08
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2023.08
+    versionCode: 99453
+    commit: v2023.08
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2023.10
+    versionCode: 100421
+    commit: v2023.10
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r23c
+
+  - versionName: v2023.10
+    versionCode: 100422
+    commit: v2023.10
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2023.10
+    versionCode: 100423
+    commit: v2023.10
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2024.01
+    versionCode: 101331
+    commit: v2024.01
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r23c
+
+  - versionName: v2024.01
+    versionCode: 101332
+    commit: v2024.01
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2024.01
+    versionCode: 101333
+    commit: v2024.01
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2024.03
+    versionCode: 102141
+    commit: v2024.03
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r23c
+
+  - versionName: v2024.03
+    versionCode: 102142
+    commit: v2024.03
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2024.03
+    versionCode: 102143
+    commit: v2024.03
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2024.03.1
+    versionCode: 102161
+    commit: v2024.03.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r23c
+
+  - versionName: v2024.03.1
+    versionCode: 102162
+    commit: v2024.03.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2024.03.1
+    versionCode: 102163
+    commit: v2024.03.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2024.04
+    versionCode: 102951
+    commit: v2024.04
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r23c
+
+  - versionName: v2024.04
+    versionCode: 102952
+    commit: v2024.04
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2024.04
+    versionCode: 102953
+    commit: v2024.04
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2024.07
+    versionCode: 105231
+    commit: v2024.07
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev release android
+    ndk: r23c
+
+  - versionName: v2024.07
+    versionCode: 105232
+    commit: v2024.07
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=arm64 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
+
+  - versionName: v2024.07
+    versionCode: 105233
+    commit: v2024.07
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make gcc-multilib luarocks ragel python-is-python3 wget
+        cmake autoconf automake libtool pkg-config nasm gettext libtool-bin libncurses5
+    output: koreader-android-*.apk
+    rm:
+      - platform/ubuntu-touch/
+      - platform/win32/
+      - platform/kindle/wmctrl
+    prebuild: sed -i -e 's|./gradlew|gradle|' platform/android/luajit-launcher/Makefile
+    scandelete:
+      - base/thirdparty/
+      - base/spec/unit/data/
+    build: ANDROID_ARCH=x86 NDK=$$NDK$$ SDK=$$SDK$$ ANDROID_FLAVOR=fdroid ./kodev
+      release android
+    ndk: r23c
 
 AutoUpdateMode: Version %v
 UpdateCheckMode: HTTP
@@ -446,5 +1263,5 @@ VercodeOperation:
   - 10 * %c + 2
   - 10 * %c + 3
 UpdateCheckData: https://ota.koreader.rocks/koreader-android-fdroid-latest|(\d+)$|.|(v.*)
-CurrentVersion: v2023.01
-CurrentVersionCode: 95513
+CurrentVersion: v2024.07
+CurrentVersionCode: 105233

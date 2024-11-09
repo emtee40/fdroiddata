@@ -1,6 +1,6 @@
 Categories:
-  - Sports & Health
   - Games
+  - Sports & Health
 License: GPL-3.0-only
 SourceCode: https://gitlab.com/onestepb/dart-checker
 IssueTracker: https://gitlab.com/onestepb/dart-checker/issues
@@ -208,7 +208,85 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.7.1
+    versionCode: 30
+    commit: 381715258e7f898ffab1a64de794d8bf4fa1fdef
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.2
+    versionCode: 31
+    commit: b46c71d221dfd832ee7bfe7b4bafb782e22ff0b8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.3
+    versionCode: 32
+    commit: 0abe2b11ebcd0367d993aa91d47445cd0ea19cfc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.4
+    versionCode: 33
+    commit: fb10e9df7ab171e1e64f7392a363ba83ccf153a5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.5
+    versionCode: 34
+    commit: 2b51bbe8a1ebd57f28186ab58bc2a35d8350a989
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.6
+    versionCode: 35
+    commit: 6065141f5254c5ac311130c7facbeffb981036a4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.7.7
+    versionCode: 36
+    commit: 545d1d9dea0dcf213815ada32fb03531ba337d67
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/debuggable .*/debuggable false/g' build.gradle
+
+  - versionName: 0.7.8
+    versionCode: 37
+    commit: 7de4674f153be672274bedb006e869d1378a2382
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/debuggable .*/debuggable false/g' build.gradle
+
+  - versionName: 0.7.9
+    versionCode: 38
+    commit: 6d1cdf3d3fee44e1d45b75af9148696016901007
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/debuggable .*/debuggable false/g' build.gradle
+
+  - versionName: 0.7.10
+    versionCode: 39
+    commit: 2bb13e6f6296dd93687cac09a4c4863d7b5bb7ac
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/debuggable .*/debuggable false/g' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '0.7'
-CurrentVersionCode: 29
+CurrentVersion: 0.7.10
+CurrentVersionCode: 39

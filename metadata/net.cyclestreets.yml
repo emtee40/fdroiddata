@@ -12,12 +12,12 @@ Donate: https://www.cyclestreets.org/donate/
 
 AutoName: CycleStreets
 Description: |-
-    UK-wide cycle journey planner CycleStreets - Cycle navigation for cyclists, by
-    cyclists. Plan routes from A to B anywhere in the UK, with a choice of four
-    routing modes to suit a range of cyclists from beginner to regular commuter. And
-    the Photomap lets you submit photos of infrastructure problems or good practice
-    around the UK. Routes for cyclists using OpenStreetMap/OpenCycleMap maps that
-    can be cached in advance of the journey
+  UK-wide cycle journey planner CycleStreets - Cycle navigation for cyclists, by
+  cyclists. Plan routes from A to B anywhere in the UK, with a choice of four
+  routing modes to suit a range of cyclists from beginner to regular commuter. And
+  the Photomap lets you submit photos of infrastructure problems or good practice
+  around the UK. Routes for cyclists using OpenStreetMap/OpenCycleMap maps that
+  can be cached in advance of the journey
 
 RepoType: git
 Repo: https://github.com/cyclestreets/android.git
@@ -30,14 +30,6 @@ Builds:
   - versionName: 2.0.1
     versionCode: 15
     commit: RELEASE_2_0_1
-
-  - versionName: '2.1'
-    versionCode: 17
-    disable: https://github.com/cyclestreets/android/issues/84
-    commit: RELEASE_2_1
-    subdir: cyclestreets
-    gradle:
-      - yes
 
   - versionName: '3.7'
     versionCode: 1567
@@ -55,7 +47,16 @@ Builds:
       - yes
     prebuild: sed -i -e '/keystoreProperties/d' build.gradle
 
+  - versionName: 3.12.0
+    versionCode: 1668
+    commit: f263e7f0fc84609c6f122fa4577f32ddbe940f5f
+    subdir: cyclestreets.app/
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile/,+6d' -e '/keystoreProperties/d'
+      build.gradle
+
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 3.7.2
-CurrentVersionCode: 1579
+CurrentVersion: 3.12.0
+CurrentVersionCode: 1668

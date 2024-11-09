@@ -6,9 +6,9 @@ IssueTracker: https://github.com/xenris/liquid-wars-android/issues
 
 AutoName: Liquid Wars OS
 Description: |-
-    Liquid Wars is a complete rewrite and redesign of the original game
-    <a href="http://www.ufoot.org/liquidwar/">Liquid War</a>, but has been designed for the
-    Android operating system.
+  Liquid Wars is a complete rewrite and redesign of the original game
+  <a href="http://www.ufoot.org/liquidwar/">Liquid War</a>, but has been designed for the
+  Android operating system.
 
 RepoType: git
 Repo: https://github.com/xenris/liquid-wars-android.git
@@ -28,7 +28,16 @@ Builds:
       - yes
     ndk: r12b
 
+  - versionName: '1.43'
+    versionCode: 12
+    commit: 4d92355cbc451bccbb10b522108f52a8730ce835
+    subdir: app
+    gradle:
+      - default
+    prebuild: sed -i -e 's/enable true/enable false/' build.gradle
+    ndk: r25c
+
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
-CurrentVersion: '1.42'
-CurrentVersionCode: 11
+UpdateCheckMode: None
+CurrentVersion: '1.43'
+CurrentVersionCode: 12

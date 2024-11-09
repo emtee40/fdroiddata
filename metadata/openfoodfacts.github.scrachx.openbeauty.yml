@@ -1,8 +1,11 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on openfoodfacts.org
 Categories:
   - Sports & Health
 License: Apache-2.0
 AuthorName: Open Food Facts
-AuthorEmail: contact@openfoodfacts.org
+AuthorEmail: mobile@openfoodfacts.org
 AuthorWebSite: https://world.openfoodfacts.org/
 SourceCode: https://github.com/openfoodfacts/openfoodfacts-androidapp
 IssueTracker: https://github.com/openfoodfacts/openfoodfacts-androidapp/issues
@@ -11,32 +14,32 @@ Changelog: https://github.com/openfoodfacts/openfoodfacts-androidapp/releases
 
 AutoName: Open Beauty Facts
 Description: |-
-    Open Beauty Facts is a cosmetic products database made by everyone, for
-    everyone.
+  Open Beauty Facts is a cosmetic products database made by everyone, for
+  everyone.
 
-    You can use it to make better cosmetic choices, and as it is open data, anyone
-    can re-use it for any purpose.
+  You can use it to make better cosmetic choices, and as it is open data, anyone
+  can re-use it for any purpose.
 
-    Open Beauty Facts is a non-profit project developed by thousands of volunteers
-    from around the world. You can start contributing by adding a product from your
-    cosmetic cupboard, and we have lots of exciting projects you can contribute to
-    in many different ways.
+  Open Beauty Facts is a non-profit project developed by thousands of volunteers
+  from around the world. You can start contributing by adding a product from your
+  cosmetic cupboard, and we have lots of exciting projects you can contribute to
+  in many different ways.
 
-    Cosmetics additives, F.I.L. codes, CI-numbers, INCI (International Nomenclature
-    Cosmetic Ingredients) ingredient list, allergens, packaging codes... Open Beauty
-    Facts helps you to make sense of the fine print on products labels.
+  Cosmetics additives, F.I.L. codes, CI-numbers, INCI (International Nomenclature
+  Cosmetic Ingredients) ingredient list, allergens, packaging codes... Open Beauty
+  Facts helps you to make sense of the fine print on products labels.
 
-    You can scan: aftershaves, body lotions, creams, deodorant, eyeliner,
-    foundation, fragrance, lipstick, makeup, mask, perfume, shampoo, soap and much
-    more…
+  You can scan: aftershaves, body lotions, creams, deodorant, eyeliner,
+  foundation, fragrance, lipstick, makeup, mask, perfume, shampoo, soap and much
+  more…
 
-    Note: Open Beauty Facts is being built, the site and the application are based
-    on Open Food Facts and changes will be made to take into account the
-    specificities of cosmetics.
+  Note: Open Beauty Facts is being built, the site and the application are based
+  on Open Food Facts and changes will be made to take into account the
+  specificities of cosmetics.
 
-    Open Beauty Facts is also available on the web at
-    <a href="https://world.openbeautyfacts.org">world.openbeautyfacts.org</a>.  Questions,
-    feedback: [mailto:contact@openfoodfacts.org contact@openfoodfacts.org].
+  Open Beauty Facts is also available on the web at
+  <a href="https://world.openbeautyfacts.org">world.openbeautyfacts.org</a>.  Questions,
+  feedback: [mailto:contact@openfoodfacts.org contact@openfoodfacts.org].
 
 RepoType: git
 Repo: https://github.com/openfoodfacts/openfoodfacts-androidapp
@@ -133,15 +136,6 @@ Builds:
   - versionName: 2.7.7
     versionCode: 277
     commit: 2.7.7
-    subdir: app
-    init: sed -i '/javaMaxHeapSize/d' build.gradle
-    gradle:
-      - obf
-
-  - versionName: 2.7.9
-    versionCode: 279
-    disable: Could not resolve com.android.tools.build:gradle:3.1.2
-    commit: 2.7.9
     subdir: app
     init: sed -i '/javaMaxHeapSize/d' build.gradle
     gradle:
@@ -254,33 +248,6 @@ Builds:
     prebuild:
       - sed -i 's/\r$//' ../gradle/wrapper/gradle-wrapper.properties
       - sed -i '/javaMaxHeapSize/d' build.gradle
-
-  - versionName: 3.6.3
-    versionCode: 431
-    disable: fails to build
-    commit: 3.6.3
-    subdir: app
-    gradle:
-      - obf
-    prebuild:
-      - sed -i 's/\r$//' ../gradle/wrapper/gradle-wrapper.properties
-      - sed -i '/javaMaxHeapSize/d' build.gradle.kts
-
-  - versionName: 3.6.8
-    versionCode: 433
-    disable: mlkit
-    commit: 4af091d54c7cee7efad49ef3ae256c3ff4540f92
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - obf
-      - fdroid
-    prebuild:
-      - sed -i 's/\r$//' ../gradle/wrapper/gradle-wrapper.properties
-      - sed -i '/javaMaxHeapSize/d' build.gradle.kts
 
   - versionName: 3.9.0
     versionCode: 582

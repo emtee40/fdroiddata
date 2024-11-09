@@ -88,7 +88,98 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.9'
+    versionCode: 10
+    commit: a7fcf6e0c5f7f45296db0acbb7f5ba5a49730b11
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 11
+    commit: 4fe4ade062c9be399ce4e5d3939e870aa9ef3ba6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.1'
+    versionCode: 12
+    commit: 7f3b536ca8dec1b8bc5529a0efcc2708a9806c1d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.2'
+    versionCode: 13
+    commit: a5019dc506f54eab099a721525f926b793115bc9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.3'
+    versionCode: 14
+    commit: 795aaf1058ac9fbbdcd3f5be9a28d939d4a6029b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 15
+    commit: 7b32ebf7dd0cfbd0e5458d8e5157c1fddc1648d8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 16
+    commit: 50073df8f6122bc91472a923f021d7ed313fc543
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 17
+    commit: 14ba44f6ccc60ac961d934cf3b405d9c2547d6ef
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 18
+    commit: c2d797a071fce39841761cad753c8dbd9bc6e011
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.8'
-CurrentVersionCode: 9
+CurrentVersion: '2.7'
+CurrentVersionCode: 18

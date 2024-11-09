@@ -1,4 +1,11 @@
-<!--Please make sure your repo is public and your branch is not protected. See https://docs.gitlab.com/ee/user/project/protected_branches.html. We enable fast-forward merges by default. If your branch is protected, we can't rebase it before merge it.-->
+**Please make sure your repo is public and your branch is not protected. See https://docs.gitlab.com/ee/user/project/protected_branches.html. We enable fast-forward merges by default. If your branch is protected, we can't rebase it before merge it.**
+
+**Please read [the guide](https://gitlab.com/fdroid/fdroiddata/-/blob/master/CONTRIBUTING.md) first if this is your first contribution. Please make sure your metadata follows the best practice in [our templates](https://gitlab.com/fdroid/fdroiddata/tree/master/templates).**
+
+**F-Droid CI runners are under Gitlab's FOSS program, so there's no need for you to pay for any CI time. If Gitlab starts asking for phone numbers or credit cards don't submit anything, just leave a note in the MR so we know we need to trigger the CI.**
+
+**Please remove above lines!**
+
 ## Required
 <!--Please ensure that your MR meet following requirements-->
 * [ ] The app complies with the [inclusion criteria](https://f-droid.org/docs/Inclusion_Policy)

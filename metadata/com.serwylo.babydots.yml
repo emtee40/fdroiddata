@@ -152,7 +152,42 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.9.4
+    versionCode: 10904
+    commit: 709dc00af606df0502df03e2a43ff7890547dbab
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.5
+    versionCode: 10905
+    commit: 7bf11eea90edc2f9efea7d4159ebf4824d26d6ae
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.6
+    versionCode: 10906
+    commit: 713f3b852001135c41b9eebd56b4dce3eea8834a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.7
+    versionCode: 10907
+    commit: 89e9e6480ead215acbb9de1adaef57f07e07da62
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.8
+    versionCode: 10908
+    commit: 9bf6db5ee70d848ed0df5b0be3f9183b7afc8761
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.9.3
-CurrentVersionCode: 10903
+CurrentVersion: 1.9.8
+CurrentVersionCode: 10908

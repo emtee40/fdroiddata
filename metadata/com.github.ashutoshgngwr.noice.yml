@@ -1,9 +1,9 @@
 AntiFeatures:
-  - NonFreeNet
-  - Tracking
+  NonFreeNet:
+    en-US: Sounds are loaded from a non-libre server.
 Categories:
-  - Sports & Health
   - Multimedia
+  - Sports & Health
 License: GPL-3.0-only
 AuthorName: Ashutosh Gangwar
 AuthorEmail: ashutoshgngwr@gmail.com
@@ -433,7 +433,79 @@ Builds:
       - free
     prebuild: sed -i -e '/sed:free-build:remove/d' build.gradle ../build.gradle
 
+  - versionName: 2.5.1
+    versionCode: 66
+    commit: 984b39a877a581c4c5cc07f732198ebe4f5f5b92
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/sed:free-build:remove/d' build.gradle ../build.gradle
+
+  - versionName: 2.5.2
+    versionCode: 67
+    commit: 15fd019d7027743bac89810c693536245e49db72
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/sed:free-build:remove/d' build.gradle ../build.gradle
+
+  - versionName: 2.5.3
+    versionCode: 68
+    commit: 99d56ce4bc80399c25112bfd080677b74a66323b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild: sed -i -e '/sed:free-build:remove/d' build.gradle ../build.gradle
+
+  - versionName: 2.5.4
+    versionCode: 69
+    commit: a00d75256dc5543f4bf43a72b236f1ad9966a8ee
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild: sed -i -e '/sed:free-build:remove/d' build.gradle ../build.gradle
+
+  - versionName: 2.5.5
+    versionCode: 70
+    commit: 0e3316f8382bf700378e84664671affece314d3e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild: sed -i -e '/sed:free-build:remove/d' build.gradle ../build.gradle
+
+  - versionName: 2.5.6
+    versionCode: 71
+    commit: ae3bd00d04ba845228884506d35cc0f98d146a83
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild: sed -i -e '/sed:free-build:remove/d' build.gradle ../build.gradle
+
+  - versionName: 2.5.7
+    versionCode: 72
+    commit: 9025081e51943a2c532eb37e5619cd8549624e93
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/sed:free-build:remove/d' build.gradle ../build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*[0-9]$
-CurrentVersion: 2.4.2
-CurrentVersionCode: 64
+CurrentVersion: 2.5.7
+CurrentVersionCode: 72

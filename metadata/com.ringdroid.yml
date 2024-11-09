@@ -7,8 +7,8 @@ IssueTracker: https://github.com/google/ringdroid/issues
 
 AutoName: Ringdroid
 Description: |-
-    An application for editing and creating your own ringtones, alarms, and
-    notification sounds.
+  An application for editing and creating your own ringtones, alarms, and
+  notification sounds.
 
 RepoType: git
 Repo: https://github.com/google/ringdroid
@@ -41,6 +41,7 @@ Builds:
     gradle:
       - yes
 
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 2.7.3

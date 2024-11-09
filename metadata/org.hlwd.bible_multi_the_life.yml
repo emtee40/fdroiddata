@@ -344,7 +344,119 @@ Builds:
       - $$flutter$$/bin/flutter build apk
     ndk: r21
 
+  - versionName: 1.23.0
+    versionCode: 20230320
+    commit: deb2fa102dec5cf14b8a943c80c353dccf9764aa
+    sudo:
+      - apt-get update
+      - rm -fr /opt/android-sdk/ndk/*
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.2
+    rm:
+      - apk
+      - ios
+      - linux
+      - macos
+      - snap
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk
+    ndk: r21
+
+  - versionName: 1.24.0
+    versionCode: 20230530
+    commit: 9da214ccb13ea3ef032e053af204077198395af4
+    sudo:
+      - apt-get update
+      - rm -fr /opt/android-sdk/ndk/*
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.2
+    rm:
+      - apk
+      - ios
+      - linux
+      - macos
+      - snap
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk
+    ndk: r21
+
+  - versionName: 1.25.0
+    versionCode: 20230823
+    commit: 3d039b443f45e338c3b7d36f1aba1e6818c2aa7e
+    sudo:
+      - apt-get update
+      - rm -fr /opt/android-sdk/ndk/*
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.2
+    rm:
+      - apk
+      - ios
+      - linux
+      - macos
+      - snap
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk
+    ndk: r21
+
+  - versionName: 1.26.0
+    versionCode: 20240507
+    commit: b21b3a9d47894a7565622b96215ce0bb827d8ca0
+    sudo: rm -fr /opt/android-sdk/ndk/*
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.19.6
+    rm:
+      - apk
+      - ios
+      - linux
+      - macos
+      - snap
+    prebuild:
+      - sed -i -e 's/7.4.2-all/7.5-all/' android/gradle/wrapper/gradle-wrapper.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+    ndk: 21.0.6113669
+
+  - versionName: 1.27.3
+    versionCode: 20240725
+    commit: 6613f6c06eedf0d9c4ff7522af64042c27283d8b
+    sudo:
+      - rm -fr /opt/android-sdk/ndk/*
+      - apt-get update
+      - apt-get install -y git-lfs
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.19.6
+    rm:
+      - ios
+      - linux
+      - macos
+      - snap
+    prebuild:
+      - sed -i -e 's/7.4.2-all/7.5-all/' android/gradle/wrapper/gradle-wrapper.properties
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk
+    ndk: 21.0.6113669
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.22.0
-CurrentVersionCode: 20221022
+CurrentVersion: 1.27.3
+CurrentVersionCode: 20240725

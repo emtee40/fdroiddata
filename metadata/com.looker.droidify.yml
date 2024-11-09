@@ -3,15 +3,16 @@ Categories:
 License: GPL-3.0-or-later
 AuthorName: Iamlooker
 AuthorEmail: mohit2002ss@gmail.com
-SourceCode: https://github.com/Iamlooker/Droid-ify
-IssueTracker: https://github.com/Iamlooker/Droid-ify/issues
+WebSite: https://www.droidify.eu.org/
+SourceCode: https://github.com/Droid-ify/client
+IssueTracker: https://github.com/Droid-ify/client/issues
 Translation: https://hosted.weblate.org/engage/droidify/
-Changelog: https://github.com/Iamlooker/Droid-ify/releases
+Changelog: https://github.com/Droid-ify/client/releases
 
 AutoName: Droid-ify
 
 RepoType: git
-Repo: https://github.com/Iamlooker/Droid-ify.git
+Repo: https://github.com/Droid-ify/client.git
 
 Builds:
   - versionName: 0.3.1
@@ -158,8 +159,127 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.5.6
+    versionCode: 56
+    commit: 28f4f0555acd88a871152d09664fce5551686d0b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.7
+    versionCode: 57
+    commit: ad677a604fd6b05ad5b4c0ca55790843fe7dde78
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.5.8.1
+    versionCode: 581
+    commit: ccc3359735b44076b428cfefcf658906554733a0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.5.8.3
+    versionCode: 583
+    commit: 41ca539bb4aed019939645a51dcd16283a8f888a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.5.9 Patch 1
+    versionCode: 591
+    commit: b6498daf45e4c3bf5231563c2a12ade9e4fbd5bd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.5.9 Patch 2
+    versionCode: 592
+    commit: 9b2895ff55cf46e78fd56d2a152b231c57dd5234
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.5.9 Patch 4
+    versionCode: 594
+    commit: e8b2bf731d083dc5a165145c80e09d47ad388da8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.5.9 Patch 5
+    versionCode: 595
+    commit: 97506623f6a9b5a92134097cebcbc6e5a6d0ef27
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.6.1
+    versionCode: 610
+    commit: 2d792c812438e2388b794de5804f20a0b88a6284
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.6.2
+    versionCode: 620
+    commit: 2036789ce2b9c54737cde2c186028d000a5d02aa
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
+  - versionName: 0.6.3
+    versionCode: 630
+    commit: 550e09f189f1f289d79e0c01b5428c4595518ed3
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-logic/structure/build
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+$
-UpdateCheckData: buildSrc/src/main/kotlin/Android.kt|versionCode\s=\s(\d+)|.|versionName\s=\s"([\d.]+)"
-CurrentVersion: 0.5.5
-CurrentVersionCode: 55
+UpdateCheckData: build-logic/structure/src/main/kotlin/DefaultConfig.kt|versionCode\s=\s(\d+)|.|versionName\s=\s"([^"]+)"
+CurrentVersion: 0.6.3
+CurrentVersionCode: 630

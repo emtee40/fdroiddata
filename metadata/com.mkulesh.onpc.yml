@@ -1,6 +1,6 @@
 Categories:
-  - Multimedia
   - Connectivity
+  - Multimedia
 License: GPL-3.0-or-later
 SourceCode: https://github.com/mkulesh/onpc
 IssueTracker: https://github.com/mkulesh/onpc/issues
@@ -227,19 +227,72 @@ Builds:
       - cp $$SDK$$/build-tools/30.0.3/lib/dx.jar $$SDK$$/build-tools/32.0.0/lib/dx.jar
       - cp $$SDK$$/build-tools/30.0.3/dx $$SDK$$/build-tools/32.0.0/dx
 
-  - versionName: '1.28'
-    versionCode: 41
-    disable: https://github.com/mkulesh/onpc/issues/273
-    commit: 57cc0b8a087d640dabdb338941c0936b1f6dbd8d
+  - versionName: '1.29'
+    versionCode: 42
+    commit: 579fdfda77bf97553561e0f35de56649139cf5db
     subdir: app
     sudo:
-      - sdkmanager 'build-tools;32.0.0' 'build-tools;30.0.3'
-      - cp /opt/android-sdk/build-tools/30.0.3/lib/dx.jar /opt/android-sdk/build-tools/32.0.0/lib/dx.jar
-      - cp /opt/android-sdk/build-tools/30.0.3/dx /opt/android-sdk/build-tools/32.0.0/dx
+      - sdkmanager 'build-tools;33.0.2' 'build-tools;30.0.3'
+      - cp /opt/android-sdk/build-tools/30.0.3/lib/dx.jar /opt/android-sdk/build-tools/33.0.2/lib/dx.jar
+      - cp /opt/android-sdk/build-tools/30.0.3/dx /opt/android-sdk/build-tools/33.0.2/dx
     gradle:
       - yes
+    rm:
+      - doc
+
+  - versionName: '1.30'
+    versionCode: 43
+    commit: ff460defb1cc35aea4ef0a0ca347caca6585b7a8
+    subdir: app
+    sudo:
+      - sdkmanager 'build-tools;33.0.2' 'build-tools;30.0.3'
+      - cp /opt/android-sdk/build-tools/30.0.3/lib/dx.jar /opt/android-sdk/build-tools/33.0.2/lib/dx.jar
+      - cp /opt/android-sdk/build-tools/30.0.3/dx /opt/android-sdk/build-tools/33.0.2/dx
+    gradle:
+      - yes
+    rm:
+      - doc
+
+  - versionName: '1.31'
+    versionCode: 44
+    commit: e9e7da2cb7c88f0fef4057a1485d5a8a0be18ac2
+    subdir: app
+    sudo:
+      - sdkmanager 'build-tools;33.0.2' 'build-tools;30.0.3'
+      - cp /opt/android-sdk/build-tools/30.0.3/lib/dx.jar /opt/android-sdk/build-tools/33.0.2/lib/dx.jar
+      - cp /opt/android-sdk/build-tools/30.0.3/dx /opt/android-sdk/build-tools/33.0.2/dx
+    gradle:
+      - yes
+    rm:
+      - doc
+
+  - versionName: '1.32'
+    versionCode: 45
+    commit: 9ef0fd2cb700c995b8e319b6d55e2b4953795f71
+    subdir: app
+    sudo:
+      - sdkmanager 'build-tools;33.0.2' 'build-tools;30.0.3'
+      - cp /opt/android-sdk/build-tools/30.0.3/lib/dx.jar /opt/android-sdk/build-tools/33.0.2/lib/dx.jar
+      - cp /opt/android-sdk/build-tools/30.0.3/dx /opt/android-sdk/build-tools/33.0.2/dx
+    gradle:
+      - yes
+    rm:
+      - doc
+
+  - versionName: '1.33'
+    versionCode: 46
+    commit: 6a334937f72c2a367c143ca0dd31d862fb47efb1
+    subdir: app
+    sudo:
+      - sdkmanager 'build-tools;33.0.2' 'build-tools;30.0.3'
+      - cp /opt/android-sdk/build-tools/30.0.3/lib/dx.jar /opt/android-sdk/build-tools/33.0.2/lib/dx.jar
+      - cp /opt/android-sdk/build-tools/30.0.3/dx /opt/android-sdk/build-tools/33.0.2/dx
+    gradle:
+      - yes
+    rm:
+      - doc
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.28'
-CurrentVersionCode: 41
+CurrentVersion: '1.33'
+CurrentVersionCode: 46

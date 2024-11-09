@@ -10,12 +10,12 @@ Changelog: https://github.com/gotify/android/releases
 
 AutoName: Gotify
 Description: |-
-    Gotify is a service for sending and receiving push notifications.
-    This app subscribes to <a href="https://github.com/gotify/server">gotify/server</a> and creates push notifications for incoming messages.
-    Note: A self-hosted <a href="https://github.com/gotify/server">gotify/server</a> is required for this app to work.
+  Gotify is a service for sending and receiving push notifications.
+  This app subscribes to <a href="https://github.com/gotify/server">gotify/server</a> and creates push notifications for incoming messages.
+  Note: A self-hosted <a href="https://github.com/gotify/server">gotify/server</a> is required for this app to work.
 
 RepoType: git
-Repo: https://github.com/gotify/android
+Repo: https://github.com/gotify/android.git
 
 Builds:
   - versionName: 2.0.1
@@ -182,7 +182,48 @@ Builds:
       - yes
     prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
 
+  - versionName: 2.6.0
+    versionCode: 28
+    commit: 778f084f5d7aba468437919a1dc8ac419ae9a650
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.7.0
+    versionCode: 29
+    commit: 4aad74a5d2f2a91df08643dfb6d66223487032de
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/6.3-rc-4-all/6.3-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 2.7.1
+    versionCode: 30
+    commit: 2082e6d46e2b78dd533ef655f4c88e8566d73108
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.8.0
+    versionCode: 31
+    commit: d1e1703d83259d0a5161e9b3592e3171f2f1cd3a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.1
+    versionCode: 32
+    commit: a50e63aafaa610e814998a5faf5c1ac3e85e0bcf
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v\d+\.\d+(\.\d+)?
-CurrentVersion: 2.5.1
-CurrentVersionCode: 27
+CurrentVersion: 2.8.1
+CurrentVersionCode: 32

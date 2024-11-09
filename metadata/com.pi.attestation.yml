@@ -1,5 +1,6 @@
 AntiFeatures:
-  - Tracking
+  Tracking:
+    en-US: Crash reports are enabled to be sent automatically
 Categories:
   - Sports & Health
 License: GPL-3.0-only
@@ -23,7 +24,7 @@ Builds:
     gradle:
       - yes
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 1.6.6

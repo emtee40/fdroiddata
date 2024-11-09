@@ -78,7 +78,14 @@ Builds:
     gradle:
       - product
 
+  - versionName: v0.350-beta
+    versionCode: 350
+    commit: 011bf1c25176787ac001947da19d42467f6def4a
+    subdir: app
+    gradle:
+      - product
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v0.302-beta
-CurrentVersionCode: 302
+CurrentVersion: v0.350-beta
+CurrentVersionCode: 350

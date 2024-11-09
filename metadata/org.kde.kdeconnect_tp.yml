@@ -3,31 +3,12 @@ Categories:
 License: GPL-3.0-only
 WebSite: https://kdeconnect.kde.org/
 SourceCode: https://invent.kde.org/network/kdeconnect-android
-IssueTracker: https://bugs.kde.org
+IssueTracker: https://bugs.kde.org/buglist.cgi?component=android-application&product=kdeconnect
 
 AutoName: KDE Connect
-Description: |-
-    KDE Connect provides a set of features to integrate your workflow across
-    devices:
-
-    * Shared clipboard: copy and paste between your devices.
-    * Share files and URLs to your computer from any app.
-    * Get notifications for incoming calls and SMS messages on your PC.
-    * Virtual touchpad: Use your phone screen as your computer's touchpad.
-    * Notifications sync: Read your Android notifications from the desktop.
-    * Multimedia remote control: Use your phone as a remote for Linux media players.
-    * WiFi connection: no USB wire or bluetooth needed.
-    * End-to-end TLS encryption: your information is safe.
-
-    Please note you will need to install KDE Connect on your computer for this app
-    to work, and keep the desktop version up-to-date with the Android version for
-    the latest features to work.
-
-    This app is part of an open source project and it exists thanks to all the
-    people who contributed to it. Visit the website to grab the source code.
 
 RepoType: git
-Repo: https://invent.kde.org/network/kdeconnect-android
+Repo: https://invent.kde.org/network/kdeconnect-android.git
 
 Builds:
   - versionName: 0.3.0
@@ -118,13 +99,6 @@ Builds:
   - versionName: 0.7.3.3
     versionCode: 733
     commit: v0.7.3.3
-    gradle:
-      - yes
-
-  - versionName: 0.7.3.4
-    versionCode: 734
-    disable: no tag
-    commit: v0.7.3.4
     gradle:
       - yes
 
@@ -281,15 +255,6 @@ Builds:
   - versionName: 1.6.6
     versionCode: 1660
     commit: v1.6.6
-    gradle:
-      - yes
-    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
-
-  - versionName: 1.7.1
-    versionCode: 1710
-    disable: Cannot resolve external dependency com.android.tools.build:gradle:3.0.1
-        because no repositories are defined
-    commit: v1.7.1
     gradle:
       - yes
     prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
@@ -590,7 +555,232 @@ Builds:
       - yes
     prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
 
+  - versionName: 1.23.0
+    versionCode: 12300
+    commit: 764a8f85258288fe2d6945a4b2d64f2536381428
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.23.1
+    versionCode: 12301
+    commit: a9e6fcff6a04703f68124bf533204b4310923887
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.23.2
+    versionCode: 12302
+    commit: 83b0c04d51010658273ddcff7d97da0e4b0de0f4
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.24.0
+    versionCode: 12400
+    commit: b64b27bcae6b27685d6863ae6ac22005e7fdb968
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.24.1
+    versionCode: 12401
+    commit: 61190189ec3869ea39ec46f425f69316678a619f
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.24.2
+    versionCode: 12402
+    commit: 2616a7a529823d66470f4c33d8b28e6691006ce3
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.24.5
+    versionCode: 12405
+    commit: 5d2b9557e776099921365fb150fd32f586762443
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.25.0
+    versionCode: 12500
+    commit: ad725e7a241679a2089afd430503d626c4828eed
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.26.0
+    versionCode: 12600
+    commit: 8438f11ef929c52f641fc51d514ad679737149f2
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.26.1
+    versionCode: 12601
+    commit: 096cf3f5f5f822c275714ced29ed0da01b155a47
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.26.2
+    versionCode: 12602
+    commit: a31476951a2b35df6a3ec0b2e3ae22164b6553da
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.26.3
+    versionCode: 12603
+    commit: e53338c70e02f8d6f93790667b9c0ee6a9ee9497
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.26.4
+    versionCode: 12604
+    commit: af922a4277ca3a932c092223861b6e986ea6a20b
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.27.0
+    versionCode: 12700
+    commit: 49e2b2d9a2a22bc997d5baf9eae05b1091d546ac
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.27.1
+    versionCode: 12701
+    commit: a2ef4659d94187331c2681e240f8666610bcd738
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/javaMaxHeapSize/s/4g/2g/g' build.gradle
+
+  - versionName: 1.28.0
+    versionCode: 12800
+    commit: f89c01ec17e927a3a2c0cca0f19f73c370c424e2
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.28.0
+    versionCode: 12801
+    commit: 29b5f5a25cfcc4c6979aa0176f256830cd1e7ee8
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.29.0
+    versionCode: 12900
+    commit: f2af39aa8e79566e44f95441603ef506d1cbe626
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.30.0
+    versionCode: 13000
+    commit: 10543815c97b700b0d4bbf109c32428b3e67fb5e
+    gradle:
+      - yes
+
+  - versionName: 1.30.1
+    versionCode: 13001
+    commit: 9065867c4ac4cbb1d828cc67961e334c11eaa530
+    gradle:
+      - yes
+
+  - versionName: 1.31.1
+    versionCode: 13101
+    commit: f344586fb6263b21d4dca9638471251e20df78e0
+    gradle:
+      - yes
+
+  - versionName: 1.32.0
+    versionCode: 13200
+    commit: aed2b64416d6a8e34a14b2f2b47b84f86fdee2b6
+    gradle:
+      - yes
+
+  - versionName: 1.32.1
+    versionCode: 13201
+    commit: eb6784b626209eeba08c50c36e9ea5efc2a66541
+    gradle:
+      - yes
+
+  - versionName: 1.32.2
+    versionCode: 13202
+    commit: 80cf238354325972411677fbd9c788cb1dff26ba
+    gradle:
+      - yes
+
+  - versionName: 1.32.5
+    versionCode: 13205
+    commit: 0ffd9cd9dc25914d411f90e6262ebe019315693c
+    gradle:
+      - yes
+
+  - versionName: 1.32.7
+    versionCode: 13207
+    commit: deee9cc2e22b0b961b2ceecbdcb8bb724aae398e
+    gradle:
+      - yes
+
+  - versionName: 1.32.9
+    versionCode: 13209
+    commit: b7f3a7d86871ab28b22985d882809857325a42ea
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.22.2
-CurrentVersionCode: 12202
+CurrentVersion: 1.32.9
+CurrentVersionCode: 13209

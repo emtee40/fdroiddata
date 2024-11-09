@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on Facebook.com.
 Categories:
   - Internet
 License: GPL-2.0-or-later
@@ -15,12 +16,12 @@ Bitcoin: 1JUaZytkub2CP5jhRYQDDY6pibqrUUSp2y
 
 AutoName: Face Slim
 Description: |-
-    Unofficial app built around the mobile Facebook site.
+  Unofficial app built around the mobile Facebook site.
 
-    <i>Face Slim</i> is an unofficial Facebook application for Android devices that
-    resembles the Facebook Mobile Web Application before Facebook started removing
-    features. FaceSlim is free of spyware, unlike what is built into the official
-    Facebook and Facebook Messenger applications.
+  <i>Face Slim</i> is an unofficial Facebook application for Android devices that
+  resembles the Facebook Mobile Web Application before Facebook started removing
+  features. FaceSlim is free of spyware, unlike what is built into the official
+  Facebook and Facebook Messenger applications.
 
 RepoType: git
 Repo: https://github.com/indywidualny/FaceSlim
@@ -61,14 +62,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 1.6.0
-    versionCode: 7
-    disable: play-services
-    commit: v1.6.0
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: 1.6.1
     versionCode: 8
     commit: v1.6.1
@@ -86,14 +79,6 @@ Builds:
   - versionName: 1.7.0
     versionCode: 10
     commit: v1.7.0
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 1.7.1
-    versionCode: 11
-    disable: request by upstream
-    commit: v1.7.1
     subdir: app
     gradle:
       - yes
@@ -350,7 +335,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 3.4.1
 CurrentVersionCode: 54

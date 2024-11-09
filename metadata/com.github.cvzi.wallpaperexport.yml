@@ -29,7 +29,41 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.0.3
+    versionCode: 4
+    commit: a4f4d1b89140f47a3aa263052cc6ae7c81930992
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 5
+    commit: 22901e91dc04d402cc47f1f691dfb8c492827ce4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 6
+    commit: b537c8b88da09848fe7dc09412607d5660c9c9c7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 7
+    commit: b108a28fbf64f799a6e0e9c3ab0599d22511377a
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 334d325a41e8809dd21ae9c5402d6d637fa94ac561a8c96902194fb337ebd8d7
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.2
-CurrentVersionCode: 3
+CurrentVersion: 1.1.2
+CurrentVersionCode: 7

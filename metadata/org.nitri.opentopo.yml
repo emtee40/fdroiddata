@@ -11,10 +11,10 @@ Donate: https://ko-fi.com/U7U372JJ
 Name: OpenTopoMap Viewer
 AutoName: OpenTopoMap
 Description: |-
-    An online OpenTopoMap client with caching.
+  An online OpenTopoMap client with caching.
 
-    * Follow location
-    * Import and display GPX
+  * Follow location
+  * Import and display GPX
 
 RepoType: git
 Repo: https://github.com/Pygmalion69/OpenTopoMapViewer
@@ -223,7 +223,56 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.13'
+    versionCode: 35
+    commit: f30dd1a258eb8e567cc3a87907986c9c1058f969
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.13.3
+    versionCode: 38
+    commit: cb20a6b1f7bc2f35ed869feb48c14e4383d3ee48
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.15'
+    versionCode: 39
+    commit: 70b78b29ddb37cecb724f5d27a1d1be36605242a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.15.1
+    versionCode: 40
+    commit: 75f2981ce4bd0ee1d19c20202ab976103a2d7804
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.16'
+    versionCode: 41
+    commit: d55cb6763832a5e2488d01ce32e38f87351a228a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.17'
+    versionCode: 42
+    commit: 8914e923489fc73f2ab64e1f2d14a638b965b0b6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.18.1
+    versionCode: 45
+    commit: 1a4bb6931046f5ae785eb3ed28056804d3095dff
+    subdir: app
+    gradle:
+      - foss
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.12.4
-CurrentVersionCode: 34
+CurrentVersion: 1.18.1
+CurrentVersionCode: 45

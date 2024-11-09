@@ -6,7 +6,7 @@ AuthorEmail: feedback@puri.sm
 WebSite: https://librem.one
 SourceCode: https://source.puri.sm/liberty/social/android
 IssueTracker: https://source.puri.sm/liberty/social/android/issues
-Changelog: https://source.puri.sm/liberty/social/android/blob/master/CHANGELOG.md
+Changelog: https://source.puri.sm/liberty/social/android/blob/HEAD/CHANGELOG.md
 
 AutoName: Librem Social
 
@@ -21,7 +21,10 @@ Builds:
     gradle:
       - blue
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+MaintainerNotes: unmaintained fork of Tusky, archiving it.
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.4.0
 CurrentVersionCode: 1040000

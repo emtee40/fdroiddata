@@ -6,11 +6,12 @@ AuthorEmail: bill@billdietrich.me
 AuthorWebSite: https://www.billdietrich.me/
 SourceCode: https://github.com/BillDietrich/fake_contacts
 IssueTracker: https://github.com/BillDietrich/fake_contacts/issues
+Changelog: https://github.com/BillDietrich/fake_contacts#releases
 
 AutoName: Fake Contacts
 
 RepoType: git
-Repo: https://github.com/BillDietrich/fake_contacts
+Repo: https://github.com/BillDietrich/fake_contacts.git
 
 Builds:
   - versionName: '1.6'
@@ -24,7 +25,7 @@ Builds:
       - test
       - integration_test
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter packages pub get
@@ -41,7 +42,7 @@ Builds:
       - test
       - integration_test
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter packages pub get
@@ -58,7 +59,7 @@ Builds:
       - test
       - integration_test
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter packages pub get

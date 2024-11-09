@@ -327,7 +327,77 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 3.7.0
+    versionCode: 30009
+    commit: 8115021070fb383d078cbcd4a45d611e9d2e7eac
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.7.1
+    versionCode: 30010
+    commit: 940bb3d22a7e62f4a6b88ead2b814e954f48e319
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.8.0
+    versionCode: 30011
+    commit: e73bad719eddb35316495a247a0675bf71e5b127
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.8.1
+    versionCode: 30012
+    commit: c914c9cec2f6f9145da3645302732bb38a8c0941
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.9.0
+    versionCode: 30013
+    commit: c7c2609cf43be8c69afffdc52127619f26ada9c6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.10.0
+    versionCode: 30014
+    commit: 4547d8ff96ccff3f65c66edc46185ab52c755fa7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.11.0
+    versionCode: 30015
+    commit: 89b96d0988d85bcce51262909faa221e3861d071
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.12.0
+    versionCode: 30016
+    commit: a2718abcef212bbdb762073ae92ec79da69f863b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.13.0
+    versionCode: 30017
+    commit: 9d9f5bf9f39b9a850971dc3075a3ee7ce3fe6303
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.13.1
+    versionCode: 30018
+    commit: 1fb9d3fe23fe57620755309c3a904caa3535fc7c
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.6.1
-CurrentVersionCode: 30008
+CurrentVersion: 3.13.1
+CurrentVersionCode: 30018

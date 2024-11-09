@@ -1,27 +1,22 @@
 Categories:
   - System
 License: MIT
-AuthorName: Dan Elkouby
-AuthorEmail: streetwalkermc@gmail.com
-SourceCode: https://github.com/Streetwalrus/android_usb_msd
-IssueTracker: https://github.com/Streetwalrus/android_usb_msd/issues
-Changelog: https://github.com/Streetwalrus/android_usb_msd/releases
 
 AutoName: USB Mountr
 Description: |-
-    <b>Note:</b> This app is no longer maintained, the source repo has been archived.
+  <b>Note:</b> This app is no longer maintained, the source repo has been archived.
 
-    A helper application to set the Mass Storage Device gadget up in Android kernels
+  A helper application to set the Mass Storage Device gadget up in Android kernels
 
-    Android kernels still include a USB MSD component in their device gadget
-    nowadays, though it is mostly unused since Android started using MTP. Some OEM
-    ROMs still use it to provide a drivers installation "disc", but it is otherwise
-    useless.
+  Android kernels still include a USB MSD component in their device gadget
+  nowadays, though it is mostly unused since Android started using MTP. Some OEM
+  ROMs still use it to provide a drivers installation "disc", but it is otherwise
+  useless.
 
-    This application leverages the module in order to let you use your device as a
-    standard USB thumbdrive for the purpose of, e.g., booting a distro ISO.
+  This application leverages the module in order to let you use your device as a
+  standard USB thumbdrive for the purpose of, e.g., booting a distro ISO.
 
-RequiresRoot: 'yes'
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/Streetwalrus/android_usb_msd
@@ -55,7 +50,7 @@ Builds:
     gradle:
       - yes
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable
-        'ExtraTranslation' } }" >> build.gradle
+      'ExtraTranslation' } }" >> build.gradle
 
   - versionName: '0.5'
     versionCode: 5
@@ -66,7 +61,7 @@ Builds:
     rm:
       - gradle
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable
-        'ExtraTranslation' } }" >> build.gradle
+      'ExtraTranslation' } }" >> build.gradle
 
   - versionName: 0.5.1
     versionCode: 6
@@ -77,7 +72,7 @@ Builds:
     rm:
       - gradle
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable
-        'ExtraTranslation' } }" >> build.gradle
+      'ExtraTranslation' } }" >> build.gradle
 
   - versionName: 0.5.2
     versionCode: 7
@@ -88,7 +83,7 @@ Builds:
     rm:
       - gradle
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable
-        'ExtraTranslation' } }" >> build.gradle
+      'ExtraTranslation' } }" >> build.gradle
 
   - versionName: '0.6'
     versionCode: 8
@@ -99,8 +94,9 @@ Builds:
     rm:
       - gradle
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable
-        'ExtraTranslation' } }" >> build.gradle
+      'ExtraTranslation' } }" >> build.gradle
 
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '0.6'

@@ -10,16 +10,16 @@ IssueTracker: https://github.com/manmal/hn-android/issues
 
 AutoName: HN
 Description: |-
-    Hacker News client with a focus on reliability and usability.
+  Hacker News client with a focus on reliability and usability.
 
-    * View articles in ViewText, Google, or your system browser (you can set each as default)
-    * Upvote stories (long-press on story)
-    * Collapse and expand comments by tapping on them
-    * Choose from 3 text sizes
-    * Switch between stories and comments with one tap
-    * View "more" stories than only the HN frontpage
+  * View articles in ViewText, Google, or your system browser (you can set each as default)
+  * Upvote stories (long-press on story)
+  * Collapse and expand comments by tapping on them
+  * Choose from 3 text sizes
+  * Switch between stories and comments with one tap
+  * View "more" stories than only the HN frontpage
 
-    A proprietary analytics library was removed before building.
+  A proprietary analytics library was removed before building.
 
 RepoType: git
 Repo: https://github.com/manmal/hn-android.git
@@ -53,7 +53,7 @@ Builds:
     versionCode: 15
     commit: ac1ea46fee0f9e0
     srclibs:
-      - 1:NoAnalytics@d38ae535b543b
+      - NoAnalytics@d38ae535b543b
     rm:
       - libs/libGoogleAnalytics.jar
     prebuild:
@@ -64,7 +64,7 @@ Builds:
     versionCode: 16
     commit: build-16
     srclibs:
-      - 1:NoAnalytics@d38ae535b543b
+      - NoAnalytics@d38ae535b543b
     rm:
       - libs/libGoogleAnalytics.jar
     prebuild:

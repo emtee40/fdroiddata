@@ -950,13 +950,374 @@ Builds:
       - ./run fdroid prebuild
     ndk: r25
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+  - versionName: 0.5.11
+    versionCode: 861
+    commit: 7dc7ff4f00c9a8be5b24221888c9a2d5398ebf61
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - arm
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.5.11
+    versionCode: 862
+    commit: 7dc7ff4f00c9a8be5b24221888c9a2d5398ebf61
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - arm64
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.5.11
+    versionCode: 863
+    commit: 7dc7ff4f00c9a8be5b24221888c9a2d5398ebf61
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - x86
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.5.11
+    versionCode: 864
+    commit: 7dc7ff4f00c9a8be5b24221888c9a2d5398ebf61
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - x64
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.2
+    versionCode: 901
+    commit: 9dec87307e079f07b81804cf0917e77a396a2d3c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - arm
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.2
+    versionCode: 902
+    commit: 9dec87307e079f07b81804cf0917e77a396a2d3c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - arm64
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.2
+    versionCode: 903
+    commit: 9dec87307e079f07b81804cf0917e77a396a2d3c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - x86
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.2
+    versionCode: 904
+    commit: 9dec87307e079f07b81804cf0917e77a396a2d3c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - x64
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.3
+    versionCode: 906
+    commit: 638a8dbae78b1bd51bca02592728aa94faecf631
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - arm
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.3
+    versionCode: 907
+    commit: 638a8dbae78b1bd51bca02592728aa94faecf631
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - arm64
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.3
+    versionCode: 908
+    commit: 638a8dbae78b1bd51bca02592728aa94faecf631
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - x86
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.3
+    versionCode: 909
+    commit: 638a8dbae78b1bd51bca02592728aa94faecf631
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - x64
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.4
+    versionCode: 911
+    commit: 7888debe9d7e80f070635e3c1c08bf0fb4529aa8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - arm
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.4
+    versionCode: 912
+    commit: 7888debe9d7e80f070635e3c1c08bf0fb4529aa8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - arm64
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.4
+    versionCode: 913
+    commit: 7888debe9d7e80f070635e3c1c08bf0fb4529aa8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - x86
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.4
+    versionCode: 914
+    commit: 7888debe9d7e80f070635e3c1c08bf0fb4529aa8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - x64
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.5
+    versionCode: 916
+    commit: d16fff69534d69c6059f6dcdf4951e37987b7d1e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - arm
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.5
+    versionCode: 917
+    commit: d16fff69534d69c6059f6dcdf4951e37987b7d1e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - arm64
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.5
+    versionCode: 918
+    commit: d16fff69534d69c6059f6dcdf4951e37987b7d1e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - x86
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+  - versionName: 0.6.5
+    versionCode: 919
+    commit: d16fff69534d69c6059f6dcdf4951e37987b7d1e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y wget xz-utils
+    gradle:
+      - x64
+      - fdroid
+    output: build/outputs/apk/fdroid/release/*.apk
+    prebuild: sed -i -e '/versionCode/s/verCode/$$VERCODE$$/' ../buildSrc/src/main/kotlin/Helpers.kt
+    build:
+      - cd ..
+      - sdkmanager 'platforms;android-33'
+      - ./run fdroid prebuild
+    ndk: r25
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 VercodeOperation:
   - '%c * 5 + 1'
   - '%c * 5 + 2'
   - '%c * 5 + 3'
   - '%c * 5 + 4'
 UpdateCheckData: sager.properties|VERSION_CODE=(\d+)|.|VERSION_NAME=(.*)
-CurrentVersion: 0.5.10
-CurrentVersionCode: 859
+CurrentVersion: 0.6.5
+CurrentVersionCode: 919

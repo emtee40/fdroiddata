@@ -1,9 +1,10 @@
 AntiFeatures:
-  - NonFreeAssets
+  NonFreeAssets:
+    en-US: some content has only been licensed for use in Andor’s Trail
 Categories:
   - Games
 License: GPL-2.0-only
-AuthorName: Andor’s Trail Project Team
+AuthorName: Andor's Trail Project Team
 AuthorEmail: andor@andorstrail.com
 WebSite: https://andorstrail.com
 SourceCode: https://github.com/AndorsTrailRelease/andors-trail
@@ -12,19 +13,19 @@ Translation: https://hosted.weblate.org/projects/andors-trail/
 
 AutoName: Andor's Trail
 Description: |-
-    Quest-driven Roguelike fantasy dungeon crawler RPG with a powerful story.
-    Uncover the truths about your home village and the disappearance of your
-    brother.
+  Quest-driven Roguelike fantasy dungeon crawler RPG with a powerful story.
+  Uncover the truths about your home village and the disappearance of your
+  brother.
 
-    Battle fierce monsters, gain experience and levels. Solve quests, find hidden
-    treasures and improve your equipment.
+  Battle fierce monsters, gain experience and levels. Solve quests, find hidden
+  treasures and improve your equipment.
 
-    Please note that this is a work in progress, which means that all maps are not
-    yet done. This is mainly a version for bug-hunting and compatibility testing.
-    Please give feedback on the project page.
+  Please note that this is a work in progress, which means that all maps are not
+  yet done. This is mainly a version for bug-hunting and compatibility testing.
+  Please give feedback on the project page.
 
-    Some of the content and graphics are released under non-free licenses: see
-    <a href="https://github.com/AndorsTrailRelease/andors-trail#content">GitHub page</a>.
+  Some of the content and graphics are released under non-free licenses: see
+  <a href="https://github.com/AndorsTrailRelease/andors-trail#content">GitHub page</a>.
 
 RepoType: git
 Repo: https://github.com/AndorsTrailRelease/andors-trail
@@ -186,7 +187,71 @@ Builds:
       - yes
     output: app/build/outputs/apk/release/app-release-unsigned.apk
 
+  - versionName: 0.8.5
+    versionCode: 70
+    commit: 613ab9101e963fe9fc9adde7403c3ac9cd81a682
+    subdir: AndorsTrail
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: 0.8.6
+    versionCode: 71
+    commit: 133dffe330a716e474d5185d87e2f39356c005d3
+    subdir: AndorsTrail
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: 0.8.6.1
+    versionCode: 72
+    commit: 45491871e6bb5c3f0608fcda7ef62acc0c947c23
+    subdir: AndorsTrail
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: 0.8.7
+    versionCode: 73
+    commit: d1cd8a8cefc86c9ad8bdead5a7bcaf818ab70fec
+    subdir: AndorsTrail
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: 0.8.8
+    versionCode: 74
+    commit: 063ce332a8bd335aa828686e6836478ff878c568
+    subdir: AndorsTrail
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: 0.8.9
+    versionCode: 75
+    commit: 02beb88b3a50d3fe455bb62a8345e3807ae3f5f2
+    subdir: AndorsTrail
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: 0.8.10
+    versionCode: 76
+    commit: 9b59b018f1dd14e3464a059c028aed52d8ef0fe0
+    subdir: AndorsTrail
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: 0.8.11
+    versionCode: 77
+    commit: a64c45586fec67e63b8185f0de72b966f7cf8db1
+    subdir: AndorsTrail
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.8.4.1
-CurrentVersionCode: 69
+CurrentVersion: 0.8.11
+CurrentVersionCode: 77

@@ -6,11 +6,14 @@ AuthorWebSite: https://markusfisch.de/
 SourceCode: https://github.com/markusfisch/BinaryEye
 IssueTracker: https://github.com/markusfisch/BinaryEye/issues
 Changelog: https://github.com/markusfisch/BinaryEye/blob/HEAD/CHANGELOG.md
+Donate: https://www.buymeacoffee.com/markusfisch
+Liberapay: markusfisch
+Bitcoin: bc1q2guk2rpll587aymrfadkdtpq32448x5khk5j8z
 
 AutoName: Binary Eye
 
 RepoType: git
-Repo: https://github.com/markusfisch/BinaryEye
+Repo: https://github.com/markusfisch/BinaryEye.git
 
 Builds:
   - versionName: 1.3.8
@@ -726,7 +729,196 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.59.0
+    versionCode: 116
+    commit: 33ef78443e2dd07e3bd75a11440452c403d284c2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.60.1
+    versionCode: 118
+    commit: 5f82f216fd4e4c652982bfac87d71e0b8beab049
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.60.2
+    versionCode: 119
+    commit: 076da26075a93f1920d28792746724da5cde9f1f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.60.3
+    versionCode: 120
+    commit: 4971f58f445a49c0ee3db39c338d6b02ce43552e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.61.0
+    versionCode: 121
+    commit: 746ff143d8c62d99b4924a147587755841147064
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.61.1
+    versionCode: 122
+    commit: 464279807c93d3f7f6e98d2de68717d8162b3620
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.61.2
+    versionCode: 123
+    commit: 180339269f61aba43af0f94c5feb2bd9bb868c29
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.62.1
+    versionCode: 125
+    commit: 4048314cf7599ff879a13e5d813954c70233bf81
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.62.2
+    versionCode: 126
+    commit: b2730259fc31f3a92bc980e4d3a379df37291f18
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.62.3
+    versionCode: 127
+    commit: 38f658e2537bf4ea9cedbee22b3995cea643abc9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.63.0
+    versionCode: 128
+    commit: eeae1eb0ad3e0f383273cefaee3ed31098887369
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.63.1
+    versionCode: 129
+    commit: dc819a6e1a09f20a5d706a68ae7a50def9686854
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.63.2
+    versionCode: 130
+    commit: d124c29919682a15ad3a0a9be81393a8f25c4153
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.63.3
+    versionCode: 131
+    commit: 4f12c3e27046c7139e242919b37a624ddb2c420f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.63.4
+    versionCode: 132
+    commit: 3c7012e3c4ec71b251d6b94b3e3e910078bb1489
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.5
+    versionCode: 133
+    commit: 3aa2371eeb61344baf83a381c17a7cfe2de8c91c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.6
+    versionCode: 134
+    commit: b87464ec400d87371431adc40aa66049e400cb91
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.7
+    versionCode: 135
+    commit: bce36306862911759bd95bda3926c35574b6e6a9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.8
+    versionCode: 136
+    commit: 863caed387ae897ef7456445a2a1915e34c77166
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.9
+    versionCode: 137
+    commit: 7bdcdaaa5dc0401dbe1db26a1e8d8a8860cde471
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.10
+    versionCode: 138
+    commit: 449d8fdbbd9f160c3f599e0815b1e82f2d360b99
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.11
+    versionCode: 139
+    commit: 0a11611b8f31229e89d64eb851a5e93ff2d84544
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.63.12
+    versionCode: 140
+    commit: bf5dc96ac9621a3ab0f395a580f3509d3f823444
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.58.2
-CurrentVersionCode: 115
+CurrentVersion: 1.63.12
+CurrentVersionCode: 140

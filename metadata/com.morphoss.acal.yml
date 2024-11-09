@@ -3,18 +3,17 @@ Categories:
 License: GPL-3.0-only
 WebSite: http://acal.me
 SourceCode: https://gitorious.org/acal/acal
-FlattrID: '163438'
 Bitcoin: 1C7ChLNbwiQNWS6BLCPNU5TzX3ve7Xup2m
 
 AutoName: aCal
 Summary: CalDAV Calendar & Tasks client
 Description: |-
-    A CalDAV client, allowing you to directly access a calendar on a CalDAV server.
-    aCal includes support for VEVENT & VTODO (Events and Tasks) and can also
-    synchronize your contacts from an addressbook collection on a CardDAV server.
+  A CalDAV client, allowing you to directly access a calendar on a CalDAV server.
+  aCal includes support for VEVENT & VTODO (Events and Tasks) and can also
+  synchronize your contacts from an addressbook collection on a CardDAV server.
 
-    Note: Project dissapeared, source mirror is at
-    <a href="https://gitlab.com/f-droid-mirrors/acal">https://gitlab.com/f-droid-mirrors/acal</a>.
+  Note: Project dissapeared, source mirror is at
+  <a href="https://gitlab.com/f-droid-mirrors/acal">https://gitlab.com/f-droid-mirrors/acal</a>.
 
 Builds:
   - versionName: '1.05'
@@ -133,7 +132,7 @@ Builds:
     versionCode: 63
     commit: r1.63
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '1.63'

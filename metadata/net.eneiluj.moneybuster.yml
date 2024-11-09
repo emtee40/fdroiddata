@@ -300,7 +300,43 @@ Builds:
     gradle:
       - normal
 
+  - versionName: 0.1.17
+    versionCode: 37
+    commit: 97c67c04335da25eb37276e2028466b20d751ee2
+    subdir: app
+    submodules: true
+    gradle:
+      - normal
+
+  - versionName: 0.1.18
+    versionCode: 38
+    commit: 7a00a83eed5314e482543cdc9f905f8116019ebb
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - normal
+
+  - versionName: 0.1.19
+    versionCode: 39
+    commit: da3d2808d733a15bd8834a8094e9913818d1b224
+    subdir: app
+    submodules: true
+    gradle:
+      - normal
+
+  - versionName: 0.1.20
+    versionCode: 40
+    commit: 20d6d9ecb90b1d60b24f25a2b3c7d10b3a796b70
+    subdir: app
+    submodules: true
+    gradle:
+      - normal
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.1.16
-CurrentVersionCode: 36
+CurrentVersion: 0.1.20
+CurrentVersionCode: 40

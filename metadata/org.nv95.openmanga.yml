@@ -1,9 +1,11 @@
 AntiFeatures:
-  - NonFreeNet
-  - NSFW
+  NonFreeNet:
+    en-US: Depends on non-libre Manga servers.
+  NSFW:
+    en-US: Explicit content (Hentai).
 Categories:
-  - Reading
   - Multimedia
+  - Reading
 License: GPL-3.0-or-later
 AuthorName: Koitharu
 AuthorEmail: nvasya95@gmail.com
@@ -13,22 +15,24 @@ Changelog: https://github.com/nv95/OpenManga/releases
 
 AutoName: OpenManga
 Description: |-
-    Powerful manga reader with online catalogues.
+  <>Note:</b> This app is discontinued.
 
-    Features:
+  Powerful manga reader with online catalogues.
 
-    * 13 online manga’s catalogues with search
-    * Downloading manga to local storage
-    * Material design UI
-    * Customizable reader
-    * Favourites, bookmarks and history with remembering last viewed chapter and page
-    * Selecting sort order
-    * Filter by genre
-    * Notifications about new chapters
-    * Importing from CBZ files
+  Features:
+
+  * 13 online manga's catalogues with search
+  * Downloading manga to local storage
+  * Material design UI
+  * Customizable reader
+  * Favourites, bookmarks and history with remembering last viewed chapter and page
+  * Selecting sort order
+  * Filter by genre
+  * Notifications about new chapters
+  * Importing from CBZ files
 
 RepoType: git
-Repo: https://github.com/nv95/OpenManga
+Repo: https://github.com/nv95/OpenManga.git
 
 Builds:
   - versionName: '3.0'
@@ -41,14 +45,6 @@ Builds:
   - versionName: 3.0.1
     versionCode: 103
     commit: v3.0.1
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 3.1 alpha
-    versionCode: 105
-    disable: wrong tag
-    commit: v3.1 alpha
     subdir: app
     gradle:
       - yes
@@ -88,7 +84,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags ^v[0-9.]+$
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 4.7.1
 CurrentVersionCode: 51331

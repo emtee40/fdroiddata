@@ -1,6 +1,8 @@
 AntiFeatures:
-  - NonFreeNet
-  - Tracking
+  NonFreeNet:
+    en-US: Uses TTV.lol API which is not libre. Twitch itself is not libre.
+  Tracking:
+    en-US: TTV.lol leaks your Twitch user ID and personal IP to their Russian proxy.
 Categories:
   - Internet
   - Multimedia
@@ -12,7 +14,7 @@ IssueTracker: https://github.com/crackededed/Xtra/issues/
 AutoName: Xtra
 
 RepoType: git
-Repo: https://github.com/crackededed/Xtra/
+Repo: https://github.com/crackededed/Xtra.git
 
 Builds:
   - versionName: 2.0.1
@@ -25,6 +27,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.0.2
     versionCode: 107
@@ -36,6 +41,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.0.3
     versionCode: 108
@@ -47,6 +55,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.0.4
     versionCode: 109
@@ -58,6 +69,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.0.5
     versionCode: 110
@@ -69,6 +83,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.1.0
     versionCode: 111
@@ -80,6 +97,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.2.0
     versionCode: 112
@@ -91,6 +111,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.3.0
     versionCode: 113
@@ -102,6 +125,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.3.1
     versionCode: 114
@@ -113,6 +139,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.3.2
     versionCode: 115
@@ -124,6 +153,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.4.0
     versionCode: 116
@@ -135,6 +167,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.4.1
     versionCode: 117
@@ -146,6 +181,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.4.2
     versionCode: 118
@@ -157,6 +195,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.4.3
     versionCode: 119
@@ -168,6 +209,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.4.4
     versionCode: 120
@@ -179,6 +223,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.5.0
     versionCode: 121
@@ -190,6 +237,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.5.1
     versionCode: 122
@@ -201,6 +251,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.5.2
     versionCode: 123
@@ -212,6 +265,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.5.3
     versionCode: 124
@@ -223,6 +279,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.5.4
     versionCode: 125
@@ -234,6 +293,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.5.5
     versionCode: 126
@@ -245,6 +307,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.5.6
     versionCode: 127
@@ -256,6 +321,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.5.8
     versionCode: 129
@@ -267,6 +335,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.5.9
     versionCode: 130
@@ -278,6 +349,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.6.1
     versionCode: 132
@@ -289,6 +363,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.6.2
     versionCode: 133
@@ -300,6 +377,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.6.3
     versionCode: 134
@@ -311,6 +391,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.6.4
     versionCode: 135
@@ -322,6 +405,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.6.5
     versionCode: 136
@@ -333,6 +419,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.6.6
     versionCode: 137
@@ -344,6 +433,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.7.0
     versionCode: 138
@@ -351,6 +443,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.7.1
     versionCode: 139
@@ -358,6 +453,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.7.2
     versionCode: 140
@@ -365,6 +463,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.8.0
     versionCode: 141
@@ -372,6 +473,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.8.1
     versionCode: 142
@@ -379,6 +483,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.8.3
     versionCode: 144
@@ -386,6 +493,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.9.0
     versionCode: 145
@@ -393,6 +503,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.9.1
     versionCode: 146
@@ -400,6 +513,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.9.3
     versionCode: 148
@@ -407,6 +523,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.9.4
     versionCode: 149
@@ -414,6 +533,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.9.5
     versionCode: 150
@@ -421,6 +543,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.9.6
     versionCode: 151
@@ -428,6 +553,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.10.0
     versionCode: 152
@@ -435,6 +563,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.10.1
     versionCode: 153
@@ -442,6 +573,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.10.2
     versionCode: 154
@@ -449,6 +583,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.11.0
     versionCode: 155
@@ -456,6 +593,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.11.1
     versionCode: 156
@@ -463,6 +603,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.11.2
     versionCode: 157
@@ -470,6 +613,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.11.4
     versionCode: 159
@@ -477,6 +623,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.12.0
     versionCode: 160
@@ -484,6 +633,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.12.1
     versionCode: 161
@@ -491,6 +643,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.12.2
     versionCode: 162
@@ -498,6 +653,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.13.0
     versionCode: 163
@@ -505,6 +663,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 2.13.1
     versionCode: 164
@@ -512,8 +673,896 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.13.2
+    versionCode: 165
+    commit: 08581fb9ea1d43e16f705cc6ca18995ce2ab1514
+    subdir: app
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.14.0
+    versionCode: 166
+    commit: 74bf110a00427cd0614b7a2285a6b7f851d5d69b
+    subdir: app
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.14.1
+    versionCode: 167
+    commit: 729d3fe68baca31c7fbf05b83b4fd81f68e04f83
+    subdir: app
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.14.2
+    versionCode: 168
+    commit: c6dbd4b5bcdb5c8c76eb9cc982e014448d7de7f9
+    subdir: app
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.14.3
+    versionCode: 169
+    commit: 085b3c963019d17fecf4e040a2ca84afd32919ee
+    subdir: app
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.15.0
+    versionCode: 170
+    commit: 6edbd5a7d3ad1b6c7ed7833c0233cb5941ab37db
+    subdir: app
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.16.0
+    versionCode: 171
+    commit: 1472dba30d808d9fea451e1e27aa5bfb3bf6730b
+    subdir: app
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.16.1
+    versionCode: 172
+    commit: 79f10560729744b32289433b9edbeb6cd8fdaf27
+    subdir: app
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.16.2
+    versionCode: 173
+    commit: 967bbcc40d254482c69c5a017e3fbd3a00f99c80
+    subdir: app
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.17.2
+    versionCode: 176
+    commit: f1924dfadfaa88a82544fc2bcbe07378cf6bbd2c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.17.3
+    versionCode: 177
+    commit: 6422cf4cd3eecb4b9ba928bfd9fbf806a5e0df39
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.17.4
+    versionCode: 178
+    commit: c34bf155abffad4040c75eff45bca448e9c0ed0c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.17.5
+    versionCode: 179
+    commit: a2aedf484643fcbc9ffb9da0955c74472d476984
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.17.7
+    versionCode: 181
+    commit: bbd9d85fcb24f15819c7e6e87e6c22eef8e527c3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.17.8
+    versionCode: 182
+    commit: 51b2889e59a13412792ab7045fd0ddbee997d970
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.18.1
+    versionCode: 184
+    commit: 35a594a478d79e4281bb09c337c029badaced0e4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.18.2
+    versionCode: 185
+    commit: d28638528381bccb2c38ccbe711208399f15d38f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.18.4
+    versionCode: 187
+    commit: 98ed0bcbe83e76254b1d15c94e0c26e173148a75
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.18.5
+    versionCode: 188
+    commit: de6276551a1e9a89efcdb72ac71ed75e836efba7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.18.6
+    versionCode: 189
+    commit: 8d571e2f6f84d18215b5e4d89897cd9f49f24e80
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.19.0
+    versionCode: 192
+    commit: 1a22e746c485d6d8ff6ffea739481d2cb76120b9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.19.1
+    versionCode: 193
+    commit: 246502f5476bd7d606df7dcdf3a1c6b81608817f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.19.2
+    versionCode: 194
+    commit: 59627a10cb7a5b4545d7a8480a811bd030ca2ff8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.20.0
+    versionCode: 195
+    commit: 54fb082af80d2399e14f0c4e8e4afd4332b352a5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.20.1
+    versionCode: 196
+    commit: 7bc27ff548186e803a7da1d5688a4335bace8670
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.20.2
+    versionCode: 197
+    commit: 8a1ff3b81d2635f230f788d00af2aa344e843907
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.21.0
+    versionCode: 198
+    commit: 9681d6b054a57a8572e07e735dd1ed2217a43fe6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.21.1
+    versionCode: 199
+    commit: 7a91a181571f37304e1fd8acb2242c6e51d846cd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.22.0
+    versionCode: 200
+    commit: 57ed1b07ec97b4ee6c4e953e2329d8eab21bacad
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.22.1
+    versionCode: 201
+    commit: d63e273eb6da76d7e3c92c6d0a8169a2d001ad5f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.23.0
+    versionCode: 202
+    commit: 52c952bc621a9278150122f59f4d6299f0cbb36e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.24.0
+    versionCode: 203
+    commit: c4ca3f28e07043e54ae5d1d2e524864ece9c6e67
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.24.1
+    versionCode: 204
+    commit: c373242744c4c57c41933c8639de846cad3b91e8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.24.3
+    versionCode: 206
+    commit: fadbbde8473a0c1ebbfef6250c75a2ad37a620ac
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.25.0
+    versionCode: 207
+    commit: 4b2feb29b1a80a6e0fb2a4edee00963b6861b2b4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.25.1
+    versionCode: 208
+    commit: a922675e8f2c87095c3658134928bf8b93c78eb6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 2.25.2
+    versionCode: 209
+    commit: 32c8c8cb65e62ca026876ce547b9127f8300f477
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.25.3
+    versionCode: 210
+    commit: 9f32679e8d8e03c5a86ad75a7b7c04fe71dc0998
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.26.0
+    versionCode: 211
+    commit: bde01dc01b046d64152d1637bc4a689176be7931
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.26.1
+    versionCode: 212
+    commit: e61e31ebe6ed48dc17c3ad8822b6e66f55672f8f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.26.2
+    versionCode: 213
+    commit: 18c6842c34f9e300905ea9c2cea0ef2bfc71baf1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.26.3
+    versionCode: 214
+    commit: 624ef0f65abe530359ab4e3c3ccc2acb47721c3f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.26.4
+    versionCode: 215
+    commit: 2276bd634f6065da6492d4b1cb8d4f699d6b4164
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.26.6
+    versionCode: 217
+    commit: db9e46c890de3ae8e270063c05e1ef18b18a1fca
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.27.0
+    versionCode: 218
+    commit: a60be1948a384c999e6afe38c36af931fbd9f32c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.27.1
+    versionCode: 219
+    commit: 89470e3465d71f442b55501153947cba6a7ce87d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.27.3
+    versionCode: 221
+    commit: 778f3f1febf0aac7a90cf967866eaedacd2ad7d1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.27.4
+    versionCode: 222
+    commit: 47372caf2ae03c42e375eeeb60361f7bceb53d50
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.28.0
+    versionCode: 223
+    commit: 92afeee0dc36c7cbc4c76a49cdfce5c5c98982f6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.29.0
+    versionCode: 224
+    commit: 8889257c69064c5e2ac75862ff8e2ba87926ae9c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.29.1
+    versionCode: 225
+    commit: 6bceef72c6ac523193be85e88e9d3a68b4ee27f1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.29.2
+    versionCode: 226
+    commit: b1142650ee5c92ae3ee408d958e9de8dd76564af
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.30.0
+    versionCode: 227
+    commit: 0982b5a51c3e85afad055a19f0c6d8067f2eab4a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.30.1
+    versionCode: 228
+    commit: 921cdc0928c0b3470535d3ddc99fa4cfacf55758
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.30.2
+    versionCode: 229
+    commit: b68f70d0a772c384a534de475a673aad5cdeba51
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.30.4
+    versionCode: 231
+    commit: 36aaf9efe6e1a31632f43a9642038dad8110d781
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.30.5
+    versionCode: 232
+    commit: 1df84e2db48c9909e9c0d12b003e92809dbac320
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.30.6
+    versionCode: 233
+    commit: 4c47a982d3810eb477a8395c0550a65c59a01aa2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.30.7
+    versionCode: 234
+    commit: 98c1f606d1848763f737da2a01ad9f047bbac918
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.31.0
+    versionCode: 235
+    commit: fb1d1247bf15a06d37d672914cbb205c90113bb7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.31.1
+    versionCode: 236
+    commit: 8b774f61a28f975c33b63e643931a87bb2aa32bd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.31.2
+    versionCode: 237
+    commit: cd41511ace28633cf9399430cbcc3ec556cf228e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.31.3
+    versionCode: 238
+    commit: b8b78e0e253b73f58da59d42da3f144e2acd16f9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.0
+    versionCode: 239
+    commit: 622060fde0cfce6830ccb9dc32fffbc3bda2a3ad
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.1
+    versionCode: 240
+    commit: 6d27ec9874c8f17828fc69a74641f45a13e72c7a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.2
+    versionCode: 241
+    commit: 6fa06c0763c824563d74ed6559a71f020e05be1d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.3
+    versionCode: 242
+    commit: dda35b3c6d6924189c06fd0a67d377573a7de856
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.4
+    versionCode: 243
+    commit: 35dbfa49ae75839dfa9bb25d3cad0a484841184d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.6
+    versionCode: 245
+    commit: 1c3100a040dd21d2a5b78a97ef744d5825cc1dc2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.0
+    versionCode: 246
+    commit: 0729e5bdd8107688f97975d2b6724321904121fe
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.1
+    versionCode: 247
+    commit: 956a3b12d2134fee2de4d14dba1059696fb333ee
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.2
+    versionCode: 248
+    commit: 231e069bb53bcacbe15f138bbf31672d8cfda59f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.3
+    versionCode: 249
+    commit: 6349d66dd2e0282eeb73d945df1a40860d87bc15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.5
+    versionCode: 250
+    commit: f59d73b676fd72467a1c51be4338e9dd650dde6c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.34.0
+    versionCode: 251
+    commit: 3ddcb108a58257ed77ccc8695967f1713245a7a9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.34.1
+    versionCode: 252
+    commit: eec6eb096e4d9b74bbc4a39fb58df57fbe4a8645
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.34.3
+    versionCode: 254
+    commit: c44d2709765b6c9518b2c22a49c90f98614f78d0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.34.4
+    versionCode: 255
+    commit: 0554fdb2b17fb514222b51d5409b9bdfc7209341
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.35.0
+    versionCode: 256
+    commit: 560231f4914bfa7a8a9e5bfe91cb41c897457c20
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.36.0
+    versionCode: 257
+    commit: e864cb76a73d622d94eeda58f65fb3510ee0484c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.37.0
+    versionCode: 258
+    commit: eb4bcc90b9fe74b69601c759b4b4065c987de111
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.37.1
+    versionCode: 259
+    commit: cab8080d3ebf494e1159834cd1b8b9afb55a27e7
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.38.0
+    versionCode: 260
+    commit: 59460dabe01db73af328fa111a528c1e68f48f11
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+MaintainerNotes: TTV.lol leaking see https://github.com/TTV-LOL/extensions/issues/8
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.13.1
-CurrentVersionCode: 164
+CurrentVersion: 2.38.0
+CurrentVersionCode: 260

@@ -10,16 +10,16 @@ Liberapay: Varlorg
 
 AutoName: uNote
 Description: |-
-    Lightweight and minimalist notepad which focuses on simplicity and gives only
-    basic features:
+  Lightweight and minimalist notepad which focuses on simplicity and gives only
+  basic features:
 
-    * add/delete note
-    * secure a note with password
-    * sort notes by create date, modification date or title
-    * search notes (only title or also in content except protected ones)
-    * export/import database to sdcard
+  * add/delete note
+  * secure a note with password
+  * sort notes by create date, modification date or title
+  * search notes (only title or also in content except protected ones)
+  * export/import database to sdcard
 
-    Attention: the database may be cleaned if you update from 1.0.X to 1.1.X.
+  Attention: the database may be cleaned if you update from 1.0.X to 1.1.X.
 
 RepoType: git
 Repo: https://gitlab.com/Varlorg/uNote.git
@@ -39,7 +39,7 @@ Builds:
     gradle:
       - yes
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation' } }" >>
-        build.gradle
+      build.gradle
 
   - versionName: 1.1.1
     versionCode: 3
@@ -160,7 +160,75 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.6.0
+    versionCode: 21
+    commit: 0bbb40e8831eeffd514fba2f2edea5100cf6e1b0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 22
+    commit: 326ae69075f415044a2495cb3d50c7eaa5a013ce
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 23
+    commit: 93ef2293c924cc56a399284488b0a6f84d629255
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 24
+    commit: b7998a905b1cc1a25219bd42c6748cc279f0ab05
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 25
+    commit: 2660491b56de67c665bba7e351e375a4d76a93d5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.2
+    versionCode: 26
+    commit: 1bfaf27d2bb6f9f1f433477c0454028b76efd0d9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.3
+    versionCode: 27
+    commit: 967af4d789fa618aea75455c8ee76f27a1ded755
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.4
+    versionCode: 28
+    commit: 7437f938d211e71c6e12d51603176af3a19d8eb6
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.5.1
-CurrentVersionCode: 20
+CurrentVersion: 1.7.4
+CurrentVersionCode: 28

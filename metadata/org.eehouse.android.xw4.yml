@@ -10,23 +10,23 @@ Donate: https://www.paypal.com/cgi-bin/webscr?item_name=Donation+to+Crosswords+f
 
 AutoName: Crosswords
 Description: |-
-    A cross-platform game with the same rules as Scrabble that can be played locally
-    (on the same device), or against another device via data-SMS, Bluetooth and the internet.
-    Start games via an invitation sent by email, SMS, or Bluetooth, or if somebody's nearby
-    have them scan a QR Code.
+  A cross-platform game with the same rules as Scrabble that can be played locally
+  (on the same device), or against another device via data-SMS, Bluetooth and the internet.
+  Start games via an invitation sent by email, SMS, or Bluetooth, or if somebody's nearby
+  have them scan a QR Code.
 
-    Drag letters onto the board next to other letters to
-    make new words; press the number on the right of the screen to commit your move
-    and let the next person move. An English wordlist is included but there is a
-    link to the website to download wordlists to play in other languages.
+  Drag letters onto the board next to other letters to
+  make new words; press the number on the right of the screen to commit your move
+  and let the next person move. An English wordlist is included but there is a
+  link to the website to download wordlists to play in other languages.
 
-    The source code supports push messaging via Google Play, but that won’t function
-    in this build even if Google Play is installed. It just means that moves won’t
-    be transmitted quite as quickly as if it were supported. Play via SMS or
-    Bluetooth is unaffected by this.
+  The source code supports push messaging via Google Play, but that won't function
+  in this build even if Google Play is installed. It just means that moves won't
+  be transmitted quite as quickly as if it were supported. Play via SMS or
+  Bluetooth is unaffected by this.
 
 RepoType: git
-Repo: git://xwords.git.sourceforge.net/gitroot/xwords/xwords
+Repo: https://github.com/eehouse/xwords.git
 
 Builds:
   - versionName: 4.4 beta 33
@@ -82,19 +82,6 @@ Builds:
       - cd ../
       - sed -i '/R.java/d' scripts/genvers.sh
       - scripts/genvers.sh XWords4 xw4 > ant_out.txt
-    buildjni:
-      - yes
-    ndk: r12b
-
-  - versionName: 4.4 beta 85
-    versionCode: 77
-    disable: cannot get genvers to run properly
-    commit: android_beta_85
-    subdir: xwords4/android/XWords4
-    prebuild:
-      - ../scripts/gen_gcmid.sh xw4 > src/org/eehouse/android/xw4/GCMConsts.java
-      - cd ..
-      - ./scripts/genvers.sh XWords4 xw4 true true
     buildjni:
       - yes
     ndk: r12b
@@ -186,12 +173,6 @@ Builds:
     scandelete:
       - xwords4/android/XWords4-dbg/libs
 
-  - versionName: 4.4.107
-    versionCode: 101
-    disable: https://gitlab.com/fdroid/fdroiddata/issues/453
-    commit: android_beta_107
-    subdir: xwords4/android/XWords4/app
-
   - versionName: 4.4.108
     versionCode: 103
     commit: android_beta_108
@@ -223,50 +204,6 @@ Builds:
     build:
       - cp ../local.properties ./
       - ant release
-
-  - versionName: 4.4.114
-    versionCode: 109
-    disable: proprietary libs (GCM)
-    commit: android_beta_114
-    subdir: xwords4/android/XWords4
-    prebuild:
-      - rm -rf ../XWords4-dbg
-      - cp ../../../local.properties ./
-      - android update project -p . -t android-19
-    build:
-      - cp ../local.properties ./
-      - ant release
-
-  - versionName: 4.4.115
-    versionCode: 111
-    disable: proprietary libs (GCM)
-    commit: android_beta_115
-    subdir: xwords4/android/XWords4
-    prebuild:
-      - rm -rf ../XWords4-dbg
-      - cp ../../../local.properties ./
-      - android update project -p . -t android-23
-    build:
-      - cp ../local.properties ./
-      - ant release
-
-  - versionName: 4.4.118
-    versionCode: 114
-    disable: proprietary libs (GCM)
-    commit: android_beta_118
-    subdir: xwords4/android/app
-    gradle:
-      - Xw4
-
-  - versionName: 4.4.119
-    versionCode: 115
-    disable: proprietary libs (GCM)
-    commit: android_beta_119
-    subdir: xwords4/android/app
-    gradle:
-      - Xw4
-    gradleprops:
-      - forFDroid
 
   - versionName: 4.4.131
     versionCode: 127
@@ -785,24 +722,6 @@ Builds:
       - sed -i -e '/com.google.gms/d' build.gradle
     ndk: r21e
 
-  - versionName: 4.4.192
-    versionCode: 189
-    disable: crash on Android 12
-    commit: android_beta_192
-    subdir: xwords4/android/app
-    sudo:
-      - apt-get update
-      - apt-get install -y graphicsmagick-imagemagick-compat make
-    init: echo GITREV=$(git describe --tags --dirty) >> ../gradle.properties
-    gradle:
-      - Xw4fdroid
-    rm:
-      - xwords4/dawg/English/BasEnglish.dict.gz
-    prebuild:
-      - sed -i -e '/\/\/ rm-for-fdroid$/d' {..,.}/build.gradle
-      - sed -i -e '/com.google.gms/d' build.gradle
-    ndk: r21e
-
   - versionName: 4.4.193
     versionCode: 190
     commit: android_beta_193
@@ -837,11 +756,135 @@ Builds:
       - sed -i -e '/com.google.gms/d' build.gradle
     ndk: r21e
 
+  - versionName: 4.4.196
+    versionCode: 192
+    commit: fdroid_release_192
+    subdir: xwords4/android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y graphicsmagick-imagemagick-compat make
+    init: echo GITREV=$(git describe --tags --dirty) >> ../gradle.properties
+    gradle:
+      - Xw4fdroid
+    rm:
+      - xwords4/dawg/English/BasEnglish.dict.gz
+    prebuild:
+      - sed -i -e '/\/\/ rm-for-fdroid$/d' {..,.}/build.gradle
+      - sed -i -e '/com.google.gms/d' build.gradle
+    ndk: r21e
+
+  - versionName: 4.4.197
+    versionCode: 193
+    commit: 41e8cbf20cc00e5db19eb131f4d603f5c5546c9c
+    subdir: xwords4/android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y graphicsmagick-imagemagick-compat make
+    init: echo GITREV=$(git describe --tags --dirty) >> ../gradle.properties
+    gradle:
+      - Xw4fdroid
+    rm:
+      - xwords4/dawg/English/BasEnglish.dict.gz
+    prebuild:
+      - sed -i -e '/\/\/ rm-for-fdroid$/d' {..,.}/build.gradle
+      - sed -i -e '/com.google.gms/d' build.gradle
+    ndk: r21e
+
+  - versionName: 4.4.198
+    versionCode: 194
+    commit: b316feb367c91210197894923f755bdca7d27282
+    subdir: xwords4/android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y graphicsmagick-imagemagick-compat make
+    init: echo GITREV=$(git describe --tags --dirty) >> ../gradle.properties
+    gradle:
+      - Xw4fdroid
+    rm:
+      - xwords4/dawg/English/BasEnglish.dict.gz
+    prebuild:
+      - sed -i -e '/\/\/ rm-for-fdroid$/d' {..,.}/build.gradle
+      - sed -i -e '/com.google.gms/d' build.gradle
+    ndk: r21e
+
+  - versionName: 4.4.199
+    versionCode: 195
+    commit: 3b7994c2910a6038753ce0382ff477c0760ecf52
+    subdir: xwords4/android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y graphicsmagick-imagemagick-compat make
+    init: echo GITREV=$(git describe --tags --dirty) >> ../gradle.properties
+    gradle:
+      - Xw4fdroid
+    rm:
+      - xwords4/dawg/English/BasEnglish.dict.gz
+    prebuild:
+      - sed -i -e '/\/\/ rm-for-fdroid$/d' {..,.}/build.gradle
+      - sed -i -e '/com.google.gms/d' build.gradle
+    ndk: r21e
+
+  - versionName: 4.4.200
+    versionCode: 196
+    commit: 6473bc9f4c6ba7f1cc2a018c0bca473c782e2f89
+    subdir: xwords4/android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y graphicsmagick-imagemagick-compat make
+    init: echo GITREV=$(git describe --tags --dirty) >> ../gradle.properties
+    gradle:
+      - Xw4fdroid
+    rm:
+      - xwords4/dawg/English/BasEnglish.dict.gz
+    prebuild:
+      - sed -i -e '/\/\/ rm-for-fdroid$/d' {..,.}/build.gradle
+      - sed -i -e '/com.google.gms/d' build.gradle
+    ndk: r21e
+
+  - versionName: 4.4.201
+    versionCode: 197
+    commit: 6781f1e69f564a419c10b601748cb815349e5c42
+    subdir: xwords4/android/app
+    sudo:
+      - apt-get update
+      - apt-get install -y graphicsmagick-imagemagick-compat make
+    init: echo GITREV=$(git describe --tags --dirty) >> ../gradle.properties
+    gradle:
+      - Xw4fdroid
+    rm:
+      - xwords4/dawg/English/BasEnglish.dict.gz
+    prebuild:
+      - sed -i -e '/\/\/ rm-for-fdroid$/d' {..,.}/build.gradle
+      - sed -i -e '/com.google.gms/d' build.gradle
+    ndk: r21e
+
+  - versionName: 4.4.203
+    versionCode: 199
+    commit: 05c7cef153b6a344c27e6cac22a52ba05fb6b84c
+    subdir: xwords4/android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y graphicsmagick-imagemagick-compat make
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    init: echo GITREV=$(git describe --tags --dirty) >> ../gradle.properties
+    gradle:
+      - Xw4fdroid
+    rm:
+      - xwords4/dawg/English/BasEnglish.dict.gz
+    prebuild:
+      - sed -i -e '/\/\/ rm-for-fdroid$/d' {..,.}/build.gradle
+      - sed -i -e '/com.google.gms/d' build.gradle
+    ndk: r21e
+
 MaintainerNotes: Don't update, upstream will MR new versions when they see fit.
 
 AutoUpdateMode: None
-UpdateCheckMode: Tags ^android
+UpdateCheckMode: Tags ^fdroid_release
 UpdateCheckData: xwords4/android/app/build.gradle|VERSION_CODE_BASE = (\d+)|.|VERSION_NAME
-    = '([\d.]+)'
-CurrentVersion: 4.4.195
-CurrentVersionCode: 191
+  = '([\d.]+)'
+CurrentVersion: 4.4.203
+CurrentVersionCode: 199

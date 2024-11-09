@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App connects to standards-oui.ieee.org.
 Categories:
   - Connectivity
   - Security
@@ -133,7 +134,60 @@ Builds:
     gradle:
       - foss
 
+  - versionName: 1.5.3
+    versionCode: 17
+    commit: 1da1d63e8188e94dadd248466058bdb68857caac
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.6.0
+    versionCode: 18
+    commit: 3ab6a721390501bb277bc81168a6b0614e99cd24
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+
+  - versionName: 1.6.1
+    versionCode: 19
+    commit: 70031ce71b1e72e7f89416f84c3de8eced61ec67
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+
+  - versionName: 1.6.2
+    versionCode: 20
+    commit: c10dda87251d560bc1d32c7cdf677a3136993453
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/jvm/s/11/17/g' -e '/JavaVersion/s/11/17/g' build.gradle.kts
+
+  - versionName: 1.6.3
+    versionCode: 21
+    commit: 0faeb40710d3872aa769becf650e1380a1212264
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/jvm/s/11/17/g' -e '/JavaVersion/s/11/17/g' build.gradle.kts
+
+  - versionName: 1.6.4
+    versionCode: 22
+    commit: e58deda62f28f7a2e02af731d32e8535f7a2e963
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e '/jvm/s/11/17/g' -e '/JavaVersion/s/11/17/g' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.5.2
-CurrentVersionCode: 16
+CurrentVersion: 1.6.4
+CurrentVersionCode: 22

@@ -10,7 +10,7 @@ Bitcoin: 1TRifA7eNLHZEcCTj43eYVWHBbLqTuXkS
 AutoName: TRIfA
 
 RepoType: git
-Repo: https://github.com/zoff99/ToxAndroidRefImpl
+Repo: https://github.com/zoff99/ToxAndroidRefImpl.git
 
 Builds:
   - versionName: 1.0.2
@@ -1436,11 +1436,299 @@ Builds:
     prebuild: sdkmanager 'cmake;3.10.2.4988404'
     ndk: r23c
 
+  - versionName: 1.0.197
+    versionCode: 10197
+    commit: 6e050225d2122123506bea8f4312177f6af0fc7a
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.199
+    versionCode: 10199
+    commit: 8352a93da78b8c967b655a04aba453bb9ec1e12a
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.200
+    versionCode: 10200
+    commit: eee10d6d62c58160abc799dbe1986a4534db6dab
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.201
+    versionCode: 10201
+    commit: 63d595fea49aa14e85bc6e616511c2f0fe4d4894
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.202
+    versionCode: 10202
+    commit: 29cd0a2e522749b65e18a6183b36f62f6dfd52b7
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.203
+    versionCode: 10203
+    commit: ca6305ff2d8faa9ed28926637be91b5a648eb265
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.204
+    versionCode: 10204
+    commit: dfc0a12c50ceb19e6cbda298e643080b3a98104b
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.205
+    versionCode: 10205
+    commit: 499c10cc87761fa64b590949f637e730c12cf1d6
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.206
+    versionCode: 10206
+    commit: bfae6acf731a3acb49b3d6615cfe7d57cf46a97c
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.207
+    versionCode: 10207
+    commit: 17ea423c21c216da254d6a2bcd8f3fff513e82da
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.209
+    versionCode: 10209
+    commit: 1da94f3878a0b08205b62e64fe1ec48d2e693579
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.211
+    versionCode: 10211
+    commit: f701a2985e8d1c99b3cb385fc2d9ce5060049978
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.212
+    versionCode: 10212
+    commit: 169868c2799e4567c741cb087b7eb573d42308bf
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.218
+    versionCode: 10218
+    commit: 41ff86c1cd69458929fc7b03ca4a7bc3cc42057d
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.219
+    versionCode: 10219
+    commit: 51be8466c9088b36eb67ee9b1361ca785626a4fe
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.220
+    versionCode: 10220
+    commit: 77ab8dc055758ebe6f9217d0ae2f7009f9878833
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.221
+    versionCode: 10221
+    commit: 708f003c47a56216b3853b8b6f3fa2917bb7d5a7
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.222
+    versionCode: 10222
+    commit: ab76f467f351169b0ceb6c3ae60cc237d7814aa4
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.223
+    versionCode: 10223
+    commit: 689fa566fce63b2b9d0fe4572067f8243055d0fd
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.224
+    versionCode: 10224
+    commit: 8e00889d9c53dc2be1dc08ed4d14f4f4808611c7
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.226
+    versionCode: 10226
+    commit: c3852e1194490363958e37228fe2ad72cc8bb6b8
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.227
+    versionCode: 10227
+    commit: 439da98b454bf85ac7a9d080c6d64705a2be8e06
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.228
+    versionCode: 10228
+    commit: f51f2890d58dc4236b0dabb1bbe0edba4a1af937
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.229
+    versionCode: 10229
+    commit: 21fa44b81ac08e5de93f9f52f07be1e84a9106df
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.231
+    versionCode: 10231
+    commit: 060029bff69f88b1f88da69ae0bbfb5aca28e815
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.232
+    versionCode: 10232
+    commit: ee104e5876c73004d235994417ad70805265e1d8
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.233
+    versionCode: 10233
+    commit: c57136720ccfe1cac6eaca00baa90661d3869896
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.234
+    versionCode: 10234
+    commit: 2e38a4f58e7bebe48818a9e41fd5514750223f58
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.235
+    versionCode: 10235
+    commit: e05b221f372097756750865a1888b779c758a511
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.236
+    versionCode: 10236
+    commit: cac80b171c5fe5ee9a02bb8abc7aaadaa9c1fb32
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.237
+    versionCode: 10237
+    commit: 41eaaccb6e948ddd586f0dde78a34117b192fd82
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
+  - versionName: 1.0.238
+    versionCode: 10238
+    commit: e6c41404b0f0e6c92d207f194a1e220963939843
+    subdir: android-refimpl-app/app
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.10.2.4988404'
+    ndk: r23c
+
 MaintainerNotes: |-
-    There was an issue with proprietary emoji, see https://github.com/zoff99/ToxAndroidRefImpl/issues/139
-    This was fixed starting from version 1.0.96 and the NonFreeAssets tag was removed.
+  There was an issue with proprietary emoji, see https://github.com/zoff99/ToxAndroidRefImpl/issues/139
+  This was fixed starting from version 1.0.96 and the NonFreeAssets tag was removed.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9].*
-CurrentVersion: 1.0.195
-CurrentVersionCode: 10195
+CurrentVersion: 1.0.238
+CurrentVersionCode: 10238

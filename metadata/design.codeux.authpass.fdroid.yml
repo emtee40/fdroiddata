@@ -11,11 +11,11 @@ Bitcoin: 3NcBacCmJbYWpwxj6rWzpM7sx48etMrPtc
 
 AutoName: AuthPass Password Manager
 Description: |-
-    Easily and securely keep track of all your Passwords!
+  Easily and securely keep track of all your Passwords!
 
-    AuthPass is a stand alone password manager with support
-    for the popular Keepass (kdbx) format. Store your passwords,
-    share across all your devices and easily find them whenever you need to login.
+  AuthPass is a stand alone password manager with support
+  for the popular Keepass (kdbx) format. Store your passwords,
+  share across all your devices and easily find them whenever you need to login.
 
 RepoType: git
 Repo: https://github.com/authpass/authpass
@@ -542,7 +542,7 @@ Builds:
       - deps/kdbx.dart/libargon2*
       - authpass/_tools/blackbox.go.linux
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.10.2.4988404' > /dev/null
+      'cmake;3.10.2.4988404' > /dev/null
     build:
       - mkdir tmp
       - DEPS=./tmp _tools/install_flutter.sh
@@ -566,7 +566,7 @@ Builds:
       - deps/kdbx.dart/libargon2*
       - authpass/_tools/blackbox.go.linux
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.10.2.4988404' > /dev/null
+      'cmake;3.10.2.4988404' > /dev/null
     build:
       - mkdir tmp
       - DEPS=./tmp _tools/install_flutter.sh
@@ -574,8 +574,43 @@ Builds:
       - tmp/flutter/bin/flutter build apk -t lib/env/fdroid.dart --flavor fdroid --release
     ndk: r22b
 
+  - versionName: 1.9.10
+    versionCode: 164
+    commit: 2d0366a02d76d829b05f8d7fd014d37f48a95c8f
+    subdir: authpass
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    srclibs:
+      - flutter@stable
+    rm:
+      - authpass/ios
+      - authpass/macos
+      - authpass/web
+      - authpass/windows
+      - deps/kdbx.dart/libargon2*
+      - authpass/_tools/blackbox.go.linux
+    prebuild:
+      - sdkmanager 'cmake;3.10.2.4988404'
+      - source _tools/_flutter_version.sh
+      - pushd $$flutter$$
+      - git checkout -f $FLUTTER_LINUX_VERSION
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - authpass/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk -t lib/env/fdroid.dart --flavor fdroid --release
+    ndk: r22b
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^fdroid-v[0-9.]+$
 UpdateCheckData: authpass/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 1.9.7
-CurrentVersionCode: 162
+CurrentVersion: 1.9.10
+CurrentVersionCode: 164

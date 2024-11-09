@@ -1,5 +1,5 @@
 Connectivity:
-  name: Verbindung
+  name: Vernetzung
 Development:
   name: Entwicklung
 Games:
@@ -15,7 +15,7 @@ Multimedia:
 Navigation:
   name: Navigation
 Phone & SMS:
-  name: Telefon / SMS
+  name: Telefon & SMS
 Reading:
   name: Lesen
 Science & Education:
@@ -23,7 +23,7 @@ Science & Education:
 Security:
   name: Sicherheit
 Sports & Health:
-  name: Sport / Gesundheit
+  name: Sport & Gesundheit
 System:
   name: System
 Theming:

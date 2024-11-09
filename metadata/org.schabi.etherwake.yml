@@ -7,11 +7,11 @@ IssueTracker: https://gitlab.com/derSchabi/Etherwake-app/issues
 
 AutoName: Etherwake
 Description: |-
-    Wraper around the ehterwake command. It is used to start computers within the
-    same network as the smartphone. Since this app sends pure ethernetframes it
-    requires root privileges.
+  Wraper around the ehterwake command. It is used to start computers within the
+  same network as the smartphone. Since this app sends pure ethernetframes it
+  requires root privileges.
 
-RequiresRoot: 'yes'
+RequiresRoot: true
 
 RepoType: git
 Repo: https://gitlab.com/derSchabi/Etherwake-app.git

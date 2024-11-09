@@ -8,14 +8,14 @@ Donate: https://donate.openstreetmap.org/
 
 AutoName: Intent Intercept
 Description: |-
-    This app attempts to intercept as many intents as possible in order to examine
-    their contents. This helps when trying to develop an app that reacts to a
-    particular intent.
+  This app attempts to intercept as many intents as possible in order to examine
+  their contents. This helps when trying to develop an app that reacts to a
+  particular intent.
 
-    Some details of the intent can now be edited before resending it.
+  Some details of the intent can now be edited before resending it.
 
-    This app is forked from <a href="https://github.com/intrications/intent-intercept">https://github.com/intrications/intent-intercept</a>
-    version 2.2.4,224 which is not maintained any more.
+  This app is forked from <a href="https://github.com/intrications/intent-intercept">https://github.com/intrications/intent-intercept</a>
+  version 2.2.4,224 which is not maintained any more.
 
 RepoType: git
 Repo: https://github.com/k3b/intent-intercept.git
@@ -77,7 +77,25 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.0.5
+    versionCode: 405
+    commit: 23ce4bd4e0e2345c058e2c57415b030b8930ad8d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.0.6
+    versionCode: 406
+    commit: bff844ffe4948c168cb15b32219ac77410a4e15b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.0.4
-CurrentVersionCode: 404
+CurrentVersion: 4.0.6
+CurrentVersionCode: 406

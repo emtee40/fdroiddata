@@ -41,7 +41,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 6.1.0
+    versionCode: 10603
+    commit: 32e0a24358b8f92bf1da748e7fcd08499346478c
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 5.8.5
-CurrentVersionCode: 10580
+CurrentVersion: 6.1.0
+CurrentVersionCode: 10603

@@ -1,6 +1,6 @@
 Categories:
-  - System
   - Games
+  - System
 License: LGPL-3.0-only
 WebSite: https://code.google.com/p/android-bluez-ime
 SourceCode: https://code.google.com/p/android-bluez-ime/source
@@ -8,8 +8,8 @@ Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=paypal%40hexa
 
 AutoName: BluezIME HID Enabler
 Description: |-
-    Allow bluetooth HID devices like keyboards, mice and joypads to connect to your
-    phone/tablet.
+  Allow bluetooth HID devices like keyboards, mice and joypads to connect to your
+  phone/tablet.
 
 Builds:
   - versionName: '1.0'
@@ -20,3 +20,5 @@ AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '1.0'
 CurrentVersionCode: 1
+
+NoSourceSince: '1.0'

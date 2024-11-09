@@ -302,7 +302,55 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.49'
+    versionCode: 149
+    commit: dc5ed9b152b28cb6a8bc3bf9f7c48ac72f8047b4
+    gradle:
+      - yes
+
+  - versionName: '1.50'
+    versionCode: 150
+    commit: 418b78d35d1995097c4c515e9b0b2de5e33c1204
+    gradle:
+      - yes
+
+  - versionName: '1.51'
+    versionCode: 151
+    commit: 28b5737b0ec10403f585556d8f666b9d35f3546a
+    gradle:
+      - yes
+
+  - versionName: '1.52'
+    versionCode: 152
+    commit: 8302fb3c75e5ab69f393b09d6aeca29fedb50a61
+    gradle:
+      - yes
+
+  - versionName: '1.53'
+    versionCode: 153
+    commit: f2025f10d3204812d22a92d35c0d54b9ff67b6a0
+    gradle:
+      - yes
+
+  - versionName: '1.54'
+    versionCode: 154
+    commit: a0d403e07451e1b30f484a152789b05fa5859db8
+    gradle:
+      - yes
+
+  - versionName: '1.55'
+    versionCode: 155
+    commit: bf05ec63cf99175f4a884ec3fa58fdf1599e0b43
+    gradle:
+      - yes
+
+  - versionName: '1.56'
+    versionCode: 156
+    commit: fb871a1050a7091c8262d07c8f2cf6756c816e11
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.48'
-CurrentVersionCode: 148
+CurrentVersion: '1.56'
+CurrentVersionCode: 156

@@ -1,19 +1,21 @@
 Categories:
+  - Connectivity
   - Internet
   - Security
-  - Connectivity
 License: Apache-2.0
 AuthorName: The RethinkDNS Authors
 AuthorEmail: hello@celzero.com
 WebSite: https://rethinkdns.com/app
 SourceCode: https://github.com/celzero/rethink-app
 IssueTracker: https://github.com/celzero/rethink-app/issues
+Translation: https://hosted.weblate.org/projects/rethink-dns-firewall/android/
+Changelog: https://github.com/celzero/rethink-app/releases
 Bitcoin: 35dbvH3YNbgqD2xWGXwotjHM7gbVLyno11
 
-AutoName: RethinkDNS
+AutoName: Rethink
 
 RepoType: git
-Repo: https://github.com/celzero/rethink-app
+Repo: https://github.com/celzero/rethink-app.git
 
 Builds:
   - versionName: 0.5.3e
@@ -91,7 +93,145 @@ Builds:
     gradle:
       - fdroidFull
 
+  - versionName: 054a
+    versionCode: 27
+    commit: 139272a1ad86f76492af3e9f827ce9cc10cba21e
+    subdir: app
+    gradle:
+      - fdroidFull
+
+  - versionName: v054c
+    versionCode: 29
+    commit: 2e0a19ebdcefd387c30a57a0acf4afa28c2d5e53
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroidFull
+
+  - versionName: v055
+    versionCode: 30
+    commit: 260672c749d7d5c6ec1754b01144e7c1acfc7d6b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroidFull
+
+  - versionName: v055a
+    versionCode: 32
+    commit: dc4b1733fc35200062b07784b0cdf130d9cff35d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroidFull
+
+  - versionName: v0.5.5c
+    versionCode: 34
+    commit: d24918c6650fb9bc3d7500bea77cb6442ff108f8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5d
+    versionCode: 35
+    commit: 014681756ea88b7214297840565c0d17a2ec1d0d
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5e
+    versionCode: 36
+    commit: 21fa180df35be73eed0a29b8d04a28cb6d8c865b
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5g
+    versionCode: 38
+    commit: dbd34c57954c38edabb3d36e7ac8c02541d85755
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5h
+    versionCode: 39
+    commit: d5b04288c3c873560e431a52cd6ca60faaabbf63
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5i
+    versionCode: 40
+    commit: 7df385354b7a16ce1ac5e651ad59521372d4fdd0
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+
+  - versionName: v0.5.5j
+    versionCode: 41
+    commit: ad897b069bacf377003f40ab5e99efa5b5d89607
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild: sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: v0.5.5k
+    versionCode: 42
+    commit: c162bebdd553d0a03795efb827f8830eeb7e6a69
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild: sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: v0.5.5l
+    versionCode: 43
+    commit: fa81dfb486b0ce4c53249121b2be375ddbf51cda
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild: sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: v0.5.5m
+    versionCode: 44
+    commit: 1c3a1534dd8175d08455668dd6cff4dc2923b9d8
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild: sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: v0.5.5n
+    versionCode: 45
+    commit: c74a7ae105edaa03ee6fe7b39793662542b00e15
+    subdir: app
+    gradle:
+      - fdroid
+      - full
+    prebuild: sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle ../build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 053n
-CurrentVersionCode: 25
+UpdateCheckData: gradle.properties|VERSION_CODE=(\d+)||(.*)
+CurrentVersion: v0.5.5n
+CurrentVersionCode: 45

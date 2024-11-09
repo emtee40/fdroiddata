@@ -4,6 +4,7 @@ License: GPL-3.0-only
 AuthorName: bitfire web engineering
 WebSite: https://www.davx5.com/
 SourceCode: https://github.com/bitfireAT/davx5-ose/
+IssueTracker: https://github.com/bitfireAT/davx5-ose/issues
 Translation: https://www.transifex.com/bitfireAT/davx5/
 Changelog: https://github.com/bitfireAT/davx5-ose/discussions/categories/announcements
 Donate: https://www.davx5.com/donate
@@ -1633,7 +1634,315 @@ Builds:
     gradle:
       - ose
 
+  - versionName: 4.3.1-ose
+    versionCode: 403010002
+    commit: 50dbd66d3a2c9a344d2801866f44991f46e5ab54
+    subdir: app
+    submodules: true
+    gradle:
+      - ose
+
+  - versionName: 4.3.2-ose
+    versionCode: 403020001
+    commit: 299fb27af4933e84879557b06af4cff87cd3720f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+
+  - versionName: 4.3.3-ose
+    versionCode: 403030006
+    commit: 3b2246e74bca9e24db7bbeff455d74608fa1de56
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+
+  - versionName: 4.3.4-ose
+    versionCode: 403040000
+    commit: ff4af11bcf2c2edc35bba3cb4b9e0f38f9c71947
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+
+  - versionName: 4.3.4.1-ose
+    versionCode: 403040101
+    commit: 1b521e3c17aa2813c721de10d2c277c1d55221c7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.5-ose
+    versionCode: 403050002
+    commit: 400d46fce2657db2d503aaba5435ead098b5620e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.5.1-ose
+    versionCode: 403050100
+    commit: b7e00fac40cb1030c27f76f684867dbd1ee664b8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.5.2-ose
+    versionCode: 403050200
+    commit: fcb9d7f560cd219c6aa1998adef681727057a083
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.6.1-ose
+    versionCode: 403060100
+    commit: 0c991288d5bfe6f2dce63ac9d21ab9d7fcd5ca34
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.7-ose
+    versionCode: 403070001
+    commit: 4faecc653f3b505ca6edab63f04a151f5c37e7d6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.8-ose
+    versionCode: 403080000
+    commit: 088136ded7c174585226dd418fe3294d7d064aba
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.9-ose
+    versionCode: 403090002
+    commit: 1a36ee2d60d59362f5f9da72342dae7d0bc715cb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.10-ose
+    versionCode: 403100003
+    commit: a792d4db98904b6597c3d652b862699fa39033c7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.11-ose
+    versionCode: 403110004
+    commit: fca6b5b89029f6d90d5c7de568edece9a3ecff2e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.12-ose
+    versionCode: 403120001
+    commit: 895f0a1541cfdbd9093f8829f80f485ff8417149
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.12.1-ose
+    versionCode: 403120101
+    commit: e5c73bead53a27bb23c08e7fc33939c5051ee289
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.13-ose
+    versionCode: 403130003
+    commit: ba084255c0281a2e7d94308f8ad2f1e6ccb71052
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.13.1-ose
+    versionCode: 403130100
+    commit: 5a5023bf542755a746b546e46c5aef2894475fb7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.14-ose
+    versionCode: 403140002
+    commit: 6f08901f04b347294e0699ab8a4694785ab34d6b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.15-ose
+    versionCode: 403150004
+    commit: fea33ab60a06eb09dbba48d07743be3cdad08cff
+    subdir: app
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.3.16.1-ose
+    versionCode: 403160100
+    commit: a1d85c4c9b571352ab6d9601807fd6ca68df860a
+    subdir: app
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.4-ose
+    versionCode: 404000004
+    commit: 1856a5d7cee7db31a5444dde9bb5c64e8954c2e4
+    subdir: app
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.4.0.1-ose
+    versionCode: 404000100
+    commit: 9b5d5c982bb8c6f23db97b5a671dad1c5196dbd6
+    subdir: app
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.4.1-ose
+    versionCode: 404010005
+    commit: 4a3ebc422f0ce8b88f1d9a93bc25325b2e376abd
+    subdir: app
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.4.1.1-ose
+    versionCode: 404010101
+    commit: 60219aafc778c6bd370739bb66110f11866bd25b
+    subdir: app
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.4.2-ose
+    versionCode: 404020004
+    commit: 6df0925e5053fb195700f6b76aa4109db612305d
+    subdir: app
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.4.3-ose
+    versionCode: 404030003
+    disable: https://github.com/bitfireAT/davx5-ose/issues/1080
+    commit: 9c2afbab09205928579a370a962769efc807383a
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.4.3.2-ose
+    versionCode: 404030200
+    commit: 1802740a2d3d3df7702b74c0efa0edf88e49298a
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]+-ose[0-9]*$
-CurrentVersion: 4.3-ose
-CurrentVersionCode: 403000005
+CurrentVersion: 4.4.3.2-ose
+CurrentVersionCode: 404030200

@@ -1,6 +1,6 @@
 Categories:
-  - Writing
   - Internet
+  - Writing
 License: GPL-3.0-or-later
 AuthorName: Nextcloud GmbH
 AuthorWebSite: https://www.nextcloud.com
@@ -86,7 +86,7 @@ Builds:
     gradle:
       - yes
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation' } }" >>
-        build.gradle
+      build.gradle
 
   - versionName: 0.10.0
     versionCode: 15
@@ -734,15 +734,6 @@ Builds:
     gradle:
       - fdroid
 
-  - versionName: 3.3.0
-    versionCode: 3003000
-    disable: https://github.com/stefan-niedermann/nextcloud-notes/issues/1128
-    commit: v3.3.0
-    subdir: app
-    submodules: true
-    gradle:
-      - fdroid
-
   - versionName: 3.3.1
     versionCode: 3003001
     commit: v3.3.1
@@ -951,7 +942,69 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 4.0.0 RC1
+    versionCode: 40000051
+    commit: 62bff13202384a1200ef1649364e3fec131b973e
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 4.0.0
+    versionCode: 40000090
+    commit: 72818ac23c709e5b948c6ba57121f50f62987d93
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.0 RC1
+    versionCode: 40010051
+    commit: 6a4aded2972fdfff6a5a9502e3bcbe26105c18ee
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 4.1.0
+    versionCode: 40010090
+    commit: e1f3cc396d8f10e1541c0e76c8a6e6ec3225a764
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.0
+    versionCode: 40020090
+    commit: a9201eda2df572ded720fcd08dd34e1ce851fe5f
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 4.2.1
+    versionCode: 40020190
+    commit: 5d8c7e4f90cf195261902bccc5000b7e9ea8a45e
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.0
+    versionCode: 40030090
+    commit: 308125aead479dfcd691cf22e343a237046af68c
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 4.3.1
+    versionCode: 40030190
+    commit: 78812882a80cd51f01d8bf3d145b86adfdcff20b
+    subdir: app
+    gradle:
+      - fdroid
+
 AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 3.7.1
-CurrentVersionCode: 3007001
+UpdateCheckMode: Tags ^[\d.]+$
+CurrentVersion: 4.3.1
+CurrentVersionCode: 40030190

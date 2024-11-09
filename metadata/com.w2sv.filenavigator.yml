@@ -1,0 +1,64 @@
+Categories:
+  - Multimedia
+  - System
+License: GPL-3.0-only
+AuthorName: Janek Zangenberg
+AuthorEmail: zangenbergjanek@googlemail.com
+SourceCode: https://github.com/w2sv/FileNavigator
+IssueTracker: https://github.com/w2sv/FileNavigator/issues
+Donate: https://buymeacoffee.com/w2sv
+
+AutoName: File Navigator
+
+RepoType: git
+Repo: https://github.com/w2sv/FileNavigator.git
+Binaries: https://github.com/w2sv/FileNavigator/releases/download/%v/%v.apk
+
+Builds:
+  - versionName: 0.0.3
+    versionCode: 4
+    commit: c152d4b7a9174f004b93d461429c46d083820254
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - plugins
+
+  - versionName: 0.1.2
+    versionCode: 7
+    commit: 493f135b6a98f5e53bc451d8c9560c2edefdaf10
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - plugins
+
+  - versionName: 0.2.1
+    versionCode: 9
+    commit: c016e6a6035b573363015a9ca1e942506be5c66d
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - plugins
+
+  - versionName: 0.2.2
+    versionCode: 10
+    commit: 8740d5f6dbcde8a933168a32c36b86cad6991d72
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - plugins
+
+AllowedAPKSigningKeys: e22bed7909bce21fa5bc900a8c056eaa0773761f70774d1d808bbbafb3aa1958
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: gradle.properties|versionCode=(\d+)|.|version=([\d.]+)
+CurrentVersion: 0.2.2
+CurrentVersionCode: 10

@@ -1,23 +1,25 @@
 AntiFeatures:
-  - NonFreeDep
+  NonFreeDep:
+    en-US: Depends on the non-free Tasker app being installed on your device.
 Categories:
   - Development
 License: GPL-3.0-only
 WebSite: https://termux.com
 SourceCode: https://github.com/termux/termux-tasker
 IssueTracker: https://github.com/termux/termux-tasker/issues
+Changelog: https://github.com/termux/termux-tasker/releases
 Donate: https://termux.com/donate.html
-Bitcoin: 1BXS5qPhJzhr5iK5nmNDSmoLDfB6VmN5hv
+OpenCollective: Termux
 
 AutoName: Termux:Tasker
 Description: |-
-    This plugin for https://f-droid.org/packages/com.termux provides a way to run Termux scripts from Tasker.
-    <ol>
-    <li>Create a new Tasker Action.</li>
-    <li>In the resulting Select Action Category dialog, select Plugin.</li>
-    <li>In the resulting Termux:Task dialog, select Termux:Task.</li>
-    <li>Edit the configuration to specify the executable in ~/.termux/tasker/ to execute, and if it should be executed in the background (the default) or in a new terminal session.</li>
-    </ol>
+  This plugin for https://f-droid.org/packages/com.termux provides a way to run Termux scripts from Tasker.
+  <ol>
+  <li>Create a new Tasker Action.</li>
+  <li>In the resulting Select Action Category dialog, select Plugin.</li>
+  <li>In the resulting Termux:Task dialog, select Termux:Task.</li>
+  <li>Edit the configuration to specify the executable in ~/.termux/tasker/ to execute, and if it should be executed in the background (the default) or in a new terminal session.</li>
+  </ol>
 
 RepoType: git
 Repo: https://github.com/termux/termux-tasker

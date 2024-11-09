@@ -11,8 +11,8 @@ Bitcoin: 168utA5DWMVXLFVfQDahG5abEWUSk9Wcfm
 
 AutoName: APKShare
 Description: |-
-    APKShare lists all installed apps (system and user) and lets you send the
-    original APK file by e-mail, or share it with Android Beam, Bluetooth, etc.
+  APKShare lists all installed apps (system and user) and lets you send the
+  original APK file by e-mail, or share it with Android Beam, Bluetooth, etc.
 
 RepoType: git
 Repo: https://github.com/bparmentier/APKShare
@@ -25,7 +25,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '1.0'
 CurrentVersionCode: 1

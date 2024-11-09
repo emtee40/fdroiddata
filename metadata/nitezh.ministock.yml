@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on Yahoo Finance.
 Categories:
   - Money
 License: MIT
@@ -12,21 +13,23 @@ Changelog: https://github.com/niteshpatel/ministocks/releases
 
 AutoName: Ministocks
 Description: |-
-    Ministocks uses finance data sourced from Yahoo Finance, and recognises the same
-    symbols.
+  <b>NOTE:</b> Can no longer load the stock data.
 
-    The Ministocks stocks widget has the following features:
+  Ministocks uses finance data sourced from Yahoo Finance, and recognises the same
+  symbols.
 
-    * Four widget sizes available
-    * Add unlimited widgets
-    * Stock symbol search
-    * Price change - daily and against buy price
-    * Profit and loss - current valuation and total gain
-    * High price and low price alerts
-    * Foreign exchange prices
-    * Data sourced from Yahoo Finance
-    * Foreign exchange daily changes
-    * Custom update schedule
+  The Ministocks stocks widget has the following features:
+
+  * Four widget sizes available
+  * Add unlimited widgets
+  * Stock symbol search
+  * Price change - daily and against buy price
+  * Profit and loss - current valuation and total gain
+  * High price and low price alerts
+  * Foreign exchange prices
+  * Data sourced from Yahoo Finance
+  * Foreign exchange daily changes
+  * Custom update schedule
 
 RepoType: git
 Repo: https://github.com/niteshpatel/ministocks.git
@@ -166,7 +169,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '81'
 CurrentVersionCode: 81

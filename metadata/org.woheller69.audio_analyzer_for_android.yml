@@ -61,7 +61,42 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.3'
+    versionCode: 230
+    commit: f0e266a28db4c104b7495aee126d09babbbc884b
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.4'
+    versionCode: 240
+    commit: 97307dddc8ab2c54317edf6a97bc0180c11b3a79
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 250
+    commit: d80d949adf85ed5a7b0fe3b5eafcce5c4cf497e6
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 260
+    commit: 27409c0df6a9e43b0b89f01c601c5245ff5695f6
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 270
+    commit: a38a96cc36971b4e7713c11ff622053b662c85a6
+    subdir: audioSpectrumAnalyzer
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.2'
-CurrentVersionCode: 220
+CurrentVersion: '2.7'
+CurrentVersionCode: 270

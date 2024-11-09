@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on the WaniKani service, which is not libre.
 Categories:
   - Science & Education
 License: Apache-2.0
@@ -45,7 +46,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '1.4'
 CurrentVersionCode: 5

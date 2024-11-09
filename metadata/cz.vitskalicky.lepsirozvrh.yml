@@ -135,15 +135,28 @@ Builds:
     gradle:
       - official
 
-  - versionName: 1.8.5
-    versionCode: 33
-    disable: https://gitlab.com/vitSkalicky/lepsi-rozvrh/-/issues/12
-    commit: e4060b8befbe03a8730ab2940ed609883710c8b6
+  - versionName: 1.8.8
+    versionCode: 36
+    commit: bd127846f8b52099f7837768406494b3a82c8b41
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.9
+    versionCode: 37
+    commit: 50d58fd3cd3ce8b0cef1d79c6b1eee42e9d94658
+    subdir: app
+    gradle:
+      - official
+
+  - versionName: 1.8.11
+    versionCode: 39
+    commit: bb51467daacb911c920d221161e6e48e42175b70
     subdir: app
     gradle:
       - official
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v.*$
-CurrentVersion: 1.8.5
-CurrentVersionCode: 33
+CurrentVersion: 1.8.11
+CurrentVersionCode: 39

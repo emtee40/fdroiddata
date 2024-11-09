@@ -7,7 +7,7 @@ IssueTracker: https://github.com/ktsr42/RsyncServerApp/issues
 AutoName: Rsync Server
 
 RepoType: git
-Repo: https://github.com/ktsr42/RsyncServerApp
+Repo: https://github.com/ktsr42/RsyncServerApp.git
 
 Builds:
   - versionName: 0.9.7
@@ -46,7 +46,27 @@ Builds:
       - cp -f $$yajsync-fork$$/libintf/build/libs/libintf-0.9.0.jar $$yajsync-fork$$/yajsync-core/build/libs/yajsync-core-0.9.0.jar
         $$yajsync-fork$$/yajsync-app/build/libs/yajsync-app-0.9.0.jar libs
 
+  - versionName: 0.9.9
+    versionCode: 3
+    commit: 30b55fc9abc44ee1c0dc4e0bcfcfabdeb67e924b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - yajsync-fork@9a1c2f3d63deb98759f91fa22213b95165fd44cb
+    build:
+      - pushd $$yajsync-fork$$
+      - gradle build -x test
+      - popd
+      - mkdir libs
+      - cp -f $$yajsync-fork$$/libintf/build/libs/libintf-0.9.1.jar $$yajsync-fork$$/yajsync-core/build/libs/yajsync-core-0.9.1.jar
+        $$yajsync-fork$$/yajsync-app/build/libs/yajsync-app-0.9.1.jar libs
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags release-\d+\.\d+(\.\d+)?
-CurrentVersion: 0.9.8
-CurrentVersionCode: 2
+CurrentVersion: 0.9.9
+CurrentVersionCode: 3

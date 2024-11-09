@@ -8,8 +8,8 @@ IssueTracker: https://github.com/yhirano/Mp3VoiceRecorderSampleForAndroid/issues
 Name: Mp3 Voice Recorder
 AutoName: MP3 Voice Recorder Sample
 Description: |-
-    Very basic MP3 voice recorder encoding at 8kHz/32kbps and recording to
-    sdcard/mezzo.mp3. Could support x86 and MIPS, but not tested.
+  Very basic MP3 voice recorder encoding at 8kHz/32kbps and recording to
+  sdcard/mezzo.mp3. Could support x86 and MIPS, but not tested.
 
 RepoType: git
 Repo: https://github.com/yhirano/Mp3VoiceRecorderSampleForAndroid
@@ -26,7 +26,7 @@ Builds:
       - yes
     ndk: r12b
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '1.0'

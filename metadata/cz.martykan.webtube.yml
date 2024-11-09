@@ -1,8 +1,9 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on Youtube.
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-only
 SourceCode: https://github.com/martykan/webTube
 IssueTracker: https://github.com/martykan/webTube/issues
@@ -10,8 +11,8 @@ Changelog: https://github.com/martykan/webTube/releases
 
 AutoName: WebTube
 Description: |-
-    Lightweight YouTube frontend that's supposed to be used without the proprietary
-    YouTube-API or any of Google's (proprietary) play-services.
+  Lightweight YouTube frontend that's supposed to be used without the proprietary
+  YouTube-API or any of Google's (proprietary) play-services.
 
 RepoType: git
 Repo: https://github.com/martykan/webTube

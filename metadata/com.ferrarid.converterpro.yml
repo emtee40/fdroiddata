@@ -1,3 +1,6 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: App uses a non-libre service for currency conversion.
 Categories:
   - Science & Education
 License: GPL-3.0-only
@@ -12,7 +15,7 @@ Donate: https://www.paypal.com/paypalme/DemApps
 AutoName: Converter NOW
 
 RepoType: git
-Repo: https://github.com/ferraridamiano/ConverterNOW
+Repo: https://github.com/ferraridamiano/ConverterNOW.git
 
 Builds:
   - versionName: 3.1.3
@@ -116,8 +119,176 @@ Builds:
       - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
       - flutter build apk
 
+  - versionName: 4.0.1
+    versionCode: 39
+    commit: 6df978d26b568d905448c683d3cdb41ebc4af18c
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.1
+    rm:
+      - .github
+      - linux
+      - snap
+      - web
+      - windows
+      - android/app/proguard-rules.pro
+    prebuild:
+      - sed -i -e '/minifyEnabled/d' -e '/signingConfig /d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter config --no-analytics
+      - dart pub global activate melos
+      - dart pub global activate vector_graphics_compiler
+      - melos bootstrap
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter build apk
+
+  - versionName: 4.1.0
+    versionCode: 40
+    commit: 585aee1db2b026e24509c169597e69b565b26581
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.13.1
+    rm:
+      - .github
+      - linux
+      - snap
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/minifyEnabled/d' -e '/signingConfig /d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter config --no-analytics
+      - flutter doctor --verbose
+      - dart pub global activate melos
+      - dart pub global activate vector_graphics_compiler
+      - melos bootstrap
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter build apk
+
+  - versionName: 4.2.0
+    versionCode: 41
+    commit: c64aee572a6115a27b54a218ff948a910347e519
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.16.2
+    rm:
+      - .github
+      - linux
+      - snap
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/minifyEnabled/d' -e '/signingConfig /d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter config --no-analytics
+      - flutter doctor --verbose
+      - dart pub global activate melos
+      - dart pub global activate vector_graphics_compiler
+      - melos bootstrap
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter build apk
+
+  - versionName: 4.2.1
+    versionCode: 42
+    commit: b3a2d5bc6c1be9853bdbbc3e7883ab97fade73e8
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.19.1
+    rm:
+      - .github
+      - linux
+      - snap
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/minifyEnabled/d' -e '/signingConfig /d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter config --no-analytics
+      - flutter doctor --verbose
+      - dart pub global activate melos
+      - dart pub global activate vector_graphics_compiler
+      - melos bootstrap
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter build apk
+
+  - versionName: 4.2.2
+    versionCode: 43
+    commit: 298e8f536403fbf40968d6457beb21fc278431b7
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.22.0
+    rm:
+      - .github
+      - linux
+      - snap
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/minifyEnabled/d' -e '/signingConfig /d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter config --no-analytics
+      - flutter doctor --verbose
+      - dart pub global activate melos
+      - dart pub global activate vector_graphics_compiler
+      - melos bootstrap
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter build apk
+
+  - versionName: 4.2.3
+    versionCode: 44
+    commit: 2c344aad96ee7d3ebd6744becd083774fe333d07
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.24.0
+    rm:
+      - .github
+      - linux
+      - snap
+      - web
+      - windows
+    prebuild:
+      - sed -i -e '/minifyEnabled/d' -e '/signingConfig /d' android/app/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter config --no-analytics
+      - flutter doctor --verbose
+      - dart pub global activate melos
+      - dart pub global activate vector_graphics_compiler
+      - melos bootstrap
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - export PATH=$PUB_CACHE/bin/:$$flutter$$/bin/:$PATH
+      - flutter build apk
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v.*$
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 4.0.0
-CurrentVersionCode: 38
+CurrentVersion: 4.2.3
+CurrentVersionCode: 44

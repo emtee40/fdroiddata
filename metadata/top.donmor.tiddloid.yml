@@ -44,14 +44,6 @@ Builds:
       - yes
 
   - versionName: 2.2.0
-    versionCode: 40
-    disable: https://forum.f-droid.org/t/the-f-droid-builder-fetched-my-pre-release-and-got-it-built/17784
-    commit: 26aa8f61bf527055d1d2dc666b435ddea6dd84cd
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 2.2.0
     versionCode: 42
     commit: f355a23965d5a09f0ab50317b4166c075115c5d6
     subdir: app
@@ -101,7 +93,18 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.5.0
+    versionCode: 48
+    commit: d0827a2724f7560af6482dab931d7f7e5f6132a5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9.]+$
-CurrentVersion: 2.4.2
-CurrentVersionCode: 47
+CurrentVersion: 2.5.0
+CurrentVersionCode: 48

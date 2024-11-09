@@ -3,11 +3,13 @@ Categories:
 License: GPL-3.0-only
 WebSite: https://rust-keylock.github.io/
 SourceCode: https://github.com/rust-keylock/rust-keylock-android
+IssueTracker: https://github.com/rust-keylock/rust-keylock-android/issues
+Changelog: https://github.com/rust-keylock/rust-keylock-android/releases
 
 AutoName: rust-keylock
 
 RepoType: git
-Repo: https://github.com/rust-keylock/rust-keylock-android
+Repo: https://github.com/rust-keylock/rust-keylock-android.git
 
 Builds:
   - versionName: 0.12.0
@@ -17,7 +19,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get -y install build-essential
-    maven: 'yes'
+    maven: yes
     output: ./target/rust-keylock-android-$$VERSION$$-unsigned.apk
     srclibs:
       - rustup@1.21.1
@@ -73,7 +75,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get -y install build-essential
-    maven: 'yes'
+    maven: yes
     output: ./target/rust-keylock-android-$$VERSION$$-unsigned.apk
     srclibs:
       - rustup@1.23.1
@@ -129,7 +131,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get -y install build-essential
-    maven: 'yes'
+    maven: yes
     output: ./target/rust-keylock-android-$$VERSION$$-unsigned.apk
     srclibs:
       - rustup@1.23.1
@@ -185,7 +187,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get -y install build-essential
-    maven: 'yes'
+    maven: yes
     output: target/rust-keylock-android-$$VERSION$$-unsigned.apk
     srclibs:
       - rustup@1.24.3
@@ -230,7 +232,56 @@ Builds:
       - cp $ANDROID_RUST_KEYLOCK_LIB $ANDROID_JAVA_NATIVE
     ndk: r22b
 
+  - versionName: 0.15.0
+    versionCode: 1500
+    commit: 3faf5f3c3cdd78a9821bc9b7ff8c5537d25ec43c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get -y install build-essential
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - rustup@1.26.0
+    target: android-34
+    build:
+      - cd ..
+      - $$rustup$$/rustup-init.sh -y --default-toolchain 1.76.0 -t aarch64-linux-android
+        armv7-linux-androideabi
+      - source $HOME/.cargo/env
+      - BASEDIR=$(pwd)
+      - export ANDROID_NDK_HOME=${ANDROID_NDK}
+      - export ANDROID_TOOLCHAIN_DIR="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64"
+      - cd $HOME
+      - mkdir -p .cargo
+      - cd .cargo
+      - printf "[target]\n [target.armv7-linux-androideabi]\n linker = \"${ANDROID_TOOLCHAIN_DIR}/bin/armv7a-linux-androideabi24-clang\"\n
+        [target.aarch64-linux-android]\n linker = \"${ANDROID_TOOLCHAIN_DIR}/bin/aarch64-linux-android24-clang\""
+        > config
+      - export ANDROID_TOOLCHAIN=$ANDROID_TOOLCHAIN_DIR/bin
+      - export ANDROID_NDK_ROOT=${ANDROID_NDK}
+      - export ANDROID_RUST="$BASEDIR/rust"
+      - export ANDROID_RUST_KEYLOCK_LIB_AARCH64="$ANDROID_RUST/target/aarch64-linux-android/release/librustkeylockandroid.so"
+      - export ANDROID_RUST_KEYLOCK_LIB_ARMV7="$ANDROID_RUST/target/armv7-linux-androideabi/release/librustkeylockandroid.so"
+      - export ANDROID_JAVA_NATIVE_AARCH64="$BASEDIR/app/src/main/jniLibs/arm64-v8a/"
+      - export ANDROID_JAVA_NATIVE_ARMV7="$BASEDIR/app/src/main/jniLibs/armeabi-v7a/"
+      - mkdir -p $ANDROID_JAVA_NATIVE_AARCH64
+      - mkdir -p $ANDROID_JAVA_NATIVE_ARMV7
+      - . $BASEDIR/rust-build/setenv-android.sh
+      - cd $ANDROID_RUST
+      - export RANLIB=${ANDROID_TOOLCHAIN_DIR}/bin/llvm-ranlib
+      - export AR=${ANDROID_TOOLCHAIN_DIR}/bin/llvm-ar
+      - export CC=${ANDROID_TOOLCHAIN_DIR}/bin/armv7a-linux-androideabi24-clang
+      - cargo build --target=armv7-linux-androideabi --release
+      - export CC=${ANDROID_TOOLCHAIN_DIR}/bin/aarch64-linux-android24-clang
+      - cargo build --target=aarch64-linux-android --release
+      - cp $ANDROID_RUST_KEYLOCK_LIB_AARCH64 $ANDROID_JAVA_NATIVE_AARCH64
+      - cp $ANDROID_RUST_KEYLOCK_LIB_ARMV7 $ANDROID_JAVA_NATIVE_ARMV7
+    ndk: r25c
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.14.1
-CurrentVersionCode: 1401
+CurrentVersion: 0.15.0
+CurrentVersionCode: 1500

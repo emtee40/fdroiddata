@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on the IVPN VPN service.
 Categories:
   - Security
 License: GPL-3.0-only
@@ -11,28 +12,12 @@ Changelog: https://github.com/ivpn/android-app/releases
 AutoName: IVPN
 
 RepoType: git
-Repo: https://github.com/ivpn/android-app
+Repo: https://github.com/ivpn/android-app.git
 
 Builds:
   - versionName: 2.6.0
     versionCode: 100
     commit: v2.6.0
-    subdir: fdroid
-    submodules: true
-    gradle:
-      - production
-    rm:
-      - site
-      - store
-      - core/src/main/cpp/mbedtls/tests
-      - core/src/main/cpp/mbedtls/crypto/tests
-      - core/src/main/cpp/openvpn3/test
-    ndk: r21e
-
-  - versionName: 2.8.0
-    versionCode: 107
-    disable: https://github.com/ivpn/android-app/issues/110
-    commit: 269471f5b30659522a3496e7c268d38d6250c2b0
     subdir: fdroid
     submodules: true
     gradle:
@@ -75,9 +60,9 @@ Builds:
       - core/src/main/cpp/openvpn3/test
     ndk: r21e
 
-  - versionName: 2.8.4
-    versionCode: 115
-    commit: 541fd64e0b8dbb06c467e9f6f1ae737d85ed6efe
+  - versionName: 2.8.5
+    versionCode: 116
+    commit: 3b16690094c649206063288f50ac76d65cae44b6
     subdir: fdroid
     submodules: true
     sudo:
@@ -91,9 +76,185 @@ Builds:
       - core/src/main/cpp/mbedtls/tests
       - core/src/main/cpp/mbedtls/crypto/tests
       - core/src/main/cpp/openvpn3/test
+    prebuild: sdkmanager 'cmake;3.22.1'
     ndk: r21e
+
+  - versionName: 2.8.6
+    versionCode: 117
+    commit: 61b1e41c4621d56975e06d0333a9c294a7bf1b2c
+    subdir: fdroid
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make swig
+    gradle:
+      - production
+    rm:
+      - site
+      - store
+      - core/src/main/cpp/mbedtls/tests
+      - core/src/main/cpp/mbedtls/crypto/tests
+      - core/src/main/cpp/openvpn3/test
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r21e
+
+  - versionName: 2.9.0
+    versionCode: 118
+    commit: d1acc4306a7872bade9656183d3f9720b43be755
+    subdir: fdroid
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y make swig
+    gradle:
+      - production
+    rm:
+      - site
+      - store
+      - core/src/main/cpp/mbedtls/tests
+      - core/src/main/cpp/mbedtls/crypto/tests
+      - core/src/main/cpp/openvpn3/test
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r21e
+
+  - versionName: 2.10.3
+    versionCode: 126
+    commit: 5c622c75389f097ea9f7dffe6b523b9fc74db077
+    subdir: fdroid
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc g++ make swig
+    gradle:
+      - production
+    rm:
+      - site
+      - store
+      - core/src/main/cpp/mbedtls/tests
+      - core/src/main/cpp/mbedtls/crypto/tests
+      - core/src/main/cpp/openvpn3/test
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r25b
+
+  - versionName: 2.10.4
+    versionCode: 127
+    commit: 03c653e634ce536c8d675b1d4f577da98e395659
+    subdir: fdroid
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc g++ make swig
+    gradle:
+      - production
+    rm:
+      - site
+      - store
+      - core/src/main/cpp/mbedtls/tests
+      - core/src/main/cpp/mbedtls/crypto/tests
+      - core/src/main/cpp/openvpn3/test
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r25b
+
+  - versionName: 2.10.6
+    versionCode: 129
+    commit: 1ffa005ea19c3097cbffb09f871aa1705f5d77bb
+    subdir: fdroid
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc g++ make swig
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - production
+    rm:
+      - site
+      - store
+      - core/src/main/cpp/mbedtls/tests
+      - core/src/main/cpp/mbedtls/crypto/tests
+      - core/src/main/cpp/openvpn3/test
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r25b
+
+  - versionName: 2.10.7
+    versionCode: 130
+    commit: 0d11161cd4bb1599c401ecdfb7b4a56c927bd031
+    subdir: fdroid
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc g++ make swig
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - production
+    rm:
+      - site
+      - store
+      - core/src/main/cpp/mbedtls/tests
+      - core/src/main/cpp/mbedtls/crypto/tests
+      - core/src/main/cpp/openvpn3/test
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r25b
+
+  - versionName: 2.10.8
+    versionCode: 131
+    commit: 6e873830c4561725d9f90deb4c2fdfab12c18c01
+    subdir: fdroid
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc g++ make swig
+    gradle:
+      - production
+    rm:
+      - site
+      - store
+      - core/src/main/cpp/mbedtls/tests
+      - core/src/main/cpp/mbedtls/crypto/tests
+      - core/src/main/cpp/openvpn3/test
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r25b
+
+  - versionName: 2.10.9
+    versionCode: 133
+    commit: c0490ec9a618251292f52b012c78ebad4bc42715
+    subdir: fdroid
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc g++ make swig
+    gradle:
+      - production
+    rm:
+      - site
+      - store
+      - core/src/main/cpp/mbedtls/tests
+      - core/src/main/cpp/mbedtls/crypto/tests
+      - core/src/main/cpp/openvpn3/test
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r25b
+
+  - versionName: 2.10.10
+    versionCode: 135
+    commit: 2b9d3759e32dcc44dfffcf9f1418f3c1624177c0
+    subdir: fdroid
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake gcc g++ make swig
+    gradle:
+      - production
+    rm:
+      - site
+      - store
+      - core/src/main/cpp/mbedtls/tests
+      - core/src/main/cpp/mbedtls/crypto/tests
+      - core/src/main/cpp/openvpn3/test
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r25b
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.8.4
-CurrentVersionCode: 115
+CurrentVersion: 2.10.10
+CurrentVersionCode: 135

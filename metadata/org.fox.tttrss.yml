@@ -7,12 +7,12 @@ Donate: https://www.patreon.com/cthulhoo
 
 AutoName: Tiny Tiny RSS
 Description: |-
-    This is a fork of the original Tiny Tiny RSS app for android. Due to
-    incompatibility with fdroid this fork was produced. However only a few changes
-    where made to allow this app to be distributed on fdroid.
+  This is a fork of the original Tiny Tiny RSS app for android. Due to
+  incompatibility with fdroid this fork was produced. However only a few changes
+  where made to allow this app to be distributed on fdroid.
 
-    Since this version does not need to be bough I highly recommend to donate to the
-    original developer.
+  Since this version does not need to be bough I highly recommend to donate to the
+  original developer.
 
 RepoType: git
 Repo: https://gitlab.com/derSchabi/tttrsss.git
@@ -49,14 +49,6 @@ Builds:
   - versionName: '1.249'
     versionCode: 483
     commit: v1.249
-    subdir: org.fox.ttrss
-    gradle:
-      - yes
-
-  - versionName: '1.259'
-    versionCode: 493
-    disable: unknown maven repos
-    commit: v1.259
     subdir: org.fox.ttrss
     gradle:
       - yes
@@ -117,7 +109,8 @@ Builds:
       - yes
     prebuild: sed -i -e 's/\r//' ../gradle/wrapper/gradle-wrapper.properties
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '1.301'
 CurrentVersionCode: 535

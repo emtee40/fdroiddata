@@ -11,8 +11,8 @@ Changelog: https://github.com/ushahidi/SMSSync/releases
 
 AutoName: SMSsync
 Description: |-
-    Have received SMS’ forwarded to an internet url. Options exist to filter by
-    keywords, to block SMS’ that don’t include a secret and to identify the sender.
+  Have received SMS' forwarded to an internet url. Options exist to filter by
+  keywords, to block SMS' that don't include a secret and to identify the sender.
 
 RepoType: git
 Repo: https://github.com/ushahidi/SMSSync.git
@@ -79,7 +79,7 @@ Builds:
     scandelete:
       - smssync/libs
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 UpdateCheckData: build.gradle|androidVersionCode = (\d+)||v([\d.]+)

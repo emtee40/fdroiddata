@@ -6,9 +6,9 @@ IssueTracker: https://github.com/howeyc/spipedmobile/issues
 
 AutoName: Spiped
 Description: |-
-    <b>NOTE:</b> This app is no longer maintained.
+  <b>NOTE:</b> This app is no longer maintained.
 
-    Compatible with Colin Percival’s original <a href="https://www.tarsnap.com/spiped.html">spiped</a> utility.
+  Compatible with Colin Percival's original <a href="https://www.tarsnap.com/spiped.html">spiped</a> utility.
 
 RepoType: git
 Repo: https://github.com/howeyc/spipedmobile
@@ -21,7 +21,7 @@ Builds:
     gradle:
       - yes
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '1.2'

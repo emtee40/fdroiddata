@@ -7,13 +7,13 @@ IssueTracker: https://github.com/paulmach/Text-Edit-for-Android/issues
 
 AutoName: Text Edit
 Description: |-
-    <b>Note:</b> this app is no longer maintained, its repo was archived.
+  <b>Note:</b> this app is no longer maintained, its repo was archived.
 
-    Text Edit is a simple notepad application. It opens, edits and saves text files
-    on the SD card.
+  Text Edit is a simple notepad application. It opens, edits and saves text files
+  on the SD card.
 
-    Unfortunately, this app is not recommended for large files. The author has
-    decided to stop working on the app so any future updates are unlikely.
+  Unfortunately, this app is not recommended for large files. The author has
+  decided to stop working on the app so any future updates are unlikely.
 
 RepoType: git
 Repo: https://github.com/paulmach/Text-Edit-for-Android.git
@@ -36,7 +36,8 @@ Builds:
     commit: a46aec194ec385a0d543e80709821c16cf8aa198
     target: android-8
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: '1.5'
 CurrentVersionCode: 15

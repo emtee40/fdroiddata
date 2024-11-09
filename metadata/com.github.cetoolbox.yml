@@ -7,8 +7,8 @@ IssueTracker: https://github.com/cetoolbox/cetoolbox/issues
 
 AutoName: CEToolbox
 Description: |-
-    The CEToolbox project aims to provide a convenient tool for computing Capillary
-    Electrophoresis parameters.
+  The CEToolbox project aims to provide a convenient tool for computing Capillary
+  Electrophoresis parameters.
 
 RepoType: git
 Repo: https://github.com/cetoolbox/cetoolbox.git
@@ -42,7 +42,25 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.5.0
+    versionCode: 15
+    commit: 01df9bb0060f2cea24d0ca70c2811d8d36c0fefa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 16
+    commit: 9fc646690d9270ea452b72601143dc078511b627
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.5
-CurrentVersionCode: 13
+CurrentVersion: 1.6.0
+CurrentVersionCode: 16

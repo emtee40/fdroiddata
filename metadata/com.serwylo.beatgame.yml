@@ -188,7 +188,70 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.14.5
+    versionCode: 27
+    commit: 5215dcadaa2a036fc9f89ed932c79fcf4c037993
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: 0.14.6
+    versionCode: 28
+    commit: 3d56adfd25e5d391ba83003526992897e6116ab1
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: 0.14.7
+    versionCode: 29
+    commit: 95e7dbcbc608dd973dc521504d62adabcffece5f
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: 0.14.8
+    versionCode: 30
+    commit: bed1f5e0231a667c32805b7453f86ce86a0abf64
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: 0.14.9
+    versionCode: 31
+    commit: 8f2fbd05c08ceb7f29962663470eb5e5e1c4d9e5
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: 0.15.0
+    versionCode: 32
+    commit: 88e13a7527cfef54bd34464828ffd88212ddaa00
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: 0.16.0
+    versionCode: 33
+    commit: 2044aff1ffe0c10b8f4e9edaad33bed0b746533e
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: 0.16.1
+    versionCode: 34
+    commit: 30e1dc228ef333ff0a512968b3f63327891b9e77
+    subdir: android
+    gradle:
+      - yes
+
+  - versionName: 0.16.2
+    versionCode: 35
+    commit: 412a37c68f0ca8606fb75363fca0d783e7db3c2d
+    subdir: android
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.14.4
-CurrentVersionCode: 26
+CurrentVersion: 0.16.2
+CurrentVersionCode: 35

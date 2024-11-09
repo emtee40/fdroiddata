@@ -1,3 +1,6 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Tethered to the schedule site.
 Categories:
   - Time
 License: Apache-2.0
@@ -9,50 +12,52 @@ IssueTracker: https://github.com/linuxtage/EventFahrplan/issues
 
 AutoName: GLT Companion
 Description: |-
-    Schedule application for the event "Grazer Linuxtage" - GLT
+  <b>NOTE:</b> App moved to a new appid: https://f-droid.org/packages/at.linuxtage.Eventfahrplan Please install the new version.
 
-    The Grazer Linuxtage is an annual two-day conference about open-source, hardware and software. The GLT offers workshops on Fridays and talks and info booths on Saturday on a multitude of topics.
+  Schedule application for the event "Grazer Linuxtage" - GLT
 
-    <a href="https://linuxtage.at/">Grazer Linuxtage</a>
+  The Grazer Linuxtage is an annual two-day conference about open-source, hardware and software. The GLT offers workshops on Fridays and talks and info booths on Saturday on a multitude of topics.
 
-    App features:
-    * Upcoming and live events
-    * View program by day and rooms (side by side)
-    * Custom grid layout for smartphones (try landscape mode) and tablets
-    * Read detailed descriptions (speaker names, start time, room name, links, ...) of events
-    * Create your own customized schedule with favorites
-    * Share events by email, twitter, etc. with your colleagues and friends
-    * Reminder for your favorite talks
-    * Offline support (Download the program)
-    * Add events to your personal calendar
-    * Keep track of program changes
-    * Automatic program updates (configurable in settings)
-    * Vote and leave comments on talks and workshops
-    * Integration with the Engelsystem project https://engelsystem.de - Online tool for coordinating helpers and shifts on large events
+  <a href="https://linuxtage.at/">Grazer Linuxtage</a>
 
-    🔤 Supported languages:
-    (Event descriptions excluded)
-    * Dutch
-    * English
-    * French
-    * German
-    * Italian
-    * Japanese
-    * Polish
-    * Portuguese
-    * Russian
-    * Spanish
-    * Swedish
+  App features:
+  * Upcoming and live events
+  * View program by day and rooms (side by side)
+  * Custom grid layout for smartphones (try landscape mode) and tablets
+  * Read detailed descriptions (speaker names, start time, room name, links, ...) of events
+  * Create your own customized schedule with favorites
+  * Share events by email, twitter, etc. with your colleagues and friends
+  * Reminder for your favorite talks
+  * Offline support (Download the program)
+  * Add events to your personal calendar
+  * Keep track of program changes
+  * Automatic program updates (configurable in settings)
+  * Vote and leave comments on talks and workshops
+  * Integration with the Engelsystem project https://engelsystem.de - Online tool for coordinating helpers and shifts on large events
 
-    💡 Questions regarding the content can only be answered by the content team of the Grazer Linuxtage (GLT). This app simply offers a way to consume and personalize the conference schedule.
+  🔤 Supported languages:
+  (Event descriptions excluded)
+  * Dutch
+  * English
+  * French
+  * German
+  * Italian
+  * Japanese
+  * Polish
+  * Portuguese
+  * Russian
+  * Spanish
+  * Swedish
 
-    It's Open Source and available under the Apache-2.0 License.
-    https://github.com/linuxtage/EventFahrplan
+  💡 Questions regarding the content can only be answered by the content team of the Grazer Linuxtage (GLT). This app simply offers a way to consume and personalize the conference schedule.
 
-    💣 Bug reports are very welcome. It would be awesome if you can describe how to reproduce the particular error. Please use the GitHub issue tracker https://github.com/linuxtage/EventFahrplan/issues
+  It's Open Source and available under the Apache-2.0 License.
+  https://github.com/linuxtage/EventFahrplan
+
+  💣 Bug reports are very welcome. It would be awesome if you can describe how to reproduce the particular error. Please use the GitHub issue tracker https://github.com/linuxtage/EventFahrplan/issues
 
 
-    This App is based on the EventFahrplan: https://github.com/EventFahrplan/EventFahrplan
+  This App is based on the EventFahrplan: https://github.com/EventFahrplan/EventFahrplan
 
 RepoType: git
 Repo: https://github.com/linuxtage/EventFahrplan.git
@@ -146,7 +151,22 @@ Builds:
     gradle:
       - glt22
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 1.8.5
-CurrentVersionCode: 1700005
+  - versionName: 1.8.9-glt-Edition
+    versionCode: 1700009
+    commit: 5b6562f9541c0dd539c7c95616784e5c5041da98
+    subdir: app
+    gradle:
+      - glt22
+
+  - versionName: 1.8.13-glt-Edition
+    versionCode: 1700013
+    commit: 7cde96849b8659dc3b44fc5fefcc92a67094b429
+    subdir: app
+    gradle:
+      - glt22
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.8.13
+CurrentVersionCode: 1700013

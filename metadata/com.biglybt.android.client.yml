@@ -1,5 +1,8 @@
 AntiFeatures:
-  - Tracking
+  NonFreeNet:
+    en-US: Connects to *.biglybt.com and searches through google.com
+  Tracking:
+    en-US: Connects to version.biglybt.com at start
 Categories:
   - Internet
 License: GPL-2.0-or-later
@@ -190,10 +193,24 @@ Builds:
       - sed -i -e '/googleFlavorImplementation/d; /dexcount/d' build.gradle
       - sed -i -e '/google-services/d' ../build.gradle
 
-  - versionName: 1.3.2.0
-    versionCode: 1030200
-    disable: not working https://gitlab.com/fdroid/fdroiddata/-/issues/2509
-    commit: v1.3.2.0
+  - versionName: 1.3.3
+    versionCode: 1030304
+    commit: 04dc37f8fdc48c91f1b959299fb62e542b7eec1f
+    subdir: app
+    submodules: true
+    gradle:
+      - CoreFlavorFossFlavor
+    rm:
+      - core/uis/lib
+      - core/core/lib
+      - core/.mvn
+    prebuild:
+      - sed -i -e '/googleFlavorImplementation/d; /dexcount/d' build.gradle
+      - sed -i -e '/google-services/d' ../build.gradle
+
+  - versionName: 1.3.4.3
+    versionCode: 1030403
+    commit: dba0f004bc3cdd44948327635465e00d8ffca3f4
     subdir: app
     submodules: true
     gradle:
@@ -210,5 +227,5 @@ MaintainerNotes: Repo has metadata structure for description, title, images, etc
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*$
-CurrentVersion: 1.3.2.0
-CurrentVersionCode: 1030200
+CurrentVersion: 1.3.4.3
+CurrentVersionCode: 1030403

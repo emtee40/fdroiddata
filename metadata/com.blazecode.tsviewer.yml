@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on proprietary TeamSpeak server.
 Categories:
   - Connectivity
   - Internet
@@ -60,15 +61,49 @@ Builds:
     gradle:
       - yes
 
-  - versionName: '1.4'
-    versionCode: 7
-    disable: https://github.com/BlazeCodeDev/TSViewer/issues/3
-    commit: 222b3ca4cbaf49e4be8fca92d8273bef6f7bd17c
+  - versionName: 2.0-foss
+    versionCode: 8
+    commit: a7e0ec44c376b6bd22c6569e987f105d7c6c696a
     subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
-      - yes
+      - foss
+    rm:
+      - wear
+    prebuild: sed -i -e '/wear/d' build.gradle ../settings.gradle
 
-AutoUpdateMode: None
+  - versionName: 2.0.2-foss
+    versionCode: 10
+    commit: 7ec64b226826526cee0164feb156681b0eae76de
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - wear
+    prebuild: sed -i -e '/wear/d' build.gradle ../settings.gradle
+
+  - versionName: 2.1.0-foss
+    versionCode: 11
+    commit: 2605f4d29587f0162b6ce1f0222c0397ee24716a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - foss
+    rm:
+      - wear
+    prebuild: sed -i -e '/wear/d' build.gradle.kts ../settings.gradle.kts
+
+AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.4'
-CurrentVersionCode: 7
+CurrentVersion: 2.1.0-foss
+CurrentVersionCode: 11

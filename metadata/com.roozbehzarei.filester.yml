@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Uses transfer.sh which is not foss/libre.
 Categories:
   - Internet
 License: GPL-3.0-only
@@ -28,7 +29,51 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.1.0
+    versionCode: 4
+    commit: eef30a44ea0499f43dc917dea98d8e7fe5862087
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {..,.}/build.gradle.kts
+
+  - versionName: 2.2.0
+    versionCode: 5
+    commit: 58f679ea209181ac1779baf956f925d57020ef6e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {..,.}/build.gradle.kts
+
+  - versionName: 2.3.1
+    versionCode: 7
+    commit: 50bce97b72b6ec9462561d9e9a15c5752f964e79
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {..,.}/build.gradle.kts
+
+  - versionName: 2.3.2
+    versionCode: 8
+    commit: b1a8d5dad614631afbd862afd9e9b989c2fe0c58
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {..,.}/build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.1
-CurrentVersionCode: 3
+CurrentVersion: 2.3.2
+CurrentVersionCode: 8

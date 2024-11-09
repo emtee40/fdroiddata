@@ -1,5 +1,3 @@
-AntiFeatures:
-  - NonFreeNet
 Categories:
   - Navigation
 License: GPL-2.0-only
@@ -180,7 +178,49 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '126'
+    versionCode: 126
+    commit: e87e16686ac0ec31c1341f14144bcebd7aad2fc5
+    subdir: gpslogger
+    gradle:
+      - yes
+
+  - versionName: '127'
+    versionCode: 127
+    commit: 6621620fa5b9916f67672be59a625fe6eea6a721
+    subdir: gpslogger
+    gradle:
+      - yes
+
+  - versionName: '128'
+    versionCode: 128
+    commit: 269cf99d9c07ba2975b3bc429f5b9d1f3023b063
+    subdir: gpslogger
+    gradle:
+      - yes
+
+  - versionName: '129'
+    versionCode: 129
+    commit: ac39acabe367209b8cfeeaeaf68f7fc55cef7bc3
+    subdir: gpslogger
+    gradle:
+      - yes
+
+  - versionName: '130'
+    versionCode: 130
+    commit: 8561aa870ad1e56c5cabc32cb3aec66c2bc1ec1c
+    subdir: gpslogger
+    gradle:
+      - yes
+
+  - versionName: 131-rc2
+    versionCode: 131
+    commit: 67fa9918631b9584aa9113fe46b8b1dca7b4eb5a
+    subdir: gpslogger
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[.0-9]*$
-CurrentVersion: '125'
-CurrentVersionCode: 125
+CurrentVersion: 131-rc2
+CurrentVersionCode: 131

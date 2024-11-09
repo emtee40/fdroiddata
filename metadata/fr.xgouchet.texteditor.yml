@@ -6,10 +6,10 @@ IssueTracker: https://github.com/xgouchet/Ted/issues
 
 AutoName: Ted
 Description: |-
-    Ted is a lightweight text editor, meant as a Notepad application, and not meant
-    to edit big files. You can create new text file, open existing files and of
-    course save them. You can also display line numbers and open recent files. You
-    can also search for text inside the opened file.
+  Ted is a lightweight text editor, meant as a Notepad application, and not meant
+  to edit big files. You can create new text file, open existing files and of
+  course save them. You can also display line numbers and open recent files. You
+  can also search for text inside the opened file.
 
 RepoType: git
 Repo: https://github.com/xgouchet/Ted.git
@@ -45,7 +45,8 @@ Builds:
       - ../AndroidLib
     target: android-15
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: Release 1.8.1
 CurrentVersionCode: 19

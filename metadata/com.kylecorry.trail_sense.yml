@@ -12,7 +12,7 @@ Changelog: https://github.com/kylecorry31/Trail-Sense/releases
 AutoName: Trail Sense
 
 RepoType: git
-Repo: https://github.com/kylecorry31/Trail-Sense
+Repo: https://github.com/kylecorry31/Trail-Sense.git
 
 Builds:
   - versionName: 0.1.1
@@ -655,7 +655,291 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.14.0
+    versionCode: 94
+    commit: 65f1715e846d8444334bd0930bc037ef5d2c00e5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.15.0
+    versionCode: 95
+    commit: 5b206c40493adf9ffa1368a3ccdea065cbf6d252
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.16.1
+    versionCode: 97
+    commit: 6b0c32e9a7b1465397ec8c2eef40848f263b597a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.17.0
+    versionCode: 98
+    commit: fdd3c0e38d26a20e492c204b731716095bce11e6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.18.0
+    versionCode: 99
+    commit: b85d15c93f3170e4abd5d41f606702c295be3896
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 5.0.0
+    versionCode: 100
+    commit: 477f0385bf265e70ec5d0c6f03bb05c8e13f8c1e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.1.1
+    versionCode: 102
+    commit: 106d559d516fe7eee52fcb73b3feee1b053cee0d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.2.0
+    versionCode: 103
+    commit: 83d40025d6d797c248af8ceba3a6bd2df7455af2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.3.0
+    versionCode: 104
+    commit: a94bad166b675428b987d3fb1c9f74ee56b04642
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.3.1
+    versionCode: 105
+    commit: 4badce0fda1a4d1aa5e670605057035713af2468
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.4.0
+    versionCode: 106
+    commit: 90201c697e47fb32934611e33540862f1ede131e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.5.0
+    versionCode: 107
+    commit: 6b6f7d89a32e878545addc0ab67a692c84deefb7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.5.1
+    versionCode: 108
+    commit: e377c1f3131021b69c4516bb9de6dc771b29608d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.6.1
+    versionCode: 110
+    commit: 07cb018cb2f1c28d3e5c681f53f4db8e5c76ea0a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.6.2
+    versionCode: 111
+    commit: 6b50b922b1ed898644be562bea9d0b86b477457d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.7.1
+    versionCode: 113
+    commit: 1d761f8beea581b0fe72840e9a147bbe53c48d78
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.7.2
+    versionCode: 114
+    commit: b939fc0b3ec4aacec6271eee1cc45007c97c9cb9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.8.1
+    versionCode: 116
+    commit: 22bd1e36e27947c78c9f44d67cf7183ed48f6e6f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.9.0
+    versionCode: 117
+    commit: 083e708e005f087fb3e4ebddbb365b131bdc43b4
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 5.10.0
+    versionCode: 118
+    commit: fbb24fcda9d99d9833adac8a6636a8913f86e822
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 6.0.0
+    versionCode: 119
+    commit: 87aee5519b2b8363d11a888273baa018c572d4e0
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 6.1.0
+    versionCode: 120
+    commit: a51c08a70859a89742ba03b2338fddc85f032b72
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 6.2.1
+    versionCode: 122
+    commit: 1aaeda9c92f43cfbd526232c4eb770c16cc58e32
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 6.3.0
+    versionCode: 123
+    commit: 70c3ee95a6d1b6194d9fc207cbb03ed5e4c5cd28
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 6.4.0
+    versionCode: 124
+    commit: d801d5f69933357e2322d3f3943fd066ac4ba502
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
+  - versionName: 6.5.0
+    versionCode: 125
+    commit: eb6199ea30ed18ca5c2d2f599976c642705143ca
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - build-cache
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.13.0
-CurrentVersionCode: 93
+CurrentVersion: 6.5.0
+CurrentVersionCode: 125

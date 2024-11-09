@@ -9,10 +9,10 @@ IssueTracker: https://github.com/segin/TTLEditor/issues
 
 AutoName: TTL Editor
 Description: |-
-    Simple graphical frontend for iptables to change the TTL (time-to-live) of
-    packets sent over a given network interface.
+  Simple graphical frontend for iptables to change the TTL (time-to-live) of
+  packets sent over a given network interface.
 
-RequiresRoot: 'yes'
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/segin/TTLEditor
@@ -47,21 +47,6 @@ Builds:
   - versionName: 1.0.9
     versionCode: 13
     commit: 82031e63aaf6b407c5d96eff679187519a53811c
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - RootTools@3.4
-    rm:
-      - app/libs/RootTools.jar
-    prebuild:
-      - cp -fR $$RootTools$$/RootTools/src/main/java src/main/
-      - sed -i -e '/RootTools/d' build.gradle
-
-  - versionName: 1.0.10
-    versionCode: 14
-    disable: outdated gradle on BS
-    commit: 4f16fb4db628fd9e16721c923eb240603de9334a
     subdir: app
     gradle:
       - yes

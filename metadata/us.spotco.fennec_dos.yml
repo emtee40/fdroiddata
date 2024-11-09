@@ -1,5 +1,6 @@
 AntiFeatures:
-  - UpstreamNonFree
+  UpstreamNonFree:
+    en-US: Telemetry and proprietary bits are removed.
 Categories:
   - Internet
 License: MPL-2.0
@@ -9,13 +10,9 @@ SourceCode: https://gitlab.com/divested-mobile/mull-fenix
 IssueTracker: https://gitlab.com/divested-mobile/mull-fenix/issues
 
 Name: Mull
-Description: This is a privacy oriented and deblobbed web browser based on Mozilla
-    technology. It enables many features upstreamed by the <a href="https://wiki.mozilla.org/Security/Tor_Uplift">Tor
-    Uplift project</a> using preferences from the <a href="https://github.com/arkenfox/user.js">arkenfox-user.js
-    project</a>. It is recommended to install 'uBlock Origin'.
 
 RepoType: git
-Repo: https://github.com/mozilla-mobile/fenix
+Repo: https://codeberg.org/divested-mobile/mull-fenix.git
 
 Builds:
   - versionName: 89.1.1
@@ -39,6 +36,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 89.1.1
     versionCode: 2891120
@@ -61,6 +61,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 90.1.1
     versionCode: 2901100
@@ -83,6 +86,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 90.1.1
     versionCode: 2901120
@@ -105,6 +111,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 91.1.0
     versionCode: 2911000
@@ -127,6 +136,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 91.1.0
     versionCode: 2911020
@@ -149,6 +161,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 91.2.0
     versionCode: 2912000
@@ -171,6 +186,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 91.2.0
     versionCode: 2912020
@@ -193,6 +211,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 92.1.1
     versionCode: 2921100
@@ -216,6 +237,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 92.1.1
     versionCode: 2921120
@@ -239,6 +263,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 93.1.0
     versionCode: 2931000
@@ -262,6 +289,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 93.1.0
     versionCode: 2931020
@@ -285,6 +315,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 94.1.1
     versionCode: 2941100
@@ -308,6 +341,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 94.1.1
     versionCode: 2941120
@@ -331,6 +367,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 95.1.0
     versionCode: 2951000
@@ -354,6 +393,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 95.1.0
     versionCode: 2951020
@@ -377,6 +419,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 95.2.0
     versionCode: 2952000
@@ -401,6 +446,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 95.2.0
     versionCode: 2952020
@@ -425,6 +473,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 96.1.1
     versionCode: 2961100
@@ -450,6 +501,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 96.1.1
     versionCode: 2961120
@@ -475,6 +529,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 96.3.0
     versionCode: 2963000
@@ -500,6 +557,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 96.3.0
     versionCode: 2963020
@@ -525,6 +585,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 97.1.1
     versionCode: 2971100
@@ -550,6 +613,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 97.1.1
     versionCode: 2971120
@@ -575,6 +641,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 98.1.0
     versionCode: 2981000
@@ -600,6 +669,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 98.1.0
     versionCode: 2981020
@@ -625,6 +697,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 98.1.1
     versionCode: 2981100
@@ -650,6 +725,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 98.1.1
     versionCode: 2981120
@@ -675,6 +753,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 98.2.0
     versionCode: 2982000
@@ -700,6 +781,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 98.2.0
     versionCode: 2982020
@@ -725,6 +809,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 100.1.1
     versionCode: 21001100
@@ -750,6 +837,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 100.1.1
     versionCode: 21001120
@@ -775,6 +865,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 100.1.3
     versionCode: 21001300
@@ -800,6 +893,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 100.1.3
     versionCode: 21001320
@@ -825,6 +921,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 100.3.0
     versionCode: 21003000
@@ -850,6 +949,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 100.3.0
     versionCode: 21003020
@@ -875,6 +977,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 101.1.1
     versionCode: 21011100
@@ -900,6 +1005,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 101.1.1
     versionCode: 21011120
@@ -925,6 +1033,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 102.1.1
     versionCode: 21021101
@@ -950,6 +1061,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 102.1.1
     versionCode: 21021121
@@ -975,6 +1089,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 103.1.0
     versionCode: 21031000
@@ -1000,6 +1117,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 103.1.0
     versionCode: 21031020
@@ -1025,6 +1145,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 104.1.0
     versionCode: 21041000
@@ -1050,6 +1173,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 104.1.0
     versionCode: 21041020
@@ -1075,6 +1201,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 105.1.0
     versionCode: 21051000
@@ -1100,6 +1229,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 105.1.0
     versionCode: 21051020
@@ -1125,6 +1257,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 107.1.0
     versionCode: 21071000
@@ -1149,6 +1284,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 107.1.0
     versionCode: 21071020
@@ -1173,6 +1311,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 107.2.0
     versionCode: 21072000
@@ -1197,6 +1338,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 107.2.0
     versionCode: 21072020
@@ -1221,6 +1365,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 108.1.0
     versionCode: 21081000
@@ -1245,6 +1392,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 108.1.0
     versionCode: 21081020
@@ -1269,6 +1419,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 108.1.1
     versionCode: 21081100
@@ -1293,6 +1446,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 108.1.1
     versionCode: 21081120
@@ -1317,6 +1473,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 109.1.1
     versionCode: 21091100
@@ -1341,6 +1500,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 109.1.1
     versionCode: 21091120
@@ -1365,6 +1527,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 109.2.0
     versionCode: 21092000
@@ -1389,6 +1554,9 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 109.2.0
     versionCode: 21092020
@@ -1413,28 +1581,2448 @@ Builds:
     prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
     build: $$MullBuild$$/build.sh
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
-MaintainerNotes: |4-
+  - versionName: 110.0.1
+    versionCode: 21100100
+    commit: v110.0.1
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroid@components-v110.0.1
+      - FirefoxAndroidAS@v108.0.8
+      - MozAppServices@v96.2.1
+      - MullBuild@v110.0.1
+      - MozFennec@FIREFOX_110_0_RELEASE
+      - MozGlean@v51.8.2
+      - MozGleanAS@v51.8.2
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
-    Version code scheme:
-    XYZAR, where X.Y.Z is upstream version, A is architecture (0 = ARMv7, 1 = x86, 2 = ARMv8), R is revision (if we need to re-release).
-    * Example: 530210 = Firefox 53.0.2 for x86, initial revision
-    * Example: 550021 = Firefox 55.0 for ARMv8, second revision
+  - versionName: 110.0.1
+    versionCode: 21100120
+    commit: v110.0.1
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: app/build/outputs/apk/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroid@components-v110.0.1
+      - FirefoxAndroidAS@v108.0.8
+      - MozAppServices@v96.2.1
+      - MullBuild@v110.0.1
+      - MozFennec@FIREFOX_110_0_RELEASE
+      - MozGlean@v51.8.2
+      - MozGleanAS@v51.8.2
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
-    Determining versions:
-    * Fenix: https://github.com/mozilla-mobile/fenix/releases
-    * MozAndroidComponents: `VERSION` in https://github.com/mozilla-mobile/fenix/blob/$releaseTag/buildSrc/src/main/java/AndroidComponents.kt
-    * MozAppServices: `mozilla_appservices` in https://github.com/mozilla-mobile/firefox-android/blob/$MozAndroidComponents/android-components/plugins/dependencies/src/main/java/DependenciesPlugin.kt
-    * MozGlean: `mozilla_glean` in https://github.com/mozilla-mobile/firefox-android/blob/$MozAndroidComponents/android-components/plugins/dependencies/src/main/java/DependenciesPlugin.kt
-    * MozFennec: `version` in https://github.com/mozilla-mobile/firefox-android/blob/$MozAndroidComponents/android-components/plugins/dependencies/src/main/java/Gecko.kt
-    * MozFennec: https://hg.mozilla.org/releases/mozilla-release/tags
-    * MozAndroidComponentsAS: `android_components_version` in https://github.com/mozilla/application-services/blob/$MozAppServices/build.gradle
-    * MozGleanAS: `mozilla_glean` in https://github.com/mozilla-mobile/android-components/blob/$MozAndroidComponentsAS/buildSrc/src/main/java/Dependencies.kt
-    * rustup: https://github.com/rust-lang/rustup/tags
-    * wasi-sdk: https://github.com/WebAssembly/wasi-sdk/releases
+  - versionName: 110.1.0
+    versionCode: 21101000
+    commit: fenix-v110.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@v108.0.8
+      - MozAppServices@v96.2.1
+      - MullBuild@v110.1.0
+      - MozFennec@FIREFOX_110_0_1_RELEASE
+      - MozGlean@v51.8.2
+      - MozGleanAS@v51.8.2
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
-ArchivePolicy: 4 versions
+  - versionName: 110.1.0
+    versionCode: 21101020
+    commit: fenix-v110.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@v108.0.8
+      - MozAppServices@v96.2.1
+      - MullBuild@v110.1.0
+      - MozFennec@FIREFOX_110_0_1_RELEASE
+      - MozGlean@v51.8.2
+      - MozGleanAS@v51.8.2
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 111.0.0
+    versionCode: 21110000
+    commit: fenix-v111.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@v108.0.8
+      - MozAppServices@v96.4.0
+      - MullBuild@v111.0.0
+      - MozFennec@FIREFOX_111_0_RELEASE
+      - MozGlean@v52.2.0
+      - MozGleanAS@v52.0.0
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 111.0.0
+    versionCode: 21110020
+    commit: fenix-v111.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@v108.0.8
+      - MozAppServices@v96.4.0
+      - MullBuild@v111.0.0
+      - MozFennec@FIREFOX_111_0_RELEASE
+      - MozGlean@v52.2.0
+      - MozGleanAS@v52.0.0
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 111.1.0
+    versionCode: 21111000
+    commit: fenix-v111.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@v108.0.8
+      - MozAppServices@v96.4.0
+      - MullBuild@v111.1.0
+      - MozFennec@FIREFOX_111_0_1_RELEASE
+      - MozGlean@v52.2.0
+      - MozGleanAS@v52.0.0
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 111.1.0
+    versionCode: 21111020
+    commit: fenix-v111.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@v108.0.8
+      - MozAppServices@v96.4.0
+      - MullBuild@v111.1.0
+      - MozFennec@FIREFOX_111_0_1_RELEASE
+      - MozGlean@v52.2.0
+      - MozGleanAS@v52.0.0
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 112.0.0
+    versionCode: 21120000
+    commit: fenix-v112.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v110.0.1
+      - MozAppServices@v97.2.0
+      - MullBuild@v112.0.0
+      - MozFennec@FIREFOX_112_0_RELEASE
+      - MozGlean@v52.3.0
+      - MozGleanAS@v52.2.0
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 112.0.0
+    versionCode: 21120020
+    commit: fenix-v112.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v110.0.1
+      - MozAppServices@v97.2.0
+      - MullBuild@v112.0.0
+      - MozFennec@FIREFOX_112_0_RELEASE
+      - MozGlean@v52.3.0
+      - MozGleanAS@v52.2.0
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 112.1.0
+    versionCode: 21121000
+    commit: fenix-v112.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v110.0.1
+      - MozAppServices@v97.2.0
+      - MullBuild@v112.1.0
+      - MozFennec@FIREFOX_112_0_1_RELEASE
+      - MozGlean@v52.3.0
+      - MozGleanAS@v52.2.0
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 112.1.0
+    versionCode: 21121020
+    commit: fenix-v112.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v110.0.1
+      - MozAppServices@v97.2.0
+      - MullBuild@v112.1.0
+      - MozFennec@FIREFOX_112_0_1_RELEASE
+      - MozGlean@v52.3.0
+      - MozGleanAS@v52.2.0
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 112.2.0
+    versionCode: 21122000
+    commit: fenix-v112.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v110.0.1
+      - MozAppServices@v97.2.0
+      - MullBuild@v112.2.0
+      - MozFennec@FIREFOX_112_0_2_RELEASE
+      - MozGlean@v52.3.0
+      - MozGleanAS@v52.2.0
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 112.2.0
+    versionCode: 21122020
+    commit: fenix-v112.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v110.0.1
+      - MozAppServices@v97.2.0
+      - MullBuild@v112.2.0
+      - MozFennec@FIREFOX_112_0_2_RELEASE
+      - MozGlean@v52.3.0
+      - MozGleanAS@v52.2.0
+      - rustup@1.25.2
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 113.0.0
+    versionCode: 21130000
+    commit: fenix-v113.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v111.1.1
+      - MozAppServices@v97.4.1
+      - MullBuild@v113.0.0
+      - MozFennec@FIREFOX_113_0_RELEASE
+      - MozGlean@v52.4.2
+      - MozGleanAS@v52.2.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 113.0.0
+    versionCode: 21130020
+    commit: fenix-v113.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v111.1.1
+      - MozAppServices@v97.4.1
+      - MullBuild@v113.0.0
+      - MozFennec@FIREFOX_113_0_RELEASE
+      - MozGlean@v52.4.2
+      - MozGleanAS@v52.2.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 113.2.0
+    versionCode: 21132000
+    commit: fenix-v113.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v111.1.1
+      - MozAppServices@v97.4.1
+      - MullBuild@v113.2.0
+      - MozFennec@FIREFOX_113_0_2_RELEASE
+      - MozGlean@v52.4.2
+      - MozGleanAS@v52.2.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 113.2.0
+    versionCode: 21132020
+    commit: fenix-v113.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v111.1.1
+      - MozAppServices@v97.4.1
+      - MullBuild@v113.2.0
+      - MozFennec@FIREFOX_113_0_2_RELEASE
+      - MozGlean@v52.4.2
+      - MozGleanAS@v52.2.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 114.0.0
+    versionCode: 21140000
+    commit: fenix-v114.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v112.2.0
+      - MozAppServices@v114.1
+      - MullBuild@v114.0.0
+      - MozFennec@FIREFOX_114_0_RELEASE
+      - MozGlean@v52.7.0
+      - MozGleanAS@v52.6.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 114.0.0
+    versionCode: 21140020
+    commit: fenix-v114.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v112.2.0
+      - MozAppServices@v114.1
+      - MullBuild@v114.0.0
+      - MozFennec@FIREFOX_114_0_RELEASE
+      - MozGlean@v52.7.0
+      - MozGleanAS@v52.6.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 114.1.0
+    versionCode: 21141000
+    commit: fenix-v114.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v112.2.0
+      - MozAppServices@v114.1
+      - MullBuild@v114.1.0
+      - MozFennec@FIREFOX_114_0_1_RELEASE
+      - MozGlean@v52.7.0
+      - MozGleanAS@v52.6.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 114.1.0
+    versionCode: 21141020
+    commit: fenix-v114.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v112.2.0
+      - MozAppServices@v114.1
+      - MullBuild@v114.1.0
+      - MozFennec@FIREFOX_114_0_1_RELEASE
+      - MozGlean@v52.7.0
+      - MozGleanAS@v52.6.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 114.2.0
+    versionCode: 21142000
+    commit: fenix-v114.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v112.2.0
+      - MozAppServices@v114.1
+      - MullBuild@v114.2.0
+      - MozFennec@FIREFOX_114_0_2_RELEASE
+      - MozGlean@v52.7.0
+      - MozGleanAS@v52.6.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 114.2.0
+    versionCode: 21142020
+    commit: fenix-v114.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v112.2.0
+      - MozAppServices@v114.1
+      - MullBuild@v114.2.0
+      - MozFennec@FIREFOX_114_0_2_RELEASE
+      - MozGlean@v52.7.0
+      - MozGleanAS@v52.6.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 115.0.0
+    versionCode: 21150000
+    commit: fenix-v115.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v112.2.0
+      - MozAppServices@v115.0
+      - MullBuild@v115.0.0
+      - MozFennec@FIREFOX_115_0_RELEASE
+      - MozGlean@v52.7.0
+      - MozGleanAS@v52.6.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 115.0.0
+    versionCode: 21150020
+    commit: fenix-v115.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v112.2.0
+      - MozAppServices@v115.0
+      - MullBuild@v115.0.0
+      - MozFennec@FIREFOX_115_0_RELEASE
+      - MozGlean@v52.7.0
+      - MozGleanAS@v52.6.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 115.2.1
+    versionCode: 21152100
+    commit: fenix-v115.2.1
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v112.2.0
+      - MozAppServices@v115.0
+      - MullBuild@v115.2.1
+      - MozFennec@FIREFOX_115_0_2_RELEASE
+      - MozGlean@v52.7.0
+      - MozGleanAS@v52.6.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 115.2.1
+    versionCode: 21152120
+    commit: fenix-v115.2.1
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v112.2.0
+      - MozAppServices@v115.0
+      - MullBuild@v115.2.1
+      - MozFennec@FIREFOX_115_0_2_RELEASE
+      - MozGlean@v52.7.0
+      - MozGleanAS@v52.6.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 116.0.0
+    versionCode: 21160000
+    commit: fenix-v116.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v114.1.1
+      - MozAppServices@v116.0
+      - MullBuild@v116.0.0
+      - MozFennec@FIREFOX_116_0_RELEASE
+      - MozGlean@v53.0.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 116.0.0
+    versionCode: 21160020
+    commit: fenix-v116.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v114.1.1
+      - MozAppServices@v116.0
+      - MullBuild@v116.0.0
+      - MozFennec@FIREFOX_116_0_RELEASE
+      - MozGlean@v53.0.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 116.2.0
+    versionCode: 21162000
+    commit: fenix-v116.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v114.1.1
+      - MozAppServices@v116.0
+      - MullBuild@v116.2.0
+      - MozFennec@FIREFOX_116_0_2_RELEASE
+      - MozGlean@v53.0.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 116.2.0
+    versionCode: 21162020
+    commit: fenix-v116.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v114.1.1
+      - MozAppServices@v116.0
+      - MullBuild@v116.2.0
+      - MozFennec@FIREFOX_116_0_2_RELEASE
+      - MozGlean@v53.0.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 116.3.0
+    versionCode: 21163000
+    commit: fenix-v116.3.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v114.1.1
+      - MozAppServices@v116.0
+      - MullBuild@v116.3.0
+      - MozFennec@FIREFOX_116_0_3_RELEASE
+      - MozGlean@v53.0.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 116.3.0
+    versionCode: 21163020
+    commit: fenix-v116.3.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v114.1.1
+      - MozAppServices@v116.0
+      - MullBuild@v116.3.0
+      - MozFennec@FIREFOX_116_0_3_RELEASE
+      - MozGlean@v53.0.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 117.0.0
+    versionCode: 21170000
+    commit: fenix-v117.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v117.0
+      - MullBuild@v117.0.0
+      - MozFennec@FIREFOX_117_0_RELEASE
+      - MozGlean@v53.1.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 117.0.0
+    versionCode: 21170020
+    commit: fenix-v117.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v117.0
+      - MullBuild@v117.0.0
+      - MozFennec@FIREFOX_117_0_RELEASE
+      - MozGlean@v53.1.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 117.0.1
+    versionCode: 21170100
+    commit: fenix-v117.0.1
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v117.0
+      - MullBuild@v117.0.0
+      - MozFennec@FIREFOX_117_0_RELEASE
+      - MozGlean@v53.1.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 117.0.1
+    versionCode: 21170120
+    commit: fenix-v117.0.1
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v117.0
+      - MullBuild@v117.0.0
+      - MozFennec@FIREFOX_117_0_RELEASE
+      - MozGlean@v53.1.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 117.1.0
+    versionCode: 21171000
+    commit: fenix-v117.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v117.0
+      - MullBuild@v117.0.0
+      - MozFennec@FIREFOX_117_0_1_RELEASE
+      - MozGlean@v53.1.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 117.1.0
+    versionCode: 21171020
+    commit: fenix-v117.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v117.0
+      - MullBuild@v117.0.0
+      - MozFennec@FIREFOX_117_0_1_RELEASE
+      - MozGlean@v53.1.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 118.0.0
+    versionCode: 21180000
+    commit: fenix-v118.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v118.0
+      - MullBuild@v118.0.0
+      - MozFennec@FIREFOX_118_0_RELEASE
+      - MozGlean@v53.2.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 118.0.0
+    versionCode: 21180020
+    commit: fenix-v118.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v118.0
+      - MullBuild@v118.0.0
+      - MozFennec@FIREFOX_118_0_RELEASE
+      - MozGlean@v53.2.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 118.1.0
+    versionCode: 21181000
+    commit: fenix-v118.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v118.0
+      - MullBuild@v118.1.0
+      - MozFennec@FIREFOX_118_0_1_RELEASE
+      - MozGlean@v53.2.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 118.1.0
+    versionCode: 21181020
+    commit: fenix-v118.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v118.0
+      - MullBuild@v118.1.0
+      - MozFennec@FIREFOX_118_0_1_RELEASE
+      - MozGlean@v53.2.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 118.2.0
+    versionCode: 21182000
+    commit: fenix-v118.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v118.0
+      - MullBuild@v118.1.0
+      - MozFennec@FIREFOX_118_0_2_RELEASE
+      - MozGlean@v53.2.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 118.2.0
+    versionCode: 21182020
+    commit: fenix-v118.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v115.0.1
+      - MozAppServices@v118.0
+      - MullBuild@v118.1.0
+      - MozFennec@FIREFOX_118_0_2_RELEASE
+      - MozGlean@v53.2.0
+      - MozGleanAS@v52.7.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 119.0.0
+    versionCode: 21190000
+    commit: fenix-v119.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v119.0
+      - MullBuild@v119.0.0
+      - MozFennec@FIREFOX_119_0_RELEASE
+      - MozGlean@v54.0.0
+      - MozGleanAS@v53.1.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 119.0.0
+    versionCode: 21190020
+    commit: fenix-v119.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v119.0
+      - MullBuild@v119.0.0
+      - MozFennec@FIREFOX_119_0_RELEASE
+      - MozGlean@v54.0.0
+      - MozGleanAS@v53.1.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 119.1.0
+    versionCode: 21191000
+    commit: fenix-v119.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v119.0
+      - MullBuild@v119.1.0
+      - MozFennec@FIREFOX_119_0_1_RELEASE
+      - MozGlean@v54.0.0
+      - MozGleanAS@v53.1.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 119.1.0
+    versionCode: 21191020
+    commit: fenix-v119.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v119.0
+      - MullBuild@v119.1.0
+      - MozFennec@FIREFOX_119_0_1_RELEASE
+      - MozGlean@v54.0.0
+      - MozGleanAS@v53.1.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 120.0.0
+    versionCode: 21200000
+    commit: fenix-v120.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v120.0.1
+      - MullBuild@v120.0.0
+      - MozFennec@FIREFOX_120_0_RELEASE
+      - MozGlean@v54.0.0
+      - MozGleanAS@v53.1.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 120.0.0
+    versionCode: 21200020
+    commit: fenix-v120.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v120.0.1
+      - MullBuild@v120.0.0
+      - MozFennec@FIREFOX_120_0_RELEASE
+      - MozGlean@v54.0.0
+      - MozGleanAS@v53.1.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 120.1.0
+    versionCode: 21201000
+    commit: fenix-v120.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v120.0.2
+      - MullBuild@v120.1.0
+      - MozFennec@FIREFOX_120_0_1_RELEASE
+      - MozGlean@v54.0.0
+      - MozGleanAS@v53.1.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 120.1.0
+    versionCode: 21201020
+    commit: fenix-v120.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v120.0.2
+      - MullBuild@v120.1.0
+      - MozFennec@FIREFOX_120_0_1_RELEASE
+      - MozGlean@v54.0.0
+      - MozGleanAS@v53.1.0
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 121.0.0
+    versionCode: 21210000
+    commit: fenix-v121.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v121.0
+      - MullBuild@v121.0.0
+      - MozFennec@FIREFOX_121_0_RELEASE
+      - MozGlean@v55.0.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 121.0.0
+    versionCode: 21210020
+    commit: fenix-v121.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v121.0
+      - MullBuild@v121.0.0
+      - MozFennec@FIREFOX_121_0_RELEASE
+      - MozGlean@v55.0.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-16
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 121.1.0
+    versionCode: 21211000
+    commit: fenix-v121.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v121.0
+      - MullBuild@v121.1.0
+      - MozFennec@FIREFOX_121_0_1_RELEASE
+      - MozGlean@v55.0.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 121.1.0
+    versionCode: 21211020
+    commit: fenix-v121.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v121.0
+      - MullBuild@v121.1.0
+      - MozFennec@FIREFOX_121_0_1_RELEASE
+      - MozGlean@v55.0.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r21d
+
+  - versionName: 122.0.0
+    versionCode: 21220000
+    commit: fenix-v122.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v122.0.1
+      - MullBuild@v122.0.0
+      - MozFennec@FIREFOX_122_0_RELEASE
+      - MozGlean@v56.0.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 122.0.0
+    versionCode: 21220020
+    commit: fenix-v122.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v122.0.1
+      - MullBuild@v122.0.0
+      - MozFennec@FIREFOX_122_0_RELEASE
+      - MozGlean@v56.0.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 122.1.0
+    versionCode: 21221000
+    commit: fenix-v122.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v122.0.1
+      - MullBuild@v122.1.0
+      - MozFennec@FIREFOX_122_0_1_RELEASE
+      - MozGlean@v56.0.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 122.1.0
+    versionCode: 21221020
+    commit: fenix-v122.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v122.0.1
+      - MullBuild@v122.1.0
+      - MozFennec@FIREFOX_122_0_1_RELEASE
+      - MozGlean@v56.0.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 123.0.0
+    versionCode: 21230000
+    commit: fenix-v123.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v123.0.1
+      - MullBuild@v123.0.0
+      - MozFennec@FIREFOX_123_0_RELEASE
+      - MozGlean@v56.1.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 123.0.0
+    versionCode: 21230020
+    commit: fenix-v123.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v123.0.1
+      - MullBuild@v123.0.0
+      - MozFennec@FIREFOX_123_0_RELEASE
+      - MozGlean@v56.1.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 123.1.0
+    versionCode: 21231000
+    commit: fenix-v123.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v123.0.1
+      - MullBuild@v123.1.0
+      - MozFennec@FIREFOX_123_0_1_RELEASE
+      - MozGlean@v56.1.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 123.1.0
+    versionCode: 21231020
+    commit: fenix-v123.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v117.0.1
+      - MozAppServices@v123.0.1
+      - MullBuild@v123.1.0
+      - MozFennec@FIREFOX_123_0_1_RELEASE
+      - MozGlean@v56.1.0
+      - MozGleanAS@v53.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.26.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 124.0.0
+    versionCode: 21240000
+    commit: fenix-v124.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v122.0
+      - MozAppServices@v124.0
+      - MullBuild@v124.0.0
+      - MozFennec@FIREFOX_124_0_RELEASE
+      - MozGlean@v57.0.0
+      - MozGleanAS@v56.0.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 124.0.0
+    versionCode: 21240020
+    commit: fenix-v124.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v122.0
+      - MozAppServices@v124.0
+      - MullBuild@v124.0.0
+      - MozFennec@FIREFOX_124_0_RELEASE
+      - MozGlean@v57.0.0
+      - MozGleanAS@v56.0.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 124.1.0
+    versionCode: 21241000
+    commit: fenix-v124.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v122.0
+      - MozAppServices@v124.0
+      - MullBuild@v124.1.0
+      - MozFennec@FIREFOX_124_0_1_RELEASE
+      - MozGlean@v57.0.0
+      - MozGleanAS@v56.0.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 124.1.0
+    versionCode: 21241020
+    commit: fenix-v124.1.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v122.0
+      - MozAppServices@v124.0
+      - MullBuild@v124.1.0
+      - MozFennec@FIREFOX_124_0_1_RELEASE
+      - MozGlean@v57.0.0
+      - MozGleanAS@v56.0.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 124.2.0
+    versionCode: 21242000
+    commit: fenix-v124.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v122.0
+      - MozAppServices@v124.0
+      - MullBuild@v124.2.0
+      - MozFennec@FIREFOX_124_0_2_RELEASE
+      - MozGlean@v57.0.0
+      - MozGleanAS@v56.0.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 124.2.0
+    versionCode: 21242020
+    commit: fenix-v124.2.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v122.0
+      - MozAppServices@v124.0
+      - MullBuild@v124.2.0
+      - MozFennec@FIREFOX_124_0_2_RELEASE
+      - MozGlean@v57.0.0
+      - MozGleanAS@v56.0.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r25c
+
+  - versionName: 125.3.0
+    versionCode: 21253000
+    commit: fenix-v125.3.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v123.0
+      - MozAppServices@v125.0.1
+      - MullBuild@v125.3.0
+      - MozFennec@FIREFOX_125_0_3_RELEASE
+      - MozGlean@v58.1.0
+      - MozGleanAS@v56.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r26c
+
+  - versionName: 125.3.0
+    versionCode: 21253020
+    commit: fenix-v125.3.0
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - FirefoxAndroidAS@components-v123.0
+      - MozAppServices@v125.0.1
+      - MullBuild@v125.3.0
+      - MozFennec@FIREFOX_125_0_3_RELEASE
+      - MozGlean@v58.1.0
+      - MozGleanAS@v56.1.0
+      - gmscore@v0.3.0.233515
+      - rustup@1.27.0
+      - wasi-sdk@wasi-sdk-20
+    prebuild: $$MullBuild$$/prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - android-components/components/lib/publicsuffixlist/src/main/assets/publicsuffixes
+    build: $$MullBuild$$/build.sh
+    ndk: r26c
+
+  - versionName: 127.0.0
+    versionCode: 21270000
+    commit: v127.0.0-2
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX_127_0_BUILD2
+      - FirefoxAndroidAS@components-v125.2.0
+      - MozAppServices@v127.0
+      - MozGlean@v60.0.1
+      - MozGleanAS@v58.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 127.0.0
+    versionCode: 21270020
+    commit: v127.0.0-2
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX_127_0_BUILD2
+      - FirefoxAndroidAS@components-v125.2.0
+      - MozAppServices@v127.0
+      - MozGlean@v60.0.1
+      - MozGleanAS@v58.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 127.0.2
+    versionCode: 21270200
+    commit: v127.0.2
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX_127_0_2_RELEASE
+      - FirefoxAndroidAS@components-v125.2.0
+      - MozAppServices@v127.0
+      - MozGlean@v60.0.1
+      - MozGleanAS@v58.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 127.0.2
+    versionCode: 21270220
+    commit: v127.0.2
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX_127_0_2_RELEASE
+      - FirefoxAndroidAS@components-v125.2.0
+      - MozAppServices@v127.0
+      - MozGlean@v60.0.1
+      - MozGleanAS@v58.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.1
+    versionCode: 21280100
+    commit: v128.0.1
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_1_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.1
+    versionCode: 21280120
+    commit: v128.0.1
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_1_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.2
+    versionCode: 21280200
+    commit: v128.0.2
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_2_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.2
+    versionCode: 21280220
+    commit: v128.0.2
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_2_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.3
+    versionCode: 21280300
+    commit: v128.0.3
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_3_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 128.0.3
+    versionCode: 21280320
+    commit: v128.0.3
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_128_0_3_RELEASE
+      - MozAppServices@v128.0.1
+      - MozGlean@v60.1.1
+      - MozGleanAS@v60.1.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 129.0.0
+    versionCode: 21290000
+    commit: v129.0.0-2
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_129_0_RELEASE
+      - MozAppServices@v129.0
+      - MozGlean@v60.3.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 129.0.0
+    versionCode: 21290020
+    commit: v129.0.0-2
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_129_0_RELEASE
+      - MozAppServices@v129.0
+      - MozGlean@v60.3.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 129.0.2
+    versionCode: 21290200
+    commit: v129.0.2
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_129_0_2_RELEASE
+      - MozAppServices@v129.0
+      - MozGlean@v60.3.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 129.0.2
+    versionCode: 21290220
+    commit: v129.0.2
+    timeout: 18000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 g++ pkg-config libssl-dev python-is-python3
+        python3-distutils python3-venv tcl gyp ninja-build bzip2 libz-dev libffi-dev
+        libsqlite3-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_129_0_2_RELEASE
+      - MozAppServices@v129.0
+      - MozGlean@v60.3.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 26.2.11394342
+
+  - versionName: 132.0.0
+    versionCode: 21320000
+    commit: v132.0.0-2
+    timeout: 36000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 pkg-config python-is-python3 python3-venv
+        tcl gyp ninja-build bzip2 libffi-dev libsqlite3-dev binutils-dev clang-16
+        lld-16 libssl-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_132_0_RELEASE
+      - MozAppServices@50d90349a4af01553c3e228ef28cbfc46eb8d314
+      - MozGlean@v61.2.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+      - llvm@3c92011b600bdf70424e2547594dd461fe411a41
+      - llvm_android@2a4ee244d6dd0dcb8365590b898f7a40ec3cb87a
+      - toolchain-utils@760c253c1ed00ce9abd48f8546f08516e57485fe
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 27.1.12297006
+
+  - versionName: 132.0.0
+    versionCode: 21320020
+    commit: v132.0.0-2
+    timeout: 36000
+    sudo:
+      - apt-get update
+      - apt-get install -y cmake make m4 pkg-config python-is-python3 python3-venv
+        tcl gyp ninja-build bzip2 libffi-dev libsqlite3-dev binutils-dev clang-16
+        lld-16 libssl-dev
+    output: ../srclib/MozFennec/mobile/android/fenix/app/build/outputs/apk/fenix/release/app-*-release-unsigned.apk
+    srclibs:
+      - MozFennec@FIREFOX-ANDROID_132_0_RELEASE
+      - MozAppServices@50d90349a4af01553c3e228ef28cbfc46eb8d314
+      - MozGlean@v61.2.0
+      - gmscore@v0.3.2.240913
+      - rustup@1.27.1
+      - wasi-sdk@wasi-sdk-20
+      - llvm@3c92011b600bdf70424e2547594dd461fe411a41
+      - llvm_android@2a4ee244d6dd0dcb8365590b898f7a40ec3cb87a
+      - toolchain-utils@760c253c1ed00ce9abd48f8546f08516e57485fe
+    prebuild: ./prebuild.sh $$VERSION$$ $$VERCODE$$
+    build: ./build.sh
+    ndk: 27.1.12297006
+
+MaintainerNotes: |-
+  Version code scheme:
+  XYZAR, where X.Y.Z is upstream version, A is architecture (0 = ARMv7, 1 = x86, 2 = ARMv8), R is revision (if we need to re-release).
+  * Example: 530210 = Firefox 53.0.2 for x86, initial revision
+  * Example: 550021 = Firefox 55.0 for ARMv8, second revision
+
+  Determining versions:
+  * MozFennec: https://hg.mozilla.org/releases/mozilla-release/tags
+  * MozAppServices: `VERSION` in https://hg.mozilla.org/releases/mozilla-release/file/$tag/mobile/android/android-components/plugins/dependencies/src/main/java/ApplicationServices.kt
+  * MozGlean: `mozilla_glean` in https://hg.mozilla.org/releases/mozilla-release/file/$tag/mobile/android/android-components/plugins/dependencies/src/main/java/DependenciesPlugin.kt
+  * rustup: https://github.com/rust-lang/rustup/tags
+  * wasi-sdk: https://github.com/WebAssembly/wasi-sdk/releases
+  * ndk: https://hg.mozilla.org/releases/mozilla-release/file/$tag/python/mozboot/mozboot/android.py
+  * llvm_android: https://android.googlesource.com/toolchain/llvm_android.git/+refs
+  * toolchain-utils: https://android.googlesource.com/platform/external/toolchain-utils.git/+log/refs/heads/main
+
+  Scanner detects 'com/google/firebase/messaging/FirebaseMessagingService' from stubs and 'com/google/android/gms/...' from microG libs for webauth
+
+ArchivePolicy: 6
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 109.2.0
-CurrentVersionCode: 21092020
+CurrentVersion: 132.0.0
+CurrentVersionCode: 21320020

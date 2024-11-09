@@ -9,7 +9,7 @@ IssueTracker: https://github.com/jparkie/GivesMeHopeAndroidClient/issues
 AutoName: Anthology for Gives Me Hope
 Summary: Unofficial "Gives Me Hope" client
 Description: Unofficial client for <a href="http://mobile.givesmehope.com/">Gives
-    me hope</a>.
+  me hope</a>.
 
 RepoType: git
 Repo: https://github.com/jparkie/GivesMeHopeAndroidClient
@@ -61,7 +61,7 @@ Builds:
     rm:
       - app/libs/*
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 2.0.3

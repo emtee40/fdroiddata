@@ -252,7 +252,74 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.6.0
+    versionCode: 36
+    commit: 2177389c2b1a26ffd2f0e7c2c26a681562b6dd58
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 37
+    commit: 28f73cc62fd8ba083e2ebd6b5fe95e9d5406f342
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 38
+    commit: 55787cf3e858452f4b4be3e662c06f39a9086c45
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.7.2
+    versionCode: 39
+    commit: ab5b1b4882818a9a5e279e70dfd625b2404ef8a7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.3
+    versionCode: 40
+    commit: 14d8ea00ded6792b083a00f2fe2b43306b351fd7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.4
+    versionCode: 41
+    commit: 7e86d8a3d9dd8fab2e07a2163d8d911f813b5564
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 42
+    commit: 6fe2ea6abed8e94a6acc94976508d68d66d7321e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 43
+    commit: 2fc5993c8416aa990b90e041b73a8be4fe7ecebe
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.9.1
+    versionCode: 44
+    commit: 29e9d596efff1eff75a50cc617fc037f693599b0
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.5.0
-CurrentVersionCode: 35
+CurrentVersion: 1.9.1
+CurrentVersionCode: 44

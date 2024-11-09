@@ -9,7 +9,7 @@ Changelog: https://github.com/FredHappyface/Android.Brainf/blob/HEAD/CHANGELOG.m
 AutoName: Brainf
 
 RepoType: git
-Repo: https://github.com/fredhappyface/android.brainf
+Repo: https://github.com/fredhappyface/android.brainf.git
 
 Builds:
   - versionName: 2021.05.01
@@ -52,7 +52,45 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '20230820'
+    versionCode: 20230820
+    commit: 84386ec4e8b7b5b27da68ff6cb0c5696755f91cb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '20230828'
+    versionCode: 20230828
+    commit: 68f9f6b5ded510f06e61a202786c49f41bc13d2a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '20240330'
+    versionCode: 20240330
+    commit: 212cbbd853dcf052964411a9f78a47a7b7a71ca1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '20240826'
+    versionCode: 20240826
+    commit: a57a7c302eef65119cf655b7c38fb463cd4605aa
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - documentation
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2022.03.11
-CurrentVersionCode: 20220311
+CurrentVersion: '20240826'
+CurrentVersionCode: 20240826

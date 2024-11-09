@@ -6,17 +6,19 @@ IssueTracker: https://github.com/jgilfelt/GhostLog/issues
 
 AutoName: Ghost Log
 Description: |-
-    Displays the device logcat buffer in a system overlay window.
+  <b>NOTE:</b> Device root (superuser) access is required to read system logs on Android 4.1 and above.
 
-    Features:
+  Displays the device logcat buffer in a system overlay window.
 
-    * Persistent logcat display as a system overlay
-    * Customisable log filters and display options
-    * Auto filter by the current foreground Activity process
-    * Quick access to pause/play, clear & share functions via rich notification
-    * Integration support for non-root devices
+  Features:
 
-RequiresRoot: 'yes'
+  * Persistent logcat display as a system overlay
+  * Customisable log filters and display options
+  * Auto filter by the current foreground Activity process
+  * Quick access to pause/play, clear & share functions via rich notification
+  * Integration support for non-root devices
+
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/jgilfelt/GhostLog.git

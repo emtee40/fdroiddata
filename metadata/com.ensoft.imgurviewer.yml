@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Imgur itself is not libre.
 Categories:
   - Internet
 License: GPL-3.0-only
@@ -111,7 +112,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.3.7
+    versionCode: 23700
+    commit: 598f6c82f7c613cf633cdfd2dca0e6051680ac2e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.8
+    versionCode: 23800
+    commit: 070f8436ef06b215dea4182060e5f78d781f7ceb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.0
+    versionCode: 24000
+    commit: 146a05ebfc17b7b0b3731a11a52ea838e476495b
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.3.6
-CurrentVersionCode: 23600
+CurrentVersion: 2.4.0
+CurrentVersionCode: 24000

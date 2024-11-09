@@ -2,16 +2,16 @@ Categories:
   - Internet
 License: Apache-2.0
 WebSite: https://k9mail.app/
-SourceCode: https://github.com/thundernest/k-9
-IssueTracker: https://github.com/thundernest/k-9/issues
-Translation: https://www.transifex.com/projects/p/k9mail/
-Changelog: https://thundernest.github.io/k-9/changelog_6.4-MAINT_branch.xml
-Donate: https://give.thunderbird.net/k9mail/
+SourceCode: https://github.com/thunderbird/thunderbird-android
+IssueTracker: https://github.com/thunderbird/thunderbird-android/issues
+Translation: https://hosted.weblate.org/projects/tb-android/
+Changelog: https://thunderbird.github.io/thunderbird-android/changelog_6.6-MAINT_branch.xml
+Donate: https://mzla.link/k9-give
 
 AutoName: K-9 Mail
 
 RepoType: git
-Repo: https://github.com/thundernest/k-9.git
+Repo: https://github.com/thunderbird/thunderbird-android.git
 
 Builds:
   - versionName: '4.201'
@@ -1089,11 +1089,435 @@ Builds:
       - yes
     output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
 
-MaintainerNotes: |-
-    Use output instead of subdir to make gradlew-fdroid correctly determine the gradle version to be used.
-    It doesn't work when using subdir because we are two levels deep into the directory structure.
+  - versionName: '6.508'
+    versionCode: 35008
+    commit: '6.508'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    prebuild: sed -i '1s/^/rootProject.name = "k9mail"\n/' settings.gradle.kts
+    scandelete:
+      - build-plugin/build
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags ^6\.4[0-9]{2}$
-CurrentVersion: '6.400'
-CurrentVersionCode: 34000
+  - versionName: '6.509'
+    versionCode: 35009
+    commit: '6.509'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.510'
+    versionCode: 35010
+    commit: '6.510'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.511'
+    versionCode: 35011
+    commit: '6.511'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.600'
+    versionCode: 36000
+    commit: '6.600'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.601'
+    versionCode: 36001
+    commit: '6.601'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.602'
+    versionCode: 36002
+    commit: '6.602'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.603'
+    versionCode: 36003
+    commit: '6.603'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.700'
+    versionCode: 37000
+    commit: '6.700'
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.702'
+    versionCode: 37002
+    commit: '6.702'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.704'
+    versionCode: 37004
+    commit: '6.704'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.705'
+    versionCode: 37005
+    commit: '6.705'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.706'
+    versionCode: 37006
+    commit: '6.706'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.707'
+    versionCode: 37007
+    commit: '6.707'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.708'
+    versionCode: 37008
+    commit: '6.708'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.710'
+    versionCode: 37010
+    commit: '6.710'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.711'
+    versionCode: 37011
+    commit: 6.711-fdroid
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.712'
+    versionCode: 37012
+    commit: '6.712'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.713'
+    versionCode: 37013
+    commit: '6.713'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.714'
+    versionCode: 37014
+    commit: '6.714'
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    output: app/k9mail/build/outputs/apk/release/k9mail-release-unsigned.apk
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.715'
+    versionCode: 37015
+    commit: '6.715'
+    subdir: app-k9mail
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.716'
+    versionCode: 37016
+    commit: '6.716'
+    subdir: app-k9mail
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.717'
+    versionCode: 37017
+    commit: '6.717'
+    subdir: app-k9mail
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.800'
+    versionCode: 38000
+    commit: '6.800'
+    subdir: app-k9mail
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.801'
+    versionCode: 38001
+    commit: '6.801'
+    subdir: app-k9mail
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.802'
+    versionCode: 38002
+    commit: '6.802'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.803'
+    versionCode: 38003
+    commit: '6.803'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.804'
+    versionCode: 38004
+    commit: '6.804'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.901'
+    versionCode: 39001
+    commit: '6.901'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.903'
+    versionCode: 39003
+    commit: '6.903'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '6.904'
+    versionCode: 39004
+    commit: '6.904'
+    subdir: app-k9mail
+    gradle:
+      - yes
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 8.0b2
+    versionCode: 39006
+    commit: K9MAIL_8_0b2
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 8.0b3
+    versionCode: 39007
+    commit: K9MAIL_8_0b3
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 8.0b4
+    versionCode: 39008
+    commit: K9MAIL_8_0b4
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '8.0'
+    versionCode: 39009
+    disable: Wrong metadata provided in repository
+    commit: K9MAIL_8_0
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: 8.0b5
+    versionCode: 39010
+    commit: K9MAIL_8_0b5
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+  - versionName: '8.0'
+    versionCode: 39011
+    commit: aced88289922418622371ad6e4d12ccf2549c6db
+    subdir: app-k9mail
+    gradle:
+      - yes
+    rm:
+      - feature/funding/googleplay
+    prebuild: sed -i -e '/maven\.mozilla\.org\/maven2/d ; /glean/d ; /app-thunderbird/d
+      ; /googleplay/d' ../settings.gradle.kts
+    scandelete:
+      - build-plugin/build
+
+MaintainerNotes: |-
+  Use output instead of subdir to make gradlew-fdroid correctly determine the gradle version to be used.
+  It doesn't work when using subdir because we are two levels deep into the directory structure.
+  From version 6.715 on this is not true anymore and subdir should be used as the app was moved to app-k9mail folder.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '8.0'
+CurrentVersionCode: 39011

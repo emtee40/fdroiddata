@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: SteamGifts itself is not libre.
 Categories:
   - Internet
 License: MIT
@@ -12,13 +13,13 @@ Bitcoin: 1NQBKppWPZiE5PshLxqfFW4pgsnAv9irEu
 
 Name: sg for SteamGifts
 Description: |-
-    Browse giveaways and discussions on SteamGifts.
+  Browse giveaways and discussions on SteamGifts.
 
-    * browse, search, enter and comment on giveaways
-    * filter giveaways by type, levels, points and entries
-    * view and search through Discussions
-    * manage your account
-    * SGTools.info integration
+  * browse, search, enter and comment on giveaways
+  * filter giveaways by type, levels, points and entries
+  * view and search through Discussions
+  * manage your account
+  * SGTools.info integration
 
 RepoType: git
 Repo: https://github.com/SteamGifts/SteamGifts
@@ -171,15 +172,6 @@ Builds:
     gradle:
       - vanilla
 
-  - versionName: 1.5.12
-    versionCode: 1005512
-    disable: lintVitalVanillaRelease fails
-    commit: v1.5.12
-    subdir: app
-    init: sed -i 's/4g/2g/' build.gradle
-    gradle:
-      - vanilla
-
   - versionName: 1.5.13
     versionCode: 1005513
     commit: v1.5.13
@@ -188,8 +180,9 @@ Builds:
     gradle:
       - vanilla
 
-AutoUpdateMode: Version v%v
-UpdateCheckMode: HTTP
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 UpdateCheckData: https://steamgifts.github.io/SteamGifts/metadata/fdroid-version.txt|versionCode=(\d+)|.|versionName=(.*)
 CurrentVersion: 1.5.13
 CurrentVersionCode: 1005513

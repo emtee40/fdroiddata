@@ -10,7 +10,7 @@ Liberapay: CorruptedArk
 AutoName: Open Chaos Chess
 
 RepoType: git
-Repo: https://github.com/CorruptedArk/open-chaos-chess
+Repo: https://github.com/CorruptedArk/open-chaos-chess.git
 
 Builds:
   - versionName: 1.5.4
@@ -195,7 +195,27 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.9.8
+    versionCode: 52
+    commit: 7040da2dc6b57668aa5f47fa9fbf942149b6603c
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/4.1.3/4.2.0/' ../build.gradle
+      - sed -i -e 's/6.6-bin/6.7.1-bin/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 1.9.9
+    versionCode: 53
+    commit: 7732c0a5dd22e279131d3e907d216ca24783d5af
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/4.1.3/4.2.0/' ../build.gradle
+      - sed -i -e 's/6.6-bin/6.7.1-bin/' ../gradle/wrapper/gradle-wrapper.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.9.7
-CurrentVersionCode: 51
+CurrentVersion: 1.9.9
+CurrentVersionCode: 53

@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App depends on OpenWeatherMap.
 Categories:
   - Internet
 License: GPL-3.0-or-later
@@ -11,7 +12,7 @@ Changelog: https://github.com/TylerWilliamson/QuickWeather/releases
 AutoName: QuickWeather
 
 RepoType: git
-Repo: https://github.com/TylerWilliamson/QuickWeather
+Repo: https://github.com/TylerWilliamson/QuickWeather.git
 
 Builds:
   - versionName: 1.3.1
@@ -220,7 +221,322 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.3.3
+    versionCode: 58
+    commit: fc56c7a87b0fab9c63c29dd7cada77ca7c228dff
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.3.4
+    versionCode: 60
+    commit: 441e2dd651d0ef0fb490828394b031f09e7cb5dd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.3.5
+    versionCode: 61
+    commit: a05d90c293244f7199fac8fe68db27469e1b97fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.3.6
+    versionCode: 62
+    commit: fcf9358b719137c061dc91c6345b0aea1d609196
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.4.0
+    versionCode: 64
+    commit: 5dee0a3363a6ea7a2986b94c550ad0fa2cb11b42
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.4.1
+    versionCode: 65
+    commit: 537dc08085cac91e68969a2b98fc5f4492098bcd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.4.2
+    versionCode: 66
+    commit: 37d1a980df5cb668e2f2c0309bb381c4f634d5d7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.5.0
+    versionCode: 69
+    commit: 30f1b3329bc01f326d26d7fe4d3bc10c05b1daaf
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.5.2
+    versionCode: 71
+    commit: 0d67167a8a3d1b5722b0f6bf68a2f69f2d59e91a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.5.3
+    versionCode: 72
+    commit: a85a47e3b287acaff3b2681948ab95caf1bf50c5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.5.4
+    versionCode: 73
+    commit: 0e67150072e719c779d71d66bb352ef218cbbff2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.5.5
+    versionCode: 74
+    commit: d49bf576546f0b3c7515906ce7b162a62c016ede
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.5.6
+    versionCode: 75
+    commit: dde35108797ed6cc6a779c2386b22f00b0355943
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.5.7
+    versionCode: 76
+    commit: d1af51e2385f9131d95f3e6d6a9494dc37d6b3a5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.0
+    versionCode: 77
+    commit: 47a68d554d199ce7219e09770f2c5e5bda96c562
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.1
+    versionCode: 78
+    commit: 240aa010a20a7df52a8d9fcac443b985643a9f26
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.2
+    versionCode: 79
+    commit: ad757ae346e8cba052ae8c23258c88a69d6ebb55
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.3
+    versionCode: 80
+    commit: 4f46d69dbb5d4757b02b37380b7cc8649c268dac
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.4
+    versionCode: 82
+    commit: 8e9da5c3b0dff1d97c9f95f24198d682329b2119
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.5
+    versionCode: 85
+    commit: 1c21078b442b3ec1aa1820e8a6ba188fd2f34828
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.6
+    versionCode: 86
+    commit: f3c867c6fe6fc2dee5b9f5ce69ccba72c9d44e6b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.8
+    versionCode: 88
+    commit: 9b334e1dd5c857470669b5ec8467ebe01ef0d482
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.9
+    versionCode: 89
+    commit: ea6d4d2df3fb73caf3606fe99936d1142a80e0be
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.10
+    versionCode: 90
+    commit: 3afaa69b6172dae500b4863b42742cb1875200ff
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.6.11
+    versionCode: 91
+    commit: 694adb9aa33369d1df3fd845f350d3062850ad1f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.7.0
+    versionCode: 93
+    commit: 4082404588e5a7bfe08a04233cb5497e9aa727ad
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.7.1
+    versionCode: 94
+    commit: e744df46e23202c1376ba901c9418d7c8e32a703
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.7.2
+    versionCode: 95
+    commit: 09ab7c66ed24f94e3efc96279145567878dd031a
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.7.3
+    versionCode: 98
+    commit: a7e13f7cc7278f4063b02cf281d58d1b201c322c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.7.4
+    versionCode: 101
+    commit: 1be3075cb3582886fdd720323db08476bb7f4177
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
+  - versionName: 2.7.5
+    versionCode: 102
+    commit: 001a631666db4affc53b4b7b34a751e0611034d6
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/1536m/2048m/' ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.3.2
-CurrentVersionCode: 57
+CurrentVersion: 2.7.5
+CurrentVersionCode: 102

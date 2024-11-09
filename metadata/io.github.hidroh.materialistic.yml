@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Hacker News itself is not libre.
 Categories:
   - Internet
 License: Apache-2.0
@@ -10,21 +11,21 @@ Changelog: https://github.com/hidroh/materialistic/releases
 
 AutoName: Materialistic
 Description: |-
-    Hacker News client, designed for both phones & tablets, with optimized speed &
-    network.
+  Hacker News client, designed for both phones & tablets, with optimized speed &
+  network.
 
-    <b>Features:</b>
+  <b>Features:</b>
 
-    * Browse top stories, best, newest, show HN, ask HN, jobs & user profiles
-    * Submit story, comment & vote, multiple HN accounts supported
-    * Catch up with best stories from past day, week, month or year
-    * Search, share stories, save for offline reading
+  * Browse top stories, best, newest, show HN, ask HN, jobs & user profiles
+  * Submit story, comment & vote, multiple HN accounts supported
+  * Catch up with best stories from past day, week, month or year
+  * Search, share stories, save for offline reading
 
-    <b>Flexible reading options:</b>
+  <b>Flexible reading options:</b>
 
-    * Multiple themes, adjustable font & text size
-    * Colour-coded, collapsible comments thread
-    * Readability mode/external browser options
+  * Multiple themes, adjustable font & text size
+  * Colour-coded, collapsible comments thread
+  * Readability mode/external browser options
 
 RepoType: git
 Repo: https://github.com/hidroh/materialistic.git
@@ -80,30 +81,6 @@ Builds:
       - yes
 
   - versionName: '3.1'
-    versionCode: 70
-    disable: pre-release gradle
-    commit: '70'
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: '3.1'
-    versionCode: 72
-    disable: pre-release gradle
-    commit: '72'
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: '3.1'
-    versionCode: 73
-    disable: pre-release gradle
-    commit: '73'
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: '3.1'
     versionCode: 74
     commit: '74'
     subdir: app
@@ -143,7 +120,8 @@ Builds:
       - yes
     prebuild: sed -i -e 's/gradle:3.0.0-alpha1/gradle:3.0.0-alpha4/' ../build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '3.3'
 CurrentVersionCode: 79

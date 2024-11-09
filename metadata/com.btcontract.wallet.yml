@@ -4,15 +4,15 @@ Categories:
   - Money
 License: Apache-2.0
 AuthorName: Anton Kumaigorodski
-WebSite: https://lightning-wallet.com
-SourceCode: https://github.com/btcontract/wallet
-IssueTracker: https://github.com/btcontract/wallet/issues
-Changelog: https://github.com/btcontract/wallet/releases
+WebSite: https://sbw.app
+SourceCode: https://github.com/akumaigorodski/wallet
+IssueTracker: https://github.com/akumaigorodski/wallet/issues
+Changelog: https://github.com/akumaigorodski/wallet/releases
 
 AutoName: SBW
 
 RepoType: git
-Repo: https://github.com/btcontract/wallet.git
+Repo: https://github.com/akumaigorodski/wallet.git
 
 Builds:
   - versionName: '1.04'
@@ -329,7 +329,88 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.4.28
+    versionCode: 96
+    commit: 3f6759b00f67ca832e6c8b0e7cff0244b328ce97
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 97
+    commit: 1253f9286469ea5340c15373ab9d4f13063fb9dd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.1
+    versionCode: 98
+    commit: 901a382a154e8d15c6190f5b3aeb7e9872a9fc1d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.2
+    versionCode: 99
+    commit: 275a88d61dfd5e646efc015ebac2ad32d0a3d941
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.3
+    versionCode: 100
+    commit: 0f9cda899608e2b07bb2c4c468348f7e864ec380
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.4
+    versionCode: 105
+    commit: 408d3bfbf60e469ba424d4bfa5eb0af7b203dabc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.5
+    versionCode: 106
+    commit: 155f6520af73d087955acc4ab7cb6be5635fd32f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.6
+    versionCode: 107
+    commit: c26d4eaeff80f319a725ac0ff4209139acab0e8f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.7
+    versionCode: 108
+    commit: bf1f223efb3ea1e696bcc20cf6d8577d07d1d4c0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.8
+    versionCode: 109
+    commit: b49725b591a24d80841390e03e689c20b3f68dde
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.9
+    versionCode: 111
+    commit: 453028c8724902661f27c1c7c4b10972f7a7f4ab
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/review/d' build.gradle.kts
+      - sed -i -e '/def launchRateDialog/,/^  }/d' -e '/launchRateDialog/d' -e '/gms/d'
+        -e '/play.core/d' src/main/scala/com/btcontract/wallet/HubActivity.scala
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.4.27
-CurrentVersionCode: 95
+CurrentVersion: 2.5.9
+CurrentVersionCode: 111

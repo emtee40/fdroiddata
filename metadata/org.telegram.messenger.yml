@@ -368,7 +368,7 @@ Builds:
     gradle:
       - fat
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable
-        'ExtraTranslation' } }" >> build.gradle
+      'ExtraTranslation' } }" >> build.gradle
     ndk: r14
 
   - versionName: 3.18.0c
@@ -379,7 +379,7 @@ Builds:
     gradle:
       - fat
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable
-        'ExtraTranslation' } }" >> build.gradle
+      'ExtraTranslation' } }" >> build.gradle
     ndk: r14
 
   - versionName: 4.1.1
@@ -400,26 +400,6 @@ Builds:
       - fat
     ndk: r14b
 
-  - versionName: 4.2.1a
-    versionCode: 10445
-    disable: too many bugs
-    commit: v4.2.1a
-    subdir: TMessagesProj
-    submodules: true
-    gradle:
-      - fat
-    rm:
-      - TMessagesProj/jni/libwebp/swig/libwebp.jar
-      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
-    prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
-    build:
-      - export NDK=$$NDK$$
-      - pushd jni
-      - ./build_ffmpeg_android.sh
-      - popd
-    ndk: r15c
-
   - versionName: 4.2.1b
     versionCode: 10455
     commit: v4.2.1b
@@ -431,13 +411,16 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     build:
       - export NDK=$$NDK$$
       - pushd jni
       - ./build_ffmpeg_android.sh
       - popd
     ndk: r15c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 4.6.0
     versionCode: 11555
@@ -450,13 +433,16 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     build:
       - export NDK=$$NDK$$
       - pushd jni
       - ./build_ffmpeg_android.sh
       - popd
     ndk: r15c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 4.6.0a
     versionCode: 11565
@@ -469,13 +455,16 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     build:
       - export NDK=$$NDK$$
       - pushd jni
       - ./build_ffmpeg_android.sh
       - popd
     ndk: r14b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 4.6.0b
     versionCode: 11575
@@ -488,13 +477,16 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     build:
       - export NDK=$$NDK$$
       - pushd jni
       - ./build_ffmpeg_android.sh
       - popd
     ndk: r14b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 4.6.0c
     versionCode: 11585
@@ -507,13 +499,16 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     build:
       - export NDK=$$NDK$$
       - pushd jni
       - ./build_ffmpeg_android.sh
       - popd
     ndk: r14b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 4.9.0
     versionCode: 13400
@@ -529,7 +524,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -541,6 +536,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r16b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 4.9.1
     versionCode: 13580
@@ -556,7 +554,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -568,34 +566,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r16b
-
-  - versionName: 4.9.1a
-    versionCode: 13590
-    disable: completely broken for some people, see https://github.com/Telegram-FOSS-Team/Telegram-FOSS/issues/288
-    commit: v4.9.1a
-    subdir: TMessagesProj
-    submodules: true
-    sudo:
-      - apt-get update
-      - apt-get install -y ninja-build golang-go
-    gradle:
-      - afat
-    rm:
-      - TMessagesProj/jni/libwebp/swig/libwebp.jar
-      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
-    prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
-    scandelete:
-      - TMessagesProj/jni
-    build:
-      - export NDK=$$NDK$$
-      - export NINJA_PATH=/usr/bin/ninja
-      - pushd jni
-      - ./build_ffmpeg_clang.sh
-      - ./patch_boringssl.sh
-      - ./build_boringssl.sh
-      - popd
-    ndk: r16b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.2.1
     versionCode: 14780
@@ -611,7 +584,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -623,6 +596,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r16b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.3.1
     versionCode: 14970
@@ -638,7 +614,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -650,6 +626,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r16b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.4.0
     versionCode: 15170
@@ -665,7 +644,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -677,6 +656,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.6.1
     versionCode: 15910
@@ -692,7 +674,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -705,6 +687,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.7.1
     versionCode: 16080
@@ -720,7 +705,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -733,6 +718,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.9.0
     versionCode: 16480
@@ -748,7 +736,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -761,6 +749,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.9.0
     versionCode: 16483
@@ -776,7 +767,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -789,6 +780,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.9.0
     versionCode: 16484
@@ -804,7 +798,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -817,6 +811,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.9.0
     versionCode: 16487
@@ -832,7 +829,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -845,6 +842,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.10.0
     versionCode: 16840
@@ -860,7 +860,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -873,6 +873,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.10.0
     versionCode: 16841
@@ -888,7 +891,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -901,6 +904,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.10.0
     versionCode: 16842
@@ -916,7 +922,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -929,6 +935,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.10.0
     versionCode: 16845
@@ -944,7 +953,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -957,6 +966,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.11.0
     versionCode: 17100
@@ -972,7 +984,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -985,6 +997,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.11.0
     versionCode: 17101
@@ -1000,7 +1015,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1013,6 +1028,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.11.0
     versionCode: 17102
@@ -1028,7 +1046,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1041,6 +1059,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.11.0
     versionCode: 17105
@@ -1056,7 +1077,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1069,6 +1090,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r19c
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.13.1
     versionCode: 18290
@@ -1084,7 +1108,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1097,6 +1121,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r20b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.13.1
     versionCode: 18291
@@ -1112,7 +1139,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1125,6 +1152,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r20b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.13.1
     versionCode: 18292
@@ -1140,7 +1170,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1153,6 +1183,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r20b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.13.1
     versionCode: 18295
@@ -1168,7 +1201,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1181,6 +1214,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r20b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.14.0
     versionCode: 18511
@@ -1196,7 +1232,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1209,6 +1245,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r20b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.14.0
     versionCode: 18515
@@ -1224,7 +1263,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1237,6 +1276,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r20b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.14.0
     versionCode: 18519
@@ -1252,7 +1294,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1265,6 +1307,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r20b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.15.0
     versionCode: 18691
@@ -1280,7 +1325,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1293,6 +1338,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r20b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 5.15.0
     versionCode: 18699
@@ -1308,7 +1356,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -1321,6 +1369,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r20b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 6.0.1
     versionCode: 19111
@@ -1336,7 +1387,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scanignore:
       - TMessagesProj/src/main/java/org/telegram/messenger/voip/TgVoip.java
     scandelete:
@@ -1351,6 +1402,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 6.0.1
     versionCode: 19119
@@ -1366,7 +1420,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scanignore:
       - TMessagesProj/src/main/java/org/telegram/messenger/voip/TgVoip.java
     scandelete:
@@ -1381,6 +1435,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 6.1.1
     versionCode: 19471
@@ -1396,7 +1453,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scanignore:
       - TMessagesProj/src/main/java/org/telegram/messenger/voip/TgVoip.java
     scandelete:
@@ -1411,6 +1468,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 6.1.1
     versionCode: 19479
@@ -1426,7 +1486,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scanignore:
       - TMessagesProj/src/main/java/org/telegram/messenger/voip/TgVoip.java
     scandelete:
@@ -1441,6 +1501,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 6.2.0
     versionCode: 19881
@@ -1472,6 +1535,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 6.2.0
     versionCode: 19889
@@ -1487,7 +1553,7 @@ Builds:
       - TMessagesProj/jni/libwebp/swig/libwebp.jar
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scanignore:
       - TMessagesProj/src/main/java/org/telegram/messenger/voip/TgVoip.java
     scandelete:
@@ -1502,6 +1568,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21b
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 6.3.0
     versionCode: 20421
@@ -1533,6 +1602,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 6.3.0
     versionCode: 20429
@@ -1564,6 +1636,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.0.1
     versionCode: 20651
@@ -1593,6 +1668,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.0.1
     versionCode: 20655
@@ -1622,6 +1700,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.1.3
     versionCode: 21031
@@ -1650,6 +1731,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.1.3
     versionCode: 21035
@@ -1678,6 +1762,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.2.1
     versionCode: 21391
@@ -1706,6 +1793,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.2.1
     versionCode: 21395
@@ -1734,6 +1824,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.3.1
     versionCode: 22061
@@ -1762,6 +1855,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.3.1
     versionCode: 22065
@@ -1790,6 +1886,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.4.2
     versionCode: 22271
@@ -1818,6 +1917,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.4.2
     versionCode: 22275
@@ -1846,6 +1948,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21d
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.5.0
     versionCode: 22461
@@ -1874,6 +1979,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.5.0
     versionCode: 22465
@@ -1902,6 +2010,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.6.0
     versionCode: 22641
@@ -1930,6 +2041,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.6.0
     versionCode: 22645
@@ -1958,6 +2072,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.7.2
     versionCode: 22931
@@ -1986,6 +2103,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.7.2
     versionCode: 22935
@@ -2014,6 +2134,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.8.0
     versionCode: 23601
@@ -2028,7 +2151,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2041,6 +2164,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 7.8.0
     versionCode: 23605
@@ -2055,7 +2181,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2068,6 +2194,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.0.0
     versionCode: 24061
@@ -2083,7 +2212,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2096,6 +2225,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.0.0
     versionCode: 24065
@@ -2111,7 +2243,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2124,6 +2256,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.1.2
     versionCode: 24321
@@ -2139,7 +2274,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2152,6 +2287,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.1.2
     versionCode: 24325
@@ -2167,7 +2305,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2180,6 +2318,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.2.7
     versionCode: 24701
@@ -2195,7 +2336,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2208,6 +2349,9 @@ Builds:
       - ./build_boringssl.sh arm arm64
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.2.7
     versionCode: 24705
@@ -2223,7 +2367,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2236,6 +2380,9 @@ Builds:
       - ./build_boringssl.sh arm arm64
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.4.2
     versionCode: 25261
@@ -2251,7 +2398,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2265,6 +2412,9 @@ Builds:
       - ./build_libvpx_clang.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.4.2
     versionCode: 25269
@@ -2280,7 +2430,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2294,6 +2444,9 @@ Builds:
       - ./build_libvpx_clang.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.4.4
     versionCode: 25381
@@ -2309,7 +2462,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2323,6 +2476,9 @@ Builds:
       - ./build_libvpx_clang.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.4.4
     versionCode: 25385
@@ -2338,7 +2494,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2352,6 +2508,9 @@ Builds:
       - ./build_libvpx_clang.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.4.4
     versionCode: 25389
@@ -2367,7 +2526,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2381,6 +2540,9 @@ Builds:
       - ./build_libvpx_clang.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.5.2
     versionCode: 25631
@@ -2396,7 +2558,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2410,6 +2572,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.5.2
     versionCode: 25635
@@ -2425,7 +2590,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2439,6 +2604,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.5.2
     versionCode: 25639
@@ -2454,7 +2622,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2468,6 +2636,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.5.4
     versionCode: 25661
@@ -2483,7 +2654,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2497,6 +2668,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.5.4
     versionCode: 25662
@@ -2512,7 +2686,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2526,6 +2700,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.5.4
     versionCode: 25665
@@ -2541,7 +2718,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2555,6 +2732,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.5.4
     versionCode: 25666
@@ -2570,7 +2750,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2584,6 +2764,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.6.2
     versionCode: 26001
@@ -2599,7 +2782,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2613,6 +2796,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.6.2
     versionCode: 26002
@@ -2628,7 +2814,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2642,6 +2828,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.6.2
     versionCode: 26005
@@ -2657,7 +2846,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2671,6 +2860,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.6.2
     versionCode: 26006
@@ -2686,7 +2878,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2700,6 +2892,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.7.4
     versionCode: 26361
@@ -2715,7 +2910,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2729,6 +2924,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.7.4
     versionCode: 26362
@@ -2744,7 +2942,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2758,6 +2956,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.7.4
     versionCode: 26365
@@ -2773,7 +2974,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2787,6 +2988,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.7.4
     versionCode: 26366
@@ -2802,7 +3006,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2816,6 +3020,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.8.5
     versionCode: 27219
@@ -2831,7 +3038,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2845,6 +3052,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.9.2
     versionCode: 27569
@@ -2862,7 +3072,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2876,6 +3086,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 8.9.2a
     versionCode: 27579
@@ -2893,7 +3106,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2907,6 +3120,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 9.0.2
     versionCode: 28089
@@ -2921,7 +3137,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2935,6 +3151,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 9.2.2
     versionCode: 29659
@@ -2949,7 +3168,7 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2963,6 +3182,9 @@ Builds:
       - ./build_boringssl.sh
       - popd
     ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
 
   - versionName: 9.3.3
     versionCode: 30269
@@ -2977,7 +3199,162 @@ Builds:
     rm:
       - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
     prebuild: echo -e 'APP_ID = 12834\nAPP_HASH = c84d9229db1d6be95c067b02b126352c'
-        > API_KEYS
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 9.5.3
+    versionCode: 32139
+    commit: v9.5.3
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build golang-go yasm cmake libuv1 make
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 9.6.5
+    versionCode: 33569
+    commit: v9.6.5
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build golang-go yasm cmake libuv1 make
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 9.7.6
+    versionCode: 37219
+    commit: v9.7.6
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build golang-go yasm cmake libuv1 make
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 10.0.9
+    versionCode: 38729
+    commit: v10.0.9
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build golang-go yasm cmake libuv1 make
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: r21e
+    antifeatures:
+      KnownVuln:
+        en-US: Vulnerability in showing WebP images (CVE-2023-4863)
+
+  - versionName: 10.1.1
+    versionCode: 39269
+    commit: v10.1.1
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build golang-go yasm cmake libuv1 make
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
     scandelete:
       - TMessagesProj/jni
     build:
@@ -2992,11 +3369,215 @@ Builds:
       - popd
     ndk: r21e
 
-MaintainerNotes: Update check mode not working because of version code calculations
-    for different flavours.
+  - versionName: 10.2.6
+    versionCode: 40829
+    commit: v10.2.6
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build golang-go yasm cmake libuv1 make
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: r21e
 
-ArchivePolicy: 3 versions
+  - versionName: 10.3.2
+    versionCode: 41459
+    commit: v10.3.2
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build golang-go yasm cmake libuv1 make
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: r21e
+
+  - versionName: 10.6.1
+    versionCode: 42759
+    commit: v10.6.1
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build golang-go yasm cmake libuv1 make
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: r21e
+
+  - versionName: 10.9.1
+    versionCode: 44649
+    commit: v10.9.1
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build golang-go yasm cmake libuv1 make
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: r21e
+
+  - versionName: 10.10.1
+    versionCode: 45839
+    commit: v10.10.1
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y cmake golang-go libuv1 make ninja-build yasm
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: 21.4.7075529
+
+  - versionName: 10.12.0
+    versionCode: 47109
+    commit: v10.12.0
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y cmake golang-go libuv1 make ninja-build yasm
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: 21.4.7075529
+
+  - versionName: 10.14.3
+    versionCode: 49279
+    commit: v10.14.3
+    subdir: TMessagesProj_App
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y cmake golang-go libuv1 make ninja-build yasm
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - afat
+    rm:
+      - TMessagesProj/jni/ffmpeg/tests/ref/fate/sub-microdvd-remux
+    prebuild: echo -e 'APP_ID = 105810\nAPP_HASH = 3e7a52498eec003c5896a330e5d29397'
+      > API_KEYS
+    scandelete:
+      - TMessagesProj/jni
+    build:
+      - export NDK=$$NDK$$
+      - export NINJA_PATH=/usr/bin/ninja
+      - pushd ../TMessagesProj/jni
+      - ./build_libvpx_clang.sh
+      - ./build_ffmpeg_clang.sh
+      - ./patch_ffmpeg.sh
+      - ./patch_boringssl.sh
+      - ./build_boringssl.sh
+      - popd
+    ndk: 21.4.7075529
+
+MaintainerNotes: Update check mode not working because of version code calculations
+  for different flavours.
+
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 9.3.3
-CurrentVersionCode: 30269
+CurrentVersion: 10.14.3
+CurrentVersionCode: 49279

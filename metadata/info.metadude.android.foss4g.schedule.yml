@@ -1,3 +1,6 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Tethered to the schedule site.
 Categories:
   - Time
 License: Apache-2.0
@@ -5,69 +8,73 @@ AuthorName: Tobias Preuss
 AuthorEmail: tobias.preuss+foss4g@googlemail.com
 SourceCode: https://github.com/johnjohndoe/CampFahrplan
 IssueTracker: https://github.com/EventFahrplan/EventFahrplan/issues
+Translation: https://crowdin.com/project/eventfahrplan
 Liberapay: EventFahrplan
 
-AutoName: FOSS4G 2021 Schedule
+AutoName: FOSS4G Europe 2024 Schedule
 Description: |
-    Conference program app for the FOSS4G 2021 Buenos Aires (online) conference
+  Conference program app for the FOSS4G Europe 2024 conference in Tartu, Estonia
 
-    https://2021.foss4g.org
+  https://2024.europe.foss4g.org
 
-    <b>About FOSS4G</b>
-    FOSS4G means Free and Open Source Software for Geospatial.
+  <b>About FOSS4G</b>
+  The FOSS4GE conference, a European extension of the Open Source Geospatial
+  Foundation (OSGeo) annual event, connects professionals in the geoinformation
+  software realm. OSGeo, as an international association, emphasizes
+  geoinformatics, cartography, and open standards, fostering data sharing,
+  collaboration, and innovative problem-solving across various domains.
 
-    Organized by OSGeo and with more than 15 years of experience, this
-    international anual gathering of location enthusiasts is the
-    largest global gathering for geospatial software.
+  This conference series, initially known as FOSS/GRASS User Conference and
+  later as FOSS4G, arrives in Estonia, offering local professionals and
+  students access to world-class education and insights from global experts,
+  all while facilitating networking and knowledge exchange.
 
-    FOSS4G brings together developers, users, decision-makers and
-    observers from a broad spectrum of organizations and fields of
-    operation. Through six days of workshops, presentations,
-    discussions, and cooperation, FOSS4G participants create
-    effective and relevant geospatial products, standards, and
-    protocols.
+  <b>Features</b>
+  * View program by day and rooms (side by side)
+  * Custom grid layout for smartphones (try landscape mode 🙃) and tablets
+  * Read detailed descriptions (speaker names, start time, room name, links, ...) of events
+  * Add events to favorites list
+  * Export favorites list
+  * Setup alarms for individual events
+  * Add events to your personal calendar
+  * Share a website link to an event with others
+  * Keep track of program changes
+  * Automatic program updates (configurable in settings)
+  * Vote and leave comments on talks and workshops
 
-    <b>Features</b>
-    * View program by day and rooms (side by side)
-    * Custom grid layout for smartphones (try landscape mode 🙃) and tablets
-    * Read detailed descriptions (speaker names, start time, room name, links, ...) of events
-    * Add events to favorites list
-    * Export favorites list
-    * Setup alarms for individual events
-    * Add events to your personal calendar
-    * Share a website link to an event with others
-    * Keep track of program changes
-    * Automatic program updates (configurable in settings)
-    * Vote and leave comments on talks and workshops
+  <b>🔤 Supported languages</b>
+  (Event descriptions excluded)
+  * Danish
+  * Dutch
+  * English
+  * Finnish
+  * French
+  * German
+  * Italian
+  * Japanese
+  * Lithuanian
+  * Polish
+  * Portuguese
+  * Russian
+  * Spanish
+  * Swedish
+  * Turkish
 
-    <b>🔤 Supported languages</b>
-    (Event descriptions excluded)
-    * Dutch
-    * English
-    * French
-    * German
-    * Italian
-    * Japanese
-    * Portuguese
-    * Russian
-    * Spanish
-    * Swedish
+  💡 Questions regarding the content can only be answered by the
+  FOSS4G content team. This app simply offers a way to consume and
+  personalize the conference schedule.
 
-    💡 Questions regarding the content can only be answered by the
-    FOSS4G content team. This app simply offers a way to consume and
-    personalize the conference schedule.
+  💣 Bug reports are very welcome. It would be awesome if you
+  can describe how to reproduce the particular error in the
+  issue tracker at https://github.com/EventFahrplan/EventFahrplan/issues.
 
-    💣 Bug reports are very welcome. It would be awesome if you
-    can describe how to reproduce the particular error in the
-    issue tracker at https://github.com/EventFahrplan/EventFahrplan/issues.
+  🏆 The app is based on the EventFahrplan app
+  which was initially built for the camp and annual congress of
+  the Chaos Computer Club. The source code of the app is publicly
+  available on GitHub at:
+  https://github.com/johnjohndoe/CampFahrplan/tree/foss4g-2024.
 
-    🏆 The app is based on the EventFahrplan app
-    which was initially built for the camp and annual congress of
-    the Chaos Computer Club. The source code of the app is publicly
-    available on GitHub at:
-    https://github.com/johnjohndoe/CampFahrplan/tree/foss4g-2021.
-
-    🎨 FOSS4G Logo Design by Pablo de la Cruz.
+  🎨 FOSS4G Europe 2024 logo by Raivo Aunap, CC-BY-ND 4.0.
 
 RepoType: git
 Repo: https://github.com/johnjohndoe/CampFahrplan.git
@@ -81,13 +88,45 @@ Builds:
       - foss4g2021
     prebuild: cp local.properties gradle.properties
 
-MaintainerNotes: |
-    The branch for FOSS4G 2021 is maintained in a separate fork
-    of the main repository on purpose in order to keep the latter
-    well organized and less complex.
+  - versionName: 1.58.0-FOSS4G-Edition
+    versionCode: 93
+    commit: v.1.58.0-FOSS4G-Edition
+    subdir: app
+    gradle:
+      - foss4g2023
+    prebuild: cp local.properties gradle.properties
 
-ArchivePolicy: 1 versions
+  - versionName: 1.58.1-FOSS4G-Edition
+    versionCode: 94
+    commit: v.1.58.1-FOSS4G-Edition
+    subdir: app
+    gradle:
+      - foss4g2023
+    prebuild: cp local.properties gradle.properties
+
+  - versionName: 1.58.2-FOSS4G-Edition
+    versionCode: 95
+    commit: v.1.58.2-FOSS4G-Edition
+    subdir: app
+    gradle:
+      - foss4g2023
+    prebuild: cp local.properties gradle.properties
+
+  - versionName: 1.64.2-FOSS4G-Edition
+    versionCode: 103
+    commit: v.1.64.2-FOSS4G-Edition
+    subdir: app
+    gradle:
+      - foss4g2024
+    prebuild: cp local.properties gradle.properties
+
+MaintainerNotes: |
+  The branch for FOSS4G 2024 is maintained in a separate fork
+  of the main repository on purpose in order to keep the latter
+  well organized and less complex.
+
+ArchivePolicy: 1
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 1.52.1-FOSS4G-Edition
-CurrentVersionCode: 86
+CurrentVersion: 1.64.2-FOSS4G-Edition
+CurrentVersionCode: 103

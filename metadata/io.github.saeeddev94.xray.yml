@@ -1,0 +1,4533 @@
+Categories:
+  - Internet
+  - Security
+License: MIT
+AuthorName: SaeedDev94
+SourceCode: https://github.com/SaeedDev94/Xray
+IssueTracker: https://github.com/SaeedDev94/Xray/issues
+
+AutoName: Xray
+
+RepoType: git
+Repo: https://github.com/SaeedDev94/Xray.git
+Binaries: https://github.com/SaeedDev94/Xray/releases/download/v%v/Xray-v%v-%c.apk
+
+Builds:
+  - versionName: 4.1.0
+    versionCode: 51
+    commit: 0311d9814a29acac044475d7c52ce465ac68ae9b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 4.1.0
+    versionCode: 52
+    commit: 0311d9814a29acac044475d7c52ce465ac68ae9b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 4.1.0
+    versionCode: 53
+    commit: 0311d9814a29acac044475d7c52ce465ac68ae9b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 4.1.0
+    versionCode: 54
+    commit: 0311d9814a29acac044475d7c52ce465ac68ae9b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 4.2.0
+    versionCode: 61
+    commit: f61f121e5d5840a7beb59271313dd3441c1165ec
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 4.2.0
+    versionCode: 62
+    commit: f61f121e5d5840a7beb59271313dd3441c1165ec
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 4.2.0
+    versionCode: 63
+    commit: f61f121e5d5840a7beb59271313dd3441c1165ec
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 4.2.0
+    versionCode: 64
+    commit: f61f121e5d5840a7beb59271313dd3441c1165ec
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 4.2.1
+    versionCode: 71
+    commit: 68ef667a71390c1ed0d31b7ff8949182a923c458
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 4.2.1
+    versionCode: 72
+    commit: 68ef667a71390c1ed0d31b7ff8949182a923c458
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 4.2.1
+    versionCode: 73
+    commit: 68ef667a71390c1ed0d31b7ff8949182a923c458
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 4.2.1
+    versionCode: 74
+    commit: 68ef667a71390c1ed0d31b7ff8949182a923c458
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 5.0.0
+    versionCode: 101
+    commit: 9015871a4969eaae0f182be592f5031799ab702e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 5.0.0
+    versionCode: 102
+    commit: 9015871a4969eaae0f182be592f5031799ab702e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 5.0.0
+    versionCode: 103
+    commit: 9015871a4969eaae0f182be592f5031799ab702e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 5.0.0
+    versionCode: 104
+    commit: 9015871a4969eaae0f182be592f5031799ab702e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 29 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 5.1.0
+    versionCode: 111
+    commit: 5e063756a0a2657b42e229bab99eaac5bf8ae87d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 5.1.0
+    versionCode: 112
+    commit: 5e063756a0a2657b42e229bab99eaac5bf8ae87d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 5.1.0
+    versionCode: 113
+    commit: 5e063756a0a2657b42e229bab99eaac5bf8ae87d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 5.1.0
+    versionCode: 114
+    commit: 5e063756a0a2657b42e229bab99eaac5bf8ae87d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 5.2.0
+    versionCode: 121
+    commit: 5e6ca1d624398734c9c419c067194915b8e544e2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 5.2.0
+    versionCode: 122
+    commit: 5e6ca1d624398734c9c419c067194915b8e544e2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 5.2.0
+    versionCode: 123
+    commit: 5e6ca1d624398734c9c419c067194915b8e544e2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 5.2.0
+    versionCode: 124
+    commit: 5e6ca1d624398734c9c419c067194915b8e544e2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 5.3.1
+    versionCode: 141
+    commit: 5e7724a1056c2d9df3e405cb87e90713142aaa3e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 5.3.1
+    versionCode: 142
+    commit: 5e7724a1056c2d9df3e405cb87e90713142aaa3e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 5.3.1
+    versionCode: 143
+    commit: 5e7724a1056c2d9df3e405cb87e90713142aaa3e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 5.3.1
+    versionCode: 144
+    commit: 5e7724a1056c2d9df3e405cb87e90713142aaa3e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 5.4.0
+    versionCode: 151
+    commit: 16bfc999bb86a517dfcbf65c70c43cd0e1739264
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 5.4.0
+    versionCode: 152
+    commit: 16bfc999bb86a517dfcbf65c70c43cd0e1739264
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 5.4.0
+    versionCode: 153
+    commit: 16bfc999bb86a517dfcbf65c70c43cd0e1739264
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 5.4.0
+    versionCode: 154
+    commit: 16bfc999bb86a517dfcbf65c70c43cd0e1739264
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 5.5.0
+    versionCode: 161
+    commit: 2e01421b40c754b468116956fd88ccf5af850fc2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 5.5.0
+    versionCode: 162
+    commit: 2e01421b40c754b468116956fd88ccf5af850fc2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 5.5.0
+    versionCode: 163
+    commit: 2e01421b40c754b468116956fd88ccf5af850fc2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 5.5.0
+    versionCode: 164
+    commit: 2e01421b40c754b468116956fd88ccf5af850fc2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 5.6.1
+    versionCode: 181
+    commit: e5e60fa21d593a99ea90f6688624325fc8dd621c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 5.6.1
+    versionCode: 182
+    commit: e5e60fa21d593a99ea90f6688624325fc8dd621c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 5.6.1
+    versionCode: 183
+    commit: e5e60fa21d593a99ea90f6688624325fc8dd621c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 5.6.1
+    versionCode: 184
+    commit: e5e60fa21d593a99ea90f6688624325fc8dd621c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 5.7.0
+    versionCode: 191
+    commit: ecd68fa79b63cc54db75d3c2d0da2b2125649d5a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 5.7.0
+    versionCode: 192
+    commit: ecd68fa79b63cc54db75d3c2d0da2b2125649d5a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 5.7.0
+    versionCode: 193
+    commit: ecd68fa79b63cc54db75d3c2d0da2b2125649d5a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 5.7.0
+    versionCode: 194
+    commit: ecd68fa79b63cc54db75d3c2d0da2b2125649d5a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 5.8.0
+    versionCode: 201
+    commit: e8df80d3ee153efb0ea2727f804be027eeb79708
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 5.8.0
+    versionCode: 202
+    commit: e8df80d3ee153efb0ea2727f804be027eeb79708
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 5.8.0
+    versionCode: 203
+    commit: e8df80d3ee153efb0ea2727f804be027eeb79708
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 5.8.0
+    versionCode: 204
+    commit: e8df80d3ee153efb0ea2727f804be027eeb79708
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bullseye-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.21.6
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../libXray
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240112133503-c713f31d574b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/libXray.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.1.10909125
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.0.0
+    versionCode: 221
+    commit: 4cad0f869a4a39c580a714390cecfc70917cec47
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.0.0
+    versionCode: 222
+    commit: 4cad0f869a4a39c580a714390cecfc70917cec47
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.0.0
+    versionCode: 223
+    commit: 4cad0f869a4a39c580a714390cecfc70917cec47
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 6.0.0
+    versionCode: 224
+    commit: 4cad0f869a4a39c580a714390cecfc70917cec47
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.1.0
+    versionCode: 231
+    commit: 52d69045847382caa8aa77be24a853ed98d97c45
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.1.0
+    versionCode: 232
+    commit: 52d69045847382caa8aa77be24a853ed98d97c45
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.1.0
+    versionCode: 233
+    commit: 52d69045847382caa8aa77be24a853ed98d97c45
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 6.1.0
+    versionCode: 234
+    commit: 52d69045847382caa8aa77be24a853ed98d97c45
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.2.0
+    versionCode: 241
+    commit: f86d225ed1a436b7893ad2f955746a55e6cdc13a
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.2.0
+    versionCode: 242
+    commit: f86d225ed1a436b7893ad2f955746a55e6cdc13a
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.2.0
+    versionCode: 243
+    commit: f86d225ed1a436b7893ad2f955746a55e6cdc13a
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 6.2.0
+    versionCode: 244
+    commit: f86d225ed1a436b7893ad2f955746a55e6cdc13a
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.3.0
+    versionCode: 251
+    commit: b47a51324fa3fb790e22755846c2dfaed94f7ac8
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.3.0
+    versionCode: 252
+    commit: b47a51324fa3fb790e22755846c2dfaed94f7ac8
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.3.0
+    versionCode: 253
+    commit: b47a51324fa3fb790e22755846c2dfaed94f7ac8
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 6.3.0
+    versionCode: 254
+    commit: b47a51324fa3fb790e22755846c2dfaed94f7ac8
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.4.0
+    versionCode: 261
+    commit: a91fb218a143b196db647ecaf1add2f61836be2e
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.4.0
+    versionCode: 262
+    commit: a91fb218a143b196db647ecaf1add2f61836be2e
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.4.0
+    versionCode: 263
+    commit: a91fb218a143b196db647ecaf1add2f61836be2e
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 6.4.0
+    versionCode: 264
+    commit: a91fb218a143b196db647ecaf1add2f61836be2e
+    subdir: app
+    submodules: true
+    sudo:
+      - echo "deb http://deb.debian.org/debian bookworm-backports main" > /etc/apt/sources.list.d/bookworm.list
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.4.2
+    versionCode: 271
+    commit: 11be6f57b4b85861898f57747a8867ac2ef9e562
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.4.2
+    versionCode: 272
+    commit: 11be6f57b4b85861898f57747a8867ac2ef9e562
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.4.2
+    versionCode: 273
+    commit: 11be6f57b4b85861898f57747a8867ac2ef9e562
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 6.4.2
+    versionCode: 274
+    commit: 11be6f57b4b85861898f57747a8867ac2ef9e562
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.5.0
+    versionCode: 281
+    commit: 750a7e3c5ef804df0c326439aad03ad2d894ef54
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.5.0
+    versionCode: 282
+    commit: 750a7e3c5ef804df0c326439aad03ad2d894ef54
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.5.0
+    versionCode: 284
+    commit: 750a7e3c5ef804df0c326439aad03ad2d894ef54
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240213143359-d1f7d3436075
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.6.0
+    versionCode: 291
+    commit: c34074dd918c46f77bce5d368beb2e2611240b63
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240404231514-09dbf07665ed
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.6.0
+    versionCode: 292
+    commit: c34074dd918c46f77bce5d368beb2e2611240b63
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240404231514-09dbf07665ed
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.6.0
+    versionCode: 293
+    commit: c34074dd918c46f77bce5d368beb2e2611240b63
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240404231514-09dbf07665ed
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 6.6.0
+    versionCode: 294
+    commit: c34074dd918c46f77bce5d368beb2e2611240b63
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240404231514-09dbf07665ed
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.7.0
+    versionCode: 301
+    commit: 15889b4473693e877701f64febeba639b0009397
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240404231514-09dbf07665ed
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.7.0
+    versionCode: 302
+    commit: 15889b4473693e877701f64febeba639b0009397
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240404231514-09dbf07665ed
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.7.0
+    versionCode: 303
+    commit: 15889b4473693e877701f64febeba639b0009397
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240404231514-09dbf07665ed
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 6.7.0
+    versionCode: 304
+    commit: 15889b4473693e877701f64febeba639b0009397
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240404231514-09dbf07665ed
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.8.0
+    versionCode: 311
+    commit: 00bc2cc19dc8b41a7a291c01ddc741ce81ca50f1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.3
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240520174638-fa72addaaa1b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.8.0
+    versionCode: 312
+    commit: 00bc2cc19dc8b41a7a291c01ddc741ce81ca50f1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.3
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240520174638-fa72addaaa1b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.8.0
+    versionCode: 313
+    commit: 00bc2cc19dc8b41a7a291c01ddc741ce81ca50f1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.3
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240520174638-fa72addaaa1b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 6.8.0
+    versionCode: 314
+    commit: 00bc2cc19dc8b41a7a291c01ddc741ce81ca50f1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.3
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240520174638-fa72addaaa1b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 6.9.0
+    versionCode: 321
+    commit: eedb09822559e29b3a5cccaef7f8af54d5efa669
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.3
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240520174638-fa72addaaa1b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 6.9.0
+    versionCode: 322
+    commit: eedb09822559e29b3a5cccaef7f8af54d5efa669
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.3
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240520174638-fa72addaaa1b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 6.9.0
+    versionCode: 323
+    commit: eedb09822559e29b3a5cccaef7f8af54d5efa669
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.3
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240520174638-fa72addaaa1b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 6.9.0
+    versionCode: 324
+    commit: eedb09822559e29b3a5cccaef7f8af54d5efa669
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.3
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240520174638-fa72addaaa1b
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 7.0.0
+    versionCode: 331
+    commit: 278ce506db77b233c846a297caed6b2ef8afe080
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.4
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240604190613-2782386b8afd
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 7.0.0
+    versionCode: 332
+    commit: 278ce506db77b233c846a297caed6b2ef8afe080
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.4
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240604190613-2782386b8afd
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 7.0.0
+    versionCode: 333
+    commit: 278ce506db77b233c846a297caed6b2ef8afe080
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.4
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240604190613-2782386b8afd
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 7.0.0
+    versionCode: 334
+    commit: 278ce506db77b233c846a297caed6b2ef8afe080
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.4
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240604190613-2782386b8afd
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 7.1.0
+    versionCode: 341
+    commit: 604fa834dccf17bed8107ef92c096ce725e95742
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 7.1.0
+    versionCode: 342
+    commit: 604fa834dccf17bed8107ef92c096ce725e95742
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 7.1.0
+    versionCode: 343
+    commit: 604fa834dccf17bed8107ef92c096ce725e95742
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 7.1.0
+    versionCode: 344
+    commit: 604fa834dccf17bed8107ef92c096ce725e95742
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 7.2.0
+    versionCode: 351
+    commit: 5dab68f623e3c4aea7c1568cda0517e68fc03a8d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 7.2.0
+    versionCode: 352
+    commit: 5dab68f623e3c4aea7c1568cda0517e68fc03a8d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 7.2.0
+    versionCode: 353
+    commit: 5dab68f623e3c4aea7c1568cda0517e68fc03a8d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 7.2.0
+    versionCode: 354
+    commit: 5dab68f623e3c4aea7c1568cda0517e68fc03a8d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 7.3.0
+    versionCode: 361
+    commit: 08f9381429c4c94eecaecb0301cc37be055a7f39
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 7.3.0
+    versionCode: 362
+    commit: 08f9381429c4c94eecaecb0301cc37be055a7f39
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 7.3.0
+    versionCode: 363
+    commit: 08f9381429c4c94eecaecb0301cc37be055a7f39
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 7.3.0
+    versionCode: 364
+    commit: 08f9381429c4c94eecaecb0301cc37be055a7f39
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 7.4.0
+    versionCode: 371
+    commit: dfd0aad73474df90fa4150482f8fc65879f173de
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 7.4.0
+    versionCode: 372
+    commit: dfd0aad73474df90fa4150482f8fc65879f173de
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 7.4.0
+    versionCode: 373
+    commit: dfd0aad73474df90fa4150482f8fc65879f173de
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 7.4.0
+    versionCode: 374
+    commit: dfd0aad73474df90fa4150482f8fc65879f173de
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.22.5
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240707233753-b765e5d5218f
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 7.6.1
+    versionCode: 401
+    commit: 516072584b8d378917a221289fc3b0c6db7a98cd
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240806205939-81131f6468ab
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 7.6.1
+    versionCode: 402
+    commit: 516072584b8d378917a221289fc3b0c6db7a98cd
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240806205939-81131f6468ab
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 7.6.1
+    versionCode: 403
+    commit: 516072584b8d378917a221289fc3b0c6db7a98cd
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240806205939-81131f6468ab
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 7.6.1
+    versionCode: 404
+    commit: 516072584b8d378917a221289fc3b0c6db7a98cd
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.0
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240806205939-81131f6468ab
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 7.6.2
+    versionCode: 411
+    commit: 98b4e662a2559ac526c5c57b6ca9f0c0f6174929
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.1
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240909163608-642950227fb3
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 7.6.2
+    versionCode: 412
+    commit: 98b4e662a2559ac526c5c57b6ca9f0c0f6174929
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.1
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240909163608-642950227fb3
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 7.6.2
+    versionCode: 413
+    commit: 98b4e662a2559ac526c5c57b6ca9f0c0f6174929
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.1
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240909163608-642950227fb3
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 7.6.2
+    versionCode: 414
+    commit: 98b4e662a2559ac526c5c57b6ca9f0c0f6174929
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.1
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240909163608-642950227fb3
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 7.6.3
+    versionCode: 421
+    commit: c55be609c4c7355b158f1539fea7112258d20056
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.1
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240909163608-642950227fb3
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 7.6.3
+    versionCode: 422
+    commit: c55be609c4c7355b158f1539fea7112258d20056
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.1
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240909163608-642950227fb3
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 7.6.3
+    versionCode: 423
+    commit: c55be609c4c7355b158f1539fea7112258d20056
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.1
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240909163608-642950227fb3
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 7.6.3
+    versionCode: 424
+    commit: c55be609c4c7355b158f1539fea7112258d20056
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.1
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240909163608-642950227fb3
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 26.2.11394342
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 8.0.0
+    versionCode: 501
+    commit: d960ede3eca207f0d8f7e78a057655d4dad0b759
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20241016134751-7ff83004ec2c
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 27.1.12297006
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 8.0.0
+    versionCode: 502
+    commit: d960ede3eca207f0d8f7e78a057655d4dad0b759
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20241016134751-7ff83004ec2c
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 27.1.12297006
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 8.0.0
+    versionCode: 503
+    commit: d960ede3eca207f0d8f7e78a057655d4dad0b759
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20241016134751-7ff83004ec2c
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 27.1.12297006
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 8.0.0
+    versionCode: 504
+    commit: d960ede3eca207f0d8f7e78a057655d4dad0b759
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20241016134751-7ff83004ec2c
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 27.1.12297006
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+  - versionName: 8.1.0
+    versionCode: 511
+    commit: 81e01eedaf149f15e1817705bf810c442ab707f0
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20241016134751-7ff83004ec2c
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 27.1.12297006
+    gradleprops:
+      - abiId=1
+      - abiTarget=armeabi-v7a
+
+  - versionName: 8.1.0
+    versionCode: 512
+    commit: 81e01eedaf149f15e1817705bf810c442ab707f0
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20241016134751-7ff83004ec2c
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/arm64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 27.1.12297006
+    gradleprops:
+      - abiId=2
+      - abiTarget=arm64-v8a
+
+  - versionName: 8.1.0
+    versionCode: 513
+    commit: 81e01eedaf149f15e1817705bf810c442ab707f0
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20241016134751-7ff83004ec2c
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/386
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 27.1.12297006
+    gradleprops:
+      - abiId=3
+      - abiTarget=x86
+
+  - versionName: 8.1.0
+    versionCode: 514
+    commit: 81e01eedaf149f15e1817705bf810c442ab707f0
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -t bookworm-backports -y golang-go
+      - apt-get install -y gcc libc-dev
+    gradle:
+      - yes
+    srclibs:
+      - go@go1.23.2
+    prebuild: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOROOT=$$go$$
+      - export GOPATH="$HOME/go"
+      - export PATH="$GOROOT/bin:$PATH"
+      - export PATH="$GOPATH/bin:$PATH"
+      - pushd ../XrayCore
+      - go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20241016134751-7ff83004ec2c
+      - go mod download
+      - gomobile init
+      - gomobile bind -o "../app/libs/XrayCore.aar" -androidapi 26 -target android/amd64
+        -ldflags="-buildid=" -trimpath
+      - popd
+    ndk: 27.1.12297006
+    gradleprops:
+      - abiId=4
+      - abiTarget=x86_64
+
+AllowedAPKSigningKeys: 1658411ab97758c6ce0001befcdeb29c2219ee19d80501f8061bb008d79d0360
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+VercodeOperation:
+  - '%c + 1'
+  - '%c + 2'
+  - '%c + 3'
+  - '%c + 4'
+UpdateCheckData: app/versionCode.txt|(\d+)|app/build.gradle|versionName = "([\d.]+)"
+CurrentVersion: 8.1.0
+CurrentVersionCode: 514

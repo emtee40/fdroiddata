@@ -8,7 +8,7 @@ IssueTracker: https://github.com/woheller69/lavatories/issues
 AutoName: LavSeeker
 
 RepoType: git
-Repo: https://github.com/woheller69/lavatories
+Repo: https://github.com/woheller69/lavatories.git
 
 Builds:
   - versionName: '1.0'
@@ -73,7 +73,88 @@ Builds:
     rm:
       - LavSeeker_logo.zip
 
+  - versionName: '1.6'
+    versionCode: 16
+    commit: f5756d0b510f6f59e54bcf948abffd259defdde0
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - LavSeeker_logo.zip
+
+  - versionName: '1.7'
+    versionCode: 17
+    commit: 59f3bb0476b728159d55645632775ba41db62515
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - LavSeeker_logo.zip
+
+  - versionName: '1.8'
+    versionCode: 18
+    commit: 647b7cbb8ddade86ce968fc495d14458cf170312
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - LavSeeker_logo.zip
+
+  - versionName: '1.9'
+    versionCode: 19
+    commit: 63adfb6a747ef4d60b99919f4e77daa6aa1a7f78
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - LavSeeker_logo.zip
+
+  - versionName: '2.1'
+    versionCode: 21
+    commit: 5452dc76fd0db679c6efd4793a177b318ec32799
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - LavSeeker_logo.zip
+
+  - versionName: '2.2'
+    versionCode: 22
+    commit: 34b222a6577a1ce1149b65e5886cae519cb68b9b
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - LavSeeker_logo.zip
+
+  - versionName: '2.3'
+    versionCode: 23
+    commit: 230fc020d18fe2907ffd68c38b681f027dcb1414
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - LavSeeker_logo.zip
+
+  - versionName: '2.4'
+    versionCode: 24
+    commit: a1da1239c9d5a0f2f59e100986e4afbc90ec05ce
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - LavSeeker_logo.zip
+
+  - versionName: '2.5'
+    versionCode: 25
+    commit: d0ae8ea3dfb7287b902d6dbec94ac6bbbbab0b0e
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - LavSeeker_logo.zip
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.5'
-CurrentVersionCode: 15
+CurrentVersion: '2.5'
+CurrentVersionCode: 25

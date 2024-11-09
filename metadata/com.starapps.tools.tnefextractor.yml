@@ -9,7 +9,7 @@ Changelog: https://gitlab.starapps-network.com/tools/tnef-extractor/-/releases
 AutoName: TNEF Extractor
 
 RepoType: git
-Repo: https://gitlab.starapps-network.com/tools/tnef-extractor
+Repo: https://gitlab.starapps-network.com/tools/tnef-extractor.git
 
 Builds:
   - versionName: 1.0.0
@@ -19,7 +19,9 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.0.0
 CurrentVersionCode: 1
+
+NoSourceSince: 1.0.0

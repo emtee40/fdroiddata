@@ -1,6 +1,8 @@
 AntiFeatures:
-  - NonFreeNet
-  - NSFW
+  NonFreeNet:
+    en-US: App relies on Github.
+  NSFW:
+    en-US: App shows explicit material (Hentai).
 Categories:
   - Graphics
   - Reading
@@ -489,13 +491,20 @@ Builds:
       - ios
       - plugins/glib/ios
       - plugins/glib/example/ios
-    build:
+    prebuild:
+      - sed -i -e 's/4.1.2/4.0.2/' android/build.gradle
+      - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk
     ndk: r23
 
 MaintainerNotes: While the default sources seem clean, the screenshots strongly imply
-    adult content so I tagged this NSFW to be on the safe side.
+  adult content so I tagged this NSFW to be on the safe side.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v\d+\.\d+(\.\d+)?

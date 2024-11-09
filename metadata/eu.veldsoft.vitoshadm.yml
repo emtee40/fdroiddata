@@ -6,12 +6,12 @@ License: GPL-3.0-only
 SourceCode: https://github.com/VelbazhdSoftwareLLC/VitoshaDM
 IssueTracker: https://github.com/VelbazhdSoftwareLLC/VitoshaDM/issues
 
-AutoName: VitoshaDM
+AutoName: Vitosha Decision Maker
 Description: |-
-    It is really simple decision maker toy. It uses random numbers. It is better
-    than flipping a coin, because it has more options. The usage is very simple. You
-    need to have a specific question in mind, for which it is difficult for you to
-    take a solution. After that, just hit the roll button and observe the result.
+  It is really simple decision maker toy. It uses random numbers. It is better
+  than flipping a coin, because it has more options. The usage is very simple. You
+  need to have a specific question in mind, for which it is difficult for you to
+  take a solution. After that, just hit the roll button and observe the result.
 
 RepoType: git
 Repo: https://github.com/VelbazhdSoftwareLLC/VitoshaDM.git
@@ -21,7 +21,14 @@ Builds:
     versionCode: 2
     commit: 9bb2284b501c38d7cbb51fc2510aa64ea2602631
 
+  - versionName: '1.04'
+    versionCode: 5
+    commit: c2c3f7e2ee1abc2c03ca4890d62f07fdc4aa734e
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: None
 UpdateCheckMode: RepoManifest
-CurrentVersion: '1.1'
-CurrentVersionCode: 2
+CurrentVersion: '1.04'
+CurrentVersionCode: 5

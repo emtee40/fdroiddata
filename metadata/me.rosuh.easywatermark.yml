@@ -253,7 +253,32 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.8.8
+    versionCode: 20808
+    commit: cd1e0ec61ecf806391988ffd01855a85543d90d1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.9
+    versionCode: 20809
+    commit: e14145724bfab484109b2c112c8c49b78b057beb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.9.0
+    versionCode: 20900
+    commit: 6e03bc45efb7118b0cc5e4ac4cea5158468c109b
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.8.7
-CurrentVersionCode: 20807
+CurrentVersion: 2.9.0
+CurrentVersionCode: 20900

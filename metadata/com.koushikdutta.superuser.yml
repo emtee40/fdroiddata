@@ -6,18 +6,18 @@ IssueTracker: https://github.com/koush/Superuser/issues
 
 AutoName: Superuser
 Description: |-
-    An app to allow or forbid apps' requests to run as root. The entire app can be
-    built from source with the Android SDK and NDK, including the <b>su</b> binary
-    which is bundled within and copied to /system when the prompts are followed.
+  An app to allow or forbid apps' requests to run as root. The entire app can be
+  built from source with the Android SDK and NDK, including the <b>su</b> binary
+  which is bundled within and copied to /system when the prompts are followed.
 
-    You must already have root for this to work, because it leverages the existing
-    su and Superuser app to install itself. However, if you know what you are doing
-    you can use this apk as a su/Superuser substitute if you are gaining an initial
-    root. Once the install is completed you can disable or remove the old app.
+  You must already have root for this to work, because it leverages the existing
+  su and Superuser app to install itself. However, if you know what you are doing
+  you can use this apk as a su/Superuser substitute if you are gaining an initial
+  root. Once the install is completed you can disable or remove the old app.
 
-    Up to version 1.0.3.0 this might not work on Android 5.0+.
+  Up to version 1.0.3.0 this might not work on Android 5.0+.
 
-RequiresRoot: 'yes'
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/koush/Superuser.git
@@ -29,7 +29,7 @@ Builds:
     subdir: Superuser
     init: rm -f build.xml
     srclibs:
-      - 1:KoushWidgets@2cc45f3
+      - KoushWidgets@2cc45f3
     buildjni:
       - yes
     ndk: r12b
@@ -40,7 +40,7 @@ Builds:
     subdir: Superuser
     init: rm -f build.xml
     srclibs:
-      - 1:KoushWidgets@2cc45f3
+      - KoushWidgets@2cc45f3
     buildjni:
       - yes
     ndk: r12b
@@ -51,12 +51,13 @@ Builds:
     subdir: Superuser
     init: rm -f build.xml
     srclibs:
-      - 1:KoushWidgets@2cc45f3
+      - KoushWidgets@2cc45f3
     buildjni:
       - yes
     ndk: r12b
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: 1.0.3.0
 CurrentVersionCode: 1030

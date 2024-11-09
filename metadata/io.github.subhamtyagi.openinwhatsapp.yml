@@ -1,6 +1,8 @@
 AntiFeatures:
-  - NonFreeDep
-  - NonFreeNet
+  NonFreeDep:
+    en-US: Requires WhatsApp to be installed on your device.
+  NonFreeNet:
+    en-US: Depends on the WhatsApp public API.
 Categories:
   - Internet
   - Phone & SMS
@@ -9,13 +11,6 @@ SourceCode: https://github.com/subhamtyagi/openinwa
 IssueTracker: https://github.com/subhamtyagi/openinwa/issues
 
 AutoName: Open In WhatsApp
-Description: |-
-    Note: This app is unmaintained, its app repository is archived by the dev
-
-    Open chat in WhatsApp without saving phone number to your phonebook
-
-    * This app uses WhatsApp public api 'click to chat' feature to open a chat with any number without saving to your phone book.
-    * You can create an url link that will open WhatsApp on the specified number. This is a WhatsApp feature, you don't need this app to open the link, only to create it.
 
 RepoType: git
 Repo: https://github.com/SubhamTyagi/openinwa.git
@@ -56,7 +51,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.4'
+    versionCode: 7
+    commit: 738b63bce964547fb46fea73be7e1ae1b311ec84
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.5'
+    versionCode: 8
+    commit: 900aed79d132a71b05ac2447a1dfee6175dd776d
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.3.1
-CurrentVersionCode: 6
+CurrentVersion: '1.5'
+CurrentVersionCode: 8

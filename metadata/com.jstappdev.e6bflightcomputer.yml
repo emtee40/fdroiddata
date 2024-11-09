@@ -1,0 +1,37 @@
+AntiFeatures:
+  NonFreeAssets:
+    en-US: Assets from https://mediafiles.aero.und.edu/aero.und.edu/aviation/trainers/e6b/
+Categories:
+  - Navigation
+  - Science & Education
+License: Unlicense
+SourceCode: https://github.com/j05t/e6b
+IssueTracker: https://github.com/j05t/e6b/issues
+
+AutoName: E6B Flight Computer
+
+RepoType: git
+Repo: https://github.com/j05t/e6b.git
+Binaries: https://github.com/j05t/e6b/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 10
+    commit: c3e5fed697e98946fd94560258706796c03e4822
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.2'
+    versionCode: 12
+    commit: 3c3825d8a0b111072f19ebc865afd7f225f65364
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 660a1d0cdcf16e1d7495aa4c0e484feb7b28e06a4b91cb04cf9fe8a12852760c
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.2'
+CurrentVersionCode: 12

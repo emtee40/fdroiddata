@@ -2,407 +2,123 @@ Categories:
   - Theming
 License: GPL-3.0-only
 AuthorName: Donno
-AuthorEmail: info@onnno.nl
+AuthorEmail: arcticons@onnno.nl
 SourceCode: https://github.com/Donnnno/Arcticons
 IssueTracker: https://github.com/Donnnno/Arcticons/issues
-Changelog: https://github.com/Donnnno/Arcticons/blob/main/CHANGELOG.md
+Changelog: https://github.com/Donnnno/Arcticons/blob/HEAD/CHANGELOG.md
 Donate: https://paypal.me/onnovdd
 Liberapay: Donno
 
 AutoName: Arcticons Light
 
 RepoType: git
-Repo: https://github.com/Donnnno/Arcticons
+Repo: https://github.com/Donnnno/Arcticons.git
+Binaries: https://github.com/Donnnno/Arcticons/releases/download/%v/Arcticons-v%v-black-release.apk
 
 Builds:
-  - versionName: 2.0.0
-    versionCode: 64
-    commit: 2.0.0
-    subdir: app
-    gradle:
-      - light
-
-  - versionName: 2.0.5
-    versionCode: 65
-    commit: 5d0410f91e6f095ab9b42afc152315ebc16d51c3
-    subdir: app
-    gradle:
-      - light
-
-  - versionName: 2.1.0
-    versionCode: 66
-    commit: 4612c60580e0f0df78187016090b8a2de4dab2a3
-    subdir: app
-    gradle:
-      - light
-
-  - versionName: 2.2.5
-    versionCode: 68
-    commit: 9485820ce84501a6103f9f902fca0e11e83f9df7
+  - versionName: 8.3.1
+    versionCode: 127
+    commit: 8c6acb4bd958b69f88a8932e9dc26dc3fdc24ea9
     subdir: app
     sudo:
       - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
-      - light
+      - black
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml'
 
-  - versionName: 2.3.6
-    versionCode: 69
-    commit: 40b2b5e68a0921f13e11432c746fe7fdddbcaa68
+  - versionName: 8.6.7
+    versionCode: 128
+    commit: 305e7a89a210da069ab25aed3ca2cc235ed3b70e
     subdir: app
     sudo:
       - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
-      - light
+      - black
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml'
 
-  - versionName: 2.5.0
-    versionCode: 70
-    commit: b5a0d99904876ef93174e6afa847ac6e6cd1ea0b
+  - versionName: 8.7.1-hotfix
+    versionCode: 130
+    commit: b61f6cb819c7ba57c7ca46bc0c7199240dbb30ee
     subdir: app
     sudo:
       - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
-      - light
+      - black
+    srclibs:
+      - reproducible-apk-tools@2134d90b7afcc1e65bb860b3a50e38d559a450a2
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml' '!assets/drawable.xml'
 
-  - versionName: 2.5.5
-    versionCode: 71
-    commit: 1bad32a0433e2e5f23abb8bc06e19dcc21a52de8
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 2.6.5
-    versionCode: 72
-    commit: 80b8dddb00a2ec837181f1e49afff7e622a61870
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 2.8.6
-    versionCode: 73
-    commit: 6146cd74d093f0a21fdf4456aa94fa707606e925
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 2.9.1
-    versionCode: 74
-    commit: 8617e6b87ba01d5cc90ef04c46ddafe477316681
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.0.7
-    versionCode: 75
-    commit: 2277f688b9e439b6be4746d133908b2c16e03d4c
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.1.0
-    versionCode: 76
-    commit: 39adef8422f174aa769676c776a3212e07c7107d
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.2.1
-    versionCode: 77
-    commit: 4e74079951dbc24d154bff3931b7dd8c19a8bcee
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.3.7
-    versionCode: 78
-    commit: beddf086c7c45b4d9f3315eb41b60715ea818f42
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.4.5
-    versionCode: 79
-    commit: 4aae0220c62ec5ac8ec43756b11049f7109b8b54
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.5.0
-    versionCode: 80
-    commit: 616c873854a421baaf67da30f5e560855a1f6790
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.6.0
-    versionCode: 81
-    commit: 7865ae68db1972d0fb28dbd48cf2877c2c8d0631
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.7.3
-    versionCode: 82
-    commit: ff96d4e7c778b91fb4fd0121e056ce765eb2413e
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.7.6
-    versionCode: 83
-    commit: a0e7b4254adbf0b1504747c14823d516c0dd9866
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.8.3
-    versionCode: 84
-    commit: 1794f50f15edec3d805077eb1ed1597c4b45b9f2
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.8.6
-    versionCode: 85
-    commit: 102a8c345a2ea05e4daba31b167278e1f96eb6b2
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 3.9.0
-    versionCode: 86
-    commit: 7084b99e2550d9ce1862b1bf94dcc8b8c6079551
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.0.0
-    versionCode: 87
-    commit: 9d86362ffbffb496755b4033002c9cdcaaabf653
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.1.0
-    versionCode: 88
-    commit: 6373e934f2acfb1a9573594632836436e783a542
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.2.0
-    versionCode: 89
-    commit: cc05a95ddd36378f4bf50104685164324d04b94f
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.2.5
-    versionCode: 90
-    commit: d543ff7f847b1404aabbbcb4610dd44ab660517e
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.2.8
-    versionCode: 91
-    commit: 8e7fa8966f77c63b71dffdf1cb40a5f4e265386f
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.3.1
-    versionCode: 94
-    commit: 128b886952b46d54b6d4b2c00088bb9c8c5f33e9
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.3.8
-    versionCode: 95
-    commit: 7766a70bb61d975bed9800bce88fe21ebcef2247
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.5.6
-    versionCode: 96
-    commit: e44507381023ae938547ab6b7498d64e12dae38d
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.6.2
-    versionCode: 97
-    commit: 2750f27ca86eaf93ec10e347a74aab1ad2b08631
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.6.3
-    versionCode: 98
-    commit: 90712c305cf7e0605e51d80ee4a5546e10aa7a27
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.7.0
-    versionCode: 99
-    commit: 9c1f46831ecfa40e279505b561779efd30ab5371
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - light
-
-  - versionName: 4.8.5
-    versionCode: 100
-    commit: 7e8b7b79d98890e664da11158582a7a537b52e4d
+  - versionName: 9.0.0
+    versionCode: 131
+    commit: 12aad418f25c81302ed981cfbce499dc46f9d452
     subdir: app
     gradle:
-      - light
+      - black
+    srclibs:
+      - reproducible-apk-tools@2134d90b7afcc1e65bb860b3a50e38d559a450a2
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml' '!assets/drawable.xml'
 
-  - versionName: 5.0.0
-    versionCode: 101
-    commit: 323bf7df1fd5bc38c0c141855c65e416e532c7c9
+  - versionName: 9.2.4
+    versionCode: 132
+    commit: 2c3051df31f11195f65f07d9121f999690475132
     subdir: app
     gradle:
-      - light
+      - black
+    srclibs:
+      - reproducible-apk-tools@2134d90b7afcc1e65bb860b3a50e38d559a450a2
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml' '!assets/drawable.xml'
 
-  - versionName: 5.0.1
-    versionCode: 102
-    commit: a23d58f60b28a359ecf6a8948741bc9752c68ccf
+  - versionName: 9.6.5
+    versionCode: 133
+    commit: 19bfc40363bc397dd4fd69e8230fa783e1f891ee
     subdir: app
     gradle:
-      - light
+      - black
+    srclibs:
+      - reproducible-apk-tools@2134d90b7afcc1e65bb860b3a50e38d559a450a2
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml' '!assets/drawable.xml'
 
-  - versionName: 5.1.0
-    versionCode: 103
-    commit: 5914ac348085b72a25807a455ad08c6d81e18180
+  - versionName: 10.4.0
+    versionCode: 1360
+    commit: 0b7e168f4c5a6b6082917e137121e8816df9f495
     subdir: app
     gradle:
-      - light
+      - black
 
-  - versionName: 5.2.6
-    versionCode: 104
-    commit: 61163590499a28eab3d1497352b24900c870b584
+  - versionName: 10.8.4
+    versionCode: 1370
+    commit: 41d9a96b14133fa659f76d48b77f9347647a08c4
     subdir: app
     gradle:
-      - light
+      - black
+
+  - versionName: 11.0.5
+    versionCode: 1380
+    commit: 81ea73d987ac4e585061a8a5edf273c62d006a82
+    subdir: app
+    gradle:
+      - black
+
+AllowedAPKSigningKeys: 299bb9312e39130d0d33ed42bf98567f726ab11a04dc950c5b6c162e28c869c5
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckName: com.donnnno.arcticons
-CurrentVersion: 5.2.6
-CurrentVersionCode: 104
+CurrentVersion: 11.0.5
+CurrentVersionCode: 1380

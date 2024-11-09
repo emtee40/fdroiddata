@@ -6,8 +6,8 @@ IssueTracker: https://github.com/nexes/Android-File-Manager/issues
 
 AutoName: Open Manager
 Description: |-
-    A simple file browser and manager. Among other features it allows to perform a
-    backup to the SD card of all your downloaded (third party) applications.
+  A simple file browser and manager. Among other features it allows to perform a
+  backup to the SD card of all your downloaded (third party) applications.
 
 RepoType: git
 Repo: https://github.com/nexes/Android-File-Manager.git
@@ -25,7 +25,8 @@ Builds:
     versionCode: 218
     commit: edf793a782861ae31648
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: 2.1.8
 CurrentVersionCode: 218

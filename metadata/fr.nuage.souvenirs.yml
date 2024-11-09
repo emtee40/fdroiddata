@@ -6,12 +6,12 @@ AuthorName: Francois Valley
 AuthorEmail: zorgluf@gmail.com
 SourceCode: https://github.com/zorgluf/souvenirs-android
 IssueTracker: https://github.com/zorgluf/souvenirs-android/issues
-Donate: https://github.com/zorgluf/souvenirs-android/blob/main/README.md
+Donate: https://github.com/zorgluf/souvenirs-android/blob/HEAD/README.md#found-it-useful-
 
 AutoName: Souvenirs
 
 RepoType: git
-Repo: https://github.com/zorgluf/souvenirs-android
+Repo: https://github.com/zorgluf/souvenirs-android.git
 
 Builds:
   - versionName: 1.3.2
@@ -141,7 +141,96 @@ Builds:
     rm:
       - app/gradle
 
+  - versionName: 2.8.2
+    versionCode: 27
+    commit: 8b5486a070262153c577e13c6702d066f8157a36
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/gradle
+
+  - versionName: 2.8.3
+    versionCode: 28
+    commit: 3d78b9b41883c14ba138b7904b8904e8bcfa495e
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/gradle
+
+  - versionName: 2.8.5
+    versionCode: 30
+    commit: 622425d4e7c4aa3c80d2e30ab2b0a7ab22e86285
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/gradle
+
+  - versionName: 2.8.6
+    versionCode: 31
+    commit: a0ed68e7fbecf51c18000ee62a6cc62b84230a6b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - app/gradle
+
+  - versionName: 2.8.7
+    versionCode: 32
+    commit: 0b734ee8f33bea88de1777d51fad9585a9dbe6d9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - app/gradle
+
+  - versionName: 2.8.8
+    versionCode: 33
+    commit: 91caaf7ad04a7c4fae40baea04aee8e3246a6c4f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/gradle
+
+  - versionName: 2.9.0
+    versionCode: 34
+    commit: 584daafeb8c04d314e36f5021c93964e80ad12d0
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/gradle
+
+  - versionName: 2.9.1
+    versionCode: 35
+    commit: 5553de948f96c03cc9bc8782e1e16bda016374b5
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/gradle
+
+  - versionName: 2.9.2
+    versionCode: 36
+    commit: 1a1551f3037bd59aed8b2235018756ae974f30b0
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v\d+\.\d+(\.\d+)?
-CurrentVersion: 2.8.1
-CurrentVersionCode: 26
+CurrentVersion: 2.9.2
+CurrentVersionCode: 36

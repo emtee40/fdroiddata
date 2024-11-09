@@ -6,8 +6,8 @@ IssueTracker: https://github.com/cubei/flashcards/issues
 
 AutoName: FlashCards
 Description: |-
-    <i>FlashCards</i> is a simple flash card app with csv files as input. It is
-    meant for stuff like learning vocabulary of different languages.
+  <i>FlashCards</i> is a simple flash card app with csv files as input. It is
+  meant for stuff like learning vocabulary of different languages.
 
 RepoType: git
 Repo: https://github.com/cubei/flashcards
@@ -20,7 +20,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: v1.7.1
+    versionCode: 24
+    commit: ace3df0f643d1e568e55447cc026dcd0abcaf9cd
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.2.1
-CurrentVersionCode: 15
+CurrentVersion: v1.7.1
+CurrentVersionCode: 24

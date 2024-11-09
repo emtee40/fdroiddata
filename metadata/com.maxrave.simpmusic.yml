@@ -1,0 +1,171 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on YouTube, using Piped API (kavin.rocks) to get YouTube streams
+      data and Spotify Web API with Spotify Lyrics (https://spotify-lyric-api.herokuapp.com/)
+      to get lyrics.
+    vi-VN: Sử dụng dữ liệu từ YouTube và Piped API (kavin.rocks) để lấy dữ liệu âm
+      thanh. Dùng Spotify Web API kết hợp Spotify Lyrics (https://spotify-lyric-api.herokuapp.com/)
+      để lấy lời bài hát.
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+AuthorName: Nguyen Duc Tuan Minh
+SourceCode: https://github.com/maxrave-dev/SimpMusic
+IssueTracker: https://github.com/maxrave-dev/SimpMusic/issues
+Changelog: https://github.com/maxrave-dev/SimpMusic/releases
+
+AutoName: SimpMusic
+
+RepoType: git
+Repo: https://github.com/maxrave-dev/SimpMusic.git
+Binaries: https://github.com/maxrave-dev/SimpMusic/releases/download/v%v/SimpMusic_v%v.apk
+
+Builds:
+  - versionName: 0.0.5-beta
+    versionCode: 5
+    commit: a831a978c1fe2c2875a0998237ca6ea02aab6885
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.1.0-beta
+    versionCode: 6
+    commit: 3feee2dd8d6bc7638db5254f60bd658c9c19acf3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .idea
+
+  - versionName: 0.1.1-beta
+    versionCode: 7
+    commit: 7dd8c57732b465d2ee793f44c0cb814d5fb47ec4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .idea
+
+  - versionName: 0.1.2-beta
+    versionCode: 8
+    commit: 8e181d83aa85687e3b28fdd68c6ae063d6942949
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .idea
+
+  - versionName: 0.1.3-beta
+    versionCode: 9
+    commit: 452239aabe6c920bc4b2cec83112fcff57b3c11f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .idea
+
+  - versionName: 0.1.4-beta
+    versionCode: 10
+    commit: 64dc96d584536d5819623c4913def17abc3b204c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .idea
+
+  - versionName: 0.1.6
+    versionCode: 13
+    commit: 0c3fcf9bf571edbf6f0a59451c862cefe0b7bba6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    rm:
+      - .idea
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      res/*.json
+
+  - versionName: 0.1.7
+    versionCode: 14
+    commit: 3a721aafa34d485c086abaa5164e52b9427f2e91
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .idea
+
+  - versionName: 0.1.8
+    versionCode: 15
+    commit: c75a809ecba4044e54fcde1ee2a66524a591a078
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .idea
+
+  - versionName: 0.2.0
+    versionCode: 16
+    commit: c11c43316ab5be332940481a9523b0f8d4ead696
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - .idea
+
+  - versionName: 0.2.3-hotfix
+    versionCode: 20
+    disable: https://github.com/maxrave-dev/SimpMusic/issues/94#issuecomment-2289499820
+    commit: eaba3a2e727c76846e281206c981217ee94cf0ff
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - .idea
+
+AllowedAPKSigningKeys: 76c53bd813ae8f1ce2778f7814b515785719bf9a82c6bee03b8b2dfd706055a1
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.2.3-hotfix
+CurrentVersionCode: 20

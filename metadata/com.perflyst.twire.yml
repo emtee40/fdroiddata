@@ -1,8 +1,9 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Twitch itself is not libre.
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-only
 SourceCode: https://github.com/twireapp/Twire
 IssueTracker: https://github.com/twireapp/Twire/issues
@@ -11,11 +12,11 @@ Changelog: https://github.com/twireapp/Twire/releases
 
 AutoName: Twire
 Description: |-
-    Twire is an open source, ad free Twitch browser and stream player for Android.
-    You can select multiple themes and also login with your twitch account.
-    You can also follow and unfollow streamers through the app.
+  Twire is an open source, ad free Twitch browser and stream player for Android.
+  You can select multiple themes and also login with your twitch account.
+  You can also follow and unfollow streamers through the app.
 
-    Please note that the chat is only available if you login to your account.
+  Please note that the chat is only available if you login to your account.
 
 RepoType: git
 Repo: https://github.com/twireapp/Twire.git
@@ -216,7 +217,50 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.10.6
+    versionCode: 530
+    commit: 1a51815be9fdc12c7c4a2332d304fec8127b5b5b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.7
+    versionCode: 531
+    commit: 2782274b6fcd6ae7b9a94b0edc2c824d33840dba
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.8
+    versionCode: 532
+    commit: bd9adfa0e5baa33a7301f66f3169ebe49d9f7ad1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.10.9
+    versionCode: 533
+    commit: bf9b31412697eeebdd7db0d4ba973d22967d84e2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.11.0
+    versionCode: 534
+    commit: 43572429e82bab7fa3f7de0bbbb2990dd2874b85
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.10.5
-CurrentVersionCode: 529
+CurrentVersion: 2.11.0
+CurrentVersionCode: 534

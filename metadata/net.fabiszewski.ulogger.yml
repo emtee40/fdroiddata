@@ -11,7 +11,7 @@ Bitcoin: bc1qt3uwhze9x8tj6v73c587gprhufg9uur0rzxhvh
 AutoName: μlogger
 
 RepoType: git
-Repo: https://github.com/bfabiszewski/ulogger-android
+Repo: https://github.com/bfabiszewski/ulogger-android.git
 
 Builds:
   - versionName: '1.0'
@@ -204,7 +204,39 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '3.8'
+    versionCode: 308
+    commit: 8fa02ee4f58ec13507068af17ff443ae94af095a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.9'
+    versionCode: 309
+    commit: d03a3aab62a140fa494b4832317b58a59fe7ac21
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.10'
+    versionCode: 310
+    commit: e9bd75c8e1d979a1ed9089fe3b539153638a77b4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '3.11'
+    versionCode: 311
+    commit: 46723919ca5c0bba280239a817e920a3514bcbaa
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '3.7'
-CurrentVersionCode: 307
+CurrentVersion: '3.11'
+CurrentVersionCode: 311

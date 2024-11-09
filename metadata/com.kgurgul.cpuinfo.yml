@@ -8,19 +8,19 @@ IssueTracker: https://github.com/kamgurgul/cpu-info/issues
 Changelog: https://github.com/kamgurgul/cpu-info/releases
 
 Description: |-
-    CPU Info provide main information about hardware and software of your device:
+  CPU Info provide main information about hardware and software of your device:
 
-    * CPU specification (with current frequency on specyfic cores)
-    * GPU specification
-    * RAM and storage state (internal, external and SD card)
-    * Display metrics
-    * Android OS details
-    * Sensors data
-    * Battery status
-    * WiFi and Bluetooth mac address (on older Androids)
-    * Audio card info
-    * Native libraries used in another applications
-    * CPU and battery temperature monitor
+  * CPU specification (with current frequency on specyfic cores)
+  * GPU specification
+  * RAM and storage state (internal, external and SD card)
+  * Display metrics
+  * Android OS details
+  * Sensors data
+  * Battery status
+  * WiFi and Bluetooth mac address (on older Androids)
+  * Audio card info
+  * Native libraries used in another applications
+  * CPU and battery temperature monitor
 
 RepoType: git
 Repo: https://github.com/kamgurgul/cpu-info.git
@@ -81,7 +81,7 @@ Builds:
       - external
       - app/libs
     build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
-        ../external/cpuinfo/lib/$arch; done
+      ../external/cpuinfo/lib/$arch; done
     ndk: r21d
 
   - versionName: 4.4.3
@@ -97,7 +97,7 @@ Builds:
       - external
       - app/libs
     build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
-        ../external/cpuinfo/lib/$arch; done
+      ../external/cpuinfo/lib/$arch; done
     ndk: r21d
 
   - versionName: 4.5.0
@@ -111,12 +111,145 @@ Builds:
     scandelete:
       - external
     build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
-        ../external/cpuinfo/lib/$arch; done
+      ../external/cpuinfo/lib/$arch; done
     ndk: r22b
+
+  - versionName: 4.6.0
+    versionCode: 40600
+    commit: 4.6.0
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - cpuinfo@63b254577ed77a8004a9be6ac707f3dccc4e1fd9
+    scandelete:
+      - external
+    build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
+      ../external/cpuinfo/lib/$arch; done
+    ndk: r25b
+
+  - versionName: 4.7.0
+    versionCode: 40700
+    commit: 4.7.0
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - cpuinfo@63b254577ed77a8004a9be6ac707f3dccc4e1fd9
+    scandelete:
+      - external
+    build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
+      ../external/cpuinfo/lib/$arch; done
+    ndk: r25b
+
+  - versionName: 5.0.1
+    versionCode: 50001
+    commit: 5.0.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - cpuinfo@63b254577ed77a8004a9be6ac707f3dccc4e1fd9
+    scandelete:
+      - external
+    build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
+      ../external/cpuinfo/lib/$arch; done
+    ndk: r25b
+
+  - versionName: 5.1.0
+    versionCode: 50100
+    commit: 5.1.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - cpuinfo@63b254577ed77a8004a9be6ac707f3dccc4e1fd9
+    scandelete:
+      - external
+    build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
+      ../external/cpuinfo/lib/$arch; done
+    ndk: r25b
+
+  - versionName: 5.2.0
+    versionCode: 50200
+    commit: 5.2.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - cpuinfo@63b254577ed77a8004a9be6ac707f3dccc4e1fd9
+    scandelete:
+      - external
+    build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
+      ../external/cpuinfo/lib/$arch; done
+    ndk: r25b
+
+  - versionName: 5.3.1
+    versionCode: 50301
+    commit: 5.3.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - cpuinfo@63b254577ed77a8004a9be6ac707f3dccc4e1fd9
+    scandelete:
+      - external
+    build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
+      ../external/cpuinfo/lib/$arch; done
+    ndk: r25b
+
+  - versionName: 5.4.0
+    versionCode: 50400
+    commit: 5.4.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    srclibs:
+      - cpuinfo@63b254577ed77a8004a9be6ac707f3dccc4e1fd9
+    scandelete:
+      - external
+    build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
+      ../external/cpuinfo/lib/$arch; done
+    ndk: r25b
+
+  - versionName: 6.0.1
+    versionCode: 60001
+    commit: android-6.0.1
+    subdir: androidApp
+    gradle:
+      - yes
+    srclibs:
+      - cpuinfo@63b254577ed77a8004a9be6ac707f3dccc4e1fd9
+    scandelete:
+      - shared/src/androidMain/cpp/external
+      - shared/src/nativeInterop/cinterop
+    build: for arch in x86 x86_64 armeabi-v7a arm64-v8a; do cp $$cpuinfo$$/obj/local/$arch/libcpuinfo.a
+      ../shared/src/androidMain/cpp/external/cpuinfo/lib/$arch; done
+    ndk: r27b
 
 MaintainerNotes: We can't use auto update because version code and name are dynamic.
 
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 4.5.0
-CurrentVersionCode: 40500
+CurrentVersion: 6.0.1
+CurrentVersionCode: 60001

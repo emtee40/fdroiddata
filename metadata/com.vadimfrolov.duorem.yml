@@ -1,7 +1,7 @@
 Categories:
-  - System
   - Internet
   - Multimedia
+  - System
 License: GPL-3.0-or-later
 AuthorName: Vadim Frolov
 AuthorEmail: mail@vadimfrolov.com
@@ -61,11 +61,6 @@ Builds:
     gradle:
       - yes
     prebuild: echo 'android { lintOptions { checkReleaseBuilds false } }' >> build.gradle
-
-MaintainerNotes: |-
-    Summary and Description are maintained by upstream using fastlane in
-    the source repo:
-    https://f-droid.org/docs/All_About_Descriptions_Graphics_and_Screenshots
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v.*\d$

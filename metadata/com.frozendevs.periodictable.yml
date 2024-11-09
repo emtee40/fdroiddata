@@ -6,10 +6,10 @@ IssueTracker: https://github.com/Frozen-Developers/android-periodic-table/issues
 
 AutoName: Periodic Table
 Description: |-
-    <b>NOTE:</b> This app is no longer maintained, its repo was archived.
+  <b>NOTE:</b> This app is no longer maintained, its repo was archived.
 
-    Holo styled interactive periodic table with list of element properties and
-    isotopes based on Wikipedia’s database.
+  Holo styled interactive periodic table with list of element properties and
+  isotopes based on Wikipedia's database.
 
 RepoType: git
 Repo: https://github.com/Frozen-Developers/android-periodic-table
@@ -45,10 +45,11 @@ Builds:
         build.gradle
 
 MaintainerNotes: |-
-    Prebuild is a quirk to force a specific gradle version. Upstream says "always use latest gradle".
-    Website was http://www.frozendevs.com.
+  Prebuild is a quirk to force a specific gradle version. Upstream says "always use latest gradle".
+  Website was http://www.frozendevs.com.
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.1.1
 CurrentVersionCode: 5

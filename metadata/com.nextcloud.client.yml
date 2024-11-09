@@ -10,17 +10,17 @@ Donate: https://nextcloud.com/include/
 
 AutoName: Nextcloud
 Description: |-
-    A safe home for all your data. Access & share your files, calendars, contacts,
-    mail & more from any device, on your terms. This is the official Android app.
+  A safe home for all your data. Access & share your files, calendars, contacts,
+  mail & more from any device, on your terms. This is the official Android app.
 
-    <b>Features:</b>
+  <b>Features:</b>
 
-    * Easy, modern interface
-    * Upload your files to your Nextcloud server
-    * Share your files with others
-    * Keep your favorite files and folders synced
-    * Instant Upload for photos and videos taken by your device
-    * Multi-account support
+  * Easy, modern interface
+  * Upload your files to your Nextcloud server
+  * Share your files with others
+  * Keep your favorite files and folders synced
+  * Instant Upload for photos and videos taken by your device
+  * Multi-account support
 
 RepoType: git
 Repo: https://github.com/nextcloud/android.git
@@ -896,7 +896,7 @@ Builds:
     commit: stable-3.22.0
     subdir: app
     sudo:
-      - apt-get update || apt-get update
+      - apt-get update
       - apt-get install -y openjdk-11-jdk-headless
       - update-alternatives --auto java
     gradle:
@@ -985,10 +985,9 @@ Builds:
     scandelete:
       - app/src/androidTest/assets
 
-  - versionName: 3.24.0 RC1
-    versionCode: 30240051
-    disable: obsolete RC
-    commit: rc-3.24.0-01
+  - versionName: 3.24.0
+    versionCode: 30240090
+    commit: stable-3.24.0
     subdir: app
     gradle:
       - generic
@@ -1001,9 +1000,236 @@ Builds:
     scandelete:
       - app/src/androidTest/assets
 
-  - versionName: 3.24.0 RC2
-    versionCode: 30240052
-    commit: rc-3.24.0-02
+  - versionName: 3.24.1
+    versionCode: 30240190
+    commit: stable-3.24.1
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.25.0
+    versionCode: 30250090
+    commit: stable-3.25.0
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.26.0
+    versionCode: 30260090
+    commit: stable-3.26.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.27.0
+    versionCode: 30270090
+    commit: stable-3.27.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.28.0
+    versionCode: 30280090
+    commit: stable-3.28.0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.28.1
+    versionCode: 30280190
+    commit: stable-3.28.1
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.28.2
+    versionCode: 30280290
+    commit: stable-3.28.2
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.29.0
+    versionCode: 30290090
+    commit: stable-3.29.0
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.29.1
+    versionCode: 30290190
+    commit: stable-3.29.1
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.29.3
+    versionCode: 30290390
+    commit: stable-3.29.3
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.30.0
+    versionCode: 30300090
+    commit: stable-3.30.0
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.30.1 RC1
+    versionCode: 30300151
+    disable: obsolete RC
+    commit: rc-3.30.1-01
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.30.1
+    versionCode: 30300190
+    disable: https://github.com/nextcloud/android/issues/13738
+    commit: stable-3.30.1
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.30.2
+    versionCode: 30300290
+    commit: stable-3.30.2
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.30.3
+    versionCode: 30300390
+    commit: stable-3.30.3
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.30.4
+    versionCode: 30300490
+    commit: stable-3.30.4
     subdir: app
     gradle:
       - generic
@@ -1017,10 +1243,10 @@ Builds:
       - app/src/androidTest/assets
 
 MaintainerNotes: 'Latest 3 stable version will be kept, RC versions will be directly
-    outdated by either a new RC or by a stable version: 3.3.0 RC1 -> 3.3.0 RC2 ->
-    3.3.0 (stable)'
+  outdated by either a new RC or by a stable version: 3.3.0 RC1 -> 3.3.0 RC2 -> 3.3.0
+  (stable)'
 
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 3.23.1
-CurrentVersionCode: 30230190
+CurrentVersion: 3.30.4
+CurrentVersionCode: 30300490

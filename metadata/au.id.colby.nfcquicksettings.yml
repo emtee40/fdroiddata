@@ -1,0 +1,46 @@
+Categories:
+  - Connectivity
+License: GPL-3.0-or-later
+AuthorName: Paul Colby
+SourceCode: https://github.com/pcolby/nfc-quick-settings
+IssueTracker: https://github.com/pcolby/nfc-quick-settings/issues
+Changelog: https://github.com/pcolby/nfc-quick-settings/blob/HEAD/CHANGELOG.md
+
+AutoName: NFC Quick Settings
+
+RepoType: git
+Repo: https://github.com/pcolby/nfc-quick-settings.git
+
+Builds:
+  - versionName: 1.4.1
+    versionCode: 11
+    commit: v1.4.1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.2
+    versionCode: 12
+    commit: 67a20d20575567ceb9b336d0d564226d96680d5c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 13
+    commit: 9f0ca157d9d6217513850285844003a92d4035f8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 14
+    commit: d4d44ec5ce149e1fa7b30c03e5cdb6c9223d7b98
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.4.4
+CurrentVersionCode: 14

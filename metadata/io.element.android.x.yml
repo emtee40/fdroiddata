@@ -1,0 +1,763 @@
+Categories:
+  - Internet
+License: AGPL-3.0-only
+AuthorName: New Vector Ltd.
+AuthorEmail: press@element.io
+WebSite: https://element.io/
+SourceCode: https://github.com/vector-im/element-x-android
+IssueTracker: https://github.com/vector-im/element-x-android/issues
+Translation: https://localazy.com/p/element
+Changelog: https://github.com/vector-im/element-x-android/blob/HEAD/CHANGES.md
+Liberapay: matrixdotorg
+Bitcoin: 1LxowEgsquZ3UPZ68wHf8v2MDZw82dVmAEa
+
+AutoName: Element X
+
+RepoType: git
+Repo: https://github.com/vector-im/element-x-android.git
+
+Builds:
+  - versionName: 0.4.14
+    versionCode: 40004141
+    commit: v0.4.14
+    subdir: app
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-armeabi-v7a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/gitBranchName() = .*/gitBranchName() = "main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '25590c9'
+
+  - versionName: 0.4.14
+    versionCode: 40004142
+    commit: v0.4.14
+    subdir: app
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-arm64-v8a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/gitBranchName() = .*/gitBranchName() = "main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '25590c9'
+
+  - versionName: 0.4.14
+    versionCode: 40004143
+    commit: v0.4.14
+    subdir: app
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/gitBranchName() = .*/gitBranchName() = "main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '25590c9'
+
+  - versionName: 0.4.14
+    versionCode: 40004144
+    commit: v0.4.14
+    subdir: app
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86_64-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86_64-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/gitBranchName() = .*/gitBranchName() = "main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '25590c9'
+
+  - versionName: 0.4.15
+    versionCode: 40004151
+    commit: v0.4.15
+    subdir: app
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-armeabi-v7a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/gitBranchName() = .*/gitBranchName() = "main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ 'a0086df'
+
+  - versionName: 0.4.15
+    versionCode: 40004152
+    commit: v0.4.15
+    subdir: app
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-arm64-v8a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/gitBranchName() = .*/gitBranchName() = "main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ 'a0086df'
+
+  - versionName: 0.4.15
+    versionCode: 40004153
+    commit: v0.4.15
+    subdir: app
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/gitBranchName() = .*/gitBranchName() = "main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ 'a0086df'
+
+  - versionName: 0.4.15
+    versionCode: 40004154
+    commit: v0.4.15
+    subdir: app
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86_64-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86_64-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/gitBranchName() = .*/gitBranchName() = "main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ 'a0086df'
+
+  - versionName: 0.6.5
+    versionCode: 40006051
+    commit: v0.6.5
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-armeabi-v7a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.6.5
+    versionCode: 40006052
+    commit: v0.6.5
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-arm64-v8a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.6.5
+    versionCode: 40006053
+    commit: v0.6.5
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.6.5
+    versionCode: 40006054
+    commit: v0.6.5
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86_64-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86_64-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.0
+    versionCode: 40007001
+    commit: v0.7.0
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-armeabi-v7a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.0
+    versionCode: 40007002
+    commit: v0.7.0
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-arm64-v8a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.0
+    versionCode: 40007003
+    commit: v0.7.0
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.0
+    versionCode: 40007004
+    commit: v0.7.0
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86_64-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86_64-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.1
+    versionCode: 40007011
+    commit: v0.7.1
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-armeabi-v7a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.1
+    versionCode: 40007012
+    commit: v0.7.1
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-arm64-v8a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.1
+    versionCode: 40007013
+    commit: v0.7.1
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.1
+    versionCode: 40007014
+    commit: v0.7.1
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86_64-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86_64-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.2
+    versionCode: 40007021
+    commit: v0.7.2
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-armeabi-v7a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-armeabi-v7a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.2
+    versionCode: 40007022
+    commit: v0.7.2
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-arm64-v8a-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-arm64-v8a-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.2
+    versionCode: 40007023
+    commit: v0.7.2
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+  - versionName: 0.7.2
+    versionCode: 40007024
+    commit: v0.7.2
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    output: build/outputs/apk/fdroid/release/app-fdroid-x86_64-release-unsigned.apk
+    binary: https://github.com/element-hq/element-x-android/releases/download/v%v/app-fdroid-x86_64-release-signed.apk
+    srclibs:
+      - reproducible-apk-tools@v0.2.8
+    rm:
+      - libraries/pushproviders/firebase
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle.kts
+      - sed -i -e '/gplayImplementation/d' -e '/libs.plugins.firebaseAppDistribution/d'
+        -e '/firebaseAppDistribution {/,/^            }/d' build.gradle.kts
+      - echo -e "\nservices.maptiler.apikey=agdgS5zCgFZF5gDi9VXS" >> ../local.properties
+      - echo -e "\nservices.maptiler.darkMapId=dea61faf-292b-4774-9660-58fcef89a7f3"
+        >> ../local.properties
+      - echo -e "\nservices.maptiler.lightMapId=9bc819c8-e627-474a-a348-ec144fe3d810"
+        >> ../local.properties
+      - sed -i -e 's/"git rev-parse --abbrev-ref HEAD"/"echo main"/' ../plugins/src/main/kotlin/extension/Utils.kt
+      - sed -i -e '/firebase/d' ../plugins/build.gradle.kts
+    scandelete:
+      - plugins
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-pg-map-id
+      $$OUT$$ '0000000'
+
+AllowedAPKSigningKeys: 6a2fdc3148049ce0d5c6e85010723b83fb207d20c7477f5c22ac53c877e92d47
+
+MaintainerNotes: We have to build all abi apks. If we patch it to build only one abi
+  the AndroidManifest.xml will be different.
+
+AutoUpdateMode: Version v%v
+UpdateCheckMode: HTTP
+VercodeOperation:
+  - 1 + %c
+  - 2 + %c
+  - 3 + %c
+  - 4 + %c
+UpdateCheckData: https://api.github.com/repos/element-hq/element-x-android/releases/latest|"name"\
+  *:\ *"(\d+)|.|"tag_name":"v(\d+\.\d+\.\d+)"
+CurrentVersion: 0.7.2
+CurrentVersionCode: 40007024

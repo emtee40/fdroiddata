@@ -6,11 +6,12 @@ AuthorEmail: sixface@msn.com
 WebSite: https://quillpad.github.io
 SourceCode: https://github.com/quillpad/quillpad
 IssueTracker: https://github.com/quillpad/quillpad/issues
+Changelog: https://github.com/quillpad/quillpad/releases
 
 AutoName: Quillpad
 
 RepoType: git
-Repo: https://github.com/quillpad/quillpad
+Repo: https://github.com/quillpad/quillpad.git
 Binaries: https://github.com/quillpad/quillpad/releases/download/v%v/quillpad-%v.apk
 
 Builds:
@@ -35,7 +36,120 @@ Builds:
     gradle:
       - defaultFlavor
 
+  - versionName: 1.4.7
+    versionCode: 11
+    commit: fa0ec2939dec0f2ea099d5a0e62daefc867b8969
+    subdir: app
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.8
+    versionCode: 12
+    commit: b31d06f47654dc6b7d907e12806a5debfd7f84b4
+    subdir: app
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.9
+    versionCode: 13
+    commit: 3e207bbc8be16c6e187cf2b73acd21b17a0924bb
+    subdir: app
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.10
+    versionCode: 14
+    commit: 71e041ab9808602b77a16cd120c1279d73be40f7
+    subdir: app
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.11
+    versionCode: 15
+    commit: 843555fbe46762ae891f36cf29f14165bdb31d87
+    subdir: app
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.12
+    versionCode: 16
+    commit: 2bfb8f7d09c7e9072b6425b81ea56a9cc08c47ac
+    subdir: app
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.13
+    versionCode: 17
+    commit: c1669ab93a6a8a0811379203a4aeb8b5c5bff836
+    subdir: app
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.14
+    versionCode: 20
+    commit: 8a83ab4e17dc77c9f4a368b1f3fdfe5d2a509f32
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.15
+    versionCode: 21
+    commit: 9782da907e9df6777857dc9147c57a2851939292
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.16
+    versionCode: 22
+    commit: 6ea40b315b71b0420a6d07071cc5b60595a725cc
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.17
+    versionCode: 23
+    commit: 526c14e18d165160573b8aee559daa0865331c38
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.18
+    versionCode: 25
+    commit: 546913d0daa89f4c96c22bc0e5114b555bc4fb0c
+    subdir: app
+    gradle:
+      - defaultFlavor
+
+  - versionName: 1.4.19
+    versionCode: 26
+    commit: 703c4d2b3f86f84f348fdbfc297ec1355ef5fd56
+    subdir: app
+    gradle:
+      - defaultFlavor
+
+AllowedAPKSigningKeys: 3c2b48eeceed98e70a33d21d3e9ff6193343a1dddcbb9cc076b859d36cdeae6a
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.6
-CurrentVersionCode: 10
+CurrentVersion: 1.4.19
+CurrentVersionCode: 26

@@ -2,9 +2,8 @@ Categories:
   - Sports & Health
 License: GPL-3.0-or-later
 AuthorName: Thomas Zell
-AuthorEmail: medilog@zell-mbc.com
-AuthorWebSite: https://zell-mbc.com/
-WebSite: https://zell-mbc.com/en/privacy/medilog
+AuthorEmail: thomas@zell-mbc.com
+WebSite: https://codeberg.org/toz/MediLog
 SourceCode: https://codeberg.org/toz/MediLog
 IssueTracker: https://codeberg.org/toz/MediLog/issues
 Translation: https://weblate.bubu1.eu/projects/medilog/core/
@@ -15,7 +14,7 @@ Bitcoin: 1EUrRpjDAGgpS8J46tmsVWKbgNqAv7rWC7
 AutoName: MediLog
 
 RepoType: git
-Repo: https://codeberg.org/toz/MediLog
+Repo: https://codeberg.org/toz/medilog.git
 
 Builds:
   - versionName: 1.7.3
@@ -396,7 +395,199 @@ Builds:
       - yes
     prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
 
+  - versionName: 2.5.7
+    versionCode: 5423
+    commit: 393215a6fb933463c8c52ea13bc55208a18c26bd
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.5.8
+    versionCode: 5424
+    commit: 4fcf87bbfb410b3af00865502be699fa08a1fc4e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.5.9
+    versionCode: 5425
+    commit: dab97a1c9029ab052a6ec7a8a11b39283e1331ea
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.5.10
+    versionCode: 5426
+    commit: c15698807554db2fb94737a7ce96809e8f64e578
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.5.11
+    versionCode: 5427
+    commit: b89020c9f261a982a5c8f8e769e5ccc8129fedb5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.6.1
+    versionCode: 5441
+    commit: fe36d6a546689c013e488922524ae228317c2831
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.6.2
+    versionCode: 5442
+    commit: 6b32bb40e3c72449bff1e4bd04a336224b866be7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.6.3
+    versionCode: 5443
+    commit: b9caed567530a02314fe3d9bf02c5586b32a7c14
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.7.0
+    versionCode: 5444
+    commit: 75b8b1c74a71d4c89765f98ae03395bc0b10abd8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.7.1
+    versionCode: 5445
+    commit: 51d9e7e177c1d2529e1d05125d4748a3211480e4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.7.2
+    versionCode: 5446
+    commit: a72a82cb6a8b9ef64b6d847142df233a4bc25cdc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.7.3
+    versionCode: 5447
+    commit: 6bcd1584955ca62a6e12f648472b705a3ac5ca33
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.0
+    versionCode: 5453
+    commit: 7e33ebf164a7ad9089d183af5d5eea77c4f4ef57
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.1
+    versionCode: 5454
+    commit: 31caae350fef39c0b24ce3e2b6326d19060c3014
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.3
+    versionCode: 5456
+    commit: ede575ce724c41b3abcd4e06acef72f97cfd6b72
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 2.7.4
+    versionCode: 5457
+    commit: 06e22b3729865690244b15a07b7c07ea84a1451c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.4
+    versionCode: 5458
+    commit: 19cfc0f294593c074c5772bf66754409ea3a0c2a
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.5
+    versionCode: 5459
+    commit: 835db3b17c6d9bdd267fb628f5f4965416a17c65
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.6
+    versionCode: 5461
+    commit: 313a9ca2ea0654c6dabd7b2be6e0e52b7266ade2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.0.7
+    versionCode: 5462
+    commit: ad36343ab7c3d2d3fac57686967c382294474fe0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.5.6
-CurrentVersionCode: 5422
+CurrentVersion: 3.0.7
+CurrentVersionCode: 5462

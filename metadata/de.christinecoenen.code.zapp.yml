@@ -2,7 +2,7 @@ Categories:
   - Multimedia
 License: MIT
 AuthorName: Team Mediathekview
-AuthorEmail: code.coenen@gmail.com
+AuthorEmail: zapp@mediathekview.de
 SourceCode: https://github.com/mediathekview/zapp
 IssueTracker: https://github.com/mediathekview/zapp/issues
 Translation: https://www.transifex.com/none-581/zapp-android-app/
@@ -477,7 +477,90 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 8.3.0
+    versionCode: 66
+    commit: 7b3457ea3c511258e05a2e7c29581300c59e1469
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 8.3.1
+    versionCode: 67
+    commit: 7397c9426b9225cfd38dae93add75157d2e2dd66
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 8.3.2
+    versionCode: 68
+    commit: 36919ba4aa8024213214f23a34cdf4bf0562a9d7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 8.4.0
+    versionCode: 69
+    commit: e38a07781d66a0538b90686c39e5ace7ed966937
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 8.5.0
+    versionCode: 70
+    commit: 998acf90b170de56d4d54b553644726f8f56c44c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 8.5.1
+    versionCode: 71
+    commit: 0f83a923c2bcdb3c50331a2f0df92779fdce65f8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 8.5.2
+    versionCode: 72
+    commit: 737e17a1c6df72de5136e2d6c21bb13cd04c8e38
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 8.5.3
+    versionCode: 73
+    commit: 24cbe53889d4cfbcbf0463b4a3e219f0629bc9a6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 8.5.4
+    versionCode: 74
+    commit: 7a3cadf5a8b8efd1bb5cb9a0d6175c995e2f5aaf
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v\d+\.\d+\.\d+$
-CurrentVersion: 8.2.0
-CurrentVersionCode: 65
+CurrentVersion: 8.5.4
+CurrentVersionCode: 74

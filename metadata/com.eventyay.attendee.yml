@@ -1,8 +1,9 @@
 AntiFeatures:
-  - Tracking
+  Tracking:
+    en-US: App requires account & login, site logged in to collects data.
 Categories:
-  - Internet
   - Connectivity
+  - Internet
 License: Apache-2.0
 WebSite: https://eventyay.com/
 SourceCode: https://github.com/fossasia/open-event-attendee-android
@@ -88,23 +89,8 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/LOCAL_KEY/d' build.gradle
 
-  - versionName: 0.8.0
-    versionCode: 15
-    commit: v0.8.0
-    subdir: app
-    gradle:
-      - fdroid
-    prebuild: sed -i -e '/LOCAL_KEY/d' build.gradle
-
-  - versionName: 0.9.1
-    versionCode: 17
-    commit: v0.9.1
-    subdir: app
-    gradle:
-      - fdroid
-    prebuild: sed -i -e '/LOCAL_KEY/d' build.gradle
-
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 0.9.1
 CurrentVersionCode: 17

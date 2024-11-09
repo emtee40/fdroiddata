@@ -5,14 +5,14 @@ AuthorName: OpenTracks Team
 WebSite: https://OpenTracksApp.com
 SourceCode: https://github.com/OpenTracksApp/OpenTracks
 IssueTracker: https://github.com/OpenTracksApp/OpenTracks/issues
-Translation: https://weblate.bubu1.eu/engage/OpenTracks/
+Translation: https://hosted.weblate.org/engage/opentracks/
 Changelog: https://github.com/OpenTracksApp/OpenTracks/releases
 Liberapay: OpenTracks
 
 AutoName: OpenTracks
 
 RepoType: git
-Repo: https://github.com/OpenTracksApp/OpenTracks
+Repo: https://github.com/OpenTracksApp/OpenTracks.git
 
 Builds:
   - versionName: v3.0.1
@@ -647,7 +647,387 @@ Builds:
     gradle:
       - yes
 
+  - versionName: v4.3.0
+    versionCode: 5151
+    commit: c0b84c3d72824779d786b5c8d67f020343492457
+    gradle:
+      - yes
+
+  - versionName: v4.3.1
+    versionCode: 5168
+    commit: 0605dbb0ab105b0ce7fee09947d46740e74a2f71
+    gradle:
+      - yes
+
+  - versionName: v4.3.2
+    versionCode: 5189
+    commit: 241a52ee7c26c8b38d0d778df0651bd01b6649dc
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.3.3
+    versionCode: 5194
+    commit: 9225d90e458abe0dd81a53895798f4246334ec8d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.3.4
+    versionCode: 5196
+    commit: 4f040ac79f871caa858d48efb01095b25a7efbee
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.3.5
+    versionCode: 5211
+    commit: 6538f0d5875f6064b2f794555a592bfc654a511e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.4.0
+    versionCode: 5222
+    commit: 24c2c5fc1b8a86001d8339933e99f8c3216c86b5
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.5.0
+    versionCode: 5262
+    commit: e0b84df8f60d3be45bb489df1ea8e777030e13af
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.6.0
+    versionCode: 5286
+    commit: 1749c776ab48788dd7692d57e9e9cb11c2cd8104
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.6.1
+    versionCode: 5289
+    commit: a4ec68def617eb4ef241079677ee5df5bd7d48b8
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.6.2
+    versionCode: 5305
+    commit: 3f891f7fb4ded559d74bdda5ef730e9440377a02
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.7.0
+    versionCode: 5313
+    commit: 52226c8ef4bb1749a43c3a350c55fe696f5fcf8b
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.7.1
+    versionCode: 5326
+    commit: c4235b1961b6adf21fa7cd3871c9d3c0bbc18512
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.8.0
+    versionCode: 5361
+    commit: 5501b0bb74fd8a0e7eaad397f37f05c766f1a402
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.8.1
+    versionCode: 5366
+    commit: 4f745a94bf5f392ba2cec340556ab3980ba894f7
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.8.2
+    versionCode: 5382
+    commit: f59ae51c6f926be6356095e15f945c48eca21bc5
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.8.3
+    versionCode: 5389
+    commit: 1b295e06da8026164d6c7191f5ce057dbd267730
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.8.4
+    versionCode: 5399
+    commit: a6f5635cb89dc4f15de3c27f9196fa21935763cb
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.0
+    versionCode: 5428
+    commit: 648ebadb36c35bdb383cdb05fc0a9ab0a69e5583
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.1
+    versionCode: 5447
+    commit: 07abf50fcad83368e8a4554c2d1284ffb2b2d0a1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.3
+    versionCode: 5491
+    commit: f4f17440c97c78aa169e2087b5ffe64d5cc5f3fd
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.4
+    versionCode: 5506
+    commit: e9e9bb387420baffbdde93d0ddcc9a8da7bddec3
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.5
+    versionCode: 5527
+    commit: 9fb84cc47cf0e29d9f9283c939f9738eac295986
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.6
+    versionCode: 5554
+    commit: edba2294f3e6716c4bb6618da30faae64e45a845
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.7
+    versionCode: 5559
+    commit: 5c1cb97c024cf7cfb857fa0355ea843d48fb3a9e
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.8
+    versionCode: 5563
+    commit: 333f7956b5eba432b287724146a63887c952a48a
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.9.9
+    versionCode: 5573
+    commit: 8d7a8719bc6f6a4f3fe2fb8a70299938342b26ba
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.10.0
+    versionCode: 5602
+    commit: 9b2126550e1e33c6bd588fcdfb333aa81fdafd64
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.10.1
+    versionCode: 5611
+    commit: 90d81c4d84b0e9ddd0746602dbf771f129672530
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.11.0
+    versionCode: 5641
+    commit: ce613183fe972948ac462b091a1a563c50fd40bc
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.11.1
+    versionCode: 5679
+    commit: 8400d45e987da9b77bddc3a446df3cce233fb444
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.11.2
+    versionCode: 5683
+    commit: cb9b94718af9611d3b814bb169e17b8e53ca2096
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.11.3
+    versionCode: 5705
+    commit: 4c204b6bd1d63de90da657a60e55049645d66dbd
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.12.0
+    versionCode: 5725
+    commit: 913903a283ec7f3737e2e467b6f1840439ab9ef1
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.12.1
+    versionCode: 5730
+    commit: 1d0c6cdd92c1e060d75b41f67fb7743c7cc03023
+    gradle:
+      - yes
+
+  - versionName: v4.12.2.
+    versionCode: 5749
+    commit: be7a43823a3919f43b01e93cf9c175a6f36cbe5b
+    gradle:
+      - yes
+
+  - versionName: v4.12.3
+    versionCode: 5753
+    commit: 9e496f97c155f97815397d0585bc20a3da4e576c
+    gradle:
+      - yes
+
+  - versionName: v4.12.4
+    versionCode: 5788
+    commit: a90c7deb3295d960aa39f1ebc5aea41340ca91d2
+    gradle:
+      - yes
+
+  - versionName: v4.12.5
+    versionCode: 5814
+    commit: 382acadc6ac43cbe5e630873dac61da4c7c5e242
+    gradle:
+      - yes
+
+  - versionName: v4.13.0
+    versionCode: 5837
+    commit: 117281469d1a6f2b64e580a3890987f4258ac5de
+    gradle:
+      - yes
+
+  - versionName: v4.13.1
+    versionCode: 5870
+    commit: 3a812ef31357ecaee70318240eab136a6c278804
+    gradle:
+      - yes
+
+  - versionName: v4.14.0
+    versionCode: 5889
+    commit: 594a34980bc4a9dda54daa6f844a1499fc879506
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v4.2.2
-CurrentVersionCode: 5141
+CurrentVersion: v4.14.0
+CurrentVersionCode: 5889

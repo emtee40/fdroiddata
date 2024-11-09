@@ -41,7 +41,31 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: '5.2'
-CurrentVersionCode: 52
+  - versionName: '5.3'
+    versionCode: 53
+    commit: 3ad1abbb19acadb031dc0bc0b099b067b5864f6c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '6.0'
+    versionCode: 60
+    commit: aebbc0102fa4875ab917f2a1a8ecfb79d491666d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '6.0'
+CurrentVersionCode: 60
+
+NoSourceSince: '6.0'

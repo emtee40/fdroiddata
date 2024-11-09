@@ -10,7 +10,7 @@ IssueTracker: https://github.com/hanjoongcho/aaf-easydiary/issues
 AutoName: Easy Diary
 
 RepoType: git
-Repo: https://github.com/hanjoongcho/aaf-easydiary
+Repo: https://github.com/hanjoongcho/aaf-easydiary.git
 
 Builds:
   - versionName: 1.4.72-beta_foss
@@ -275,14 +275,6 @@ Builds:
   - versionName: 1.4.156
     versionCode: 222
     commit: v1.4.156
-    subdir: app
-    gradle:
-      - foss
-
-  - versionName: 1.4.159
-    versionCode: 225
-    disable: fails to build
-    commit: v1.4.159
     subdir: app
     gradle:
       - foss
@@ -785,7 +777,153 @@ Builds:
     gradle:
       - foss
 
+  - versionName: 1.4.290.202302xx0
+    versionCode: 290
+    commit: 7b250c7b95aa095be58d07126f4dd1bc7799125e
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.291.202302260
+    versionCode: 291
+    commit: 35420c385dce401ff9b13e97793d8ff57f6b39c4
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.292.202303100
+    versionCode: 292
+    commit: 44bc9dfc4de3f5eeca88013b3802d7ce3c35bcdc
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.293.202303240
+    versionCode: 293
+    commit: 19cc5a26d96f7c3ded76ea778d21a992f2c3bf22
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.296.202304210
+    versionCode: 296
+    commit: 360198768f0b2ee2b11df0d9db96b200d72786dd
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.297.202304260
+    versionCode: 297
+    commit: 71671e22d9a074556ba2159690b61881b69cb05b
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.298.202306010
+    versionCode: 298
+    commit: 2e349541a3eeeda8aecfc6a71da716d53af65617
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.299.202306100
+    versionCode: 299
+    commit: 7c480fd3c1e48387103a24a1affc623ae01390e0
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.300.202307110
+    versionCode: 300
+    commit: e1b98156009e765a559d9018688c813166cc0a00
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.301.202308250
+    versionCode: 301
+    commit: 772a4dc89088fdb2b44cef6aaa285cd8cc5e7920
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.302.202309180
+    versionCode: 302
+    commit: 8e5804828cbe9fd463f640e63ec5e63eb229fa57
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.303.202310160
+    versionCode: 303
+    commit: 8440d1b6459e3089205b6625e53b371aa13d763c
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.304.202312270
+    versionCode: 304
+    commit: b16c44c2f2a01f1dc197a9de3caf632643cbf7bd
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.306.202402250
+    versionCode: 306
+    commit: 666bfa6abf8ee4c9ac10346786b8d0d9dc9fd7eb
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 1.4.308.202406030
+    versionCode: 308
+    commit: b0aed0a9df0e4577f77902be73d043e3d2e1bfcf
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
+  - versionName: 1.4.309.202406100
+    versionCode: 309
+    commit: f8322f1eeb878c4fcf2a2c51af56b20ea939a780
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
+  - versionName: 1.4.311.202406190
+    versionCode: 311
+    commit: 88906927442374868b6eec88972a83667a875e63
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
+  - versionName: 1.4.312.202406200
+    versionCode: 312
+    commit: 7f1e9e5c5464e7f8333c8e62b86cc30f7434707c
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
+  - versionName: 1.4.316.202410151
+    versionCode: 316
+    commit: a8f1b6950c08c52c1ae2412ad7a69ed3160a2843
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
+  - versionName: 1.4.317.202410240
+    versionCode: 317
+    commit: cb480dd11193563e406085cc2511e669477398aa
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.289.202302031
-CurrentVersionCode: 289
+CurrentVersion: 1.4.317.202410240
+CurrentVersionCode: 317

@@ -1,5 +1,10 @@
 AntiFeatures:
-  - Tracking
+  NonFreeNet:
+    en-US: Depends on criticalmaps.net server
+  TetheredNet:
+    en-US: Relies on OpenStreetMap servers
+  Tracking:
+    en-US: Location is shared with the criticalmaps.net server continously
 Categories:
   - Internet
 License: Apache-2.0
@@ -10,12 +15,12 @@ Translation: https://www.transifex.com/criticalmaps/criticalmaps/
 
 AutoName: Critical Maps
 Description: |-
-    This app tracks your location and shares it via a <a href="http://criticalmaps.net">map</a>
-    with all other participants of the critical mass bicycle protest. You can use
-    the chat to communicate with all other participants.
+  This app tracks your location and shares it via a <a href="http://criticalmaps.net">map</a>
+  with all other participants of the critical mass bicycle protest. You can use
+  the chat to communicate with all other participants.
 
-    Location sharing and chat relies on <a href="http://criticalmaps.net">criticalmaps.net</a>.
-    Location tracking is always active while using the app.
+  Location sharing and chat relies on <a href="http://criticalmaps.net">criticalmaps.net</a>.
+  Location tracking is always active while using the app.
 
 RepoType: git
 Repo: https://github.com/CriticalMaps/criticalmaps-android
@@ -28,7 +33,7 @@ Builds:
     srclibs:
       - AndroidAsyncHttp@1.4.6
       - OSMBonusPack@v5.1
-      - osmdroid/osmdroid-android@osmdroid-parent-4.2
+      - osmdroid@osmdroid-parent-4.2
       - Otto@otto-parent-1.3.5
       - Twitter4J@4.0.2
       - CommonsLang@LANG_3_3_2
@@ -241,12 +246,56 @@ Builds:
       - yes
     prebuild: sed -i -e 's/maven { .*bintray.com.* }/jcenter()/' ../build.gradle
 
+  - versionName: 2.7.0
+    versionCode: 43
+    commit: 15671fed2a5421759cc1daef9f961bab65b864bb
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/maven { .*bintray.com.* }/jcenter()/' ../build.gradle
+
+  - versionName: 2.7.1
+    versionCode: 44
+    commit: 2f0d2f09410a61183281f34756a09039292dd46e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/maven { .*bintray.com.* }/jcenter()/' ../build.gradle
+
+  - versionName: 2.8.0
+    versionCode: 45
+    commit: d1fffb16cd5e542b5bcca26f67abe959a5aa9d78
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/maven { .*bintray.com.* }/jcenter()/' ../build.gradle
+
+  - versionName: 2.8.2
+    versionCode: 47
+    commit: 4d0450a91e3da7b809195ad7a2aa7652761482bc
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/maven { .*bintray.com.* }/jcenter()/' ../build.gradle
+
+  - versionName: 2.9.0
+    versionCode: 48
+    commit: ea86a05ec67cbfa5b9f4f82ee88817e4d3068395
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/maven { .*bintray.com.* }/jcenter()/' ../build.gradle
+
 MaintainerNotes: |-
-    Upstream prefers custom Maven repos to JCenter due to security concerns, see
-    https://gitlab.com/fdroid/fdroiddata/issues/1627. We can't afford the luxury
-    of blacklisting JCenter, so continue using it.
+  Upstream prefers custom Maven repos to JCenter due to security concerns, see
+  https://gitlab.com/fdroid/fdroiddata/issues/1627. We can't afford the luxury
+  of blacklisting JCenter, so continue using it.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.6.6
-CurrentVersionCode: 42
+CurrentVersion: 2.9.0
+CurrentVersionCode: 48

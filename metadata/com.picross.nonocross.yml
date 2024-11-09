@@ -103,7 +103,19 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.3.5
+    versionCode: 11
+    commit: e00a3294565ea8a0698fcf3a9396594ecb0aac89
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.18.1'
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.3.4
-CurrentVersionCode: 10
+CurrentVersion: 1.3.5
+CurrentVersionCode: 11

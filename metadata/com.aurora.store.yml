@@ -1,5 +1,9 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on the Google Play Store servers
+  Tracking:
+    en-US: By default, the apps list and system details are sent to Google Play Store
+      servers, which is likely enough data to fingerprint the device
 Categories:
   - System
 License: GPL-3.0-or-later
@@ -8,17 +12,13 @@ AuthorEmail: whyorean@gmail.com
 WebSite: http://auroraoss.com
 SourceCode: https://gitlab.com/AuroraOSS/AuroraStore
 IssueTracker: https://gitlab.com/AuroraOSS/AuroraStore/issues
-Translation: https://poeditor.com/join/project/54swaCpFXJ
+Translation: https://hosted.weblate.org/engage/aurora-store
 Changelog: https://gitlab.com/AuroraOSS/AuroraStore/blob/HEAD/CHANGELOG
-Donate: https://www.paypal.me/whyorean
+Donate: https://www.paypal.com/paypalme/AuroraDev
+Liberapay: whyorean
+Bitcoin: bc1qu7cy9fepjj309y4r2x3rymve7mw4ff39c8cpe0
 
 AutoName: Aurora Store
-Description: |-
-    This <i>Aurora Store</i> is a complete rewrite, replacing https://f-droid.org/packages/com.dragons.aurora.
-
-    Aurora Store is an alternate to Google's Play Store, with an elegant design,
-    using Aurora you can download apps, update existing apps, search for apps,
-    get details about in-app trackers, spoof your location and much more.
 
 RepoType: git
 Repo: https://gitlab.com/AuroraOSS/AuroraStore.git
@@ -231,7 +231,191 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 4.1.1
-CurrentVersionCode: 41
+  - versionName: 4.2.0
+    versionCode: 42
+    commit: a6d9f956195dc4b435f0c95c406505e79f0c62a3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.1
+    versionCode: 43
+    commit: 9f4be705c3e686e9ebeab3048a70374c322da504
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.2
+    versionCode: 44
+    commit: c511abe7128660134bd30751fb7cc2d8ba685d8f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.2.3
+    versionCode: 45
+    commit: 3943144ce9bf39f3a94f9e9032fc09d6dc6a393b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.2.5
+    versionCode: 47
+    commit: 4ff2e0d65e7e4793cea9a466b85d63f34aa2f08c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.3.0
+    versionCode: 48
+    commit: ed8fb3b7dfbb6d21bd860d2074f2e34dd0f73af8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.3.1
+    versionCode: 49
+    commit: accb986487aa89b9650d081bfccd7ac9df14ad1e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.3.2
+    versionCode: 50
+    commit: 87712f79425b6fe8dfa32de792f6b519f0852353
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.3.3
+    versionCode: 51
+    commit: 5cf28c03fc8a332e4a9908fcd9f4489863be9bed
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.3.4
+    versionCode: 52
+    commit: 7662f2c6f7f773c8f98469c393d898fb4d7185fe
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.3.5
+    versionCode: 53
+    commit: 491b16782c12e57204dd2e42d10dd661e67c0398
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.4.1
+    versionCode: 55
+    commit: 2c7ea9ca5359fa38912e91b9c2c1790b2308b869
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.4.2
+    versionCode: 56
+    commit: 2ba8692467f4b1ccc255383243cb8179280ec65a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.4.3
+    versionCode: 57
+    commit: eecd026114c84675f2cc0cac90e719d1851ac5f6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.4
+    versionCode: 58
+    commit: 34b94ef23665825162b3da2675cb9d74a5a613e8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.5.0
+    versionCode: 59
+    commit: 44e7a6f6f90de6ac45a8084902ec85f6689f0f83
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.5.1
+    versionCode: 60
+    commit: 4adb0fa613280a21ea6d6888e12a9d311266e3f9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.0
+    versionCode: 61
+    commit: 694ece74c74a6332f1c331e98b53facc13855a1e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.1
+    versionCode: 62
+    commit: d257d53a07485cb4daa20519782d88cc3805b92c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.6.2
+    versionCode: 63
+    commit: ee7ea6d05d1eb64bb69efe93d61ffeadb117e45b
+    subdir: app
+    gradle:
+      - yes
+
+MaintainerNotes: |
+  Manually updated temporarily. Want to build all versions, but only
+  mark them as current after some testing.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 4.6.1
+CurrentVersionCode: 62

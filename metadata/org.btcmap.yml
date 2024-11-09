@@ -1,17 +1,19 @@
 Categories:
   - Internet
-  - Navigation
   - Money
+  - Navigation
 License: AGPL-3.0-or-later
 SourceCode: https://github.com/teambtcmap/btcmap-android
 IssueTracker: https://github.com/teambtcmap/btcmap-android/issues
+Translation: https://github.com/teambtcmap/btcmap-android#-help-with-translation
 Changelog: https://github.com/teambtcmap/btcmap-android/releases
+Donate: https://btcmap.org/support-us
 Bitcoin: bc1qng60mcufjnmz6330gze5yt4m6enzra7lywns2d
 
 AutoName: BTC Map
 
 RepoType: git
-Repo: https://github.com/teambtcmap/btcmap-android
+Repo: https://github.com/teambtcmap/btcmap-android.git
 
 Builds:
   - versionName: 0.1.0
@@ -340,7 +342,118 @@ Builds:
     preassemble:
       - bundleData
 
+  - versionName: 0.6.2
+    versionCode: 42
+    commit: f9d6f3121df0ce4ddd4e8d630ac9197d87036832
+    subdir: app
+    gradle:
+      - fdroid
+      - selfSigned
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+    preassemble:
+      - bundleData
+
+  - versionName: 0.6.4
+    versionCode: 44
+    commit: a7ab25b336962fb94589aaaf3debcf30c891ff58
+    subdir: app
+    gradle:
+      - fdroid
+      - selfSigned
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+    preassemble:
+      - bundleData
+
+  - versionName: 0.6.5
+    versionCode: 45
+    commit: 5fc477192cb01f0260d00b35e4b46ba919e72ffd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+      - selfSigned
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+    preassemble:
+      - bundleData
+
+  - versionName: 0.6.6
+    versionCode: 46
+    commit: d58b245ce0a243964e46d95f1c460876e7ad388a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+      - selfSigned
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+    preassemble:
+      - bundleData
+
+  - versionName: 0.7.0
+    versionCode: 47
+    commit: 4446851c95645ab6935fd04441c2b2f5f4044feb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+      - selfSigned
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+    preassemble:
+      - bundleData
+
+  - versionName: 0.7.1
+    versionCode: 48
+    commit: a76927bfe30e1cac18a2d687a3db5eda981032d0
+    subdir: app
+    gradle:
+      - fdroid
+      - selfSigned
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+    preassemble:
+      - bundleData
+
+  - versionName: 0.7.2
+    versionCode: 49
+    commit: c43711560ceaf2e0b25cd0b3dbb3535c8513bedb
+    subdir: app
+    gradle:
+      - fdroid
+      - selfSigned
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+    preassemble:
+      - bundleData
+
+  - versionName: 0.7.3
+    versionCode: 50
+    commit: 1ef132b66bd49b4f72f293c1751dbb442b002956
+    subdir: app
+    gradle:
+      - fdroid
+      - selfSigned
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+    preassemble:
+      - bundleData
+
+  - versionName: 0.8.0
+    versionCode: 51
+    commit: ca749e340a974f3a2900255b79beafa3c729f809
+    subdir: app
+    gradle:
+      - fdroid
+      - selfSigned
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+    preassemble:
+      - bundleData
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.6.1
-CurrentVersionCode: 41
+CurrentVersion: 0.8.0
+CurrentVersionCode: 51

@@ -3,6 +3,7 @@ Categories:
 License: GPL-3.0-only
 AuthorName: Bill Farmer
 AuthorWebSite: https://billthefarmer.github.io/
+WebSite: https://billthefarmer.github.io/gurgle/
 SourceCode: https://github.com/billthefarmer/gurgle
 IssueTracker: https://github.com/billthefarmer/gurgle/issues
 Changelog: https://github.com/billthefarmer/gurgle/releases
@@ -10,7 +11,7 @@ Changelog: https://github.com/billthefarmer/gurgle/releases
 AutoName: Gurgle
 
 RepoType: git
-Repo: https://github.com/billthefarmer/gurgle
+Repo: https://github.com/billthefarmer/gurgle.git
 
 Builds:
   - versionName: '1.0'
@@ -209,7 +210,61 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.20'
+    versionCode: 120
+    commit: 45a065c1840b3ab20021846994299cfe0bb2269d
+    gradle:
+      - yes
+
+  - versionName: '1.21'
+    versionCode: 121
+    commit: dbf3e22cd2a7c34becb3cb8fa1491cee61537eb8
+    gradle:
+      - yes
+
+  - versionName: '1.22'
+    versionCode: 122
+    commit: 20e8aaa46372db95f57fb9746b9c9be6da6e6f14
+    gradle:
+      - yes
+
+  - versionName: '1.23'
+    versionCode: 123
+    commit: e0384121af9f9a6e69764ee7dd1246fdfb30e500
+    gradle:
+      - yes
+
+  - versionName: '1.24'
+    versionCode: 124
+    commit: 1d25204efd1dabb6610e74993e76e2c7de9593e4
+    gradle:
+      - yes
+
+  - versionName: '1.25'
+    versionCode: 125
+    commit: f40e7c80e392539477398f55449771f3e31f1b13
+    gradle:
+      - yes
+
+  - versionName: '1.26'
+    versionCode: 126
+    commit: fddf84409a2cfbbd04905b5d17368bc073654282
+    gradle:
+      - yes
+
+  - versionName: '1.27'
+    versionCode: 127
+    commit: 2114bc56b5a91bde1623f834fc0f47a61a1b258a
+    gradle:
+      - yes
+
+  - versionName: '1.28'
+    versionCode: 128
+    commit: e464bba6528c8c453624f0fd4c735d977876bd62
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.19'
-CurrentVersionCode: 119
+CurrentVersion: '1.28'
+CurrentVersionCode: 128

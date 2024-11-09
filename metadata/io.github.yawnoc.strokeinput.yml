@@ -253,7 +253,113 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.1.0
+    versionCode: 51
+    commit: f4ac0947c06fcc5a31a1d9aa5978a83057863043
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 53
+    commit: 7002352ef8af9782df52a76f4709cff18fef93fc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 54
+    commit: 2de34cf11586ee645feb34015b4a8587e23c9c9f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.2
+    versionCode: 55
+    commit: 1f842a52f74c105b962ae7299f670e7156e8389c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.3
+    versionCode: 56
+    commit: c3de670cc52f5960dec197949d45bec7ab3d68d8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.4
+    versionCode: 57
+    commit: 5290b0d2bb35f84e3c77ec561950c7cff7a2077f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.5
+    versionCode: 58
+    commit: 27f8d6bb51b27c1f35b356b218dcc85d732a0432
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.6
+    versionCode: 59
+    commit: 16302bbcec4f5fb9f9005125f5e8d79499229ec7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.7
+    versionCode: 60
+    commit: 4e898128d5a11ecd1b6909111fe27bd0c25e757c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.8
+    versionCode: 61
+    commit: 75a1c436fbad013a112e9681c1da06980c581354
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.9
+    versionCode: 62
+    commit: d7363825f25147f514e7fb090c1033fbd7ede27f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.2.10
+    versionCode: 63
+    commit: 5b988c234fcdc9c04ec3c4570657a3b3e3cf0d60
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 64
+    commit: ccda847827ee6cd838df259d65f4c33e835ba7c6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 66
+    commit: 07e2a551b2908d6b9659feef05b014a4c21960be
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 1.0.0
-CurrentVersionCode: 50
+UpdateCheckMode: Tags ^v[\d.]+$
+CurrentVersion: 1.4.0
+CurrentVersionCode: 66

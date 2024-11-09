@@ -3,15 +3,15 @@ Categories:
 License: GPL-2.0-only
 AuthorName: Mateusz Bak
 AuthorEmail: mateusz.bak.dev@gmail.com
-SourceCode: https://github.com/mateusz-bak/openreads-android
-IssueTracker: https://github.com/mateusz-bak/openreads-android/issues
-Translation: https://crwd.in/openreads-android
-Changelog: https://github.com/mateusz-bak/openreads-android/releases
+SourceCode: https://github.com/mateusz-bak/openreads
+IssueTracker: https://github.com/mateusz-bak/openreads/issues
+Translation: https://hosted.weblate.org/engage/openreads/
+Changelog: https://github.com/mateusz-bak/openreads/releases
 
 AutoName: Openreads
 
 RepoType: git
-Repo: https://github.com/mateusz-bak/openreads-android
+Repo: https://github.com/mateusz-bak/openreads.git
 
 Builds:
   - versionName: 1.13.0
@@ -97,7 +97,208 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 2.0.2
+    versionCode: 42
+    commit: 0daf342b5dddaba1257d780e61b345e8fdbe7082
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - lib/l10n/app_kaa.arb
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run flutter_launcher_icons
+      - submodules/flutter/bin/flutter build apk
+
+  - versionName: 2.0.3
+    versionCode: 43
+    commit: d5508696a2c8c4554d248c68a6425458246106cb
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - lib/l10n/app_kaa.arb
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run flutter_launcher_icons
+      - submodules/flutter/bin/flutter build apk
+
+  - versionName: 2.1.0
+    versionCode: 44
+    commit: 0bae7d000ac5124cf9962b33437e1381b2a3fe01
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+      - submodules/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run flutter_launcher_icons
+      - submodules/flutter/bin/flutter build apk
+
+  - versionName: 2.2.0
+    versionCode: 46
+    commit: 88dd1a701b749320dbaf0a6fd09fc187f4df3596
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run flutter_launcher_icons
+      - submodules/flutter/bin/flutter build apk
+
+  - versionName: 2.3.0
+    versionCode: 47
+    commit: 4c8f9eb270d37f544d294905bce875b6a9880caa
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run flutter_launcher_icons
+      - submodules/flutter/bin/flutter build apk
+
+  - versionName: 2.4.1
+    versionCode: 50
+    commit: d3d9d6ae6a2b7f568c1e7fae8e6d4ae6ba7faab1
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run flutter_launcher_icons
+      - submodules/flutter/bin/flutter build apk
+
+  - versionName: 2.5.0
+    versionCode: 51
+    commit: 764253788fb5ccfa51ba11c0122b88948d1e21c7
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run flutter_launcher_icons
+      - submodules/flutter/bin/flutter build apk
+
+  - versionName: 2.5.1
+    versionCode: 53
+    commit: 26c59e4a174776f977f01ed0062e3a8e15aa0453
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run flutter_launcher_icons
+      - submodules/flutter/bin/flutter build apk
+
+  - versionName: 2.6.0
+    versionCode: 54
+    commit: a742801794fdd2e31f72f420369e3124bbe9d439
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run flutter_launcher_icons
+      - submodules/flutter/bin/flutter build apk
+
+  - versionName: 2.7.0
+    versionCode: 55
+    commit: e881f237aa18bafdef8111b35ab66cab8120c42b
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter config --no-analytics
+      - submodules/flutter/bin/flutter pub get
+    scanignore:
+      - submodules/flutter/bin/cache
+    scandelete:
+      - submodules/flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - submodules/flutter/bin/flutter pub run flutter_launcher_icons
+      - submodules/flutter/bin/flutter build apk
+    antifeatures:
+      NonFreeNet:
+        en-US: Downloads covers from DuckDuckGo
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+$
-CurrentVersion: 1.17.3
-CurrentVersionCode: 31
+UpdateCheckData: pubspec.yaml|version:\s.*\+(\d+)|.|version:\s(.*)\+
+CurrentVersion: 2.7.0
+CurrentVersionCode: 55

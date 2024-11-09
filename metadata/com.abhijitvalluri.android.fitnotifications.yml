@@ -11,12 +11,12 @@ IssueTracker: https://github.com/abhijitvalluri/fitnotifications/issues
 
 AutoName: Fit Notifications
 Description: |-
-    <i>Fit Notifications</i> allows you to view all your Android notifications on your
-    Fitbit device. See list of compatible devices. <b>No special permissions
-    required!</b>
+  <i>Fit Notifications</i> allows you to view all your Android notifications on your
+  Fitbit device. See list of compatible devices. <b>No special permissions
+  required!</b>
 
-    <b>COMPATIBLE DEVICES:</b> Fitbit Alta, Alta HR, Charge 2, Blaze, Surge Limited
-    compatibility with Fitbit Flex 2 (lights up the LEDs)
+  <b>COMPATIBLE DEVICES:</b> Fitbit Alta, Alta HR, Charge 2, Blaze, Surge Limited
+  compatibility with Fitbit Flex 2 (lights up the LEDs)
 
 RepoType: git
 Repo: https://github.com/abhijitvalluri/fitnotifications.git
@@ -52,7 +52,20 @@ Builds:
     rm:
       - fitnotifications_launcher_icon_outdated.zip
 
+  - versionName: '2.12'
+    versionCode: 46
+    commit: bb8b9995d933fbaf6c11a9355b174b15b2e2b3e8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - fitnotifications_launcher_icon_outdated.zip
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.11.1
-CurrentVersionCode: 45
+CurrentVersion: '2.12'
+CurrentVersionCode: 46

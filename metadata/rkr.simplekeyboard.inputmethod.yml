@@ -8,15 +8,15 @@ Changelog: https://github.com/rkkr/simple-keyboard/releases
 
 AutoName: Simple Keyboard
 Description: |-
-    This keyboard is created for those who only need a keyboard and nothing more.
+  This keyboard is created for those who only need a keyboard and nothing more.
 
-    Features:
+  Features:
 
-    * Small size
-    * Adjustable keyboard height for more screen space
-    * Custom theme colors
-    * Minimal permissions
-    * Ads-free
+  * Small size
+  * Adjustable keyboard height for more screen space
+  * Custom theme colors
+  * Minimal permissions
+  * Ads-free
 
 RepoType: git
 Repo: https://github.com/rkkr/simple-keyboard.git
@@ -467,7 +467,68 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '5.14'
+    versionCode: 99
+    commit: addeabbf7f7c7808c05b8720d1a2ff54469df1a9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '5.15'
+    versionCode: 100
+    commit: a1d412c09e0f99d7b8df7ccd44215dd46c35a8d9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '5.16'
+    versionCode: 102
+    commit: 3ccd7ce8fda9949feafdb69bfc846e130fe32f34
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '5.17'
+    versionCode: 103
+    commit: 89e89c4922b05ac2e5573f13a65461675e89a52b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.19'
+    versionCode: 105
+    commit: e165029131e5898b79574a34135278d8ab0bdd1c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.20'
+    versionCode: 106
+    commit: 56f5546e17a5b8a418ad3b5add4598e19c26953b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.21'
+    versionCode: 107
+    commit: 2382af925fc398f10152ba83f4516b02ad69c6d1
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '5.13'
-CurrentVersionCode: 98
+CurrentVersion: '5.21'
+CurrentVersionCode: 107

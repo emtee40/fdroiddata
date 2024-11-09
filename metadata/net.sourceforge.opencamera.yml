@@ -11,22 +11,22 @@ Donate: https://opencamera.org.uk/info.html#supportme
 
 AutoName: Open Camera
 Description: |-
-    A feature rich camera application, including:
+  A feature rich camera application, including:
 
-    * auto-stabilise option
-    * multitouch zoom
-    * flash/torch
-    * choice of focus modes
-    * face detection
-    * front/back camera support
-    * change recording resolution
-    * video/audio recording
-    * timer
-    * burst mode
-    * silenceable shutter
-    * configurable gui
-    * geotagging
-    * external microphone support
+  * auto-stabilise option
+  * multitouch zoom
+  * flash/torch
+  * choice of focus modes
+  * face detection
+  * front/back camera support
+  * change recording resolution
+  * video/audio recording
+  * timer
+  * burst mode
+  * silenceable shutter
+  * configurable gui
+  * geotagging
+  * external microphone support
 
 RepoType: git
 Repo: https://git.code.sf.net/p/opencamera/code
@@ -353,7 +353,29 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.52'
+    versionCode: 88
+    commit: 542a575b4d3a1072d7810fc95abee49ab4bf6a99
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install libncurses5
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.53.1
+    versionCode: 90
+    commit: a6673ade58550ed468d53a430608fecfe6bcd721
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install libncurses5
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.51.1
-CurrentVersionCode: 87
+CurrentVersion: 1.53.1
+CurrentVersionCode: 90

@@ -68,14 +68,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: '0.9'
-    versionCode: 9
-    disable: Could not find com.android.tools.build:gradle:3.0.1
-    commit: v0.9
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: '0.10'
     versionCode: 10
     commit: v0.10
@@ -202,7 +194,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '0.28'
+    versionCode: 28
+    commit: 3c1c3b4e00ea312111af3ea27b5c6ad522a2255e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.29'
+    versionCode: 29
+    commit: 5756d61a8f6f6061a22e0f98020846b7b7a52943
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '0.27'
-CurrentVersionCode: 27
+CurrentVersion: '0.29'
+CurrentVersionCode: 29

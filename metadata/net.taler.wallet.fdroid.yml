@@ -5,20 +5,21 @@ AuthorName: GNU Taler
 AuthorWebSite: https://taler.net/
 SourceCode: https://git.taler.net/taler-android.git/
 IssueTracker: https://bugs.gnunet.org/
+Translation: https://weblate.taler.net/projects/gnu-taler/wallet-android
 
 AutoName: Taler Wallet
 Description: |-
-    This app is a wallet for GNU Taler. It is highly experimental, and not ready for production use yet.
+  This app is a wallet for GNU Taler. It is highly experimental, and not ready for production use yet.
 
-    GNU Taler is a privacy-preserving payment system. Customers can stay anonymous, but merchants can not hide their income through payments with GNU Taler. This helps to avoid tax evasion and money laundering.
+  GNU Taler is a privacy-preserving payment system. Customers can stay anonymous, but merchants can not hide their income through payments with GNU Taler. This helps to avoid tax evasion and money laundering.
 
-    The primary use case of GNU Taler is payments; it is not meant as a store of value. Payments are always backed by an existing currency.
+  The primary use case of GNU Taler is payments; it is not meant as a store of value. Payments are always backed by an existing currency.
 
-    Payment are made after exchanging existing money into electronic money with the help of an Exchange service, that is, a payment service provider for Taler.
+  Payment are made after exchanging existing money into electronic money with the help of an Exchange service, that is, a payment service provider for Taler.
 
-    When making a payment, customers only need a charged wallet. A merchant can accept payments without making their customers register on the merchant's Website.
+  When making a payment, customers only need a charged wallet. A merchant can accept payments without making their customers register on the merchant's Website.
 
-    GNU Taler is immune against many types of fraud, such as phishing of credit card information or chargeback fraud. In case of loss or theft, only the limited amount of money left in the wallet might be gone.
+  GNU Taler is immune against many types of fraud, such as phishing of credit card information or chargeback fraud. In case of loss or theft, only the limited amount of money left in the wallet might be gone.
 
 RepoType: git
 Repo: https://git.taler.net/taler-android.git
@@ -66,8 +67,667 @@ Builds:
     preassemble:
       - :wallet:verifyWalletLibrary
 
+  - versionName: 0.9.2+p1
+    versionCode: 23
+    commit: 07928b55f1653507543a43653f157e6ef27283c1
+    subdir: wallet
+    gradle:
+      - fdroid
+
+  - versionName: 0.9.3
+    versionCode: 26
+    commit: c3ffef4ceae3159d3ac387d918ccf195047a60a3
+    subdir: wallet
+    gradle:
+      - fdroid
+
+  - versionName: 0.9.3+p2
+    versionCode: 28
+    commit: b9e869c7a0260a1f882d858052fafe2f8c1fb70e
+    subdir: wallet
+    gradle:
+      - fdroid
+
+  - versionName: 0.9.3+p3
+    versionCode: 29
+    commit: b064cb0fbbc90ed92539178075959a747c85b43c
+    subdir: wallet
+    gradle:
+      - fdroid
+
+  - versionName: 0.9.3+p5
+    versionCode: 31
+    commit: 14a102693a0f032669b6bf9aa5ce3a79b04f3016
+    subdir: wallet
+    gradle:
+      - fdroid
+
+  - versionName: 0.9.3+p6
+    versionCode: 32
+    commit: 793746ef485e8409298fcbdf601d4d1965c9b732
+    subdir: wallet
+    gradle:
+      - fdroid
+
+  - versionName: 0.9.3+p7
+    versionCode: 33
+    commit: 76572dc6696314797b79495e712a79127425faf9
+    subdir: wallet
+    gradle:
+      - fdroid
+
+  - versionName: 0.9.3+p8
+    versionCode: 34
+    commit: 2a91350f267fa6b4a56bb54039db6d71318fc9e4
+    subdir: wallet
+    gradle:
+      - fdroid
+
+  - versionName: 0.9.3+p9
+    versionCode: 35
+    commit: 7f351d48e856bcfbbe1bdd27b7ab85e131f90e3b
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 0.9.3+p10
+    versionCode: 36
+    commit: 17fa11376d1fa6502c438a56c7352d3157cb47c4
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 0.9.4
+    versionCode: 371
+    commit: 2e1f7e8b447371e61c8a3fec4e9d6b85b0b4b15d
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4
+    versionCode: 372
+    commit: 2e1f7e8b447371e61c8a3fec4e9d6b85b0b4b15d
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4
+    versionCode: 373
+    commit: 2e1f7e8b447371e61c8a3fec4e9d6b85b0b4b15d
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4
+    versionCode: 374
+    commit: 2e1f7e8b447371e61c8a3fec4e9d6b85b0b4b15d
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4+p1
+    versionCode: 381
+    commit: dced4160a0faf2a7bb666da97f9ad016fb934619
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4+p1
+    versionCode: 382
+    commit: dced4160a0faf2a7bb666da97f9ad016fb934619
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4+p1
+    versionCode: 383
+    commit: dced4160a0faf2a7bb666da97f9ad016fb934619
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4+p1
+    versionCode: 384
+    commit: dced4160a0faf2a7bb666da97f9ad016fb934619
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4+p2
+    versionCode: 391
+    commit: 9f1efa0e5e9e9289abe073bd2a5ed641abb59521
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4+p2
+    versionCode: 392
+    commit: 9f1efa0e5e9e9289abe073bd2a5ed641abb59521
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4+p2
+    versionCode: 393
+    commit: 9f1efa0e5e9e9289abe073bd2a5ed641abb59521
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.9.4+p2
+    versionCode: 394
+    commit: 9f1efa0e5e9e9289abe073bd2a5ed641abb59521
+    subdir: wallet
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.10.1
+    versionCode: 401
+    commit: 67a3f2110124d4212ca3054c4cfc9bf177044759
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.10.1
+    versionCode: 402
+    commit: 67a3f2110124d4212ca3054c4cfc9bf177044759
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.10.1
+    versionCode: 403
+    commit: 67a3f2110124d4212ca3054c4cfc9bf177044759
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.10.1
+    versionCode: 404
+    commit: 67a3f2110124d4212ca3054c4cfc9bf177044759
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.10.2
+    versionCode: 411
+    commit: 6738c6a03b87be9252e39a7236fed4f91505bb58
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.10.2
+    versionCode: 412
+    commit: 6738c6a03b87be9252e39a7236fed4f91505bb58
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.10.2
+    versionCode: 413
+    commit: 6738c6a03b87be9252e39a7236fed4f91505bb58
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.10.2
+    versionCode: 414
+    commit: 6738c6a03b87be9252e39a7236fed4f91505bb58
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.11.0
+    versionCode: 421
+    commit: 3554e64ee6b5f0dbfb6ff5f65db049b70848f40a
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.11.0
+    versionCode: 422
+    commit: 3554e64ee6b5f0dbfb6ff5f65db049b70848f40a
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.11.0
+    versionCode: 423
+    commit: 3554e64ee6b5f0dbfb6ff5f65db049b70848f40a
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.11.0
+    versionCode: 424
+    commit: 3554e64ee6b5f0dbfb6ff5f65db049b70848f40a
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.0
+    versionCode: 431
+    commit: 70f5a2ba0404bb444b758022ce1cfc030cfe84dd
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.0
+    versionCode: 432
+    commit: 70f5a2ba0404bb444b758022ce1cfc030cfe84dd
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.0
+    versionCode: 433
+    commit: 70f5a2ba0404bb444b758022ce1cfc030cfe84dd
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.0
+    versionCode: 434
+    commit: 70f5a2ba0404bb444b758022ce1cfc030cfe84dd
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.1
+    versionCode: 441
+    commit: e0a0123982ab6bb2e5602652c1a72c3e69edae5e
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.1
+    versionCode: 442
+    commit: e0a0123982ab6bb2e5602652c1a72c3e69edae5e
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.1
+    versionCode: 443
+    commit: e0a0123982ab6bb2e5602652c1a72c3e69edae5e
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.1
+    versionCode: 444
+    commit: e0a0123982ab6bb2e5602652c1a72c3e69edae5e
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.2
+    versionCode: 451
+    commit: 115d4e0da9e278e300be29634a7551072e356a82
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.2
+    versionCode: 452
+    commit: 115d4e0da9e278e300be29634a7551072e356a82
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.2
+    versionCode: 453
+    commit: 115d4e0da9e278e300be29634a7551072e356a82
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.12.2
+    versionCode: 454
+    commit: 115d4e0da9e278e300be29634a7551072e356a82
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.0
+    versionCode: 461
+    commit: 83e934266f3ab3d2570047ed6454c3de3688d30f
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.0
+    versionCode: 462
+    commit: 83e934266f3ab3d2570047ed6454c3de3688d30f
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.0
+    versionCode: 463
+    commit: 83e934266f3ab3d2570047ed6454c3de3688d30f
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.0
+    versionCode: 464
+    commit: 83e934266f3ab3d2570047ed6454c3de3688d30f
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.2
+    versionCode: 471
+    commit: c25fad4d51c2521ce1db761be37afdfdee244fe1
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.2
+    versionCode: 472
+    commit: c25fad4d51c2521ce1db761be37afdfdee244fe1
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.2
+    versionCode: 473
+    commit: c25fad4d51c2521ce1db761be37afdfdee244fe1
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.2
+    versionCode: 474
+    commit: c25fad4d51c2521ce1db761be37afdfdee244fe1
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.3
+    versionCode: 481
+    commit: 1b5c203f60a115525c305477f6da6b55ec982edf
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "armeabi-v7a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.3
+    versionCode: 482
+    commit: 1b5c203f60a115525c305477f6da6b55ec982edf
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "arm64-v8a"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.3
+    versionCode: 483
+    commit: 1b5c203f60a115525c305477f6da6b55ec982edf
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86"/' build.gradle
+    gradleprops:
+      - splitApk
+
+  - versionName: 0.13.3
+    versionCode: 484
+    commit: 1b5c203f60a115525c305477f6da6b55ec982edf
+    subdir: wallet
+    gradle:
+      - fdroid
+    prebuild: sed -i -e 's/include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"/include
+      "x86_64"/' build.gradle
+    gradleprops:
+      - splitApk
+
 AutoUpdateMode: Version
-UpdateCheckMode: Tags ^wallet-v?[0-9.]+$
-UpdateCheckData: wallet/build.gradle|versionCode (\d+)|.|walletCoreVersion = "(.+)"
-CurrentVersion: v0.9.1
-CurrentVersionCode: 21
+UpdateCheckMode: Tags ^wallet-v?[0-9.]+(|\+.*)$
+VercodeOperation:
+  - 10 * %c + 1
+  - 10 * %c + 2
+  - 10 * %c + 3
+  - 10 * %c + 4
+UpdateCheckData: wallet/build.gradle|versionCode (\d+)|.|versionName "(.+)"
+CurrentVersion: 0.13.3
+CurrentVersionCode: 484

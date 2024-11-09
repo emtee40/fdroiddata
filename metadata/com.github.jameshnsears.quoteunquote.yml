@@ -9,7 +9,7 @@ IssueTracker: https://github.com/jameshnsears/QuoteUnquote/issues
 AutoName: Quote Unquote
 
 RepoType: git
-Repo: https://github.com/jameshnsears/QuoteUnquote
+Repo: https://github.com/jameshnsears/QuoteUnquote.git
 
 Builds:
   - versionName: 2.0.0-fdroid
@@ -640,7 +640,421 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
 
+  - versionName: 4.14.0-fdroid
+    versionCode: 1252433
+    commit: 501b6c3c20c08a900cb94932f78a9db1ed9ef594
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.14.1-fdroid
+    versionCode: 1262433
+    commit: 23981630e1de409c4502d590fa379ceae9f91f36
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.15.0-fdroid
+    versionCode: 1272433
+    commit: 1dd62fdc6c2e5a1f5671f0d0a1b05560f0717c1a
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.15.2-fdroid
+    versionCode: 1292433
+    commit: df585bb6fafdbf3841b59e4c2e5fb30934f8522b
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.15.3-fdroid
+    versionCode: 1302433
+    commit: b35e980c269e99350095cd0d2918bc457ec0241f
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.15.4-fdroid
+    versionCode: 1312433
+    commit: 0bff2b40331073a76af4fdc4bdde8d94beb30a6a
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.17.0-fdroid
+    versionCode: 1332433
+    commit: ddabe16b59d28f2e99b003274698afb42e35b491
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.19.0-fdroid
+    versionCode: 1352433
+    commit: eabe7eaebafa6f86486ffc051462330b9cb954e0
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.20.0-fdroid
+    versionCode: 1362433
+    commit: c5a96cd02030399e495abdf4734df1bde24c4fe2
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.21.0-fdroid
+    versionCode: 1382433
+    commit: efcfd0a3e9d219988d221cf327c4b9db28b1843d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.22.1-fdroid
+    versionCode: 1402433
+    commit: e7e6bce090c61a2ef4e2c16e8fcbdeb5f11fa0c5
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.23.0-fdroid
+    versionCode: 1412433
+    commit: bff065134f5ba5c75148e80f74b9afde71298417
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.24.0-fdroid
+    versionCode: 1422433
+    commit: 4dbcf3dcc761c2117bee18a6be54fdb2d36b8069
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.25.0-fdroid
+    versionCode: 1432433
+    commit: b368256079005f0b17a5bb6253fbd2da1d0b6f08
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.26.1-fdroid
+    versionCode: 1472433
+    commit: 38bd53ba3071a739340c6509b8d226ab8ec081ee
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.27.0-fdroid
+    versionCode: 1482433
+    commit: 7b0145e306bad0889901b2788952b89ac8796a2d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.27.1-fdroid
+    versionCode: 1492433
+    commit: 0082e6dc1c782c8069b76485c932d3acdb646ce8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.28.0-fdroid
+    versionCode: 1502433
+    commit: a466ffc294ff13995d9619f7bcf7cb133d8cbda0
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.29.5-fdroid
+    versionCode: 1562433
+    commit: 927705f934d7c150b8d49654ebc4fd7140da144c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.30.0-fdroid
+    versionCode: 1582433
+    commit: 3f56043e8f5ef0c14497890c6b8dccf661b4c8c7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.32.0-fdroid
+    versionCode: 1602433
+    commit: b689d314bb6bbd52d647f431ccf05c28b78c83d3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.33.0-fdroid
+    versionCode: 1612433
+    commit: 6ae396c6637225c3e8b8e17421be1245404daf51
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.34.0-fdroid
+    versionCode: 1622433
+    commit: e9668785f4bd6076f53ff5277baf66bae94e78ee
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.35.0-fdroid
+    versionCode: 1632434
+    commit: d630a3b67b7b442ffc33b412c362f55610e5ad08
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.36.0-fdroid
+    versionCode: 1652434
+    commit: e88fec77b2dc6dee30127a227dae5c7ab83599ab
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.36.1-fdroid
+    versionCode: 1662434
+    commit: 2bc4aee319a4ab11ae15813f371fcc7837cebad5
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.37.0-fdroid
+    versionCode: 1672434
+    commit: a8ecd50bac99055ae932aa812630724b3cfbfbc2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.38.0-fdroid
+    versionCode: 1682434
+    commit: c248ed6d2ba4e51acff79967854bcbf2accfd89c
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.39.0-fdroid
+    versionCode: 1692434
+    commit: de6afdadc4e4e09a972c82715708dcb1c74ac6a2
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.40.3-fdroid
+    versionCode: 1732434
+    commit: b3b8f2d5e49c84f9a0541c453aa93301965f6217
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.41.0-fdroid
+    versionCode: 1742434
+    commit: cc13832f162339ca7eec5c8b03ed7b5b01695ad6
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.42.0-fdroid
+    versionCode: 1752434
+    commit: 9b457aceda2eaf6bc0218d9f48e6a206902c162a
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.43.0-fdroid
+    versionCode: 1762434
+    commit: f687095536a9b8468a033eb3814adc3ab488f87f
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.43.1-fdroid
+    versionCode: 1772434
+    commit: 4f7de6c10e2df8fc6081f294cf1af852fe1e1514
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.44.0-fdroid
+    versionCode: 1782435
+    commit: 4c7495248b5a63f98c4784cd465dcd75682b43bf
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.45.0-fdroid
+    versionCode: 1792435
+    commit: 66cfea7564585319b17e612c40338cb7cfa26ca6
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.46.0-fdroid
+    versionCode: 1802435
+    commit: 08b3d1439e8aa0c6091dd0d61913a307460a133a
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
+  - versionName: 4.46.1-fdroid
+    versionCode: 1812435
+    commit: e092b13c24343401ed19712701b1baaee5aac90c
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' {..,.}/build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*-fdroid$
-CurrentVersion: 4.13.0-fdroid
-CurrentVersionCode: 1242433
+CurrentVersion: 4.46.1-fdroid
+CurrentVersionCode: 1812435

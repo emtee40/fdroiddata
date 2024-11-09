@@ -6,6 +6,7 @@ AuthorEmail: corenting@gmail.com
 SourceCode: https://github.com/corenting/InflationCalculator
 IssueTracker: https://github.com/corenting/InflationCalculator/issues
 Changelog: https://github.com/corenting/InflationCalculator/releases
+Donate: https://corenting.fr/donate
 
 AutoName: Inflation Calculator
 
@@ -98,7 +99,40 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.15'
+    versionCode: 24
+    commit: f22e10afe17bf1e99856770c9ab5da3f515c36bc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.16'
+    versionCode: 25
+    commit: 28247eaaab30356f8171ccaa074f40d535cb336c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.17'
+    versionCode: 26
+    commit: d427eb16e9b0af975ccda46736800ef718892d4e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.14'
-CurrentVersionCode: 23
+CurrentVersion: '2.17'
+CurrentVersionCode: 26

@@ -1,6 +1,6 @@
 Categories:
-  - Science & Education
   - Reading
+  - Science & Education
 License: Apache-2.0
 SourceCode: https://github.com/rdoeffinger/Dictionary
 IssueTracker: https://github.com/rdoeffinger/Dictionary/issues
@@ -8,11 +8,11 @@ Changelog: https://github.com/rdoeffinger/Dictionary/releases
 
 AutoName: QuickDic
 Description: |-
-    Resurrection of https://f-droid.org/packages/com.hughes.android.dictionary to a new maintainer. Uses data
-    from Wiktionary and Beolingus to generate dictionary files that can be used
-    offline. These can be downloaded from within the app. These can also be
-    generated automatically, though documentation for the process is currently
-    missing.
+  Resurrection of https://f-droid.org/packages/com.hughes.android.dictionary to a new maintainer. Uses data
+  from Wiktionary and Beolingus to generate dictionary files that can be used
+  offline. These can be downloaded from within the app. These can also be
+  generated automatically, though documentation for the process is currently
+  missing.
 
 RepoType: git
 Repo: https://github.com/rdoeffinger/Dictionary.git
@@ -310,7 +310,45 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 5.6.3
+    versionCode: 118
+    commit: fa0b0195fe0c792108b32e609337b3828defa67d
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 5.7.1
+    versionCode: 120
+    commit: 6a64728317db1c3a001ff1491a2f68f9775d9c32
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 5.7.2
+    versionCode: 121
+    commit: 977d2bbe690d68b217bb76477a0f1832788e3159
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+
+  - versionName: 5.7.4
+    versionCode: 123
+    commit: d8aa3e5d64d3a72e428aba51111a6e34aa98ed74
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y zip
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*$
-CurrentVersion: 5.6.2
-CurrentVersionCode: 117
+CurrentVersion: 5.7.4
+CurrentVersionCode: 123

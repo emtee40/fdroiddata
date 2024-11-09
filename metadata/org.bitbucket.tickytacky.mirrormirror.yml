@@ -5,12 +5,12 @@ SourceCode: https://bitbucket-archive.softwareheritage.org/projects/ti/tickytack
 
 AutoName: Mirror Mirror
 Description: |-
-    See what your front camera sees
+  See what your front camera sees
 
-    * No permissions except camera
-    * Hides status bar
-    * Keeps screen on
-    * No other silly features
+  * No permissions except camera
+  * Hides status bar
+  * Keeps screen on
+  * No other silly features
 
 Builds:
   - versionName: '1.0'
@@ -37,3 +37,5 @@ AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 1.0.3.1
 CurrentVersionCode: 5
+
+NoSourceSince: 1.0.3.1

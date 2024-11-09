@@ -7,7 +7,6 @@ AuthorWebSite: https://bandev.uk
 SourceCode: https://github.com/BanDev/Buddha-Quotes
 IssueTracker: https://github.com/BanDev/Buddha-Quotes/issues
 Translation: https://hosted.weblate.org/projects/buddha-quotes/
-Changelog: https://github.com/BanDev/Buddha-Quotes/blob/main/CHANGELOG.md
 
 AutoName: Buddha Quotes
 
@@ -91,7 +90,18 @@ Builds:
     gradle:
       - yes
 
+  - versionName: v2.2.0
+    versionCode: 1014
+    commit: 41f61108e9862f60a814d6d7b4c74575f06ea373
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v2.1.1
-CurrentVersionCode: 1013
+CurrentVersion: v2.2.0
+CurrentVersionCode: 1014

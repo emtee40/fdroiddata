@@ -4,8 +4,8 @@ License: GPL-3.0-only
 
 AutoName: Pony Express
 Description: |-
-    Download and play podcasts from SixGun Productions — producers of the Linux
-    Outlaws podcast.
+  Download and play podcasts from SixGun Productions — producers of the Linux
+  Outlaws podcast.
 
 Builds:
   - versionName: 0.4.1
@@ -29,12 +29,7 @@ Builds:
     commit: '1.1'
     target: android-10
 
-  - versionName: '1.1_'
-    versionCode: 14
-    disable: not a release
-    commit: unknown - see disabled
-
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 1.1_d56e0055

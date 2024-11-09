@@ -1,44 +1,35 @@
 Ads:
   description: Tato aplikace obsahuje reklamu
-  icon: ic_antifeature_ads.xml
   name: Reklamy
 DisabledAlgorithm:
   description: Tato aplikace má slabý bezpečnostní podpis
-  icon: ic_antifeature_disabledalgorithm.xml
-  name: Podepsáno pomocí nebezpečného algoritmu
+  name: Podepsáno pomocí málo bezpečného algoritmu
 KnownVuln:
   description: Tato aplikace má známou zranitelnost v zabezpečení
-  icon: ic_antifeature_knownvuln.xml
   name: Známá zranitelnost
 NSFW:
-  description: Tato aplikace obsahuje obsah, který by neměl bý publikovaný či viditelný
-    kdekoli
-  icon: ic_antifeature_nsfw.xml
+  description: Tato aplikace zahrnuje obsah, který by neměl být zveřejněný nebo viditelný na všech místech
   name: NSFW
 NoSourceSince:
-  icon: ic_antifeature_nosourcesince.xml
-  name: Zdrojový kód už není k dispozici, aktualizace nejsou možné.
+  name: Zdrojový kód již není k dispozici, aktualizace nejsou možné.
 NonFreeAdd:
   description: Tato aplikace propaguje nesvobodné doplňky
-  icon: ic_antifeature_nonfreeadd.xml
   name: Nesvobodné doplňky
 NonFreeAssets:
   description: Tato aplikace obsahuje nesvobodné části
-  icon: ic_antifeature_nonfreeassets.xml
-  name: Nesvobodná aktiva
+  name: Nesvobodné části
 NonFreeDep:
-  description: Tato aplikace závisí na ostatních nesvobodných aplikacích
-  icon: ic_antifeature_nonfreedep.xml
+  description: Tato aplikace závisí na jiných nesvobodných aplikacích
   name: Nesvobodné závislosti
 NonFreeNet:
-  description: Tato aplikace propaguje nesvobodné síťové služby
-  icon: ic_antifeature_nonfreenet.xml
+  description: Tato aplikace propaguje nebo zcela závisí na nesvobodné síťové službě
   name: Nesvobodné síťové služby
 Tracking:
-  description: Tato aplikace zaznamenává a hlásí vaše aktivity
-  icon: ic_antifeature_tracking.xml
+  description: Tato aplikace zaznamenává a odesílá vaši aktivitu
   name: Sledování
 UpstreamNonFree:
-  description: Originální zdrojový kód je částečně nesvovodný
-  icon: ic_antifeature_upstreamnonfree.xml
-  name: Nesvobodný Upstream
+  description: Původní zdrojový kód je částečně nesvobodný
+  name: Nesvobodný originální kód
+TetheredNet:
+  name: Provázáné síťové služby
+  description: Tato aplikace zcela závisí na určité instanci síťové služby

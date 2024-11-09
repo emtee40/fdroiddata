@@ -155,27 +155,6 @@ Builds:
       - plugin
     ndk: r23b
 
-  - versionName: 1.2.1
-    versionCode: 90
-    disable: https://github.com/SagerNet/SagerNet/issues/533
-    commit: de5d8322e89eff76e4e2941c97b461ca2afb63b5
-    subdir: plugin/hysteria
-    submodules: true
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-      - curl -Lso go.tar.gz https://golang.org/dl/go1.18.6.linux-amd64.tar.gz
-      - echo "bb05f179a773fed60c6a454a24141aaa7e71edfd0f2d465ad610a3b8f1dc7fe8 go.tar.gz"
-        | sha256sum -c -
-      - tar xzf go.tar.gz --strip-components=1 -C /usr/local/
-    gradle:
-      - fdroid
-    scandelete:
-      - external
-      - plugin
-    ndk: r25
-
   - versionName: 1.3.0
     versionCode: 95
     commit: a03b41f625f1369c4ea6db7428adc50e2cfe05ec
@@ -194,10 +173,42 @@ Builds:
       - plugin
     ndk: r25
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags ^hysteria-plugin-.*
+  - versionName: 1.3.2
+    versionCode: 100
+    commit: 7952c52a8f8685c8629122f51ec7692518da0c54
+    subdir: plugin/hysteria
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports golang-go
+    gradle:
+      - fdroid
+    prebuild: cp -R ../../gradle ./
+    scandelete:
+      - external
+      - plugin
+    ndk: r25
+
+  - versionName: 1.3.5
+    versionCode: 105
+    commit: 088593e682e243e44ba5cffc562c75328efd3097
+    subdir: plugin/hysteria
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bullseye-backports golang-go
+    gradle:
+      - fdroid
+    prebuild: cp -R ../../gradle ./
+    scandelete:
+      - plugin
+    ndk: r25
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 VercodeOperation:
   - '%c * 5'
 UpdateCheckData: sager.properties|HYSTERIA_VERSION=(\d+)|.|HYSTERIA_VERSION_NAME=(.*)
-CurrentVersion: 1.3.0
-CurrentVersionCode: 95
+CurrentVersion: 1.3.5
+CurrentVersionCode: 105

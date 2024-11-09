@@ -7,8 +7,8 @@ Changelog: https://raw.githubusercontent.com/TobiasSchwirten/tuiodroid/HEAD/TUIO
 
 AutoName: TUIOdroid
 Description: |-
-    A TUIO tracker which allows multi-touch control input, which is sent to a remote
-    address using the TUIO protocol.
+  A TUIO tracker which allows multi-touch control input, which is sent to a remote
+  address using the TUIO protocol.
 
 RepoType: git
 Repo: https://github.com/TobiasSchwirten/tuiodroid
@@ -26,7 +26,7 @@ Builds:
     subdir: TUIOdroid
     forcevercode: true
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '1.1'

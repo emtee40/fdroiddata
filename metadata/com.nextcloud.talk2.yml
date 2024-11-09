@@ -1,6 +1,6 @@
 Categories:
-  - Internet
   - Connectivity
+  - Internet
 License: GPL-3.0-only
 WebSite: https://nextcloud.com/talk/
 SourceCode: https://github.com/nextcloud/talk-android
@@ -12,7 +12,7 @@ Donate: https://nextcloud.com/include/
 AutoName: Talk
 
 RepoType: git
-Repo: https://github.com/nextcloud/talk-android
+Repo: https://github.com/nextcloud/talk-android.git
 
 Builds:
   - versionName: 1.1.0
@@ -496,109 +496,155 @@ Builds:
       - generic
     prebuild: sed -i -e '/work-firebase/d' build.gradle
 
-  - versionName: 14.0.0
-    versionCode: 140000090
-    commit: 1d79ca851706ecc02af1eb48cb6ae17711587fdb
-    subdir: app
-    gradle:
-      - generic
-    prebuild: sed -i -e '/work-firebase/d' build.gradle
-
-  - versionName: 14.0.1
-    versionCode: 140000190
-    commit: 0904d2e289a8e65b3c000fd6eb9a2254cd580b72
-    subdir: app
-    gradle:
-      - generic
-    prebuild: sed -i -e '/work-firebase/d' build.gradle
-
-  - versionName: 14.0.2
-    versionCode: 140000290
-    commit: 9dec7742d41c618d1ce1350f14df7744b9d3ba88
-    subdir: app
-    gradle:
-      - generic
-    prebuild: sed -i -e '/work-firebase/d' build.gradle
-
-  - versionName: 14.1.0
-    versionCode: 140010090
-    commit: 2596bc1ab183f6829df1b8779bf49f5560c1bf51
+  - versionName: 17.0.0
+    versionCode: 170000090
+    commit: 920e441960fb103e040a5d1ae2da1626ed5b8b83
     subdir: app
     sudo:
       - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
       - generic
     prebuild: sed -i -e '/work-firebase/d' build.gradle
 
-  - versionName: 14.1.1
-    versionCode: 140010190
-    commit: 129ffa2fc4f71972596e9a20ca33389185d78795
+  - versionName: 17.0.1
+    versionCode: 170000190
+    commit: e3fd71d899f3222a18facf7153ccc6c347bf71c5
     subdir: app
     sudo:
       - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
       - generic
     prebuild: sed -i -e '/work-firebase/d' build.gradle
 
-  - versionName: 14.2.0
-    versionCode: 140020090
-    commit: da6e21bbd469b0502f158249b2a2b86737456daf
+  - versionName: 17.0.2
+    versionCode: 170000290
+    commit: de1bd9b92afba81ca3aa8b9b104a998d4a6b8ba7
     subdir: app
     sudo:
       - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
       - generic
     prebuild: sed -i -e '/work-firebase/d' build.gradle
 
-  - versionName: 15.0.0
-    versionCode: 150000090
-    commit: 2266c8535bfa93b56a9d1d72e518d5211b6513da
+  - versionName: 17.1.0
+    versionCode: 170100090
+    commit: 15e1e9172f8e909f4e218d550d7d213674837b51
     subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
       - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
 
-  - versionName: 15.0.1
-    versionCode: 150000190
-    commit: 3f791a03a4f9efe9b9ee8d43be552df00296a75d
+  - versionName: 17.1.2
+    versionCode: 170100290
+    commit: 27943e2d5a9f5be148e8e4dee3034f0e77fc7e8b
     subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
       - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
 
-  - versionName: 15.0.2
-    versionCode: 150000290
-    commit: a5f4796850352d19f3d9c31026b970da5ace5bca
+  - versionName: 17.1.3
+    versionCode: 170100390
+    commit: c85044b18616c7b6375263397d62eb80f8624fef
     subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
       - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
 
-  - versionName: 15.0.3
-    versionCode: 150000390
-    commit: 1adedae7b9bcdddebdd6a9ec62af34abb08fdd7b
+  - versionName: 18.0.0
+    versionCode: 180000090
+    commit: ec0bebf0d0403979915969b943512ce860a41cf6
     subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
       - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
 
-  - versionName: 15.1.0
-    versionCode: 150010090
-    commit: a3db009382984055dbb329b208c8497d67b964d4
+  - versionName: 18.0.1
+    versionCode: 180000190
+    commit: 821ca789b1f95d414ef31f121a1849e511150322
     subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
       - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
 
-  - versionName: 15.1.1
-    versionCode: 150010190
-    commit: c54693991b90040d25a827f9a4e73e85a046834e
+  - versionName: 18.1.0
+    versionCode: 180010090
+    commit: 4a9208eefcaaf1ffa1ff3a8640aec9af73ba2ab3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
+
+  - versionName: 19.0.0
+    versionCode: 190000090
+    commit: f7acf59d21c5bf099bd3ca9cf5d681b77d14af0a
     subdir: app
     gradle:
       - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
+
+  - versionName: 19.0.1
+    versionCode: 190000190
+    commit: c9f23f921775d14248914d21d9f5f77118bdebed
+    subdir: app
+    gradle:
+      - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
+
+  - versionName: 20.0.0
+    versionCode: 200000090
+    commit: d75fe681cd10391ea0c8cde727e5a8b88e477431
+    subdir: app
+    gradle:
+      - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
+
+  - versionName: 20.0.1
+    versionCode: 200000190
+    commit: d2128179043d5a2c6c7aa463ab04ae286e0b4eeb
+    subdir: app
+    gradle:
+      - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
+
+  - versionName: 20.0.2
+    versionCode: 200000290
+    commit: d0ecffff0f3e1a0d97244f3d9a1990da48a97178
+    subdir: app
+    gradle:
+      - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
 
 AutoUpdateMode: Version
-UpdateCheckMode: Tags ^v[\d.]+$
-CurrentVersion: 15.1.1
-CurrentVersionCode: 150010190
+UpdateCheckMode: Tags ^v[0-9]+\.[0-9]+\.[0-9]+$
+CurrentVersion: 20.0.2
+CurrentVersionCode: 200000290

@@ -71,7 +71,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.5'
+    versionCode: 11
+    commit: 23a497e2615b6f2190a41526a34c5a1fe3ce88ef
+    subdir: MaterialsLiveWallpaper/app
+    gradle:
+      - yes
+
+  - versionName: '1.6'
+    versionCode: 12
+    commit: 3ad4528bdb1eccb84b5a5bd20e709a7d7fae4a3e
+    subdir: MaterialsLiveWallpaper/app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.4'
-CurrentVersionCode: 10
+CurrentVersion: '1.6'
+CurrentVersionCode: 12

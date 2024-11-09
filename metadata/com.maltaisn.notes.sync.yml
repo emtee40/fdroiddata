@@ -6,13 +6,31 @@ AuthorEmail: apps@maltaisn.com
 WebSite: https://github.com/maltaisn/
 SourceCode: https://github.com/maltaisn/another-notes-app/
 IssueTracker: https://github.com/maltaisn/another-notes-app/issues/
-Translation: https://github.com/maltaisn/another-notes-app/blob/HEAD/TRANSLATING.md
+Translation: https://crowdin.com/project/another-notes-app
 Changelog: https://github.com/maltaisn/another-notes-app/blob/HEAD/CHANGELOG.md
 
 AutoName: Another Notes
+Description: |-
+  <b>App is not actively developed and dev will fix critical bugs.</b>
+
+  Another notes app, like there have been tens of thousands before.
+
+  This app doesn't strive to innovate, it strives to provide a simple way to
+  take notes. Material design is used to create a visually attractive interface.
+
+  Features:
+  * Text and list notes.
+  * Archive and recycle bin.
+  * Labeled notes.
+  * Reminders, including recurring reminders.
+  * Search text across all notes.
+  * Basic import and export.
+  * Light and dark theme support.
+  * Customizable interface.
+  * Open source app.
 
 RepoType: git
-Repo: https://github.com/maltaisn/another-notes-app/
+Repo: https://github.com/maltaisn/another-notes-app.git
 
 Builds:
   - versionName: 1.2.0
@@ -94,7 +112,44 @@ Builds:
     output: build/outputs/apk/release/app-release-unsigned.apk
     build: gradle assembleRelease -x lintVitalAnalyzeRelease
 
+  - versionName: 1.5.1
+    versionCode: 10501
+    commit: deb964e2bb9ca3a877d352a6ffb8563c2dfcf5a4
+    subdir: app
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    build: gradle assembleRelease -x lintVitalAnalyzeRelease
+
+  - versionName: 1.5.2
+    versionCode: 10502
+    commit: 90dd4d5eab0f69bd4a8787bd39a78bb5b82c28de
+    subdir: app
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    build: gradle assembleRelease -x lintVitalAnalyzeRelease
+
+  - versionName: 1.5.3
+    versionCode: 10503
+    commit: 5bb976fe68b6b68ad49844dacaf91c5e9a33f034
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    build: gradle assembleRelease -x lintVitalAnalyzeRelease
+
+  - versionName: 1.5.4
+    versionCode: 10504
+    commit: 49c40e18ef507efaaf17d7ed4fd4a75315bcf372
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk/release/app-release-unsigned.apk
+    build: gradle assembleRelease -x lintVitalAnalyzeRelease
+
 AutoUpdateMode: Version
-UpdateCheckMode: Tags v.*[0-9]$
-CurrentVersion: 1.5.0
-CurrentVersionCode: 10500
+UpdateCheckMode: Tags ^v[\d.]+$
+UpdateCheckName: com.maltaisn.notes
+CurrentVersion: 1.5.4
+CurrentVersionCode: 10504

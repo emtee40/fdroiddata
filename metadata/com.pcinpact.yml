@@ -1,16 +1,16 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on next.ink servers
 Categories:
   - Internet
 License: GPL-3.0-only
 SourceCode: https://github.com/AnaelMobilia/NextINpact-Unofficial
 IssueTracker: https://github.com/AnaelMobilia/NextINpact-Unofficial/issues
 
-AutoName: INpact Actualités informatiques
-Description: |-
-    Browse articles and comments on <a href="https://www.nextinpact.com/">NextINpact</a>. This
-    is an unofficial app not related to the actual website.
+AutoName: Next Actualités informatiques
 
 RepoType: git
-Repo: https://github.com/AnaelMobilia/NextINpact-Unofficial
+Repo: https://github.com/AnaelMobilia/NextINpact-Unofficial.git
 
 Builds:
   - versionName: 2.2.5
@@ -176,7 +176,105 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.6.9
+    versionCode: 269
+    commit: 16418d701af56b1e60f3c919b4329e6a80dbefc6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.0
+    versionCode: 270
+    commit: ad9524e43cc1927f68bbe48ec2dcba8173a4122a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.1
+    versionCode: 271
+    commit: c8b0ccfcdcf92468ec48968538538ada348e1d07
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.2
+    versionCode: 272
+    commit: 212c00b084887b36a3c20d13cc329494ea3191ce
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.3
+    versionCode: 273
+    commit: 762668bc13fd6df59f60a3f3a80199622f4d5089
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.4
+    versionCode: 274
+    commit: b05a2786af4fdf7989dd7ecdde88716e53cd78c1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.5
+    versionCode: 275
+    commit: f99851fe227f881b801f8c99288284c38dc054a3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.7.6
+    versionCode: 276
+    commit: c2c6b76e04ff430d9c318b07a44a86f08ef00bc7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.8
+    versionCode: 278
+    commit: 615418ad579bf8c8e166c6644102d749e3e6165e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.0
+    versionCode: 280
+    commit: b76c2f26420f796d296e4ed90dd9a11c029e9cbc
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.6.8
-CurrentVersionCode: 268
+CurrentVersion: 2.8.0
+CurrentVersionCode: 280

@@ -8,8 +8,8 @@ Translation: https://gitlab.com/axet/android-audio-recorder/blob/HEAD/docs/HOWTO
 
 AutoName: Audio Recorder
 Description: |-
-    Audio recorder with custom recording folder, nice recording volume indicator,
-    recording notification, recording lock screen activity.
+  Audio recorder with custom recording folder, nice recording volume indicator,
+  recording notification, recording lock screen activity.
 
 RepoType: git
 Repo: https://gitlab.com/axet/android-audio-recorder.git
@@ -956,7 +956,89 @@ Builds:
     prebuild: sed -i -e '/applicationVariants/,/^    }/d' build.gradle
     ndk: r16b
 
+  - versionName: 3.5.16
+    versionCode: 372
+    commit: a60251c3cc8ee0fa718c5301fea42deff4b9711e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationVariants/,/^    }/d' build.gradle
+    ndk: r16b
+
+  - versionName: 3.5.17
+    versionCode: 373
+    commit: 6f6bbf1625b4610c5c032ca344d13f8c9e99ba62
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationVariants/,/^    }/d' build.gradle
+    ndk: r16b
+
+  - versionName: 3.5.18
+    versionCode: 374
+    commit: f111900986cf94eabe9bf0a051c6d6b0fe568b2f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationVariants/,/^    }/d' build.gradle
+    ndk: r16b
+
+  - versionName: 3.5.19
+    versionCode: 375
+    commit: a03f6cbd210078a3ba00970c8f2fe4caa87190ac
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationVariants/,/^    }/d' build.gradle
+    ndk: r16b
+
+  - versionName: 3.5.20
+    versionCode: 376
+    commit: 9104099bcc4fe857d6f62d00a5fc4e5e432bed27
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationVariants/,/^    }/d' build.gradle
+    ndk: r16b
+
+  - versionName: 3.5.21
+    versionCode: 377
+    commit: 263d4fbd0dadf31feadc3f914d53c8fe9952530e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationVariants/,/^    }/d' build.gradle
+    ndk: r16b
+
+  - versionName: 3.5.22
+    versionCode: 378
+    commit: 258aa21e2ac7c678ca048adf3c0f4e5e331487b6
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationVariants/,/^    }/d' build.gradle
+    ndk: r16b
+
+  - versionName: 3.5.23
+    versionCode: 379
+    commit: be447f1a78c5dff0f78e1bf57f3e25ae73cadb53
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationVariants/,/^    }/d' build.gradle
+    ndk: r16b
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.5.15
-CurrentVersionCode: 371
+CurrentVersion: 3.5.23
+CurrentVersionCode: 379

@@ -193,7 +193,18 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.9'
+    versionCode: 10900
+    commit: 0ca9cbcb33702affb9bedd36eee4c9999d351901
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.8.1
-CurrentVersionCode: 10801
+CurrentVersion: '1.9'
+CurrentVersionCode: 10900

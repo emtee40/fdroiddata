@@ -6,8 +6,8 @@ IssueTracker: https://github.com/uberspot/2048-android/issues
 
 AutoName: '2048'
 Description: |-
-    Port of the 2048 game by Gabriele Cirulli. It's playable without network
-    connection.
+  Port of the 2048 game by Gabriele Cirulli. It's playable without network
+  connection.
 
 RepoType: git
 Repo: https://github.com/uberspot/2048-android.git
@@ -64,7 +64,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '2.2'
 CurrentVersionCode: 25

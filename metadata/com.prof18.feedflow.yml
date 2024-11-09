@@ -1,0 +1,41 @@
+Categories:
+  - Internet
+  - Reading
+License: Apache-2.0
+AuthorName: Marco Gomiero
+AuthorEmail: mgp.dev.studio@gmail.com
+SourceCode: https://github.com/prof18/feed-flow
+IssueTracker: https://github.com/prof18/feed-flow/issues
+Translation: https://hosted.weblate.org/engage/feedflow/
+
+AutoName: FeedFlow
+
+RepoType: git
+Repo: https://github.com/prof18/feed-flow.git
+
+Builds:
+  - versionName: 0.0.58
+    versionCode: 805
+    commit: 0.0.58-fdroid
+    subdir: androidApp
+    gradle:
+      - fdroid
+    scandelete:
+      - build-logic/convention/build
+
+  - versionName: 0.0.59
+    versionCode: 855
+    commit: 6532755618db0659d2288027fd1d4d4aec92bc61
+    subdir: androidApp
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/crashlytics/d' {..,.}/build.gradle.kts
+      - sed -i -e '/crash/d' ../shared/build.gradle.kts
+    scandelete:
+      - build-logic/convention/build
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags [\d.]+-fdroid
+CurrentVersion: 0.0.59
+CurrentVersionCode: 855

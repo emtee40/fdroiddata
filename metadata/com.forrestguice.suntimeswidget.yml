@@ -731,9 +731,232 @@ Builds:
     scanignore:
       - app/src/main/artwork/map/ne_10m_land.zip
 
+  - versionName: 0.15.1
+    versionCode: 98
+    commit: fec28fa917da5813e724eb35f788d51825ef33eb
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.2
+    versionCode: 99
+    commit: a828730438a1e84e022e4da320bd361f319b8ac1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.3
+    versionCode: 100
+    commit: d1ed79c4fb7ebc40e403dd38aa0460cb413fb9de
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.4
+    versionCode: 101
+    commit: dc9263f60f1c670dda2b9b92c8363824037470b3
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.5
+    versionCode: 102
+    commit: d16bf4decec8e820e55dbb588663ad0e43454b8a
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.6
+    versionCode: 103
+    commit: 69ccaca6695beb59d556b22dfe1f9fca3dec8bcf
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.7
+    versionCode: 104
+    commit: 46defe299abdb7a9559867326c6a91a39b94131d
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.8
+    versionCode: 105
+    commit: 2264f789d01a8b0a269aed658930c3e97428dd23
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.9
+    versionCode: 106
+    commit: a8f98ebd1ec998ada408de1ea766cf56268ceccc
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.10
+    versionCode: 107
+    commit: d192a2e8e9a331c6a66c7497484348ed369d42b9
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.11
+    versionCode: 108
+    commit: 4969294e87dac51ae5dfa004358155b8efd11fd1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.12
+    versionCode: 109
+    commit: ee91c430694feb29f9cc2969c06d0bf41163e1f8
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.13
+    versionCode: 110
+    commit: 0fe43bf8287b707d78dc939cd560719e7c5c298d
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.14
+    versionCode: 111
+    commit: 043386b7d2b72d5d60fcdb915ac4c2f3bb75e355
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.15
+    versionCode: 112
+    commit: dea8fef1bdb6da05b27e608cb9206ce2114e50d3
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.15.16
+    versionCode: 113
+    commit: b93dbca7716d38fd30f44f3a59127d6873f23c12
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.16.0
+    versionCode: 114
+    commit: 6c25132a755d6918045f2b84b3dc242c8830ca47
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.16.1
+    versionCode: 115
+    commit: 0e43426b0209331b833af45f8cf8c4ac02b0a0f4
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jraska/d' build.gradle
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.16.2
+    versionCode: 116
+    commit: 00526a714fac64d411d23302ba9f7e2f23d9dbd1
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jraska/d' build.gradle
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
+  - versionName: 0.16.3
+    versionCode: 117
+    commit: 534ef6f311c3fe455d5a354e393346734b4af0b3
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jraska/d' build.gradle
+    scanignore:
+      - app/src/main/artwork/map/ne_10m_land.zip
+
 MaintainerNotes: ne_10m_land.zip is from naturalearthdata.com under Public Domain
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.15.0
-CurrentVersionCode: 97
+CurrentVersion: 0.16.3
+CurrentVersionCode: 117

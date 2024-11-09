@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Uses DuckDuckGo as the exclusive search engine, which is not libre.
 Categories:
   - Internet
 License: Apache-2.0
@@ -14,49 +15,49 @@ Changelog: https://github.com/duckduckgo/Android/releases
 Name: DuckDuckGo Privacy Browser
 AutoName: DuckDuckGo
 Description: |-
-    At DuckDuckGo, we believe the Internet shouldn’t feel so creepy, and getting the
-    privacy you deserve online should be as simple as closing the blinds.
+  At DuckDuckGo, we believe the Internet shouldn't feel so creepy, and getting the
+  privacy you deserve online should be as simple as closing the blinds.
 
-    Our app provides the privacy essentials you need to seamlessly take control of
-    your personal information as you search and browse the web, no matter where the
-    Internet takes you:
+  Our app provides the privacy essentials you need to seamlessly take control of
+  your personal information as you search and browse the web, no matter where the
+  Internet takes you:
 
-    * Escape Advertising Tracker Networks — Our Privacy Protection will block all the hidden third-party trackers we can find, exposing the major advertising networks tracking you over time, so that you can track who’s trying to track you.
-    * Increase Encryption Protection — We force sites to use an encrypted connection where available, protecting your data from prying eyes, like ISPs.
-    * Search Privately — You share your most personal information with your search engine, like your financial, medical, and political questions. What you search for is your own business, which is why DuckDuckGo search doesn’t track you. Ever.
-    * Decode Privacy Policies — We’ve partnered with Terms of Service Didn’t Read to include their scores and labels of website terms of service and privacy policies, where available.
+  * Escape Advertising Tracker Networks — Our Privacy Protection will block all the hidden third-party trackers we can find, exposing the major advertising networks tracking you over time, so that you can track who's trying to track you.
+  * Increase Encryption Protection — We force sites to use an encrypted connection where available, protecting your data from prying eyes, like ISPs.
+  * Search Privately — You share your most personal information with your search engine, like your financial, medical, and political questions. What you search for is your own business, which is why DuckDuckGo search doesn't track you. Ever.
+  * Decode Privacy Policies — We've partnered with Terms of Service Didn't Read to include their scores and labels of website terms of service and privacy policies, where available.
 
-    As you search and browse, the DuckDuckGo Privacy Browser shows you a Privacy
-    Grade rating when you visit a website (A-F). This rating lets you see how
-    protected you are at a glance, dig into the details to see who we caught trying
-    to track you, and learn how we enhanced the underlying site’s privacy measures.
-    The Privacy Grade is scored automatically based on the prevalence of hidden
-    tracker networks, encryption availability, and website privacy practices.
+  As you search and browse, the DuckDuckGo Privacy Browser shows you a Privacy
+  Grade rating when you visit a website (A-F). This rating lets you see how
+  protected you are at a glance, dig into the details to see who we caught trying
+  to track you, and learn how we enhanced the underlying site's privacy measures.
+  The Privacy Grade is scored automatically based on the prevalence of hidden
+  tracker networks, encryption availability, and website privacy practices.
 
-    Our app provides standard browsing functionality including tabs, bookmarks, and
-    autocomplete. In addition to strong Privacy Protection as described above, we
-    also packed in some extra privacy features into the browser itself:
+  Our app provides standard browsing functionality including tabs, bookmarks, and
+  autocomplete. In addition to strong Privacy Protection as described above, we
+  also packed in some extra privacy features into the browser itself:
 
-    * Fire Button — Clear all your tabs and data with one tap.
-    * Application Lock — Secure the app with Touch ID or Face ID.
+  * Fire Button — Clear all your tabs and data with one tap.
+  * Application Lock — Secure the app with Touch ID or Face ID.
 
-    Too many people believe you simply can’t expect privacy on the Internet. We’re
-    fighting to change that, and have made it our mission to set a new standard of
-    trust online. Install DuckDuckGo and take back your privacy!
+  Too many people believe you simply can't expect privacy on the Internet. We're
+  fighting to change that, and have made it our mission to set a new standard of
+  trust online. Install DuckDuckGo and take back your privacy!
 
-    Antifeatures:
-    * NonFreeNet - Uses DuckDuckGo as the exclusive search engine, for which the
-    source code is not available.
+  Antifeatures:
+  * NonFreeNet - Uses DuckDuckGo as the exclusive search engine, for which the
+  source code is not available.
 
 RepoType: git
-Repo: https://github.com/duckduckgo/Android
+Repo: https://github.com/duckduckgo/Android.git
 
 Builds:
   - versionName: 2.1.1
     versionCode: 52
     commit: v2.1.1
     srclibs:
-      - 1:NetCipher@4fe34ede3f44d968e55
+      - NetCipher@4fe34ede3f44d968e55
 
   - versionName: 2.1.2
     versionCode: 53
@@ -102,7 +103,7 @@ Builds:
       - libs/acra*.jar
       - libs/otto*.jar
     prebuild: sed -i -e '/fileTree/acompile "com.squareup:otto:1.3.7"\ncompile "ch.acra:acra:4.5.0"\ncompile
-        "com.squareup.picasso:picasso:2.5.2"' build.gradle
+      "com.squareup.picasso:picasso:2.5.2"' build.gradle
 
   - versionName: 3.0.3
     versionCode: 65
@@ -115,7 +116,7 @@ Builds:
       - libs/acra*.jar
       - libs/otto*.jar
     prebuild: sed -i -e '/fileTree/acompile "com.squareup:otto:1.3.7"\ncompile "ch.acra:acra:4.5.0"\ncompile
-        "com.squareup.picasso:picasso:2.5.2"' build.gradle
+      "com.squareup.picasso:picasso:2.5.2"' build.gradle
 
   - versionName: 3.0.4
     versionCode: 66
@@ -128,7 +129,7 @@ Builds:
       - libs/acra*.jar
       - libs/otto*.jar
     prebuild: sed -i -e '/fileTree/acompile "com.squareup:otto:1.3.7"\ncompile "ch.acra:acra:4.5.0"\ncompile
-        "com.squareup.picasso:picasso:2.5.2"' build.gradle
+      "com.squareup.picasso:picasso:2.5.2"' build.gradle
 
   - versionName: 3.0.5
     versionCode: 67
@@ -141,7 +142,7 @@ Builds:
       - libs/acra*.jar
       - libs/otto*.jar
     prebuild: sed -i -e '/fileTree/acompile "com.squareup:otto:1.3.7"\ncompile "ch.acra:acra:4.5.0"\ncompile
-        "com.squareup.picasso:picasso:2.5.2"' build.gradle
+      "com.squareup.picasso:picasso:2.5.2"' build.gradle
 
   - versionName: 3.0.6
     versionCode: 68
@@ -154,7 +155,7 @@ Builds:
       - libs/acra*.jar
       - libs/otto*.jar
     prebuild: sed -i -e '/fileTree/acompile "com.squareup:otto:1.3.7"\ncompile "ch.acra:acra:4.5.0"\ncompile
-        "com.squareup.picasso:picasso:2.5.2"' build.gradle
+      "com.squareup.picasso:picasso:2.5.2"' build.gradle
 
   - versionName: 3.0.7
     versionCode: 69
@@ -167,7 +168,7 @@ Builds:
       - libs/acra*.jar
       - libs/otto*.jar
     prebuild: sed -i -e '/fileTree/acompile "com.squareup:otto:1.3.7"\ncompile "ch.acra:acra:4.5.0"\ncompile
-        "com.squareup.picasso:picasso:2.5.2"' build.gradle
+      "com.squareup.picasso:picasso:2.5.2"' build.gradle
 
   - versionName: 3.0.8
     versionCode: 70
@@ -1696,11 +1697,990 @@ Builds:
       - app/src/androidTest
     ndk: r21e
 
+  - versionName: 5.148.0
+    versionCode: 51480000
+    commit: 5.148.0
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.149.1
+    versionCode: 51491000
+    commit: 5.149.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - sync/sync-lib/src/main/cpp/third-party
+    build:
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.armeabi-v7a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86_64/libsodium.so
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.arm64-v8a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86/libsodium.so
+    ndk: r21e
+
+  - versionName: 5.150.1
+    versionCode: 51501000
+    commit: 5.150.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - sync/sync-lib/src/main/cpp/third-party
+    build:
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.armeabi-v7a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86_64/libsodium.so
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.arm64-v8a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86/libsodium.so
+    ndk: r21e
+
+  - versionName: 5.151.1
+    versionCode: 51511000
+    commit: 5.151.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - sync/sync-lib/src/main/cpp/third-party
+    build:
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.armeabi-v7a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86_64/libsodium.so
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.arm64-v8a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86/libsodium.so
+    ndk: r21e
+
+  - versionName: 5.153.0
+    versionCode: 51530000
+    commit: 5.153.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - sync/sync-lib/src/main/cpp/third-party
+    build:
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.armeabi-v7a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86_64/libsodium.so
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.arm64-v8a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86/libsodium.so
+    ndk: r21e
+
+  - versionName: 5.154.0
+    versionCode: 51540000
+    commit: 5.154.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - sync/sync-lib/src/main/cpp/third-party
+    build:
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.armeabi-v7a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86_64/libsodium.so
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.arm64-v8a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86/libsodium.so
+    ndk: r21e
+
+  - versionName: 5.155.0
+    versionCode: 51550000
+    commit: 5.155.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - sync/sync-lib/src/main/cpp/third-party
+    build:
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.armeabi-v7a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86_64/libsodium.so
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.arm64-v8a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86/libsodium.so
+    ndk: r21e
+
+  - versionName: 5.156.1
+    versionCode: 51561000
+    commit: 5.156.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - sync/sync-lib/src/main/cpp/third-party
+    build:
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.armeabi-v7a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86_64/libsodium.so
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.arm64-v8a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86/libsodium.so
+    ndk: r21e
+
+  - versionName: 5.157.0
+    versionCode: 51570000
+    commit: 5.157.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - sync/sync-lib/src/main/cpp/third-party
+    build:
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.armeabi-v7a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86_64/libsodium.so
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.arm64-v8a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86/libsodium.so
+    ndk: r21e
+
+  - versionName: 5.158.2
+    versionCode: 51582000
+    commit: 5.158.2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libtool make
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    srclibs:
+      - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - sync/sync-lib/src/main/cpp/third-party
+    build:
+      - pushd $$libsodium$$
+      - ./autogen.sh -s
+      - ./dist-build/android-armv7-a.sh
+      - ./dist-build/android-armv8-a.sh
+      - ./dist-build/android-x86.sh
+      - ./dist-build/android-x86_64.sh
+      - popd
+      - cp $$libsodium$$/libsodium-android-armv7-a/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.armeabi-v7a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-westmere/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86_64/libsodium.so
+      - cp $$libsodium$$/libsodium-android-armv8-a+crypto/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.arm64-v8a/libsodium.so
+      - cp $$libsodium$$/libsodium-android-i686/lib/libsodium.so sync/sync-lib/src/main/cpp/third-party/android.x86/libsodium.so
+    ndk: r21e
+
+  - versionName: 5.159.1
+    versionCode: 51591000
+    commit: 5.159.1
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.160.0
+    versionCode: 51600000
+    commit: 5.160.0
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.161.0
+    versionCode: 51610000
+    commit: 5.161.0
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.162.0
+    versionCode: 51620000
+    commit: 5.162.0
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.163.0
+    versionCode: 51630000
+    commit: 5.163.0
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.164.2
+    versionCode: 51642000
+    commit: 5.164.2
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.165.2
+    versionCode: 51652000
+    commit: 5.165.2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.167.2
+    versionCode: 51672000
+    commit: 5.167.2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.169.0
+    versionCode: 51690000
+    commit: 5.169.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.171.1
+    versionCode: 51711000
+    commit: 5.171.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.172.2
+    versionCode: 51722000
+    commit: 5.172.2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.174.0
+    versionCode: 51740000
+    commit: 5.174.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.175.1
+    versionCode: 51751000
+    commit: 5.175.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.176.3
+    versionCode: 51763000
+    commit: 5.176.3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.177.1
+    versionCode: 51771000
+    commit: 5.177.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.178.0
+    versionCode: 51780000
+    commit: 5.178.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.179.2
+    versionCode: 51792000
+    commit: 5.179.2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+    ndk: r21e
+
+  - versionName: 5.180.1
+    versionCode: 51801000
+    commit: 5.180.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.181.1
+    versionCode: 51811000
+    commit: 5.181.1
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.183.0
+    versionCode: 51830000
+    commit: 5.183.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.185.2
+    versionCode: 51852000
+    commit: 5.185.2
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.186.4
+    versionCode: 51864000
+    commit: 5.186.4
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.188.0
+    versionCode: 51880000
+    commit: 5.188.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.189.0
+    versionCode: 51890000
+    commit: 5.189.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.190.0
+    versionCode: 51900000
+    commit: 5.190.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.191.0
+    versionCode: 51910000
+    commit: 5.191.0
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.193.1
+    versionCode: 51931000
+    commit: 5.193.1
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions
+      - network-protection/network-protection-subscription-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.194.0
+    versionCode: 51940000
+    commit: 5.194.0
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+      - subscriptions/subscriptions-impl
+      - subscriptions/subscriptions-internal
+    prebuild: sed -i -e '/installreferrer/d' statistics/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.206.1
+    versionCode: 52061000
+    commit: 5.206.1
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/com.android.billingclient:billing/d' subscriptions/subscriptions-impl/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.207.2
+    versionCode: 52072000
+    commit: 5.207.2
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/com.android.billingclient:billing/d' subscriptions/subscriptions-impl/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.209.2
+    versionCode: 52092000
+    commit: 5.209.2
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/com.android.billingclient:billing/d' subscriptions/subscriptions-impl/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.210.2
+    versionCode: 52102000
+    commit: 5.210.2
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/com.android.billingclient:billing/d' subscriptions/subscriptions-impl/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.211.0
+    versionCode: 52110000
+    commit: 5.211.0
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/com.android.billingclient:billing/d' subscriptions/subscriptions-impl/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.213.0
+    versionCode: 52130000
+    commit: 5.213.0
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/com.android.billingclient:billing/d' subscriptions/subscriptions-impl/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.214.1
+    versionCode: 52141000
+    commit: 5.214.1
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild: sed -i -e '/com.android.billingclient:billing/d' subscriptions/subscriptions-impl/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.215.0
+    versionCode: 52150000
+    commit: 5.215.0
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild:
+      - sed -i -e '/com.android.billingclient:billing/d' subscriptions/subscriptions-impl/build.gradle
+      - sed -i -e '/useUploadSigning/,+4d' app/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.216.2
+    versionCode: 52162000
+    commit: 5.216.2
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild:
+      - sed -i -e '/com.android.billingclient:billing/d' subscriptions/subscriptions-impl/build.gradle
+      - sed -i -e '/useUploadSigning/,+4d' app/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
+  - versionName: 5.217.0
+    versionCode: 52170000
+    commit: 5.217.0
+    submodules: true
+    gradle:
+      - fdroid
+    output: app/build/outputs/apk/fdroid/release/duckduckgo-$$VERSION$$-fdroid-release-unsigned.apk
+    rm:
+      - app/src/play/res/raw/https_mobile_v2_bloom.bin
+    prebuild:
+      - sed -i -e '/com.android.billingclient:billing/d' subscriptions/subscriptions-impl/build.gradle
+      - sed -i -e '/useUploadSigning/,+4d' app/build.gradle
+    scandelete:
+      - app/src/androidTest
+      - build-cache
+    ndk: r21e
+
 MaintainerNotes: |-
-    Cannot use AUM/UCM because version code and version name are dynamic.
-    Using a custom fladle build, see https://gitlab.com/fdroid/fdroiddata/-/merge_requests/10831#note_897065716
+  Cannot use AUM/UCM because version code and version name are dynamic.
+  Using a custom fladle build, see https://gitlab.com/fdroid/fdroiddata/-/merge_requests/10831#note_897065716
 
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 5.147.0
-CurrentVersionCode: 51470000
+CurrentVersion: 5.217.0
+CurrentVersionCode: 52170000

@@ -1,5 +1,6 @@
 AntiFeatures:
-  - Tracking
+  Tracking:
+    en-US: Sentry is used and cannot be disabled by the user.
 Categories:
   - Multimedia
 License: GPL-3.0-only
@@ -11,11 +12,11 @@ IssueTracker: https://github.com/pretix/pretixprint-android/issues
 
 AutoName: pretixPRINT
 Description: |-
-    Android app that drives the printers used by other pretix applications. This contains all print logic, but no application logic. It is called by other applications using system broadcasts.
-    Tracking due to Sentry which cannot be disabled by the user.
+  Android app that drives the printers used by other pretix applications. This contains all print logic, but no application logic. It is called by other applications using system broadcasts.
+  Tracking due to Sentry which cannot be disabled by the user.
 
 RepoType: git
-Repo: https://github.com/pretix/pretixprint-android
+Repo: https://github.com/pretix/pretixprint-android.git
 
 Builds:
   - versionName: 1.3.0
@@ -314,7 +315,131 @@ Builds:
     scandelete:
       - pretixprint/EvolisSDK
 
+  - versionName: 2.13.0-foss
+    versionCode: 54
+    commit: 7c407bb8a92a1dc8726d7cb59c414ec2abbe913b
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+    scandelete:
+      - pretixprint/EvolisSDK
+
+  - versionName: 2.13.1-foss
+    versionCode: 55
+    commit: 049f4eb58c27f151b8efcb47a4d4a95fc61672fd
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+    scandelete:
+      - pretixprint/EvolisSDK
+
+  - versionName: 2.14.0-foss
+    versionCode: 56
+    commit: f14647c54c7ee1d8f2f7070915f0cbc0368254dc
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.14.1-foss
+    versionCode: 57
+    commit: 32407414bd311f954040fdaccbafca99c9a630a0
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.14.2-foss
+    versionCode: 58
+    commit: 808b2de27501896c984753189791f52823c91738
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.14.3-foss
+    versionCode: 59
+    commit: 8b2836a982baaa43c2a48e13a8e12bd338e106ca
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.16.0-foss
+    versionCode: 61
+    commit: b769d485e9a4492fa1a6649c1c40ce07c6f1d170
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.16.1-foss
+    versionCode: 62
+    commit: c960d38effb53451d780c07c03eac752f1ea1be5
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.16.2-foss
+    versionCode: 63
+    commit: f4715b8191c7d1f1c6df897abad4dccc874ecab9
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.16.3-foss
+    versionCode: 64
+    commit: 18a0eb4dc355d1719a22e13587c9df5f36ff9270
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.17.1-foss
+    versionCode: 66
+    commit: 14b1ccf5bfd62f3b7bb0bb655a284ad90b261ad8
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.17.3-foss
+    versionCode: 68
+    commit: 70a2bd1bc21e00da5cf6d434b68bcabcdd267755
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.18.0-foss
+    versionCode: 69
+    commit: 940cd06007c1e1ca5e14671231fec0617ecc8715
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.19.2-foss
+    versionCode: 72
+    commit: 5992a7a464404290a5fa9375c644b81510d23135
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
+  - versionName: 2.19.3-foss
+    versionCode: 73
+    commit: 6ed1dc7b60408bda65e544f24518143fa348a9a3
+    subdir: pretixprint/app
+    submodules: true
+    gradle:
+      - foss
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.12.1-foss
-CurrentVersionCode: 53
+CurrentVersion: 2.19.3-foss
+CurrentVersionCode: 73

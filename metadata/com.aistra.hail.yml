@@ -141,7 +141,111 @@ Builds:
       - yes
     prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
 
+  - versionName: 1.2.1
+    versionCode: 24
+    commit: 50cdae855be78ab838eca9c6437460b212b9f30b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
+
+  - versionName: 1.2.2
+    versionCode: 25
+    commit: 126defb62d54eeec5f11ad5599003da58f71e822
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
+
+  - versionName: 1.3.0
+    versionCode: 26
+    commit: 3054104809e94b1dbbc28c51544872659e6fe7f6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
+
+  - versionName: 1.4.0
+    versionCode: 27
+    commit: 3e13e93a34038013ec1757b410de226478b5a401
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
+
+  - versionName: 1.5.0
+    versionCode: 28
+    commit: 79adb5eb78e2d4363cdcbbdfc8013a6f2443ec7d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
+
+  - versionName: 1.6.0
+    versionCode: 29
+    commit: d6c6a463f381c48f0ea97fbed1fff39c6cb007a4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
+
+  - versionName: 1.7.0
+    versionCode: 30
+    commit: 900a1c8ea9b8ff6635755edffdc01c38492a6b90
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
+
+  - versionName: 1.8.0
+    versionCode: 31
+    commit: 665f54d99d6397269c0038898ee534330c79632a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
+
+  - versionName: 1.8.1
+    versionCode: 32
+    commit: 98689ffe04a459bd592da7e9d2ca276ae6f6894a
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
+
+  - versionName: 1.9.0
+    versionCode: 33
+    commit: 288cfc3f62fd545d48902b5557b8b02723342b07
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/INTERNET/d' src/main/AndroidManifest.xml
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.2.0
-CurrentVersionCode: 23
+CurrentVersion: 1.9.0
+CurrentVersionCode: 33

@@ -1,5 +1,7 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on PSN (PlayStationNetwork) to obtain AccountID and to register
+      your device.
 Categories:
   - Games
 License: GPL-3.0-or-later
@@ -9,10 +11,11 @@ SourceCode: https://git.sr.ht/~thestr4ng3r/chiaki
 Changelog: https://git.sr.ht/~thestr4ng3r/chiaki/refs
 
 AutoName: Chiaki
-Description: Chiaki is a Free and Open Source Software Client for PlayStation 4 Remote
-    Play for Linux, FreeBSD, OpenBSD, Android, macOS, Windows and potentially even
-    more platforms. Everything necessary for a full streaming session, including the
-    initial registration and wakeup of the console, is supported.
+Description: |-
+  Chiaki is a Free and Open Source Software Client for PlayStation 4 Remote
+  Play for Linux, FreeBSD, OpenBSD, Android, macOS, Windows and potentially even
+  more platforms. Everything necessary for a full streaming session, including the
+  initial registration and wakeup of the console, is supported.
 
 RepoType: git
 Repo: https://git.sr.ht/~thestr4ng3r/chiaki
@@ -57,19 +60,6 @@ Builds:
     prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
     ndk: r20b
 
-  - versionName: 2.1.0
-    versionCode: 10
-    commit: v2.1.0
-    subdir: android/app
-    submodules: true
-    sudo:
-      - apt-get update
-      - apt-get install -y protobuf-compiler python3-protobuf
-    gradle:
-      - yes
-    prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
-    ndk: r20b
-
   - versionName: 2.1.1
     versionCode: 11
     commit: v2.1.1
@@ -83,8 +73,23 @@ Builds:
     prebuild: $ANDROID_HOME/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
     ndk: r20b
 
+  - versionName: 2.2.0
+    versionCode: 12
+    commit: 89368f63c99d67cde8868c0269b66a1b0c507397
+    subdir: android/app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential protobuf-compiler python3-protobuf
+    gradle:
+      - yes
+    rm:
+      - third-party/nanopb/tests/fuzztest
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r25b
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: android/app/build.gradle|versionCode\s(\d+)||v([\d.]+)
-CurrentVersion: 2.1.1
-CurrentVersionCode: 11
+CurrentVersion: 2.2.0
+CurrentVersionCode: 12

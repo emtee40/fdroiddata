@@ -1,6 +1,8 @@
 AntiFeatures:
-  - NonFreeNet
-  - NSFW
+  NonFreeNet:
+    en-US: Services providing the Manga material are not libre.
+  NSFW:
+    en-US: Shows explicit content (Hentai).
 Categories:
   - Reading
 License: MIT
@@ -20,7 +22,7 @@ Builds:
     commit: 80e127a678f6d48b090d5918e03961466fe5d9bc
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -30,7 +32,7 @@ Builds:
     commit: 95d27bf735e9c0329711991f31942d5940d0fc99
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -40,7 +42,7 @@ Builds:
     commit: d9284b1acffa7a005cd713f2973650b15aabae18
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -50,7 +52,7 @@ Builds:
     commit: 9f3135ddc34f5b1703266b5e03ac45ecb51835f0
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -60,7 +62,7 @@ Builds:
     commit: 52b202ff12e7502e75cba78da851b55b00069470
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -70,7 +72,7 @@ Builds:
     commit: e5891dbe5d4c8024d87a3841266c2ef66bc8b730
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -80,7 +82,7 @@ Builds:
     commit: c18f83c59c68c1fceb4e7f59a433375b059f05b2
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -90,7 +92,7 @@ Builds:
     commit: 912544c76ad85373e249e0c5d8043b9276e5d4a0
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -100,7 +102,7 @@ Builds:
     commit: 7acdcb78171073f274aa1e1c14c3f07af1c21e28
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -110,7 +112,7 @@ Builds:
     commit: 0f1cc5f1ad3ab418e4ccdd53b8c0dacb00165767
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -120,7 +122,7 @@ Builds:
     commit: bdef42d1b3b21a14f47671673d00a7daffeb83fb
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -130,7 +132,7 @@ Builds:
     commit: 47bbc9bf86f7d04039fa723acec9053176ad6283
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -140,7 +142,7 @@ Builds:
     commit: 0825bbf43e28af1418859490fa6d9afebcbabd4f
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -150,7 +152,7 @@ Builds:
     commit: 51d2fb4057120b9afb5a9789b5df88875cc2116b
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -160,7 +162,7 @@ Builds:
     commit: 8861a73294cf43ba8c7c0f9260f90d916aa5cbb1
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -170,7 +172,7 @@ Builds:
     commit: 36de4f88ab0db7b1cbbb894d527dd9c87853b2c7
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -180,7 +182,7 @@ Builds:
     commit: cf588e31812364c91de9445b043c72b4c64f23f5
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -190,7 +192,7 @@ Builds:
     commit: c22251fd0d732bec613c71c71b8d463467bbfb0d
     subdir: MiMangaNu
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
     prebuild:
       - sed -i -e '/ImageViewZoom/d' project.properties
       - echo "android.library.reference.2=../ImageViewTouchLibrary" >> project.properties
@@ -766,624 +768,13 @@ Builds:
     scanignore:
       - app/src/main/res/raw/tumangaonline
 
-  - versionName: '1.77'
-    versionCode: 77
-    commit: '1.77'
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-    scanignore:
-      - app/src/main/res/raw/tumangaonline
-
-  - versionName: '1.78'
-    versionCode: 78
-    commit: '1.78'
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-    scanignore:
-      - app/src/main/res/raw/tumangaonline
-
-  - versionName: '1.80'
-    versionCode: 80
-    commit: '1.80'
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.81'
-    versionCode: 81
-    commit: '1.81'
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.82'
-    versionCode: 82
-    commit: '1.82'
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.83'
-    versionCode: 83
-    commit: '1.83'
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.84'
-    versionCode: 84
-    commit: '1.84'
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.86'
-    versionCode: 86
-    commit: '1.86'
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.89'
-    versionCode: 89
-    commit: '1.89'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.90'
-    versionCode: 90
-    commit: '1.90'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.91'
-    versionCode: 91
-    commit: '1.91'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.92'
-    versionCode: 92
-    commit: '1.92'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.93'
-    versionCode: 93
-    commit: '1.93'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.94'
-    versionCode: 94
-    commit: '1.94'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.95'
-    versionCode: 95
-    commit: '1.95'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.96'
-    versionCode: 96
-    commit: '1.96'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.97'
-    versionCode: 97
-    commit: '1.97'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.98'
-    versionCode: 98
-    commit: '1.98'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.99'
-    versionCode: 99
-    commit: '1.99'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.100'
-    versionCode: 100
-    commit: '1.100'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.101'
-    versionCode: 101
-    commit: '1.101'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.103'
-    versionCode: 103
-    commit: '1.103'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.104'
-    versionCode: 104
-    commit: '1.104'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.105'
-    versionCode: 105
-    commit: '1.105'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.106'
-    versionCode: 106
-    commit: '1.106'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.107'
-    versionCode: 107
-    commit: '1.107'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.108'
-    versionCode: 108
-    commit: '1.108'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.109'
-    versionCode: 109
-    commit: '1.109'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.110'
-    versionCode: 110
-    commit: '1.110'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.112'
-    versionCode: 112
-    commit: '1.112'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.113'
-    versionCode: 113
-    commit: '1.113'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.115'
-    versionCode: 115
-    commit: '1.115'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.116'
-    versionCode: 116
-    commit: '1.116'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.117'
-    versionCode: 117
-    commit: '1.117'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.118'
-    versionCode: 118
-    commit: '1.118'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.119'
-    versionCode: 119
-    commit: '1.119'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.120'
-    versionCode: 120
-    commit: '1.120'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.121'
-    versionCode: 121
-    commit: '1.121'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.122'
-    versionCode: 122
-    commit: '1.122'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoder@7cdfca4
-    prebuild:
-      - cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.129'
-    versionCode: 129
-    commit: '1.129'
-    subdir: app
-    gradle:
-      - fdroid
-    srclibs:
-      - RapidDecoderRaulhaag@0.3.1Ax
-    prebuild:
-      - cp -fR $$RapidDecoderRaulhaag$$/library/src/main/java/rapid src/main/java/
-      - sed -i -e '/rapid.decoder/d' -e '/githubImplementation/d' -e '/versionNameSuffix/d'
-        build.gradle
-      - sed -i -e 's@https://github.com/suckgamony/RapidDecoder/raw/master/repository@https://jitpack.io@g'
-        ../build.gradle
-
-  - versionName: '1.132'
-    versionCode: 132
-    commit: '1.132'
-    subdir: app
-    gradle:
-      - fdroid
-    prebuild: sed -i -e '/githubImplementation/d' build.gradle
-
-  - versionName: '1.133'
-    versionCode: 133
-    commit: '1.133'
-    subdir: app
-    gradle:
-      - fdroid
-    prebuild: sed -i -e '/githubImplementation/d' build.gradle
-
 MaintainerNotes: |-
-    * We use the dev fork of RapidDecoder
-    * upstream repo now archived (hence UCM None)
-    * scanner will detect GMS (/com/google/android/gms) in these APKs; those are only stubs here
+  * We use the dev fork of RapidDecoder
+  * upstream repo now archived (hence UCM None)
+  * scanner will detect GMS (/com/google/android/gms) in these APKs; those are only stubs here
 
-AutoUpdateMode: Version %v
+ArchivePolicy: 0
+AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '1.133'
 CurrentVersionCode: 133

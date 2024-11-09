@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on super-productivity.com, which is not libre.
 Categories:
   - Time
 License: MIT
@@ -33,7 +34,28 @@ Builds:
     gradle:
       - fdroid
 
-AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
-CurrentVersion: '17.0'
-CurrentVersionCode: 17
+  - versionName: '19.0'
+    versionCode: 19
+    commit: ded2a4028cc5422fdfffb64bc6f410da0f434414
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '20.0'
+    versionCode: 20
+    commit: 4a440a209e3a0a46d777aeb654f0422e4ce091ed
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: '21.0'
+    versionCode: 21
+    commit: 216336170e93773defd07aab56add083b0f6a29f
+    subdir: app
+    gradle:
+      - fdroid
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '21.0'
+CurrentVersionCode: 21

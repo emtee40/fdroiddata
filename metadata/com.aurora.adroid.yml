@@ -11,14 +11,16 @@ Donate: https://www.paypal.me/whyorean
 
 AutoName: Aurora Droid
 Description: |-
-    An alternative to the default F-Droid app with an intuitive UI and
-    multiple great features, such as
+  <b>NOTE:</b> App is no longer maintained.
 
-    * Many repos listed and can be enabled
-    * Beautiful design - Follows latest Material Design guidelines
-    * Powerful download manager - Pause, resume and retry downloading apps
-    * Previous releases - Enables downloading old releases
-    * Lists architectures (arm, arm64 ...) and minimal Android versions
+  An alternative to the default F-Droid app with an intuitive UI and
+  multiple great features, such as
+
+  * Many repos listed and can be enabled
+  * Beautiful design - Follows latest Material Design guidelines
+  * Powerful download manager - Pause, resume and retry downloading apps
+  * Previous releases - Enables downloading old releases
+  * Lists architectures (arm, arm64 ...) and minimal Android versions
 
 RepoType: git
 Repo: https://gitlab.com/AuroraOSS/auroradroid.git
@@ -66,7 +68,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.0.8
 CurrentVersionCode: 8

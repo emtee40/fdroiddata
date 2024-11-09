@@ -9,7 +9,7 @@ Changelog: https://github.com/FredHappyface/Android.FHCode/blob/HEAD/CHANGELOG.m
 AutoName: FHCode
 
 RepoType: git
-Repo: https://github.com/fredhappyface/android.fhcode
+Repo: https://github.com/fredhappyface/android.fhcode.git
 
 Builds:
   - versionName: 2021.11.04
@@ -34,7 +34,26 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 2022.01.10
-CurrentVersionCode: 20220110
+  - versionName: '20230820'
+    versionCode: 20230820
+    commit: 428ccc81f1f51af350b886f6febe16b507378438
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '20240331'
+    versionCode: 20240331
+    commit: f76b8809f4fa1b4eb0c6a85bb832e53b248e351b
+    subdir: app
+    gradle:
+      - yes
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '20240331'
+CurrentVersionCode: 20240331

@@ -2,6 +2,8 @@
 
 # Starting from the following template and grep for "flutter" in the metadata
 # directory to see other examples.
+# Only choose one method between flutter submodule and srclib. If submodule method
+# is chosen then please add flutter as a submodule in the source repo.
 
 Builds:
   - versionName: '1.0'
@@ -12,6 +14,10 @@ Builds:
     # This must be set else the build will fail.
     # The output path can be found in the log.
     output: build/app/outputs/flutter-apk/app-release.apk
+    # If you don't want to add a submodule, then you can add flutter as a srclib
+    # and checkout the required version manually
+    srclibs:
+      - flutter@stable
     # Deletes unrelated directories,
     # remove those not needed from the list.
     rm:
@@ -21,13 +27,18 @@ Builds:
       - web
       - windows
     prebuild:
+      # Extract the flutter version and then checkout it in the flutter srclib
+      # Only needed when flutter srclib is used
+      - flutterVersion=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml)
+      - '[[ $flutterVersion ]] || exit 1'
+      - git -C $$flutter$$ checkout -f $flutterVersion
       # Change pub cache location so that the dart packages are scanned by the scanner
       - export PUB_CACHE=$(pwd)/.pub-cache
       - .flutter/bin/flutter config --no-analytics
       - .flutter/bin/flutter pub get
     scanignore:
-      # Ignore a maven repo for Flutter engine
-      - .flutter/packages/flutter_tools/gradle/flutter.gradle
+      # Ignore a maven repo for Flutter engine for Flutter 3.12 or older
+      # - .flutter/packages/flutter_tools/gradle/flutter.gradle
       # Ignore the downloaded dart tools
       - .flutter/bin/cache
     # Other binaries should be deleted
@@ -51,4 +62,3 @@ VercodeOperation:
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
 CurrentVersion: '1.0'
 CurrentVersionCode: 11
-

@@ -4,16 +4,17 @@ License: GPL-3.0-only
 WebSite: https://termux.com
 SourceCode: https://github.com/termux/termux-styling
 IssueTracker: https://github.com/termux/termux-styling/issues
+Changelog: https://github.com/termux/termux-styling/releases
 Donate: https://termux.com/donate.html
-Bitcoin: 1BXS5qPhJzhr5iK5nmNDSmoLDfB6VmN5hv
+OpenCollective: Termux
 
 AutoName: Termux:Styling
 Description: |-
-    This plugin for https://f-droid.org/packages/com.termux provides beautiful color schemes and
-    powerline-ready fonts to customize the appearance of the terminal.
+  This plugin for https://f-droid.org/packages/com.termux provides beautiful color schemes and
+  powerline-ready fonts to customize the appearance of the terminal.
 
-    Long-press anywhere on the Termux terminal and use the "Style" menu entry to use
-    after installation.
+  Long-press anywhere on the Termux terminal and use the "Style" menu entry to use
+  after installation.
 
 RepoType: git
 Repo: https://github.com/termux/termux-styling
@@ -152,7 +153,42 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '0.30'
+    versionCode: 30
+    commit: 839d094eeff1adacde31ee6f1a3cf025906706e8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '0.31'
+    versionCode: 31
+    commit: 66602f7bb5154c2801ab8ed23e8bd48e36f0060c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions{abortOnError false}' build.gradle
+
+  - versionName: 0.32.0
+    versionCode: 32
+    commit: 0d5c8cc4f24df950de1a17a07b1ebaf1f3c22a0e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions{abortOnError false}' build.gradle
+
+  - versionName: 0.32.1
+    versionCode: 1000
+    commit: 82dcd3243349d1c5de9a9055b429331d1a01b388
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/android {/a lintOptions{abortOnError false}' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '0.29'
-CurrentVersionCode: 29
+CurrentVersion: 0.32.1
+CurrentVersionCode: 1000

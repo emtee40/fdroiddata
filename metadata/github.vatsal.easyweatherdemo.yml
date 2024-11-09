@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: OpenWeatherMap itself is not libre.
 Categories:
   - Internet
 License: Apache-2.0
@@ -20,7 +21,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '1.1'
 CurrentVersionCode: 11

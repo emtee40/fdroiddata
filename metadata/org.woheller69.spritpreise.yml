@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Tankerkönig service itself is not open source
 Categories:
   - Navigation
 License: GPL-3.0-only
@@ -113,7 +114,79 @@ Builds:
     gradleprops:
       - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
 
+  - versionName: '2.0'
+    versionCode: 20
+    commit: ba394b7e3a84e94490a930959dc12d457466c34a
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.1'
+    versionCode: 21
+    commit: 1d611e1c0ff204651e0630924875d8e355750a9b
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.2'
+    versionCode: 22
+    commit: 491be700213ad3e782a224dd786fa1604aedeef9
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.3'
+    versionCode: 23
+    commit: a9351f68f9141e4655f7d46fb57be61895b65dac
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.4'
+    versionCode: 24
+    commit: 50b418bab848469beac2aa1e5aea2cb6ecc2c458
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.5'
+    versionCode: 25
+    commit: d58d968cef168e66f69754f7cbd7d24d3843b96d
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.6'
+    versionCode: 26
+    commit: f6c75a4468e7920c5d0599fe0ba98b6397394e72
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
+  - versionName: '2.7'
+    versionCode: 27
+    commit: 63ea4dcb8d0066351ecee9ad1b3f5b78a39031ce
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - prop1=iRmN2gDN0IGM5EDMtUGO1MTLzQDOz0SNwUzNtADOlBTMygTO
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.9'
-CurrentVersionCode: 19
+CurrentVersion: '2.7'
+CurrentVersionCode: 27

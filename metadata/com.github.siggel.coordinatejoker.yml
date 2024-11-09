@@ -32,7 +32,35 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.3.32
+    versionCode: 32
+    commit: e862f67676b7eb3a19cb1e65562e7b63972282ad
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.34
+    versionCode: 34
+    commit: 2fad2307be455b960f2838ba102159d8e9efdc70
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.35
+    versionCode: 35
+    commit: 665fefe38f54d01228e5bbf2bb083d6d498d40d9
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/gms/d' {..,.}/build.gradle
+      - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/github/siggel/coordinatejoker/AboutActivity.java
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.3.31
-CurrentVersionCode: 31
+CurrentVersion: 1.4.35
+CurrentVersionCode: 35

@@ -7,10 +7,10 @@ Bitcoin: 13MjTPDFQtxv1u1sWURkDduFSw97KbMfsS
 
 AutoName: AndroidPN Client
 Description: |-
-    Android Push Notification Client. Obtain server from
-    <a href="https://sourceforge.net/projects/androidpn/">here</a>. <i>AndroidPN</i> is based on
-    XMPP. The server part also offers an admin console to send out notifications to
-    a single device or all devices registered with the server.
+  Android Push Notification Client. Obtain server from
+  <a href="https://sourceforge.net/projects/androidpn/">here</a>. <i>AndroidPN</i> is based on
+  XMPP. The server part also offers an admin console to send out notifications to
+  a single device or all devices registered with the server.
 
 RepoType: git
 Repo: https://github.com/daktak/androidpn-client
@@ -46,7 +46,8 @@ Builds:
     gradle:
       - yes
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: 0.5.10
 CurrentVersionCode: 20160415

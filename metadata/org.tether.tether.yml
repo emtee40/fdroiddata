@@ -1,6 +1,6 @@
 Categories:
-  - Phone & SMS
   - Connectivity
+  - Phone & SMS
   - Security
 License: AGPL-3.0-only
 AuthorName: Taylor Ereio
@@ -93,25 +93,6 @@ Builds:
 
   - versionName: 0.1.5
     versionCode: 151
-    commit: 0.1.5
-    submodules: true
-    output: build/app/outputs/apk/release/app-release.apk
-    srclibs:
-      - flutter@1.22.2
-    prebuild:
-      - echo 'android.applicationVariants.all { variant -> variant.outputs.all { output
-        -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
-      - $ANDROID_HOME/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
-    build:
-      - $$flutter$$/bin/flutter config --no-analytics
-      - $$flutter$$/bin/flutter packages pub get
-      - $$flutter$$/bin/flutter pub run build_runner build
-      - $$flutter$$/bin/flutter build apk
-    ndk: r21d
-
-  - versionName: 0.1.5
-    versionCode: 153
-    disable: wrong version
     commit: 0.1.5
     submodules: true
     output: build/app/outputs/apk/release/app-release.apk
@@ -326,22 +307,6 @@ Builds:
       - $$flutter$$/bin/flutter build apk
     ndk: r21d
 
-  - versionName: 0.2.9
-    versionCode: 2090
-    disable: https://github.com/syphon-org/syphon/issues/609
-    commit: 0572100acc8828653916c56c79be82d48a283e2f
-    submodules: true
-    output: build/app/outputs/apk/release/app-release.apk
-    srclibs:
-      - flutter@2.10.1
-    prebuild: $$SDK$$/tools/bin/sdkmanager 'cmake;3.10.2.4988404'
-    build:
-      - $$flutter$$/bin/flutter config --no-analytics
-      - $$flutter$$/bin/flutter packages pub get
-      - $$flutter$$/bin/flutter pub run build_runner build
-      - $$flutter$$/bin/flutter build apk
-    ndk: r21d
-
   - versionName: 0.2.11
     versionCode: 2110
     commit: eacca608325a7e3f3030cfc453aec216a20a4d29
@@ -390,8 +355,9 @@ Builds:
       - $$flutter$$/bin/flutter build apk
     ndk: r21d
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 UpdateCheckData: version.txt|versionCode=(\d+)|.|versionName=(.*)
 CurrentVersion: 0.2.13
 CurrentVersionCode: 2130

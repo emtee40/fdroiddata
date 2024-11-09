@@ -1,8 +1,9 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on Youtube.
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-or-later
 AuthorName: Team LibreTube
 WebSite: https://libre-tube.github.io
@@ -14,7 +15,7 @@ Changelog: https://github.com/libre-tube/LibreTube/releases
 AutoName: LibreTube
 
 RepoType: git
-Repo: https://github.com/libre-tube/LibreTube
+Repo: https://github.com/libre-tube/LibreTube.git
 
 Builds:
   - versionName: 0.2.3
@@ -229,7 +230,248 @@ Builds:
       - yes
     prebuild: sed -i -e '/splits/,+8d' build.gradle
 
+  - versionName: 0.12.0
+    versionCode: 29
+    commit: ab1b94d78df62da62b2a3f07f616076ceeb5bb60
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.12.1
+    versionCode: 30
+    commit: 0e903e9d8dc59dbb039d603d0f79f44aef1df176
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.13.1
+    versionCode: 32
+    commit: 4470e4f7577b05a8041cd97975b02e27a5b82f70
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.14.0
+    versionCode: 33
+    commit: 26713d31a69f15671142fe2246c936bf32b12b48
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.14.1
+    versionCode: 34
+    commit: 72107fc7891ff1386ab9023d002ffe63c754cdef
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.15.0
+    versionCode: 35
+    commit: 2c32735e68295e61b2689d6f988972c3384e06ff
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.15.1
+    versionCode: 36
+    commit: b3f36d0ab277777133033790ef8a697efab076e7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.16.0
+    versionCode: 37
+    commit: e846bcd43ef3b94cb80925a6a55be453a2239990
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.16.1
+    versionCode: 38
+    commit: 3d702418ce1facddea2d84f56ccf08dedaaab693
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.17.0
+    versionCode: 39
+    commit: 3d3dd3f5735d51b8a70010517ac78bb159ca89fd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.17.1
+    versionCode: 40
+    commit: b39c92a658458affac83351adc5540e8a2769f1b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+8d' build.gradle
+
+  - versionName: 0.18.1
+    versionCode: 42
+    commit: 94eac66d120a2c5444e11a083eedda1630bb2086
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.19.0
+    versionCode: 43
+    commit: cc51b795394a95530a0571f1e1e243c54c6df5a3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.20.0
+    versionCode: 44
+    commit: 2e985790e916edcddcf895b1006752f444345845
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.20.1
+    versionCode: 45
+    commit: bd2bc9ed7ac9b9aa716f5f8528f114092f62d23d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.21.0
+    versionCode: 46
+    commit: 6ed64172cff7b29d32c9d9cdb25b1623b3ee6b5c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.21.1
+    versionCode: 47
+    commit: c3165a504451461728fdb53dd40df9f512cfa4f2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.22.1
+    versionCode: 49
+    commit: e46f4ec5bd216c3df8d5ae3ee05c47ba8516eec0
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.22.2
+    versionCode: 50
+    commit: 93ebfaf9e60fb5e3ddc150a68c34e68b93225d06
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.23.0
+    versionCode: 51
+    commit: 3b85a302adaddc9502f900296c9fd542904788e7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.23.1
+    versionCode: 52
+    commit: 9742b8cda596b9cc8b62eea1cb61250bb4f6edbb
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.24.0
+    versionCode: 54
+    commit: 6e6b0354d5d3ddd564a2ead701edf208e6644bf2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.25.1
+    versionCode: 56
+    commit: 54b31c11eec3c46ad31f24a611e82f216ec547be
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
+  - versionName: 0.25.2
+    versionCode: 57
+    disable: https://github.com/libre-tube/LibreTube/issues/6455
+    commit: c47009c33fb9f955b116432520d033d482facb5b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*[0-9]$
-CurrentVersion: 0.11.1
-CurrentVersionCode: 28
+CurrentVersion: 0.25.2
+CurrentVersionCode: 57

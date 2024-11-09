@@ -3,6 +3,7 @@ Categories:
 License: Apache-2.0
 SourceCode: https://github.com/mueller-ma/Coffee
 IssueTracker: https://github.com/mueller-ma/Coffee/issues
+Translation: https://crowdin.com/project/coffee-app
 Changelog: https://github.com/mueller-ma/Coffee/releases
 
 AutoName: Coffee
@@ -285,7 +286,89 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.13'
+    versionCode: 33
+    commit: 792675d982bbf2a65c0f5029ce6e9f6805c5d696
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.15'
+    versionCode: 35
+    commit: 4a2815a3b19bc8f9541589d0dca6e454dade82cc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.16'
+    versionCode: 36
+    commit: 10c87af87d85b2fbe02ca22d36f0397446592754
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.17'
+    versionCode: 37
+    commit: a1e0f799a139a5fbe63ceb0fc7c13f8c6493a524
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.18'
+    versionCode: 38
+    commit: f245879533000981f875cf3eb583d1e0d0a23a15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.19'
+    versionCode: 39
+    commit: e90b67b89613adb260ce8bc6bb4127fba7499d2d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.20'
+    versionCode: 40
+    commit: bb1f42e5da120f42ba321ca5c73237be26c39d4f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.21'
+    versionCode: 41
+    commit: 5aeb657cbd3ccf9fa5143f465912fa602c86b614
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.22'
+    versionCode: 42
+    commit: 156801982afa00e3ad61acc423f254da6407acb1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.24'
+    versionCode: 44
+    commit: e16c8bbdcf9a162439b7f5bfc34f1657dc9a4bf1
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.12'
-CurrentVersionCode: 32
+CurrentVersion: '2.24'
+CurrentVersionCode: 44

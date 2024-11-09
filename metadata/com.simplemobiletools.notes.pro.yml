@@ -15,7 +15,7 @@ Name: Simple Notes Pro
 AutoName: Notes
 
 RepoType: git
-Repo: https://github.com/SimpleMobileTools/Simple-Notes
+Repo: https://github.com/SimpleMobileTools/Simple-Notes.git
 
 Builds:
   - versionName: 6.0.0
@@ -410,7 +410,73 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 6.15.2
-CurrentVersionCode: 102
+  - versionName: 6.15.3
+    versionCode: 103
+    commit: d8aeb9879e4df27cfb64623a3bc118a708b36f97
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 6.15.4
+    versionCode: 104
+    commit: 6287543fb9c3d2ac67ccf0a87f96386b78d15e72
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 6.15.5
+    versionCode: 105
+    commit: b1bc7f5511153701261a680d701a3a2e60c1ef13
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 6.15.6
+    versionCode: 107
+    commit: 24373d92958aaac1db4ff0bd331445a0bc552054
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 6.16.1
+    versionCode: 109
+    commit: f4667afa3752875aa194b53dda07c7b486250d30
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 6.16.5
+    versionCode: 113
+    commit: 9bcb6e0856376cfaec565044b7140e6923c40f45
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 6.17.0
+    versionCode: 114
+    commit: 886a397d2387b3f3538c46287315d0ffa003302f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 6.17.0
+CurrentVersionCode: 114

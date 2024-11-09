@@ -1,6 +1,8 @@
 AntiFeatures:
-  - NonFreeNet
-  - Tracking
+  TetheredNet:
+    en-US: Tethered to a service for retrieving icons.
+  Tracking:
+    en-US: Reporting all URLs to a tethered server for FavIcon retrieval.
 Categories:
   - Connectivity
   - Development

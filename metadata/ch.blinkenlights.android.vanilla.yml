@@ -10,13 +10,13 @@ Bitcoin: 1adrianERDJusC4c8whyT81zAuiENEqub
 
 AutoName: Vanilla Music
 Description: |-
-    Music player with a simple interface similar to the stock music player. Supports
-    browsing by folder, queueing, shake-to-skip and more. Supports the same audio
-    formats as the stock music player since the system media APIs are used.
+  Music player with a simple interface similar to the stock music player. Supports
+  browsing by folder, queueing, shake-to-skip and more. Supports the same audio
+  formats as the stock music player since the system media APIs are used.
 
-    This is a fork of https://f-droid.org/packages/org.kreed.vanilla which is no longer being developed by
-    its author. We keep that in the repo as it supports Android versions below
-    4.0.3.
+  This is a fork of https://f-droid.org/packages/org.kreed.vanilla which is no longer being developed by
+  its author. We keep that in the repo as it supports Android versions below
+  4.0.3.
 
 RepoType: git
 Repo: https://github.com/vanilla-music/vanilla.git
@@ -397,7 +397,43 @@ Builds:
       - tr -d '\r' < gradle-wrapper.properties_orig >gradle-wrapper.properties
       - popd
 
+  - versionName: 1.3.0
+    versionCode: 13003
+    commit: 4ab9f2f70c1461de09ffa7962622dcd5595480d8
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - pushd ../gradle/wrapper
+      - mv gradle-wrapper.properties gradle-wrapper.properties_orig
+      - tr -d '\r' < gradle-wrapper.properties_orig >gradle-wrapper.properties
+      - popd
+
+  - versionName: 1.3.1
+    versionCode: 13101
+    commit: 3442b6cdd049a1f96de4c8f2e354fab3d7f9f880
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - pushd ../gradle/wrapper
+      - mv gradle-wrapper.properties gradle-wrapper.properties_orig
+      - tr -d '\r' < gradle-wrapper.properties_orig >gradle-wrapper.properties
+      - popd
+
+  - versionName: 1.3.2
+    versionCode: 13200
+    commit: 2e7ef1ce402f397462e8bb136787f60126ea15d0
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - pushd ../gradle/wrapper
+      - mv gradle-wrapper.properties gradle-wrapper.properties_orig
+      - tr -d '\r' < gradle-wrapper.properties_orig >gradle-wrapper.properties
+      - popd
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.2.2
-CurrentVersionCode: 12200
+CurrentVersion: 1.3.2
+CurrentVersionCode: 13200

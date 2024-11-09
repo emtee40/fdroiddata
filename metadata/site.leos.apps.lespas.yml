@@ -673,7 +673,166 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.7.4
+    versionCode: 81
+    commit: c21ec7f2dce721a33c8c2b8ee3babec37373de6f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.5
+    versionCode: 82
+    commit: d69a3ed16d0b1f38c83abdaa0509ab840bec4174
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.6
+    versionCode: 83
+    commit: 615b90450df2bd5f888478b8ae51d34bf766a2a0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.0
+    versionCode: 84
+    commit: d983274d430942b04e34bb096561ce8fd81acf7b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.2
+    versionCode: 86
+    commit: 6ca1a231f3d40568d07ad74af3c5203cbaa342be
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.8.3
+    versionCode: 87
+    commit: ac7c7edda2c47abb10656c0d973f45bc919b6769
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.8.4
+    versionCode: 88
+    commit: d5a657acd457935c74019e7ba77226713dcd52c7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.9.0
+    versionCode: 89
+    commit: cfec58315ec164597f8d9ac0c399f3443d93f534
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.9.1
+    versionCode: 90
+    commit: 961243c4f9835385b8bf86b7527ec02f61f94a38
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.9.2
+    versionCode: 91
+    commit: a4aa234789395bed6211a577baedebf690705593
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.9.4
+    versionCode: 93
+    commit: 587d20b81960f353619fc00ab0710e3b2893b726
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.9.5
+    versionCode: 94
+    commit: f0149ac0a90cba24437db43cac82fc1489967675
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.9.6
+    versionCode: 95
+    commit: 915754f4a07f996fdca5d4b82463550efd711d7e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.9.7
+    versionCode: 96
+    commit: c02fd939bbdaae3fee4b0769f7d02d773898ec7a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.9.8
+    versionCode: 97
+    commit: ae91993bd305861563758de9f013418e937d8d75
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.9
+    versionCode: 98
+    commit: becd0513102fda1b9ac28a1052ef33cdf4bf2912
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.10
+    versionCode: 99
+    commit: b1957564a94b17751f91764abea05ab85f5a43fc
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.7.3
-CurrentVersionCode: 80
+CurrentVersion: 2.9.10
+CurrentVersionCode: 99

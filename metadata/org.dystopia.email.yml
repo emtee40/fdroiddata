@@ -9,45 +9,6 @@ Changelog: https://framagit.org/dystopia-project/simple-email/blob/HEAD/CHANGELO
 
 Name: SimpleEmail
 AutoName: Email
-Description: |-
-    SimpleEmail is Free Software, minimalistic and privacy friendly email app.
-
-    * Easy navigation
-    * No unnecessary settings
-    * No bells and whistles
-    * Simple design
-
-    SimpleEmail starts a foreground service with a low priority status bar notification to make sure you'll never miss new email.
-
-    This project has been forked from https://f-droid.org/packages/eu.faircode.email.
-
-    <b>Features</b>
-
-    * 100% Free Software
-    * Multiple accounts (inboxes)
-    * Multiple identities (outboxes)
-    * Unified inbox
-    * Conversation view
-    * Two way synchronization
-    * Offline storage and operations
-    * Battery friendly
-    * Low data usage
-    * Folder management
-    * Signatures
-    * Dark theme
-    * Account colors
-    * Search on server
-    * Encryption/decryption
-    * Export settings
-
-    <b>Secure:</b>
-    * Allow encrypted connections only
-    * Accept valid security certificates only
-    * Authentication required
-    * Safe message view (styling, scripting and unsafe HTML removed)
-    * No special permissions required
-    * No advertisements
-    * No analytics and no tracking
 
 RepoType: git
 Repo: https://framagit.org/dystopia-project/simple-email.git
@@ -117,7 +78,27 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.5.1
+    versionCode: 118
+    commit: 135f5375e6ca00dbfe3b0c7bc042fa31b358af0c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 1.5.3
+    versionCode: 120
+    commit: 35f8a660556898e2ebddd42d938d45f067715292
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v.*\d$
-CurrentVersion: 1.4.0
-CurrentVersionCode: 116
+CurrentVersion: 1.5.3
+CurrentVersionCode: 120

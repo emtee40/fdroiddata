@@ -1,18 +1,19 @@
 Categories:
+  - Internet
   - Security
   - System
-  - Internet
 License: GPL-3.0-only
 AuthorEmail: contact-notes@etesync.com
 WebSite: https://www.etesync.com
 SourceCode: https://github.com/etesync/etesync-notes
 IssueTracker: https://github.com/etesync/etesync-notes/issues
+Translation: https://hosted.weblate.org/projects/etesync/android
 Changelog: https://github.com/etesync/etesync-notes/blob/HEAD/ChangeLog.md
 
 AutoName: EteSync Notes
 
 RepoType: git
-Repo: https://github.com/etesync/etesync-notes
+Repo: https://github.com/etesync/etesync-notes.git
 
 Builds:
   - versionName: 1.2.0
@@ -335,11 +336,7 @@ Builds:
     ndk: r21d
 
 MaintainerNotes: |-
-    scanignore is used to allow the "node_modules/react-native/android" local Maven repository.
-
-    Summary and Description are maintained by upstream using fastlane in
-    the source repo:
-    https://f-droid.org/docs/All_About_Descriptions_Graphics_and_Screenshots
+  scanignore is used to allow the "node_modules/react-native/android" local Maven repository.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags

@@ -11,32 +11,32 @@ Changelog: https://github.com/pacien/tincapp/blob/HEAD/changelog.md
 Donate: https://paypal.me/pacien/15
 Bitcoin: 152t9TEBBhEescQx5gG7T5wHaJVeupAXQm
 
-AutoName: Tinc App
+AutoName: Tinc Mesh VPN
 Description: |-
-    Main features:
+  Main features:
 
-    * Does NOT require root privilege
-    * Connection management through a graphical interface
-    * Uses conventional tinc configuration files (extended with support for encrypted private keys and VPN bypass per Android application)
-    * Automatable using third party Android applications via Intents
+  * Does NOT require root privilege
+  * Connection management through a graphical interface
+  * Uses conventional tinc configuration files (extended with support for encrypted private keys and VPN bypass per Android application)
+  * Automatable using third party Android applications via Intents
 
-    Notes:
+  Notes:
 
-    * This application is only a VPN client, which is not tied to any VPN service provider by default.
-    * It requires an existing tinc network to connect to.
-    * For more information about the tinc VPN protocol, see <a href="https://www.tinc-vpn.org/">https://www.tinc-vpn.org/</a>
+  * This application is only a VPN client, which is not tied to any VPN service provider by default.
+  * It requires an existing tinc network to connect to.
+  * For more information about the tinc VPN protocol, see <a href="https://www.tinc-vpn.org/">https://www.tinc-vpn.org/</a>
 
-    Platform specific limitations of the Android client:
+  Platform specific limitations of the Android client:
 
-    * Operates with tinc in router mode only
-    * Connects to only one tinc network at a time
-    * No support for hook scripts
+  * Operates with tinc in router mode only
+  * Connects to only one tinc network at a time
+  * No support for hook scripts
 
-    Please see the project's website for more information (setup guide,
-    documentation, sources, issues):
+  Please see the project's website for more information (setup guide,
+  documentation, sources, issues):
 
-    * <a href="https://tincapp.pacien.org">https://tincapp.pacien.org</a>
-    * <a href="https://github.com/pacien/tincapp">https://github.com/pacien/tincapp</a>
+  * <a href="https://tincapp.pacien.org">https://tincapp.pacien.org</a>
+  * <a href="https://github.com/pacien/tincapp">https://github.com/pacien/tincapp</a>
 
 RepoType: git
 Repo: https://github.com/pacien/tincapp.git
@@ -172,7 +172,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile/,+2d' -e '/signingConfigs/,+7d' -e
-        '/signingConfigs.release/d' -e '/keystoreProperties/d' build.gradle
+      '/signingConfigs.release/d' -e '/keystoreProperties/d' build.gradle
 
   - versionName: '0.19'
     versionCode: 19
@@ -324,7 +324,71 @@ Builds:
     prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
     ndk: r22b
 
+  - versionName: '0.38'
+    versionCode: 38
+    commit: b5fe5e49e0d3cc2b7c53af23b7a4e7d3c4491be1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.39'
+    versionCode: 39
+    commit: 9ac126525ceda9e3f66c555314996d7dfded1cec
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.40'
+    versionCode: 40
+    commit: 4c6a2a879a5847b369d5b889452bf96c3d610463
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: r22b
+
+  - versionName: '0.41'
+    versionCode: 41
+    commit: c2cee114110679b989dd583c690ddb9c76599f2b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: 26.1.10909125
+
+  - versionName: '0.42'
+    versionCode: 42
+    commit: 2975156d3f667728b67963d84727da459c290fe1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make libtool autoconf automake
+    gradle:
+      - yes
+    prebuild: sed -i -e '/com.github.triplet.play/d; /play {/,/}/d' build.gradle
+    ndk: 26.1.10909125
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '0.37'
-CurrentVersionCode: 37
+CurrentVersion: '0.42'
+CurrentVersionCode: 42

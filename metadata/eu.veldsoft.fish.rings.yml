@@ -8,8 +8,8 @@ IssueTracker: https://github.com/VelbazhdSoftwareLLC/FishRingsForAndroid/issues
 
 AutoName: Fish Rings for Android
 Description: |-
-    The puzzle consist of three rings, which can be rotated in both directions. The
-    goal of the puzzle is to solve it as it was in the initial stage.
+  The puzzle consist of three rings, which can be rotated in both directions. The
+  goal of the puzzle is to solve it as it was in the initial stage.
 
 RepoType: git
 Repo: https://github.com/VelbazhdSoftwareLLC/FishRingsForAndroid
@@ -27,7 +27,14 @@ Builds:
     versionCode: 3
     commit: 1d7cd5b7b04fa178a6d51d4b888bcc0fcac1a675
 
+  - versionName: '1.21'
+    versionCode: 4
+    commit: 28eef0cf50fe1ef89a4801ae4abcc96b8ab15e80
+    subdir: FishRingsForAndroid
+    gradle:
+      - yes
+
 AutoUpdateMode: None
 UpdateCheckMode: RepoManifest
-CurrentVersion: '1.2'
-CurrentVersionCode: 3
+CurrentVersion: '1.21'
+CurrentVersionCode: 4

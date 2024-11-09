@@ -1,17 +1,18 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Rely on OpenWeatherMap
 Categories:
   - Internet
 License: GPL-3.0-only
 AuthorName: woheller69
 SourceCode: https://github.com/woheller69/weather
 IssueTracker: https://github.com/woheller69/weather/issues
-Changelog: https://github.com/woheller69/weather/blob/main/CHANGELOG.md
+Changelog: https://github.com/woheller69/weather/blob/HEAD/CHANGELOG.md
 
 AutoName: RadarWeather
 
 RepoType: git
-Repo: https://github.com/woheller69/weather
+Repo: https://github.com/woheller69/weather.git
 
 Builds:
   - versionName: '1.0'
@@ -278,7 +279,63 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '5.8'
+    versionCode: 58
+    commit: eb8017cf3fdeea095d9fccfcf00340dcc6324760
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.9'
+    versionCode: 59
+    commit: 053fd9c3e02ac9ae8a86ff8aca817fc1e13c3a5b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.0'
+    versionCode: 60
+    commit: 0bd7753dfea4ea53e81278b91af4062a140a143e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.1'
+    versionCode: 61
+    commit: d9251f9fdba808b771f2e96d94d4aff1051a8e7e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.2'
+    versionCode: 62
+    commit: 531b5480b7a479121a8c6d18e2e136dbe70ab02b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.3'
+    versionCode: 63
+    commit: 1d2edf95a0fbda9d1490e17ac1eb558abfd96137
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.4'
+    versionCode: 64
+    commit: d5094463a100c467f46d03e06e40d318528f99ba
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.5'
+    versionCode: 65
+    commit: 226f3a73062ac269205766c367943af58c399b0b
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '5.7'
-CurrentVersionCode: 57
+CurrentVersion: '6.5'
+CurrentVersionCode: 65

@@ -9,17 +9,17 @@ Changelog: https://github.com/gryphius/androdns/releases
 
 AutoName: AndroDNS
 Description: |-
-    This DNS client allows you to perform customized DNS queries directly from your
-    mobile phone. In contrast to most other DNS clients, it does not impose
-    restrictions on what you can query.
+  This DNS client allows you to perform customized DNS queries directly from your
+  mobile phone. In contrast to most other DNS clients, it does not impose
+  restrictions on what you can query.
 
-    Features:
+  Features:
 
-    * Select recursive or authoritative server to query (default: system resolver)
-    * Specify any question type (not just the most common A/AAAA/MX ....), you can even enter the type ID for new/experimental question types
-    * Supports IN/CH/HS query class
-    * Set question flags
-    * DNSSEC aware (request / show RRSIGs ) - but it does not validate
+  * Select recursive or authoritative server to query (default: system resolver)
+  * Specify any question type (not just the most common A/AAAA/MX ....), you can even enter the type ID for new/experimental question types
+  * Supports IN/CH/HS query class
+  * Set question flags
+  * DNSSEC aware (request / show RRSIGs ) - but it does not validate
 
 RepoType: git
 Repo: https://github.com/gryphius/androdns.git
@@ -58,14 +58,15 @@ Builds:
     gradle:
       - yes
 
-  - versionName: '1.6'
-    versionCode: 22
-    disable: fails to verify
-    commit: v1.6
+  - versionName: '1.8'
+    versionCode: 27
+    commit: 1defb70d757279f10738d10d5c14a607b1656028
     subdir: app
     sudo:
       - apt-get update
       - apt-get install -y disorderfs
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     init:
       - cd ../..
       - mv androdns.android.leetdreams.ch.androdns androdns.android.leetdreams.ch.androdns.build
@@ -75,7 +76,9 @@ Builds:
     gradle:
       - yes
 
+AllowedAPKSigningKeys: 4468cd7036cedbebee3a8afdb4d92ecec862f9812ae7940fc79faa46594aaa51
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*[0-9.]+$
-CurrentVersion: '1.6'
-CurrentVersionCode: 22
+CurrentVersion: '1.8'
+CurrentVersionCode: 27

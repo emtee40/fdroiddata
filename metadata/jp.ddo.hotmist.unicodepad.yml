@@ -9,14 +9,14 @@ Changelog: https://github.com/Ryosuke839/UnicodePad/releases
 
 AutoName: UnicodePad
 Description: |-
-    <i>UnicodePad</i> lets you input every character in Unicode. And input string can
-    be copied to the clipboard or input directly by Mushroom. You can find out
-    where selected character is in list. By long clicking, larger character and
-    code point will be shown. Favorite characters can be memorized.
+  <i>UnicodePad</i> lets you input every character in Unicode. And input string can
+  be copied to the clipboard or input directly by Mushroom. You can find out
+  where selected character is in list. By long clicking, larger character and
+  code point will be shown. Favorite characters can be memorized.
 
-    If you can’t see special characters, you have to get a font such as Noto font
-    and select it. You can download Noto fonts <a href="https://www.google.com/get/noto/
-    from">Google</a>.
+  If you can't see special characters, you have to get a font such as Noto font
+  and select it. You can download Noto fonts <a href="https://www.google.com/get/noto/
+  from">Google</a>.
 
 RepoType: git
 Repo: https://github.com/Ryosuke839/UnicodePad.git
@@ -77,7 +77,52 @@ Builds:
     scanignore:
       - app/src/main/assets/namedb.zip
 
+  - versionName: 2.13.1-fdroid
+    versionCode: 57
+    commit: 662bce5720b495fbbb1c0d9a18e4a7f19b0f124a
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/assets/namedb.zip
+
+  - versionName: 2.13.3-fdroid
+    versionCode: 59
+    commit: 869f78b258065ecb1098eb7eccfd8a294d28369a
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/assets/namedb.zip
+
+  - versionName: 2.13.4-fdroid
+    versionCode: 61
+    commit: 4d11745d11d169f196719b7e883718948920af75
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/assets/namedb.zip
+
+  - versionName: 2.14.2-fdroid
+    versionCode: 65
+    commit: 1a2be17014b34559331b078e656841e8bb71e7a2
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/assets/namedb.zip
+
+  - versionName: 2.14.3-fdroid
+    versionCode: 66
+    commit: e2e4438d823c116eebdbec1372e33cf19e6edeb4
+    subdir: app
+    gradle:
+      - fdroid
+    scanignore:
+      - app/src/main/assets/namedb.zip
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.12.3-fdroid
-CurrentVersionCode: 56
+CurrentVersion: 2.14.3-fdroid
+CurrentVersionCode: 66

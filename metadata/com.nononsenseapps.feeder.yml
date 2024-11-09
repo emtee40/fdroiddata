@@ -1,20 +1,22 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Connects to news.nononsenseapps.com on start
 Categories:
   - Internet
   - Reading
 License: GPL-3.0-only
 AuthorName: Space Cowboy
-AuthorWebSite: https://cowboyprogrammer.org
-SourceCode: https://gitlab.com/spacecowboy/Feeder
-IssueTracker: https://gitlab.com/spacecowboy/Feeder/issues
+WebSite: https://news.nononsenseapps.com/
+SourceCode: https://github.com/spacecowboy/Feeder
 Translation: https://hosted.weblate.org/projects/feeder/
-Changelog: https://gitlab.com/spacecowboy/Feeder/blob/HEAD/CHANGELOG.md
+Changelog: https://github.com/spacecowboy/Feeder/blob/HEAD/CHANGELOG.md
 Donate: https://ko-fi.com/spacecowboy
 Bitcoin: 1PdmeeGxB2iktvmtkGqwUNmYq7L9tnxjwE
 
 AutoName: Feeder
 
 RepoType: git
-Repo: https://gitlab.com/spacecowboy/Feeder.git
+Repo: https://github.com/spacecowboy/Feeder.git
 
 Builds:
   - versionName: 1.2.2
@@ -1639,7 +1641,572 @@ Builds:
       - graphics
     prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
 
+  - versionName: 2.4.8
+    versionCode: 270
+    commit: befb81df2241f9a1fa22d8c63905796755d53005
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.9
+    versionCode: 271
+    commit: b00b6e900bf278eed6652537aef617ecdfa55f7a
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.10
+    versionCode: 272
+    commit: 344cf1aa80a6a0687a84a8553a4ff3621257cea0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.11
+    versionCode: 273
+    commit: a3b9abf25522a7b6ae4250b385428285d5f3afee
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.12
+    versionCode: 274
+    commit: b2d8eaa75cff5c6a3ed4531df941026e2944883d
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.13
+    versionCode: 275
+    commit: 90ea0e8db369a66887e6968388a8a2bc581f787c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.14
+    versionCode: 276
+    commit: e5285bdf024cf99aa0d2978e58e315930a550b34
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.15
+    versionCode: 277
+    commit: 41f1346e28a2c6094b5491942bac4d11c6a96727
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.16
+    versionCode: 278
+    commit: 7b99c86761e91eabf31ae1e50f172361e1d93065
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.17
+    versionCode: 279
+    commit: 5d85cc4ef2cec911a18462194af67605dce13b55
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.18
+    versionCode: 280
+    commit: 2b0f4ba1cb3adff3fc1f458cc890dc36aa9b3ae2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.19
+    versionCode: 281
+    commit: 5d4b7f574923409e721b1de0883c31dad82d2194
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.4.20
+    versionCode: 282
+    commit: 5d04c3163aa417f3f20f7849dc21e63b0ec28de5
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.5.0
+    versionCode: 283
+    commit: ba62e72b7a2bd8a8d1f11658dcf526fe13e3ab4f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.6.0
+    versionCode: 284
+    commit: 36b5a8338ad381235fe5ca1d760bf98404e8f29f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+    prebuild: echo 'org.gradle.jvmargs=-Xmx2g' >> ../gradle.properties
+
+  - versionName: 2.6.2
+    versionCode: 286
+    commit: c8757deb9b1964e842ac0091747ca38d4208a27b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.3
+    versionCode: 287
+    commit: 3f7e1134e2a0d72a51c7eb2adf738bfdda6f0cae
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.4
+    versionCode: 288
+    commit: 9c0a13049085d83480a6a88559c1315e223617b4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.5
+    versionCode: 289
+    commit: 22da092988a084f542641e82d1866a00365ce85f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.6
+    versionCode: 290
+    commit: 7aa0bd05fb66b8e1b8963aa37df7005a4c9b8af7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.7-1
+    versionCode: 292
+    commit: 5825dd1feb0917d68bd9fe8b6d4e2cb61a7387b2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.8
+    versionCode: 293
+    commit: a3b3bd9d11a5084443b74601086b12e80343ec4f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.9
+    versionCode: 294
+    commit: f20f49b7c9d7f2b4e6ea567b893a07244ca38a86
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.10
+    versionCode: 295
+    commit: 765216913f171f647d24e261d5f158cfb2c5adac
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.11
+    versionCode: 296
+    commit: 3ca41dc8e0a34660b0347e6c4357b5318a058603
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.12
+    versionCode: 297
+    commit: 248dce7256c54a1d4691477ac4b366c20cc25925
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.13
+    versionCode: 298
+    commit: a0c4a8b860d8d2f37f4d7248e31263cb0eb0a144
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.14
+    versionCode: 299
+    commit: c5a7f03c3b59a786eafa60f656d625a65a524c7a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.15
+    versionCode: 300
+    commit: 12846ac356d56674d221cf0808cf4e48b9b9f517
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.16
+    versionCode: 301
+    commit: 666ea291c897aae43acda2127c6b30dfafa6d660
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.17
+    versionCode: 302
+    commit: 6ef14d7366f6b2a1940580b1bee0498e3ca870fa
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.18
+    versionCode: 303
+    commit: 54df2bfa872b5c5a5968730764a5cf8619f3e6d5
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.19
+    versionCode: 304
+    commit: ca900c3532122ff48a86557a2bd145c7341b5bb6
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.20
+    versionCode: 305
+    commit: d901d77690eff5e4bf2420f4177d970d7394088e
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.21
+    versionCode: 306
+    commit: de58d93e6bbaf57a20c1114094802f445b60363c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.22
+    versionCode: 307
+    commit: cdd90d4cf84a39a8212fd438fa3b0fbd3ba3f79a
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.23
+    versionCode: 308
+    commit: 313e91b2fc21aea69e7abac17966a5eb1a2d7d9e
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.24
+    versionCode: 309
+    commit: 378f5cf9257fc28ecc85d109a0f6d7e04141710c
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.25
+    versionCode: 310
+    commit: 347ed83f7125696dc8d5cedc11e0dd4d585f8e83
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.26
+    versionCode: 311
+    commit: 1ec4a6475b22ffb689a5aefa20de116167388ea8
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.27
+    versionCode: 312
+    commit: 5633df46221dee2ec9a4bf85569fbd4045bb853f
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.28
+    versionCode: 313
+    commit: e89aa72b707012f50bdfc1f4e134b490fffaf272
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.29
+    versionCode: 314
+    commit: cf6cf1df99bb3897081ffa5b8496eafa695eadae
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.30
+    versionCode: 315
+    commit: 3e66514a217d082dae9efef5f78aa63c74bf87f2
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.31
+    versionCode: 316
+    commit: 8dea6584646f0c32e6b946cb51fedb32031644fe
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.32
+    versionCode: 317
+    commit: 1481ba8881e24224122604b3f31d3d859d2dbcb1
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
+  - versionName: 2.6.33
+    versionCode: 318
+    commit: 6bc07a46614af757ac9b0d8db7e6661cadc1cef4
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - graphics
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.4.7
-CurrentVersionCode: 269
+CurrentVersion: 2.6.33
+CurrentVersionCode: 318

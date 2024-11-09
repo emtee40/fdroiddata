@@ -8,17 +8,17 @@ Changelog: https://github.com/nicolasbrailo/PianOli/releases
 
 AutoName: PianOli
 Description: |-
-    Have a baby curious about shiny tablets and phones? Use this app as a
-    baby-game and, more importantly, to prevent random taps of a baby from
-    doing anything you may not want. This app will show a small piano a baby
-    can use to explore sounds in a mobile device. At the same time, it will
-    block any naive attempts at closing the app. The back, home and apps-menu
-    buttons will be blocked, and Android's top menu won't be available. This
-    ensures a baby can't accidentally close the game, preventing any actions on
-    the device you may not want.
+  Have a baby curious about shiny tablets and phones? Use this app as a
+  baby-game and, more importantly, to prevent random taps of a baby from
+  doing anything you may not want. This app will show a small piano a baby
+  can use to explore sounds in a mobile device. At the same time, it will
+  block any naive attempts at closing the app. The back, home and apps-menu
+  buttons will be blocked, and Android's top menu won't be available. This
+  ensures a baby can't accidentally close the game, preventing any actions on
+  the device you may not want.
 
 RepoType: git
-Repo: https://github.com/nicolasbrailo/PianOli
+Repo: https://github.com/nicolasbrailo/PianOli.git
 
 Builds:
   - versionName: '1.1'
@@ -119,7 +119,65 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.20'
+    versionCode: 20
+    commit: 85405b84df48e7452e8e0e3b67fe0997538c3f8b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.21'
+    versionCode: 21
+    commit: 0d3bbfdc50842e7bb54aaa342d845a98345d38e0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.22'
+    versionCode: 22
+    commit: 56dcad433f6edb8b3d7795b8e0f420ffea542582
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.23'
+    versionCode: 23
+    commit: ba6cb7bbcde3beae27fa96954130be9665e74070
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.24'
+    versionCode: 24
+    commit: 28c5cc7b119c5d696b5805964e9a7e143fcf51a6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.25'
+    versionCode: 25
+    commit: 7557a291f185b9ac9629fb47ec3cb784b84a808c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.19'
-CurrentVersionCode: 19
+CurrentVersion: '1.25'
+CurrentVersionCode: 25

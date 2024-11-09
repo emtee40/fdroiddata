@@ -6,12 +6,12 @@ IssueTracker: https://github.com/jdeslip/arxiv-mobile/issues
 
 AutoName: arXiv mobile
 Description: |-
-    Keep up with the latest science research: physics, math, computers science.
-    Browse daily science articles (Physics, Astronomy, Math...) at arXiv.org and
-    search the entire arXiv collection. You can read PDFs, save them for later
-    reading and share articles. A homescreen widget lets you know of any new
-    articles in your favorite science categories (dozens of physics, math, computer
-    science categories) or custom searches.
+  Keep up with the latest science research: physics, math, computers science.
+  Browse daily science articles (Physics, Astronomy, Math...) at arXiv.org and
+  search the entire arXiv collection. You can read PDFs, save them for later
+  reading and share articles. A homescreen widget lets you know of any new
+  articles in your favorite science categories (dozens of physics, math, computer
+  science categories) or custom searches.
 
 RepoType: git
 Repo: https://github.com/jdeslip/arxiv-mobile
@@ -37,7 +37,8 @@ Builds:
     versionCode: 112
     commit: 383a5adc18d6c50b890648a13f2913584f2e1492
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: 2.0.27
 CurrentVersionCode: 112

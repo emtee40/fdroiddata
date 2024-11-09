@@ -1,9 +1,12 @@
 Categories:
   - Graphics
 License: GPL-3.0-or-later
+AuthorEmail: bugreport@imagepipe.de
 AuthorWebSite: https://kaffeemitkoffein.de/blog/me/
 SourceCode: https://codeberg.org/Starfish/Imagepipe
 IssueTracker: https://codeberg.org/Starfish/Imagepipe/issues
+Translation: https://translate.codeberg.org/engage/imagepipe/
+Changelog: https://codeberg.org/Starfish/Imagepipe/releases
 
 AutoName: Imagepipe
 
@@ -144,7 +147,49 @@ Builds:
       - yes
     output: app/build/outputs/apk/release/app-release-unsigned.apk
 
+  - versionName: '0.65'
+    versionCode: 44
+    commit: ef0bb07ddb5fc3f9723df03d0a118ccc95f75e9a
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.66'
+    versionCode: 45
+    commit: 1e04064712930dc555936f1ebfbe9f0493b7a143
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.67'
+    versionCode: 46
+    commit: 1987fc3188e0a539f427fe73919b339c1c4ffbb3
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.68'
+    versionCode: 47
+    commit: b93781cb7ffb8f66d89005ec1fc3d0d2571632fa
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.69'
+    versionCode: 48
+    commit: bfb0a0a23cf5dc69870db6fd5699f7d478e59478
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
+  - versionName: '0.70'
+    versionCode: 49
+    commit: 1de37e24e2b24330d76788504ec0bfb7d777f9be
+    gradle:
+      - yes
+    output: app/build/outputs/apk/release/app-release-unsigned.apk
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '0.64'
-CurrentVersionCode: 43
+CurrentVersion: '0.70'
+CurrentVersionCode: 49

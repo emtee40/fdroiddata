@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App is tethered to blitzortung.org, which is proprietary.
 Categories:
   - Science & Education
 License: Apache-2.0
@@ -12,7 +13,7 @@ Changelog: https://github.com/wuan/bo-android/blob/HEAD/ChangeLog
 AutoName: Blitzortung Lightning Monitor
 
 RepoType: git
-Repo: https://github.com/wuan/bo-android
+Repo: https://github.com/wuan/bo-android.git
 
 Builds:
   - versionName: 2.0.1
@@ -311,7 +312,104 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.1.12
+    versionCode: 286
+    commit: c45c24eda6c13137488fcd7895d0096b6bbbdf85
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.14
+    versionCode: 292
+    commit: 3c543af9dcc0bc61a49b146fadb388849b0e3d00
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.1.15
+    versionCode: 305
+    commit: f539b0a504912be7ddb7f3895e06f31b36c616be
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 313
+    commit: 8f9b429b330f463e107b99a59eb234909fa97b02
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.1
+    versionCode: 315
+    commit: c79a9aead2400d45450c8388507704d4274c853b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.2
+    versionCode: 316
+    commit: 05975d34aba562ee80d9ae7434eb365495d493f3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.3
+    versionCode: 318
+    commit: 386e189eb9ad386baceae8b56628f89ab0acdea5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.4
+    versionCode: 320
+    commit: 668a00424a702fd80381611d63c8b2e4493bf4da
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.4
+    versionCode: 321
+    commit: 6076365b9e194add2d0de6d213dca242e9af68bd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.5
+    versionCode: 322
+    commit: ec99d0782265a487fc1d5074065b30b01a0a976f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.6
+    versionCode: 323
+    commit: 58c8721face3dfd4f84bb6d0e1af081d08bd3a46
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9]+\.[0-9]+\.[0-9]+\_[0-9]+$
-CurrentVersion: 2.1.11
-CurrentVersionCode: 284
+CurrentVersion: 2.2.6
+CurrentVersionCode: 323

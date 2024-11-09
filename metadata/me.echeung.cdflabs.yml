@@ -1,17 +1,17 @@
 Categories:
-  - Science & Education
   - Navigation
+  - Science & Education
 License: MIT
 SourceCode: https://github.com/arkon/CDFLabs
 IssueTracker: https://github.com/arkon/CDFLabs/issues
 
 AutoName: CS Teaching Labs
 Description: |-
-    Allows Computer Science students at University of Toronto St George to quickly
-    check how many machines are available in the various CDF computer labs in Bahen
-    and on NX.
+  Allows Computer Science students at University of Toronto St George to quickly
+  check how many machines are available in the various CDF computer labs in Bahen
+  and on NX.
 
-    Older versions are GPLv3 licensed, staring with 3.0.0 licensing switched to MIT.
+  Older versions are GPLv3 licensed, staring with 3.0.0 licensing switched to MIT.
 
 RepoType: git
 Repo: https://github.com/arkon/CDFLabs
@@ -118,14 +118,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 3.0.4
-    versionCode: 27
-    disable: aapt returns 2
-    commit: b79dfe351c4f3af81a44453015456592062a8317
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: 3.1.0
     versionCode: 28
     commit: 2df2f39acc8245d27d30ef4625c5223443057c09
@@ -154,7 +146,7 @@ Builds:
     gradle:
       - yes
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 3.3.0

@@ -10,13 +10,13 @@ Changelog: https://github.com/Catrobat/Paintroid/releases
 
 AutoName: Paintroid
 Description: |-
-    Paintroid is a graphical paint editor App, that, among others, allows
-    setting parts of pictures to transparent, insert Text / Images, add Layers,
-    use Color filling and picking tools, rotate, resize and position
-    elements...
+  Paintroid is a graphical paint editor App, that, among others, allows
+  setting parts of pictures to transparent, insert Text / Images, add Layers,
+  use Color filling and picking tools, rotate, resize and position
+  elements...
 
-    It is also known as Pocket Paint, it is associated to Catroid (which is
-    like Scratch but for Android).
+  It is also known as Pocket Paint, it is associated to Catroid (which is
+  like Scratch but for Android).
 
 RepoType: git
 Repo: https://github.com/Catrobat/Paintroid.git
@@ -120,9 +120,37 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.10.0
+    versionCode: 49
+    commit: 6c62260cbfe503247cb6df3c2a5e52265781d4d5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.1
+    versionCode: 50
+    commit: e39cee6d9571eab8b51b2c1c71cbf376434b665f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.11.0
+    versionCode: 51
+    commit: a8d0fd35e100ae878593114af9ec2bc2b02214f4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.12.0
+    versionCode: 52
+    commit: e656dab87cffa7111f91a8ffb1d88cd52bd0e60c
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v.*$
 UpdateCheckData: build.gradle|androidVersionCode = ([0-9]+)|.|androidVersionName =
-    '([0-9.]*)'
-CurrentVersion: 2.9.1
-CurrentVersionCode: 48
+  '([0-9.]*)'
+CurrentVersion: 2.12.0
+CurrentVersionCode: 52

@@ -1,8 +1,9 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Uses LastFM.
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-or-later
 SourceCode: https://gitlab.com/antoniotari/reactive-ampache/
 IssueTracker: https://gitlab.com/antoniotari/reactive-ampache/issues
@@ -10,8 +11,8 @@ Translation: https://gitlab.com/antoniotari/reactive-ampache/blob/master/CONTRIB
 
 AutoName: Power Ampache
 Description: |-
-    A player for Ampache, simply connect to your Ampache instance and enjoy your
-    music. Features modern Material Design following the latest guidelines.
+  A player for Ampache, simply connect to your Ampache instance and enjoy your
+  music. Features modern Material Design following the latest guidelines.
 
 RepoType: git
 Repo: https://gitlab.com/antoniotari/reactive-ampache.git
@@ -284,10 +285,11 @@ Builds:
       - sed -i -e 's/${AMPACHE_PASSWORD}/null/g' build.gradle
 
 MaintainerNotes: |-
-    * Crashlytics & Fabric (e.g. in builds 43,44,46,47..58) are stubs, see https://gitlab.com/fdroid/fdroiddata/-/issues/2286#note_500815572
-    * NonFreeNet due to last-fm
+  * Crashlytics & Fabric (e.g. in builds 43,44,46,47..58) are stubs, see https://gitlab.com/fdroid/fdroiddata/-/issues/2286#note_500815572
+  * NonFreeNet due to last-fm
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.09.49
 CurrentVersionCode: 58

@@ -67,7 +67,76 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.0-beta14
+    versionCode: 14
+    commit: 4ec2aeb0a2f1822f09259d223ab7c7283aa12541
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta15
+    versionCode: 15
+    commit: 909d44ed0d50c692768ac08ab194a50656ae5c4e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta16
+    versionCode: 16
+    commit: b91cb227c3033a5038a70b2fb61600cc91c5196b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0-beta17
+    versionCode: 17
+    commit: 01c43482593f6ed1d0480ec2fafe4b1a8e995794
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1-beta18
+    versionCode: 18
+    commit: 39ad1db6e2c20ca162849ce0a264ba59d737cff5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1-beta19
+    versionCode: 19
+    commit: b214b6f21cefa135691207fba130400afda9b4d4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1-beta20
+    versionCode: 20
+    commit: aa3b831dde3ef54d50a470417718632c429f1770
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0-beta13
-CurrentVersionCode: 13
+CurrentVersion: 1.1-beta20
+CurrentVersionCode: 20

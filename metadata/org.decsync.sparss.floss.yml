@@ -1,6 +1,9 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on Feedly for feed search.
 Categories:
-  - Reading
   - Internet
+  - Reading
 License: GPL-3.0-only
 AuthorName: Aldo Gunsing
 AuthorEmail: dev@aldogunsing.nl
@@ -11,7 +14,7 @@ Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4V9
 AutoName: spaRSS DecSync
 
 RepoType: git
-Repo: https://github.com/39aldo39/spaRSS-DecSync
+Repo: https://github.com/39aldo39/spaRSS-DecSync.git
 
 Builds:
   - versionName: 1.12.0
@@ -180,6 +183,8 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - floss
+
+MaintainerNotes: AF see https://gitlab.com/fdroid/fdroiddata/-/issues/2967
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags

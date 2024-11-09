@@ -1,5 +1,3 @@
-AntiFeatures:
-  - Ads
 Categories:
   - Money
 License: GPL-3.0-only
@@ -12,7 +10,6 @@ IssueTracker: https://github.com/mtotschnig/MyExpenses/issues
 Translation: https://hosted.weblate.org/engage/my-expenses/
 Changelog: http://www.myexpenses.mobi/#versionlist
 Donate: https://www.myexpenses.mobi/en/#participate
-FlattrID: '1028216'
 Bitcoin: 15WECHs6zGQyyiRYoLmVzWYfoKVDoipmSp
 
 AutoName: MyExpenses
@@ -79,21 +76,6 @@ Builds:
       - sed -i 's@\(.1=\).*@\1$$ActionBarSherlock$$@' project.properties
       - mv libs/android-support-v4r11.jar $$ActionBarSherlock$$/libs/android-support-v4.jar
 
-  - versionName: 1.9.6.2
-    versionCode: 81
-    disable: Build fails
-    commit: r81
-    srclibs:
-      - ActionBarSherlock@4.3.1
-      - StickyListHeaders-tots@270b239cb1c2
-    extlibs:
-      - android/android-support-v4r11.jar
-    prebuild:
-      - rm -rf tests
-      - sed -i 's@\(.1=\).*@\1$$ActionBarSherlock$$@' project.properties
-      - sed -i 's@\(.2=\).*@\1$$StickyListHeaders-tots$$@' project.properties
-      - mv libs/android-support-v4r11.jar $$ActionBarSherlock$$/libs/android-support-v4.jar
-
   - versionName: 1.9.7.1
     versionCode: 85
     commit: r85
@@ -126,8 +108,8 @@ Builds:
     versionCode: 93
     commit: r93
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:StickyListHeaders-tots@270b239cb1c2
+      - ActionBarSherlock@4.4.0
+      - StickyListHeaders-tots@270b239cb1c2
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -138,8 +120,8 @@ Builds:
     versionCode: 95
     commit: r95
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:StickyListHeaders-tots@270b239cb1c2
+      - ActionBarSherlock@4.4.0
+      - StickyListHeaders-tots@270b239cb1c2
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -150,8 +132,8 @@ Builds:
     versionCode: 97
     commit: r97
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:StickyListHeaders-tots@270b239cb1c2
+      - ActionBarSherlock@4.4.0
+      - StickyListHeaders-tots@270b239cb1c2
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -162,8 +144,8 @@ Builds:
     versionCode: 102
     commit: r102
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:StickyListHeaders@2.1.3
+      - ActionBarSherlock@4.4.0
+      - StickyListHeaders@2.1.3
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -174,8 +156,8 @@ Builds:
     versionCode: 104
     commit: r104
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:StickyListHeaders@2.1.3
+      - ActionBarSherlock@4.4.0
+      - StickyListHeaders@2.1.3
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -186,8 +168,8 @@ Builds:
     versionCode: 108
     commit: r108
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:StickyListHeaders@2.1.4
+      - ActionBarSherlock@4.4.0
+      - StickyListHeaders@2.1.4
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -198,8 +180,8 @@ Builds:
     versionCode: 110
     commit: r110
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:StickyListHeaders@2.1.4
+      - ActionBarSherlock@4.4.0
+      - StickyListHeaders@2.1.4
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -210,8 +192,8 @@ Builds:
     versionCode: 113
     commit: r113
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:StickyListHeaders@2.1.4
+      - ActionBarSherlock@4.4.0
+      - StickyListHeaders@2.1.4
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -222,8 +204,8 @@ Builds:
     versionCode: 116
     commit: r116
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:StickyListHeaders@2.1.4
+      - ActionBarSherlock@4.4.0
+      - StickyListHeaders@2.1.4
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -234,8 +216,8 @@ Builds:
     versionCode: 122
     commit: r122
     srclibs:
-      - 1:StickyListHeaders@2.1.4
-      - 2:Support/v7/appcompat@android-4.4_r1.1
+      - StickyListHeaders@2.1.4
+      - appcompat@android-4.4_r1.1
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -327,37 +309,9 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 2.2.0
-    versionCode: 155
-    disable: malformed xml file build/res/all/release/values-pt/values.xml
-    commit: r155
-    gradle:
-      - yes
-
-  - versionName: 2.2.0.1
-    versionCode: 156
-    disable: malformed xml file build/res/all/release/values-pt/values.xml
-    commit: r156
-    gradle:
-      - yes
-
-  - versionName: 2.2.0.2
-    versionCode: 157
-    disable: malformed xml file build/res/all/release/values-pt/values.xml
-    commit: r157
-    gradle:
-      - yes
-
   - versionName: 2.3.0.1
     versionCode: 160
     commit: r160
-    gradle:
-      - yes
-
-  - versionName: 2.3.1
-    versionCode: 164
-    disable: malformed xml file build/res/all/release/values-pt/values.xml
-    commit: r164
     gradle:
       - yes
 
@@ -418,14 +372,6 @@ Builds:
   - versionName: 2.3.8
     versionCode: 182
     commit: r182
-    submodules: true
-    gradle:
-      - yes
-
-  - versionName: 2.3.9.4
-    versionCode: 189
-    disable: build fails
-    commit: r189
     submodules: true
     gradle:
       - yes
@@ -636,36 +582,6 @@ Builds:
       - sed -i -e '/cwac/d' build.gradle
       - cp -fR $$CWACWakeful$$/wakeful/src/com src/main/java/
 
-  - versionName: 2.6.6
-    versionCode: 242
-    disable: 'java.lang.IllegalStateException: buildToolsVersion is not specified'
-    commit: r242
-    subdir: myExpenses
-    submodules: true
-    gradle:
-      - yes
-    srclibs:
-      - CWACWakeful@v1.0.5
-    prebuild:
-      - sed -i -e '/maven {/,+2d' ../build.gradle
-      - sed -i -e '/cwac/d' build.gradle
-      - cp -fR $$CWACWakeful$$/wakeful/src/com src/main/java/
-
-  - versionName: 2.6.6.1
-    versionCode: 243
-    disable: 'java.lang.IllegalStateException: buildToolsVersion is not specified'
-    commit: r243
-    subdir: myExpenses
-    submodules: true
-    gradle:
-      - yes
-    srclibs:
-      - CWACWakeful@v1.0.5
-    prebuild:
-      - sed -i -e '/maven {/,+2d' ../build.gradle
-      - sed -i -e '/cwac/d' build.gradle
-      - cp -fR $$CWACWakeful$$/wakeful/src/com src/main/java/
-
   - versionName: 2.6.6.1
     versionCode: 244
     commit: r244
@@ -674,7 +590,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.6.7.1
     versionCode: 247
@@ -684,7 +600,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.6.8
     versionCode: 251
@@ -694,7 +610,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.6.9
     versionCode: 253
@@ -704,7 +620,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.0
     versionCode: 255
@@ -714,7 +630,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.0
     versionCode: 256
@@ -724,7 +640,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.1
     versionCode: 257
@@ -734,7 +650,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.1.1
     versionCode: 258
@@ -744,7 +660,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.5.1
     versionCode: 262
@@ -754,7 +670,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.5.3
     versionCode: 265
@@ -764,7 +680,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.6
     versionCode: 268
@@ -774,18 +690,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
-
-  - versionName: 2.7.7
-    versionCode: 275
-    disable: outdated buildtools
-    commit: r275
-    subdir: myExpenses
-    submodules: true
-    gradle:
-      - yes
-    prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.7.1
     versionCode: 276
@@ -795,7 +700,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.8.1
     versionCode: 281
@@ -805,7 +710,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.8.3
     versionCode: 283
@@ -815,7 +720,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.7.9
     versionCode: 285
@@ -825,7 +730,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
 
   - versionName: 2.8.0
     versionCode: 291
@@ -835,7 +740,9 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.0.1
     versionCode: 292
@@ -845,7 +752,9 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.1
     versionCode: 294
@@ -855,7 +764,9 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.2
     versionCode: 296
@@ -865,7 +776,9 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.2.1
     versionCode: 297
@@ -875,7 +788,9 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's@repo.commonsware.com.s3.amazonaws.com@s3.amazonaws.com/repo.commonsware.com@g'
-        ../build.gradle
+      ../build.gradle
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.3
     versionCode: 300
@@ -885,6 +800,8 @@ Builds:
       - yes
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.3
     versionCode: 301
@@ -894,6 +811,8 @@ Builds:
       - yes
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.3.1
     versionCode: 302
@@ -903,6 +822,8 @@ Builds:
       - yes
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.4
     versionCode: 304
@@ -912,6 +833,8 @@ Builds:
       - yes
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.5
     versionCode: 308
@@ -921,6 +844,8 @@ Builds:
       - yes
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.6
     versionCode: 310
@@ -930,6 +855,8 @@ Builds:
       - yes
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.7
     versionCode: 312
@@ -939,6 +866,8 @@ Builds:
       - yes
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.8
     versionCode: 314
@@ -948,6 +877,8 @@ Builds:
       - yes
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.8.1
     versionCode: 315
@@ -957,6 +888,8 @@ Builds:
       - yes
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.9.1
     versionCode: 319
@@ -966,6 +899,8 @@ Builds:
       - acra
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.8.9.1
     versionCode: 320
@@ -975,6 +910,8 @@ Builds:
       - acra
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.0
     versionCode: 323
@@ -984,6 +921,8 @@ Builds:
       - acra
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.0.1
     versionCode: 324
@@ -993,6 +932,8 @@ Builds:
       - acra
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.1
     versionCode: 328
@@ -1002,6 +943,8 @@ Builds:
       - acra
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.1.1
     versionCode: 329
@@ -1011,6 +954,8 @@ Builds:
       - acra
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.1.2
     versionCode: 330
@@ -1020,6 +965,8 @@ Builds:
       - acra
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.1.3
     versionCode: 331
@@ -1029,6 +976,8 @@ Builds:
       - acra
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.1.4
     versionCode: 332
@@ -1038,6 +987,8 @@ Builds:
       - acra
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.2
     versionCode: 336
@@ -1047,6 +998,8 @@ Builds:
       - acra
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.4
     versionCode: 341
@@ -1057,6 +1010,8 @@ Builds:
       - conscript
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.5
     versionCode: 343
@@ -1067,6 +1022,8 @@ Builds:
       - conscript
     rm:
       - tests
+    antifeatures:
+      - Ads
 
   - versionName: 2.9.5.1
     versionCode: 344
@@ -1370,17 +1327,6 @@ Builds:
   - versionName: 3.1.1.1
     versionCode: 410
     commit: r410
-    subdir: myExpenses
-    gradle:
-      - conscript
-    rm:
-      - tests
-    prebuild: echo 'org.gradle.jvmargs=-Xmx1g' >> ../gradle.properties
-
-  - versionName: 3.1.2.2
-    versionCode: 416
-    disable: unknown maven for mokito
-    commit: r416
     subdir: myExpenses
     gradle:
       - conscript
@@ -2158,10 +2104,757 @@ Builds:
       - tests
     build: gradle :myExpenses:packageExternReleaseUniversalApk
 
-MaintainerNotes: '* Ads: https://github.com/mtotschnig/MyExpenses/tree/b4237aabf8924614251d14fb18ce274ec0f934f7/myExpenses/src/main/java/org/totschnig/myexpenses/util/ads'
+  - versionName: 3.5.1.2
+    versionCode: 592
+    commit: 33a29c3f80533022964b7f6bd5504542c3f07247
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.5.2
+    versionCode: 597
+    commit: 330e783f6032f70f5173df4b2c4d9ffad2abc15c
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    prebuild: sed -i -e 's/MM,dd,HH,mm/M,d,H,m/' build.gradle
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.5.2.1
+    versionCode: 599
+    commit: 4993394bfc2933826580969ca6add3748783d557
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.5.3
+    versionCode: 603
+    commit: d6e94dda5607740cd9b7c397adbcdde7ab984d55
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.5.3.1
+    versionCode: 609
+    commit: 022995359d0ed57a37240f3acd2f1982de971f2c
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.5.3.2
+    versionCode: 611
+    commit: adc3f91137e5af7e4f02e001cf3419ce6da9b949
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.5.4
+    versionCode: 614
+    commit: 6f6e9167b151ad52983a7cc02bc3edbbcf8c8bac
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.5.5
+    versionCode: 615
+    commit: 988627c456d6562c166f0d753d3be301177603c4
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.5.5.1
+    versionCode: 616
+    commit: 1b7a23d42db784527ba109acddd8862f2d17897f
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.5.6
+    versionCode: 618
+    commit: 289c09fcc89dfd37a0956a506bb9eb157e12e11a
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.5.8
+    versionCode: 624
+    commit: e8116bbf81ea003be71932ed01df5a717cc14bb4
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.0
+    versionCode: 632
+    commit: 58d051ba69801f26a6bdb1ab832019f9e428151b
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.0.1
+    versionCode: 633
+    commit: 76bd634892d899f0149e75b72b4c0433aa319898
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.1
+    versionCode: 635
+    commit: c90d7d3bfead996d72c7fa504dcbe73c88195ded
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.1.1
+    versionCode: 636
+    commit: 76f487102fa1265eec5a10f5f07a76ee1a021f3f
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.2
+    versionCode: 639
+    commit: 477fa99d31484bb0af227187c1dcfe030c0b185e
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.3
+    versionCode: 645
+    commit: dbcd6afa96092447e76d28d17a0d964c8f7dd029
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.4
+    versionCode: 648
+    commit: 9df484e97d52be6def8a4858c7283a84a34981ed
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.5
+    versionCode: 653
+    commit: 3ad80902b0e6486d7cc5894b98d59a7d64f1447b
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.5.2
+    versionCode: 655
+    commit: f822677bfd2516dee2afa32609e97e4e92c1a5fc
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.6
+    versionCode: 657
+    commit: e8c3b7081cffcce7d9a0fb78b84334a46cde43f2
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.7.2
+    versionCode: 665
+    commit: 3e7333cb1a46adbabb60af900f7cbe6ea1fbd12f
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.8
+    versionCode: 671
+    commit: 9fc13db2a2dd2776db71fae61215dd8b432f4c24
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.8.1
+    versionCode: 672
+    commit: 48565c6b9c8d3bdbdfe0c771d4f543415604e691
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.6.9
+    versionCode: 678
+    commit: 5651ee7f4ee460cb3a088a8c04c98244268d2662
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.0.1
+    versionCode: 688
+    commit: 22af50a9f0c973ca55951288c368a68252be55c8
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.1
+    versionCode: 690
+    commit: 16517b01dc75fadff8311acd68867351f8be928f
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.1.1
+    versionCode: 691
+    commit: 0934ab034a672c2d9db2b66e515ac6ca4951ac6d
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.2
+    versionCode: 696
+    commit: 34a222b9f49877ed2d382d79bf1ec3746948c54e
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.2.1
+    versionCode: 697
+    commit: 4ea03ff185672b8679b5fc928a27972a420099a3
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.3.2
+    versionCode: 701
+    commit: 0cfa590111b9fdb2a35374e48caf80778f081e59
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.5
+    versionCode: 709
+    commit: d66acbfdcc8a43d6b74ac030d0494a0a7dc965b4
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.6.1
+    versionCode: 714
+    commit: ae0f3246f16ffd9accf673bc59827e1e5f4c79b8
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.7
+    versionCode: 716
+    commit: fbe555467711abc390c60ef877a679ec512d1176
+    subdir: myExpenses
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.8
+    versionCode: 718
+    commit: 24f6f87e1562fdbbd1086361f603803e6e44f585
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.7.9
+    versionCode: 723
+    commit: f2d16ca4f0b2d76a9403ec2d9aea24106753231e
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.0
+    versionCode: 725
+    commit: 03144f4c8ba381374a753da4a5f6564aae634146
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.1
+    versionCode: 727
+    commit: 252320811a100236f78320672a5aaa68d1f0a2fc
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.2
+    versionCode: 731
+    commit: e6fc37ee2021bfa7e6a3e009baf7b73485f31b4e
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.2.1
+    versionCode: 733
+    commit: 47abb1e96f7bb8a454ce8909e1bbfedf141535db
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.3
+    versionCode: 735
+    commit: 7effe275d7d0040a2e849a0187350834c160c42a
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.4
+    versionCode: 737
+    commit: b401d9e366ead8bb437bd9da51e04e006cef3dd5
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.5
+    versionCode: 739
+    commit: a358931b7e94c140fd2a21f7ff8b6d582c05c5f5
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.6
+    versionCode: 743
+    commit: f12372b5e6abe44c30dcdf6744721f3253b2c72c
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.6.1
+    versionCode: 744
+    commit: 89fd550563354cc15534f3be138036523a9ce86b
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.7
+    versionCode: 748
+    commit: c166c0839516131970839dc47c2d826981318688
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.7.1
+    versionCode: 751
+    commit: 74d557a1dd1216c31dc4230d99e7b066ac829307
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.7.2
+    versionCode: 752
+    commit: 90781f7e9b1f2263deec8efad2cbb8840ac4f2e1
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.8
+    versionCode: 757
+    commit: ddd270e3a6c25a29a8536b2a247e7c069baeea35
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.8.9
+    versionCode: 759
+    commit: f8f53f23e45925ae6de28a2140a14df01d0ac859
+    subdir: myExpenses
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.9.0
+    versionCode: 763
+    commit: 9fff5fb553d1f0476e2fbd0ae91470a949fe8596
+    subdir: myExpenses
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+  - versionName: 3.9.0.1
+    versionCode: 764
+    commit: 9a9d3abaf525779cf593886825cbe6b03485f8f0
+    subdir: myExpenses
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    output: build/outputs/apk_from_bundle/externRelease/*.apk
+    rm:
+      - drive
+      - mlkit
+      - mlkit_*
+      - tests
+    build: gradle :myExpenses:packageExternReleaseUniversalApk
+
+MaintainerNotes: '* Ads: https://github.com/mtotschnig/MyExpenses/blob/b4237aabf8924614251d14fb18ce274ec0f934f7/myExpenses/src/main/java/org/totschnig/myexpenses/di/UiModule.java#L26-L33'
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^r.*$
 UpdateCheckData: build.gradle|versionCode = (\d+)|.|versionName = '(.*)'
-CurrentVersion: 3.5.0.1
-CurrentVersionCode: 583
+CurrentVersion: 3.9.0.1
+CurrentVersionCode: 764

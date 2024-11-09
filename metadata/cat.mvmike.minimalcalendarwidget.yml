@@ -327,7 +327,313 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.8.0
+    versionCode: 57
+    commit: b67b8a476073cb52d856af0906b7004af23ce668
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.8.1
+    versionCode: 58
+    commit: e1cea7c75e1f52b80ad59335fb4bb4518c9700f2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.9.0
+    versionCode: 59
+    commit: 7eacaec4300cf18d62a007e150e1e8cfc3461362
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.9.1
+    versionCode: 60
+    commit: 7f5784ec8e3a28def48609efe6758accfb439a32
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.9.2
+    versionCode: 61
+    commit: e2d0553c7953ad2a0138198fb5ff6a327cb4b06a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.9.3
+    versionCode: 62
+    commit: f598654de514371213b8f2d1bcc34ba63c766545
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.10.1
+    versionCode: 64
+    commit: 1ca20b9cdd1995df341f317a0d3f7031b1b096b8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.11.0
+    versionCode: 65
+    commit: e6779256fb4252ce839611697f60cdb037578fb0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.11.1
+    versionCode: 66
+    commit: efef614875a0bb013051ef14c8bf56e0b3d3f339
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.11.2
+    versionCode: 67
+    commit: 54be5c4800fe2f62ec3d64d7d89465b9b046160f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.11.3
+    versionCode: 68
+    commit: ef83c425c236cbca0a167a86f47f45890b28c44e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.11.4
+    versionCode: 69
+    commit: 4ee0ebd3f94f7de77956986ed20cda327f6af2db
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.12.0
+    versionCode: 70
+    commit: ce757a3878a9bddeb615717dd9fb7e744357c29b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.12.1
+    versionCode: 71
+    commit: 24a870ec0e0457e0c706620d5bf9f4be481bad61
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.12.2
+    versionCode: 72
+    commit: d2224ea58027a7ebc371620002de2828a18937fc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.12.3
+    versionCode: 73
+    commit: 3b04d66c6cb71633581b224c0a82435607caf7bb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.12.4
+    versionCode: 74
+    commit: c9e42f4ff2f18b22dbb9586fd4045e67eda31cad
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.12.5
+    versionCode: 75
+    commit: 5a9d4a832ef7123db45a03e7c8c03c77ad5d751b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.12.6
+    versionCode: 76
+    commit: 3da2d15c6743f2f481b503a2008e8ab53d12a61b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.12.7
+    versionCode: 77
+    commit: 0813fc736d53b25762767dec64294a61f5198721
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.13.0
+    versionCode: 78
+    commit: 4ccd0bcc56251610b039d824538c9af1877e1e77
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.14.0
+    versionCode: 79
+    commit: 1ad7477413f5ea0ff451d031370b475b9538d6b6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.15.0
+    versionCode: 80
+    commit: 0a1d9daa614137df19096edbf4369c9c09f3d095
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.15.1
+    versionCode: 81
+    commit: 5e47befb96986998b18af57c4e8656df514a8ab2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.16.0
+    versionCode: 82
+    commit: 669db926513b3b67fb3b38063b32951a747168a5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.17.0
+    versionCode: 83
+    commit: 5fa99238157c2dd3964ebacd4fb43ce9f4217c0f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.17.1
+    versionCode: 84
+    commit: 45515ccf71c8f04eec9bd9707c52b1a0c369122d
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.17.2
+    versionCode: 85
+    commit: 1bb48ad70cecf918b5204c2a97bbf6fedb01628e
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.7.1
-CurrentVersionCode: 56
+CurrentVersion: 2.17.2
+CurrentVersionCode: 85

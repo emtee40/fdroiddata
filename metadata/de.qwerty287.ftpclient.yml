@@ -2,9 +2,10 @@ Categories:
   - Internet
 License: MIT
 AuthorName: qwerty287
-AuthorEmail: ndev@web.de
+AuthorEmail: qwerty287@posteo.de
 SourceCode: https://codeberg.org/qwerty287/ftpclient
 IssueTracker: https://codeberg.org/qwerty287/ftpclient/issues
+Translation: https://translate.codeberg.org/projects/ftpclient/
 Changelog: https://codeberg.org/qwerty287/ftpclient/releases
 
 AutoName: FTPClient
@@ -49,7 +50,81 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.4.0
+    versionCode: 10
+    commit: 5fcddc88b15936fe6f0d425109f241a27fd8765f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.5.0
+    versionCode: 11
+    commit: 62ca8803631d6d82a6d5279ba70c4a3a4ac4f330
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.6.0
+    versionCode: 12
+    commit: bd899b459a554ae83d4278bbbc467c57ab39220f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.7.0
+    versionCode: 13
+    commit: ff07e5628156cdd75b8ceb62f06afcf4a1a3c7de
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.0
+    versionCode: 14
+    commit: 8a3d81cb5b248487b531df71e483b4171929cdf9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.0
+    versionCode: 15
+    commit: dfd2f566c61b5ad6aa04a7ec5b0a14547ee14f4c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.1
+    versionCode: 16
+    commit: 7ba4a648cf4bb9167ac1025a406c029c8bf31818
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 2.9.2
+    versionCode: 17
+    commit: 22e4a783dcc2a9fe4d2256c6df05af4de664fb3b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.9.3
+    versionCode: 18
+    commit: 2a9a90a62bc3a5639f20a1ee628ffb4db2dce08b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.10.0
+    versionCode: 19
+    commit: d5da4cd958ea696a87ed087e5bfd6623a05f2942
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.3.0
-CurrentVersionCode: 9
+CurrentVersion: 2.10.0
+CurrentVersionCode: 19

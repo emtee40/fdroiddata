@@ -5,19 +5,18 @@ WebSite: http://jkliemann.de/parkendd
 SourceCode: https://github.com/jklmnn/ParkenDD
 IssueTracker: https://github.com/jklmnn/ParkenDD/issues
 Changelog: https://github.com/jklmnn/ParkenDD/releases
-FlattrID: 752f3c69bfdeca06686f730348e93fdd
 Bitcoin: 1HBFDdz7dJeBE2c3zQmWnzeWCbHoZQ64dd
 
 AutoName: ParkenDD
 Description: |-
-    Shows available parking slots in some European cities, currently including
-    Aalborg, Aarhus, Dresden, Frankfurt a.M., Freiburg i.B., Hamburg, Ingolstadt and
-    Zurich.
+  Shows available parking slots in some European cities, currently including
+  Aalborg, Aarhus, Dresden, Frankfurt a.M., Freiburg i.B., Hamburg, Ingolstadt and
+  Zurich.
 
-    Other cities will be added over time.
+  Other cities will be added over time.
 
-    Note that the homepage is only available in German at the moment. The app is
-    translated into English and a few other languages. Further languages will come.
+  Note that the homepage is only available in German at the moment. The app is
+  translated into English and a few other languages. Further languages will come.
 
 RepoType: git
 Repo: https://github.com/jklmnn/ParkenDD

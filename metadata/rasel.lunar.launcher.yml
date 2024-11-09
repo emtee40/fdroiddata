@@ -12,7 +12,7 @@ Bitcoin: 38mRQy6oDJjZNR3xxiNRVS5obqLMnwonFD
 AutoName: Lunar Launcher
 
 RepoType: git
-Repo: https://github.com/iamrasel/lunar-launcher
+Repo: https://github.com/iamrasel/lunar-launcher.git
 
 Builds:
   - versionName: '15.0'
@@ -134,7 +134,113 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.4'
+    versionCode: 28
+    commit: 07e12e1ebd638b5fe31b78e87895d9b80954ce65
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.4.1
+    versionCode: 29
+    commit: 75d2b3956db6c35fb2a7b6cb55997e356b18705e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.5'
+    versionCode: 30
+    commit: 0b3f86157983252d8d51deaf1e566dee8a60daf4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.6'
+    versionCode: 31
+    commit: 14f628862eb754f97b327804acdbf79a619bb49f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.7'
+    versionCode: 32
+    commit: f5045d68436e293762f28a10884f0d4e9d6b5639
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.7.1
+    versionCode: 33
+    commit: 3f8a8c10139b61e560d0a5b96f61a0a4594d0e89
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.7.2
+    versionCode: 34
+    commit: c88a2324cf39d9369f58672765ad6d23a4a39151
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.8'
+    versionCode: 35
+    commit: bdd6e0e1db62ef4c9d26309367eb4bec6881563b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.8.1.1
+    versionCode: 37
+    commit: c21c03ff18f696904526cf8cbeda40741e790cd7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.8.2
+    versionCode: 38
+    commit: c7317220f9fe400d2146a39acd25dff8f118e5fc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.3'
-CurrentVersionCode: 27
+CurrentVersion: 2.8.2
+CurrentVersionCode: 38

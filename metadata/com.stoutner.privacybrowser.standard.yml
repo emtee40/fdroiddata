@@ -500,12 +500,90 @@ Builds:
     gradle:
       - standard
 
-MaintainerNotes: |-
-    Summary and Description are maintained by upstream using fastlane in
-    the source repo:
-    https://f-droid.org/docs/All_About_Descriptions_Graphics_and_Screenshots
+  - versionName: 3.13.3
+    versionCode: 67
+    commit: c5359b173d559fc154bf7e4bd8fd65c951c529b3
+    subdir: app
+    gradle:
+      - standard
+
+  - versionName: 3.13.4
+    versionCode: 68
+    commit: 7ab6a9027175e6a8f72b3f3683f8c4e05643d8bc
+    subdir: app
+    gradle:
+      - standard
+
+  - versionName: '3.14'
+    versionCode: 69
+    commit: 6d4644db8bed024d0f4d4cfb7cc8d1dcef3789fe
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - standard
+
+  - versionName: '3.15'
+    versionCode: 70
+    commit: a424c7a4dd110995277c9f4753fecb21a4a4991a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - standard
+
+  - versionName: 3.15.1
+    versionCode: 71
+    commit: f54dc14f2a76e7d45964abb22f19785744fce2e9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - standard
+
+  - versionName: '3.16'
+    versionCode: 72
+    commit: 13e40f25aef5ddfcb5cd7b398c514cf2aa03e334
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - standard
+
+  - versionName: '3.17'
+    versionCode: 73
+    commit: 7a54e6907e74196a4840a2434dd13e2b68a95db4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - standard
+
+  - versionName: '3.18'
+    versionCode: 74
+    commit: 5be67db45b84cd4d8abedf70d90ae584415348f6
+    subdir: app
+    gradle:
+      - standard
+
+  - versionName: 3.18.1
+    versionCode: 75
+    commit: bc4a87300d0ba4c50b040234a1608259a7f3aefd
+    subdir: app
+    gradle:
+      - standard
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.13.2
-CurrentVersionCode: 66
+CurrentVersion: 3.18.1
+CurrentVersionCode: 75

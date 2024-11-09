@@ -9,7 +9,7 @@ Bitcoin: bc1qdl8md3dwmg39e9umyjfsdn9sy7mcpxfypen45a
 AutoName: Auto Auto-Rotate
 
 RepoType: git
-Repo: https://gitlab.com/juanitobananas/auto-auto-rotate
+Repo: https://gitlab.com/juanitobananas/auto-auto-rotate.git
 
 Builds:
   - versionName: '0.2'
@@ -248,7 +248,51 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.12.3
+    versionCode: 33
+    commit: 9c289f3b354c1cff3670e22ac99dda0658c2f3f7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.12.4
+    versionCode: 34
+    commit: 6dcdc70e4f4840a6869c7238395cc63fbef07f87
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.12.5
+    versionCode: 35
+    commit: b65c3b1f5a2c546e701a97aefd03c2e10c417bcf
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.12.7
+    versionCode: 37
+    commit: 0e06bc53d476780d58bc0a064cd62b5a81393885
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.12.2
-CurrentVersionCode: 32
+CurrentVersion: 0.12.7
+CurrentVersionCode: 37

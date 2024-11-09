@@ -8,13 +8,13 @@ IssueTracker: https://github.com/pmarks-net/chromadoze/issues
 
 AutoName: Chroma Doze
 Description: |-
-    Generates noise with a custom colour profile. It is intended to be used as a
-    sleep sound generator. It provides rapid feedback to adjustments in the
-    spectrum, and is designed to minimize CPU usage in the steady state.
+  Generates noise with a custom colour profile. It is intended to be used as a
+  sleep sound generator. It provides rapid feedback to adjustments in the
+  spectrum, and is designed to minimize CPU usage in the steady state.
 
-    It works by running shaped white noise through an Inverse Discrete Cosine
-    Transform, generating a few megabytes of distinct audio blocks. The steady-state
-    behavior selects blocks at random, and smoothly crossfades between them
+  It works by running shaped white noise through an Inverse Discrete Cosine
+  Transform, generating a few megabytes of distinct audio blocks. The steady-state
+  behavior selects blocks at random, and smoothly crossfades between them
 
 RepoType: git
 Repo: https://github.com/pmarks-net/chromadoze
@@ -75,16 +75,6 @@ Builds:
       - $$SDK$$/tools/android update lib-project --path ./appcompat/
     target: android-18
 
-  - versionName: '3.5'
-    versionCode: 16
-    disable: missing resources
-    commit: '83'
-    prebuild:
-      - cp -R $$SDK$$/extras/android/support/v7/appcompat/ appcompat/
-      - echo -e "\nandroid.library.reference.1=./appcompat/" >> ./local.properties
-      - $$SDK$$/tools/android update lib-project --path ./appcompat/
-    target: android-21
-
   - versionName: 3.5.1
     versionCode: 17
     commit: v3.5.1
@@ -141,7 +131,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '4.3'
+    versionCode: 29
+    commit: d97acd88c21de7d4136c4215245d02fa6631af72
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '4.2'
-CurrentVersionCode: 28
+CurrentVersion: '4.3'
+CurrentVersionCode: 29

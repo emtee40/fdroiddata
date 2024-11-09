@@ -3,11 +3,12 @@ Categories:
 License: GPL-3.0-or-later
 SourceCode: https://github.com/fredx100/InfiniList
 IssueTracker: https://github.com/fredx100/InfiniList/issues
+Changelog: https://github.com/fredx100/InfiniList/blob/HEAD/CHANGELOG.md
 
 AutoName: InfiniList
 
 RepoType: git
-Repo: https://github.com/fredx100/InfiniList
+Repo: https://github.com/fredx100/InfiniList.git
 
 Builds:
   - versionName: 1.0.2
@@ -67,7 +68,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.2.0
+    versionCode: 10
+    commit: 352aaea194e009059fb3a86a7c1406a038db5af3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 11
+    commit: 865f48852bf2ffb80ab56ff8a951c22eb3bd5ab0
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.1.1
-CurrentVersionCode: 9
+CurrentVersion: 1.2.1
+CurrentVersionCode: 11

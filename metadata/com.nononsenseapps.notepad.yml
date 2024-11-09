@@ -187,16 +187,60 @@ Builds:
     rm:
       - app/src/androidTest
 
+  - versionName: 7.1.6
+    versionCode: 71600
+    commit: d0176b5b86e2d0570bd26c796ed2bb418b9d2f00
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - app/src/androidTest
+
+  - versionName: 7.1.7
+    versionCode: 71700
+    commit: 066133eedc479cf7a721a8fffc1490b71595e937
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - app/src/androidTest
+
+  - versionName: 7.1.8
+    versionCode: 71800
+    commit: e82ddedd74b572320a7a3e37a73f88935a13f717
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/androidTest
+
+  - versionName: 7.1.9
+    versionCode: 71900
+    commit: fa445401e70f10406c8a64aa5ac1f286bfb92a4e
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/src/androidTest
+
 MaintainerNotes: |-
-    * INFO: replaced dashclock-api-r1.jar with dashclock-api:2.0.0
-    * INFO: removed androidannotations-3.0.1.jar, if needed add
-            "compile 'org.androidannotations:androidannotations:3.0.1'"
-    * INFO: replaced orgparser with source-copy
-    * INFO: downgrade gradle for now
-    * INFO: remove play-sevices
-    * INFO: verCode is split up, which breaks UCM
+  * INFO: replaced dashclock-api-r1.jar with dashclock-api:2.0.0
+  * INFO: removed androidannotations-3.0.1.jar, if needed add
+          "compile 'org.androidannotations:androidannotations:3.0.1'"
+  * INFO: replaced orgparser with source-copy
+  * INFO: downgrade gradle for now
+  * INFO: remove play-sevices
+  * INFO: verCode is split up, which breaks UCM
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 7.1.3
-CurrentVersionCode: 71300
+CurrentVersion: 7.1.9
+CurrentVersionCode: 71900

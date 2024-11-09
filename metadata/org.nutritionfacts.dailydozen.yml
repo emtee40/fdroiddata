@@ -13,24 +13,24 @@ Bitcoin: 3GQUrb9sw36MoQeZNJ4g16CCNqgr3Va6bx
 
 AutoName: Daily Dozen
 Description: |-
-    In the years of research required to create the more than a thousand
-    evidence-based videos on NutritionFacts.org, Michael Greger, MD, FACLM, has
-    arrived at a list of what he considers the most important foods to include in a
-    healthy daily diet.
+  In the years of research required to create the more than a thousand
+  evidence-based videos on NutritionFacts.org, Michael Greger, MD, FACLM, has
+  arrived at a list of what he considers the most important foods to include in a
+  healthy daily diet.
 
-    Yes, greens are good for you, but how much should we try to eat each day? Dr.
-    Greger’s Daily Dozen details the healthiest foods and how many servings of each
-    we should try to check off every day. He explains his rationale in his book
-    <a href="https://NutritionFacts.org/book">How Not to Die</a>. All his proceeds from his
-    books, DVDs, and speaking engagements is all donated to charity.
+  Yes, greens are good for you, but how much should we try to eat each day? Dr.
+  Greger's Daily Dozen details the healthiest foods and how many servings of each
+  we should try to check off every day. He explains his rationale in his book
+  <a href="https://NutritionFacts.org/book">How Not to Die</a>. All his proceeds from his
+  books, DVDs, and speaking engagements is all donated to charity.
 
-    NutritionFacts.org is a non-commercial, nonprofit, science-based public service
-    provided by Dr. Greger, providing free daily updates on the latest in nutrition
-    research via bite-sized videos. He has nearly a thousand videos on every aspect
-    of healthy eating, with new videos and articles uploaded every day. Like this
-    app, everything on the website is both free of ads and free of charge.
+  NutritionFacts.org is a non-commercial, nonprofit, science-based public service
+  provided by Dr. Greger, providing free daily updates on the latest in nutrition
+  research via bite-sized videos. He has nearly a thousand videos on every aspect
+  of healthy eating, with new videos and articles uploaded every day. Like this
+  app, everything on the website is both free of ads and free of charge.
 
-    This app was developed thanks to the volunteer efforts of John Slavick.
+  This app was developed thanks to the volunteer efforts of John Slavick.
 
 RepoType: git
 Repo: https://github.com/nutritionfactsorg/daily-dozen-android.git
@@ -39,15 +39,6 @@ Builds:
   - versionName: '15.1'
     versionCode: 42
     commit: v15.1
-    subdir: app
-    gradle:
-      - fdroid
-    prebuild: sed -i -e '/fabric/d' -e '/crashlytics/,+2d' ../build.gradle build.gradle
-
-  - versionName: '16'
-    versionCode: 44
-    disable: non- firebase/crashlytics flavour was removed
-    commit: v16
     subdir: app
     gradle:
       - fdroid
@@ -191,7 +182,77 @@ Builds:
       - archive/OriginalApp.zip
     prebuild: sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
 
+  - versionName: '22.1'
+    versionCode: 83
+    commit: 07a2678157e19626d1c8f3a94bf99021d8ac99e5
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - archive/OriginalApp.zip
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+
+  - versionName: '23'
+    versionCode: 84
+    commit: 25d82753b3010e00a4e688545261b18da91d7d55
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - archive/OriginalApp.zip
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+
+  - versionName: '23.1'
+    versionCode: 85
+    commit: 5059897bf98f28abf4a73f47ab22b38d155e2276
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - archive/OriginalApp.zip
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+
+  - versionName: '24'
+    versionCode: 86
+    commit: a2dee1e4cd591ff4a4911e9098150c8cf45fe783
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - archive/OriginalApp.zip
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+
+  - versionName: '25'
+    versionCode: 89
+    commit: a5fa8883e540a3a3c5fdcd2836918a3eae83fc0e
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - archive/OriginalApp.zip
+    prebuild: sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+
+  - versionName: '27'
+    versionCode: 91
+    commit: d70853e16f3d7cd54ef93bb34d8597c714363b66
+    subdir: app
+    gradle:
+      - fdroid
+    srclibs:
+      - ActiveAndroid@08c6335cd7324c6e72da536b0c6fffa5a798f6a2
+    rm:
+      - archive/OriginalApp.zip
+      - app/libs/*.jar
+    prebuild:
+      - sed -i -e '/gms/d' -e '/firebase/d' {.,..}/build.gradle
+      - sed -i -e 's/-XX:MaxPermSize=512m//' ../gradle.properties
+      - cp -a $$ActiveAndroid$$/src/com src/main/java
+      - sed -i -e '/dependencies {/a implementation "androidx.collection:collection:1.4.3"'
+        build.gradle
+      - sed -i -e 's/android.support.v4.util.LruCache/androidx.collection.LruCache/'
+        src/main/java/com/activeandroid/Cache.java
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*$
-CurrentVersion: '22'
-CurrentVersionCode: 82
+CurrentVersion: '27'
+CurrentVersionCode: 91

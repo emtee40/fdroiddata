@@ -68,7 +68,40 @@ Builds:
     gradle:
       - yes
 
+  - versionName: v1.14.0
+    versionCode: 16
+    commit: f5b3bbe0150a0368f789badabe5d79de2232c5ae
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.15.0
+    versionCode: 17
+    commit: 78bb7c4fbf903a7e10f6a482a2cdd9274349f271
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.16.0
+    versionCode: 18
+    commit: 9afaf3b4d2f776c9f4789e74a00044e83a83b6e3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v1.17.0
+    versionCode: 19
+    commit: 17fab4247a1f0a2d6617f423d695a82d8f5134bc
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v1.13.0
-CurrentVersionCode: 15
+CurrentVersion: v1.17.0
+CurrentVersionCode: 19

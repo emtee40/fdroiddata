@@ -1,12 +1,13 @@
 Categories:
-  - Security
   - Internet
+  - Security
 License: GPL-3.0-or-later
 AuthorName: Emanuele Faranda
 AuthorEmail: black.silver@hotmail.it
 WebSite: https://emanuele-f.github.io/PCAPdroid
 SourceCode: https://github.com/emanuele-f/PCAPdroid
 IssueTracker: https://github.com/emanuele-f/PCAPdroid/issues
+Translation: https://hosted.weblate.org/engage/pcapdroid/
 Changelog: https://github.com/emanuele-f/PCAPdroid/blob/HEAD/CHANGELOG.md
 Donate: https://emanuele-f.github.io/PCAPdroid/donate
 
@@ -309,7 +310,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.18.1' > /dev/null
+      'cmake;3.18.1' > /dev/null
     ndk: r23b
 
   - versionName: 1.4.6
@@ -326,7 +327,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.18.1' > /dev/null
+      'cmake;3.18.1' > /dev/null
     scandelete:
       - app/src/main/jni/tests/
     ndk: r23b
@@ -345,7 +346,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.18.1' > /dev/null
+      'cmake;3.18.1' > /dev/null
     scandelete:
       - app/src/main/jni/tests/
       - submodules/nDPI/tests
@@ -365,7 +366,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.18.1' > /dev/null
+      'cmake;3.18.1' > /dev/null
     scandelete:
       - app/src/main/jni/tests/
       - submodules/nDPI/tests
@@ -385,7 +386,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.18.1' > /dev/null
+      'cmake;3.18.1' > /dev/null
     scandelete:
       - app/src/main/jni/tests/
       - submodules/nDPI/tests
@@ -405,7 +406,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.18.1' > /dev/null
+      'cmake;3.18.1' > /dev/null
     scandelete:
       - app/src/main/jni/tests/
       - submodules/nDPI/tests
@@ -425,7 +426,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.18.1' > /dev/null
+      'cmake;3.18.1' > /dev/null
     scandelete:
       - app/src/main/jni/tests/
       - submodules/nDPI/tests
@@ -445,7 +446,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.18.1' > /dev/null
+      'cmake;3.18.1' > /dev/null
     scandelete:
       - app/src/main/jni/tests/
       - submodules/nDPI/tests
@@ -465,7 +466,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.18.1' > /dev/null
+      'cmake;3.18.1' > /dev/null
     scandelete:
       - app/src/main/jni/tests/
       - submodules/nDPI/tests
@@ -485,7 +486,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.22.1' > /dev/null
+      'cmake;3.22.1' > /dev/null
     scandelete:
       - app/src/main/jni/tests/
       - submodules/nDPI/tests
@@ -505,7 +506,7 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.22.1' > /dev/null
+      'cmake;3.22.1' > /dev/null
     scandelete:
       - app/src/main/jni/tests/
       - submodules/nDPI/tests
@@ -545,10 +546,226 @@ Builds:
       - submodules/nDPI/tests
     ndk: r25b
 
+  - versionName: 1.6.2
+    versionCode: 64
+    commit: 4eb7f7f0e9cec764bb55966f8b6dc640a47d285f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: r25b
+
+  - versionName: 1.6.4
+    versionCode: 66
+    commit: 0168ed052e6a88ce70c347865e6b99161097e404
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: r25b
+
+  - versionName: 1.6.5
+    versionCode: 67
+    commit: 1fc4980af47f4686fbb7813e284097289b3d7a72
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: r25b
+
+  - versionName: 1.6.6
+    versionCode: 68
+    commit: 9bbdbc9f54237408d98d5e0ef11ea2e9969ec275
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: r25b
+
+  - versionName: 1.6.7
+    versionCode: 69
+    commit: 68b8118610ec42df682f88a0bd9e69603e6eb945
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: r25b
+
+  - versionName: 1.6.8
+    versionCode: 71
+    commit: 197ca23e2697328742118bf6e230a9344269f1bf
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: r25b
+
+  - versionName: 1.6.9
+    versionCode: 72
+    commit: a1b6ec38ab36a0bcae32fa1dd733f4a119e3169e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: r25b
+
+  - versionName: 1.7.0
+    versionCode: 73
+    commit: 854e9038acf59d8f64eb4646b552a8424cc983c7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: 26.1.10909125
+
+  - versionName: 1.7.1
+    versionCode: 74
+    commit: bc340af2be496a4c501e2588c42956bfc0538008
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: 26.1.10909125
+
+  - versionName: 1.7.2
+    versionCode: 75
+    commit: 014ee91ed2105db419771e249ee13b329e708928
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: 26.1.10909125
+
+  - versionName: 1.7.3
+    versionCode: 76
+    commit: dc3bb39168cde4f94c3a1892798e9664e4e1dfa4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: 26.1.10909125
+
+  - versionName: 1.7.4
+    versionCode: 77
+    commit: caced7daabc4d897cb9d796a27150b97d49d51b8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y build-essential libpcap-dev autogen libjson-c-dev libnuma-dev
+        libpcre2-dev
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/src/main/jni/tests/
+      - submodules/nDPI/tests
+    ndk: 26.1.10909125
+
 MaintainerNotes: Ignored files are the DB-IP country lite db and the DB-IP ASN lite
-    db licensed under CC-BY-4.0.
+  db licensed under CC-BY-4.0.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.6.1
-CurrentVersionCode: 63
+CurrentVersion: 1.7.4
+CurrentVersionCode: 77

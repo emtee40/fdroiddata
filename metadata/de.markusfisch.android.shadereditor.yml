@@ -5,26 +5,29 @@ WebSite: http://markusfisch.de
 SourceCode: https://github.com/markusfisch/ShaderEditor
 IssueTracker: https://github.com/markusfisch/ShaderEditor/issues
 Changelog: https://github.com/markusfisch/ShaderEditor/blob/HEAD/CHANGELOG.md
+Donate: https://www.buymeacoffee.com/markusfisch
+Liberapay: markusfisch
+Bitcoin: bc1q2guk2rpll587aymrfadkdtpq32448x5khk5j8z
 
 AutoName: Shader Editor
 Description: |-
-    Create and edit GLSL shaders on your Android phone or tablet and use them as
-    live wallpaper.
+  Create and edit GLSL shaders on your Android phone or tablet and use them as
+  live wallpaper.
 
-    <b>Features:</b>
+  <b>Features:</b>
 
-    * Live preview in background or on an extra screen
-    * Syntax highlighting
-    * Error highlighting
-    * FPS display
-    * Use any shader as live wallpaper
-    * Exposure of hardware sensors
-    * Support for wallpaper offset
-    * Exposure of battery level
-    * Supports multiple touches
-    * Previous rendered frame in backbuffer texture
-    * Import and use arbitrary textures
-    * Disables rendering when battery is low
+  * Live preview in background or on an extra screen
+  * Syntax highlighting
+  * Error highlighting
+  * FPS display
+  * Use any shader as live wallpaper
+  * Exposure of hardware sensors
+  * Support for wallpaper offset
+  * Exposure of battery level
+  * Supports multiple touches
+  * Previous rendered frame in backbuffer texture
+  * Import and use arbitrary textures
+  * Disables rendering when battery is low
 
 RepoType: git
 Repo: https://github.com/markusfisch/ShaderEditor.git
@@ -413,11 +416,109 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.28.2
+    versionCode: 71
+    commit: 9d12f9e8ee15108b39b530874fb95557c6a1cfaf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.28.3
+    versionCode: 72
+    commit: 9cb9be9ee26c0fdf29ae50ad28b0fc88f6722941
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.28.4
+    versionCode: 73
+    commit: 6ef6d7ce1f9fbed3f612b3fd2fb4a940ac88be7e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.29.0
+    versionCode: 74
+    commit: d953cde95dff8bef042f86ecb88aead2b3a223e3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.30.0
+    versionCode: 75
+    commit: 07a3690dd60392ac1faa6073ee278a6f2ca43c86
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.31.0
+    versionCode: 76
+    commit: ebd088eb00295cd84d634d3c45585d80c35e751d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.31.1
+    versionCode: 77
+    commit: f616c91eed5b34570dfe7929589ca33bf9f72304
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.32.0
+    versionCode: 78
+    commit: 7aceaae88330c205bd19e0d3eec06df2cc9139be
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.0
+    versionCode: 79
+    commit: 60332bf04554e7e061be681490ad2799cb7ddd74
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.2
+    versionCode: 81
+    commit: 78a578bee8b7aaa56f82bc20be4c08fbc1679b8d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.33.3
+    versionCode: 82
+    commit: 6c5ddf9e446e0e9fb56d459fcc3bbf169422f3cd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.34.1
+    versionCode: 84
+    commit: 584b287a7fa682e883efe6d603ae45d831e23b18
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.34.2
+    versionCode: 85
+    commit: de97d7ed2313fcc316ef4eb691f848c8021bb7a5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.34.3
+    versionCode: 86
+    commit: 46b225257a21f975c3cba205dad39de0318534a1
+    subdir: app
+    gradle:
+      - yes
+
 MaintainerNotes: |-
-    TouchThruDrawerlayout.java can be removed since its identical to the correctly
-    named TouchThruDrawerLayout.java.
+  TouchThruDrawerlayout.java can be removed since its identical to the correctly
+  named TouchThruDrawerLayout.java.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.28.1
-CurrentVersionCode: 70
+CurrentVersion: 2.34.3
+CurrentVersionCode: 86

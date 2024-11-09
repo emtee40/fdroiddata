@@ -1,0 +1,124 @@
+Categories:
+  - Theming
+License: GPL-3.0-only
+AuthorName: Donno
+AuthorEmail: arcticons@onnno.nl
+SourceCode: https://github.com/Donnnno/Arcticons
+IssueTracker: https://github.com/Donnnno/Arcticons/issues
+Changelog: https://github.com/Donnnno/Arcticons/blob/HEAD/CHANGELOG.md
+Donate: https://paypal.me/onnovdd
+Liberapay: Donno
+
+AutoName: Arcticons Day Night
+
+RepoType: git
+Repo: https://github.com/Donnnno/Arcticons.git
+Binaries: https://github.com/Donnnno/Arcticons/releases/download/%v/Arcticons-v%v-dayNight-release.apk
+
+Builds:
+  - versionName: 8.3.0
+    versionCode: 126
+    commit: f93e609d49f194a7e2df915f4cede4e360e43ed4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - dayNight
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml'
+
+  - versionName: 8.3.1
+    versionCode: 127
+    commit: 8c6acb4bd958b69f88a8932e9dc26dc3fdc24ea9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - dayNight
+    srclibs:
+      - reproducible-apk-tools@v0.2.3
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml'
+
+  - versionName: 8.7.1-hotfix
+    versionCode: 130
+    commit: b61f6cb819c7ba57c7ca46bc0c7199240dbb30ee
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - dayNight
+    srclibs:
+      - reproducible-apk-tools@2134d90b7afcc1e65bb860b3a50e38d559a450a2
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml' '!assets/drawable.xml'
+
+  - versionName: 9.0.0
+    versionCode: 131
+    commit: 12aad418f25c81302ed981cfbce499dc46f9d452
+    subdir: app
+    gradle:
+      - dayNight
+    srclibs:
+      - reproducible-apk-tools@2134d90b7afcc1e65bb860b3a50e38d559a450a2
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml' '!assets/drawable.xml'
+
+  - versionName: 9.2.4
+    versionCode: 132
+    commit: 2c3051df31f11195f65f07d9121f999690475132
+    subdir: app
+    gradle:
+      - dayNight
+    srclibs:
+      - reproducible-apk-tools@2134d90b7afcc1e65bb860b3a50e38d559a450a2
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml' '!assets/drawable.xml'
+
+  - versionName: 9.6.5
+    versionCode: 133
+    commit: 19bfc40363bc397dd4fd69e8230fa783e1f891ee
+    subdir: app
+    gradle:
+      - dayNight
+    srclibs:
+      - reproducible-apk-tools@2134d90b7afcc1e65bb860b3a50e38d559a450a2
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
+      'assets/*.xml' '!assets/drawable.xml'
+
+  - versionName: 10.4.0
+    versionCode: 1360
+    commit: 0b7e168f4c5a6b6082917e137121e8816df9f495
+    subdir: app
+    gradle:
+      - dayNight
+
+  - versionName: 10.8.4
+    versionCode: 1370
+    commit: 41d9a96b14133fa659f76d48b77f9347647a08c4
+    subdir: app
+    gradle:
+      - dayNight
+
+  - versionName: 11.0.5
+    versionCode: 1380
+    commit: 81ea73d987ac4e585061a8a5edf273c62d006a82
+    subdir: app
+    gradle:
+      - dayNight
+
+AllowedAPKSigningKeys: 299bb9312e39130d0d33ed42bf98567f726ab11a04dc950c5b6c162e28c869c5
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckName: com.donnnno.arcticons
+CurrentVersion: 11.0.5
+CurrentVersionCode: 1380

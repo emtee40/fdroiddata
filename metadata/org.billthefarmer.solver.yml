@@ -63,7 +63,37 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.05'
+    versionCode: 105
+    commit: cfbf487a43b4cb61e029164df8bd9c1a354da2c9
+    gradle:
+      - yes
+
+  - versionName: '1.06'
+    versionCode: 106
+    commit: 219dedb597a275c3364671a3c1c7aa39d6a24101
+    gradle:
+      - yes
+
+  - versionName: '1.07'
+    versionCode: 107
+    commit: fda93675155e6c3dc7f13436daf78b34069649f1
+    gradle:
+      - yes
+
+  - versionName: '1.08'
+    versionCode: 108
+    commit: c669fe2fd3c9750f906eecc2ffd44277dc2e269f
+    gradle:
+      - yes
+
+  - versionName: '1.09'
+    versionCode: 109
+    commit: 6e2b9a3a138e835516c283e14161ff2a37f3ad2c
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.04'
-CurrentVersionCode: 104
+CurrentVersion: '1.09'
+CurrentVersionCode: 109

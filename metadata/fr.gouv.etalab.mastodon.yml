@@ -361,7 +361,163 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 3.18.0
+    versionCode: 478
+    commit: 5e4298c56683fd2f200a5ec23aca27c3e1751b40
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.18.1
+    versionCode: 479
+    commit: 67b9e8c7d084aef1fa15da05dddc50948b2f4c8f
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.18.2
+    versionCode: 480
+    commit: bc70576a635cf91ff1e5132db01f99e75ff4c52e
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.19.0
+    versionCode: 481
+    commit: b981d2899e82faf04aecf6f58fd96b9f72fcd953
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.20.0
+    versionCode: 483
+    commit: 7e2c9ab4a20d6669dd0b80adbfce2ebe1048d5fd
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.20.1
+    versionCode: 484
+    commit: da67ec0e03c71fadc9efef173249f6b76b374207
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.20.2
+    versionCode: 485
+    commit: 3746673f9df3d3d3cb6b0fad6f076c3d8051c557
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.20.3
+    versionCode: 486
+    commit: 739183de9ced12f645aa00885488553412393465
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.21.0
+    versionCode: 487
+    commit: 740ce71ac93ec8de9a7e75af4cc75ee599dd2af2
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.21.2
+    versionCode: 489
+    commit: a013c160b7b179a75302b67f5af61f5c63987f3a
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.22.2
+    versionCode: 492
+    commit: 26760c8e15d067ff86b94f70f0ca1c828d9d5f94
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.23.0
+    versionCode: 493
+    commit: eda23bd3b094fb223c2473449a7529a988eda87c
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.23.1
+    versionCode: 494
+    commit: 7825e06f6908e9dc01d9994f5c6f9891447638bf
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.24.0
+    versionCode: 499
+    commit: 802b3b092617c7e20cf62038b397b689dd292405
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.24.1
+    versionCode: 500
+    commit: ce92f23c50abccaf9f32ddb1e57aacae9de618ea
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 3.26.0
+    versionCode: 505
+    commit: a1370693fb564d48aa56a602b7b912e864480f74
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 3.27.1
+    versionCode: 511
+    commit: 596c546cce0947169154070e464dbbad173e7856
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 3.28.0
+    versionCode: 513
+    commit: c44330d291ad37b5a5136f876cc791869a67695e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 3.28.1
+    versionCode: 514
+    commit: a0e4472ef26eec768703ac10e01e087284ce81d2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 3.28.2
+    versionCode: 515
+    commit: b9b381a780ea223a08f4246d3c02995e0f323bae
+    subdir: app
+    gradle:
+      - fdroid
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9.]+$
-CurrentVersion: 3.17.0
-CurrentVersionCode: 477
+CurrentVersion: 3.28.2
+CurrentVersionCode: 515

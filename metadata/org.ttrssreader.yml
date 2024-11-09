@@ -8,30 +8,29 @@ IssueTracker: https://github.com/nilsbraden/ttrss-reader-fork/issues
 Translation: https://github.com/nilsbraden/ttrss-reader-fork/wiki/Developer-Information#Language_and_Translations
 Changelog: https://github.com/nilsbraden/ttrss-reader-fork/wiki/Changelog
 Donate: https://github.com/nilsbraden/ttrss-reader-fork/wiki/Donations
-FlattrID: '382465'
 
 AutoName: TTRSS-Reader
 Description: |-
-    An offline reader that works with the Tiny Tiny RSS (also known as ttrss or
-    tt-rss) web-based feed reader/aggregator.
+  An offline reader that works with the Tiny Tiny RSS (also known as ttrss or
+  tt-rss) web-based feed reader/aggregator.
 
-    <b>Features:</b>
+  <b>Features:</b>
 
-    * Swipe for faster browsing
-    * Optional navigation with volume-buttons
-    * View and download attached media files
-    * Cache articles and images locally
-    * Share URLs
-    * Easily mark things as read, starred or publish/comment them
-    * SSL with self-signed certificates
-    * Fast JSON-Parsing with stream-based parser GSON
-    * Scheduled updates via Tasker/Locale
-    * Layout optimized for tablets
-    * Dark and light themes available
-    * many more, Changelog and Feature-List can be found on the project-page...
+  * Swipe for faster browsing
+  * Optional navigation with volume-buttons
+  * View and download attached media files
+  * Cache articles and images locally
+  * Share URLs
+  * Easily mark things as read, starred or publish/comment them
+  * SSL with self-signed certificates
+  * Fast JSON-Parsing with stream-based parser GSON
+  * Scheduled updates via Tasker/Locale
+  * Layout optimized for tablets
+  * Dark and light themes available
+  * many more, Changelog and Feature-List can be found on the project-page...
 
 RepoType: git
-Repo: https://github.com/nilsbraden/ttrss-reader-fork
+Repo: https://github.com/nilsbraden/ttrss-reader-fork.git
 
 Builds:
   - versionName: '1.0'
@@ -106,11 +105,6 @@ Builds:
     subdir: ttrss-reader
     target: android-13
 
-  - versionName: '1.25'
-    versionCode: 1254
-    disable: broken - crashes on startup
-    commit: unknown - see disabled
-
   - versionName: '1.26'
     versionCode: 1260
     commit: a07a4adf2cc8
@@ -130,7 +124,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@6e3f2bb5
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
     target: android-15
 
   - versionName: '1.32'
@@ -140,7 +134,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@6e3f2bb5
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
     target: android-15
 
   - versionName: '1.33'
@@ -150,7 +144,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@6e3f2bb5
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
     target: android-15
 
   - versionName: '1.34'
@@ -160,7 +154,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@6e3f2bb5
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
     target: android-15
 
   - versionName: '1.38'
@@ -170,7 +164,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@6e3f2bb5
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
     target: android-15
 
   - versionName: '1.40'
@@ -180,7 +174,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@6e3f2bb5
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
     target: android-15
 
   - versionName: '1.41'
@@ -190,7 +184,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@4.2.0
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
     target: android-17
 
   - versionName: '1.43'
@@ -318,8 +312,8 @@ Builds:
     commit: 6916241fbf87
     subdir: ttrss-reader
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:LocaleAPI@bc2d5a1
+      - ActionBarSherlock@4.4.0
+      - LocaleAPI@bc2d5a1
     target: android-19
 
   - versionName: '1.7'
@@ -327,8 +321,8 @@ Builds:
     commit: cb952f593b3a
     subdir: ttrss-reader
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:LocaleAPI@bc2d5a1
+      - ActionBarSherlock@4.4.0
+      - LocaleAPI@bc2d5a1
     target: android-19
 
   - versionName: '1.7'
@@ -336,22 +330,17 @@ Builds:
     commit: 58d63e505081
     subdir: ttrss-reader
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:LocaleAPI@bc2d5a1
+      - ActionBarSherlock@4.4.0
+      - LocaleAPI@bc2d5a1
     target: android-19
-
-  - versionName: 1.7.1
-    versionCode: 1710
-    disable: impossible to determine correct commit - even more messy than usual
-    subdir: ttrss-reader
 
   - versionName: '1.74'
     versionCode: 1740
     commit: d6b86cb04026
     subdir: ttrss-reader
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:LocaleAPI@bc2d5a1
+      - ActionBarSherlock@4.4.0
+      - LocaleAPI@bc2d5a1
     target: android-19
 
   - versionName: '1.75'
@@ -359,8 +348,8 @@ Builds:
     commit: 4217d450b976
     subdir: ttrss-reader
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:LocaleAPI@bc2d5a1
+      - ActionBarSherlock@4.4.0
+      - LocaleAPI@bc2d5a1
     target: android-19
 
   - versionName: '1.76'
@@ -368,8 +357,8 @@ Builds:
     commit: 0db7133e8e75
     subdir: ttrss-reader
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:LocaleAPI@bc2d5a1
+      - ActionBarSherlock@4.4.0
+      - LocaleAPI@bc2d5a1
     target: android-19
 
   - versionName: '1.78'
@@ -377,8 +366,8 @@ Builds:
     commit: d4de79358ffa
     subdir: ttrss-reader
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:LocaleAPI@bc2d5a1
+      - ActionBarSherlock@4.4.0
+      - LocaleAPI@bc2d5a1
       - Google-Gson@gson-2.2.2
     extlibs:
       - guava-r08/guava-r08.jar
@@ -393,8 +382,8 @@ Builds:
     commit: dddf4b58d5e3
     subdir: ttrss-reader
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:LocaleAPI@bc2d5a1
+      - ActionBarSherlock@4.4.0
+      - LocaleAPI@bc2d5a1
       - Google-Gson@gson-2.2.2
     extlibs:
       - guava-r08/guava-r08.jar
@@ -413,7 +402,7 @@ Builds:
     rm:
       - ttrssreader/libs/*.jar
     prebuild: sed -i -e '/google-utils.jar/d' -e '/gson/acompile "com.google.guava:guava:18.0"'
-        build.gradle
+      build.gradle
 
   - versionName: '1.83'
     versionCode: 1830
@@ -424,7 +413,7 @@ Builds:
     rm:
       - ttrssreader/libs/*.jar
     prebuild: sed -i -e '/google-utils.jar/d' -e '/gson/acompile "com.google.guava:guava:18.0"'
-        build.gradle
+      build.gradle
 
   - versionName: '1.84'
     versionCode: 1840
@@ -647,17 +636,131 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/playCompile/d' build.gradle
 
+  - versionName: 1.97.1
+    versionCode: 1971
+    commit: a7432bf3d33deafb967c4a4c6d0f4934fa215a20
+    subdir: ttrssreader
+    gradle:
+      - fdroid
+    srclibs:
+      - twofortyfouram-monorepo@4023d30d5b44b2fd15206c3435829e999e7bbd02
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i -e '/maven {/,+8d' -e '/repositories {/amavenLocal()' ../settings.gradle
+    build:
+      - pushd $$twofortyfouram-monorepo$$
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+
+  - versionName: 1.97.2
+    versionCode: 1972
+    commit: b27c21ad26498a34b408c377577b5801ff747541
+    subdir: ttrssreader
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - twofortyfouram-monorepo@4023d30d5b44b2fd15206c3435829e999e7bbd02
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i -e '/maven {/,+8d' -e '/repositories {/amavenLocal()' ../settings.gradle
+    build:
+      - pushd $$twofortyfouram-monorepo$$
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+
+  - versionName: 1.97.3
+    versionCode: 1973
+    commit: af1639ef3dfccd119700acb74383c64118131396
+    subdir: ttrssreader
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - twofortyfouram-monorepo@4023d30d5b44b2fd15206c3435829e999e7bbd02
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i -e '/maven {/,+8d' -e '/repositories {/amavenLocal()' ../settings.gradle
+    build:
+      - pushd $$twofortyfouram-monorepo$$
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+
+  - versionName: 1.97.4
+    versionCode: 1974
+    commit: 2a9aa6d8fe25edd29d3f8144629df81f342a4519
+    subdir: ttrssreader
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    srclibs:
+      - twofortyfouram-monorepo@4023d30d5b44b2fd15206c3435829e999e7bbd02
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i -e '/maven {/,+8d' -e '/repositories {/amavenLocal()' ../settings.gradle
+    build:
+      - pushd $$twofortyfouram-monorepo$$
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+
+  - versionName: 1.97.5
+    versionCode: 1975
+    commit: 4ecf65751f7125dce88842be15e189917e8f0871
+    subdir: ttrssreader
+    gradle:
+      - fdroid
+    srclibs:
+      - twofortyfouram-monorepo@4023d30d5b44b2fd15206c3435829e999e7bbd02
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i -e '/maven {/,+8d' -e '/repositories {/amavenLocal()' ../settings.gradle
+    build:
+      - pushd $$twofortyfouram-monorepo$$
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+
+  - versionName: 1.97.6
+    versionCode: 1976
+    commit: 23f67a177606d9fbad8d889b8cf3b1b5d95098ae
+    subdir: ttrssreader
+    gradle:
+      - fdroid
+    srclibs:
+      - twofortyfouram-monorepo@4023d30d5b44b2fd15206c3435829e999e7bbd02
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i -e '/maven {/,+8d' -e '/repositories {/amavenLocal()' ../settings.gradle
+    build:
+      - pushd $$twofortyfouram-monorepo$$
+      - gradle assembleRelease
+      - gradle publishToMavenLocal
+      - popd
+
 MaintainerNotes: |-
-    Upstream mistags often and retags, so never use tags directly.
+  Upstream mistags often and retags, so never use tags directly.
 
-    Multiple versions of the same release (name) with different version codes and
-    minor fixes in between are common, for some reason.
+  Multiple versions of the same release (name) with different version codes and
+  minor fixes in between are common, for some reason.
 
-    Old Repo is:
-    * Repo Type:hg
-    * Repo:https://ttrss-reader-fork.googlecode.com/hg
+  Old Repo is:
+  * Repo Type:hg
+  * Repo:https://ttrss-reader-fork.googlecode.com/hg
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.96.6
-CurrentVersionCode: 1966
+CurrentVersion: 1.97.6
+CurrentVersionCode: 1976

@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeAssets
+  NonFreeAssets:
+    en-US: App contains CC non-commercial licensed artwork.
 Categories:
   - Sports & Health
   - Time
@@ -11,14 +12,14 @@ Translation: https://crowdin.com/project/rxdroid
 Changelog: https://github.com/jclehner/rxdroid/blob/HEAD/ChangeLog.md
 
 Description: |-
-    A simple medication reminder. Also keeps track of your pill count and required
-    refills.
+  A simple medication reminder. Also keeps track of your pill count and required
+  refills.
 
-    Help with translating RxDroid to your language at
-    <a href="https://crowdin.com/project/rxdroid">crowdin.com</a>!
+  Help with translating RxDroid to your language at
+  <a href="https://crowdin.com/project/rxdroid">crowdin.com</a>!
 
 RepoType: git
-Repo: https://github.com/jclehner/rxdroid
+Repo: https://github.com/jclehner/rxdroid.git
 
 Builds:
   - versionName: 0.9.32.2
@@ -66,7 +67,47 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.9.35
+    versionCode: 9350
+    commit: 6291ea4701c6fe088bb2d7879875f13a73e863e8
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.9.36
+    versionCode: 9360
+    commit: 621235437cd225651a4d7031618746e3f3f8f5cf
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.9.37
+    versionCode: 9370
+    commit: 6a84a4fe009d54dd2fe3e9f48ca1298c0c337d40
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.9.38
+    versionCode: 9380
+    commit: bed18eece5564714f4752c8e792f2d739775656d
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.9.34.2
-CurrentVersionCode: 9342
+CurrentVersion: 0.9.38
+CurrentVersionCode: 9380

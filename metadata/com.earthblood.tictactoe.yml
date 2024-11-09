@@ -7,7 +7,7 @@ IssueTracker: https://github.com/Earthblood/Toe/issues
 Name: Toe
 AutoName: Tic Tac Toe
 Description: A challenging Tic Tac Toe game for 1 or 2 players with multiple skill
-    levels.
+  levels.
 
 RepoType: git
 Repo: https://github.com/Earthblood/Toe.git
@@ -20,7 +20,8 @@ Builds:
     gradle:
       - yes
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: 1.0.1
 CurrentVersionCode: 2

@@ -1940,10 +1940,900 @@ Builds:
       - popd
     ndk: r25b
 
+  - versionName: 38.2.0
+    versionCode: 126
+    commit: 1f3c44967e5dd0a45c901cbd7d8deedd99a17f7b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 39.0.0
+    versionCode: 127
+    commit: dbbea6e93917a288a8949c77b172d879c54dcba1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 39.2.0
+    versionCode: 129
+    commit: 9335d3b324f462ff1d6f3c6d7d06b83b6e9a28ae
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 40.0.0
+    versionCode: 130
+    commit: 7bb3ce73b8c764042cec18381ac10fdb86021013
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 41.1.2
+    versionCode: 136
+    commit: 537af98a4efb411a03371ef8a255812c199256e1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 41.2.0
+    versionCode: 137
+    commit: bf6be7652a17fe8e4110636ac55ca07ef70d35a3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 41.2.2
+    versionCode: 139
+    commit: f62e315ac2feccdfec9b63877d8829f239420836
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 41.2.3
+    versionCode: 140
+    commit: 21d12e5ad9fbde457401f705291d677b6793fd8d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 41.2.4
+    versionCode: 141
+    commit: d6aba3978ffad9a465dc4bdb4dcb69fdbf9d13b2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 41.3.0
+    versionCode: 142
+    commit: 26f15674bd1805540c92e81bd4b54b630bd9528a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 41.4.0
+    versionCode: 143
+    commit: c6844490e526abab95e067c8d6bb8e5d6dd4492c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 42.0.0
+    versionCode: 144
+    commit: b208e1275bbaf592d8f03f19d7a36fe4bfd039a8
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25b
+
+  - versionName: 42.0.3
+    versionCode: 147
+    commit: 8fb50be3e0d9d5da7e3e99702673d70e1e23ceea
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25c
+
+  - versionName: 42.1.0
+    versionCode: 148
+    commit: d9e7f7c935cb3dcdc8e13de0778bc3ae61d6d7a1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25c
+
+  - versionName: 42.2.0
+    versionCode: 149
+    commit: 73354ea92f949ffd10ca851f88251c1f2765cc4a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25c
+
+  - versionName: 43.0.0
+    versionCode: 150
+    commit: 60ec0cb36a991a66ad1ffb0d07a4f413581d3bb5
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25c
+
+  - versionName: 43.1.0
+    versionCode: 151
+    commit: 27ccff289a2618c6c2040001bbb6d391a34ea0d3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25c
+
+  - versionName: 43.3.0
+    versionCode: 153
+    commit: 4bd8bc51b9b0a66684d56564ce788d4bbaacd57e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25c
+
+  - versionName: 44.0.0
+    versionCode: 154
+    commit: 7182c77b6ae19333c01a533eb22efe5e95a3b372
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25c
+
+  - versionName: 44.1.0
+    versionCode: 155
+    commit: 99a6ca1d2821e750f8aaed8ef54add0a64d76664
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    build:
+      - pushd ../libbaresip-android.video
+      - sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|../../com.tutpro.baresip.plus|'
+        Makefile
+      - make download-sources
+      - make install-all
+      - popd
+    ndk: r25c
+
+  - versionName: 44.1.1
+    versionCode: 156
+    commit: f65fa64ecc7cc155ddd49cc5a027867c26bc4da4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 44.2.0
+    versionCode: 157
+    commit: f2e6e49f30d3313c97ef0afbf197cefede26d239
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 45.0.0
+    versionCode: 158
+    commit: 94b682cad3a1de18cf5b8cce0712441251764b87
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 46.0.0
+    versionCode: 159
+    commit: 069dbf9d753d7a77f87aff67caf241d679666f62
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 46.0.2
+    versionCode: 161
+    commit: ce032bd139c51877fc892f67849fd4d22047add4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 46.1.0
+    versionCode: 162
+    commit: a316377a988272f81a5848aee5e385124fbfae55
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 46.1.1
+    versionCode: 163
+    commit: 3713150432fadd1a05d4db975fd9a2f02d4e004c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 46.2.0
+    versionCode: 164
+    commit: 0bac24a7c1af6a2e4945e0bc33374f5fe2123959
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 46.3.0
+    versionCode: 165
+    commit: 05ca44abf007b755c7b4cf00a2c34547a40542af
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 46.4.0
+    versionCode: 166
+    commit: f83ccb8d759bd6fd3a5e46950c573fb5c53ae44d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 46.5.0
+    versionCode: 167
+    commit: 0b91aa2ef2abc41e010339bf813240716360e976
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 46.6.0
+    versionCode: 168
+    commit: 9481c09002ca56060b0a969f65807c9e23abd495
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make install-all
+    ndk: r25c
+
+  - versionName: 46.7.0
+    versionCode: 169
+    commit: 934614ec2efb042dd8140042676153de15a58ee6
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: r26c
+
+  - versionName: 46.8.0
+    versionCode: 170
+    commit: b34b7044c451e353383f00d55793e0b468a554f0
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake libre-dev libtool make pkg-config wget
+      - apt-get install -t bullseye-backports cmake
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: r26c
+
+  - versionName: 47.0.0
+    versionCode: 171
+    commit: 533f76d54c2ba8190b37d39b601e0efd7a7f598c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 47.1.0
+    versionCode: 172
+    commit: 8b4e78e8a3146256f9cd9ee3e8b8f5f4f44c61e1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 47.3.0
+    versionCode: 174
+    commit: ca31615e219359fc9000f4944ca694b7946410a4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 47.4.0
+    versionCode: 175
+    commit: 71fd126220933f85f227c000b1b64a9d1247c836
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 47.5.0
+    versionCode: 176
+    commit: 6707a02fae931ff1a0f86f682d1159edb208d4ec
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 47.5.1
+    versionCode: 177
+    commit: b8f7adccdbe1716a6c5f2d1df330c021efa87d5a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 47.5.2
+    versionCode: 178
+    commit: baba7588e35700d51c35613f4479072fb48beb4b
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 48.0.0
+    versionCode: 179
+    commit: a12baf1a2ef6b70247bb5bd6eb98aba3103c4b13
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 48.0.1
+    versionCode: 180
+    commit: 45e3d7a42cf3599065498070750f36274bdebfe3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 48.1.0
+    versionCode: 181
+    commit: ccb861f1d6f71bf7dc8810f4ab9ce1f0d0fb9418
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 27.2.12479018
+
 MaintainerNotes: make download-sources checks out master branches of several libraries;
-    this can cause build failures.
+  this can cause build failures.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v.*[0-9]$
-CurrentVersion: 38.1.2
-CurrentVersionCode: 125
+CurrentVersion: 48.1.0
+CurrentVersionCode: 181

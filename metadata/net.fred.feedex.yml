@@ -11,12 +11,12 @@ IssueTracker: https://github.com/FredJul/Flym/issues
 AutoName: Flym
 Summary: Feed reader
 Description: |-
-    <b>Note:</b> These old versions of the app are only kept for historical reasons.
-    At https://f-droid.org/packages/net.frju.flym you will get the most recent version, you should definitely
-    prefer.
+  <b>Note:</b> These old versions of the app are only kept for historical reasons.
+  At https://f-droid.org/packages/net.frju.flym you will get the most recent version, you should definitely
+  prefer.
 
-    Based on Sparse RSS, this checks RSS/Atom news feeds, polling for updates from
-    the device on a regular basis.
+  Based on Sparse RSS, this checks RSS/Atom news feeds, polling for updates from
+  the device on a regular basis.
 
 RepoType: git
 Repo: https://github.com/FredJul/Flym.git
@@ -313,26 +313,7 @@ Builds:
       - echo -e '\n\ninclude ":libs:textdrawable"' >> ../settings.gradle
       - sed -i -e '/fileTree/acompile project(":libs:textdrawable")' build.gradle
 
-  - versionName: 1.9.4
-    versionCode: 61
-    disable: gcm/play-services needs fixing
-    commit: v1.9.4
-    subdir: mobile
-    gradle:
-      - yes
-    srclibs:
-      - TextDrawable@558677ea316e60346948b381e5e274f49b00d370
-    rm:
-      - mobile/src/main/java/net/fred/feedex/wear/
-      - wear/
-    prebuild:
-      - sed -i -e '/maven {/,+2d' -e '/gms/d' -e '/textdrawable/d' build.gradle
-      - mkdir -p ../libs
-      - cp -fR $$TextDrawable$$ ../libs/textdrawable
-      - echo -e '\n\ninclude ":libs:textdrawable"' >> ../settings.gradle
-      - sed -i -e '/fileTree/acompile project(":libs:textdrawable")' build.gradle
-
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 2.0.7

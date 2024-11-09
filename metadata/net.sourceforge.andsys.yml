@@ -8,11 +8,11 @@ Donate: https://sourceforge.net/p/andsys/donate
 
 AutoName: AndSys ~ Apps
 Description: |-
-    * List all the applications installed on the device
-    * Order by: name, package, install date or permissions
-    * Filter launchable applications
+  * List all the applications installed on the device
+  * Order by: name, package, install date or permissions
+  * Filter launchable applications
 
-    Status: BETA
+  Status: BETA
 
 RepoType: git
 Repo: https://git.code.sf.net/p/andsys/git
@@ -65,7 +65,8 @@ Builds:
       - AndTheme@v0.0.3
     prebuild: echo "android.library.reference.1=$$AndTheme$$" >> project.properties
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: 0.4-rc3
 CurrentVersionCode: 33

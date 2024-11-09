@@ -9,13 +9,13 @@ Changelog: https://github.com/pp3345/ykDroid/releases
 
 AutoName: ykDroid
 Description: |-
-    <i>ykDroid</i> is a USB and NFC driver for Android that exposes the
-    challenge-response feature of YubiKeys for use by other Android apps. Both
-    USB and NFC (YubiKey NEO required for NFC) are supported on compatible
-    devices.
+  <i>ykDroid</i> is a USB and NFC driver for Android that exposes the
+  challenge-response feature of YubiKeys for use by other Android apps. Both
+  USB and NFC (YubiKey NEO required for NFC) are supported on compatible
+  devices.
 
-    Apps supporting it include e.g. Keepass2Android and
-    <a href="https://github.com/noliran/ykpass">ykpass</a>.
+  Apps supporting it include e.g. Keepass2Android and
+  <a href="https://github.com/noliran/ykpass">ykpass</a>.
 
 RepoType: git
 Repo: https://github.com/pp3345/ykDroid.git
@@ -42,7 +42,18 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.3'
+    versionCode: 7
+    commit: f71702687bbae5f0f102088e68e2d8e5beafe870
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.2.1
-CurrentVersionCode: 6
+CurrentVersion: '1.3'
+CurrentVersionCode: 7

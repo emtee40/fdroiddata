@@ -61,7 +61,31 @@ Builds:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile/d' -e '/enable true/d' build.gradle
 
+  - versionName: '1.5'
+    versionCode: 7
+    commit: 0cc05fb2dba578515659ca609b2257e9dc71a9f2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile/d' -e '/enable true/d' build.gradle
+
+  - versionName: 1.5.1
+    versionCode: 8
+    commit: 60c084f3ac3a84ee0679b5c720d12d774ce04d43
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile/d' -e '/enable true/d' build.gradle
+
+  - versionName: '1.6'
+    versionCode: 9
+    commit: 81d71969b5b4bec1e3fa99e41b9171be0e426895
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile/d' -e '/enable true/d' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.4'
-CurrentVersionCode: 6
+CurrentVersion: '1.6'
+CurrentVersionCode: 9

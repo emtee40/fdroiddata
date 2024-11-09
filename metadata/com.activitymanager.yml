@@ -1,6 +1,6 @@
 Categories:
-  - System
   - Development
+  - System
 License: Apache-2.0
 AuthorName: Yuriy Mysochenko
 AuthorWebSite: https://sdex.dev/
@@ -127,7 +127,156 @@ Builds:
     gradle:
       - prod
 
+  - versionName: 5.3.2
+    versionCode: 532
+    commit: 912ad5f2a75061dfd4823e5c6a1b5d6f6e14f881
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 5.3.4
+    versionCode: 534
+    commit: 8d19fd2e1b140eb6b94f8ca4cae19dd5e3c32512
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 5.3.5
+    versionCode: 535
+    commit: 42d057131c463b6d557dccdfad56b10ff6996d75
+    subdir: app
+    gradle:
+      - prod
+
+  - versionName: 5.4.0
+    versionCode: 540
+    commit: 0ec409c845487a71385984d61340c8f32967e01d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.1
+    versionCode: 541
+    commit: 9743e6c648c7f0397e26790d479f041333643b2d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.2
+    versionCode: 542
+    commit: 69b9f554888a26008b422d092bb8e4ef32145785
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.3
+    versionCode: 543
+    commit: 547a8b917dfa18e2d3730a5eb2a97fef7a3872c9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.4
+    versionCode: 544
+    commit: e2f14df1054b5c3124397f7f33ee97a764e1c9e9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.5
+    versionCode: 545
+    commit: ccb2f58ed9397ec247f6bfe8980cd96180d51344
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.6
+    versionCode: 546
+    commit: b623801698245cdf1806236fcbd840d6c4788971
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.7
+    versionCode: 547
+    commit: 6f55a845bed2a6928689f8db64c18c6e8b0cd9a5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.8
+    versionCode: 548
+    commit: dec14caa8f278b341fb3ed2cfa0ae62139b87a5a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.9
+    versionCode: 549
+    commit: 51d3e3d84700ffce2a58827a927b3b86d127a03f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.10
+    versionCode: 550
+    commit: d9d3931857fb7db2adb8fb40404bfe8208e3fc01
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - prod
+
+  - versionName: 5.4.11
+    versionCode: 551
+    commit: 9cefa7de52bd6a502d61ad2e6a958da395342d15
+    subdir: app
+    gradle:
+      - prod
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 5.3.1
-CurrentVersionCode: 531
+CurrentVersion: 5.4.11
+CurrentVersionCode: 551

@@ -298,7 +298,54 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.8.0
+    versionCode: 54
+    commit: 2d6c916823238a964c06655abbaed25f18806f76
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.9.1
+    versionCode: 56
+    commit: 63e9e3454a98201bed0edc10b9440985bb92cf70
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.10.0
+    versionCode: 57
+    commit: 4e9e660576298a5c5e474509b553943762123d74
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.11.0
+    versionCode: 58
+    commit: 22d26e712d657e4f365935d3b80382a3e2ae4ce9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.12.1
+    versionCode: 59
+    commit: c4e9cb0aa3577e830bbb227677393f1f504b1ccd
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*$
-CurrentVersion: 4.7.0
-CurrentVersionCode: 53
+CurrentVersion: 4.12.1
+CurrentVersionCode: 59

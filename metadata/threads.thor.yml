@@ -1,6 +1,6 @@
 Categories:
   - Connectivity
-License: GPL-3.0-or-later
+License: Apache-2.0
 SourceCode: https://gitlab.com/remmer.wilts/thor
 IssueTracker: https://gitlab.com/remmer.wilts/thor/issues
 
@@ -451,14 +451,191 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 1.4.2
-    versionCode: 142
-    commit: 18d8814a5ac8ef95c764b21e03ff6cf1c2ed4cad
+  - versionName: 1.4.3
+    versionCode: 143
+    commit: c763af26462d398680b9e446e21f26e45fe179bd
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.0-rc-1/7.6/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 1.4.4
+    versionCode: 144
+    commit: 15bd1008c77410ceb051c04b25fcc92dd6b409cb
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.0-rc-1/7.6/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 1.4.5
+    versionCode: 145
+    commit: be2d7484fdb30caf962c160c5d415d34bce5592f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.0-rc-1/7.6/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 1.4.6
+    versionCode: 146
+    commit: afe083c55bca9a5bb062239ac7f76ba9001e55d6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.0-rc-1/7.6/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 1.4.7
+    versionCode: 147
+    commit: 9c2b6a69c3b879257f88695425cada6813a4723e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/8.0-rc-1/7.6/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 1.4.8
+    versionCode: 148
+    commit: 16b6ad6cfbc7db7cd8f7b4e73958281e73c0dc09
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.9
+    versionCode: 149
+    commit: 70b9864752d1c99787e7123cdf38ee746cfec46b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 150
+    commit: 84cf4ed380ffe931018a294b7d84cc0fcdd119c2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 151
+    commit: 969227778253993df00a0a226cbaa12846f6b34d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.2
+    versionCode: 152
+    commit: 60b461e263c65e0b42ebe507392cc5b874fd49ac
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.4
+    versionCode: 154
+    commit: c664c6695b576521f8fcf2242c11e7b4ab9bfd40
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.5.9
+    versionCode: 159
+    commit: dc7db59b11f4cefc63629996b1b5294a1f5866fa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.0
+    versionCode: 160
+    commit: 6728d9afc6756a8418f7f77aeb0435de1af180bb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 161
+    commit: dea746e4c58600bbddabd5beb9204dfb75015e89
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 162
+    commit: f90538c87f6ed09a71d387f3c3c9ad0acc024824
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 163
+    commit: 3875308813d71a73e10e5ebd9ab678820e288766
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.4
+    versionCode: 164
+    commit: a6abf14be71d3432ef9211bb25d9fa8b463f1bb6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.5
+    versionCode: 165
+    commit: 84f2e85f53c9d248dadb7413a34a30c27abc2d56
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.6
+    versionCode: 166
+    commit: fcedac2d26e0d1a08cacd6177098c473e7208e49
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.7
+    versionCode: 167
+    commit: d3645332f2de9948699bf12b6dd6dd779c941812
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.9
+    versionCode: 169
+    commit: 1f77cdc16ea194d8420e450594bfb14748527f31
     subdir: app
     gradle:
       - yes
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.2
-CurrentVersionCode: 142
+CurrentVersion: 1.6.9
+CurrentVersionCode: 169

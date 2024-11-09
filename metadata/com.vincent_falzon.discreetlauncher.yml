@@ -381,7 +381,60 @@ Builds:
       - gradle
     prebuild: sed -i -e 's/4.1.3/7.3.1/' ../build.gradle
 
+  - versionName: v7.2.0
+    versionCode: 59
+    commit: 6751f8f406e36c6ed78e6ffe75620f231f440084
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - gradle
+    prebuild: sed -i -e 's/4.1.3/7.3.1/' ../build.gradle
+
+  - versionName: v7.3.0
+    versionCode: 60
+    commit: 51d0cde61a3dc46f898a9f3928611570cd29446a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v7.3.1
+    versionCode: 61
+    commit: 936003ef4aed7b70bbe341a4bd2215e7f01ca6f4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v7.4.0
+    versionCode: 62
+    commit: c8a79e1c9f2c123c4e318ca1e236a2e927293f15
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v7.4.1
+    versionCode: 63
+    commit: de850aeb0ad62e680f27b16caa68ecaa6918b8d4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v7.5.0
+    versionCode: 64
+    commit: 54c7bfdf08d15a848e8f8c72e1375b76263a11fb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v7.6.0
+    versionCode: 65
+    commit: 768a550cf666cbc6d33b408742fd59d965146086
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v7.1.0
-CurrentVersionCode: 58
+UpdateCheckData: app/build.gradle|versionCode\s(\d+)|.|versionName\s"(.*)"
+CurrentVersion: v7.6.0
+CurrentVersionCode: 65

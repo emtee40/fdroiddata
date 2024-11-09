@@ -1,9 +1,10 @@
 Categories:
-  - Writing
   - System
+  - Writing
 License: GPL-3.0-only
 AuthorName: Bill Farmer
 AuthorWebSite: https://billthefarmer.github.io/
+WebSite: https://billthefarmer.github.io/editor
 SourceCode: https://github.com/billthefarmer/editor
 IssueTracker: https://github.com/billthefarmer/editor/issues
 Changelog: https://github.com/billthefarmer/editor/releases
@@ -11,7 +12,7 @@ Changelog: https://github.com/billthefarmer/editor/releases
 AutoName: Editor
 
 RepoType: git
-Repo: https://github.com/billthefarmer/editor
+Repo: https://github.com/billthefarmer/editor.git
 
 Builds:
   - versionName: '1.0'
@@ -562,7 +563,97 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.82'
+    versionCode: 182
+    commit: 8b9c6fae249511ce4718e5c9cb06cbb86406760d
+    gradle:
+      - yes
+
+  - versionName: '1.83'
+    versionCode: 183
+    commit: f94075665f274d50af43bb72ce4d204988c422ba
+    gradle:
+      - yes
+
+  - versionName: '1.84'
+    versionCode: 184
+    commit: 0e5af59273be83baa5a31488f1d9fbb0eb3472a2
+    gradle:
+      - yes
+
+  - versionName: '1.85'
+    versionCode: 185
+    commit: 42883b757d2950d8a9a7e0780cac3567983e79ac
+    gradle:
+      - yes
+
+  - versionName: '1.86'
+    versionCode: 186
+    commit: 13e24cbd4fc7fb2e4e7df0875519b07255c335d1
+    gradle:
+      - yes
+
+  - versionName: '1.87'
+    versionCode: 187
+    commit: 54e56b918e989d3d4e92083b13e5366ba9c7c84d
+    gradle:
+      - yes
+
+  - versionName: '1.88'
+    versionCode: 188
+    commit: 587c9e624282aeab9d1cf83901ce4c0c483464e0
+    gradle:
+      - yes
+
+  - versionName: '1.89'
+    versionCode: 189
+    commit: c2c651b4427e059de9d0dbda76f705f5ef3a7f9b
+    gradle:
+      - yes
+
+  - versionName: '1.90'
+    versionCode: 190
+    commit: 926f49aeeec8659034e2492c2997b8efd53a3b58
+    gradle:
+      - yes
+
+  - versionName: '1.91'
+    versionCode: 191
+    commit: f0c5180bda7b7c3ad86eb8c7d4a3258275803e22
+    gradle:
+      - yes
+
+  - versionName: '1.92'
+    versionCode: 192
+    commit: 6be7dd7991ed13bd153eee90418fc3ea623a3bbd
+    gradle:
+      - yes
+
+  - versionName: '1.93'
+    versionCode: 193
+    commit: a49cbfe49d055dbd8d1e4cd06cd0e7359a34ca1e
+    gradle:
+      - yes
+
+  - versionName: '1.94'
+    versionCode: 194
+    commit: 7b6e544e17100fad081fd608b9d8c776e383ac69
+    gradle:
+      - yes
+
+  - versionName: '1.95'
+    versionCode: 195
+    commit: 2312a8c0fd9b5c970b11115e9583dfe80774f668
+    gradle:
+      - yes
+
+  - versionName: '1.96'
+    versionCode: 196
+    commit: 89876eb516dab5518f59a17280c3b91cbb26cbe9
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.81'
-CurrentVersionCode: 181
+CurrentVersion: '1.96'
+CurrentVersionCode: 196

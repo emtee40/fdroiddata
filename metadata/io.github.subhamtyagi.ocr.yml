@@ -54,15 +54,6 @@ Builds:
       - yes
     prebuild: sed -i -e '/splits/,+7d' build.gradle
 
-  - versionName: '3.1'
-    versionCode: 10
-    disable: https://github.com/SubhamTyagi/android-ocr/issues/49
-    commit: 6b11328236ceec0507f4a7d03ae89ec80d7a9c37
-    subdir: app
-    gradle:
-      - yes
-    prebuild: sed -i -e '/splits/,+7d' build.gradle
-
   - versionName: '3.2'
     versionCode: 11
     commit: f0606fc3527774c37dfe3f43358695320d3fb08b
@@ -79,7 +70,27 @@ Builds:
       - yes
     prebuild: sed -i -e '/splits/,+7d' build.gradle
 
+  - versionName: '5.0'
+    versionCode: 13
+    commit: 776cbd1d438ea7fab5a0ed078168b63e7806aaff
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/gradle
+    prebuild:
+      - sed -i -e '/splits/,+7d' build.gradle
+      - sed -i -e 's/7.5-all/8.6-all/' ../gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: '5.1'
+    versionCode: 14
+    commit: 2f4e485f122c62b6a0e33d12914050c1098379d2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/splits/,+7d' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '4.0'
-CurrentVersionCode: 12
+CurrentVersion: '5.1'
+CurrentVersionCode: 14

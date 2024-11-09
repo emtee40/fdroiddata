@@ -2,7 +2,7 @@ Categories:
   - Internet
   - Science & Education
 License: GPL-3.0-only
-AuthorName: L’angolo nerd
+AuthorName: L'angolo nerd
 AuthorEmail: info@langolonerd.it
 WebSite: https://www.langolonerd.it/
 SourceCode: https://github.com/aroblu94/langolonerd_android
@@ -10,8 +10,8 @@ IssueTracker: https://github.com/aroblu94/langolonerd_android/issues
 
 AutoName: L'angolo nerd
 Description: |-
-    L'angolo nerd official app offers a lot more features than the "classic mobile
-    site" like URL handling, push notifications, a sexy spash screen and more!
+  L'angolo nerd official app offers a lot more features than the "classic mobile
+  site" like URL handling, push notifications, a sexy spash screen and more!
 
 RepoType: git
 Repo: https://github.com/aroblu94/langolonerd_android
@@ -24,7 +24,7 @@ Builds:
     gradle:
       - yes
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 1.2.1

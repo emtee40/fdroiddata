@@ -1,0 +1,204 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Connects to traewelling.de for push, GitHub for Emoji fonts and line colors
+      and OpenStreetMap and OpenRailwayMap for maps
+    de-DE: Verbindungen zu traewelling.de für Push Nachrichten, GitHub für Emoji Schriftarten
+      und Linien Farben und OpenStreetMap & OpenRailwayMap für Karten
+Categories:
+  - Navigation
+License: AGPL-3.0-only
+AuthorName: Jonas Heubuch
+AuthorEmail: app@traewelldroid.de
+AuthorWebSite: https://heubi.bayern/
+WebSite: https://traewelldroid.de/
+SourceCode: https://github.com/Traewelldroid/traewelldroid
+IssueTracker: https://github.com/Traewelldroid/traewelldroid/issues
+Translation: https://translate.codeberg.org/engage/traewelldroid/
+Changelog: https://github.com/Traewelldroid/traewelldroid/releases
+
+AutoName: Träwelldroid
+
+RepoType: git
+Repo: https://github.com/Traewelldroid/traewelldroid
+Binaries: https://github.com/Traewelldroid/traewelldroid/releases/download/v%v/app-foss-release.apk
+
+Builds:
+  - versionName: 2.7.0
+    versionCode: 141
+    commit: 5d36d7d46f639e7032778cf32f48704fb155e40c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+
+  - versionName: 2.7.1
+    versionCode: 142
+    commit: 43d4156a102fd5328b9914fe5e3939e6913bc259
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.7.2
+    versionCode: 144
+    commit: a469cf305dff78b868c452fe77cc71aaed17aeff
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.7.3
+    versionCode: 145
+    commit: 726bccdab1a3b0a71c4e9bf940a903f3cd88cbb6
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.7.4
+    versionCode: 146
+    commit: b69fd07a0a23a465a0c0ff9636e5774e1f36b7f9
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.7.5
+    versionCode: 147
+    commit: 28e32eaa71da0f4c66088c6495645aa1e0f34abb
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.8.1
+    versionCode: 149
+    commit: 23f2fc10c9d4fd893cef657c916d8259cbe39e8a
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.8.2
+    versionCode: 150
+    commit: 7fa5a69d9cc81fc0eda22b2b72ed00fe69561ec3
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.9.0
+    versionCode: 151
+    commit: f05cf5fdce934c509382a5046b2982509dca5ed7
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.10.0
+    versionCode: 152
+    commit: 756e77dddd89153161f5dffc78a7c3fc90f55837
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.10.1
+    versionCode: 153
+    commit: bdc15bc75f7e41f0d3f49a8b85563be5fe70f21c
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.10.2
+    versionCode: 154
+    commit: 2c9e778ed7ebd40fcb4078ceaad3812a5eb9e00a
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.10.3
+    versionCode: 155
+    commit: d9e6e397ad819a3344148e3826f77b9dea14d9f8
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.10.4
+    versionCode: 156
+    commit: cdc29cc3bc5605d3864c48be66539e154e9b8a3d
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.11.0
+    versionCode: 157
+    commit: 574b5848cdccc79cf3d09b3ff78b182e5de99e73
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.11.2
+    versionCode: 159
+    commit: fa850b77201d706c5682a544857e9f08fb083f65
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.12.0
+    versionCode: 160
+    commit: bdd5894de3b59ba2ffc99dfb767509d6dece8d73
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.13.1
+    versionCode: 162
+    commit: a0e0dd1e16b096aed12340808f803897da12e3fd
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.13.2
+    versionCode: 163
+    commit: 6921f7cb87b72f9cf4f8b2f704bd5e22962287e0
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.14.1
+    versionCode: 165
+    commit: 872e646af8a63c96649323f809653e7692c0f7a0
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.15.1
+    versionCode: 167
+    commit: d3f5208dc349b2b7f8cba1afe7020e78829e3c16
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.15.4
+    versionCode: 170
+    commit: b22cb641fa90dfd278ac8f242d407c31de1c6e20
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.15.5
+    versionCode: 171
+    commit: 1e24487e7dcae71d9c93d0c9f251941daea39759
+    subdir: app
+    gradle:
+      - foss
+
+  - versionName: 2.15.7
+    versionCode: 173
+    commit: 31f631041f60e412059a7f9e538c70a48e358201
+    subdir: app
+    gradle:
+      - foss
+
+AllowedAPKSigningKeys: 989fb4f387a7ea95f56405841bbae8af0c14ddff0462a1c919d9119944b20efc
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: app/build.gradle|code = (\d+)|.|name = "(\d+.\d+.\d+)"
+CurrentVersion: 2.15.7
+CurrentVersionCode: 173

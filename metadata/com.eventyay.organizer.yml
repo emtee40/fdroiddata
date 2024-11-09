@@ -1,8 +1,8 @@
 AntiFeatures:
   - Tracking
 Categories:
-  - Internet
   - Connectivity
+  - Internet
 License: GPL-3.0-only
 WebSite: https://eventyay.com/
 SourceCode: https://github.com/fossasia/open-event-organizer-android
@@ -58,7 +58,8 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/LOCAL_KEY/d' build.gradle
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: 1.7.0
 CurrentVersionCode: 17

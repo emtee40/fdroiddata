@@ -1,3 +1,7 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: This app depends on a non-free open-data web-api for retrieving public
+      transport departure times.
 Categories:
   - Navigation
 License: GPL-3.0-or-later
@@ -6,8 +10,9 @@ AuthorEmail: michael.poehn@fsfe.org
 WebSite: https://codeberg.org/uniqx/AmSprung
 SourceCode: https://codeberg.org/uniqx/AmSprung
 IssueTracker: https://codeberg.org/uniqx/AmSprung/issues
-Translation: https://weblate.bubu1.eu/projects/am-sprung/
-Changelog: https://codeberg.org/uniqx/AmSprung/src/branch/main/CHANGELOG.md
+Translation: https://translate.codeberg.org/projects/amsprung
+Changelog: https://codeberg.org/uniqx/AmSprung/src/branch/HEAD/CHANGELOG.md
+Liberapay: uniqx
 
 AutoName: Am Sprung
 

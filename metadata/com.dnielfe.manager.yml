@@ -8,8 +8,8 @@ Changelog: https://github.com/DF1E/SimpleExplorer/blob/HEAD/Changelog
 
 AutoName: Simple Explorer
 Description: |-
-    Simple file explorer inspired by https://f-droid.org/packages/com.cyanogenmod.filemanager.ics and
-    https://f-droid.org/packages/com.docd.purefm.
+  Simple file explorer inspired by https://f-droid.org/packages/com.cyanogenmod.filemanager.ics and
+  https://f-droid.org/packages/com.docd.purefm.
 
 RepoType: git
 Repo: https://github.com/DF1E/SimpleExplorer
@@ -41,8 +41,8 @@ Builds:
     versionCode: 55
     commit: v2.1
     srclibs:
-      - 1:FloatingActionButton@d48d8f3fbed108e6bcf58cb3e1f3c7cafb5ab1db
-      - 2:ViewPagerIndicator@2.4.1
+      - FloatingActionButton@d48d8f3fbed108e6bcf58cb3e1f3c7cafb5ab1db
+      - ViewPagerIndicator@2.4.1
       - RootTools@3.4
       - CommonsIO@2.4
       - JUnrar@a6f7cac9dd5434423127c6498b357cae2cfbb369
@@ -65,8 +65,8 @@ Builds:
     versionCode: 56
     commit: 17a63ae25d8e61b8c9c104ac01c11e2a78a19627
     srclibs:
-      - 1:FloatingActionButton@d48d8f3fbed108e6bcf58cb3e1f3c7cafb5ab1db
-      - 2:ViewPagerIndicator@2.4.1
+      - FloatingActionButton@d48d8f3fbed108e6bcf58cb3e1f3c7cafb5ab1db
+      - ViewPagerIndicator@2.4.1
       - RootTools@3.4
       - CommonsIO@2.4
       - JUnrar@a6f7cac9dd5434423127c6498b357cae2cfbb369
@@ -89,8 +89,8 @@ Builds:
     versionCode: 57
     commit: 106e76e5a754400f6e2ec3025a4b95541b2f2056
     srclibs:
-      - 1:FloatingActionButton@d48d8f3fbed108e6bcf58cb3e1f3c7cafb5ab1db
-      - 2:ViewPagerIndicator@2.4.1
+      - FloatingActionButton@d48d8f3fbed108e6bcf58cb3e1f3c7cafb5ab1db
+      - ViewPagerIndicator@2.4.1
       - RootTools@3.4
       - CommonsIO@2.4
       - JUnrar@a6f7cac9dd5434423127c6498b357cae2cfbb369
@@ -214,7 +214,8 @@ Builds:
       - cp -fR $$RootTools$$/src/com  src/main/java/
       - cp -fR $$RootShell$$/src/com  src/main/java/
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 2.3.1
 CurrentVersionCode: 67

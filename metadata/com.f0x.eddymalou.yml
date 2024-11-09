@@ -6,8 +6,8 @@ IssueTracker: https://github.com/F0x06/EddyMalou/issues
 
 AutoName: Eddy Malou
 Description: |-
-    <a href="https://en.wikipedia.org/wiki/Soundboard_%28computer_program%29">Soundboard</a>
-    featuring Eddy Malou.
+  <a href="https://en.wikipedia.org/wiki/Soundboard_%28computer_program%29">Soundboard</a>
+  featuring Eddy Malou.
 
 RepoType: git
 Repo: https://github.com/F0x06/EddyMalou.git
@@ -21,7 +21,9 @@ Builds:
     versionCode: 2
     commit: '2.0'
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '2.0'
 CurrentVersionCode: 2
+
+NoSourceSince: '2.0'

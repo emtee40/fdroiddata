@@ -3,12 +3,12 @@ Categories:
 License: GPL-3.0-or-later
 AuthorName: Kunzisoft
 AuthorEmail: contact@kunzisoft.com
-WebSite: https://www.kunzisoft.com/KeepassDX
+WebSite: https://www.keepassdx.com
 SourceCode: https://github.com/Kunzisoft/KeePassDX
 IssueTracker: https://github.com/Kunzisoft/KeePassDX/issues
 Translation: https://hosted.weblate.org/projects/keepass-dx/strings/
 Changelog: https://github.com/Kunzisoft/KeePassDX/blob/HEAD/CHANGELOG
-Donate: https://www.kunzisoft.com/donation?project=keepassdx
+Donate: https://www.keepassdx.com/#donation
 Liberapay: Kunzisoft
 Bitcoin: 1DSwXCk7Sob24sNsofywNoRQw2f5Qj5t2F
 Litecoin: LRmhvGbKNXFLTxyK8Q9zBxDXjBWm6Rzt34
@@ -16,7 +16,7 @@ Litecoin: LRmhvGbKNXFLTxyK8Q9zBxDXjBWm6Rzt34
 AutoName: KeePassDX
 
 RepoType: git
-Repo: https://github.com/Kunzisoft/KeePassDX
+Repo: https://github.com/Kunzisoft/KeePassDX.git
 
 Builds:
   - versionName: 2.5.0.0beta2-libre
@@ -725,14 +725,54 @@ Builds:
       - app/src/main/assets/publicsuffixes
     ndk: r21e
 
+  - versionName: 3.5.1
+    versionCode: 119
+    commit: 428efd2bb6395a1882fa8f1e4753d720cfc5b33c
+    subdir: app
+    gradle:
+      - libre
+    scanignore:
+      - app/src/main/assets/publicsuffixes
+    ndk: r21e
+
+  - versionName: 4.0.5
+    versionCode: 128
+    commit: ac1590810f67456c56e11a494a407e814736e6d8
+    subdir: app
+    gradle:
+      - libre
+    scanignore:
+      - app/src/main/assets/publicsuffixes
+    ndk: r21e
+
+  - versionName: 4.0.6
+    versionCode: 129
+    commit: e09306b6f319e128c1243149f492b956d3cb778c
+    subdir: app
+    gradle:
+      - libre
+    scanignore:
+      - app/src/main/assets/publicsuffixes
+    ndk: r21e
+
+  - versionName: 4.0.8
+    versionCode: 131
+    commit: d1e24bfcd8f6d8f1a24cbcf55fa29bd730550492
+    subdir: app
+    gradle:
+      - libre
+    scanignore:
+      - app/src/main/assets/publicsuffixes
+    ndk: r21e
+
 MaintainerNotes: |-
-    The file at `app/src/main/assets/publicsuffixes` is a version of the
-    [Public Suffix List](https://publicsuffix.org/) that has been sorted and
-    stripped of all comments. It is identified as a binary files because it
-    contains two 4-byte length fields, one right at the beginning, but is
-    otherwise plaintext.
+  The file at `app/src/main/assets/publicsuffixes` is a version of the
+  [Public Suffix List](https://publicsuffix.org/) that has been sorted and
+  stripped of all comments. It is identified as a binary files because it
+  contains two 4-byte length fields, one right at the beginning, but is
+  otherwise plaintext.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[\d.]+$
-CurrentVersion: 3.5.0
-CurrentVersionCode: 118
+CurrentVersion: 4.0.8
+CurrentVersionCode: 131

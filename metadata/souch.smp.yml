@@ -8,13 +8,13 @@ Donate: https://www.paypal.com/donate/?hosted_button_id=QAPVFX7NZ8BTE
 
 AutoName: SicMu Player
 Description: |-
-    Lightweight audio player which features a single over-all playlist with every
-    song on the device.
+  Lightweight audio player which features a single over-all playlist with every
+  song on the device.
 
-    SicMu player can show songs in a tree view following device's folder hierarchy.
-    Songs can be sorted and grouped by folders or artists.
+  SicMu player can show songs in a tree view following device's folder hierarchy.
+  Songs can be sorted and grouped by folders or artists.
 
-    Many other features are available, see website.
+  Many other features are available, see website.
 
 RepoType: git
 Repo: https://gitlab.com/souch/SMP.git
@@ -79,14 +79,6 @@ Builds:
   - versionName: '1.0'
     versionCode: 10
     commit: v1.0
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: '1.1'
-    versionCode: 11
-    disable: failing
-    commit: v1.1
     subdir: app
     gradle:
       - yes
@@ -212,32 +204,6 @@ Builds:
     prebuild: sed -i -e '18a google()' ../build.gradle
 
   - versionName: '2.0'
-    versionCode: 25
-    disable: https://gitlab.com/souch/SMP/-/issues/88
-    commit: c1319cbdb42de04e269772ca7006823f1351af93
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - free
-    prebuild: sed -i -e '18a google()' ../build.gradle
-
-  - versionName: 2.0.1
-    versionCode: 26
-    disable: https://gitlab.com/souch/SMP/-/issues/88
-    commit: c1aee7b4d6fc6dc1105ff29fb57398c58e7f1a49
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - free
-    prebuild: sed -i -e '18a google()' ../build.gradle
-
-  - versionName: '2.0'
     versionCode: 27
     commit: 1ecc21d3205fb8a898c69327d0657952bd11f83c
     subdir: app
@@ -291,7 +257,17 @@ Builds:
       - sed -i -e '18a google()' ../build.gradle
       - sed -i -e '/android {/a lintOptions {abortOnError false}' build.gradle
 
+  - versionName: 2.3.1
+    versionCode: 32
+    commit: 806718e373df47bbb355250f36c4e716a8e3d575
+    subdir: app
+    gradle:
+      - free
+    prebuild:
+      - sed -i -e '18a google()' ../build.gradle
+      - sed -i -e '/android {/a lintOptions {abortOnError false}' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.3'
-CurrentVersionCode: 31
+CurrentVersion: 2.3.1
+CurrentVersionCode: 32

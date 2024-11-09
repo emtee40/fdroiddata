@@ -135,7 +135,30 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.0.7
+    versionCode: 29
+    commit: f8448e2f9af425630efde130e676265fdf2e100d
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xms2048m -Xmx2048m -XX:MaxPermSize=2048m"
+      >> gradle.properties
+
+  - versionName: 1.1.0
+    versionCode: 30
+    commit: 22ad46170b0f10f877a781dd3a393a5d8386599f
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xms2048m -Xmx2048m -XX:MaxPermSize=2048m"
+      >> gradle.properties
+
+  - versionName: 1.1.1
+    versionCode: 31
+    commit: a411afa093c1942b24ccae8191a019cc4c4b9440
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xms2048m -Xmx2048m" >> gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.6
-CurrentVersionCode: 28
+CurrentVersion: 1.1.1
+CurrentVersionCode: 31

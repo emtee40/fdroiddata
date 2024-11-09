@@ -1,5 +1,7 @@
 AntiFeatures:
-  - Tracking
+  Tracking:
+    en-US: Sending analytics data via Sentry is active by default and cannot be disabled
+      by those using the app.
 Categories:
   - Reading
 License: MIT
@@ -9,30 +11,32 @@ IssueTracker: https://github.com/opacapp/opacclient/issues
 
 AutoName: Web Opac
 Description: |-
-    This free and open source Android app enables convenient mobile access to
-    catalogues and user accounts of more than 1,000 public and academic libraries,
-    most of them currently in the German-speaking countries (Deutschland,
-    Österreich, Schweiz), but also some in Australia, Canada, Italia, Nederland,
-    Polska, United Kingdom, United States, Ελλάς and Россия.
+  <b>NOTE:</b> This project is end-of-life as of 2024-06-30. No more changes to this repository are planned and the app will no longer receive updates.
 
-    Features of the app:
+  This free and open source Android app enables convenient mobile access to
+  catalogues and user accounts of more than 1,000 public and academic libraries,
+  most of them currently in the German-speaking countries (Deutschland,
+  Österreich, Schweiz), but also some in Australia, Canada, Italia, Nederland,
+  Polska, United Kingdom, United States, Ελλάς and Россия.
 
-    * Search in the catalogue of your library
-    * Watchlist for books
-    * Search for ISBN with barcode scanner
+  Features of the app:
 
-    And in some libraries:
+  * Search in the catalogue of your library
+  * Watchlist for books
+  * Search for ISBN with barcode scanner
 
-    * View of lent media (also with multiple accounts)
-    * Prolonging of lent books and cancellation of reservations
-    * Reservation of books
-    * Notification when books need to be returned (no warranty)
-    * View of information about the library (e.g. opening hours)
+  And in some libraries:
 
-    The list of supported libraries is available on
-    <a href="https://opacapp.net/en/libraries/">our website</a>.
+  * View of lent media (also with multiple accounts)
+  * Prolonging of lent books and cancellation of reservations
+  * Reservation of books
+  * Notification when books need to be returned (no warranty)
+  * View of information about the library (e.g. opening hours)
 
-    Tracking as it comes with Sentry which cannot be disabled by the user.
+  The list of supported libraries is available on
+  <a href="https://opacapp.net/en/libraries/">our website</a>.
+
+  Tracking as it comes with Sentry which cannot be disabled by the user.
 
 RepoType: git
 Repo: https://github.com/raphaelm/opacclient.git
@@ -2695,12 +2699,181 @@ Builds:
     preassemble:
       - downloadJson
 
-MaintainerNotes: |-
-    Using commonsware maven dependencies adds READ_PHONE_STATE permission; building
-    the source directly fixes this but might break more easily. Wait for next release
-    to deploy.
+  - versionName: 6.4.8
+    versionCode: 238
+    commit: 7cdbab412dc5343c6650f19d5f525a499d69d04d
+    subdir: opacclient/opacapp
+    submodules: true
+    gradle:
+      - foss
+    srclibs:
+      - CWACAdapterFork@v1.0.1
+      - EndlessFork@v1.2.3
+    rm:
+      - opacclient/bintray.gradle
+      - opacclient/opacapp/libs/*.jar
+      - tools/bcprov-jdk15on-146.jar
+    prebuild:
+      - cp -fR $$CWACAdapterFork$$/src/com src/main/java/
+      - cp -fR $$EndlessFork$$/src/com src/main/java/
+      - sed -i -e '/adapter/d' -e '/endless/d' build.gradle
+      - sed -i -e '/bintray.gradle/d' ../libopac/build.gradle
+    scandelete:
+      - opacclient/libopac/src/test
+    preassemble:
+      - downloadJson
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 6.4.6
-CurrentVersionCode: 236
+  - versionName: 6.4.9
+    versionCode: 239
+    commit: c978da1b3b7885861f1ac549bc8cbd74a500ea7f
+    subdir: opacclient/opacapp
+    submodules: true
+    gradle:
+      - foss
+    srclibs:
+      - CWACAdapterFork@v1.0.1
+      - EndlessFork@v1.2.3
+    rm:
+      - opacclient/bintray.gradle
+      - opacclient/opacapp/libs/*.jar
+      - tools/bcprov-jdk15on-146.jar
+    prebuild:
+      - cp -fR $$CWACAdapterFork$$/src/com src/main/java/
+      - cp -fR $$EndlessFork$$/src/com src/main/java/
+      - sed -i -e '/adapter/d' -e '/endless/d' build.gradle
+      - sed -i -e '/bintray.gradle/d' ../libopac/build.gradle
+    scandelete:
+      - opacclient/libopac/src/test
+    preassemble:
+      - downloadJson
+
+  - versionName: 6.4.10
+    versionCode: 240
+    commit: 35dcc1a24eebcbed9af51eada6390637e06b7183
+    subdir: opacclient/opacapp
+    submodules: true
+    gradle:
+      - foss
+    srclibs:
+      - CWACAdapterFork@v1.0.1
+      - EndlessFork@v1.2.3
+    rm:
+      - opacclient/bintray.gradle
+      - opacclient/opacapp/libs/*.jar
+      - tools/bcprov-jdk15on-146.jar
+    prebuild:
+      - cp -fR $$CWACAdapterFork$$/src/com src/main/java/
+      - cp -fR $$EndlessFork$$/src/com src/main/java/
+      - sed -i -e '/adapter/d' -e '/endless/d' build.gradle
+      - sed -i -e '/bintray.gradle/d' ../libopac/build.gradle
+    scandelete:
+      - opacclient/libopac/src/test
+    preassemble:
+      - downloadJson
+
+  - versionName: 6.4.12
+    versionCode: 242
+    commit: 6072a821e035e1fe45462a4b5959f62655181ee2
+    subdir: opacclient/opacapp
+    submodules: true
+    gradle:
+      - foss
+    srclibs:
+      - CWACAdapterFork@v1.0.1
+      - EndlessFork@v1.2.3
+    rm:
+      - opacclient/bintray.gradle
+      - opacclient/opacapp/libs/*.jar
+      - tools/bcprov-jdk15on-146.jar
+    prebuild:
+      - cp -fR $$CWACAdapterFork$$/src/com src/main/java/
+      - cp -fR $$EndlessFork$$/src/com src/main/java/
+      - sed -i -e '/adapter/d' -e '/endless/d' build.gradle
+      - sed -i -e '/bintray.gradle/d' ../libopac/build.gradle
+    scandelete:
+      - opacclient/libopac/src/test
+    preassemble:
+      - downloadJson
+
+  - versionName: 6.4.13
+    versionCode: 243
+    commit: 98887acf53fb226974e06c45f7f9a31559aa73ea
+    subdir: opacclient/opacapp
+    submodules: true
+    gradle:
+      - foss
+    srclibs:
+      - CWACAdapterFork@v1.0.1
+      - EndlessFork@v1.2.3
+    rm:
+      - opacclient/bintray.gradle
+      - opacclient/opacapp/libs/*.jar
+      - tools/bcprov-jdk15on-146.jar
+    prebuild:
+      - cp -fR $$CWACAdapterFork$$/src/com src/main/java/
+      - cp -fR $$EndlessFork$$/src/com src/main/java/
+      - sed -i -e '/adapter/d' -e '/endless/d' build.gradle
+      - sed -i -e '/bintray.gradle/d' ../libopac/build.gradle
+    scandelete:
+      - opacclient/libopac/src/test
+    preassemble:
+      - downloadJson
+
+  - versionName: 6.4.14
+    versionCode: 244
+    commit: 40a7e7c7f78847c61a2de8bc68d9d9251bd9f677
+    subdir: opacclient/opacapp
+    submodules: true
+    gradle:
+      - foss
+    srclibs:
+      - CWACAdapterFork@v1.0.1
+      - EndlessFork@v1.2.3
+    rm:
+      - opacclient/bintray.gradle
+      - opacclient/opacapp/libs/*.jar
+      - tools/bcprov-jdk15on-146.jar
+    prebuild:
+      - cp -fR $$CWACAdapterFork$$/src/com src/main/java/
+      - cp -fR $$EndlessFork$$/src/com src/main/java/
+      - sed -i -e '/adapter/d' -e '/endless/d' build.gradle
+      - sed -i -e '/bintray.gradle/d' ../libopac/build.gradle
+    scandelete:
+      - opacclient/libopac/src/test
+    preassemble:
+      - downloadJson
+
+  - versionName: 6.5.0
+    versionCode: 245
+    commit: 8ef696f7386e96aea5bb8632c221008d16b69a71
+    subdir: opacclient/opacapp
+    submodules: true
+    gradle:
+      - foss
+    srclibs:
+      - CWACAdapterFork@v1.0.1
+      - EndlessFork@v1.2.3
+    rm:
+      - opacclient/bintray.gradle
+      - opacclient/opacapp/libs/*.jar
+      - tools/bcprov-jdk15on-146.jar
+    prebuild:
+      - cp -fR $$CWACAdapterFork$$/src/com src/main/java/
+      - cp -fR $$EndlessFork$$/src/com src/main/java/
+      - sed -i -e '/adapter/d' -e '/endless/d' build.gradle
+      - sed -i -e '/bintray.gradle/d' ../libopac/build.gradle
+    scandelete:
+      - opacclient/libopac/src/test
+    preassemble:
+      - downloadJson
+
+MaintainerNotes: |-
+  Using commonsware maven dependencies adds READ_PHONE_STATE permission; building
+  the source directly fixes this but might break more easily. Wait for next release
+  to deploy.
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 6.28.318
+CurrentVersionCode: 246

@@ -1,6 +1,6 @@
 Categories:
-  - Internet
   - Connectivity
+  - Internet
 License: MIT
 AuthorName: TrianguloY
 AuthorEmail: correo--correo+cdu@hotmail.com
@@ -23,7 +23,25 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '4.0'
+    versionCode: 27
+    commit: 156675e6729e703a2790602695be250843a51b51
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '4.1'
+    versionCode: 28
+    commit: 2d3a7657887687cc13ed43dfd7c42e3a7eb55670
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+$
-CurrentVersion: '3.0'
-CurrentVersionCode: 24
+CurrentVersion: '4.1'
+CurrentVersionCode: 28

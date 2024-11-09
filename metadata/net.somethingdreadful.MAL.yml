@@ -8,12 +8,12 @@ Changelog: https://github.com/AnimeNeko/Atarashii/releases
 
 AutoName: Atarashii!
 Description: |-
-    <b>Discontinued</b>
+  <b>Discontinued</b>
 
-    "Atarashii" is Japanese for "New, Modern". Atarashii! aims to be a modern,
-    native Android app for managing your MAL.
+  "Atarashii" is Japanese for "New, Modern". Atarashii! aims to be a modern,
+  native Android app for managing your MAL.
 
-    You’ll need an account on that website or to create one in the app.
+  You'll need an account on that website or to create one in the app.
 
 RepoType: git
 Repo: https://github.com/AnimeNeko/Atarashii.git
@@ -24,10 +24,10 @@ Builds:
     commit: 1.3.1
     subdir: Atarashii
     srclibs:
-      - 1:NumberPicker-SimonVT@35e4d
-      - 2:ActionBarSherlock@c0d437
-      - 3:Crouton@b6735
-      - 4:SherlockNavDrawer@808a1
+      - NumberPicker-SimonVT@35e4d
+      - ActionBarSherlock@c0d437
+      - Crouton@b6735
+      - SherlockNavDrawer@808a1
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -39,10 +39,10 @@ Builds:
     commit: 1.3.2
     subdir: Atarashii
     srclibs:
-      - 1:NumberPicker-SimonVT@35e4d
-      - 2:ActionBarSherlock@c0d437
-      - 3:Crouton@b6735
-      - 4:SherlockNavDrawer@808a1
+      - NumberPicker-SimonVT@35e4d
+      - ActionBarSherlock@c0d437
+      - Crouton@b6735
+      - SherlockNavDrawer@808a1
     extlibs:
       - android/android-support-v4.jar
     prebuild:
@@ -54,17 +54,17 @@ Builds:
     commit: '1.4'
     subdir: Atarashii
     srclibs:
-      - 1:NumberPicker-SimonVT@35e4d
-      - 2:ActionBarSherlock@c0d437
-      - 3:Crouton@b6735
-      - 4:SherlockNavDrawer@808a1
+      - NumberPicker-SimonVT@35e4d
+      - ActionBarSherlock@c0d437
+      - Crouton@b6735
+      - SherlockNavDrawer@808a1
     extlibs:
       - android/android-support-v4.jar
     prebuild:
       - cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
       - mv libs/android-support-v4.jar $$Crouton$$/libs/
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '1.4'

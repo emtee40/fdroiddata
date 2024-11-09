@@ -10,6 +10,28 @@ Changelog: https://codeberg.org/kriztan/blabber.im/raw/branch/master/CHANGELOG.m
 Donate: https://blabber.im/en/unterstuetzen
 
 AutoName: blabber.im
+Description: |-
+  <b>NOTE:</b> Development is stopped at the moment
+
+  blabber.im is a fork of <a href="https://f-droid.org/packages/eu.siacs.conversations/">Conversations</a> with some changes, to improve usability.
+
+  Connection security and the protection of personal data are very important for us, so we enforce encrypted connections between messenger and server, making it almost impossible to intercept and read your messages by strangers. If that's not enough for you, end-to-end message encryption such as OMEMO or OpenPGP can be used. This allows messages to be encrypted on the sending device and decrypted only by the receiving device intended for reception.
+
+  Features:
+  * End-to-end encryption with either <a href="http://conversations.im/omemo/">OMEMO</a> or <a href="http://openpgp.org/about/">OpenPGP</a>
+  * Send and receive images as well as other files
+  * Send and receive locations
+  * Send and receive voice messages
+  * Integration of profile pictures (avatars) of your contacts
+  * Synchronize message history with other clients
+  * Conferences or group chats
+  * Address book integration (there is no exchange of your address book with the server)
+  * Audio/Video calls since version 2.4.0
+  * Very low battery consumption
+  * Status messages
+  * Daily backup of database to local storage
+
+  You need help? Please join our support group chat <a href="https://blabber.im/j/support/room.pix-art.de">support@room.pix-art.de</a>.
 
 RepoType: git
 Repo: https://codeberg.org/kriztan/blabber.im.git
@@ -147,7 +169,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:5.1.0/aimplementation 'org.webrtc:google-webrtc:1.0.+'"
-        build.gradle
+      build.gradle
 
   - versionName: 2.4.1
     versionCode: 302
@@ -155,7 +177,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:5.1.0/aimplementation 'org.webrtc:google-webrtc:1.0.+'"
-        build.gradle
+      build.gradle
 
   - versionName: 2.5.2
     versionCode: 306
@@ -163,7 +185,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.+'"
-        build.gradle
+      build.gradle
 
   - versionName: 3.0.1
     versionCode: 314
@@ -171,7 +193,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
-        build.gradle
+      build.gradle
 
   - versionName: 3.0.2
     versionCode: 316
@@ -179,7 +201,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
-        build.gradle
+      build.gradle
 
   - versionName: 3.0.3
     versionCode: 318
@@ -187,7 +209,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
-        build.gradle
+      build.gradle
 
   - versionName: 3.0.4
     versionCode: 321
@@ -195,7 +217,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
-        build.gradle
+      build.gradle
 
   - versionName: 3.0.5
     versionCode: 323
@@ -203,7 +225,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
-        build.gradle
+      build.gradle
 
   - versionName: 3.0.6
     versionCode: 324
@@ -211,7 +233,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
-        build.gradle
+      build.gradle
 
   - versionName: 3.0.7
     versionCode: 325
@@ -219,7 +241,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
-        build.gradle
+      build.gradle
 
   - versionName: 3.0.8
     versionCode: 326
@@ -227,7 +249,7 @@ Builds:
     gradle:
       - git
     prebuild: sed -i -e '/libwebrtc/d' -e "/AppIntro:/aimplementation 'org.webrtc:google-webrtc:1.0.30039'"
-        build.gradle
+      build.gradle
 
   - versionName: 3.1.4
     versionCode: 344
@@ -241,7 +263,8 @@ Builds:
     prebuild: sed -i -e '/google-services/d' build.gradle
     ndk: r21e
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags ^[0-9]+\.[0-9]+\.[0-9]+$
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 3.1.4
 CurrentVersionCode: 344

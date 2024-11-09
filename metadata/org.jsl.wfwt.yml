@@ -9,18 +9,18 @@ Changelog: https://github.com/js-labs/WalkieTalkie/blob/HEAD/CHANGELOG.md
 
 AutoName: WiFi Walkie Talkie
 Description: |-
-    This program transmits sound recorded from microphone to some other devices
-    running the same program on the same network segment, so works like Walkie
-    Talkie radio.
+  This program transmits sound recorded from microphone to some other devices
+  running the same program on the same network segment, so works like Walkie
+  Talkie radio.
 
-    Devices find each other by Android NSD (aka Bonjour), no any configuration
-    required. Unfortunately Android NSD implementation is not stable enough, so
-    sometimes application can not establish connection properly. Application restart
-    or device reboot usually helps. Audio data is being transmitted by the unicast
-    channel, so each device works as a server and as a client at the same time.
+  Devices find each other by Android NSD (aka Bonjour), no any configuration
+  required. Unfortunately Android NSD implementation is not stable enough, so
+  sometimes application can not establish connection properly. Application restart
+  or device reboot usually helps. Audio data is being transmitted by the unicast
+  channel, so each device works as a server and as a client at the same time.
 
-    Program was implemented as a demonstration of JS-Collider: Java high performance
-    scalable NIO framework, see <a href="https://github.com/js-labs/js-collider">https://github.com/js-labs/js-collider</a>.
+  Program was implemented as a demonstration of JS-Collider: Java high performance
+  scalable NIO framework, see <a href="https://github.com/js-labs/js-collider">https://github.com/js-labs/js-collider</a>.
 
 RepoType: git
 Repo: https://github.com/js-labs/WalkieTalkie.git
@@ -35,13 +35,6 @@ Builds:
   - versionName: '1.4'
     versionCode: 5
     commit: 29b6a6998c94e9715586d1e57fa951f029492909
-    gradle:
-      - yes
-
-  - versionName: '1.5'
-    versionCode: 6
-    disable: remove apk
-    commit: 627873982b2799e9c4ac6e3884b79fa54e235266
     gradle:
       - yes
 

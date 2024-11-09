@@ -47,7 +47,42 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.2.0
+    versionCode: 4
+    commit: ec61098c80853279895d863a8c0a61319716e269
+    subdir: keepitupmain
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 5
+    commit: 4fcb8646319fe8e98fb29652887de980ed61363b
+    subdir: keepitupmain
+    gradle:
+      - yes
+
+  - versionName: 1.3.1
+    versionCode: 6
+    commit: 57895931fcbbddf91e72b723b861abc75d01d4bc
+    subdir: keepitupmain
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 7
+    commit: efc2b1d3132437e0f1e9283211b2b54d36a524cf
+    subdir: keepitupmain
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 8
+    commit: 82b9f4154cd49a85b5efba5b2cd40c21fbca4942
+    subdir: keepitupmain
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.1.0
-CurrentVersionCode: 3
+CurrentVersion: 1.5.0
+CurrentVersionCode: 8

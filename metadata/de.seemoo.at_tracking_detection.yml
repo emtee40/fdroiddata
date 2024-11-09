@@ -111,7 +111,55 @@ Builds:
       - yes
     prebuild: sed -i -e '/applicationIdSuffix/d' build.gradle
 
+  - versionName: '2.0'
+    versionCode: 37
+    commit: 68feff6f176c0acd4139d752f9c862071875ff12
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationIdSuffix/d' build.gradle
+
+  - versionName: '2.1'
+    versionCode: 38
+    commit: 351081d8d7c99ae885cd0e66f25e44726eb9aac1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationIdSuffix/d' build.gradle
+
+  - versionName: 2.1.1
+    versionCode: 39
+    commit: cb3fc130b47e55c5c75259ca0408b3751caa8b83
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationIdSuffix/d' build.gradle
+
+  - versionName: '2.3'
+    versionCode: 45
+    commit: 597ee7a4ae8b1a96d7a1a147fa3320f7316cfad5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationIdSuffix/d' build.gradle
+
+  - versionName: 2.3.1
+    versionCode: 46
+    commit: 12dff5a133d79ebc679ab8af9673d9e47f8d6301
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/applicationIdSuffix/d' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.4'
-CurrentVersionCode: 35
+CurrentVersion: 2.3.1
+CurrentVersionCode: 46

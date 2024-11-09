@@ -2,14 +2,11 @@ Categories:
   - Games
 License: GPL-3.0-only
 AuthorName: Přemysl Šťastný
-AuthorEmail: premysl.stastny@hotmail.com
+AuthorEmail: p-w@stty.cz
 SourceCode: https://github.com/stastnypremysl/Mines3D
 IssueTracker: https://github.com/stastnypremysl/Mines3D/issues
 
 AutoName: Mines3D
-Description: |-
-    Do you like challenges? Let's try one harder. The first task is to
-    understand the rules of the game. The second one is to win it.
 
 RepoType: git
 Repo: https://github.com/stastnypremysl/Mines3D.git
@@ -31,7 +28,50 @@ Builds:
       - yes
     ndk: r21d
 
+  - versionName: 1.4.2
+    versionCode: 7
+    commit: 926a1a1a393a5f9b92d35dcb72e1b8e1126b8ba1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.3
+    versionCode: 8
+    commit: d5a103ea39292108110e0ea3d676b5c96abcedd8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.4.4
+    versionCode: 9
+    commit: b8eb83957e94af79163e90e03f5b89f18dd4c406
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 10
+    commit: ee89ccf32c49dd144d948c1fc8ee7d69d449e923
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 11
+    commit: 5522ebbb1c408a2ca62c5192ea758a676ae423b6
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.1
-CurrentVersionCode: 6
+CurrentVersion: 1.5.1
+CurrentVersionCode: 11

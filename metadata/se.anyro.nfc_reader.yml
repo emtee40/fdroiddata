@@ -8,10 +8,10 @@ IssueTracker: https://github.com/nadam/nfc-reader/issues
 
 AutoName: NFC Reader
 Description: |-
-    Simple app for reading and displaying various tags (NDEF, RFID, FeliCa, ISO
-    14443, etc) using NFC (Near Field Communication). The app also supports basic
-    NDEF Push (Android Beam) for people who don’t have any tag to read but happen to
-    have two NFC enabled phones.
+  Simple app for reading and displaying various tags (NDEF, RFID, FeliCa, ISO
+  14443, etc) using NFC (Near Field Communication). The app also supports basic
+  NDEF Push (Android Beam) for people who don't have any tag to read but happen to
+  have two NFC enabled phones.
 
 RepoType: git
 Repo: https://github.com/nadam/nfc-reader.git
@@ -39,7 +39,8 @@ Builds:
     commit: 58c116bb2b9dae930f0983d9078c03b5b82f9cd6
     prebuild: echo -e 'java.source=1.7\njava.target=1.7' > ant.properties
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: '0.15'
 CurrentVersionCode: 15

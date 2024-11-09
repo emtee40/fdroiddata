@@ -1,15 +1,11 @@
 Categories:
   - Writing
 License: GPL-3.0-or-later
-AuthorName: Abhinav Marwaha
-AuthorEmail: abhinavmarwaha@protonmail.com
-AuthorWebSite: https://abhinavmarwaha.com
+AuthorName: Abhinav
+AuthorEmail: abhinav0@skiff.com
 SourceCode: https://github.com/abhinavmarwaha/wrotto-app
 IssueTracker: https://github.com/abhinavmarwaha/wrotto-app/issues
 Changelog: https://github.com/abhinavmarwaha/wrotto-app/releases
-Donate: https://www.buymeacoffee.com/abhinavmarwaha
-Liberapay: abhinavmarwaha
-Bitcoin: 35Tzo8hTsggF2YENmBUc4ZiMjCKNYjgmHH
 
 AutoName: Wrotto
 
@@ -63,9 +59,10 @@ Builds:
       - $$flutter$$/bin/flutter build apk --flavor fdroid
 
 MaintainerNotes: |-
-    Builds will fail when the srclib ref of flutter and the version with which
-    upstream has been built (https://github.com/flutter/flutter/tree/1.22.5) with differ.
+  Builds will fail when the srclib ref of flutter and the version with which
+  upstream has been built (https://github.com/flutter/flutter/tree/1.22.5) with differ.
 
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 UpdateCheckData: version.txt|versionCode=(\d+)|.|versionName=(.*)

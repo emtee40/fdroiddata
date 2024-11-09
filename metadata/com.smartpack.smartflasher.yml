@@ -12,7 +12,7 @@ Donate: https://smartpack.github.io/donation
 
 AutoName: Smart Flasher
 
-RequiresRoot: 'yes'
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/SmartPack/SmartFlasher
@@ -46,7 +46,8 @@ Builds:
     gradle:
       - fdroid
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: v5.4
 CurrentVersionCode: 45

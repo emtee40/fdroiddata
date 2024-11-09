@@ -11,11 +11,11 @@ Changelog: https://github.com/scoutant/blokish/blob/HEAD/README.md#changelog
 
 AutoName: Blokish
 Description: |-
-    A strategy board game.
+  A strategy board game.
 
-    Blokus is a family game involving four players and a board with 20 x 20 squares.
-    Like chess or checkers, it's a game for which at any time you can see your
-    opponent's pieces.
+  Blokus is a family game involving four players and a board with 20 x 20 squares.
+  Like chess or checkers, it's a game for which at any time you can see your
+  opponent's pieces.
 
 RepoType: git
 Repo: https://github.com/scoutant/blokish.git
@@ -40,11 +40,6 @@ Builds:
     versionCode: 9
     commit: ebd1b966b70e
     target: android-10
-
-  - versionName: '1.7'
-    versionCode: 10
-    disable: requires proprietary "heyzap" library
-    commit: unknown - see disabled
 
   - versionName: '1.8'
     versionCode: 11
@@ -106,7 +101,14 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: None
+  - versionName: '3.6'
+    versionCode: 24
+    commit: be858e9a16c1e76ed15fe92daaa3f11201b602ac
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '3.4'
-CurrentVersionCode: 22
+CurrentVersion: '3.6'
+CurrentVersionCode: 24

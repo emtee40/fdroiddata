@@ -58,7 +58,7 @@ Builds:
     gradle:
       - yes
     prebuild: "echo 'task wrapper(type: Wrapper) { gradleVersion = \"2.14.1\" }' >>\
-        \ ../build.gradle"
+      \ ../build.gradle"
 
   - versionName: 2.0.1
     versionCode: 201
@@ -318,7 +318,83 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 3.3.6
+    versionCode: 336
+    commit: 85beecb7495993dcc70c6b6c521ddce1d97d7176
+    subdir: transektcount
+    gradle:
+      - yes
+
+  - versionName: 3.3.8
+    versionCode: 338
+    commit: a28cf4875310eb958613ada33ef4078d32dd51b8
+    subdir: transektcount
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.0
+    versionCode: 340
+    commit: fccd56ed5c5fd2686cface8278e933aa9224a700
+    subdir: transektcount
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.4.2
+    versionCode: 342
+    commit: 39741c87e7988940ccb1c66b3a40343307da9946
+    subdir: transektcount
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.0.1
+    versionCode: 401
+    commit: 8101934d7ea2b55c15a5fc7913aac99526939707
+    subdir: transektcount
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.0.2
+    versionCode: 402
+    commit: e3ec97f8a42391885b684bcd83b6a4b9e6657295
+    subdir: transektcount
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.0.3
+    versionCode: 403
+    commit: 98247ec88090e1fcefba1052aea99773a2db7ce6
+    subdir: transektcount
+    gradle:
+      - yes
+
+  - versionName: 4.1.0
+    versionCode: 410
+    commit: d85230a031e2c8878be44f1079da7a8ac77d86be
+    subdir: transektcount
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.3.5
-CurrentVersionCode: 335
+CurrentVersion: 4.1.0
+CurrentVersionCode: 410

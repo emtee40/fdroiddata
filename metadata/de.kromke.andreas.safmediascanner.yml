@@ -88,10 +88,36 @@ Builds:
     gradle:
       - yes
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.22.1'
+      'cmake;3.22.1'
+    ndk: r25
+
+  - versionName: 1.8.2
+    versionCode: 12
+    commit: dbd75eaf3afb33957ff38d798ef83102ff867137
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
+    ndk: r25
+
+  - versionName: 1.8.4
+    versionCode: 14
+    commit: dedf95a51a9e584a4308dc24615f7fc9f8d49899
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y ninja-build
+    gradle:
+      - yes
+    prebuild: sdkmanager 'cmake;3.22.1'
     ndk: r25
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.8.1
-CurrentVersionCode: 11
+CurrentVersion: 1.8.4
+CurrentVersionCode: 14

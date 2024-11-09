@@ -12,13 +12,13 @@ Donate: https://paypal.me/erickoknl
 Name: Transdroid
 AutoName: ColorPickerPreference
 Description: |-
-    Allows you to manage your torrents. All popular clients are supported: µTorrent,
-    Transmission, rTorrent, Vuze, Deluge, BitTorrent 6, qBittorrent and many more.
-    You can view and manage the running torrents and individual files. Adding is
-    easy via the integrated search, RSS feeds or the barcode scanner. Monitor
-    progress using the home screen widget or background alarm service.
+  Allows you to manage your torrents. All popular clients are supported: µTorrent,
+  Transmission, rTorrent, Vuze, Deluge, BitTorrent 6, qBittorrent and many more.
+  You can view and manage the running torrents and individual files. Adding is
+  easy via the integrated search, RSS feeds or the barcode scanner. Monitor
+  progress using the home screen widget or background alarm service.
 
-    See also https://f-droid.org/packages/org.transdroid.search and https://f-droid.org/packages/org.transdroid.lite.
+  See also https://f-droid.org/packages/org.transdroid.search and https://f-droid.org/packages/org.transdroid.lite.
 
 RepoType: git
 Repo: https://github.com/erickok/transdroid.git
@@ -49,18 +49,6 @@ Builds:
       - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
         res/values/bools.xml
       - mkdir src
-
-  - versionName: 2.2.0
-    versionCode: 215
-    disable: encoding issues in ../lib java files, not using UTF-8
-    commit: v2.2.0
-    subdir: full
-    build:
-      - ant -f ../lib/build.xml
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        ../core/res/values/bools.xml
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        res/values/bools.xml
 
   - versionName: 2.3.0
     versionCode: 217
@@ -94,19 +82,6 @@ Builds:
       - gradle assembleRelease
       - gradle publishToMavenLocal
       - popd
-
-  - versionName: 2.5.4
-    versionCode: 224
-    disable: material-dialogs gone
-    commit: v2.5.4
-    subdir: app
-    gradle:
-      - full
-    prebuild:
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        src/full/res/values/bools.xml
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        src/main/res/values/bools.xml
 
   - versionName: 2.5.5
     versionCode: 225
@@ -172,91 +147,31 @@ Builds:
         src/main/res/values/bools.xml
       - sed -i -e '/android {/alintOptions {\nabortOnError false\n}\n' build.gradle
 
-  - versionName: 2.5.14
-    versionCode: 234
-    commit: v2.5.14
-    gradle:
-      - full
-    output: app/build/outputs/apk/full/release/app-full-release-unsigned.apk
-    prebuild:
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        app/src/*/res/values/bools.xml
-      - sed -i -e '/lintOptions/a\        abortOnError false' app/build.gradle
-
-  - versionName: 2.5.15
-    versionCode: 235
-    commit: v2.5.15
-    gradle:
-      - full
-    output: app/build/outputs/apk/full/release/app-full-release-unsigned.apk
-    prebuild:
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        app/src/*/res/values/bools.xml
-      - sed -i -e '/lintOptions/a\        abortOnError false' app/build.gradle
-
-  - versionName: 2.5.16
-    versionCode: 236
-    commit: v2.5.16
-    gradle:
-      - full
-    output: app/build/outputs/apk/full/release/app-full-release-unsigned.apk
-    prebuild:
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        app/src/*/res/values/bools.xml
-      - sed -i -e '/lintOptions/a\        abortOnError false' app/build.gradle
-
-  - versionName: 2.5.17
-    versionCode: 237
-    commit: v2.5.17
-    gradle:
-      - full
-    output: app/build/outputs/apk/full/release/app-full-release-unsigned.apk
-    prebuild:
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        app/src/*/res/values/bools.xml
-      - sed -i -e '/lintOptions/a\        abortOnError false' app/build.gradle
-
-  - versionName: 2.5.18
-    versionCode: 238
-    commit: v2.5.18
-    gradle:
-      - full
-    output: app/build/outputs/apk/full/release/app-full-release-unsigned.apk
-    prebuild:
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        app/src/*/res/values/bools.xml
-      - sed -i -e '/lintOptions/a\        abortOnError false' app/build.gradle
-
-  - versionName: 2.5.19
-    versionCode: 239
-    commit: v2.5.20-beta3
-    subdir: app
-    gradle:
-      - full
-    prebuild:
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        src/full/res/values/bools.xml
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        src/main/res/values/bools.xml
-
-  - versionName: 2.5.22
-    versionCode: 242
-    disable: https://github.com/erickok/transdroid/issues/616, com.evernote:android-job
-    commit: 98906e8e2467ed5e065f2a7c22610ae2b1fa9caf
+  - versionName: 2.5.23
+    versionCode: 243
+    commit: c03127542c1add8e953ab8d753aff0d0dd0caeb3
     subdir: app
     sudo:
       - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
+      - apt-get install -y openjdk-17-jdk-headless
       - update-alternatives --auto java
     gradle:
       - full
-    prebuild:
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        src/full/res/values/bools.xml
-      - sed -i 's;<bool name="updatecheck_available">true</bool>;<bool name="updatecheck_available">false</bool>;'
-        src/main/res/values/bools.xml
+    prebuild: sed -i -e '/updatecheck_available/s/true/false/' src/*/res/values/bools.xml
 
-AutoUpdateMode: None
+  - versionName: 2.5.24
+    versionCode: 244
+    commit: 77d785c66beaac8943c220bf7ae4224da0472ac7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - full
+    prebuild: sed -i -e '/updatecheck_available/s/true/false/' src/*/res/values/bools.xml
+
+AutoUpdateMode: Version
 UpdateCheckMode: Tags v[\d.]+$
-CurrentVersion: 2.5.22
-CurrentVersionCode: 242
+CurrentVersion: 2.5.24
+CurrentVersionCode: 244

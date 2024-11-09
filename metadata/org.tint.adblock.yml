@@ -6,11 +6,11 @@ IssueTracker: https://github.com/Anasthase/TintBrowserAdblockAddon/issues
 
 AutoName: Tint Browser Adblock Addon
 Description: |-
-    <b>This is an addon for https://f-droid.org/packages/org.tint. It does nothing on its own.</b>
+  <b>This is an addon for https://f-droid.org/packages/org.tint. It does nothing on its own.</b>
 
-    This is an addon based on the now defunct AdSweep script. It works by injecting
-    a piece of Javascript after a page has finished loading. The Javascript then
-    removes ads.
+  This is an addon based on the now defunct AdSweep script. It works by injecting
+  a piece of Javascript after a page has finished loading. The Javascript then
+  removes ads.
 
 RepoType: git
 Repo: https://github.com/Anasthase/TintBrowserAdblockAddon.git
@@ -23,7 +23,8 @@ Builds:
       - TintAddon@1.5
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$TintAddon$$@' project.properties
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: '1.1'
 CurrentVersionCode: 3

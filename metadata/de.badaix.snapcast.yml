@@ -1,6 +1,6 @@
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-or-later
 SourceCode: https://github.com/badaix/snapcast
 IssueTracker: https://github.com/badaix/snapcast/issues
@@ -8,14 +8,14 @@ Changelog: https://github.com/badaix/snapcast/releases
 
 AutoName: Snapcast
 Description: |-
-    Multi-room client-server audio player, where all clients are time synchronized
-    with the server to play perfectly synced audio. It's not a standalone player,
-    but an extension that turns your existing audio player into a Sonos-like
-    multi-room solution. The server's audio input is a named pipe /tmp/snapfifo. All
-    data that is fed into this file will be send to the connected clients. One of
-    the most generic ways to use Snapcast is in conjunction with the music player
-    daemon (MPD) or Mopidy, which can be configured to use a named pipe as audio
-    output.
+  Multi-room client-server audio player, where all clients are time synchronized
+  with the server to play perfectly synced audio. It's not a standalone player,
+  but an extension that turns your existing audio player into a Sonos-like
+  multi-room solution. The server's audio input is a named pipe /tmp/snapfifo. All
+  data that is fed into this file will be send to the connected clients. One of
+  the most generic ways to use Snapcast is in conjunction with the music player
+  daemon (MPD) or Mopidy, which can be configured to use a named pipe as audio
+  output.
 
 RepoType: git
 Repo: https://github.com/badaix/snapdroid
@@ -68,7 +68,7 @@ Builds:
     ndk: r22
 
   - versionName: 0.27.0.0
-    versionCode: 2690
+    versionCode: 2700
     commit: v0.27.0
     subdir: Snapcast
     submodules: true
@@ -98,4 +98,4 @@ Builds:
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 0.27.0.0
-CurrentVersionCode: 2690
+CurrentVersionCode: 2700

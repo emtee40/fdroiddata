@@ -9,11 +9,11 @@ IssueTracker: https://github.com/ligi/FAST/issues
 
 AutoName: FAST App Search Tool
 Description: |-
-    Find your apps without needing to scroll through lists. It can display icons or
-    not and search for package names too if the option is selected. Long-pressing an
-    entry can display options to view the App Details, which is helpful for
-    uninstalling apps, or to view the app on Google Play. Works as a normal app or a
-    launcher.
+  Find your apps without needing to scroll through lists. It can display icons or
+  not and search for package names too if the option is selected. Long-pressing an
+  entry can display options to view the App Details, which is helpful for
+  uninstalling apps, or to view the app on Google Play. Works as a normal app or a
+  launcher.
 
 RepoType: git
 Repo: https://github.com/ligi/FAST.git
@@ -26,11 +26,6 @@ Builds:
       - ActionBarSherlock@6e3f2bb5
     prebuild: echo "android.library.reference.1=$$ActionBarSherlock$$" >> project.properties
     target: android-15
-
-  - versionName: '1.9'
-    versionCode: 19
-    disable: no source code
-    commit: unknown - see disabled
 
   - versionName: '2.9'
     versionCode: 29
@@ -196,7 +191,8 @@ Builds:
       - forFDroid
       - withExtras
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '6.8'
 CurrentVersionCode: 68

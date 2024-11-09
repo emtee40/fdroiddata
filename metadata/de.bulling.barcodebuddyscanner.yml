@@ -10,7 +10,7 @@ Liberapay: MBulling
 AutoName: Barcode Buddy Scanner
 
 RepoType: git
-Repo: https://github.com/Forceu/barcodebuddy-android
+Repo: https://github.com/Forceu/barcodebuddy-android.git
 
 Builds:
   - versionName: 0.3.0
@@ -27,7 +27,25 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.4.0
+    versionCode: 9
+    commit: 454232b37d427aa4933c152378081fd63ce129e5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.4.1
+    versionCode: 10
+    commit: ef36a7b29dd19ce303f1aaf761a880e93f1397d6
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.3.3
-CurrentVersionCode: 8
+CurrentVersion: 0.4.1
+CurrentVersionCode: 10

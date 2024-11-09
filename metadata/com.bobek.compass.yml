@@ -81,7 +81,144 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.10'
+    versionCode: 11
+    commit: 661ca8c69b19a7b552754eda96049c70b2da7496
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.11'
+    versionCode: 12
+    commit: 045a544ee8a87e45ff76d6df97aba9e678f3684a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.1
+    versionCode: 13
+    commit: ebce0fdf6542aa6a80070987aee66f7ef9619c3e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.2
+    versionCode: 14
+    commit: 0d751ea287fef5d461ee472fd5df410a1a812be3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.3
+    versionCode: 15
+    commit: 8ee7d8c145afe04d2059bad09ad806a461f44006
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.11.4
+    versionCode: 16
+    commit: 8774e63002c53a2295a487565b308df061b580cc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.12.0
+    versionCode: 17
+    commit: 246101b00e400073d5e2198eec2ce43281806b7a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.13.0
+    versionCode: 18
+    commit: 4adfdb26b6ed7a3e566f92abc3999e7262761c65
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.13.1
+    versionCode: 19
+    commit: d2135ac354c6f78dd4d97b5f83e94493388c5f55
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.14.0
+    versionCode: 20
+    commit: 0b9f0bbe6137179129c9eba99497289bf54a4c17
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.1
+    versionCode: 21
+    commit: d02a72e709dcd749c14606a01e00f475bc97cde6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.2
+    versionCode: 22
+    commit: e1ddaf3439f0ab2a81c67e75634a1bd62d133b0b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.3
+    versionCode: 23
+    commit: 7bf1736ef2282d1c461d859be3009f9e4ad35fba
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.4
+    versionCode: 24
+    commit: a22c53d558fe9f439ae04dd9232c1e57a7e0f151
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.14.5
+    versionCode: 25
+    commit: 7754d683ed27ea3d6cb2da3c41b020a9d21fba08
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.9'
-CurrentVersionCode: 10
+CurrentVersion: 1.14.5
+CurrentVersionCode: 25

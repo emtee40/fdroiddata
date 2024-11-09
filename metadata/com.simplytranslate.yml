@@ -1,8 +1,9 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App depends on Google Translate.
 Categories:
-  - Science & Education
   - Reading
+  - Science & Education
 License: GPL-3.0-or-later
 AuthorName: ManeraKai
 SourceCode: https://github.com/ManeraKai/simplytranslate-flutter-client
@@ -44,7 +45,7 @@ Builds:
       - $$flutter$$/bin/flutter packages pub get
       - $$flutter$$/bin/flutter build apk --flavor fdroid
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 1.1.0

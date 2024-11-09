@@ -1,6 +1,3 @@
-AntiFeatures:
-  - NonFreeNet
-  - Tracking
 Categories:
   - Internet
 License: GPL-3.0-only
@@ -25,6 +22,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      - NonFreeNet
+      - Tracking
 
   - versionName: 0.4.1
     versionCode: 5
@@ -36,6 +36,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      - NonFreeNet
+      - Tracking
 
   - versionName: '0.5'
     versionCode: 9
@@ -47,6 +50,8 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      - Tracking
 
   - versionName: '0.6'
     versionCode: 12
@@ -54,6 +59,8 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      - Tracking
 
   - versionName: '0.7'
     versionCode: 14
@@ -61,8 +68,42 @@ Builds:
     subdir: app
     gradle:
       - full
+    antifeatures:
+      - Tracking
+
+  - versionName: 0.7.1
+    versionCode: 16
+    commit: cd06bdeeb4acb616f305e1569b7d4ce12e23e35e
+    subdir: app
+    gradle:
+      - full
+    antifeatures:
+      - Tracking
+
+  - versionName: '0.8'
+    versionCode: 21
+    commit: 746f0d1acda08fe2f35dfa2ef2be75b55597aa69
+    subdir: app
+    gradle:
+      - full
+    antifeatures:
+      - Tracking
+
+  - versionName: 0.8.1
+    versionCode: 22
+    commit: 63d4141e182561d7111bdfe3dab04eac0c01251c
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: 0.8.2
+    versionCode: 23
+    commit: 5cfcb102cb30023755db99d03ab321ee02827ce9
+    subdir: app
+    gradle:
+      - full
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '0.7'
-CurrentVersionCode: 14
+CurrentVersion: 0.8.2
+CurrentVersionCode: 23

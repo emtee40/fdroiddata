@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App depends on anime-on-demand.de, which is not libre.
 Categories:
   - Multimedia
 License: GPL-3.0-or-later
@@ -90,7 +91,36 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.1.0-beta1
+    versionCode: 100990
+    commit: a13eb15adf565e10ba0083c53fc5f430ad9d9b8e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.0-beta2
+    versionCode: 100991
+    commit: c89ae54929110bf8ed7469b6d1fd3f11077a500c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.1.0-beta3
+    versionCode: 100992
+    commit: 6515f657d06481ef0fd4222b3ddcd6c1aac64a8a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.0
-CurrentVersionCode: 100000
+CurrentVersion: 1.1.0-beta3
+CurrentVersionCode: 100992

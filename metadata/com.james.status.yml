@@ -11,9 +11,9 @@ Liberapay: fennifith
 
 AutoName: Status
 Description: Status is a status bar replacement that draws an overlay on top of the
-    system-generated status bar. This means that the actual status bar is only hidden
-    under the replacement; touch gestures are not overridden, and the standard notification
-    panel is still shown.
+  system-generated status bar. This means that the actual status bar is only hidden
+  under the replacement; touch gestures are not overridden, and the standard notification
+  panel is still shown.
 
 RepoType: git
 Repo: https://github.com/fennifith/Status
@@ -41,7 +41,8 @@ Builds:
       - oss
     prebuild: sed -i -e '/signingConfigs.release/d' build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 3.8-beta7
 CurrentVersionCode: 43

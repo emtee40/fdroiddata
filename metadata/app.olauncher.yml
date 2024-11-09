@@ -9,26 +9,26 @@ Donate: https://www.buymeacoffee.com/tanujnotes
 
 AutoName: Olauncher
 Description: |-
-    FEATURES
-    * No ads
-    * FOSS forever
-    * Daily new wallpaper
-    * Double tap to lock screen
-    * Clean, fast and lightweight
+  FEATURES
+  * No ads
+  * FOSS forever
+  * Daily new wallpaper
+  * Double tap to lock screen
+  * Clean, fast and lightweight
 
-    HOW TO USE
-    * Swipe up to see all the apps and quick search
-    * Swipe down for notification drawer
-    * Long press home apps to change them
-    * <b>Important</b>: Long press on empty space to open settings
-    Once you open the settings, you'll see all the available options.
-    So basically, swipe and long press anywhere and you'll be fine.
+  HOW TO USE
+  * Swipe up to see all the apps and quick search
+  * Swipe down for notification drawer
+  * Long press home apps to change them
+  * <b>Important</b>: Long press on empty space to open settings
+  Once you open the settings, you'll see all the available options.
+  So basically, swipe and long press anywhere and you'll be fine.
 
-    I'm available at Twitter if you need for anything. Thank you.
-    https://twitter.com/tanujnotes/
+  I'm available at Twitter if you need for anything. Thank you.
+  https://twitter.com/tanujnotes/
 
 RepoType: git
-Repo: https://github.com/tanujnotes/Olauncher
+Repo: https://github.com/tanujnotes/Olauncher.git
 
 Builds:
   - versionName: v1.1
@@ -234,7 +234,191 @@ Builds:
     gradle:
       - yes
 
+  - versionName: v3.6.8
+    versionCode: 55
+    commit: b383d50927d435a03b968f2bb687495a701437e0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v3.7.0
+    versionCode: 56
+    commit: 9c5f2ca38cc4d9d6982c5a536ebdf5fad87785a7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v4.0.0
+    versionCode: 58
+    commit: b3d26f0e654a66f8a43005f8b14ee1ab705f8c99
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v4.0.3
+    versionCode: 61
+    commit: 3e90e2050383860fadf95dbbe3b84113aaeb3fbc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v4.0.4
+    versionCode: 62
+    commit: b7cacf4d6ac65485852250c4fd1e88f3bc0e99f5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v4.0.5
+    versionCode: 63
+    commit: 0a7afc172b373d658a993cecf19e075c34602bfa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v4.0.6
+    versionCode: 64
+    commit: e95b6eb1ca14e0771af6a18a281522e1ac4dcdcd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v4.0.8
+    versionCode: 66
+    commit: 52563b04a4e47151ba2822aaebfc15f95251c983
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.0.9
+    versionCode: 67
+    commit: f179b9e9f42ff4ac2d61ba0dfd866f5bac2698c9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.1.0
+    versionCode: 68
+    commit: 3ac9ed1680d5225d83a33b7cf50a2c1570068e68
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.1.1
+    versionCode: 69
+    commit: 5b39ab7848bc735ba0f0f1f4e4008c10e6a226b4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.1.2
+    versionCode: 70
+    commit: 5352087437be84da5ea9a8e2731cb755854f256f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.1.3
+    versionCode: 71
+    commit: 6eee34d265f5b6ea10483883792e7c5b1219f904
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.1.4
+    versionCode: 72
+    commit: 6344e4e2dedee93e630543996ba4b58bb02db3d1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.1.5
+    versionCode: 73
+    commit: 47de3897a6093a32c97d854bca68ff80bf75eaed
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.1.7
+    versionCode: 75
+    commit: c5c55a5e303f8e02c305b5c630be855df138b48c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.2.0
+    versionCode: 76
+    commit: 5bdd4803ed1519adecb7d067b3fc29e2a9dcfa63
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.2.2
+    versionCode: 78
+    commit: 1738a519d56076951b0efd6fa72b93972e8a42c5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: v4.3.3
+    versionCode: 85
+    commit: f5f9d9731dd5db2655eb26f776ad040c99515066
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v4.3.4
+    versionCode: 86
+    commit: a6990ab359b13613c7344185a266f3377d4fe5d1
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v3.6.6
-CurrentVersionCode: 54
+CurrentVersion: v4.3.4
+CurrentVersionCode: 86

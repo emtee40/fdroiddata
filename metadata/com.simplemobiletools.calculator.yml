@@ -14,7 +14,7 @@ Litecoin: LYACbHTKaM9ZubKQGxJ4NRyVy1gHUuztRP
 AutoName: Calculator
 
 RepoType: git
-Repo: https://github.com/SimpleMobileTools/Simple-Calculator
+Repo: https://github.com/SimpleMobileTools/Simple-Calculator.git
 
 Builds:
   - versionName: '1.6'
@@ -357,7 +357,36 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 5.11.1
-CurrentVersionCode: 58
+  - versionName: 5.11.2
+    versionCode: 59
+    commit: 402da52eae47d478395a2f004c92eb8eb9b17668
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.11.3
+    versionCode: 60
+    commit: 42e4af0e752f45c38f70d183b1b52c039a605ad1
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.12.0
+    versionCode: 61
+    commit: 7ab1a8da5f56056883a5b5d4c4dfc38ec843de06
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 5.12.0
+CurrentVersionCode: 61

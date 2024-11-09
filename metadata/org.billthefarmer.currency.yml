@@ -1,10 +1,12 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App downloads the data from www.ecb.europa.eu.
 Categories:
   - Money
 License: GPL-3.0-only
 AuthorName: Bill Farmer
 AuthorWebSite: https://billthefarmer.github.io/
+WebSite: https://billthefarmer.github.io/currency
 SourceCode: https://github.com/billthefarmer/currency
 IssueTracker: https://github.com/billthefarmer/currency/issues
 Changelog: https://github.com/billthefarmer/currency/releases
@@ -12,7 +14,7 @@ Changelog: https://github.com/billthefarmer/currency/releases
 AutoName: Currency
 
 RepoType: git
-Repo: https://github.com/billthefarmer/currency
+Repo: https://github.com/billthefarmer/currency.git
 
 Builds:
   - versionName: '1.0'
@@ -351,7 +353,57 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.49'
+    versionCode: 149
+    commit: eb064739cd75f379b185886549d3d9bcb34fb4d6
+    gradle:
+      - yes
+
+  - versionName: '1.50'
+    versionCode: 150
+    commit: 4e911ae915667ca3e55de50a3aa7603c8df70402
+    gradle:
+      - yes
+
+  - versionName: '1.51'
+    versionCode: 151
+    commit: 961365f42524ca8f59be964bcb205ae2e3e781c6
+    gradle:
+      - yes
+
+  - versionName: '1.52'
+    versionCode: 152
+    commit: 9d9085c1cd5c9a5355a938c71041ce483581cfff
+    gradle:
+      - yes
+
+  - versionName: '1.53'
+    versionCode: 153
+    commit: 6d7afd0b602f42823f0f95b817ba8c69a7996627
+    gradle:
+      - yes
+
+  - versionName: '1.54'
+    versionCode: 154
+    commit: 2df5db81560d5589629a092363ba820ddb4203a2
+    gradle:
+      - yes
+
+  - versionName: '1.55'
+    versionCode: 155
+    commit: 0113322cff83db76fee86bdb810842b40305fce1
+    gradle:
+      - yes
+
+  - versionName: '1.56'
+    versionCode: 156
+    commit: 5859f83c81363c99bef6f31c7e483cd519ec5e71
+    gradle:
+      - yes
+
+MaintainerNotes: AF see https://gitlab.com/fdroid/fdroiddata/-/issues/2639
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.48'
-CurrentVersionCode: 148
+CurrentVersion: '1.56'
+CurrentVersionCode: 156

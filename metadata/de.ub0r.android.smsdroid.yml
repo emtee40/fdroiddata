@@ -10,12 +10,12 @@ Changelog: https://github.com/felixb/smsdroid/blob/HEAD/CHANGELOG.md
 AutoName: SMSdroid
 Summary: Send and receive SMS messages
 Description: |-
-    SMSdroid lets you read text messages and send messages with any other messaging
-    app. If you love https://f-droid.org/packages/de.ub0r.android.websms to send free messages, you'll
-    probably love SMSdroid too.
+  SMSdroid lets you read text messages and send messages with any other messaging
+  app. If you love https://f-droid.org/packages/de.ub0r.android.websms to send free messages, you'll
+  probably love SMSdroid too.
 
-    The proprietary 'admob' binary in the source code has been replaced with a FOSS
-    library that does nothing.
+  The proprietary 'admob' binary in the source code has been replaced with a FOSS
+  library that does nothing.
 
 RepoType: git
 Repo: https://github.com/felixb/smsdroid.git
@@ -106,7 +106,7 @@ Builds:
       - echo -e "buildscript {\n\nrepositories {\n\nmavenCentral()\n\nmavenLocal()\n\njcenter()\n\\n}\n\ndependencies
         {\n\nclasspath 'com.android.tools.build:gradle:1.5.0'\n\n}\n\n}\n\n" > ../build.gradle
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 1.7.0

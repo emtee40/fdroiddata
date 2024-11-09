@@ -38,11 +38,12 @@ Builds:
     target: android-22
 
 MaintainerNotes: |-
-    Needs a better description!
+  Needs a better description!
 
-    No tags.
+  No tags.
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: '1.1'
 CurrentVersionCode: 23

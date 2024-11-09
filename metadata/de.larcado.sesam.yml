@@ -8,7 +8,7 @@ Changelog: https://gitlab.com/larcado/sesam/blob/HEAD/CHANGELOG
 
 AutoName: sesam
 Description: A password manager app that does not store the passwords but only generates
-    them based on a salted hash function (PBKDF2WithHmacSHA1).
+  them based on a salted hash function (PBKDF2WithHmacSHA1).
 
 RepoType: git
 Repo: https://gitlab.com/larcado/sesam.git
@@ -28,7 +28,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.1.0
 CurrentVersionCode: 2

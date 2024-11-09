@@ -1,9 +1,11 @@
 Categories:
+  - Internet
   - Writing
 License: GPL-3.0-only
 AuthorEmail: peter@niendo.de
 SourceCode: https://github.com/niendo1/ImapNotes3
 IssueTracker: https://github.com/niendo1/ImapNotes3/issues
+Changelog: https://github.com/niendo1/ImapNotes3/releases
 
 AutoName: ImapNotes3
 
@@ -44,7 +46,113 @@ Builds:
       - yes
     prebuild: sed -i -e '/lint {/,+2d' build.gradle
 
+  - versionName: v1.1-01
+    versionCode: 10101
+    commit: 6d2fcab3d8e0d12dd696c256bc9b2498c06c7bc6
+    subdir: ImapNotes3
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: v1.2-01
+    versionCode: 10201
+    commit: c3e2cd8909a9511b3e9f1527dbdc1435c64b6788
+    subdir: ImapNotes3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v1.2-02
+    versionCode: 10202
+    commit: 52ce470cae364c3cf1463dbb1617a0a19ede9840
+    subdir: ImapNotes3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v1.3-00
+    versionCode: 10300
+    commit: 7e6575d45621ccc95c6b5a8503c3b4363e50d0f5
+    subdir: ImapNotes3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v1.3-01
+    versionCode: 10301
+    commit: 8ef01a6bbf369cb8801999f040e93c88ec5888fb
+    subdir: ImapNotes3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v1.3-03
+    versionCode: 10303
+    commit: f74721763f5fc99335a3062da4551071149ba8a7
+    subdir: ImapNotes3
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v1.3-04
+    versionCode: 10304
+    commit: 7113e47b411b0f78c7d3eb22b5f535d6da8ca42c
+    subdir: ImapNotes3
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v1.3-05
+    versionCode: 10305
+    commit: d9b11a66145f6c5d09194329d12223ddfabd64e7
+    subdir: ImapNotes3
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: v1.3-06
+    versionCode: 10306
+    commit: eb5cc8e7f342d1710b3d645e677a8ff7f7be34f5
+    subdir: ImapNotes3
+    gradle:
+      - yes
+
+  - versionName: v1.3-07
+    versionCode: 10307
+    commit: f46ed77062a4fbe980322d686b0db096e27af26f
+    subdir: ImapNotes3
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: efad1559e516914bc855fc6950fe2ab7ee2620a60d36977818dc9da152123461
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v1.0-18
-CurrentVersionCode: 10018
+CurrentVersion: v1.3-07
+CurrentVersionCode: 10307

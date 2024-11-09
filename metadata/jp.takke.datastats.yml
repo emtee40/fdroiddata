@@ -11,7 +11,7 @@ AutoName: DataStats
 Description: Simple bandwidth consumption viewer with configurable polling options.
 
 RepoType: git
-Repo: https://github.com/takke/DataStats
+Repo: https://github.com/takke/DataStats.git
 
 Builds:
   - versionName: 1.2.1
@@ -105,8 +105,33 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.8.3
+    versionCode: 30
+    commit: 3115d67ba6cac01111b30a867e87793fa87b90bc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.8.4
+    versionCode: 31
+    commit: fe1a6c94897fb850e1108057173ae9bfc2c4bd59
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.8.5
+    versionCode: 32
+    commit: 2e44e52790335fa3ed27f411505eefc0c91add76
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: build.gradle|versionCode = (\d+)|.|versionName = "([\d.]+)"
-CurrentVersion: 2.8.2
-CurrentVersionCode: 29
+CurrentVersion: 2.8.5
+CurrentVersionCode: 32

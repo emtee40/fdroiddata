@@ -154,24 +154,6 @@ Builds:
       - FD-GH
     output: build/outputs/apk/FD-GH/release/app-FD-GH-release-unsigned.apk
 
-  - versionName: '2.2'
-    versionCode: 126
-    disable: non foss play core see upstream issue 139
-    commit: '2.2'
-    subdir: app
-    gradle:
-      - FD-GH
-    output: build/outputs/apk/FD-GH/release/app-FD-GH-release-unsigned.apk
-
-  - versionName: 2.2.1
-    versionCode: 128
-    disable: non foss play core see upstream issue 139
-    commit: 2.2.1
-    subdir: app
-    gradle:
-      - FD-GH
-    output: build/outputs/apk/FD-GH/release/app-FD-GH-release-unsigned.apk
-
   - versionName: 2.2.2
     versionCode: 131
     commit: 2.2.2-131
@@ -324,7 +306,15 @@ Builds:
       - FDGH
     output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
 
+  - versionName: 2.5.1
+    versionCode: 183
+    commit: f21ce9b8a86e095a8e2400ad6b0fe3713014cdc8
+    subdir: app
+    gradle:
+      - FDGH
+    output: build/outputs/apk/FDGH/release/app-FDGH-release-unsigned.apk
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.5.0.1
-CurrentVersionCode: 182
+CurrentVersion: 2.5.1
+CurrentVersionCode: 183

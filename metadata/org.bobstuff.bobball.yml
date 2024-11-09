@@ -6,13 +6,13 @@ IssueTracker: https://github.com/bobthekingofegypt/BobBall/issues
 
 AutoName: BobBall
 Description: |-
-    BobBall is a simple version of the old game Jezzball.
+  BobBall is a simple version of the old game Jezzball.
 
-    Features:
+  Features:
 
-    * Easy to play, hard to master
-    * Infinite levels
-    * Top scores table
+  * Easy to play, hard to master
+  * Infinite levels
+  * Top scores table
 
 RepoType: git
 Repo: https://github.com/bobthekingofegypt/BobBall.git
@@ -21,21 +21,6 @@ Builds:
   - versionName: '1.0'
     versionCode: 1
     commit: v1.0
-
-  - versionName: 1.3.1
-    versionCode: 5
-    disable: resource issues
-    commit: v1.3.1
-
-  - versionName: '1.4'
-    versionCode: 6
-    disable: resource issues
-    commit: v1.4
-
-  - versionName: '1.5'
-    versionCode: 7
-    disable: resource issues
-    commit: v1.5
 
   - versionName: 1.5.1
     versionCode: 8
@@ -134,7 +119,14 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: None
-UpdateCheckMode: None
-CurrentVersion: '1.15'
-CurrentVersionCode: 24
+  - versionName: '1.17'
+    versionCode: 26
+    commit: 9b67d0e6840ea979eade7f215d467bc4b3a832b4
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.17'
+CurrentVersionCode: 26

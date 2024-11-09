@@ -116,14 +116,6 @@ Builds:
       - cd ../../
       - rm -rf protobuf-2.4.1*
 
-  - versionName: 3.0a6
-    versionCode: 32
-    disable: Skip alpha
-
-  - versionName: 3.0a7
-    versionCode: 33
-    disable: Skip alpha
-
   - versionName: 3.0b1
     versionCode: 34
     commit: 3.0b1
@@ -982,11 +974,7 @@ Builds:
     scanignore:
       - app/src/main/res/raw/truststore
 
-MaintainerNotes: |-
-    Summary and Description have been moved to the new localizable text files:
-    https://f-droid.org/docs/All_About_Descriptions_Graphics_and_Screenshots
-
-ArchivePolicy: 10 versions
+ArchivePolicy: 10
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]+$
 CurrentVersion: 4.4.0

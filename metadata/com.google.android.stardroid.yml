@@ -135,7 +135,29 @@ Builds:
       - sed -i -e '/gms/d' ../build.gradle
       - sed -i -e '/com.google.gms.google-services/d' build.gradle
 
+  - versionName: 1.10.3 - RC0
+    versionCode: 1548
+    commit: 731b200e6eebc759e8cc75ec83c301756524fc7f
+    subdir: app
+    gradle:
+      - Fdroid
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/com.google.gms.google-services/d' build.gradle
+
+  - versionName: 1.10.4 - RC1
+    versionCode: 1550
+    commit: 4161ed801f34ec2b6788f9a4720ec107daeeec7f
+    subdir: app
+    gradle:
+      - Fdroid
+    prebuild:
+      - sed -i -e '/gms/d' ../build.gradle
+      - sed -i -e '/com.google.gms.google-services/d' build.gradle
+
+MaintainerNotes: FirebaseAnalytics is a stub
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.10.1 - RC1
-CurrentVersionCode: 1541
+CurrentVersion: 1.10.4 - RC1
+CurrentVersionCode: 1550

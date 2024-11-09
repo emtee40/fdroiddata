@@ -5,39 +5,308 @@ WebSite: http://android.moneymanagerex.org/
 SourceCode: https://github.com/moneymanagerex/android-money-manager-ex
 IssueTracker: https://github.com/moneymanagerex/android-money-manager-ex/issues
 Changelog: https://github.com/moneymanagerex/android-money-manager-ex/milestones?state=closed
-Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5U7RXC25C9UES&source=url
 
 AutoName: Money Manager Ex
-Description: |-
-    A simple and easy-to-use application to manage personal finances, bank accounts,
-    family budget, and so on. It's main goal is to add a mobile implementation for
-    an application we love to use on our Desktop machines.
-
-    Features:
-
-    * Management of single transactions
-    * Account, payee, category, currency management
-    * Storage card Import/Export
-    * Dropbox synchronization
-    * Security, application lock/unlock
-    * Repeating transactions
-    * Charts
-    * Supported languages: English, Italian, Portuguese, Spanish and Russian
 
 RepoType: git
-Repo: https://github.com/moneymanagerex/android-money-manager-ex
+Repo: https://github.com/moneymanagerex/android-money-manager-ex.git
 
 Builds:
-  - versionName: 2019.04.10.1000-beta
-    versionCode: 1000
-    disable: https://github.com/moneymanagerex/android-money-manager-ex/issues/1425,
-        com.evernote:android-job
-    commit: 2019.04.10.1000-beta
+  - versionName: 2024.01.13
+    versionCode: 1013
+    commit: 2024.01.13.1013
     subdir: app
     gradle:
       - yes
 
-AutoUpdateMode: None
+  - versionName: 2024.01.23
+    versionCode: 1016
+    commit: 3476b9aa9288a89fd42dd46e1ab0b9e2b2fbd29c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.02.02
+    versionCode: 1017
+    commit: 99a335f4f6000d09729ce85a8093a014004e4735
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.02.08
+    versionCode: 1018
+    commit: 6c0b78e7a30cc3b283f262831152b31167a32f5b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.02.15
+    versionCode: 1019
+    commit: f3d38c0ed20742d4b44e8e6a71a2c2dc31b92c75
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.02.26
+    versionCode: 1020
+    commit: 2243c5fa0118ca91b7e564a886b755e77657ddbd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.03.07
+    versionCode: 1021
+    commit: 7f0436ca52aa7b2d8af15a807249dad5e327fd7f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2024.03.19
+    versionCode: 1023
+    commit: 1f12e98ebab241687ae8f6f98a6ee9c96a00a4c9
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.03.24
+    versionCode: 1024
+    commit: f75152f18d7430e2a287525e4b960c75487094c2
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.03.26
+    versionCode: 1025
+    commit: ebc8c5654c877012d7d0e9c5226cf9f42f2e6da4
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.01
+    versionCode: 1026
+    commit: 19481714d11bf5aba622161181717ec02ff3ce9a
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.15
+    versionCode: 1027
+    commit: c5c86daaa2bae57b45b25f5705ebab97f3a440d6
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.16
+    versionCode: 1028
+    commit: c1bbbef9b1e6dd770adc20efdec71a23b05bec1b
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.21
+    versionCode: 1029
+    commit: 4315d721b64307cc164c132a49cb9b2723867cd6
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.04.29
+    versionCode: 1030
+    commit: 3c98b92d34d9fe69ad7fce2300f600fbac2c4295
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.05.02
+    versionCode: 1031
+    commit: b36d937ce67740fbc36165d845112fee34f646e3
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.05.09
+    versionCode: 1032
+    commit: f551406664bc992edecde10d6efec106c2cea120
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.06.14
+    versionCode: 1033
+    commit: f6e8d005340b7f462e441e97f195f4e3c5ab99ce
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.06.25
+    versionCode: 1034
+    commit: 336db174cf9f4dc265141abb432b3d43cc966311
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.07.04
+    versionCode: 1035
+    commit: 0f412c9441326751622926ea4a3ba69e4cebbb50
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.08.01
+    versionCode: 1036
+    commit: f1e1e38c93efc6b93268ef766b6cc2fba4cfd069
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - yes
+
+  - versionName: 2024.08.13
+    versionCode: 1037
+    commit: 5733fd0db61e941214fb18d8589abce7a863c803
+    subdir: app
+    gradle:
+      - yes
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.08.25
+    versionCode: 1038
+    commit: bf3ff6d0d411b3a323a79c81612f64294fb523e5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.09.11
+    versionCode: 1039
+    commit: 0f9ca0a14a89e09f7bf02c39dfae6c441cbfa30f
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - scripts
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.09.18
+    versionCode: 1040
+    commit: 7565ebeb20114c9ced9f84af20d7c584314b749e
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - scripts
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.09.21
+    versionCode: 1041
+    commit: b20078373d96df1cda62861451b8a42312e7dd88
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - scripts
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.10.19
+    versionCode: 1042
+    commit: efe28c5f76965171a42d58db2cd98e826bf863ac
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - scripts
+    prebuild: for class in tree code comp file main model parser processing util jvm;
+      do sed -i -e "/jvmargs/s|$| --add-opens=jdk.compiler/com.sun.tools.javac.${class}=ALL-UNNAMED|"
+      ../gradle.properties; done
+
+  - versionName: 2024.11.01
+    versionCode: 1043
+    commit: 11e34ce126c9812e90593f09e92ecf8eca01b30d
+    subdir: app
+    gradle:
+      - fdroid
+    rm:
+      - scripts
+
+AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9.]*$
-CurrentVersion: 2019.02.24.1
-CurrentVersionCode: 996
+CurrentVersion: 2024.11.01
+CurrentVersionCode: 1043

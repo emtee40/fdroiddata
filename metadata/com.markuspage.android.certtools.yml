@@ -6,8 +6,8 @@ IssueTracker: https://github.com/netmackan/CertTools/issues
 
 AutoName: CertTools
 Description: |-
-    Certificate (X.509) viewer that reads from PEM files and displays the X509
-    certificate. Use a file manager to open a PEM file.
+  Certificate (X.509) viewer that reads from PEM files and displays the X509
+  certificate. Use a file manager to open a PEM file.
 
 RepoType: git
 Repo: https://github.com/netmackan/CertTools.git
@@ -17,6 +17,8 @@ Builds:
   - versionName: 0.0.6
     versionCode: 6
     commit: v0.0.6
+
+AllowedAPKSigningKeys: 67120e34681a4f2f32eba3d6e6caedc7fcfd42ff598e0e53e2d0f3d9ce6221d2
 
 AutoUpdateMode: None
 UpdateCheckMode: Tags

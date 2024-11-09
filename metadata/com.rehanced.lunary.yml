@@ -1,32 +1,34 @@
 AntiFeatures:
   - NonFreeNet
 Categories:
-  - Money
   - Internet
+  - Money
 License: GPL-3.0-only
 SourceCode: https://github.com/manuelsc/Lunary-Ethereum-Wallet
 IssueTracker: https://github.com/manuelsc/Lunary-Ethereum-Wallet/issues
 
 AutoName: Lunary
 Description: |-
-    A beautiful designed, easy to use and secure Ethereum Wallet for your phone.
+  <b>NOTE:</b> App has been discontinued
 
-    Features:
+  A beautiful designed, easy to use and secure Ethereum Wallet for your phone.
 
-    * Mutli wallet support
-    * Support for watch only wallets
-    * Send / Request payments
-    * Notification on incoming transactions
-    * Combined transaction history
-    * Addressbook and address naming
-    * Importing / Exporting wallets
-    * Display amounts in ETH, USD or BTC
-    * No registration or sign up required
-    * Price history charts
-    * Support for 8 Currencies: USD, EUR, GBP, CHF, AUD, CAD, JPY, RUB
+  Features:
+
+  * Mutli wallet support
+  * Support for watch only wallets
+  * Send / Request payments
+  * Notification on incoming transactions
+  * Combined transaction history
+  * Addressbook and address naming
+  * Importing / Exporting wallets
+  * Display amounts in ETH, USD or BTC
+  * No registration or sign up required
+  * Price history charts
+  * Support for 8 Currencies: USD, EUR, GBP, CHF, AUD, CAD, JPY, RUB
 
 RepoType: git
-Repo: https://github.com/manuelsc/Lunary-Ethereum-Wallet
+Repo: https://github.com/manuelsc/Lunary-Ethereum-Wallet.git
 
 Builds:
   - versionName: '1.18'
@@ -181,7 +183,7 @@ Builds:
 
 MaintainerNotes: Bump that this gets build sooner.
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '1.39'

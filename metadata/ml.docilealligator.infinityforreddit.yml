@@ -1,9 +1,10 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on Reddit.
 Categories:
   - Internet
-  - Reading
   - Multimedia
+  - Reading
 License: AGPL-3.0-only
 WebSite: https://www.reddit.com/r/Infinity_For_Reddit/
 SourceCode: https://github.com/Docile-Alligator/Infinity-For-Reddit
@@ -12,6 +13,35 @@ Translation: https://poeditor.com/join/project?hash=b2IRyfaJv6
 Changelog: https://github.com/Docile-Alligator/Infinity-For-Reddit/releases
 
 AutoName: Infinity
+Description: |-
+  <b>NOTE:</b> The app can no longer login as API keys are not included
+
+  Infinity is a beautiful, feature-rich app that offers a smooth Reddit browsing experience. It is completely free and ad-less; you can browse Reddit without interruptions or distractions. Built by a passionate university student, Infinity is open source. Please check out, support or contribute to the project at https://github.com/Docile-Alligator/Infinity-For-Reddit!
+
+  A subreddit for this app is available: https://www.reddit.com/r/Infinity_For_Reddit
+
+  Highlighted features:
+  * Lazy mode: Automatic scrolling of posts enables you to enjoy amazing posts without moving your thumb.
+  * Automatic scrolling of posts enables you to enjoy amazing content without moving your thumb.
+  * Multi-account support
+  * Switch to different accounts instantaneously.
+  * Night theme
+  * Beautifully designed night theme
+
+  Features:
+  * Browsing posts
+  * View comments
+  * Expand and collapse comments section
+  * Vote posts and comments
+  * Save posts
+  * Write comments
+  * Edit comments and delete comments
+  * Submit posts (text, link, image and video)
+  * Edit posts (mark and unmark NSFW and spoiler and edit flair) and delete posts
+  * See all the subscribed subreddits and followed users
+  * View the messages
+  * Get notifications of unread messages
+  * And much more!
 
 RepoType: git
 Repo: https://github.com/Docile-Alligator/Infinity-For-Reddit.git
@@ -340,7 +370,102 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags ^v[0-9.]+$
-CurrentVersion: 5.4.0
-CurrentVersionCode: 114
+  - versionName: 5.4.1
+    versionCode: 115
+    commit: 69d2cd8994d8d61ccd4dca6a680e5e5e4737cebc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.4.2
+    versionCode: 117
+    commit: e8c9915a6ffde5ad79f145c8c4c99ee0023534e4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 6.0.1
+    versionCode: 120
+    commit: d38651472510b4d46994f87527c22d05f47acc9e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 6.0.2
+    versionCode: 121
+    commit: 0d8c5ed4c38dec7f55c9a204fd950fe86018f4fc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 6.0.4
+    versionCode: 123
+    commit: 054d5985b1faa3217a648b7dfd1b003afbc0aed6
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/Modules/customtextview-2.1.aar
+    prebuild: sed -i -e 's!files("Modules/customtextview-2.1.aar")!"com.libRG:customtextview:2.4"!'
+      build.gradle
+
+  - versionName: 6.1.1
+    versionCode: 127
+    commit: 02278263579d76f88eef9c643bd7ace412f99985
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/Modules/customtextview-2.1.aar
+    prebuild: sed -i -e 's!files("Modules/customtextview-2.1.aar")!"com.libRG:customtextview:2.4"!'
+      build.gradle
+
+  - versionName: 6.2.3
+    versionCode: 131
+    commit: 571e9995057700482c140ac7480f7249cb948bc5
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/Modules/customtextview-2.1.aar
+    prebuild: sed -i -e 's!files("Modules/customtextview-2.1.aar")!"com.libRG:customtextview:2.4"!'
+      build.gradle
+
+  - versionName: 6.2.5
+    versionCode: 133
+    commit: 40d12c3a425914b3f152021eceae914fa4c33586
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/Modules/customtextview-2.1.aar
+    prebuild: sed -i -e 's!files("Modules/customtextview-2.1.aar")!"com.libRG:customtextview:2.4"!'
+      build.gradle
+
+  - versionName: 6.3.0
+    versionCode: 136
+    commit: 8723c8ebb0738c48f3417dd52a2f59288316ada0
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/Modules/customtextview-2.1.aar
+    prebuild: sed -i -e 's!files("Modules/customtextview-2.1.aar")!"com.libRG:customtextview:2.4"!'
+      build.gradle
+
+  - versionName: 6.3.1
+    versionCode: 137
+    commit: 542c1e3c0c7a0a1ebf162d18ea6277d27f596d6c
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - app/Modules/customtextview-2.1.aar
+    prebuild: sed -i -e 's!files("Modules/customtextview-2.1.aar")!"com.libRG:customtextview:2.4"!'
+      build.gradle
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 6.3.1
+CurrentVersionCode: 137

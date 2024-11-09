@@ -5,6 +5,7 @@ AuthorName: Peter Serwylo
 AuthorWebSite: https://peter.serwylo.com
 SourceCode: https://github.com/babydots/babyphone
 IssueTracker: https://github.com/babydots/babyphone/issues
+Translation: https://hosted.weblate.org/engage/babyphone/
 Changelog: https://github.com/babydots/babyphone/releases
 
 AutoName: Baby Phone
@@ -77,7 +78,56 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.1.0
+    versionCode: 12
+    commit: 881b379b1e31a564dd4c980f8822a08e7e2430ce
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 13
+    commit: b8a2b25990eda97880d7323877f417d65d106128
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 14
+    commit: b1b52f14c041a20ffc4d72a46fa79394599888f1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.3
+    versionCode: 15
+    commit: 69ad246852c237ec0f71cd738fa7bb8c86122510
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 16
+    commit: c4d61ef0fb3c41d9c98acb33a2923e758854bc5e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.1
+    versionCode: 17
+    commit: 13e2a09409d28f4caf567f4a5078c36db2fa7fea
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 18
+    commit: 689c6257df21ea16100f662455e074c64bf55c3d
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.1
-CurrentVersionCode: 10
+CurrentVersion: 1.3.0
+CurrentVersionCode: 18

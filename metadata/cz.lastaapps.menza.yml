@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App depends on the school’s website, which is proprietary.
 Categories:
   - Science & Education
 License: GPL-3.0-only
@@ -12,7 +13,7 @@ Changelog: https://github.com/Lastaapps/menza/releases
 AutoName: Menza
 
 RepoType: git
-Repo: https://github.com/Lastaapps/menza
+Repo: https://github.com/Lastaapps/menza.git
 
 Builds:
   - versionName: 1.2.0
@@ -65,7 +66,109 @@ Builds:
     scandelete:
       - gradle/plugins/convention/build
 
+  - versionName: 1.2.5
+    versionCode: 1020500
+    commit: 0f4cb4ab503fab16fba305acc4bd39decd6853f1
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - gradle/plugins/convention/build
+
+  - versionName: 1.2.6
+    versionCode: 1020600
+    commit: 14b53623848929fb8d5aea5755ffbc3f7d26e0bd
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - gradle/plugins/convention/build
+
+  - versionName: 1.2.7
+    versionCode: 1020700
+    commit: a5d5f43cab494113a04d56554de6234c7142bae5
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - gradle/plugins/convention/build
+
+  - versionName: 1.3.2
+    versionCode: 1030200
+    commit: 7c5f1dc6ea8a2957ab156e2ef569535feeddd18a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scanignore:
+      - theme-sources/material-theme-*.zip
+    scandelete:
+      - gradle/plugins/convention/build
+
+  - versionName: 1.3.4
+    versionCode: 1030400
+    commit: eb27a54d91e0c49c708a6410bb5ea510b63cd7f4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scanignore:
+      - theme-sources/material-theme-*.zip
+    scandelete:
+      - gradle/plugins/convention/build
+
+  - versionName: 1.3.5
+    versionCode: 1030500
+    commit: 48e07a46bedd541b7eac7279268947ae6831a45a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scanignore:
+      - theme-sources/material-theme-*.zip
+    scandelete:
+      - gradle/plugins/convention/build
+
+  - versionName: 1.3.6
+    versionCode: 1030600
+    commit: 2a2042369af8d7451f516f8851325f13bc159f50
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scanignore:
+      - theme-sources/material-theme-*.zip
+    scandelete:
+      - gradle/plugins/convention/build
+
+  - versionName: 1.3.7
+    versionCode: 1030700
+    commit: ca0e9d7f757cb9756be4fe586a76ac6e252c56e0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scanignore:
+      - theme-sources/material-theme-*.zip
+    scandelete:
+      - gradle/plugins/convention/build
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.2.4
-CurrentVersionCode: 1020400
+CurrentVersion: 1.3.7
+CurrentVersionCode: 1030700

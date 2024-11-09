@@ -12,14 +12,14 @@ Changelog: https://github.com/codinguser/gnucash-android/blob/HEAD/CHANGELOG.md
 AutoName: GnuCash
 Summary: Money management
 Description: |-
-    A companion application for the desktop app GnuCash. It allows you to record
-    transactions on-the-go and export them in the OFX format and later import the
-    data into GnuCash for the desktop. You can create multiple accounts for
-    transactions in GnuCash. You can’t open your GnuCash (for desktop) XML files,
-    however.
+  A companion application for the desktop app GnuCash. It allows you to record
+  transactions on-the-go and export them in the OFX format and later import the
+  data into GnuCash for the desktop. You can create multiple accounts for
+  transactions in GnuCash. You can't open your GnuCash (for desktop) XML files,
+  however.
 
-    Upstream is now using a bunch of non-free libraries, and intends to use more in
-    the future. Chances are this app will not be updated any more.
+  Upstream is now using a bunch of non-free libraries, and intends to use more in
+  the future. Chances are this app will not be updated any more.
 
 RepoType: git
 Repo: https://github.com/codinguser/gnucash-android.git
@@ -64,7 +64,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@4.2.0
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
 
   - versionName: 1.2.0
     versionCode: 8
@@ -73,7 +73,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@4.2.0
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
 
   - versionName: 1.2.2
     versionCode: 10
@@ -82,7 +82,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@4.2.0
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
 
   - versionName: 1.2.3
     versionCode: 13
@@ -91,7 +91,7 @@ Builds:
     srclibs:
       - ActionBarSherlock@4.2.0
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
 
   - versionName: 1.2.4
     versionCode: 14
@@ -100,110 +100,110 @@ Builds:
     srclibs:
       - ActionBarSherlock@4.2.0
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@'
-        project.properties
+      project.properties
 
   - versionName: 1.2.7
     versionCode: 22
     commit: v1.2.7
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
+      - ActionBarSherlock@4.4.0
 
   - versionName: 1.3.1
     versionCode: 26
     commit: v1.3.1
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.3.2
     versionCode: 28
     commit: v1.3.2
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.3.3
     versionCode: 29
     commit: v1.3.3
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.4.0
     versionCode: 36
     commit: v1.4.0
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.4.1
     versionCode: 37
     commit: v1.4.1
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.4.2
     versionCode: 39
     commit: v1.4.2
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.4.3
     versionCode: 40
     commit: v1.4.3
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.5.0
     versionCode: 42
     commit: v1.5.0
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.5.1
     versionCode: 43
     commit: v1.5.1
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.5.2
     versionCode: 45
     commit: v1.5.2
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.5.3
     versionCode: 46
     commit: v1.5.3
     subdir: app
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
 
   - versionName: 1.5.4
     versionCode: 47
     commit: v1.5.4
     subdir: app/src/main
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
     prebuild: mv java src
     target: android-21
 
@@ -212,8 +212,8 @@ Builds:
     commit: v1.5.5
     subdir: app/src/main
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
-      - 2:ViewPagerIndicator@2.4.1
+      - ActionBarSherlock@4.4.0
+      - ViewPagerIndicator@2.4.1
     prebuild: mv java src
     target: android-21
 
@@ -376,14 +376,9 @@ Builds:
       - sed -i -e "/MPAndroidChart/d" build.gradle
       - sed -i -e '/variant.outputs.each/,/ }/ d' build.gradle
 
-  - versionName: 2.0.5
-    versionCode: 20500
-    disable: https://github.com/codinguser/gnucash-android/issues/435
-    commit: v2.0.5
-
 MaintainerNotes: Dynamic version code, so no UCM can be used.
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 2.0.5

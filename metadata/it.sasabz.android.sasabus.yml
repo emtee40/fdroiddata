@@ -7,45 +7,23 @@ IssueTracker: https://github.com/SASAbus/SASAbus/issues
 
 AutoName: SASAbus
 Description: |-
-    SASAbus is the first application to consult the bus schedule of SASA (Società
-    Autobus Servizi d'Area - Städtischer Autobus Service AG) for all lines of the
-    city of Bozen, Meran and Leifers (South Tyrol). Operation is very simple: choose
-    the city, the bus line, the destination and the bus stop: SASAbus will show you
-    the next bus stop schedule. Now with additional GPS mode.
+  SASAbus is the first application to consult the bus schedule of SASA (Società
+  Autobus Servizi d'Area - Städtischer Autobus Service AG) for all lines of the
+  city of Bozen, Meran and Leifers (South Tyrol). Operation is very simple: choose
+  the city, the bus line, the destination and the bus stop: SASAbus will show you
+  the next bus stop schedule. Now with additional GPS mode.
 
-    The bus data is provided by <a href="http://open.sasabz.it">Sasabz</a> and is released under
-    the CC-2.0-SA-NC. Map data is licensed under the Open Data Commons Open Database
-    Licence and copyrighted by OpenStreetMap-Mitwirkende.
+  The bus data is provided by <a href="http://open.sasabz.it">Sasabz</a> and is released under
+  the CC-2.0-SA-NC. Map data is licensed under the Open Data Commons Open Database
+  Licence and copyrighted by OpenStreetMap-Mitwirkende.
 
 RepoType: git
 Repo: https://github.com/SASAbus/SASAbus.git
 
 Builds:
-  - versionName: 0.2.6
-    versionCode: 17
-    disable: v0.2.6
-    commit: unknown - see disabled
-    target: android-15
-
-  - versionName: 0.2.7
-    versionCode: 18
-    disable: e46d3e02f0
-    commit: unknown - see disabled
-    target: android-15
-
   - versionName: 0.2.8
     versionCode: 19
     commit: f_droid_v0.2.8.3
-
-  - versionName: 0.2.11
-    versionCode: 22
-    disable: should be published but doesn't exist in source code
-    commit: unknown - see disabled
-
-  - versionName: 0.2.12
-    versionCode: 23
-    disable: beta
-    commit: unknown - see disabled
 
   - versionName: 0.3.01
     versionCode: 24
@@ -53,7 +31,7 @@ Builds:
     extlibs:
       - android/android-support-v4.jar
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 0.3.01

@@ -1,0 +1,60 @@
+Categories:
+  - Phone & SMS
+License: GPL-3.0-only
+AuthorName: Fossify
+AuthorEmail: hello@fossify.org
+WebSite: https://www.fossify.org
+SourceCode: https://github.com/FossifyOrg/Phone
+IssueTracker: https://github.com/FossifyOrg/Phone/issues
+Donate: https://www.fossify.org/donate
+Liberapay: naveensingh
+Bitcoin: bc1q5flmuh5f3canqza07cfekjn64p2aqvd2w7pnn3
+
+RepoType: git
+Repo: https://github.com/FossifyOrg/Phone.git
+Binaries: https://github.com/FossifyOrg/Phone/releases/download/%v/phone-%c-foss-release.apk
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: 28826651919880142f1dd5b8b1fdb4ea7ec3b45f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    output: build/outputs/apk/foss/release/phone-*-foss-release-unsigned.apk
+
+  - versionName: 1.1.1
+    versionCode: 3
+    commit: 7b1d458fb92ec64111cc768ab7c3babadfaa44d9
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/foss/release/phone-*-foss-release-unsigned.apk
+
+  - versionName: 1.2.0
+    versionCode: 4
+    commit: 67bd401e4c844dc6c33161a75c8dc6d0d80e7e7c
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/foss/release/phone-*-foss-release-unsigned.apk
+
+  - versionName: 1.3.0
+    versionCode: 5
+    commit: 069179d1e794615e3102ca0a7b46738b193a29bd
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/foss/release/phone-*-foss-release-unsigned.apk
+
+AllowedAPKSigningKeys: affdb124d3f4720c2f98dbca9eacba0514fba4306e20a2786c861c3c0d6ff292
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 1.3.0
+CurrentVersionCode: 5

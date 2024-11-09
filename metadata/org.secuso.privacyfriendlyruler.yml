@@ -3,22 +3,22 @@ Categories:
 License: GPL-3.0-only
 AuthorName: SECUSO - Security Usability Society
 AuthorEmail: contact@secuso.org
-AuthorWebSite: https://secuso.aifb.kit.edu/english/
-WebSite: https://secuso.org/pfa
+AuthorWebSite: https://secuso.aifb.kit.edu/english/105.php
+WebSite: https://secuso.aifb.kit.edu/english/Tape_Measure_and_Ruler.php
 SourceCode: https://github.com/SecUSo/privacy-friendly-ruler
 IssueTracker: https://github.com/SecUSo/privacy-friendly-ruler/issues
 Changelog: https://github.com/SecUSo/privacy-friendly-ruler/blob/HEAD/CHANGELOG.md
 
 AutoName: Ruler
 Description: |-
-    Privacy Friendly Ruler turns the device screen into a ruler for quick
-    measurements on the go. It can display rulers with either inch or centimeters as
-    metric. Furthermore, it can display a protractor.
+  Privacy Friendly Ruler turns the device screen into a ruler for quick
+  measurements on the go. It can display rulers with either inch or centimeters as
+  metric. Furthermore, it can display a protractor.
 
-    This app is optimized regarding the user's privacy. It doesn't use any tracking
-    mechanisms, neither it displays any advertisement. It belongs to the Privacy
-    Friendly Apps group developed by the <a href="https://secuso.org/">SECUSO research group</a>
-    at Technische Universität Darmstadt, Germany.
+  This app is optimized regarding the user's privacy. It doesn't use any tracking
+  mechanisms, neither it displays any advertisement. It belongs to the Privacy
+  Friendly Apps group developed by the <a href="https://secuso.org/">SECUSO research group</a>
+  at Technische Universität Darmstadt, Germany.
 
 RepoType: git
 Repo: https://github.com/SecUSo/privacy-friendly-ruler
@@ -45,7 +45,16 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.1.1
+    versionCode: 4
+    commit: e89615b60841bbda92fee7164b03ac3d7abdda4b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/privacyfriendlyrulerapp/privacyfriendlyruler/' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.1'
-CurrentVersionCode: 3
+UpdateCheckName: org.secuso.privacyfriendlyrulerapp
+CurrentVersion: 1.1.1
+CurrentVersionCode: 4

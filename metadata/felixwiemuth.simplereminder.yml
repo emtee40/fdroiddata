@@ -74,7 +74,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.9.12
+    versionCode: 912700
+    commit: v0.9.12
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.13
+    versionCode: 913700
+    commit: v0.9.13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.9.14
+    versionCode: 914700
+    commit: v0.9.14
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 0.9.11
-CurrentVersionCode: 911700
+CurrentVersion: 0.9.14
+CurrentVersionCode: 914700

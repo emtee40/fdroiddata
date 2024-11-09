@@ -5,12 +5,12 @@ AuthorName: Daniel Kao
 AuthorEmail: daniel.kao@gmail.com
 SourceCode: https://github.com/plateaukao/einkbro
 IssueTracker: https://github.com/plateaukao/einkbro/issues
-Changelog: https://github.com/plateaukao/einkbro/blob/main/CHANGELOG.md
+Changelog: https://github.com/plateaukao/einkbro/releases
 
 AutoName: EinkBro
 
 RepoType: git
-Repo: https://github.com/plateaukao/einkbro
+Repo: https://github.com/plateaukao/einkbro.git
 
 Builds:
   - versionName: 8.6.3
@@ -644,7 +644,312 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 9.21.0
+    versionCode: 92100
+    commit: 2f5ce05f8b09200c7d8c402771f8f4991872eae2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 9.22.0
+    versionCode: 92200
+    commit: 873219358516fef74bb622689b333c7a307f18a4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.0.0
+    versionCode: 100000
+    commit: 89dc885060288c68c2939d6bb46f84fd13d51888
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.2.0
+    versionCode: 100200
+    commit: afa097b5c323948fe521ada8a32a0ae6a29bccdf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.3.0
+    versionCode: 100300
+    commit: 7ce10f6cd0d9a35a9424cf669f5fc7c9ae0d50d6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.4.1
+    versionCode: 100401
+    commit: 96e7cbbc2a6ab2150322a800a1202389c86dcab5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.5.0
+    versionCode: 100500
+    commit: 2c5b216d371a702d8d2475e5545a7fb9a4f0b88a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.6.0
+    versionCode: 100600
+    commit: 097468fb86e95123526baa53b081d74a6dcd0c13
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.6.2
+    versionCode: 100602
+    commit: b64d8bcf82d69fe4e42943050b7bcc0186ab0ce7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.6.3
+    versionCode: 100603
+    commit: 0cb8caf77f428b8c5872a64302f6debed97c46f3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.7.0
+    versionCode: 100700
+    commit: 9900fad802c885c9627ed76a93ea55ed14aabc60
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.8.1
+    versionCode: 100801
+    commit: 3790463b521342cff289891ef4d20eba3c91fc50
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.9.1
+    versionCode: 100901
+    commit: 0a6a2297db852bdf9b3975e8c09c06be5534a914
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.10.0
+    versionCode: 101000
+    commit: 3d213c0d7eb56593070c6c1cd044b113227a96dd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.11.0
+    versionCode: 101100
+    commit: 7d1674aac448ef4ad95daaad61f9dd46a9b2998e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.13.1
+    versionCode: 101301
+    commit: 1c81596947fed94a67d8824553ce72e425652acc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.14.0
+    versionCode: 101400
+    commit: f1d008fdaf8c3f46c74970a53c87aed5d141a751
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.15.0
+    versionCode: 101500
+    commit: 71a2a2412827dc257ecb22cbd8c35c402c2b504f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.16.1
+    versionCode: 101601
+    commit: 801ac3a3abdbed8071dcd0475dfac834d282eaa4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 10.17.0
+    versionCode: 101700
+    commit: f015289dee392f58293e14adbbc190aaa3e850ad
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.0.0
+    versionCode: 110000
+    commit: 7cbf7f5ca796a7a6b45b8a2a5b6a85160f7e693d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.2.0
+    versionCode: 110200
+    commit: 47534c808bdb1db2d458e0035be523be57ae72dc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.3.1
+    versionCode: 110301
+    commit: ca536f8ec74a1cacea2c0252ae26ba0334c1335c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.4.0
+    versionCode: 110400
+    commit: 7bafd06ddd0801676dac44eefad97423f67bb0fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 11.6.0
+    versionCode: 110600
+    commit: d250db7801350e456be6be80c7c8a23c2731bb7b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 11.6.1
+    versionCode: 110601
+    commit: cc23b19ed292bc2ef4fb03edbd1ef1aaf7c80823
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.7.0
+    versionCode: 110700
+    commit: 01a28e083d98b1359ee937d2a171bcd339a9b288
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.8.0
+    versionCode: 110800
+    commit: 74d0221f8f76a1bae47bb0ab847dbb8fc6c14d61
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.9.0
+    versionCode: 110900
+    commit: c1ef08b582ce2688e8d184d1fb75495b3556bf68
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.10.0
+    versionCode: 111000
+    commit: 4fb218d6d60c7d361170b13a5507ae62747c0b37
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.11.0
+    versionCode: 111100
+    commit: 6bf1f2fd9e6bcf87480fb999f3e29c0851bbd33e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.13.0
+    versionCode: 111300
+    commit: 5db00c5b1979ffddeab5a4f9c650a176e7905252
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.14.0
+    versionCode: 111400
+    commit: 39834fb30cbf8fe19daf1593b3c649be5d977b59
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.15.0
+    versionCode: 111500
+    commit: 25af17fe8a6ad4d4e39a3acf9e575ad0da8ef8d4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.16.0
+    versionCode: 111600
+    commit: c6523f2a9bedf4ffcaa982977598fe0c17a92faa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 11.17.0
+    versionCode: 111700
+    commit: bbfc6b680d3fe87f0bcff4860f2e037c7041500d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 12.0.0
+    versionCode: 120000
+    commit: 8b6612cc7005f382ca3e7ce3e00d3ebd266299b2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 12.1.0
+    versionCode: 120100
+    commit: db2772d37ac84bd83a4493e71a1ec6d9a08a8f9a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 12.2.0
+    versionCode: 120200
+    commit: 9905a47beb2d3a5f6560d1420c8a49abc93198e6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 12.3.0
+    versionCode: 120300
+    commit: 44c12b3a24d958777d8ddfc0dea4904cda24ac03
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 12.4.0
+    versionCode: 120400
+    commit: 5cbf5d6f450924a863dba60f44910c53708f80c0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 14.0.0
+    versionCode: 140000
+    commit: cbbc2db0e0b83fbe569721bf528cfaf3963d6f60
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - ad-filter/scriptlets_src/package.json
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 9.20.0
-CurrentVersionCode: 92000
+CurrentVersion: 14.0.0
+CurrentVersionCode: 140000

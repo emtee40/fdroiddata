@@ -1,8 +1,8 @@
 AntiFeatures:
   - NonFreeAssets
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-only
 WebSite: https://ltguillaume.github.io/DroidShows
 SourceCode: https://github.com/ltGuillaume/DroidShows
@@ -11,21 +11,21 @@ Changelog: https://github.com/ltGuillaume/DroidShows/releases
 
 AutoName: DroidShows
 Description: |-
-    TV Series/TV Shows browser and tracker based on https://f-droid.org/packages/org.droidseries. It helps
-    you manage your favorite TV shows and keep track of the episodes that you have
-    or have not seen.
+  TV Series/TV Shows browser and tracker based on https://f-droid.org/packages/org.droidseries. It helps
+  you manage your favorite TV shows and keep track of the episodes that you have
+  or have not seen.
 
-    This fork adds quite a bunch of features, among which an improved interface, a
-    menu overflow button, pinning, quick search and filters, a separate
-    archive/backlog list, a last seen episodes log, swipe gestures, more show
-    information, backup/restore, double episode entries clean-up, faster updating,
-    cover and fan art view, a modern launcher icon and it speeds up responsiveness
-    significantly by (more) efficient SQL queries and some threading. DroidShows
-    only needs an internet connection when updating the show info or watching
-    full-size posters.
+  This fork adds quite a bunch of features, among which an improved interface, a
+  menu overflow button, pinning, quick search and filters, a separate
+  archive/backlog list, a last seen episodes log, swipe gestures, more show
+  information, backup/restore, double episode entries clean-up, faster updating,
+  cover and fan art view, a modern launcher icon and it speeds up responsiveness
+  significantly by (more) efficient SQL queries and some threading. DroidShows
+  only needs an internet connection when updating the show info or watching
+  full-size posters.
 
 RepoType: git
-Repo: https://github.com/ltGuillaume/DroidShows
+Repo: https://github.com/ltGuillaume/DroidShows.git
 
 Builds:
   - versionName: '4.2'
@@ -340,7 +340,55 @@ Builds:
       - icon/material-render-actionbar.zip
       - icon/material-render-icon.zip
 
+  - versionName: 7.11.7
+    versionCode: 71107
+    commit: 2d2f54d1747580460de25efd95c12590b954edb7
+    sudo:
+      - apt-get update
+      - apt-get install -y ant
+      - rm -fr /opt/android-sdk/build-tools/*
+    rm:
+      - icon/material-adaptive-render-icon.zip
+      - icon/material-render-actionbar.zip
+      - icon/material-render-icon.zip
+    prebuild:
+      - echo -e 'java.target=1.8\njava.source=1.8' > ant.properties
+      - sdkmanager 'build-tools;30.0.3'
+    target: android-25
+
+  - versionName: 7.11.8
+    versionCode: 71108
+    commit: fc26ebd93c358678238857fc1297f9be3f40d846
+    sudo:
+      - apt-get update
+      - apt-get install -y ant
+      - rm -fr /opt/android-sdk/build-tools/*
+    rm:
+      - icon/material-adaptive-render-icon.zip
+      - icon/material-render-actionbar.zip
+      - icon/material-render-icon.zip
+    prebuild:
+      - echo -e 'java.target=1.8\njava.source=1.8' > ant.properties
+      - sdkmanager 'build-tools;30.0.3'
+    target: android-25
+
+  - versionName: 7.11.10
+    versionCode: 71110
+    commit: b8de17e23130684ef3634851df7793d1e1a5aaf0
+    sudo:
+      - apt-get update
+      - apt-get install -y ant
+      - rm -fr /opt/android-sdk/build-tools/*
+    rm:
+      - icon/material-adaptive-render-icon.zip
+      - icon/material-render-actionbar.zip
+      - icon/material-render-icon.zip
+    prebuild:
+      - echo -e 'java.target=1.8\njava.source=1.8' > ant.properties
+      - sdkmanager 'build-tools;30.0.3'
+    target: android-25
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 7.11.2
-CurrentVersionCode: 71102
+CurrentVersion: 7.11.10
+CurrentVersionCode: 71110

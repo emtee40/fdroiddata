@@ -1,6 +1,6 @@
 Categories:
-  - Internet
   - Graphics
+  - Internet
 License: GPL-3.0-or-later
 SourceCode: https://github.com/vauvenal5/yaga
 IssueTracker: https://github.com/vauvenal5/yaga/issues
@@ -363,8 +363,96 @@ Builds:
       - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
       - $$flutter$$/bin/flutter build apk --flavor fdroid
 
+  - versionName: 0.40.5
+    versionCode: 4005
+    commit: 941f20ecbc0d4ae13a66d737d5a0bb80788fdfe0
+    output: build/app/outputs/flutter-apk/app-play-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*"flutterSdkVersion":\ "(.*)",/\1/p' .fvm/fvm_config.json)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter pub run flutter_launcher_icons:main
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor play
+
+  - versionName: 0.41.0
+    versionCode: 4100
+    commit: 6c9b94b57adf5ea91ee6c00a8cce9632fd707051
+    output: build/app/outputs/flutter-apk/app-play-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*"flutterSdkVersion":\ "(.*)",/\1/p' .fvm/fvm_config.json)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter pub run flutter_launcher_icons:main
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor play
+
+  - versionName: 0.42.1
+    versionCode: 4201
+    commit: 30efabdccdd37458f836172a15496f5beaf65e97
+    output: build/app/outputs/flutter-apk/app-play-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*"flutterSdkVersion":\ "(.*)",/\1/p' .fvm/fvm_config.json)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter pub run flutter_launcher_icons:main
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor play
+
+  - versionName: 0.43.0
+    versionCode: 4300
+    commit: bedf5c6c3127c0f708241e61c9f62708b48c7c5a
+    output: build/app/outputs/flutter-apk/app-play-release.apk
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - version=$(sed -n -E 's/.*"flutterSdkVersion":\ "(.*)",/\1/p' .fvm/fvm_config.json)
+      - pushd $$flutter$$
+      - git checkout -f $version
+      - popd
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter pub run flutter_launcher_icons:main
+      - $$flutter$$/bin/flutter pub run build_runner build --delete-conflicting-outputs
+      - $$flutter$$/bin/flutter build apk --flavor play
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v.*$
 UpdateCheckData: pubspec.yaml|version:\s\d+\.\d+\.\d+\+(\d+)|.|version:\s(\d+\.\d+\.\d+)\+\d+
-CurrentVersion: 0.26.1
-CurrentVersionCode: 2601
+CurrentVersion: 0.43.0
+CurrentVersionCode: 4300

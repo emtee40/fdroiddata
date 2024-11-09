@@ -8,12 +8,12 @@ IssueTracker: https://github.com/sagemath/android/issues
 
 AutoName: Sage
 Description: |-
-    Sage is mathematical software that combines many packages into a common
-    interface. This Android application connects as a http client to a Sage server,
-    authenticates, initiates a session, sends commands and displays the results.
-    There are some demos which appear to function via public server.
+  Sage is mathematical software that combines many packages into a common
+  interface. This Android application connects as a http client to a Sage server,
+  authenticates, initiates a session, sends commands and displays the results.
+  There are some demos which appear to function via public server.
 
-    Status: Beta.
+  Status: Beta.
 
 RepoType: git
 Repo: https://github.com/sagemath/android
@@ -31,7 +31,8 @@ Builds:
     versionCode: 8
     commit: 0.9.3
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: 0.9.3
 CurrentVersionCode: 8

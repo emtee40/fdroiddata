@@ -10,8 +10,8 @@ Changelog: https://github.com/eboudrant/net.ebt.muzei.miyazaki/releases
 
 AutoName: Muzei Ghibli
 Description: |-
-    Show the pictures from <a href="https://imgur.com/a/rX8ws">Studio Ghibli</a> in
-    https://f-droid.org/packages/net.nurik.roman.muzei.
+  Show the pictures from <a href="https://imgur.com/a/rX8ws">Studio Ghibli</a> in
+  https://f-droid.org/packages/net.nurik.roman.muzei.
 
 RepoType: git
 Repo: https://github.com/eboudrant/net.ebt.muzei.miyazaki
@@ -45,16 +45,6 @@ Builds:
       - app/libs/*jar
     prebuild: cp -fR $$MuzeiAPI$$/api/src/main/java/com src/main/java/
 
-  - versionName: '2.1'
-    versionCode: 123
-    disable: okio problems
-    commit: '2.1'
-    subdir: app
-    gradle:
-      - yes
-    rm:
-      - app/libs/*jar
-
   - versionName: '3.2'
     versionCode: 320
     commit: '3.2'
@@ -63,10 +53,10 @@ Builds:
       - yes
 
 MaintainerNotes: |-
-    UCM mistakenly gets the version code from
-        wear/build.gradle (Wear OS app),
-    which is greater by 1 than the version code in
-        app/build.gradle (Android app).
+  UCM mistakenly gets the version code from
+      wear/build.gradle (Wear OS app),
+  which is greater by 1 than the version code in
+      app/build.gradle (Android app).
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags

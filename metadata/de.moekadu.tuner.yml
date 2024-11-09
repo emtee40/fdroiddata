@@ -9,7 +9,7 @@ Changelog: https://github.com/thetwom/Tuner/releases
 AutoName: Tuner
 
 RepoType: git
-Repo: https://github.com/thetwom/Tuner
+Repo: https://github.com/thetwom/Tuner.git
 
 Builds:
   - versionName: 1.2.0
@@ -182,7 +182,116 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 6.0.0
+    versionCode: 26
+    commit: fd014e8d0a74289f8559892851c8eaa533404834
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 6.1.0
+    versionCode: 27
+    commit: c64f3d52afdecff5deac09a65e0c8a50f3379646
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 6.2.0
+    versionCode: 28
+    commit: 777bdbb0ed95580467527c50cd93f997ed585d03
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 6.3.0
+    versionCode: 29
+    commit: a4dedfa8215d564fe451cbb2be4177bb0c9f2904
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 6.4.0
+    versionCode: 30
+    commit: a96325d4bfc722a0405fc0dce80043e05e05baee
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 6.5.0
+    versionCode: 31
+    commit: 106637ea9e892670e29cec1ae0e01130e4ab8ef6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 6.6.1
+    versionCode: 33
+    commit: 9705d46a5b3857aebc47b6f819f9dfa545156983
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 6.6.2
+    versionCode: 34
+    commit: 9caf670bfe3c50eb8d290967ecdb9a732c653e1b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 6.7.0
+    versionCode: 35
+    commit: d4f0a91dc069532b88290bd3a000059d75b5c112
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 6.8.0
+    versionCode: 36
+    commit: 7f1cf9bd65873a93b141338469f4cf7d63bc4e74
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 6.8.2
+    versionCode: 38
+    commit: 75e0a979b89dd53bca9719ce712e4f9d93e41862
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*$
-CurrentVersion: 5.4.0
-CurrentVersionCode: 25
+CurrentVersion: 6.8.2
+CurrentVersionCode: 38

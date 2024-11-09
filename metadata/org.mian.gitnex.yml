@@ -412,7 +412,75 @@ Builds:
     gradle:
       - free
 
+  - versionName: 5.1.0
+    versionCode: 510
+    commit: 45e2ca2cd3cd6f2f393c53b1c874e5f06c1d7821
+    subdir: app
+    gradle:
+      - free
+
+  - versionName: 5.1.1
+    versionCode: 511
+    commit: 1a33d1b05bf920b218879179f3030890b9721a0a
+    subdir: app
+    gradle:
+      - free
+
+  - versionName: 5.2.0
+    versionCode: 520
+    commit: 47bf4c05e1ed16b6b990a8eaa523f1c9de7a7c1e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - free
+
+  - versionName: 5.2.1
+    versionCode: 521
+    commit: 764a622bfdf0b8e54f58f83af4928b8f6d6f1a5b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - free
+
+  - versionName: 5.3.0
+    versionCode: 530
+    commit: c357bf5349d060f70d4454809c981d753e468c54
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - free
+
+  - versionName: 5.4.0
+    versionCode: 540
+    commit: 7ee43cd5e91dd73918d49bf46d512b13c4157192
+    subdir: app
+    gradle:
+      - free
+
+  - versionName: 5.5.0
+    versionCode: 550
+    commit: d1dd4cc38866363fc5b6abb82dc34b87c44b6b12
+    subdir: app
+    gradle:
+      - free
+
+  - versionName: 6.0.0
+    versionCode: 600
+    commit: 5a51d8e4c7b1841471a4286a07194e8c83659524
+    subdir: app
+    gradle:
+      - free
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 5.0.1
-CurrentVersionCode: 501
+CurrentVersion: 6.0.0
+CurrentVersionCode: 600

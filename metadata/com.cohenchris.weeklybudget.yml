@@ -4,11 +4,12 @@ License: GPL-3.0-only
 AuthorName: cohenchris
 SourceCode: https://github.com/cohenchris/WeeklyBudget/
 IssueTracker: https://github.com/cohenchris/WeeklyBudget/issues
+Changelog: https://github.com/cohenchris/WeeklyBudget/releases
 
 AutoName: WeeklyBudget
 
 RepoType: git
-Repo: https://github.com/cohenchris/WeeklyBudget/
+Repo: https://github.com/cohenchris/WeeklyBudget.git
 
 Builds:
   - versionName: '1.4'
@@ -36,7 +37,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '1.6'
 CurrentVersionCode: 6

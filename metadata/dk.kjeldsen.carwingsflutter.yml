@@ -9,13 +9,15 @@ IssueTracker: https://gitlab.com/tobiaswkjeldsen/carwingsflutter/issues
 
 AutoName: My Leaf
 Description: |-
-    My Leaf is a simple and fast alternative to the official NissanConnect EV
-    app from Nissan.
+  My Leaf is a simple and fast alternative to the official NissanConnect EV
+  app from Nissan.
 
-    You can ask your vehicle for the latest data, see current battery and
-    charging statuses, see current climate control state, start or stop climate
-    control remotely, remotely start charging, and retrieve the last known
-    location of the vehicle.
+  You can ask your vehicle for the latest data, see current battery and
+  charging statuses, see current climate control state, start or stop climate
+  control remotely, remotely start charging, and retrieve the last known
+  location of the vehicle.
+
+  Note: The app depends on Nissan’s CarWings service, which is not libre.
 
 RepoType: git
 Repo: https://gitlab.com/tobiaswkjeldsen/carwingsflutter.git
@@ -296,7 +298,62 @@ Builds:
       - $$flutter$$/bin/flutter build apk
     ndk: r21
 
+  - versionName: 2.2.2
+    versionCode: 203
+    commit: fb45d42cf52e0dbcc08b982adec381ea79ea7c86
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.5
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk
+    ndk: r21
+
+  - versionName: 2.3.0
+    versionCode: 204
+    commit: 9a563d3ea8d14b470e8527bf046de1bae3135dc6
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.5
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk
+    ndk: r21
+
+  - versionName: 2.3.1
+    versionCode: 205
+    commit: 426bb234f04bf908c6314b9a523aa4860011c4a7
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.5
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk
+    ndk: r21
+
+  - versionName: 2.3.2
+    versionCode: 206
+    commit: fb0b5208c9bd87e928fd647792e26c75b9001ade
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.5
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk
+    ndk: r21
+
+  - versionName: 2.3.3
+    versionCode: 207
+    commit: b21a5602a9e45a78e4c5de01db8f1772d665391b
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.0.5
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter build apk
+    ndk: r21
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^f-droid
-CurrentVersion: 2.2.1
-CurrentVersionCode: 202
+CurrentVersion: 2.3.3
+CurrentVersionCode: 207

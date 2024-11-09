@@ -1,6 +1,6 @@
 Categories:
-  - Internet
   - Connectivity
+  - Internet
 License: CC-BY-4.0
 AuthorName: TrianguloY
 AuthorEmail: correo--correo+uc@hotmail.com
@@ -125,7 +125,93 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '2.10'
+    versionCode: 22
+    commit: 8e041cb4c32908f00a68e43883c4a9bd31933567
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.11'
+    versionCode: 23
+    commit: 0546c4edf3952baf68579c3a2ca62441047036a3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.12'
+    versionCode: 25
+    commit: d489b6cc870c53bbdfa2fb2ca840a98917dbdbd3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.13'
+    versionCode: 26
+    commit: 7b3f11bdd49ee8b92129e3dc60f5332d473dd8e8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.13'
+    versionCode: 28
+    commit: 396d76336014f7db4b70e757e4401cf3e0135480
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.13.1
+    versionCode: 29
+    commit: 8a9e08dc129b5419abdc4411814c8c1e0af5ef32
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.14'
+    versionCode: 31
+    commit: f0864d0896aac2e7204d2dc802d28b1841657224
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '2.15'
+    versionCode: 32
+    commit: 33698f59ec491b4da41fcb1d9e5510cef5159b85
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.16'
+    versionCode: 34
+    commit: 988073b4d11ff86d951be098fb4e46cecfa8fd90
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.17'
+    versionCode: 35
+    commit: 381f598293a331f124fafa10e1d4d31d5df015d0
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+$
-CurrentVersion: 2.9.1
-CurrentVersionCode: 21
+CurrentVersion: '2.17'
+CurrentVersionCode: 35

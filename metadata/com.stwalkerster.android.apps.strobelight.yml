@@ -7,8 +7,8 @@ IssueTracker: https://github.com/stwalkerster/strobelight/issues
 
 AutoName: Strobe Light
 Description: |-
-    A simple strobe light application which turns the camera flash light on and off
-    based on configurable delays.
+  A simple strobe light application which turns the camera flash light on and off
+  based on configurable delays.
 
 RepoType: git
 Repo: https://github.com/stwalkerster/strobelight
@@ -19,7 +19,8 @@ Builds:
     commit: 1f2ca15fffaa9985d7f36246b281591bf973bab4
     target: android-8
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: '1.2'
 CurrentVersionCode: 3

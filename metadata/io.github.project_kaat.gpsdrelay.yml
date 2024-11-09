@@ -15,14 +15,16 @@ Repo: https://github.com/project-kaat/gpsdRelay.git
 Binaries: https://github.com/project-kaat/gpsdRelay/releases/download/v%v/gpsdRelay-v%v.apk
 
 Builds:
-  - versionName: '1.0'
-    versionCode: 1
-    commit: 932c500a8cd49786f5185605a710ff09a5ce44b6
+  - versionName: '1.2'
+    versionCode: 3
+    commit: f266068900e5b7221c0888eded643149315c40d7
     subdir: app
     gradle:
       - yes
 
+AllowedAPKSigningKeys: d27ba8e564dbd8ee8499d3146b8485d2049ebd8c7a76e0f157de5a5751654d82
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.0'
-CurrentVersionCode: 1
+CurrentVersion: '1.2'
+CurrentVersionCode: 3

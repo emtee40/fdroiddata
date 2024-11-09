@@ -11,7 +11,7 @@ Changelog: https://github.com/stefan-niedermann/nextcloud-deck/tags
 Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZD39ZE7MGEGBL&source=url
 Liberapay: stefan-niedermann
 
-AutoName: Nextcloud Deck
+AutoName: communis Deck
 
 RepoType: git
 Repo: https://github.com/stefan-niedermann/nextcloud-deck.git
@@ -62,14 +62,6 @@ Builds:
   - versionName: 0.0.12
     versionCode: 12
     commit: 0.0.12
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 0.0.13
-    versionCode: 13
-    disable: fails to build
-    commit: 0.0.13
     subdir: app
     gradle:
       - yes
@@ -287,14 +279,6 @@ Builds:
   - versionName: 1.8.3
     versionCode: 1008003
     commit: 1.8.3
-    subdir: app
-    gradle:
-      - fdroid
-
-  - versionName: 1.9.1
-    versionCode: 1009001
-    disable: badly broken version
-    commit: 1.9.1
     subdir: app
     gradle:
       - fdroid
@@ -523,49 +507,9 @@ Builds:
     gradle:
       - fdroid
 
-  - versionName: 1.16.2
-    versionCode: 1016002
-    disable: https://github.com/stefan-niedermann/nextcloud-deck/issues/930
-    commit: 1.16.2
-    subdir: app
-    gradle:
-      - fdroid
-
   - versionName: 1.16.3
     versionCode: 1016003
     commit: 1.16.3
-    subdir: app
-    gradle:
-      - fdroid
-
-  - versionName: 1.17.0
-    versionCode: 1017000
-    disable: https://github.com/stefan-niedermann/nextcloud-deck/issues/936
-    commit: 1.17.0
-    subdir: app
-    gradle:
-      - fdroid
-
-  - versionName: 1.17.2
-    versionCode: 1017002
-    disable: https://github.com/stefan-niedermann/nextcloud-deck/issues/936
-    commit: 1.17.2
-    subdir: app
-    gradle:
-      - fdroid
-
-  - versionName: 1.17.4
-    versionCode: 1017004
-    disable: https://github.com/stefan-niedermann/nextcloud-deck/issues/935
-    commit: 1.17.4
-    subdir: app
-    gradle:
-      - fdroid
-
-  - versionName: 1.17.6
-    versionCode: 1017006
-    disable: https://github.com/stefan-niedermann/nextcloud-deck/issues/935
-    commit: 1.17.6
     subdir: app
     gradle:
       - fdroid
@@ -739,7 +683,46 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 1.22.1
+    versionCode: 1022001
+    commit: e8e1e69866657b5542927d41bd8da3e08c338c3b
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.23.2
+    versionCode: 1023002
+    commit: 3f9faf8fa629397ed7848c259eb361a3cb53d83c
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.23.3
+    versionCode: 1023003
+    commit: 222dd8efc35165f27890b3a2b1c7753096252fe0
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.23.4
+    versionCode: 1023004
+    commit: 2d06f6178c58bfab188a0418626c29677ec7538d
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.24.1
+    versionCode: 1024001
+    commit: 67cdbab5c75b2faaef4b6a42e8d3349f5b564c3e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.21.8
-CurrentVersionCode: 1021008
+CurrentVersion: 1.24.1
+CurrentVersionCode: 1024001

@@ -1,7 +1,12 @@
 AntiFeatures:
-  - NonFreeAssets
-  - NonFreeNet
-  - UpstreamNonFree
+  NonFreeAssets:
+    en-US: Artwork, layouts and prerecorded voices are under a non-commercial license
+  NonFreeNet:
+    en-US: May use maps and download images from non-free online services
+  UpstreamNonFree:
+    en-US: Build removes Google Billing and In-app purchase, Amazon In-app purchase,
+      Google ratings, Telegram integration, Google Location, ANT+ integration, pre-built
+      binary deps are rebuilt from source
 Categories:
   - Navigation
 License: GPL-3.0-only
@@ -58,61 +63,6 @@ Builds:
     output: bin/OsmAnd-release-unsigned.apk
     build: ../../build
 
-  - versionName: 2.0.2
-    versionCode: 201
-    disable: builds and works, disable for further restructuring
-    commit: 2.0.2
-    subdir: android/OsmAnd
-    submodules: true
-    gradle:
-      - fullLegacyFat
-    forceversion: true
-    build: ../../build
-
-  - versionName: 2.0.3
-    versionCode: 205
-    disable: builds with slow rendering
-    commit: 2.0.3
-    subdir: android/OsmAnd
-    submodules: true
-    gradle:
-      - full
-      - legacy
-      - fat
-    prebuild:
-      - sed -i -e '/qt.*Compile/d' build.gradle
-      - sed -i -e "s/System.getenv(\"APK_VERSION\")/\"2.0.3\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APK_NUMBER_VERSION\")/\"205\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APP_FEATURES\")/\"-play_market +gps_status -parking_plugin
-        -blackberry -amazon -route_nav\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APP_NAME\")/\"OsmAnd~\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"TARGET_APP_NAME\")/\"OsmAnd~\"/g" build.gradle
-      - sed -i -e '/sourceSets/icompileOptions {\nsourceCompatibility = JavaVersion.VERSION_1_7\ntargetCompatibility
-        = JavaVersion.VERSION_1_7\n}\n' ../eclipse-compile/appcompat/build.gradle
-        build.gradle
-
-  - versionName: 2.0.4
-    versionCode: 206
-    disable: builds with slow rendering
-    commit: 2.0.4
-    subdir: android/OsmAnd
-    submodules: true
-    gradle:
-      - full
-      - legacy
-      - fat
-    prebuild:
-      - sed -i -e '/qt.*Compile/d' build.gradle
-      - sed -i -e "s/System.getenv(\"APK_VERSION\")/\"2.0.4\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APK_NUMBER_VERSION\")/\"206\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APP_FEATURES\")/\"-play_market +gps_status -parking_plugin
-        -blackberry -amazon -route_nav\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APP_NAME\")/\"OsmAnd~\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"TARGET_APP_NAME\")/\"OsmAnd~\"/g" build.gradle
-      - sed -i -e '/sourceSets/icompileOptions {\nsourceCompatibility = JavaVersion.VERSION_1_7\ntargetCompatibility
-        = JavaVersion.VERSION_1_7\n}\n' ../eclipse-compile/appcompat/build.gradle
-        build.gradle
-
   - versionName: 2.0.4
     versionCode: 207
     commit: 6c290d170b00119df2771b1509221b46212947e9
@@ -140,27 +90,6 @@ Builds:
   - versionName: 2.1.1
     versionCode: 212
     commit: 2.1.1
-    subdir: android/OsmAnd
-    submodules: true
-    gradle:
-      - full
-      - legacy
-      - fat
-    prebuild:
-      - sed -i -e '/qt.*Compile/d' build.gradle
-      - sed -i -e "s/System.getenv(\"APK_VERSION\")/\"$$VERSION$$\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APK_NUMBER_VERSION\")/\"$$VERCODE$$\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APP_FEATURES\")/\"-play_market +gps_status -parking_plugin
-        -blackberry -amazon -route_nav\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APP_NAME\")/\"OsmAnd~\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"TARGET_APP_NAME\")/\"OsmAnd~\"/g" build.gradle
-    antifeatures:
-      - Tracking
-
-  - versionName: 2.2.3
-    versionCode: 223
-    disable: test build, wait for tag
-    commit: e6dba68d9f56c5ffee47ff2d7df822516956b9cb
     subdir: android/OsmAnd
     submodules: true
     gradle:
@@ -324,30 +253,6 @@ Builds:
       - resources/rendering_styles/style-icons/drawable-mdpi/mx_sport_free_flyingpng
     scandelete:
       - resources/.swp
-    ndk: r11c
-    antifeatures:
-      - Tracking
-
-  - versionName: 2.5.2
-    versionCode: 252
-    disable: pre-release
-    commit: a4422a821f459922c25683276fd57265ecb99f40
-    subdir: android/OsmAnd
-    submodules: true
-    gradle:
-      - full
-      - legacy
-      - fat
-    prebuild:
-      - sed -i -e '/qt.*Compile/d' build.gradle
-      - sed -i -e "s/System.getenv(\"APK_VERSION\")/\"$$VERSION$$\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APK_NUMBER_VERSION\")/\"$$VERCODE$$\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APP_FEATURES\")/\"+play_market +gps_status -parking_plugin
-        -blackberry -amazon -route_nav\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"APP_NAME\")/\"OsmAnd~\"/g" build.gradle
-      - sed -i -e "s/System.getenv(\"TARGET_APP_NAME\")/\"OsmAnd~\"/g" build.gradle
-      - sed -i -e '/com.android.vending.BILLING/d' AndroidManifest.xml
-      - sed -i -e '/javaMaxHeapSize/s/4g/1536m/g' build.gradle
     ndk: r11c
     antifeatures:
       - Tracking
@@ -5187,12 +5092,1819 @@ Builds:
     antifeatures:
       - Tracking
 
+  - versionName: 4.3.12
+    versionCode: 431201
+    commit: v4.3.12
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2 swig
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build: ../../build.sh
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.3.12
+    versionCode: 431202
+    commit: v4.3.12
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2 swig
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build: ../../build.sh
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.3.12
+    versionCode: 431203
+    commit: v4.3.12
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2 swig
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build: ../../build.sh
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.4.7
+    versionCode: 440701
+    commit: v4.4.7
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2 swig
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build: ../../build.sh
+    ndk: r23c
+    antifeatures:
+      Tracking:
+        en-US: An unique installation ID is sent alongside map download requests,
+          https://github.com/osmandapp/OsmAnd/issues/15058
+
+  - versionName: 4.4.7
+    versionCode: 440702
+    commit: v4.4.7
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2 swig
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build: ../../build.sh
+    ndk: r23c
+    antifeatures:
+      Tracking:
+        en-US: An unique installation ID is sent alongside map download requests,
+          https://github.com/osmandapp/OsmAnd/issues/15058
+
+  - versionName: 4.4.7
+    versionCode: 440703
+    commit: v4.4.7
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2 swig
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build: ../../build.sh
+    ndk: r23c
+    antifeatures:
+      Tracking:
+        en-US: An unique installation ID is sent alongside map download requests,
+          https://github.com/osmandapp/OsmAnd/issues/15058
+
+  - versionName: 4.5.8
+    versionCode: 450801
+    commit: v4.5.8
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2 swig
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build: ../../build.sh
+    ndk: r23c
+    antifeatures:
+      Tracking:
+        en-US: An unique installation ID is sent alongside map download requests,
+          https://github.com/osmandapp/OsmAnd/issues/15058
+
+  - versionName: 4.5.8
+    versionCode: 450802
+    commit: v4.5.8
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2 swig
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build: ../../build.sh
+    ndk: r23c
+    antifeatures:
+      Tracking:
+        en-US: An unique installation ID is sent alongside map download requests,
+          https://github.com/osmandapp/OsmAnd/issues/15058
+
+  - versionName: 4.5.8
+    versionCode: 450803
+    commit: v4.5.8
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2 swig
+      - apt-get install -y -t bullseye-backports cmake
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build: ../../build.sh
+    ndk: r23c
+    antifeatures:
+      Tracking:
+        en-US: An unique installation ID is sent alongside map download requests,
+          https://github.com/osmandapp/OsmAnd/issues/15058
+
+  - versionName: 4.5.10
+    versionCode: 451001
+    commit: v4.5.10
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.5.10
+    versionCode: 451002
+    commit: v4.5.10
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.5.10
+    versionCode: 451003
+    commit: v4.5.10
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.6.11
+    versionCode: 461101
+    commit: v4.6.11
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.6.11
+    versionCode: 461102
+    commit: v4.6.11
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.6.11
+    versionCode: 461103
+    commit: v4.6.11
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.6.12
+    versionCode: 461201
+    commit: v4.6.12
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ armv7
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh armv7
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.6.12
+    versionCode: 461202
+    commit: v4.6.12
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ x86
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh x86
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.6.12
+    versionCode: 461203
+    commit: v4.6.12
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ arm64
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh arm64
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.6.14
+    versionCode: 461401
+    commit: v4.6.14
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ armv7
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh armv7
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.6.14
+    versionCode: 461402
+    commit: v4.6.14
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ x86
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh x86
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.6.14
+    versionCode: 461403
+    commit: v4.6.14
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential python-is-python2
+      - apt-get install -y -t bullseye-backports cmake automake
+      - apt-get install -y byacc libpcre2-dev
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ arm64
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh arm64
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.7.10
+    versionCode: 471001
+    commit: v4.7.10
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ armv7
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh armv7
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.7.10
+    versionCode: 471002
+    commit: v4.7.10
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ x86
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh x86
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.7.10
+    versionCode: 471003
+    commit: v4.7.10
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ arm64
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh arm64
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.7.17
+    versionCode: 471701
+    commit: v4.7.17
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ armv7
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh armv7
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.7.17
+    versionCode: 471702
+    commit: v4.7.17
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ x86
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh x86
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.7.17
+    versionCode: 471703
+    commit: v4.7.17
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ arm64
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh arm64
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.3
+    versionCode: 480301
+    commit: v4.8.3
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ armv7
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh armv7
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.3
+    versionCode: 480302
+    commit: v4.8.3
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ x86
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh x86
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.3
+    versionCode: 480303
+    commit: v4.8.3
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ arm64
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh arm64
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.4
+    versionCode: 480401
+    commit: v4.8.4
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ armv7
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh armv7
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.4
+    versionCode: 480402
+    commit: v4.8.4
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ x86
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh x86
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.4
+    versionCode: 480403
+    commit: v4.8.4
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ arm64
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh arm64
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.5
+    versionCode: 480501
+    commit: v4.8.5
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ armv7
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh armv7
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.5
+    versionCode: 480502
+    commit: v4.8.5
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ x86
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh x86
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.5
+    versionCode: 480503
+    commit: v4.8.5
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ arm64
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh arm64
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.6
+    versionCode: 480601
+    commit: v4.8.6
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - armv7
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ armv7
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh armv7
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.6
+    versionCode: 480602
+    commit: v4.8.6
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - x86
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ x86
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh x86
+    ndk: r23c
+    antifeatures:
+      - Tracking
+
+  - versionName: 4.8.6
+    versionCode: 480603
+    commit: v4.8.6
+    timeout: 20000
+    subdir: android/OsmAnd
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y ant g++ clang build-essential
+      - apt-get install -y cmake automake zip
+      - apt-get install -y byacc libpcre2-dev
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye python-is-python2
+    gradle:
+      - android
+      - full
+      - opengl
+      - arm64
+    srclibs:
+      - swig@v4.1.1
+    rm:
+      - android/OsmAnd-java/libs/*.jar
+      - android/OsmAnd/libs/*.jar
+      - android/OsmAnd-telegram/
+      - help/website/images/features.zip
+      - resources/icons/tools/SVGtoXML/vd-tool
+    prebuild: ../../prebuild.sh $$VERSION$$ $$VERCODE$$ arm64
+    scanignore:
+      - help/website/fonts/*.woff
+      - help/website/fonts/*.eot
+      - help/website/fonts/*.ttf
+      - resources/voice/tr/voice/*.ogg
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icudata.jar
+      - icu-release-50-2-1-patched-mirror/icu4j/main/shared/data/icutzdata.jar
+    scandelete:
+      - resources/test-resources
+    build:
+      - pushd $$swig$$
+      - ./autogen.sh
+      - ./configure --prefix=$$swig$$
+      - make -j`nproc`
+      - make install
+      - popd
+      - export PATH=$$swig$$/bin:$PATH
+      - ../../build.sh arm64
+    ndk: r23c
+    antifeatures:
+      Tracking:
+        en-US: An unique installation ID is sent alongside map download requests,
+          can be disabled in Settings
+
 MaintainerNotes: |-
-    Update CV only after sucessfully built and tested.
+  Update CV only after sucessfully built and tested.
 
-    See comments in ./prebuild.sh and ./build.sh for detailed build notes.
+  See comments in ./prebuild.sh and ./build.sh for detailed build notes.
 
+  versionCode*100+1/2/3 for split ABI, x86 contains both flavours
+
+  Swig 4.1.1 to fix compile errors.
+
+ArchivePolicy: 9
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 4.3.5
-CurrentVersionCode: 4305
+CurrentVersion: 4.8.6
+CurrentVersionCode: 480603

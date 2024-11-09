@@ -11,7 +11,7 @@ Name: Quasseldroid
 AutoName: Quasseldroid
 
 RepoType: git
-Repo: https://git.kuschku.de/justjanne/QuasselDroid-ng/
+Repo: https://git.kuschku.de/justjanne/QuasselDroid-ng.git
 
 Builds:
   - versionName: v1.0.11
@@ -481,8 +481,19 @@ Builds:
     scandelete:
       - gradle/convention/build
 
+  - versionName: 1.6.2
+    versionCode: 1327
+    disable: new tag not yet ready
+    commit: 1.6.2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfigs {/,/^  }/d' -e '/signingConfigs/d' ../gradle/convention/src/main/kotlin/justjanne.android.signing.gradle.kts
+    scandelete:
+      - gradle/convention/build
+
 AutoUpdateMode: Version %v
 UpdateCheckMode: HTTP
 UpdateCheckData: https://s3.kuschku.de/releases/quasseldroid-ng/version.json|{\s*"name":\s*"[^"]*",\s*"code":\s*([0-9]+)\s*}|.|{\s*"name":\s*"([^"]*)",\s*"code":\s*[0-9]*\s*}
 CurrentVersion: 1.6.2
-CurrentVersionCode: 1322
+CurrentVersionCode: 1327

@@ -3,11 +3,11 @@ Categories:
 License: GPL-3.0-only
 WebSite: https://e.foundation/
 SourceCode: https://gitlab.e.foundation/e/os/BlissLauncher
-IssueTracker: https://gitlab.e.foundation/e/management/issues
+IssueTracker: https://gitlab.e.foundation/e/backlog/-/issues
 
 Description: |-
-    BlissLauncher is the default launcher of the <a href="https://e.foundation/">/e/</a> Android-based OS.
-    It allows users to easily create and browse group of apps and it displays notification badges on app icons.
+  BlissLauncher is the default launcher of the <a href="https://e.foundation/">/e/</a> Android-based OS.
+  It allows users to easily create and browse group of apps and it displays notification badges on app icons.
 
 RepoType: git
 Repo: https://gitlab.e.foundation/e/os/BlissLauncher.git

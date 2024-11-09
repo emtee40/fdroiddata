@@ -7,7 +7,7 @@ WebSite: https://gitlab.com/deepdaikon/Zoysii
 SourceCode: https://gitlab.com/deepdaikon/Zoysii/tree/HEAD
 IssueTracker: https://gitlab.com/deepdaikon/Zoysii/issues
 Translation: https://translate.deepdaikon.xyz/engage/zoysii/
-Changelog: https://gitlab.com/deepdaikon/Zoysii/-/blob/master/CHANGELOG
+Changelog: https://gitlab.com/deepdaikon/Zoysii/-/blob/HEAD/CHANGELOG
 Donate: https://deepdaikon.xyz/donate
 Liberapay: deepdaikon
 
@@ -26,7 +26,7 @@ Builds:
     rm:
       - ios
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -40,7 +40,7 @@ Builds:
     rm:
       - ios
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -54,7 +54,7 @@ Builds:
     rm:
       - ios
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -68,7 +68,7 @@ Builds:
     rm:
       - ios
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -82,7 +82,7 @@ Builds:
     rm:
       - ios
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -96,7 +96,7 @@ Builds:
     rm:
       - ios
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -110,7 +110,7 @@ Builds:
     rm:
       - ios
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -124,7 +124,7 @@ Builds:
     rm:
       - ios
     prebuild: echo 'android.applicationVariants.all { variant -> variant.outputs.all
-        { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
+      { output -> outputFileName = "app-${output.baseName}.apk" } }' >> android/app/build.gradle
     build:
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter build apk
@@ -167,7 +167,41 @@ Builds:
       - $$flutter$$/bin/flutter pub get
       - $$flutter$$/bin/flutter build apk
 
+  - versionName: 2.4.2
+    versionCode: 14
+    commit: ef03dfcc9fb7bb68fd93092c046269249fe5c5dd
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.3.10
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
+  - versionName: 2.4.3
+    versionCode: 15
+    commit: 08c04ed7ad7f852b99c6c1b5e55dc4d131f3cead
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.3.10
+    rm:
+      - ios
+      - linux
+      - macos
+      - web
+      - windows
+    build:
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - $$flutter$$/bin/flutter build apk
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.4.1
-CurrentVersionCode: 13
+CurrentVersion: 2.4.3
+CurrentVersionCode: 15

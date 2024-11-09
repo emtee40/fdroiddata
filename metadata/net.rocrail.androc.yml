@@ -6,9 +6,9 @@ License: GPL-3.0-or-later
 
 AutoName: andRoc
 Description: |-
-    A controller client for RocRail, a model railway controller.
+  A controller client for RocRail, a model railway controller.
 
-    Expect no further updates - this project is no longer Free Software.
+  Expect no further updates - this project is no longer Free Software.
 
 RepoType: bzr
 Repo: lp:rocrail/androc
@@ -21,11 +21,6 @@ Builds:
   - versionName: 1.1.221
     versionCode: 221
     commit: '221'
-
-  - versionName: 1.2.224
-    versionCode: 224
-    disable: No source for this version in repo
-    commit: unknown - see disabled
 
   - versionName: 1.2.228
     versionCode: 228
@@ -70,11 +65,6 @@ Builds:
   - versionName: 1.5.315
     versionCode: 315
     commit: '315'
-
-  - versionName: 1.5.317
-    versionCode: 317
-    disable: wrong version code
-    commit: unknown - see disabled
 
   - versionName: 1.5.324
     versionCode: 324
@@ -162,12 +152,6 @@ Builds:
   - versionName: '376'
     versionCode: 376
     commit: '376'
-    target: android-14
-
-  - versionName: '377'
-    versionCode: 377
-    disable: wrong version code at 377
-    commit: '377'
     target: android-14
 
   - versionName: '379'

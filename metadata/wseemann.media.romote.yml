@@ -8,14 +8,14 @@ IssueTracker: https://github.com/wseemann/RoMote/issues
 
 AutoName: RoMote
 Description: |-
-    Turn your Android Device into a control center for your Roku Player and Roku TV.
+  Turn your Android Device into a control center for your Roku Player and Roku TV.
 
-    * Control your Roku player or Roku TV from your mobile device.
-    * Browse, add, and rate Channels from more than 2,000 streaming channels offered in the Roku Channel Store.
-    * Quickly launch your favorite Roku Channels on your Roku player or Roku TV from your mobile device.
-    * Enter text in your Roku player on-screen interface using your device’s keyboard instead of the included remote.
-    * Name and switch between multiple Roku players and Roku TVs.
-    * Additional features include shake to pause, voice search, homescreen widget and notification controls.
+  * Control your Roku player or Roku TV from your mobile device.
+  * Browse, add, and rate Channels from more than 2,000 streaming channels offered in the Roku Channel Store.
+  * Quickly launch your favorite Roku Channels on your Roku player or Roku TV from your mobile device.
+  * Enter text in your Roku player on-screen interface using your device's keyboard instead of the included remote.
+  * Name and switch between multiple Roku players and Roku TVs.
+  * Additional features include shake to pause, voice search, homescreen widget and notification controls.
 
 RepoType: git
 Repo: https://github.com/wseemann/RoMote
@@ -130,20 +130,6 @@ Builds:
     scanignore:
       - app/src/main/libs/jaku-1.6.jar
 
-  - versionName: 1.0.17
-    versionCode: 18
-    disable: Unexpected version/version code in output
-    commit: v1.0.17
-    subdir: app
-    submodules: true
-    gradle:
-      - yes
-    rm:
-      - app/src/main/libs/jaku-1.6.jar
-    build:
-      - mvn install -f ../Jaku/pom.xml -Dmaven.test.skip=true
-      - cp ~/.m2/repository/com/wseemann/jaku/1.6/jaku-1.6.jar src/main/libs/
-
   - versionName: 1.0.20
     versionCode: 20
     commit: v1.0.20
@@ -225,7 +211,21 @@ Builds:
       - mvn install -f ../Jaku/pom.xml -Dmaven.test.skip=true
       - cp ~/.m2/repository/com/wseemann/jaku/1.6/jaku-1.6.jar src/main/libs/
 
+  - versionName: 1.0.26
+    versionCode: 26
+    commit: 1074e19f4cdf70df9a4e7b060239dde50d6a25cc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.27
+    versionCode: 27
+    commit: 1738b16620016b67e9adb4090e8ebd4ea79588d9
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.25
-CurrentVersionCode: 25
+CurrentVersion: 1.0.27
+CurrentVersionCode: 27

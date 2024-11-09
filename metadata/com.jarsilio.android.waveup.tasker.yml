@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeDep
+  NonFreeDep:
+    en-US: Depends on Tasker, which is not free.
 Categories:
   - System
 License: GPL-3.0-only
@@ -36,7 +37,27 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.1.5
+    versionCode: 6
+    commit: 573f3ac72cd4e09a4b9cbc911a388811438f227e
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 0.1.6
+    versionCode: 7
+    commit: a8a8af9b97d5b5bee4c947787e875b14e5d2604f
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]+$
-CurrentVersion: 0.1.4
-CurrentVersionCode: 5
+CurrentVersion: 0.1.6
+CurrentVersionCode: 7

@@ -12,11 +12,13 @@ Changelog: https://github.com/tvbarthel/SimpleWeatherForecast/releases
 
 AutoName: SimpleWeatherForecast
 Description: |-
-    Gives you a 14-day forecast based on your current location. This
-    application is extremely light, fast, free and without any ads. It doesn’t
-    collect any personal information.
+  <b>NOTE:</b> App is no longer functioning.
 
-    AntiFeature: Billing library required. Gets data from OpenWeatherMap.
+  Gives you a 14-day forecast based on your current location. This
+  application is extremely light, fast, free and without any ads. It doesn't
+  collect any personal information.
+
+  AntiFeature: Billing library required. Gets data from OpenWeatherMap.
 
 RepoType: git
 Repo: https://github.com/tvbarthel/SimpleWeatherForecast
@@ -29,7 +31,8 @@ Builds:
     gradle:
       - yes
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: 1.3.0
 CurrentVersionCode: 8

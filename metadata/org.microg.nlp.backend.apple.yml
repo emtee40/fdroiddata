@@ -1,6 +1,8 @@
 AntiFeatures:
-  - Tracking
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on proprietary Apple backend service.
+  Tracking:
+    en-US: Apple tracking your location.
 Categories:
   - Navigation
 License: Apache-2.0
@@ -12,11 +14,11 @@ Changelog: https://github.com/microg/AppleWifiNlpBackend/releases
 
 AutoName: Apple UnifiedNlp Backend
 Description: |-
-    https://f-droid.org/packages/com.google.android.gms backend that uses Apple’s service to resolve WiFi
-    locations.
+  https://f-droid.org/packages/com.google.android.gms backend that uses Apple's service to resolve WiFi
+  locations.
 
-    Location calculation is done onboard and wifi locations are cached to minimize
-    data usage.
+  Location calculation is done onboard and wifi locations are cached to minimize
+  data usage.
 
 RepoType: git
 Repo: https://github.com/microg/AppleWifiNlpBackend.git
@@ -26,7 +28,7 @@ Builds:
     versionCode: 1000
     commit: v1.0.0
     srclibs:
-      - 1:UnifiedNlpApi@v1.0.0
+      - UnifiedNlpApi@v1.0.0
       - wire-runtime@wire-1.2.0
       - MapsAPI@v0.5
     prebuild: cp -a $$wire-runtime$$/src/main/java/* $$MapsAPI$$/src/* src/
@@ -36,7 +38,7 @@ Builds:
     versionCode: 1010
     commit: v1.0.1
     srclibs:
-      - 1:UnifiedNlpApi@v1.0.0
+      - UnifiedNlpApi@v1.0.0
       - wire-runtime@wire-1.2.0
       - MapsAPI@v0.5
     prebuild: cp -a $$wire-runtime$$/src/main/java/* $$MapsAPI$$/src/* src/
@@ -67,14 +69,6 @@ Builds:
   - versionName: 1.2.0
     versionCode: 10200
     commit: v1.2.0
-    submodules: true
-    gradle:
-      - yes
-
-  - versionName: 1.2.1
-    versionCode: 20037
-    disable: weird version output
-    commit: v1.2.1
     submodules: true
     gradle:
       - yes

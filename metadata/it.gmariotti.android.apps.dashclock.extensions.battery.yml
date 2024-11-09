@@ -7,10 +7,10 @@ IssueTracker: https://github.com/gabrielemariotti/dashclockbattery/issues
 Name: 'DashClock: Battery'
 AutoName: Battery Extension for DashClock
 Description: |-
-    * Current battery level
-    * Power type
-    * Battery details (Temperature, Voltage, Health)
-    * Optional Real time updates
+  * Current battery level
+  * Power type
+  * Battery details (Temperature, Voltage, Health)
+  * Optional Real time updates
 
 RepoType: git
 Repo: https://github.com/gabrielemariotti/dashclockbattery.git
@@ -26,7 +26,8 @@ Builds:
       - BatteryExtension/libs/dashclock-api-r1.1.jar
     prebuild: cp -r $$DashClock$$/api/src/com src/
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: 1.6.4
 CurrentVersionCode: 19

@@ -77,8 +77,96 @@ Builds:
       - yes
     prebuild: sed -i -e '/jetbrains.space/d' ../build.gradle.kts
 
+  - versionName: 3.1.0
+    versionCode: 79
+    commit: 17bb1e24a6aed9c1b34e508b10f3a04c75555298
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jetbrains.space/d' ../build.gradle.kts
+
+  - versionName: 3.1.2
+    versionCode: 81
+    commit: 8d86809ef2ad5cbf3d49d6f32991d589f7383b93
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jetbrains.space/d' ../build.gradle.kts
+
+  - versionName: 3.2.0
+    versionCode: 82
+    commit: e7ae2c7ac0c1894f8b92d4b8753ba58aef542791
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jetbrains.space/d' ../build.gradle.kts
+
+  - versionName: 3.2.1
+    versionCode: 83
+    commit: 80820fd3166051ce99039e2de54f1f32df3f168a
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jetbrains.space/d' ../build.gradle.kts
+
+  - versionName: 3.2.2
+    versionCode: 84
+    commit: e38198305776e8366048fd1d264018dd7093f549
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jetbrains.space/d' ../build.gradle.kts
+
+  - versionName: 3.2.3
+    versionCode: 85
+    commit: d4912e708ea92fc70689cb393fcc79148dd4b459
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jetbrains.space/d' ../build.gradle.kts
+
+  - versionName: 3.2.5
+    versionCode: 89
+    commit: e31c8047e7c26dbf0ebe4e4ff295031da080c9e1
+    subdir: android
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jetbrains.space/d' ../build.gradle.kts
+
+  - versionName: 3.2.6
+    versionCode: 90
+    commit: 99506c12c95e3bd4204c07713b69008834b9bc6e
+    subdir: android
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jetbrains.space/d' ../build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: android/build.gradle.kts|versionCode\s=\s(\d+)|build.gradle.kts|version\s=\s"([\d.]+)"
-CurrentVersion: 3.0.8
-CurrentVersionCode: 78
+CurrentVersion: 3.2.6
+CurrentVersionCode: 90

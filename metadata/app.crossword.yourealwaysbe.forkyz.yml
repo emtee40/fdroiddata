@@ -1,15 +1,17 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Connects to theguardian.com to obtain puzzles.
 Categories:
   - Games
 License: GPL-3.0-only
-SourceCode: https://github.com/yourealwaysbe/forkyz
-IssueTracker: https://github.com/yourealwaysbe/forkyz/issues
+SourceCode: https://gitlab.com/Hague/forkyz
+IssueTracker: https://gitlab.com/Hague/forkyz/-/issues
+Changelog: https://hague.gitlab.io/forkyz/changes.html
 
 AutoName: Forkyz
 
 RepoType: git
-Repo: https://github.com/yourealwaysbe/forkyz
+Repo: https://gitlab.com/Hague/forkyz.git
 
 Builds:
   - versionName: '5'
@@ -472,7 +474,287 @@ Builds:
       - gfx/*.icns
       - gfx/*.opacity
 
+  - versionName: '38'
+    versionCode: 3800000
+    commit: 0252879088d3b0924b6c4856d5419795fd76be66
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '39'
+    versionCode: 3900000
+    commit: 149d56ab74128b776e8129a02d765657e27f0e10
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '40'
+    versionCode: 4000000
+    commit: 780c9d6e21c2996d439fce2b61a71454a67333ea
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '41'
+    versionCode: 4100000
+    commit: a04e0e58dfcdcfc77559b3ce80f849911122e685
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '42'
+    versionCode: 4200000
+    commit: v42
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '43'
+    versionCode: 4300000
+    commit: ef0dcdbb3806fb0748df9142b1c8df4ba2b29097
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '44'
+    versionCode: 4400000
+    commit: 0d2a60df822633bd76aff7cb57e4664124b538fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '45'
+    versionCode: 4500000
+    commit: 73e2c605e2d91e00de4b123cc005c3ac7bdb573c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '46'
+    versionCode: 4600000
+    commit: b47b16442877f5b7e6fce7f9d922fc689ec184aa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '47'
+    versionCode: 4700000
+    commit: ff0ec90cc1906b50ee539e45cd974b649a639831
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '48'
+    versionCode: 4800000
+    commit: 8b53bc622a0e30f5fc6d2f25cdcca25498d4c24a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '49'
+    versionCode: 4900000
+    commit: be3018ce7dbf562550f75cad68f67ad28f46a819
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '50'
+    versionCode: 5000000
+    commit: 80677498b1710fb48021c27e617673eaa8fd05da
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '51'
+    versionCode: 5100000
+    commit: 747c0b6d16a3056d9729d4eab2c815cb017e6829
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '52'
+    versionCode: 5200000
+    commit: ef24d668d8a1b53e049ad2f730d596c2e03346a6
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '53'
+    versionCode: 5300000
+    commit: 736dbd1e3d0d2588f526d41b660f51ceaf8a9cad
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '54'
+    versionCode: 5400000
+    commit: 7af611ace43dddf881d66e69aa9216b8ceb38da8
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '55'
+    versionCode: 5500000
+    commit: 39983ca65dbecc7f26ddff033e0d5860089f59ea
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '56'
+    versionCode: 5600000
+    commit: 0bef5f67e88a0289c5248a4cc3840f3da785c882
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
+  - versionName: '58'
+    versionCode: 5800000
+    commit: 709fdf03561e5ddd0e05596d3be6c4839ea4775c
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - puzlib/src/test
+    scanignore:
+      - gfx/*.icns
+      - gfx/*.opacity
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '37'
-CurrentVersionCode: 3700000
+CurrentVersion: '58'
+CurrentVersionCode: 5800000

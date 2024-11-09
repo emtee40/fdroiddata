@@ -169,42 +169,106 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 2.0.0-beta2
-    versionCode: 22
-    commit: 3ea1dffaca37c82120a9162980dd92f9fa113419
+  - versionName: 2.0.0
+    versionCode: 28
+    commit: bcb178d9311638b1633dbd949fe2744c7b670075
     subdir: app
     gradle:
       - yes
 
-  - versionName: 2.0.0-beta3
-    versionCode: 23
-    commit: 8b3bccdb0db776ec6c983378b86ee69395f342ff
+  - versionName: 2.1.0
+    versionCode: 29
+    commit: 1940ff28e5d7d5435dff7b03cfa6703314d32506
     subdir: app
     gradle:
       - yes
 
-  - versionName: 2.0.0-beta4
-    versionCode: 24
-    commit: c7a9e388b1c9d5f4f69db6a9bc2d9b611fb9ade4
+  - versionName: 2.1.2
+    versionCode: 31
+    commit: 088cfcc54ea22bb3345e9710ff264501e5fc20d5
     subdir: app
     gradle:
       - yes
 
-  - versionName: 2.0.0-beta5
-    versionCode: 25
-    commit: 9be97c4e2a27787ec02b47d18ae8946394c3832c
+  - versionName: 2.1.3
+    versionCode: 32
+    commit: cbe7631964a73a0622f0e93c17fce533a5a9b983
     subdir: app
     gradle:
       - yes
 
-  - versionName: 2.0.0-beta7
-    versionCode: 27
-    commit: b18c2f4fbc2c2da678ca19f29a0745a575ad5766
+  - versionName: 2.1.4
+    versionCode: 33
+    commit: 73664d42f4ebf05de006faf820a7d76905a9e294
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.5
+    versionCode: 34
+    commit: 84db89b282050f2eab59e21b7a38c74cb562d0bf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.6
+    versionCode: 35
+    commit: 3f08b39e9c9e837f4fd6c7c6409ac9d754590ca7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.1
+    versionCode: 38
+    commit: 1351eb2c2468e1ba47465fd15c76bd41b3cfb8ca
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.0-beta2
+    versionCode: 40
+    commit: 109281737f607b316c10d3780694186130f03280
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.0-beta2
+    versionCode: 41
+    commit: ff2e24dbabe050489dfd080b8331c91478810643
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.0.0-beta4
+    versionCode: 42
+    commit: ca427f4aba9fd301bd0578c313be610b70ce80d7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 3.0.0
+    versionCode: 45
+    commit: 1b26af48b5974ba9221d1c374f459c6ebc2b5b26
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.1
+    versionCode: 46
+    commit: 5639765a6335123ac4ba6429440f9cacefabfb4b
     subdir: app
     gradle:
       - yes
 
 AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 2.0.0-beta7
-CurrentVersionCode: 27
+UpdateCheckMode: Tags ^v[\d.]+$
+CurrentVersion: 3.1.0
+CurrentVersionCode: 46

@@ -8,7 +8,7 @@ IssueTracker: https://github.com/bogkonstantin/android_income_sms_gateway_webhoo
 Changelog: https://github.com/bogkonstantin/android_income_sms_gateway_webhook/releases
 
 Name: SMS to URL Forwarder
-AutoName: Incoming Sms Forwarder
+AutoName: Sms Forwarder
 
 RepoType: git
 Repo: https://github.com/bogkonstantin/android_income_sms_gateway_webhook
@@ -28,7 +28,35 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.2.1
+    versionCode: 9
+    commit: 3f7bb163ac425864943f6e421c2819ee01b2945b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.2
+    versionCode: 10
+    commit: edef19ecb539827270bb3bcdece814ee528c9ba9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.3
+    versionCode: 11
+    commit: c1a3881dd9986b02bf0dc675cc7733190e2f55cc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.3.0
+    versionCode: 12
+    commit: 6c401cf496f5b3b107ebf92471dde56323538cc5
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.1.1
-CurrentVersionCode: 8
+CurrentVersion: 2.3.0
+CurrentVersionCode: 12

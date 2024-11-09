@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: App connects to icons.duckduckgo.com.
 Categories:
   - Internet
 License: GPL-3.0-only
@@ -10,7 +11,7 @@ IssueTracker: https://gitlab.com/manimaran/website-monitor/issues
 AutoName: Website Monitor
 
 RepoType: git
-Repo: https://gitlab.com/manimaran/website-monitor
+Repo: https://gitlab.com/manimaran/website-monitor.git
 
 Builds:
   - versionName: '1.0'
@@ -67,7 +68,25 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.1.0
+    versionCode: 8
+    commit: c543f0f4712d9aa3d4f7dd3ed7a51131cf0e5432
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 3.0.0
+    versionCode: 9
+    commit: 8801ef1ec2dd8df102945da8e43babd0477b39fe
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.0
-CurrentVersionCode: 7
+CurrentVersion: 3.0.0
+CurrentVersionCode: 9

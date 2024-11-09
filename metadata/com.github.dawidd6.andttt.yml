@@ -7,7 +7,7 @@ Changelog: https://gitlab.com/dawidd6/andttt/releases
 
 AutoName: AndTTT
 Description: Tic-tac-toe game with various game modes. It includes animations and
-    night-mode.
+  night-mode.
 
 RepoType: git
 Repo: https://github.com/dawidd6/andttt
@@ -48,7 +48,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 0.6.6
 CurrentVersionCode: 66

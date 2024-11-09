@@ -9,9 +9,9 @@ Changelog: https://github.com/agateau/cat-avatar-generator-app/blob/HEAD/CHANGEL
 
 AutoName: Cat Avatar Generator
 Description: |-
-    Generate avatar and profile pictures based on
-    <a href="http://www.peppercarrot.com/extras/html/2016_cat-generator/index.php">Pepper and
-    Carrot</a> by David Revoy.
+  Generate avatar and profile pictures based on
+  <a href="http://www.peppercarrot.com/extras/html/2016_cat-generator/index.php">Pepper and
+  Carrot</a> by David Revoy.
 
 RepoType: git
 Repo: https://github.com/agateau/cat-avatar-generator-app
@@ -31,7 +31,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.2.1
+    versionCode: 3
+    commit: 4ac2caa38bf6a894413bf83dd73dbfa8e9812bd9
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.2.0
-CurrentVersionCode: 2
+CurrentVersion: 0.2.1
+CurrentVersionCode: 3

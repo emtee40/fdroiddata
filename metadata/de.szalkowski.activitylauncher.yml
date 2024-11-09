@@ -9,8 +9,8 @@ Translation: https://crowdin.com/project/ActivityLauncher
 
 AutoName: Activity Launcher
 Description: |-
-    Create shortcuts for any installed app and even hidden activities to launch them
-    with ease.
+  Create shortcuts for any installed app and even hidden activities to launch them
+  with ease.
 
 RepoType: git
 Repo: https://github.com/butzist/ActivityLauncher.git
@@ -200,7 +200,76 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.14.7
+    versionCode: 37
+    commit: ca0c2d3d0bb7fb2e04364508e8429b249c412669
+    subdir: ActivityLauncherApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.14.8
+    versionCode: 38
+    commit: 1c975beb7357fc2ee4b36eac9122e64f63389ad8
+    subdir: ActivityLauncherApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.15.0
+    versionCode: 40
+    commit: 6f9610662667fbb36d2635200250589ab42b026b
+    subdir: ActivityLauncherApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.15.2
+    versionCode: 41
+    commit: 953acd82e8c4bfddc3158c288b4cc133c96eace2
+    subdir: ActivityLauncherApp
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.0
+    versionCode: 50
+    commit: 3dade188168473a7609620924b45da45caee626a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 51
+    commit: 5976e01b0588291fe6eb04d61030fc06b9cd8765
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.2
+    versionCode: 52
+    commit: 4b6f03f1a8fe93dec3a20e3683492f1c83156b0e
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.14.6
-CurrentVersionCode: 36
+CurrentVersion: 2.0.2
+CurrentVersionCode: 52

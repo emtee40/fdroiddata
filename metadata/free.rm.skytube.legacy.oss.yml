@@ -1,8 +1,9 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on Youtube.
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-only
 WebSite: https://skytube-app.com/
 SourceCode: https://github.com/SkyTubeTeam/SkyTubeLegacy
@@ -13,7 +14,7 @@ Changelog: https://github.com/SkyTubeTeam/SkyTubeLegacy/releases
 AutoName: SkyTube Legacy
 
 RepoType: git
-Repo: https://github.com/SkyTubeTeam/SkyTubeLegacy
+Repo: https://github.com/SkyTubeTeam/SkyTubeLegacy.git
 
 Builds:
   - versionName: '2.984'
@@ -38,9 +39,67 @@ Builds:
     rm:
       - app/libs/*.jar
 
+  - versionName: '2.986'
+    versionCode: 46
+    commit: caeb58fcb47b7b18acf427eb4ad5babd63d0caca
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.987'
+    versionCode: 47
+    commit: 66fa3b0669e26e0efa1022ac365c132a3138826c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.988'
+    versionCode: 48
+    commit: 4b1d189cb1e360a29a79cf9f5dbd54e3e9702db7
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.989'
+    versionCode: 49
+    commit: 11811a5251e4199261e8911362685f7f35c6526e
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.990'
+    versionCode: 50
+    commit: 5878424a395085e7b4c94da492123e45c1fc041c
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
+  - versionName: '2.991'
+    versionCode: 51
+    commit: edacde54af815ade7bdce9992a3adf0d4f7ebb16
+    subdir: app
+    gradle:
+      - oss
+    rm:
+      - app/libs/*.jar
+
 MaintainerNotes: '* Current versions include app/libs/*.jar. Remove them.'
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '2.985'
-CurrentVersionCode: 45
+CurrentVersion: '2.991'
+CurrentVersionCode: 51

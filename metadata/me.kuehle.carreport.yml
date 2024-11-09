@@ -1,6 +1,6 @@
 Categories:
-  - Navigation
   - Money
+  - Navigation
 License: Apache-2.0
 WebSite: https://bitbucket.org/frigus02/car-report
 SourceCode: https://bitbucket.org/frigus02/car-report/src
@@ -8,27 +8,29 @@ IssueTracker: https://bitbucket.org/frigus02/car-report/issues
 
 AutoName: Car Report
 Description: |-
-    Get an idea of how much your car costs. Simply enter the costs after refueling
-    and get nice reports. These are:
-    <ol>
-    <li>Fuel consumption</li>
-    <li>Fuel price</li>
-    <li>Mileage</li>
-    <li>Average costs of the car per day, month and year</li>
-    </ol>
-    Additional features:
+  <b>NOTE:</b> App repo is archived by dev. It is read-only for all users and it is no longer actively maintained.
 
-    * Simple calculations like "how much will 5 liters of fuel cost?".
-    * Manage other income/expenses such as repairs and recurring costs such as taxes.
-    * Synchronize your data with Dropbox, Google Drive or WebDAV, export/import data as CSV and make simple backups to SD card.
-    * Car related reminders like "general inspection every year or after 15.000 km".
+  Get an idea of how much your car costs. Simply enter the costs after refueling
+  and get nice reports. These are:
+  <ol>
+  <li>Fuel consumption</li>
+  <li>Fuel price</li>
+  <li>Mileage</li>
+  <li>Average costs of the car per day, month and year</li>
+  </ol>
+  Additional features:
 
-    Permissions:
+  * Simple calculations like "how much will 5 liters of fuel cost?".
+  * Manage other income/expenses such as repairs and recurring costs such as taxes.
+  * Synchronize your data with Dropbox, Google Drive or WebDAV, export/import data as CSV and make simple backups to SD card.
+  * Car related reminders like "general inspection every year or after 15.000 km".
 
-    Network access: Used to synchronize with Dropbox/Google Drive/WebDAV, if
-    enabled. Manage acounts: Used for synchronization. Write to SD card: Used to
-    read/write backup and CSV exports to SD card. Run at startup: Used to show
-    reminders after device reboot.
+  Permissions:
+
+  Network access: Used to synchronize with Dropbox/Google Drive/WebDAV, if
+  enabled. Manage acounts: Used for synchronization. Write to SD card: Used to
+  read/write backup and CSV exports to SD card. Run at startup: Used to show
+  reminders after device reboot.
 
 RepoType: git
 Repo: https://bitbucket.org/frigus02/car-report.git
@@ -318,7 +320,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.18.3
     versionCode: 67
@@ -329,7 +331,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.18.4
     versionCode: 68
@@ -340,7 +342,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.19.0
     versionCode: 69
@@ -351,7 +353,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.20.0
     versionCode: 70
@@ -362,7 +364,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.21.0
     versionCode: 71
@@ -373,7 +375,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.22.0
     versionCode: 72
@@ -384,7 +386,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.23.0
     versionCode: 73
@@ -395,7 +397,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.23.1
     versionCode: 74
@@ -406,7 +408,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.23.2
     versionCode: 75
@@ -417,7 +419,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.23.3
     versionCode: 76
@@ -428,7 +430,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.24.0
     versionCode: 77
@@ -439,7 +441,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.24.1
     versionCode: 78
@@ -450,7 +452,7 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
   - versionName: 3.25.0
     versionCode: 79
@@ -461,9 +463,10 @@ Builds:
     rm:
       - tools
     prebuild: sed -i -e '/fullImplementation.* {/,/}/d' -e '/fullImplementation /d'
-        build.gradle
+      build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 3.25.0
 CurrentVersionCode: 79

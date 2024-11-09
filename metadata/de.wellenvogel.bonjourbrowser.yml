@@ -10,7 +10,7 @@ IssueTracker: https://github.com/wellenvogel/BonjourBrowser/issues
 AutoName: BonjourBrowser
 
 RepoType: git
-Repo: https://github.com/wellenvogel/BonjourBrowser
+Repo: https://github.com/wellenvogel/BonjourBrowser.git
 
 Builds:
   - versionName: '1.6'
@@ -48,7 +48,25 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.13'
+    versionCode: 113
+    commit: 8f4e718be9f7d98a84f36759ed99d560517add3c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.14'
+    versionCode: 114
+    commit: d120738a39257e5dc11b91cdf019df2d8892d3d0
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.12'
-CurrentVersionCode: 112
+CurrentVersion: '1.14'
+CurrentVersionCode: 114

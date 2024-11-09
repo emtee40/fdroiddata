@@ -1,0 +1,44 @@
+Categories:
+  - Science & Education
+License: MIT
+AuthorName: ssttkkl
+AuthorEmail: huang.wen.long@hotmail.com
+SourceCode: https://github.com/ssttkkl/mahjong-utils-app
+IssueTracker: https://github.com/ssttkkl/mahjong-utils-app/issues
+Changelog: https://github.com/ssttkkl/mahjong-utils-app/releases
+
+RepoType: git
+Repo: https://github.com/ssttkkl/mahjong-utils-app.git
+Binaries: https://github.com/ssttkkl/mahjong-utils-app/releases/download/v%v/composeApp-release.apk
+
+Builds:
+  - versionName: 1.0.9
+    versionCode: 10009
+    commit: v1.0.9
+    subdir: composeApp
+    gradle:
+      - yes
+    rm:
+      - iosApp
+
+  - versionName: 1.0.11
+    versionCode: 10011
+    commit: v1.0.11
+    subdir: composeApp
+    submodules: true
+    init: cp ../env.properties.fdroid ../env.properties
+    gradle:
+      - yes
+    rm:
+      - iosApp
+    scandelete:
+      - external/Capturable/docs/capturable/package-list
+      - external/mahjong-utils/docs/mahjong-utils/package-list
+
+AllowedAPKSigningKeys: 5c39f22ed1192933884426cc8cd14f3302f0d481573c056a66f0a5bec11e7186
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: composeApp/version.properties|versionCode=(\d+)|.|versionName=(.*)
+CurrentVersion: 1.0.11
+CurrentVersionCode: 10011

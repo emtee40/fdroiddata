@@ -1,6 +1,8 @@
 AntiFeatures:
-  - NonFreeNet
-  - Tracking
+  NonFreeNet:
+    en-US: Depends on the non-libre robozzle.com site.
+  Tracking:
+    en-US: Data is collected by robozzle.com.
 Categories:
   - Development
   - Games
@@ -40,7 +42,29 @@ Builds:
       - mv $$ksoap2-android$$/ksoap2-android-assembly/target/ksoap2-android-assembly-3.6.4-jar-with-dependencies.jar
         libs/ksoap2-android-3.6.4.jar
 
+  - versionName: 0.4.3.54
+    versionCode: 61
+    commit: 1560981ce88089b8c0c9db73671f1386c387b990
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    srclibs:
+      - ksoap2-android@3.6.4
+    prebuild:
+      - sed -i -e '/maven/d' build.gradle
+      - sed -i -e "/^repositories {/a flatDir { dirs 'libs' }" build.gradle
+      - sed -i -e 's/>1.5</>1.6</g' $$ksoap2-android$$/pom.xml
+    build:
+      - pushd $$ksoap2-android$$
+      - ./mvnw clean install
+      - popd
+      - mkdir -p libs
+      - mv $$ksoap2-android$$/ksoap2-android-assembly/target/ksoap2-android-assembly-3.6.4-jar-with-dependencies.jar
+        libs/ksoap2-android-3.6.4.jar
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.4.3.53
-CurrentVersionCode: 60
+CurrentVersion: 0.4.3.54
+CurrentVersionCode: 61

@@ -1,14 +1,14 @@
 Categories:
   - Security
 License: GPL-3.0-only
-SourceCode: https://jairajjangle.github.io/motionEye_app_HomeSurveillanceSystem/
-IssueTracker: https://github.com/JairajJangle/motionEye_app_HomeSurveillanceSystem/issues
-Changelog: https://github.com/JairajJangle/motionEye_app_HomeSurveillanceSystem/releases
+SourceCode: https://github.com/JairajJangle/motioneye-android
+IssueTracker: https://github.com/JairajJangle/motioneye-android/issues
+Changelog: https://github.com/JairajJangle/motioneye-android/releases
 
 AutoName: Motion Eye
 
 RepoType: git
-Repo: https://github.com/JairajJangle/motionEye_app_HomeSurveillanceSystem
+Repo: https://github.com/JairajJangle/motioneye-android
 
 Builds:
   - versionName: 0.9.8.0.1
@@ -73,7 +73,40 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.0.1
+    versionCode: 100
+    commit: ac8cec7f798b125c50f7c3345cf9e1f4bffe9445
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.4
+    versionCode: 104
+    commit: 3f16fd0f93abb0f5aaaaf16a2131840838885fcd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.0.5
+    versionCode: 105
+    commit: 7bf8fdbf6ebf8860c1bbb427c65be240fb89b183
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.9.9.2.5
-CurrentVersionCode: 95
+CurrentVersion: 1.0.5
+CurrentVersionCode: 105

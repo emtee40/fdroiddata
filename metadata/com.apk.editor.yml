@@ -208,7 +208,28 @@ Builds:
     gradle:
       - full
 
+  - versionName: v0.27
+    versionCode: 27
+    commit: 5f3dc0ff0d059ed780b07b9f0b6b8b041c66f70d
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: v0.28
+    versionCode: 28
+    commit: 8dd87a7d6bd20b06d073783aba5cc4de52ed4fbb
+    subdir: app
+    gradle:
+      - full
+
+  - versionName: v0.29
+    versionCode: 29
+    commit: fe53f2c6a388be7dc69085178c9fb8cd01ca7b01
+    subdir: app
+    gradle:
+      - full
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v0.25
-CurrentVersionCode: 25
+CurrentVersion: v0.29
+CurrentVersionCode: 29

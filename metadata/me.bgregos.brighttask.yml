@@ -55,7 +55,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.6.0
+    versionCode: 19
+    commit: f83797ed13ab7697105c3e541ba86760c4b88b39
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 20
+    commit: d5fd4d141f4952f1c72ff7dd99359cca10d73a31
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.5.5
-CurrentVersionCode: 18
+CurrentVersion: 1.6.1
+CurrentVersionCode: 20

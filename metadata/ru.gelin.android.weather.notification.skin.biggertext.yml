@@ -1,8 +1,8 @@
 Categories:
   - Internet
 License: GPL-2.0-only
-SourceCode: https://bitbucket.org/gelin/weather-notification
-IssueTracker: https://bitbucket.org/gelin/weather-notification/issues
+SourceCode: https://github.com/gelin/weather-notification
+IssueTracker: https://github.com/gelin/weather-notification/issues
 
 Name: 'Weather Skin: Bigger Text'
 AutoName: 'Weather notification skin: bigger text'
@@ -22,7 +22,8 @@ Builds:
     commit: v.0.3.7
     subdir: skins/bigger-text
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 0.3.7
 CurrentVersionCode: 18

@@ -9,7 +9,7 @@ Donate: https://www.patreon.com/omgodse
 AutoName: Notally
 
 RepoType: git
-Repo: https://github.com/OmGodse/Notally
+Repo: https://github.com/OmGodse/Notally.git
 
 Builds:
   - versionName: '3.0'
@@ -188,7 +188,95 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '5.1'
+    versionCode: 46
+    commit: 2c071999999d54107031633f7a6777b99a6a20f1
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.2'
+    versionCode: 47
+    commit: 11c043979bbe7b4daba3aba84e5df738fd7e1c4d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '5.3'
+    versionCode: 48
+    commit: 624f7ef908b236a443b3f25bb36c658be16d23f3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '5.4'
+    versionCode: 49
+    commit: 82f004d3e17125532ee19bd2431720012b9b7c02
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '5.5'
+    versionCode: 50
+    commit: 217ceefdc997c184ef3eb3c0c37847e07f2378aa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '5.6'
+    versionCode: 51
+    commit: ad6a91072b7836d8c97ae9e2110adca8d01f1d28
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '5.7'
+    versionCode: 52
+    commit: 64a1671c9cf412fcb04407095094f79889415f8e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '5.8'
+    versionCode: 53
+    commit: 767c1eb8d03f54263866e8aec6546430afbf225b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '5.9'
+    versionCode: 54
+    commit: 6c1591e0fee0b0a5717f8fb3b4bdfdd586904e82
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '5.0'
-CurrentVersionCode: 45
+CurrentVersion: '5.9'
+CurrentVersionCode: 54

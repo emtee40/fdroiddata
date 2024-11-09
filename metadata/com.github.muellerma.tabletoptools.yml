@@ -3,6 +3,7 @@ Categories:
 License: Apache-2.0
 SourceCode: https://github.com/mueller-ma/TabletopTools
 IssueTracker: https://github.com/mueller-ma/TabletopTools/issues
+Translation: https://crowdin.com/project/tabletop-tools
 Changelog: https://github.com/mueller-ma/TabletopTools/releases
 
 AutoName: Tabletop Tools
@@ -191,7 +192,109 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.20'
+    versionCode: 21
+    commit: ab7f0bb9c1350405a358e76d35f62271b907aeaa
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '1.21'
+    versionCode: 22
+    commit: 75f3c74b9104abe7503e026a10c30f9bdce07239
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.22'
+    versionCode: 23
+    commit: a1eb50f63e797f6d08152f8ec5b20b4e3006d757
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.23'
+    versionCode: 24
+    commit: 4d5a6bf8a97bd49a80f33d51d364880201d30e63
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.24'
+    versionCode: 25
+    commit: b7dd44de061f01fbaccf6a1c5fc44c90a77d9d6a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.25'
+    versionCode: 26
+    commit: aaab899f587407011ba47c8a24c727ad4d226de9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.26'
+    versionCode: 27
+    commit: f6a40960c1788bedb1c94b98d0b278c90dbc69a7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.27'
+    versionCode: 28
+    commit: c28403dd61d2557aeba280ea36c5e3e044a548f4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.28'
+    versionCode: 29
+    commit: dcd9b75f3c01b0777acebdda1f9937b292d533d2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: '1.29'
+    versionCode: 30
+    commit: 6a5a3684a377944bdc6dc5d2a95e845efdbb854a
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.19'
-CurrentVersionCode: 20
+CurrentVersion: '1.29'
+CurrentVersionCode: 30

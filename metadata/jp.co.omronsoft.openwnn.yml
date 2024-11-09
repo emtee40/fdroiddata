@@ -5,36 +5,15 @@ SourceCode: https://android.googlesource.com/platform/packages/inputmethods/Open
 
 AutoName: OpenWnn
 Description: |-
-    Japanese keyboard/IME from the Android Open Source Project.
+  Japanese keyboard/IME from the Android Open Source Project.
 
-    Status: it may not be possible to build future versions as they rely on
-    resources that are not in the Android SDK.
+  Status: it may not be possible to build future versions as they rely on
+  resources that are not in the Android SDK.
 
 RepoType: git
 Repo: https://android.googlesource.com/platform/packages/inputmethods/OpenWnn
 
 Builds:
-  - versionName: 1.3.5
-    versionCode: 1
-    disable: buggy at android-4.0.4_r2.1
-    commit: android-4.0.4_r2.1
-    prebuild:
-      - sed -i -e '18 s/>//g' -e '19 a android:versionCode="1"\nandroid:versionName="1.3.5">'
-        AndroidManifest.xml
-      - sed -i '23 i <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="14"/>'
-        AndroidManifest.xml
-    target: android-14
-    build: $$NDK$$/ndk-build APP_BUILD_SCRIPT=Android.mk
-
-  - versionName: 1.3.5.1
-    versionCode: 2
-    disable: causes same crash as above - android-4.0.4_r2.1
-    commit: unknown - see disabled
-    patch:
-      - styles_2.patch
-    target: android-14
-    build: $$NDK$$/ndk-build APP_BUILD_SCRIPT=Android.mk
-
   - versionName: 1.3.5.2
     versionCode: 3
     commit: android-4.0.4_r2.1
@@ -44,7 +23,8 @@ Builds:
     build: $$NDK$$/ndk-build APP_BUILD_SCRIPT=Android.mk
     ndk: r12b
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Static
+UpdateCheckMode: None
 CurrentVersion: 1.3.5.2
 CurrentVersionCode: 3

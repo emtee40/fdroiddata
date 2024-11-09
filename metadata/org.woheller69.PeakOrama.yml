@@ -1,0 +1,41 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: PeakFinder-API is not open source
+Categories:
+  - Navigation
+License: GPL-3.0-only
+AuthorName: woheller69
+SourceCode: https://github.com/woheller69/PeakOrama
+IssueTracker: https://github.com/woheller69/PeakOrama/issues
+
+AutoName: PeakOrama
+
+RepoType: git
+Repo: https://github.com/woheller69/PeakOrama.git
+
+Builds:
+  - versionName: '3.0'
+    versionCode: 30
+    commit: c716b3a2af5d76fa063d2eaeaa8f0cedfe3b1c5a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.1'
+    versionCode: 31
+    commit: 0b260316c76743afac33746ca79c77e40572217f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.2'
+    versionCode: 32
+    commit: 63666bb430eb10c3602bb48d2ec335d39f93fd50
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '3.2'
+CurrentVersionCode: 32

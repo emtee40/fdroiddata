@@ -9,18 +9,20 @@ Donate: https://sourceforge.net/p/ghostcommander/donate
 
 AutoName: Ghost Commander
 Description: |-
-    Dual panel file manager, like Norton Commander, Midnight Commander or Total
-    Commander.
+  Dual panel file manager, like Norton Commander, Midnight Commander or Total
+  Commander.
 
-    Notable features:
+  Notable features:
 
-    * Ability to copy and move files between its two panels
-    * Create or extract (unzip) ZIP archives
-    * Transfer files via FTP/SFTP/SMB
-    * Full-featured app manager able to access extra info and share apks
+  * Ability to copy and move files between its two panels
+  * Create or extract (unzip) ZIP archives
+  * Transfer files via FTP/SFTP/SMB
+  * Full-featured app manager able to access extra info and share apks
 
-    Requires root: No, but if provided you can remount filesystems and mess around
-    with system files.
+  Requires root: No, but if provided you can remount filesystems and mess around
+  with system files.
+
+  Note: Due to missing deps, SFTP server connections authenticated with Kerberos might fail on certain newer devices.
 
 RepoType: git-svn
 Repo: https://svn.code.sf.net/p/ghostcommander/svn/
@@ -638,16 +640,165 @@ Builds:
     scanignore:
       - src/main/java/com/ghostsq/commander/adapters/CA.java
 
+  - versionName: 1.62.2b1
+    versionCode: 442
+    commit: c4fd52552ab91fadbd83cee31643d453cae4351c
+    gradle:
+      - fdroid
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.62.3b2
+    versionCode: 444
+    commit: r100
+    gradle:
+      - fdroid
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.62.3b3
+    versionCode: 445
+    commit: r101
+    gradle:
+      - fdroid
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.62.3
+    versionCode: 447
+    commit: r103
+    gradle:
+      - fdroid
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.63b1
+    versionCode: 449
+    commit: r104
+    gradle:
+      - fdroid
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.63b4
+    versionCode: 452
+    commit: r106
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+    gradle:
+      - fdroid
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.63.1b4
+    versionCode: 459
+    commit: r115
+    gradle:
+      - fdroid
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.63.1b6
+    versionCode: 461
+    commit: r116
+    gradle:
+      - fdroid
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.64b1
+    versionCode: 464
+    commit: r119
+    gradle:
+      - fdroid
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.64b2
+    versionCode: 465
+    commit: r120
+    gradle:
+      - fdroid
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.64b4
+    versionCode: 467
+    commit: r121
+    gradle:
+      - free
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.64.1b1
+    versionCode: 469
+    commit: r122
+    gradle:
+      - free
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
 MaintainerNotes: |-
-    No commit messages in source repo! No tags. Apks on website can be used to
-    confirm a release is real. Commit where AndroidManifest is changed usually
-    corresponds to version.
+  No commit messages in source repo! No tags. Apks on website can be used to
+  confirm a release is real. Commit where AndroidManifest is changed usually
+  corresponds to version.
 
-    The scanignore is for the dex class loading which is used for loading plugins.
+  The scanignore is for the dex class loading which is used for loading plugins.
 
-    As of 1.60a the repo has changed from https://svn.code.sf.net/p/ghostcommander/code/ to https://svn.code.sf.net/p/ghostcommander/svn/
+  As of 1.60a the repo has changed from https://svn.code.sf.net/p/ghostcommander/code/ to https://svn.code.sf.net/p/ghostcommander/svn/
 
 AutoUpdateMode: None
 UpdateCheckMode: RepoManifest
-CurrentVersion: 1.61.1b2
-CurrentVersionCode: 438
+CurrentVersion: 1.64.1b1
+CurrentVersionCode: 469

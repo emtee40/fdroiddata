@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeAdd
+  NonFreeDep:
+    en-US: Only needed for/work with proprietary audio apps.
 Categories:
   - System
 License: GPL-3.0-only
@@ -115,7 +116,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.6.0
+    versionCode: 42
+    commit: 51fb5782f711388c6632fa2d762b4beded3c9320
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.1-prod
+    versionCode: 49
+    commit: ee82c89d9dc70219f497910bb2af812d4a08254d
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.5.5
-CurrentVersionCode: 40
+CurrentVersion: 0.6.1-prod
+CurrentVersionCode: 49

@@ -3,13 +3,13 @@ Categories:
 License: GPL-3.0-or-later
 AuthorName: Andreas Redmer
 AuthorEmail: ar-appleflinger@abga.be
-AuthorWebSite: http://super-sm.art/
-WebSite: http://super-sm.art/apple-flinger.html
+AuthorWebSite: http://andreas.redmer.super-sm.art/
+WebSite: http://apple-flinger.super-sm.art/
 SourceCode: https://gitlab.com/ar-/apple-flinger
 IssueTracker: https://gitlab.com/ar-/apple-flinger/issues
 Translation: https://hosted.weblate.org/engage/apple-flinger/
 Changelog: https://gitlab.com/ar-/apple-flinger/tags
-Donate: https://super-sm.art/apple-flinger-donate.html
+Donate: https://gitlab.com/ar-/apple-flinger/-/blob/master/DONATE.md
 Liberapay: ar-
 Bitcoin: 1J2bbhJYksSjeynGGhuSPN9aTEaxiGm4nR
 
@@ -261,7 +261,65 @@ Builds:
     scanignore:
       - android/libs/*
 
+  - versionName: 1.5.9
+    versionCode: 1005009
+    commit: ba5e50a88fad1f93fbbce2e1533671becf976ce1
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sed -i -e 's/-3.3/-7.3.3/' gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 1.5.10
+    versionCode: 1005010
+    commit: 65cf71e8f2b9eb5743878b08d64025e81754d70d
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sed -i -e 's/-3.3/-7.3.3/' gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 1.5.11
+    versionCode: 1005011
+    commit: 296bb3d690aba461565e1089ffa1734ef8b4de0e
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sed -i -e 's/-3.3/-7.3.3/' gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 1.5.12
+    versionCode: 1005012
+    commit: 2c76f1fdc90606d0fe4f49450b8036b113887e7c
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+    prebuild: sed -i -e 's/-3.3/-7.3.3/' gradle/wrapper/gradle-wrapper.properties
+
+  - versionName: 1.5.13
+    versionCode: 1005013
+    commit: 6121b46959ee1a5fb1db644e5f2d0c86e4b3effe
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+
+  - versionName: 1.5.14
+    versionCode: 1005014
+    commit: c22082aac95741164071c9671c34bd691f5515bb
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.5.8
-CurrentVersionCode: 1005008
+CurrentVersion: 1.5.14
+CurrentVersionCode: 1005014

@@ -8,9 +8,9 @@ IssueTracker: https://github.com/richsmith/sexytopo/issues
 
 AutoName: SexyTopo
 Description: |-
-    Assists in cave surveying. It interfaces with an automated measuring device (the
-    Disto-X) and builds up an accurate model of the cave. It also provides a
-    sketching environment for the cave surveyor to fill out the details.
+  Assists in cave surveying. It interfaces with an automated measuring device (the
+  Disto-X) and builds up an accurate model of the cave. It also provides a
+  sketching environment for the cave surveyor to fill out the details.
 
 RepoType: git
 Repo: https://github.com/richsmith/sexytopo
@@ -96,7 +96,75 @@ Builds:
       - sed -i -e '/crashlytics/Id' src/main/java/org/hwyl/sexytopo/control/*.java
         src/main/java/org/hwyl/sexytopo/control/activity/SexyTopoActivity.java
 
-AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
-CurrentVersion: 1.6.0
-CurrentVersionCode: 63
+  - versionName: 1.7.0
+    versionCode: 72
+    commit: d80c95e40ced64b71729ce17159a63f639208219
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e "/androidx.appcompat/a implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'"
+        build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - sed -i -e '/crashlytics/Id' src/main/java/org/hwyl/sexytopo/control/{*.java,activity/SexyTopoActivity.java}
+
+  - versionName: 1.8.0
+    versionCode: 77
+    commit: 3d77f887f56555c233bf923cc3e16ca48da8e684
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e "/androidx.appcompat/a implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'"
+        build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - sed -i -e '/crashlytics/Id' src/main/java/org/hwyl/sexytopo/control/{*.java,activity/SexyTopoActivity.java}
+
+  - versionName: 1.8.1
+    versionCode: 79
+    commit: b19afba1c4932b3797a24c317107e44dacb091fa
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e "/androidx.appcompat/a implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'"
+        build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - sed -i -e '/crashlytics/Id' src/main/java/org/hwyl/sexytopo/control/{*.java,activity/SexyTopoActivity.java}
+
+  - versionName: 1.8.2
+    versionCode: 80
+    commit: 54d2bad5132a9353d1467c5dbe3f8f9d9ac81921
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e "/androidx.appcompat/a implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'"
+        build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - sed -i -e '/crashlytics/Id' src/main/java/org/hwyl/sexytopo/control/{*.java,activity/SexyTopoActivity.java}
+
+  - versionName: 1.8.3
+    versionCode: 81
+    commit: e8dc91b15b6d73d6aba18e823f857a51e6df86c3
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e "/androidx.appcompat/a implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'"
+        build.gradle
+      - sed -i -e '/gms/d' -e '/firebase/d' build.gradle ../build.gradle
+      - sed -i -e '/crashlytics/Id' src/main/java/org/hwyl/sexytopo/control/{*.java,activity/SexyTopoActivity.java}
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.8.3
+CurrentVersionCode: 81

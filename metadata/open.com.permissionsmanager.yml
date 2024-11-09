@@ -4,12 +4,12 @@ License: GPL-3.0-only
 AuthorName: Sultanahamer
 SourceCode: https://gitlab.com/sultanahamer/PermissionsManager
 IssueTracker: https://gitlab.com/sultanahamer/PermissionsManager/-/issues
-Changelog: https://gitlab.com/sultanahamer/PermissionsManager/-/blob/master/CHANGELOG
+Changelog: https://gitlab.com/sultanahamer/PermissionsManager/-/blob/HEAD/CHANGELOG
 
 AutoName: PermissionsManager
 
 RepoType: git
-Repo: https://gitlab.com/sultanahamer/PermissionsManager
+Repo: https://gitlab.com/sultanahamer/PermissionsManager.git
 
 Builds:
   - versionName: '3.0'

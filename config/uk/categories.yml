@@ -1,5 +1,5 @@
 Connectivity:
-  name: Зв\'язок
+  name: Зв'язок
 Development:
   name: Розробка
 Games:
@@ -15,7 +15,7 @@ Multimedia:
 Navigation:
   name: Навігація
 Phone & SMS:
-  name: Дзвінки та SMS
+  name: Телефон і SMS
 Reading:
   name: Читання
 Science & Education:
@@ -23,7 +23,7 @@ Science & Education:
 Security:
   name: Безпека
 Sports & Health:
-  name: Спорт і здоров\'я
+  name: Спорт і здоров'я
 System:
   name: Система
 Theming:

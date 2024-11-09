@@ -3,7 +3,7 @@ Categories:
   - Sports & Health
 License: AGPL-3.0-only
 AuthorName: Tom Bursch
-WebSite: https://tombursch.github.io/kitchenowl/
+WebSite: https://docs.kitchenowl.org
 SourceCode: https://github.com/TomBursch/kitchenowl
 IssueTracker: https://github.com/TomBursch/kitchenowl/issues
 Translation: https://hosted.weblate.org/projects/kitchenowl/
@@ -159,8 +159,483 @@ Builds:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --release
 
+  - versionName: 0.3.13
+    versionCode: 70
+    commit: e68e9f4efba466216218b81fdcb9173a0055c40e
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.7.0
+    rm:
+      - ios
+      - linux
+      - windows
+      - web
+      - macos
+    prebuild:
+      - touch .env
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 0.4.4
+    versionCode: 75
+    commit: 678f42e29b56e2eab85a982f02474d60fb5dcfc8
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.10.0
+    rm:
+      - ios
+      - linux
+      - windows
+      - web
+      - macos
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 0.4.5
+    versionCode: 76
+    commit: 14a5611c074c037356a4bd66beaa53e1409228cd
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.10.0
+    rm:
+      - ios
+      - linux
+      - windows
+      - web
+      - macos
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 0.4.6
+    versionCode: 77
+    commit: c2067291b71889c1281c87215ec8dddfd7aaa0c0
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.10.0
+    rm:
+      - ios
+      - linux
+      - windows
+      - web
+      - macos
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 0.4.7
+    versionCode: 78
+    commit: 5ea3a4886562d36891e3efbf5ca21347a6933bd4
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.10.0
+    rm:
+      - ios
+      - linux
+      - windows
+      - web
+      - macos
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 0.4.8
+    versionCode: 79
+    commit: c69eb66d0dde84bd7afc8552228a1b60203625de
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.10.0
+    rm:
+      - ios
+      - linux
+      - windows
+      - web
+      - macos
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+    scandelete:
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --release
+
+  - versionName: 0.4.11
+    versionCode: 82
+    commit: 3d1cd6282988f3142176bf4ef61dc81a37870529
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.4.12
+    versionCode: 83
+    commit: de8c548474f6ef0d0007126d734618362da0aa56
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.4.13
+    versionCode: 84
+    commit: d97bffad06bee4242b6a40c9267b2a7af0af7b5d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.4.14
+    versionCode: 85
+    commit: be3244e8d2e011db8aeedf87ef6d17ba6fbe2b13
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.4.15
+    versionCode: 86
+    commit: f1fc7027f38ba03211374cc7920bb1f869560a51
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.4.16
+    versionCode: 87
+    commit: 15fe63893e8c68cb684e658f9ea570d07d7ff8ac
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.4.17
+    versionCode: 88
+    commit: 5e867fd11ce42c5f3ae17d66e3c94edb138b2f80
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.4.18
+    versionCode: 89
+    commit: d2e4384f078229f71d7efb1304fc5d720da6bf06
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.4.19
+    versionCode: 90
+    commit: 73336f2bea3c271a2fd37321b669435492a5810d
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.4.20
+    versionCode: 91
+    commit: 9c697cfb62526d1f22a404566e5a26a38bcb08f7
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.4.21
+    versionCode: 92
+    commit: 9b12d7dc06420765d91bbfea597bcc37b4f95968
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - test
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter config --no-analytics
+      - ./flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - .pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ./flutter/bin/flutter build apk --release
+
+  - versionName: 0.5.0
+    versionCode: 94
+    commit: 9ed706cb10b6eb49d5787148fa15aa75fcdf5201
+    subdir: kitchenowl
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - kitchenowl/ios
+      - kitchenowl/linux
+      - kitchenowl/macos
+      - kitchenowl/web
+      - kitchenowl/windows
+      - backend
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../flutter/bin/flutter config --no-analytics
+      - ../flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - kitchenowl/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../flutter/bin/flutter build apk --release
+
+  - versionName: 0.5.1
+    versionCode: 96
+    commit: 73597e6342fbfb69a49cf4be7a77c52c18075529
+    subdir: kitchenowl
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - kitchenowl/ios
+      - kitchenowl/linux
+      - kitchenowl/macos
+      - kitchenowl/web
+      - kitchenowl/windows
+      - backend
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../flutter/bin/flutter config --no-analytics
+      - ../flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - kitchenowl/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../flutter/bin/flutter build apk --release
+
+  - versionName: 0.5.2
+    versionCode: 97
+    commit: acbdd9072857e7f2fb3333c9463dce5fd56a0fb9
+    subdir: kitchenowl
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-release.apk
+    rm:
+      - kitchenowl/ios
+      - kitchenowl/linux
+      - kitchenowl/macos
+      - kitchenowl/web
+      - kitchenowl/windows
+      - backend
+    prebuild:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../flutter/bin/flutter config --no-analytics
+      - ../flutter/bin/flutter pub get
+    scanignore:
+      - flutter/bin/cache
+    scandelete:
+      - flutter
+      - kitchenowl/.pub-cache
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - ../flutter/bin/flutter build apk --release
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v.*$
-UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 0.3.12
-CurrentVersionCode: 69
+UpdateCheckData: kitchenowl/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
+CurrentVersion: 0.5.2
+CurrentVersionCode: 97

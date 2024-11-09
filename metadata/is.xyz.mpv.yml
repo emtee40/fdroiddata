@@ -336,7 +336,587 @@ Builds:
       - ./buildall.sh
     ndk: r25
 
+  - versionName: 2023-02-27-release
+    versionCode: 30
+    commit: 927fd7c45667bd48e67489cc5a69b0e39f7e8ce5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make automake pkg-config libtool nasm
+      - apt-get install -y -t bullseye-backports meson
+    gradle:
+      - default
+    srclibs:
+      - mbedtls@v2.28.2
+      - dav1d@1.1.0
+      - FFmpeg@ac6eec1fc258efce219e4fccb84312a1b13a7a23
+      - freetype2@VER-2-13-0
+      - fribidi@v1.0.12
+      - harfbuzz@7.0.1
+      - libass@04a208d5d200360d2ac75f8f6cfc43dd58dd9225
+      - mpv@a194ddaa4304852043f4367fba1e02526ab28f0a
+    prebuild:
+      - sed -i -e '/enable true/d' build.gradle
+      - cd ../buildscripts/
+      - mkdir -p sdk
+      - ln -s $$NDK$$ sdk/android-ndk-r25c
+      - mkdir -p deps
+      - pushd deps/
+      - cp -r $$mbedtls$$ mbedtls
+      - cp -r $$dav1d$$ dav1d
+      - cp -r $$FFmpeg$$ ffmpeg
+      - cp -r $$freetype2$$ freetype2
+      - cp -r $$fribidi$$ fribidi
+      - cp -r $$harfbuzz$$ harfbuzz
+      - cp -r $$libass$$ libass
+      - cp -r $$mpv$$ mpv
+      - mkdir lua
+      - curl -Lo lua.tar.gz https://www.lua.org/ftp/lua-5.2.4.tar.gz
+      - echo "b9e2e4aad6789b3b63a056d442f7b39f0ecfca3ae0f1fc0ae4e9614401b69f4b lua.tar.gz"
+        | sha256sum -c -
+      - tar -xz --strip-components=1 -C lua -f lua.tar.gz
+      - popd
+      - sed -i -e '/gradlew/d' scripts/mpv-android.sh
+      - sed -i -e '/"$target" == "mpv-android"/,/ls -lh/d' buildall.sh
+    scandelete:
+      - buildscripts/deps/mbedtls/
+      - buildscripts/deps/lua.tar.gz
+    build:
+      - cd ../buildscripts/
+      - ./buildall.sh --arch arm64 mpv
+      - ./buildall.sh --arch x86_64 mpv
+      - ./buildall.sh
+    ndk: r25c
+
+  - versionName: 2023-06-04-release
+    versionCode: 31
+    commit: 44252ee394b284e80cc5654583a81b7e9cfc92e2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make automake pkg-config libtool nasm
+      - apt-get install -y -t bullseye-backports meson
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - default
+    srclibs:
+      - mbedtls@v2.28.3
+      - dav1d@8b419c16bf1e37bc98044089da58f06824462cb9
+      - FFmpeg@2342c05e43573d3045e1648c586c613b95766080
+      - freetype2@VER-2-13-0
+      - fribidi@v1.0.12
+      - harfbuzz@7.3.0
+      - libass@1a599b1db748dfc07df98cd37d8603edb87da2fd
+      - mpv@7918545caf7e4ab6ae0e7e7f45e9abde77254c72
+    prebuild:
+      - sed -i -e '/enable true/d' build.gradle
+      - cd ../buildscripts/
+      - mkdir -p sdk
+      - ln -s $$NDK$$ sdk/android-ndk-r25c
+      - mkdir -p deps
+      - pushd deps/
+      - cp -r $$mbedtls$$ mbedtls
+      - cp -r $$dav1d$$ dav1d
+      - cp -r $$FFmpeg$$ ffmpeg
+      - cp -r $$freetype2$$ freetype2
+      - cp -r $$fribidi$$ fribidi
+      - cp -r $$harfbuzz$$ harfbuzz
+      - cp -r $$libass$$ libass
+      - cp -r $$mpv$$ mpv
+      - mkdir lua
+      - curl -Lo lua.tar.gz https://www.lua.org/ftp/lua-5.2.4.tar.gz
+      - echo "b9e2e4aad6789b3b63a056d442f7b39f0ecfca3ae0f1fc0ae4e9614401b69f4b lua.tar.gz"
+        | sha256sum -c -
+      - tar -xz --strip-components=1 -C lua -f lua.tar.gz
+      - popd
+      - sed -i -e '/gradlew/d' scripts/mpv-android.sh
+      - sed -i -e '/"$target" == "mpv-android"/,/ls -lh/d' buildall.sh
+    scandelete:
+      - buildscripts/deps/mbedtls/
+      - buildscripts/deps/lua.tar.gz
+    build:
+      - cd ../buildscripts/
+      - ./buildall.sh --arch arm64 mpv
+      - ./buildall.sh --arch x86_64 mpv
+      - ./buildall.sh
+    ndk: r25c
+
+  - versionName: 2023-08-27-release
+    versionCode: 32
+    commit: 79182d8f23e41fcdcb088ff1bd19099548696545
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make automake pkg-config libtool nasm
+      - apt-get install -y -t bullseye-backports meson
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - default
+    srclibs:
+      - mbedtls@v2.28.4
+      - dav1d@97becd73726c3d4c4bb8793d2215f846da8795af
+      - FFmpeg@c48ec95ba310fa7debb317b8790b387b6256d2c5
+      - freetype2@VER-2-13-1
+      - fribidi@v1.0.13
+      - harfbuzz@8.1.1
+      - libass@5c15c883a4783641f7e71a6a1f440209965eb64f
+      - mpv@a19aefac372c7fbfed08209eef55862c2e715b5c
+    prebuild:
+      - sed -i -e '/enable true/d' -e '/universalBase/s/8000/0/' build.gradle
+      - cd ../buildscripts/
+      - mkdir -p sdk
+      - ln -s $$NDK$$ sdk/android-ndk-r25c
+      - mkdir -p deps
+      - pushd deps/
+      - cp -r $$mbedtls$$ mbedtls
+      - cp -r $$dav1d$$ dav1d
+      - cp -r $$FFmpeg$$ ffmpeg
+      - cp -r $$freetype2$$ freetype2
+      - cp -r $$fribidi$$ fribidi
+      - cp -r $$harfbuzz$$ harfbuzz
+      - cp -r $$libass$$ libass
+      - cp -r $$mpv$$ mpv
+      - mkdir lua
+      - curl -Lo lua.tar.gz https://www.lua.org/ftp/lua-5.2.4.tar.gz
+      - echo "b9e2e4aad6789b3b63a056d442f7b39f0ecfca3ae0f1fc0ae4e9614401b69f4b lua.tar.gz"
+        | sha256sum -c -
+      - tar -xz --strip-components=1 -C lua -f lua.tar.gz
+      - popd
+      - sed -i -e '/gradlew/d' scripts/mpv-android.sh
+      - sed -i -e '/"$target" == "mpv-android"/,/ls -lh/d' buildall.sh
+    scandelete:
+      - buildscripts/deps/mbedtls/
+      - buildscripts/deps/lua.tar.gz
+    build:
+      - cd ../buildscripts/
+      - ./buildall.sh --arch arm64 mpv
+      - ./buildall.sh --arch x86_64 mpv
+      - ./buildall.sh
+    ndk: r25c
+
+  - versionName: 2023-11-30-release
+    versionCode: 33
+    commit: 61a67fa42a1c668834f4f1469c3103b2cc86b3d3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make automake pkg-config libtool nasm python3-jsonschema
+      - apt-get install -y -t bullseye-backports meson python3-jinja2
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - default
+    srclibs:
+      - mbedtls@v3.5.1
+      - dav1d@3c41fa88ce0fee1fcd1cdfdf53ad8db9bcf3ad29
+      - FFmpeg@d4ff0020b40b524a490cf62eccbd3a318f4c0e58
+      - freetype2@VER-2-13-2
+      - fribidi@v1.0.13
+      - harfbuzz@8.3.0
+      - libunibreak@libunibreak_5_1
+      - libass@c047dd2ea16f73abb4f448e6db3637158c1226d0
+      - libplacebo@795600a44b03fcd52c055981a403ad60ee5d027a
+      - mpv@8b4a995a9d7ee7b65a5d2c893d72844d551d9697
+    prebuild:
+      - sed -i -e '/enable true/d' -e '/universalBase/s/8000/0/' build.gradle
+      - cd ../buildscripts/
+      - mkdir -p sdk
+      - ln -s $$NDK$$ sdk/android-ndk-r26b
+      - mkdir -p deps
+      - pushd deps/
+      - cp -r $$mbedtls$$ mbedtls
+      - cp -r $$dav1d$$ dav1d
+      - cp -r $$FFmpeg$$ ffmpeg
+      - cp -r $$freetype2$$ freetype2
+      - cp -r $$fribidi$$ fribidi
+      - cp -r $$harfbuzz$$ harfbuzz
+      - cp -r $$libunibreak$$ unibreak
+      - cp -r $$libass$$ libass
+      - cp -r $$libplacebo$$ libplacebo
+      - cp -r $$mpv$$ mpv
+      - mkdir lua
+      - curl -Lo lua.tar.gz https://www.lua.org/ftp/lua-5.2.4.tar.gz
+      - echo "b9e2e4aad6789b3b63a056d442f7b39f0ecfca3ae0f1fc0ae4e9614401b69f4b lua.tar.gz"
+        | sha256sum -c -
+      - tar -xz --strip-components=1 -C lua -f lua.tar.gz
+      - cd unibreak
+      - ./bootstrap
+      - popd
+      - sed -i -e '/gradlew/d' scripts/mpv-android.sh
+      - sed -i -e '/"$target" == "mpv-android"/,/ls -lh/d' buildall.sh
+    scandelete:
+      - buildscripts/deps/mbedtls/
+      - buildscripts/deps/lua.tar.gz
+      - buildscripts/deps/libplacebo/3rdparty/jinja/tests/res/package.zip
+    build:
+      - cd ../buildscripts/
+      - ./buildall.sh --arch arm64 mpv
+      - ./buildall.sh --arch x86_64 mpv
+      - ./buildall.sh
+    ndk: r26b
+
+  - versionName: 2024-04-09-release
+    versionCode: 34
+    commit: 61bb90e16232838c325b75adbdae931b672a6677
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make automake pkg-config libtool nasm python3-jsonschema
+        meson python3-jinja2
+    gradle:
+      - default
+    srclibs:
+      - mbedtls@v3.5.2
+      - dav1d@f6e05da0937f7fcbe7ad6ffc0a0fa94ab0059658
+      - FFmpeg@083443d67cb159ce469e5d902346b8d0c2cd1c93
+      - freetype2@VER-2-13-2
+      - fribidi@v1.0.13
+      - harfbuzz@8.3.0
+      - libunibreak@libunibreak_6_1
+      - libass@d160f8dd08bb7c6d6fe3d798519bf70ca8e6f669
+      - libplacebo@7b29435072143ee8b7e131947e055d3780ae4e47
+      - mpv@f974382ca06655ac34debce7284ce87d01e5abd1
+    prebuild:
+      - sed -i -e '/enable true/d' -e '/universalBase/s/8000/0/' build.gradle
+      - cd ../buildscripts/
+      - mkdir -p sdk
+      - ln -s $$NDK$$ sdk/android-ndk-r26c
+      - mkdir -p deps
+      - pushd deps/
+      - cp -r $$mbedtls$$ mbedtls
+      - cp -r $$dav1d$$ dav1d
+      - cp -r $$FFmpeg$$ ffmpeg
+      - cp -r $$freetype2$$ freetype2
+      - cp -r $$fribidi$$ fribidi
+      - cp -r $$harfbuzz$$ harfbuzz
+      - cp -r $$libunibreak$$ unibreak
+      - cp -r $$libass$$ libass
+      - cp -r $$libplacebo$$ libplacebo
+      - cp -r $$mpv$$ mpv
+      - mkdir lua
+      - curl -Lo lua.tar.gz https://www.lua.org/ftp/lua-5.2.4.tar.gz
+      - echo "b9e2e4aad6789b3b63a056d442f7b39f0ecfca3ae0f1fc0ae4e9614401b69f4b lua.tar.gz"
+        | sha256sum -c -
+      - tar -xz --strip-components=1 -C lua -f lua.tar.gz
+      - cd unibreak
+      - ./bootstrap
+      - popd
+      - sed -i -e '/gradlew/d' scripts/mpv-android.sh
+      - sed -i -e '/"$target" == "mpv-android"/,/ls -lh/d' buildall.sh
+    scandelete:
+      - buildscripts/deps/mbedtls/
+      - buildscripts/deps/lua.tar.gz
+      - buildscripts/deps/libplacebo/3rdparty/jinja/tests/res/package.zip
+    build:
+      - cd ../buildscripts/
+      - ./buildall.sh --arch arm64 mpv
+      - ./buildall.sh --arch x86_64 mpv
+      - ./buildall.sh
+    ndk: r26c
+
+  - versionName: 2024-05-04-release
+    versionCode: 35
+    commit: 5eb2df11f8d49a6b660f52ee83719a53c98b51c9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make automake pkg-config libtool nasm python3-jsonschema
+        meson python3-jinja2
+    gradle:
+      - default
+    srclibs:
+      - mbedtls@v3.5.2
+      - dav1d@c7df9a3e65a8d74c57131d379db93856c38ae47c
+      - FFmpeg@da8b2f9704438b80404a97e45015a3881452d6f5
+      - freetype2@VER-2-13-2
+      - fribidi@v1.0.13
+      - harfbuzz@8.4.0
+      - libunibreak@libunibreak_6_1
+      - libass@1dfb934affee2a4152619bb671a8c82ec5ccad43
+      - libplacebo@47ea18ef47875aafe611d47e07a6314ccc92a916
+      - mpv@637bc6994f47337760a04419c329416d5ec2a23a
+    prebuild:
+      - sed -i -e '/enable true/d' -e '/universalBase/s/8000/0/' build.gradle
+      - cd ../buildscripts/
+      - mkdir -p sdk
+      - ln -s $$NDK$$ sdk/android-ndk-r26c
+      - mkdir -p deps
+      - pushd deps/
+      - cp -r $$mbedtls$$ mbedtls
+      - cp -r $$dav1d$$ dav1d
+      - cp -r $$FFmpeg$$ ffmpeg
+      - cp -r $$freetype2$$ freetype2
+      - cp -r $$fribidi$$ fribidi
+      - cp -r $$harfbuzz$$ harfbuzz
+      - cp -r $$libunibreak$$ unibreak
+      - cp -r $$libass$$ libass
+      - cp -r $$libplacebo$$ libplacebo
+      - cp -r $$mpv$$ mpv
+      - mkdir lua
+      - curl -Lo lua.tar.gz https://www.lua.org/ftp/lua-5.2.4.tar.gz
+      - echo "b9e2e4aad6789b3b63a056d442f7b39f0ecfca3ae0f1fc0ae4e9614401b69f4b lua.tar.gz"
+        | sha256sum -c -
+      - tar -xz --strip-components=1 -C lua -f lua.tar.gz
+      - cd unibreak
+      - ./bootstrap
+      - popd
+      - sed -i -e '/gradlew/d' scripts/mpv-android.sh
+      - sed -i -e '/"$target" == "mpv-android"/,/ls -lh/d' -e 's/pkg-config =/pkgconfig
+        =/' buildall.sh
+    scandelete:
+      - buildscripts/deps/mbedtls/
+      - buildscripts/deps/lua.tar.gz
+      - buildscripts/deps/libplacebo/3rdparty/jinja/tests/res/package.zip
+    build:
+      - cd ../buildscripts/
+      - ./buildall.sh --arch arm64 mpv
+      - ./buildall.sh --arch x86_64 mpv
+      - ./buildall.sh
+    ndk: r26c
+
+  - versionName: 2024-05-24-release
+    versionCode: 36
+    commit: e6868ed335bf998b74ed8ecf509e1dcec13ae4f4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make automake pkg-config libtool nasm python3-jsonschema
+        meson python3-jinja2
+    gradle:
+      - default
+    srclibs:
+      - mbedtls@v3.5.2
+      - dav1d@3623543c4117f413110b27b5c20c6ae1638a22f9
+      - FFmpeg@85d4df387347d63aee95e14a60cd9efa14e3c9d5
+      - freetype2@VER-2-13-2
+      - fribidi@v1.0.13
+      - harfbuzz@8.4.0
+      - libunibreak@libunibreak_6_1
+      - libass@6f3aad16f0559c093c69db993dbfd2c271797bb9
+      - libplacebo@9e1257c8262fe27a2dd9414c1dd51be9fc56608d
+      - mpv@2fa66b850df1e0ecd653e9eea1e69fccc73afcee
+    prebuild:
+      - sed -i -e '/enable true/d' -e '/universalBase/s/8000/0/' build.gradle
+      - cd ../buildscripts/
+      - mkdir -p sdk
+      - ln -s $$NDK$$ sdk/android-ndk-r26d
+      - mkdir -p deps
+      - pushd deps/
+      - cp -r $$mbedtls$$ mbedtls
+      - cp -r $$dav1d$$ dav1d
+      - cp -r $$FFmpeg$$ ffmpeg
+      - cp -r $$freetype2$$ freetype2
+      - cp -r $$fribidi$$ fribidi
+      - cp -r $$harfbuzz$$ harfbuzz
+      - cp -r $$libunibreak$$ unibreak
+      - cp -r $$libass$$ libass
+      - cp -r $$libplacebo$$ libplacebo
+      - cp -r $$mpv$$ mpv
+      - mkdir lua
+      - curl -Lo lua.tar.gz https://www.lua.org/ftp/lua-5.2.4.tar.gz
+      - echo "b9e2e4aad6789b3b63a056d442f7b39f0ecfca3ae0f1fc0ae4e9614401b69f4b lua.tar.gz"
+        | sha256sum -c -
+      - tar -xz --strip-components=1 -C lua -f lua.tar.gz
+      - cd unibreak
+      - ./bootstrap
+      - popd
+      - sed -i -e '/gradlew/d' scripts/mpv-android.sh
+      - sed -i -e '/"$target" == "mpv-android"/,/ls -lh/d' -e 's/pkg-config =/pkgconfig
+        =/' buildall.sh
+    scandelete:
+      - buildscripts/deps/mbedtls/
+      - buildscripts/deps/lua.tar.gz
+      - buildscripts/deps/libplacebo/3rdparty/jinja/tests/res/package.zip
+    build:
+      - cd ../buildscripts/
+      - ./buildall.sh --arch arm64 mpv
+      - ./buildall.sh --arch x86_64 mpv
+      - ./buildall.sh
+    ndk: r26d
+
+  - versionName: 2024-06-05-release
+    versionCode: 37
+    commit: d16ecf19d138428cba8b89c1cdf3b7a509aee622
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make automake pkg-config libtool nasm python3-jsonschema
+        meson python3-jinja2
+    gradle:
+      - default
+    srclibs:
+      - mbedtls@v3.5.2
+      - dav1d@da2cc7817cff218b30f2c813a8a142a43f9376bd
+      - FFmpeg@f0b747ef1a9b9bfd0942a6d459f642b4b993b378
+      - freetype2@VER-2-13-2
+      - fribidi@v1.0.14
+      - harfbuzz@8.5.0
+      - libunibreak@libunibreak_6_1
+      - libass@a0aefba3cf357f74bf67410d71a1e0cf37d6c3da
+      - libplacebo@79a2efcb747641b38e3ceea87b75065820936567
+      - mpv@112fa549beb52ab3d75999c8d8a82936e13001c4
+    prebuild:
+      - sed -i -e '/enable true/d' -e '/universalBase/s/8000/0/' build.gradle
+      - cd ../buildscripts/
+      - mkdir -p sdk
+      - ln -s $$NDK$$ sdk/android-ndk-r26d
+      - mkdir -p deps
+      - pushd deps/
+      - cp -r $$mbedtls$$ mbedtls
+      - cp -r $$dav1d$$ dav1d
+      - cp -r $$FFmpeg$$ ffmpeg
+      - cp -r $$freetype2$$ freetype2
+      - cp -r $$fribidi$$ fribidi
+      - cp -r $$harfbuzz$$ harfbuzz
+      - cp -r $$libunibreak$$ unibreak
+      - cp -r $$libass$$ libass
+      - cp -r $$libplacebo$$ libplacebo
+      - cp -r $$mpv$$ mpv
+      - mkdir lua
+      - curl -Lo lua.tar.gz https://www.lua.org/ftp/lua-5.2.4.tar.gz
+      - echo "b9e2e4aad6789b3b63a056d442f7b39f0ecfca3ae0f1fc0ae4e9614401b69f4b lua.tar.gz"
+        | sha256sum -c -
+      - tar -xz --strip-components=1 -C lua -f lua.tar.gz
+      - cd unibreak
+      - ./bootstrap
+      - popd
+      - sed -i -e '/gradlew/d' scripts/mpv-android.sh
+      - sed -i -e '/"$target" == "mpv-android"/,/ls -lh/d' -e 's/pkg-config =/pkgconfig
+        =/' buildall.sh
+    scandelete:
+      - buildscripts/deps/mbedtls/
+      - buildscripts/deps/lua.tar.gz
+      - buildscripts/deps/libplacebo/3rdparty/jinja/tests/res/package.zip
+    build:
+      - cd ../buildscripts/
+      - ./buildall.sh --arch arm64 mpv
+      - ./buildall.sh --arch x86_64 mpv
+      - ./buildall.sh
+    ndk: r26d
+
+  - versionName: 2024-08-20-release
+    versionCode: 38
+    commit: 26f9064fd088bff6ee7dca0a2c0b391b5dea4001
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make automake pkg-config libtool nasm python3-jsonschema
+        meson python3-jinja2
+    gradle:
+      - default
+    srclibs:
+      - mbedtls@v3.5.2
+      - dav1d@5ef6b241f05a2b9058b58136da4b25842aefba96
+      - FFmpeg@507c2a57746d503cd97e1dd520e563a1f1b85fee
+      - freetype2@VER-2-13-2
+      - fribidi@v1.0.15
+      - harfbuzz@9.0.0
+      - libunibreak@libunibreak_6_1
+      - libass@5c00ca266dd49dd7cf93a79f09a661ab1ff66439
+      - libplacebo@82bf46ae8b4cacd2523f994da292e4d12312c026
+      - mpv@f44c29b223d7f0187ccf938eb1651671c8e92cf3
+    prebuild:
+      - sed -i -e '/enable true/d' -e '/universalBase/s/8000/0/' build.gradle
+      - cd ../buildscripts/
+      - mkdir -p sdk
+      - ln -s $$NDK$$ sdk/android-ndk-r27
+      - mkdir -p deps
+      - pushd deps/
+      - cp -r $$mbedtls$$ mbedtls
+      - cp -r $$dav1d$$ dav1d
+      - cp -r $$FFmpeg$$ ffmpeg
+      - cp -r $$freetype2$$ freetype2
+      - cp -r $$fribidi$$ fribidi
+      - cp -r $$harfbuzz$$ harfbuzz
+      - cp -r $$libunibreak$$ unibreak
+      - cp -r $$libass$$ libass
+      - cp -r $$libplacebo$$ libplacebo
+      - cp -r $$mpv$$ mpv
+      - mkdir lua
+      - curl -Lo lua.tar.gz https://www.lua.org/ftp/lua-5.2.4.tar.gz
+      - echo "b9e2e4aad6789b3b63a056d442f7b39f0ecfca3ae0f1fc0ae4e9614401b69f4b lua.tar.gz"
+        | sha256sum -c -
+      - tar -xz --strip-components=1 -C lua -f lua.tar.gz
+      - cd unibreak
+      - ./bootstrap
+      - popd
+      - sed -i -e '/gradlew/d' scripts/mpv-android.sh
+      - sed -i -e '/"$target" == "mpv-android"/,/ls -lh/d' buildall.sh
+    scandelete:
+      - buildscripts/deps/mbedtls/
+      - buildscripts/deps/lua.tar.gz
+      - buildscripts/deps/libplacebo/3rdparty/jinja/tests/res/package.zip
+    build:
+      - cd ../buildscripts/
+      - ./buildall.sh --arch arm64 mpv
+      - ./buildall.sh --arch x86_64 mpv
+      - ./buildall.sh
+    ndk: r27
+
+  - versionName: 2024-09-15-release
+    versionCode: 39
+    commit: cdf695defd57c8aaffc2f2c6d7c98301add7073e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make automake pkg-config libtool nasm python3-jsonschema
+        meson python3-jinja2
+    gradle:
+      - default
+    srclibs:
+      - mbedtls@v3.6.1
+      - dav1d@dd32cd5027c8c4bd43dc72d79df020186865bc7f
+      - FFmpeg@8707c8660d4ba9376b7e08b69c29486036c34212
+      - freetype2@VER-2-13-2
+      - fribidi@v1.0.15
+      - harfbuzz@9.0.0
+      - libunibreak@libunibreak_6_1
+      - libass@1d826b9946b9cf91fed46137ffec5e906e47c1fd
+      - libplacebo@76bb971847a5c7f5a40596edcb071de5ab8b7446
+      - mpv@429e379c7f35601e78e8dc08e49fcc83e097d33b
+    prebuild:
+      - sed -i -e '/enable true/d' -e '/universalBase/s/8000/0/' build.gradle
+      - cd ../buildscripts/
+      - mkdir -p sdk
+      - ln -s $$NDK$$ sdk/android-ndk-r27b
+      - mkdir -p deps
+      - pushd deps/
+      - cp -r $$mbedtls$$ mbedtls
+      - cp -r $$dav1d$$ dav1d
+      - cp -r $$FFmpeg$$ ffmpeg
+      - cp -r $$freetype2$$ freetype2
+      - cp -r $$fribidi$$ fribidi
+      - cp -r $$harfbuzz$$ harfbuzz
+      - cp -r $$libunibreak$$ unibreak
+      - cp -r $$libass$$ libass
+      - cp -r $$libplacebo$$ libplacebo
+      - cp -r $$mpv$$ mpv
+      - mkdir lua
+      - curl -Lo lua.tar.gz https://www.lua.org/ftp/lua-5.2.4.tar.gz
+      - echo "b9e2e4aad6789b3b63a056d442f7b39f0ecfca3ae0f1fc0ae4e9614401b69f4b lua.tar.gz"
+        | sha256sum -c -
+      - tar -xz --strip-components=1 -C lua -f lua.tar.gz
+      - cd unibreak
+      - ./bootstrap
+      - popd
+      - sed -i -e '/gradlew/d' scripts/mpv-android.sh
+      - sed -i -e '/"$target" == "mpv-android"/,/ls -lh/d' buildall.sh
+    scandelete:
+      - buildscripts/deps/mbedtls/
+      - buildscripts/deps/lua.tar.gz
+      - buildscripts/deps/libplacebo/3rdparty/jinja/tests/res/package.zip
+      - buildscripts/deps/libplacebo/3rdparty/glad/
+      - buildscripts/deps/harfbuzz/src/wasm/
+    build:
+      - cd ../buildscripts/
+      - ./buildall.sh --arch arm64 mpv
+      - ./buildall.sh --arch x86_64 mpv
+      - ./buildall.sh
+    ndk: r27b
+
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 2022-07-30-release
-CurrentVersionCode: 29
+CurrentVersion: 2024-09-15-release
+CurrentVersionCode: 39

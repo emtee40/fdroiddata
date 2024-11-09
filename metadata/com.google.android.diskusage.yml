@@ -1,20 +1,21 @@
 Categories:
   - System
 License: GPL-2.0-or-later
+AuthorName: Ivan Volosyuk
 SourceCode: https://github.com/IvanVolosyuk/diskusage
 IssueTracker: https://github.com/ivanvolosyuk/diskusage/issues
 
 AutoName: DiskUsage
 Description: |-
-    Visually explore used and free space on internal and external storage.
+  Visually explore used and free space on internal and external storage.
 
-    <i>DiskUsage</i> provides a way to find files and directories on storage card which
-    consume a lot of space. It displays a diagram with directories/subdirectories
-    shown proportional to their size.
+  <i>DiskUsage</i> provides a way to find files and directories on storage card which
+  consume a lot of space. It displays a diagram with directories/subdirectories
+  shown proportional to their size.
 
-    Press MENU for actions.
+  Press MENU for actions.
 
-    Integrates with OI FileManager and Solid Explorer.
+  Integrates with OI FileManager and Solid Explorer.
 
 RepoType: git
 Repo: https://github.com/IvanVolosyuk/diskusage.git
@@ -107,11 +108,29 @@ Builds:
       - app/src/main/res/raw/mimes
     build: $$NDK$$/ndk-build
 
-MaintainerNotes: |-
-    The system.jar is from AOSP - see extra/system.jar.README and
-    <a href="https://github.com/ivanvolosyuk/diskusage/issues/19">https://github.com/ivanvolosyuk/diskusage/issues/19</a>
+  - versionName: 5.0-alpha0
+    versionCode: 5000
+    commit: 15e9cad98daedfea04d7e1314833949a2a53e01f
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/res/raw/mimes
+    ndk: r26b
 
-AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
-CurrentVersion: 4.0.2
-CurrentVersionCode: 4002
+  - versionName: 5.0-alpha1
+    versionCode: 5001
+    commit: 7b2c42e4d0ad87b4885e06363698ba5e126bcdcd
+    subdir: app
+    gradle:
+      - yes
+    ndk: r26b
+
+MaintainerNotes: |-
+  The system.jar is from AOSP - see extra/system.jar.README and
+  <a href="https://github.com/ivanvolosyuk/diskusage/issues/19">https://github.com/ivanvolosyuk/diskusage/issues/19</a>
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 5.0-alpha1
+CurrentVersionCode: 5001

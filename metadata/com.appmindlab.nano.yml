@@ -579,7 +579,394 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.3.5a
+    versionCode: 1283
+    commit: 6d3932478dd01f1262bacea177ce178bed4d87e2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.5b
+    versionCode: 1284
+    commit: e6d07ec2fb53a2f0d90103a6fb13334b3b03b260
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.5c
+    versionCode: 1285
+    commit: cb2f0c843b6d7ebb27ca8b9f61afb5016043af57
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.5d
+    versionCode: 1286
+    commit: 97e714b1f6857cdd4bb5cc4bab22935c40fd1a24
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.3.5e
+    versionCode: 1287
+    commit: 9aa39a7ecfc31d9bde8a6a4ca7c83a845bd9423a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.0
+    versionCode: 1288
+    commit: 4baca2f5ae5a92abea5f45fbffec510b5ee19cb5
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.1
+    versionCode: 1289
+    commit: ab57f517961597d6bd7735bc2444ad2380b7df00
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.1a
+    versionCode: 1290
+    commit: b6f54940014b2f1a9fc86e464331e52c28a0dacd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.1b
+    versionCode: 1291
+    commit: b6568d69686c373e3029b3236d460fb2c0cf96f4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.1c
+    versionCode: 1292
+    commit: 6e67f0e94c0883dbe6192ceca01fbcf885de6128
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.2
+    versionCode: 1293
+    commit: e5d0822a412de683af2e27e3b04a9aaac124af0b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.2a
+    versionCode: 1294
+    commit: 208e5916690f0d8be850d3d2b6ce97d5fb71dcf3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.3
+    versionCode: 1295
+    commit: a1c8b5d91d71c3371f9480120e8a6c51d8a62019
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.3b
+    versionCode: 1298
+    commit: 6371bcac43f0ecb6ed651816eecf1bf578d34183
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.4a
+    versionCode: 1300
+    commit: e67f802f80797ff0453eb9121fd460ca0df5c001
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.5a
+    versionCode: 1302
+    commit: 09a84e1185be5f7c1eb3c9550a2d299eb7cff610
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.5c
+    versionCode: 1304
+    commit: 0e26443034290a793e4eaec1ceee25e096af2ca8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 4.4.6a
+    versionCode: 1306
+    commit: 526269475d451afd64b26bb457e19a1c9645448b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.7
+    versionCode: 1307
+    commit: 535e713025c5ccc822d3c33cf2243694124e7986
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.8
+    versionCode: 1308
+    commit: 646ab619395275f532085025c4190b05e651a084
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.8b
+    versionCode: 1310
+    commit: 60b5ebdf3efb315926079ce3240c978526da9d28
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.8c
+    versionCode: 1311
+    commit: 86065ede4403e88ebabc30143371e744bb79b5c9
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.9
+    versionCode: 1312
+    commit: 9f6bd87c157a63cb4b2f78982e5705534c9683d7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.9b
+    versionCode: 1314
+    commit: 4350ba1448b02ac7cd7445cc73b3a10851323e8f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.9c
+    versionCode: 1315
+    commit: afb37e62b94724364429439ebbe562bfb7757a35
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.9d
+    versionCode: 1316
+    commit: 805bc2188925536339ddc9756ff70f870f9bb7f8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.9e
+    versionCode: 1317
+    commit: 5a8da48be180767e48138ab72e966a4c813dc9be
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.9f
+    versionCode: 1318
+    commit: 6bb17345c9ebb6977a1c76fb8422ae3b035e8e44
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.4.9g
+    versionCode: 1319
+    commit: 98ed9007cee330078bdda40e1fb093fbca602c87
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.5.0
+    versionCode: 1320
+    commit: 51553dde601905e32d0aecaba7b001277602f400
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/jvmargs/s/# //' ../gradle.properties
+
+  - versionName: 4.5.0a
+    versionCode: 1321
+    commit: 8302f1a875d0e8b08e3e446e51300b707121e75b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.1b
+    versionCode: 1324
+    commit: 2f91d9e6594d4605053688ad609f25bccd727a4b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.1c
+    versionCode: 1325
+    commit: 620798320695cfd1943ae270e21d3fe3c65814c2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.1d
+    versionCode: 1326
+    commit: dadfc0b896de2449dd6c3c15da816126b383402e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2
+    versionCode: 1327
+    commit: a510c4661ba642a1ed59fc560f2e37c6ca64918d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2a
+    versionCode: 1328
+    commit: bccc0b99249fcc25f3a014805cdd1ce6b503cb70
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2b
+    versionCode: 1329
+    commit: a9c19128a2f52911b4fcae1566de07fd7e0e3790
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2c
+    versionCode: 1330
+    commit: 1340555d6678b1fec2c83578fbd7f4dc59549f87
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2e
+    versionCode: 1332
+    commit: e6f63bf7ff3aa3043f57c245f2cc1e19611450f3
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2f
+    versionCode: 1333
+    commit: 72135082db409dbd04757eaaef2075050ba4cba1
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2g
+    versionCode: 1334
+    commit: 714b17bc1f8730829ad6d74820bf778628e8857f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2i
+    versionCode: 1336
+    commit: f07b69d6d54b4a096a602c370ec7174bb406cf59
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.2m
+    versionCode: 1340
+    commit: 2f3dc4ccb48625997138302cccb97af899ece11b
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.3b
+    versionCode: 1343
+    commit: a1669aa9361459ec480b1a3b7e92a131d310f0df
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.3c
+    versionCode: 1344
+    commit: 16707195923800f0fcb2dcd1b33ca5cfa90a80fb
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.3d
+    versionCode: 1345
+    commit: 325e6e6bfa10e3c8280cd94a9116c231282c6f89
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.3e
+    versionCode: 1346
+    commit: 4b2981317fab80b864f6d46225a6b5c21f72c10d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.3f
+    versionCode: 1347
+    commit: 7d9d7af77f48c534af306a5b3aa60d0572a5fdaa
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.3g
+    versionCode: 1348
+    commit: 4079980cfacd885e6e18e117745814237c4be03a
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+  - versionName: 4.5.3h
+    versionCode: 1349
+    commit: dd46347f7e6550def17a7dea7c8b77f3874d8cb8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.3.5
-CurrentVersionCode: 1282
+CurrentVersion: 4.5.3h
+CurrentVersionCode: 1349

@@ -75,7 +75,18 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.0.4
+    versionCode: 15
+    commit: 351c0caaf90f15bc8177f086713f38435424dd88
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 CurrentVersion: 2.0.4
-CurrentVersionCode: 14
+CurrentVersionCode: 15

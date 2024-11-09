@@ -9,16 +9,16 @@ Changelog: https://github.com/farmerbb/SecondScreen/releases
 
 AutoName: SecondScreen
 Description: |-
-    SecondScreen is an application designed for power users that frequently connect
-    their Android devices to external displays. It works with your existing screen
-    mirroring solution to give you the best experience possible. With SecondScreen,
-    you can change your device's resolution and density to fit your TV or monitor,
-    enable always-on desktop mode in Chrome, and even turn your device's backlight
-    off, among several other features.
+  SecondScreen is an application designed for power users that frequently connect
+  their Android devices to external displays. It works with your existing screen
+  mirroring solution to give you the best experience possible. With SecondScreen,
+  you can change your device's resolution and density to fit your TV or monitor,
+  enable always-on desktop mode in Chrome, and even turn your device's backlight
+  off, among several other features.
 
-    This app requires elevated permissions, granted via root access or adb shell
-    commands. The app will do nothing if you do not have a rooted device or access
-    to adb.
+  This app requires elevated permissions, granted via root access or adb shell
+  commands. The app will do nothing if you do not have a rooted device or access
+  to adb.
 
 RepoType: git
 Repo: https://github.com/farmerbb/SecondScreen.git
@@ -94,7 +94,19 @@ Builds:
     gradle:
       - free
 
+  - versionName: 2.9.4
+    versionCode: 186
+    commit: 29949c4c1ab7ab97e83d45998a99756d260f3a1f
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.9.3
-CurrentVersionCode: 185
+CurrentVersion: 2.9.4
+CurrentVersionCode: 186

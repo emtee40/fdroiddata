@@ -110,7 +110,7 @@ Builds:
     srclibs:
       - capnproto@v0.8.0
     prebuild: JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 $$SDK$$/tools/bin/sdkmanager
-        'cmake;3.18.1' > /dev/null
+      'cmake;3.18.1' > /dev/null
     scandelete:
       - app/src/main/jni
     ndk: r23
@@ -304,7 +304,190 @@ Builds:
       - app/src/main/jni
     ndk: r24
 
+  - versionName: 3.2.11
+    versionCode: 20230301
+    commit: 46f3862c230813b6e0cdaef1ec7d64e7d0b42c13
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get -y install automake g++ libtool make
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e '/Enables building multiple APKs per ABI/,/enable true/d' build.gradle
+    scandelete:
+      - app/src/main/jni
+    ndk: r24
+
+  - versionName: 3.2.13
+    versionCode: 20230701
+    commit: c1cf0a7307a240de0186e3e85dc71be26c22c4cd
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get -y install automake g++ libtool make openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e '/isEnable = true/d' -e 's/exec("git config user.name")/"F-Droid"/'
+        -e 's/exec("git symbolic-ref --short HEAD")/""/' build.gradle.kts
+    scandelete:
+      - app/src/main/jni
+    ndk: r24
+
+  - versionName: 3.2.14
+    versionCode: 20230901
+    commit: e6ed88041df4b1ad488a23099b76c28639553305
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get -y install automake g++ libtool make openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e '/isEnable = true/d' -e 's/exec("git config user.name")/"F-Droid"/'
+        -e 's/exec("git symbolic-ref --short HEAD")/""/' build.gradle.kts
+    scandelete:
+      - app/src/main/jni
+    ndk: r25c
+
+  - versionName: 3.2.15
+    versionCode: 20231101
+    commit: 31894f63b1227529d7a1b08d0bcd48e0a7a4ca3d
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get -y install automake g++ libtool make openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e '/isEnable = true/d' -e 's/exec("git config user.name")/"F-Droid"/'
+        -e 's/exec("git symbolic-ref --short HEAD")/""/' build.gradle.kts
+    scandelete:
+      - app/src/main/jni
+    ndk: r25c
+
+  - versionName: 3.2.16
+    versionCode: 20240101
+    commit: 5738657bfc2f4dd114de48882695ff90bcfc9324
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get -y install automake g++ libtool make openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e '/isEnable = true/d' build.gradle.kts
+      - sed -i -e 's/runCmd("git config user.name")/"F-Droid"/' ../buildSrc/src/main/kotlin/Utils.kt
+    scandelete:
+      - app/src/main/jni
+    ndk: r25c
+
+  - versionName: 3.2.17
+    versionCode: 20240301
+    commit: 98e201b9a95db15dc4eb6683e09475c3e5d0b0d3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get -y install automake g++ libtool make python-is-python3
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e 's/runCmd("git config user.name")/"F-Droid"/' ../build-logic/convention/src/main/kotlin/Utils.kt
+    scandelete:
+      - app/src/main/jni
+      - build-logic
+    ndk: 25.2.9519653
+
+  - versionName: 3.2.18
+    versionCode: 20240501
+    commit: c10e2e84110e50cfc5f6c17443f5703bf35e3349
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get -y install automake g++ libtool make python-is-python3
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e 's/runCmd("git config user.name")/"F-Droid"/' ../build-logic/convention/src/main/kotlin/Utils.kt
+    scandelete:
+      - app/src/main/jni
+      - build-logic
+    ndk: 25.2.9519653
+
+  - versionName: 3.2.19
+    versionCode: 20240701
+    commit: e46046abfb030a2687033f74ad00d1b2693af433
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get -y install automake g++ libtool make python-is-python3
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e 's/runCmd("git config user.name")/"F-Droid"/' ../build-logic/convention/src/main/kotlin/Utils.kt
+    scandelete:
+      - app/src/main/jni
+      - build-logic
+    ndk: 25.2.9519653
+
+  - versionName: 3.3.0
+    versionCode: 20240901
+    commit: 436c8fc42af638fdd8744533beec03567ec03c6c
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get -y install automake g++ libtool make python-is-python3
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e 's/runCmd("git config user.name")/"F-Droid"/' ../build-logic/convention/src/main/kotlin/Utils.kt
+    scandelete:
+      - app/src/main/jni
+      - build-logic
+    ndk: 25.2.9519653
+
+  - versionName: 3.3.1
+    versionCode: 20241101
+    commit: d8042c76c20fb42f92bfd1c4509406d0cedc5bbe
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get -y install automake g++ libtool make python-is-python3
+    gradle:
+      - yes
+    prebuild:
+      - sdkmanager 'cmake;3.22.1'
+      - sed -i -e 's/runCmd("git config user.name")/"F-Droid"/' ../build-logic/convention/src/main/kotlin/Utils.kt
+    scandelete:
+      - app/src/main/jni
+      - build-logic
+    ndk: 25.2.9519653
+
 AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 3.2.10
-CurrentVersionCode: 20230101
+UpdateCheckMode: Tags ^v[\d.]+$
+CurrentVersion: 3.3.1
+CurrentVersionCode: 20241101

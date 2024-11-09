@@ -10,8 +10,8 @@ Changelog: https://github.com/jlelse/teleposter/releases
 
 AutoName: Teleposter
 Description: |-
-    Independent client app / wrapper around the <a href="http://telegra.ph">Telegra.ph</a>
-    website, which allows to author blogposts.
+  Independent client app / wrapper around the <a href="http://telegra.ph">Telegra.ph</a>
+  website, which allows to author blogposts.
 
 RepoType: git
 Repo: https://github.com/jlelse/teleposter
@@ -70,7 +70,8 @@ Builds:
       - yes
     prebuild: sed -i -e '/drummer\-aidan/d' ../build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.5.5
 CurrentVersionCode: 18

@@ -1,5 +1,8 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Connects to dev.virtualearth.net and services.digitalglobe.com
+  TetheredNet:
+    en-US: GeoScribble service (geoscribble.osmz.ru)
 Categories:
   - Navigation
 License: ISC
@@ -9,7 +12,7 @@ WebSite: https://every-door.app/
 SourceCode: https://github.com/Zverik/every_door
 IssueTracker: https://github.com/Zverik/every_door/issues
 Translation: https://hosted.weblate.org/projects/every-door/app/
-Changelog: https://github.com/Zverik/every_door/blob/main/CHANGELOG.md
+Changelog: https://github.com/Zverik/every_door/blob/HEAD/CHANGELOG.md
 
 AutoName: Every Door
 
@@ -86,6 +89,420 @@ Builds:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - vendor/flutter/bin/flutter build apk --release --split-per-abi --target-platform=android-arm64
 
+  - versionName: 3.1.0
+    versionCode: 341
+    commit: bd8ec97faee12758527d80d4dce02eff59e14d30
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+      - vendor/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --split-per-abi --target-platform=android-x64
+
+  - versionName: 3.1.0
+    versionCode: 342
+    commit: bd8ec97faee12758527d80d4dce02eff59e14d30
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+      - vendor/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --split-per-abi --target-platform=android-arm
+
+  - versionName: 3.1.0
+    versionCode: 343
+    commit: bd8ec97faee12758527d80d4dce02eff59e14d30
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+      - vendor/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --split-per-abi --target-platform=android-arm64
+
+  - versionName: 4.0.0
+    versionCode: 371
+    commit: e7afee8c2b0ab08dfb5309235cbcc0d980b38c6f
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+      - vendor/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --split-per-abi --target-platform=android-x64
+
+  - versionName: 4.0.0
+    versionCode: 372
+    commit: e7afee8c2b0ab08dfb5309235cbcc0d980b38c6f
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+      - vendor/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --split-per-abi --target-platform=android-arm
+
+  - versionName: 4.0.0
+    versionCode: 373
+    commit: e7afee8c2b0ab08dfb5309235cbcc0d980b38c6f
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+      - vendor/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --split-per-abi --target-platform=android-arm64
+
+  - versionName: 4.1.0
+    versionCode: 391
+    commit: 0069f29d2d0b6262015c821cb1c6d6c924cfaad4
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+      - vendor/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --split-per-abi --target-platform=android-x64
+
+  - versionName: 4.1.0
+    versionCode: 392
+    commit: 0069f29d2d0b6262015c821cb1c6d6c924cfaad4
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+      - vendor/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --split-per-abi --target-platform=android-arm
+
+  - versionName: 4.1.0
+    versionCode: 393
+    commit: 0069f29d2d0b6262015c821cb1c6d6c924cfaad4
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+      - vendor/flutter/packages/flutter_tools/gradle/flutter.gradle
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --split-per-abi --target-platform=android-arm64
+
+  - versionName: 5.0.0
+    versionCode: 421
+    commit: 6f7783bf2951dbdd1c4b19d7dfabe1357a7ab9bc
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --flavor prod --split-per-abi
+        --target-platform=android-x64
+
+  - versionName: 5.0.0
+    versionCode: 422
+    commit: 6f7783bf2951dbdd1c4b19d7dfabe1357a7ab9bc
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --flavor prod --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 5.0.0
+    versionCode: 423
+    commit: 6f7783bf2951dbdd1c4b19d7dfabe1357a7ab9bc
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f//' pubspec.yaml
+      - sed -i -e 's/^\(.*\bMultiDex\b\)/\/\/ \1/' android/app/src/main/java/io/flutter/app/FlutterMultiDexApplication.java
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --flavor prod --split-per-abi
+        --target-platform=android-arm64
+
+  - versionName: 5.1.0
+    versionCode: 451
+    commit: ed9bf4c47548920ac668be57484dc91ece6612a3
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f\|^ *mobile_scanner.*$//' pubspec.yaml
+      - mv lib/fields/helpers/qr_code.dart.fdroid lib/fields/helpers/qr_code.dart
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --flavor prod --split-per-abi
+        --target-platform=android-x64
+
+  - versionName: 5.1.0
+    versionCode: 452
+    commit: ed9bf4c47548920ac668be57484dc91ece6612a3
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f\|^ *mobile_scanner.*$//' pubspec.yaml
+      - mv lib/fields/helpers/qr_code.dart.fdroid lib/fields/helpers/qr_code.dart
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --flavor prod --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 5.1.0
+    versionCode: 453
+    commit: ed9bf4c47548920ac668be57484dc91ece6612a3
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f\|^ *mobile_scanner.*$//' pubspec.yaml
+      - mv lib/fields/helpers/qr_code.dart.fdroid lib/fields/helpers/qr_code.dart
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --flavor prod --split-per-abi
+        --target-platform=android-arm64
+
+  - versionName: 5.2.0
+    versionCode: 471
+    commit: b29901b67eb94dc0bbde60931bb4306b5a6ebf60
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-x86_64-prod-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f\|^ *mobile_scanner.*$//' pubspec.yaml
+      - mv lib/fields/helpers/qr_code.dart.fdroid lib/fields/helpers/qr_code.dart
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --flavor prod --split-per-abi
+        --target-platform=android-x64
+
+  - versionName: 5.2.0
+    versionCode: 472
+    commit: b29901b67eb94dc0bbde60931bb4306b5a6ebf60
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-prod-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f\|^ *mobile_scanner.*$//' pubspec.yaml
+      - mv lib/fields/helpers/qr_code.dart.fdroid lib/fields/helpers/qr_code.dart
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --flavor prod --split-per-abi
+        --target-platform=android-arm
+
+  - versionName: 5.2.0
+    versionCode: 473
+    commit: b29901b67eb94dc0bbde60931bb4306b5a6ebf60
+    submodules: true
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-prod-release.apk
+    prebuild:
+      - curl -L https://textual.ru/presets.db -o assets/presets.db
+      - sed -i -e 's/^#f\|^ *mobile_scanner.*$//' pubspec.yaml
+      - mv lib/fields/helpers/qr_code.dart.fdroid lib/fields/helpers/qr_code.dart
+      - echo '{}' > lib/l10n/app_zh.arb
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter config --no-analytics
+      - vendor/flutter/bin/flutter packages pub get
+    scanignore:
+      - vendor/flutter/bin/cache
+    scandelete:
+      - .pub-cache
+      - vendor/flutter
+    build:
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - vendor/flutter/bin/flutter build apk --release --flavor prod --split-per-abi
+        --target-platform=android-arm64
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+$
 VercodeOperation:
@@ -93,5 +510,5 @@ VercodeOperation:
   - '%c*10+2'
   - '%c*10+3'
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 3.0.0
-CurrentVersionCode: 323
+CurrentVersion: 5.2.0
+CurrentVersionCode: 473

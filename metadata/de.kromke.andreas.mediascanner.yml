@@ -96,7 +96,43 @@ Builds:
     prebuild: sed -i -e 's/21.0.6113669/21.4.7075529/' build.gradle
     ndk: r21e
 
+  - versionName: 1.7.1
+    versionCode: 19
+    commit: 80103d970200fa4aa65d2177614b54f3a86d1b7c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: 1.7.2
+    versionCode: 20
+    commit: ad82eeabdfc86b827c4f4f00be8a18b169cb2798
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
+  - versionName: '1.8'
+    versionCode: 21
+    commit: 7e9b47b85e174d52eb337622fcde1c76fc4c51e3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.7'
-CurrentVersionCode: 18
+CurrentVersion: '1.8'
+CurrentVersionCode: 21

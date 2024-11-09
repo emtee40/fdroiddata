@@ -10,85 +10,85 @@ Donate: https://www.videolan.org/contribute.html#money
 
 AutoName: VLC
 Description: |-
-    Video and audio player that supports a wide range of formats, for both local and
-    remote playback.
+  Video and audio player that supports a wide range of formats, for both local and
+  remote playback.
 
-    Audio:
+  Audio:
 
-    * Adaptive Transform Acoustic Coding (ATRAC1, ATRAC3, ATRAC3Plus and ATRAC9) and PSX ADPCM
-    * Adobe SWF ADPCM and Nellymoser Asao
-    * ALAC
-    * AMR-NB, AMR-WB (a.k.a. G.722.2)
-    * DK ADPCM Audio 3/4, On2 AVC and iLBC
-    * DSS-SP
-    * DTS Coherent Acoustics (a.k.a. DTS or DCA), DTS Extended Surround (a.k.a. DTS-ES), DTS 96/24, DTS-HD High Resolution Audio, DTS Express (a.k.a. DTS-HD LBR), DTS-HD Master Audio, QDesign Music Codec 1 and 2
-    * DVI4 audio codec
-    * Full Rate (GSM 06.10), AC-3 (Dolby Digital), Enhanced AC-3 (Dolby Digital Plus) and DTS Coherent Acoustics (a.k.a. DTS or DCA)
-    * iLBC, Opus and Comfort noise
-    * IMA ADPCM
-    * MLP / Dolby TrueHD
-    * MP1, MP2, MP3, AAC, HE-AAC, MPEG-4 ALS, G.711 µ-law, G.711 A-law, G.721 (a.k.a. G.726 32k), G.722, G.722.2 (a.k.a. AMR-WB), G.723 (a.k.a. G.726 24k and 40k), G.723.1, G.726, G.729, G.729D, IEC DV audio and Direct Stream Transfer
-    * QCELP-8 (a.k.a. SmartRate or IS-96C), QCELP-13 (a.k.a. PureVoice or IS-733) and Enhanced Variable Rate Codec (EVRC. a.k.a. IS-127)
-    * RealAudio v1 – v10
-    * SMPTE 302M
-    * Speex, Vorbis, Opus and FLAC
-    * Truespeech
-    * TwinVQ
-    * Windows Media Audio (WMA1, WMA2, WMA Pro and WMA Lossless), XMA (XMA1 and XMA2), MS-GSM and MS-ADPCM
+  * Adaptive Transform Acoustic Coding (ATRAC1, ATRAC3, ATRAC3Plus and ATRAC9) and PSX ADPCM
+  * Adobe SWF ADPCM and Nellymoser Asao
+  * ALAC
+  * AMR-NB, AMR-WB (a.k.a. G.722.2)
+  * DK ADPCM Audio 3/4, On2 AVC and iLBC
+  * DSS-SP
+  * DTS Coherent Acoustics (a.k.a. DTS or DCA), DTS Extended Surround (a.k.a. DTS-ES), DTS 96/24, DTS-HD High Resolution Audio, DTS Express (a.k.a. DTS-HD LBR), DTS-HD Master Audio, QDesign Music Codec 1 and 2
+  * DVI4 audio codec
+  * Full Rate (GSM 06.10), AC-3 (Dolby Digital), Enhanced AC-3 (Dolby Digital Plus) and DTS Coherent Acoustics (a.k.a. DTS or DCA)
+  * iLBC, Opus and Comfort noise
+  * IMA ADPCM
+  * MLP / Dolby TrueHD
+  * MP1, MP2, MP3, AAC, HE-AAC, MPEG-4 ALS, G.711 µ-law, G.711 A-law, G.721 (a.k.a. G.726 32k), G.722, G.722.2 (a.k.a. AMR-WB), G.723 (a.k.a. G.726 24k and 40k), G.723.1, G.726, G.729, G.729D, IEC DV audio and Direct Stream Transfer
+  * QCELP-8 (a.k.a. SmartRate or IS-96C), QCELP-13 (a.k.a. PureVoice or IS-733) and Enhanced Variable Rate Codec (EVRC. a.k.a. IS-127)
+  * RealAudio v1 – v10
+  * SMPTE 302M
+  * Speex, Vorbis, Opus and FLAC
+  * Truespeech
+  * TwinVQ
+  * Windows Media Audio (WMA1, WMA2, WMA Pro and WMA Lossless), XMA (XMA1 and XMA2), MS-GSM and MS-ADPCM
 
-    Containers and muxers:
+  Containers and muxers:
 
-    * 3GP (.3gp)
-    * AIFF (.asf, .wmv)
-    * ASF (.asf, .wmv)
-    * AU (.au)
-    * AVI (.avi)
-    * DivX (.divx)
-    * FLV (.flv)
-    * MOV (.mov)
-    * MP4 (.mp4)
-    * OGG (.ogm, .ogg)
-    * MKV (.mkv, .mka)
-    * MPEG-2 / TS (.ts, .mpg)
-    * MPEG-2 / ES, PS, PVA, MP3 (.mpg, .mp3, .mp2)
-    * NSC (.nsc)
-    * NSV (.nsv)
-    * Nut (.nut)
-    * Real (.ra, .ram, .rm, .rv , .rmbv)
-    * Raw (a52, dts, aac, flac, .dv, .vid) (.a52, .dts, .aac, .flac, .dv, .vid)
-    * True Audio Codec (.tta, .tac)
-    * Ty Tivo (.ty)
-    * Wav (.wav, .dts)
-    * WebM (.webm)
-    * Xa (.xa)
+  * 3GP (.3gp)
+  * AIFF (.asf, .wmv)
+  * ASF (.asf, .wmv)
+  * AU (.au)
+  * AVI (.avi)
+  * DivX (.divx)
+  * FLV (.flv)
+  * MOV (.mov)
+  * MP4 (.mp4)
+  * OGG (.ogm, .ogg)
+  * MKV (.mkv, .mka)
+  * MPEG-2 / TS (.ts, .mpg)
+  * MPEG-2 / ES, PS, PVA, MP3 (.mpg, .mp3, .mp2)
+  * NSC (.nsc)
+  * NSV (.nsv)
+  * Nut (.nut)
+  * Real (.ra, .ram, .rm, .rv , .rmbv)
+  * Raw (a52, dts, aac, flac, .dv, .vid) (.a52, .dts, .aac, .flac, .dv, .vid)
+  * True Audio Codec (.tta, .tac)
+  * Ty Tivo (.ty)
+  * Wav (.wav, .dts)
+  * WebM (.webm)
+  * Xa (.xa)
 
-    Video:
+  Video:
 
-    * Animated GIF
-    * APNG
-    * ASUS V1/V2 codec
-    * ATI VCR1/VCR2
-    * Autodesk Animator Studio Codec and FLIC
-    * Avid 1:1x, Avid Meridien, Avid DNxHD and DNxHR
-    * AVS video
-    * Cinepak (Apple Compact Video), ProRes, Sorenson 3 Codec, QuickTime Animation (Apple Animation), QuickTime Graphics (Apple Graphics), Apple Video, Apple Intermediate Codec and Pixlet
-    * Divx, DIV1, DIV2, DIV3, mp41, mp42, MPG4, MPG3
-    * Duck TrueMotion 1, Duck TrueMotion 2, Duck TrueMotion 2.0 Real Time, VP3, VP5, and animated WebP
-    * HQ, HQA, HQX and Lossless
-    * IBM UltiMotion
-    * Matrox Uncompressed SD (M101) / HD (M102)
-    * Microsoft RLE, Microsoft Video 1, Cinepak, Indeo (v2, v3 and v5), Microsoft MPEG-4 v1, v2 and v3, Windows Media Video (WMV1, WMV2, WMV3/VC-1), WMV Screen and Mimic codec
-    * MPEG-1 Part 2, H.261 (Px64), (MPEG-H Part 2), Motion JPEG, IEC DV video and CD+G
-    * RealVideo Fractal Codec (a.k.a. Iterated Systems ClearVideo), 1, 2, 3 and 4
-    * RTV 2.1 (Intel Indeo 2)
-    * Screen video, Screen video 2, Sorenson Spark and VP6
-    * Silicon Graphics RLE 8-bit video, Silicon Graphics MVC1/2
-    * Smacker video and Bink video
-    * SMPTE 314M (a.k.a. DVCAM and DVCPRO), SMPTE 370M (a.k.a. DVCPRO HD), VC-1 (a.k.a. WMV3), VC-2 (a.k.a. Dirac Pro), VC-3 (a.k.a. AVID DNxHD)
-    * SpeedHQ
-    * Theora
-    * TXD
-    * AV1
+  * Animated GIF
+  * APNG
+  * ASUS V1/V2 codec
+  * ATI VCR1/VCR2
+  * Autodesk Animator Studio Codec and FLIC
+  * Avid 1:1x, Avid Meridien, Avid DNxHD and DNxHR
+  * AVS video
+  * Cinepak (Apple Compact Video), ProRes, Sorenson 3 Codec, QuickTime Animation (Apple Animation), QuickTime Graphics (Apple Graphics), Apple Video, Apple Intermediate Codec and Pixlet
+  * Divx, DIV1, DIV2, DIV3, mp41, mp42, MPG4, MPG3
+  * Duck TrueMotion 1, Duck TrueMotion 2, Duck TrueMotion 2.0 Real Time, VP3, VP5, and animated WebP
+  * HQ, HQA, HQX and Lossless
+  * IBM UltiMotion
+  * Matrox Uncompressed SD (M101) / HD (M102)
+  * Microsoft RLE, Microsoft Video 1, Cinepak, Indeo (v2, v3 and v5), Microsoft MPEG-4 v1, v2 and v3, Windows Media Video (WMV1, WMV2, WMV3/VC-1), WMV Screen and Mimic codec
+  * MPEG-1 Part 2, H.261 (Px64), (MPEG-H Part 2), Motion JPEG, IEC DV video and CD+G
+  * RealVideo Fractal Codec (a.k.a. Iterated Systems ClearVideo), 1, 2, 3 and 4
+  * RTV 2.1 (Intel Indeo 2)
+  * Screen video, Screen video 2, Sorenson Spark and VP6
+  * Silicon Graphics RLE 8-bit video, Silicon Graphics MVC1/2
+  * Smacker video and Bink video
+  * SMPTE 314M (a.k.a. DVCAM and DVCPRO), SMPTE 370M (a.k.a. DVCPRO HD), VC-1 (a.k.a. WMV3), VC-2 (a.k.a. Dirac Pro), VC-3 (a.k.a. AVID DNxHD)
+  * SpeedHQ
+  * Theora
+  * TXD
+  * AV1
 
 RepoType: git
 Repo: https://code.videolan.org/videolan/vlc-android.git
@@ -124,22 +124,6 @@ Builds:
       - cd ../
       - ANDROID_ABI=armeabi ./compile.sh release
 
-  - versionName: 0.0.11-x86
-    versionCode: 112
-    disable: ffmpeg error 0.0.11
-    commit: unknown - see disabled
-    subdir: vlc-android
-    forceversion: true
-    forcevercode: true
-    prebuild: sed -i '48d' ../Makefile
-    androidupdate:
-      - .
-      - ../java-libs/SlidingMenu
-      - ../java-libs/ActionBarSherlock
-    build:
-      - cd ../
-      - ANDROID_ABI=x86 ./compile.sh release
-
   - versionName: 0.0.11-mips
     versionCode: 113
     commit: 0.0.11
@@ -151,24 +135,6 @@ Builds:
       - .
       - ../java-libs/SlidingMenu
       - ../java-libs/ActionBarSherlock
-    build:
-      - cd ../
-      - ANDROID_ABI=mips ./compile.sh release
-
-  - versionName: 0.1.3-MIPS
-    versionCode: 1301
-    disable: build failing (at 0.1.3)
-    commit: 0.1.3
-    subdir: vlc-android
-    patch:
-      - ndkr9.patch
-    srclibs:
-      - VLC@7c52aacbe
-    forceversion: true
-    forcevercode: true
-    prebuild:
-      - sed -i '/ant/d' ../Makefile
-      - ln -s vlc-android/$$VLC$$ ../vlc
     build:
       - cd ../
       - ANDROID_ABI=mips ./compile.sh release
@@ -280,36 +246,6 @@ Builds:
       - cd ../
       - ANDROID_ABI=armeabi-v7a ./compile.sh release
 
-  - versionName: 0.9.5
-    versionCode: 9502
-    disable: can't download gmp
-    commit: 0.9.5
-    subdir: vlc-android
-    srclibs:
-      - VLC@052600173f376ff58ff04d53746961a2
-    forcevercode: true
-    prebuild:
-      - sed -i '/ant/d' ../Makefile
-      - ln -s vlc-android/$$VLC$$ ../vlc
-    build:
-      - cd ../
-      - ANDROID_ABI=x86 ./compile.sh release
-
-  - versionName: 0.9.5
-    versionCode: 9504
-    disable: can't download gmp
-    commit: 0.9.5
-    subdir: vlc-android
-    srclibs:
-      - VLC@052600173f376ff58ff04d53746961a2
-    forcevercode: true
-    prebuild:
-      - sed -i '/ant/d' ../Makefile
-      - ln -s vlc-android/$$VLC$$ ../vlc
-    build:
-      - cd ../
-      - ANDROID_ABI=armeabi-v7a ./compile.sh release
-
   - versionName: 0.9.6
     versionCode: 9602
     commit: 0.9.6
@@ -365,21 +301,6 @@ Builds:
     build:
       - cd ../
       - ANDROID_ABI=armeabi-v7a ./compile.sh release
-
-  - versionName: 0.9.7.1
-    versionCode: 9711
-    disable: build fails
-    commit: 0.9.7.1
-    subdir: vlc-android
-    srclibs:
-      - VLC-2.2@57cd36b
-    forcevercode: true
-    prebuild:
-      - sed -i '/ant/d' ../Makefile
-      - ln -s vlc-android/$$VLC-2.2$$ ../vlc
-    build:
-      - cd ../
-      - ANDROID_ABI=mips ./compile.sh release
 
   - versionName: 0.9.7.1
     versionCode: 9712
@@ -527,51 +448,6 @@ Builds:
     subdir: vlc-android
     srclibs:
       - VLC-2.2@e33e5de
-    forcevercode: true
-    prebuild:
-      - sed -i '/ant/d' ../Makefile
-      - ln -s vlc-android/$$VLC-2.2$$ ../vlc
-    build:
-      - cd ../
-      - ANDROID_ABI=armeabi-v7a ./compile.sh release
-
-  - versionName: 1.0.0
-    versionCode: 10006
-    disable: doesn't build
-    commit: 1.0.0
-    subdir: vlc-android
-    srclibs:
-      - VLC-2.2@036010e
-    forcevercode: true
-    prebuild:
-      - sed -i '/ant/d' ../Makefile
-      - ln -s vlc-android/$$VLC-2.2$$ ../vlc
-    build:
-      - cd ../
-      - ANDROID_ABI=x86 ./compile.sh release
-
-  - versionName: 1.0.0
-    versionCode: 10007
-    disable: doesn't build
-    commit: 1.0.0
-    subdir: vlc-android
-    srclibs:
-      - VLC-2.2@036010e
-    forcevercode: true
-    prebuild:
-      - sed -i '/ant/d' ../Makefile
-      - ln -s vlc-android/$$VLC-2.2$$ ../vlc
-    build:
-      - cd ../
-      - ANDROID_ABI=armeabi ./compile.sh release
-
-  - versionName: 1.0.0
-    versionCode: 10008
-    disable: doesn't build
-    commit: 1.0.0
-    subdir: vlc-android
-    srclibs:
-      - VLC-2.2@036010e
     forcevercode: true
     prebuild:
       - sed -i '/ant/d' ../Makefile
@@ -1477,105 +1353,6 @@ Builds:
       - cd ../
       - ./compile.sh -a "x86" --release
 
-  - versionName: 1.7.0
-    versionCode: 1070003
-    disable: Download and check target not defined for soxr.
-    commit: 1.7.0
-    subdir: vlc-android
-    gradle:
-      - VanillaARMv6fpu
-    srclibs:
-      - VLC@7740747
-    prebuild:
-      - sed -i -e '/^TARGET/aexit 0' -e 's@\-d \"gradle\/wrapper\"@1@g' ../compile.sh
-      - ln -s vlc-android/$$VLC$$ ../vlc
-    build:
-      - cd ../
-      - ./compile.sh -a "armeabi" --release
-
-  - versionName: 1.7.0
-    versionCode: 1070004
-    disable: Download and check target not defined for soxr.
-    commit: 1.7.0
-    subdir: vlc-android
-    gradle:
-      - VanillaARMv7
-    srclibs:
-      - VLC@7740747
-    prebuild:
-      - sed -i -e '/^TARGET/aexit 0' -e 's@\-d \"gradle\/wrapper\"@1@g' ../compile.sh
-      - ln -s vlc-android/$$VLC$$ ../vlc
-    build:
-      - cd ../
-      - ./compile.sh -a "armeabi-v7a" --release
-
-  - versionName: 1.7.0
-    versionCode: 1070005
-    disable: Download and check target not defined for soxr.
-    commit: 1.7.0
-    subdir: vlc-android
-    gradle:
-      - VanillaX86
-    srclibs:
-      - VLC@7740747
-    prebuild:
-      - sed -i -e '/^TARGET/aexit 0' -e 's@\-d \"gradle\/wrapper\"@1@g' ../compile.sh
-      - ln -s vlc-android/$$VLC$$ ../vlc
-    build:
-      - cd ../
-      - ./compile.sh -a "x86" --release
-
-  - versionName: 1.7.5
-    versionCode: 1070503
-    disable: old live555 releases are gone
-    commit: 1.7.5
-    subdir: vlc-android
-    gradle:
-      - VanillaARMv6fpu
-    srclibs:
-      - VLC@4d7d1f0
-    prebuild:
-      - sed -i -e '/^TARGET/aexit 0' -e 's@\-d \"gradle\/wrapper\"@1@g' ../compile.sh
-      - ln -s vlc-android/$$VLC$$ ../vlc
-    build:
-      - cd ../
-      - ./compile.sh -a "armeabi" --release
-
-  - versionName: 1.7.5
-    versionCode: 1070504
-    disable: old live555 releases are gone
-    commit: 1.7.5
-    subdir: vlc-android
-    gradle:
-      - VanillaARMv7
-    srclibs:
-      - VLC@4d7d1f0
-    prebuild:
-      - sed -i -e '/^TARGET/aexit 0' -e 's@\-d \"gradle\/wrapper\"@1@g' ../compile.sh
-      - ln -s vlc-android/$$VLC$$ ../vlc
-    build:
-      - cd ../
-      - ./compile.sh -a "armeabi-v7a" --release
-
-  - versionName: 1.7.5
-    versionCode: 1070505
-    disable: failing build
-    commit: 1.7.5
-    subdir: vlc-android
-    gradle:
-      - VanillaX86
-    srclibs:
-      - VLC@4d7d1f0
-    prebuild:
-      - sed -i -e '/^TARGET/aexit 0' -e 's@\-d \"gradle\/wrapper\"@1@g' ../compile.sh
-      - ln -s vlc-android/$$VLC$$ ../vlc
-      - sed -i -e 's/live.2015.11.09.tar.gz/live.2016.01.29.tar.gz/g' $$VLC$$/contrib/src/live555/rules.mak
-      - echo "3cac45d1649f5752a521b6252d7939c4dce4f9b16a37956c44aa1b6c8f76cb133180bc4b753ac3a3861e51b3ef64269050849053bbe6d5883ff03045cc42a71d  live.2016.01.29.tar.gz"
-        > $$VLC$$/contrib/src/live555/SHA512SUMS
-    build:
-      - cd ../
-      - ./compile.sh -a "x86" --release
-
   - versionName: 1.9.0
     versionCode: 1090003
     commit: 1.9.0
@@ -1615,126 +1392,6 @@ Builds:
       - cd ../
       - ./compile.sh -a "x86" --release
     ndk: r10e
-
-  - versionName: 2.0.2
-    versionCode: 12000213
-    disable: failing build
-    commit: 2.0.2.1
-    subdir: vlc-android
-    gradle:
-      - VanillaARMv6fpu
-    srclibs:
-      - VLC@848f58d
-    prebuild:
-      - ln -s vlc-android/$$VLC$$ ../vlc
-      - sed -i -e '/sdk-manager/d' ../build.gradle
-      - wget -c https://downloads.videolan.org/pub/contrib/jpeg/jpegsrc.v9a.tar.gz
-        -O ../vlc/contrib/tarballs/jpegsrc.v9a.tar.gz
-    build:
-      - cd ../
-      - sed -i 's,http://download,https://download,g' compile.sh
-      - ./compile.sh -a "armeabi" --release
-    ndk: r11c
-
-  - versionName: 2.0.2
-    versionCode: 12000214
-    disable: failing build
-    commit: 2.0.2.1
-    subdir: vlc-android
-    gradle:
-      - VanillaARMv7
-    srclibs:
-      - VLC@848f58d
-    prebuild:
-      - ln -s vlc-android/$$VLC$$ ../vlc
-      - sed -i -e '/sdk-manager/d' ../build.gradle
-      - wget -c https://downloads.videolan.org/pub/contrib/jpeg/jpegsrc.v9a.tar.gz
-        -O ../vlc/contrib/tarballs/jpegsrc.v9a.tar.gz
-    build:
-      - cd ../
-      - sed -i 's,http://download,https://download,g' compile.sh
-      - ./compile.sh -a "armeabi-v7a" --release
-    ndk: r11c
-
-  - versionName: 2.0.2
-    versionCode: 12000215
-    disable: failing build
-    commit: 2.0.2.1
-    subdir: vlc-android
-    gradle:
-      - VanillaX86
-    srclibs:
-      - VLC@848f58d
-    prebuild:
-      - ln -s vlc-android/$$VLC$$ ../vlc
-      - sed -i -e '/sdk-manager/d' ../build.gradle
-      - wget -c https://downloads.videolan.org/pub/contrib/jpeg/jpegsrc.v9a.tar.gz
-        -O ../vlc/contrib/tarballs/jpegsrc.v9a.tar.gz
-    build:
-      - cd ../
-      - sed -i 's,http://download,https://download,g' compile.sh
-      - ./compile.sh -a "x86" --release
-    ndk: r11c
-
-  - versionName: 2.0.5
-    versionCode: 12000523
-    disable: failing build
-    commit: 2.0.5
-    subdir: vlc-android
-    gradle:
-      - VanillaARMv6fpu
-    srclibs:
-      - VLC@6689dcb
-    prebuild:
-      - ln -s vlc-android/$$VLC$$ ../vlc
-      - sed -i -e '/sdk-manager/d' ../build.gradle
-      - wget -c https://downloads.videolan.org/pub/contrib/jpeg/jpegsrc.v9a.tar.gz
-        -O ../vlc/contrib/tarballs/jpegsrc.v9a.tar.gz
-    build:
-      - cd ../
-      - sed -i 's,http://download,https://download,g' compile.sh
-      - ./compile.sh -a "armeabi" --release
-    ndk: r11c
-
-  - versionName: 2.0.5
-    versionCode: 12000524
-    disable: failing build
-    commit: 2.0.5
-    subdir: vlc-android
-    gradle:
-      - VanillaARMv7
-    srclibs:
-      - VLC@6689dcb
-    prebuild:
-      - ln -s vlc-android/$$VLC$$ ../vlc
-      - sed -i -e '/sdk-manager/d' ../build.gradle
-      - wget -c https://downloads.videolan.org/pub/contrib/jpeg/jpegsrc.v9a.tar.gz
-        -O ../vlc/contrib/tarballs/jpegsrc.v9a.tar.gz
-    build:
-      - cd ../
-      - sed -i 's,http://download,https://download,g' compile.sh
-      - ./compile.sh -a "armeabi-v7a" --release
-    ndk: r11c
-
-  - versionName: 2.0.5
-    versionCode: 12000525
-    disable: failing build
-    commit: 2.0.5
-    subdir: vlc-android
-    gradle:
-      - VanillaX86
-    srclibs:
-      - VLC@6689dcb
-    prebuild:
-      - ln -s vlc-android/$$VLC$$ ../vlc
-      - sed -i -e '/sdk-manager/d' ../build.gradle
-      - wget -c https://downloads.videolan.org/pub/contrib/jpeg/jpegsrc.v9a.tar.gz
-        -O ../vlc/contrib/tarballs/jpegsrc.v9a.tar.gz
-    build:
-      - cd ../
-      - sed -i 's,http://download,https://download,g' compile.sh
-      - ./compile.sh -a "x86" --release
-    ndk: r11c
 
   - versionName: 2.0.6
     versionCode: 12000603
@@ -1804,37 +1461,6 @@ Builds:
       - sed -i 's,http://download,https://download,g' compile.sh
       - ./compile.sh -a "x86" --release
     ndk: r11c
-
-  - versionName: 2.1.4
-    versionCode: 12000609
-    disable: contrib make failed
-    commit: 2.1.4
-    subdir: vlc-android
-    gradle:
-      - VanillaX86
-    srclibs:
-      - VLC@ed56521
-    prebuild:
-      - ln -s vlc-android/$$VLC$$ ../vlc
-      - mkdir -p gradle/wrapper/
-      - echo 'distributionUrl=https://services.gradle.org/distributions/gradle-3.4.1-bin.zip'
-        > gradle/wrapper/gradle-wrapper.properties
-      - sed -i -e '/signingConfigs/d' build.gradle
-    build:
-      - pushd ../vlc/extras/tools
-      - ./bootstrap
-      - popd
-      - pushd ../vlc/contrib
-      - mkdir native
-      - pushd native
-      - ../bootstrap
-      - make
-      - popd
-      - popd
-      - cd ../
-      - ./compile.sh -a "x86"
-      - ./compile release
-    ndk: r14
 
   - versionName: 2.1.20
     versionCode: 12012004
@@ -5172,55 +4798,831 @@ Builds:
       - RESET=0 ./buildsystem/compile.sh -a x86_64 -ml -b --release
     ndk: r21e
 
+  - versionName: 3.5.4
+    versionCode: 13050404
+    commit: 3.5.4
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config protobuf-compiler
+        ragel wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "armeabi-v7a"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a armeabi-v7a -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.4
+    versionCode: 13050405
+    commit: 3.5.4
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config protobuf-compiler
+        ragel wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "x86"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a x86 -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.4
+    versionCode: 13050407
+    commit: 3.5.4
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config protobuf-compiler
+        ragel wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "arm64-v8a"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a arm64-v8a -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.4
+    versionCode: 13050408
+    commit: 3.5.4
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config protobuf-compiler
+        ragel wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "x86_64"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a x86_64 -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.5
+    versionCode: 13050505
+    commit: 3.5.5
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "armeabi-v7a"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a armeabi-v7a -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.5
+    versionCode: 13050506
+    commit: 3.5.5
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "arm64-v8a"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a arm64-v8a -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.5
+    versionCode: 13050507
+    commit: 3.5.5
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "x86"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a x86 -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.5
+    versionCode: 13050508
+    commit: 3.5.5
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "x86_64"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a x86_64 -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.6
+    versionCode: 13050605
+    commit: 3.5.6
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "armeabi-v7a"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a armeabi-v7a -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.6
+    versionCode: 13050606
+    commit: 3.5.6
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "arm64-v8a"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a arm64-v8a -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.6
+    versionCode: 13050607
+    commit: 3.5.6
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "x86"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a x86 -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.6
+    versionCode: 13050608
+    commit: 3.5.6
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "x86_64"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a x86_64 -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.7
+    versionCode: 13050705
+    commit: 3.5.7
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "armeabi-v7a"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a armeabi-v7a -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.7
+    versionCode: 13050706
+    commit: 3.5.7
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "arm64-v8a"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a arm64-v8a -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.7
+    versionCode: 13050707
+    commit: 3.5.7
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "x86"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a x86 -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.5.7
+    versionCode: 13050708
+    commit: 3.5.7
+    subdir: application/app
+    sudo:
+      - apt-get update
+      - apt-get install -y ant automake autopoint bison bzip2 cmake flex g++ gettext
+        help2man libltdl-dev libtool-bin make meson nasm ninja-build pkg-config ragel
+        wget
+    gradle:
+      - yes
+    srclibs:
+      - VLC@4d46246f4aec36a0f749da870af04606a7b3e4e5
+      - VLCjni@6691a43c73df3abe3e30bda139c6a7b4d1adda87
+      - VLCmedialibrary@981f88679d71409ee3c1be23ef190ce17cf3f70f
+    prebuild:
+      - mkdir -p ./gradle/wrapper
+      - echo 'distributionUrl=https\://services.gradle.org/distributions/gradle-7.5.1-bin.zip'
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "x86_64"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - cd ../..
+      - cp -a $$VLC$$ vlc
+      - cp -a $$VLCjni$$ libvlcjni
+      - cp -a $$VLCmedialibrary$$ medialibrary/medialibrary
+      - sed -i -e '/signingConfig/d' application/app/build.gradle
+      - sed -i -E -e '/(debug|release|signedRelease)(Api|Implementation)/d; s/devApi/api/;
+        s/devImplementation/implementation/' application/vlc-android/build.gradle
+        application/resources/build.gradle medialibrary/build.gradle
+      - cd vlc
+      - cp share/vlc.appdata.xml.in.in share/vlc.appdata.xml
+      - git apply ../libvlcjni/libvlc/patches/vlc3/*.patch
+      - sed -i -e '/MESON_VERSION/,\/^#/d' extras/tools/tools.mak
+      - sed -i -e '/check meson/d' extras/tools/bootstrap
+      - find -name *.mak -type f -exec sed -i -e 's/tar xv/tar x/' {} +
+      - cd ../medialibrary/medialibrary/libvlcpp
+      - git apply ../../../buildsystem/patches/libvlcpp/*.patch
+    build:
+      - cd ../..
+      - ln -s $(which gradle) ./gradlew
+      - export GRADLE_VLC_SRC_DIRS="$PWD/vlc/build-android-arm-linux-androideabi/ndk/libs"
+      - RESET=0 ./buildsystem/compile.sh -a x86_64 -ml -b --release
+    ndk: r21e
+
+  - versionName: 3.6.0 Beta 2
+    versionCode: 13050725
+    commit: 704df40ad64972cd0c48bd1d3c1a9780f7788913
+    subdir: application/app
+    gradle:
+      - yes
+    prebuild:
+      - GRADLE_VERSION=$(sed -n -E 's/.*GRADLE_VERSION=(.*)/\1/p' ../../buildsystem/compile.sh)
+      - mkdir -p ./gradle/wrapper
+      - echo "distributionUrl=https\://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip"
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "armeabi-v7a"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - sed -i -e '/signingConfig/d' build.gradle
+    ndk: r25c
+
+  - versionName: 3.6.0 Beta 2
+    versionCode: 13050726
+    commit: 704df40ad64972cd0c48bd1d3c1a9780f7788913
+    subdir: application/app
+    gradle:
+      - yes
+    prebuild:
+      - GRADLE_VERSION=$(sed -n -E 's/.*GRADLE_VERSION=(.*)/\1/p' ../../buildsystem/compile.sh)
+      - mkdir -p ./gradle/wrapper
+      - echo "distributionUrl=https\://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip"
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "arm64-v8a"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - sed -i -e '/signingConfig/d' build.gradle
+    ndk: r25c
+
+  - versionName: 3.6.0 Beta 2
+    versionCode: 13050727
+    commit: 704df40ad64972cd0c48bd1d3c1a9780f7788913
+    subdir: application/app
+    gradle:
+      - yes
+    prebuild:
+      - GRADLE_VERSION=$(sed -n -E 's/.*GRADLE_VERSION=(.*)/\1/p' ../../buildsystem/compile.sh)
+      - mkdir -p ./gradle/wrapper
+      - echo "distributionUrl=https\://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip"
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "x86"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - sed -i -e '/signingConfig/d' build.gradle
+    ndk: r25c
+
+  - versionName: 3.6.0 Beta 2
+    versionCode: 13050728
+    commit: 704df40ad64972cd0c48bd1d3c1a9780f7788913
+    subdir: application/app
+    gradle:
+      - yes
+    prebuild:
+      - GRADLE_VERSION=$(sed -n -E 's/.*GRADLE_VERSION=(.*)/\1/p' ../../buildsystem/compile.sh)
+      - mkdir -p ./gradle/wrapper
+      - echo "distributionUrl=https\://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip"
+        > ./gradle/wrapper/gradle-wrapper.properties
+      - cp -r gradle ../..
+      - sed -i -e 's/include .*/include "x86_64"/' build.gradle
+      - sed -i -e '/println/d' ../vlc-android/build.gradle
+      - sed -i -e '/signingConfig/d' build.gradle
+    ndk: r25c
+
 MaintainerNotes: |-
-    Instructions and dependencies: https://wiki.videolan.org/AndroidCompile
+  Instructions and dependencies: https://wiki.videolan.org/AndroidCompile
 
-    The VLCjni srclib commit can be found out from LIBVLCJNI_TESTED_HASH value
-    in compile.sh, but sometimes it's different in official builds:
+  The VLCjni srclib commit can be found out from LIBVLCJNI_TESTED_HASH value
+  in compile.sh, but sometimes it's different in official builds:
 
-    * https://code.videolan.org/videolan/vlc-android/-/blob/<TAG>/buildsystem/compile.sh
+  * https://code.videolan.org/videolan/vlc-android/-/blob/<TAG>/buildsystem/compile.sh
 
-    The VLCmedialibrary srclib commit can be found out from MEDIALIBRARY_HASH in
-    compile-medialibrary.sh:
+  The VLCmedialibrary srclib commit can be found out from MEDIALIBRARY_HASH in
+  compile-medialibrary.sh:
 
-    * https://code.videolan.org/videolan/vlc-android/-/blob/<TAG>/buildsystem/compile-medialibrary.sh
+  * https://code.videolan.org/videolan/vlc-android/-/blob/<TAG>/buildsystem/compile-medialibrary.sh
 
-    The VLC srclib commit can be found out from VLC_TESTED_HASH in get-vlc.sh:
+  The VLC srclib commit can be found out from VLC_TESTED_HASH in get-vlc.sh:
 
-    * https://code.videolan.org/videolan/libvlcjni/-/blob/<LIBVLCJNI_TESTED_HASH>/buildsystem/get-vlc.sh
+  * https://code.videolan.org/videolan/libvlcjni/-/blob/<LIBVLCJNI_TESTED_HASH>/buildsystem/get-vlc.sh
 
-    For recommended versions of the build tools, see:
+  For recommended versions of the build tools, see:
 
-    * https://git.videolan.org/?p=vlc.git;a=blob;f=extras/tools/bootstrap#l130
-    * https://code.videolan.org/videolan/docker-images/raw/master/vlc-debian-android/Dockerfile
+  * https://git.videolan.org/?p=vlc.git;a=blob;f=extras/tools/bootstrap#l130
+  * https://code.videolan.org/videolan/docker-images/raw/master/vlc-debian-android/Dockerfile
 
-    Note that compilation of VLC 3.5.1 fails with Meson 0.55.1, so we patch
-    build scripts to use 0.56.2 (the upstream actually uses 0.56.1 from
-    buster-backports, see their Dockerfile).
+  Note that compilation of VLC 3.5.5 fails with Meson 0.55.1, so we patch
+  build scripts to use Bookworms apt installed one.
 
-    Actual versioncodes are:
+  Actual versioncodes since 3.5.5 are:
 
-    * Build:2.0.6,12000624 armv7
-    * Build:2.0.6,12000625 x86
-    * Build:2.0.6,12000626 mips
-    * Build:2.0.6,12000627 armv8
-    * Build:2.0.6,12000628 x86_64
+  * Build:3.5.5,13050505 armv7
+  * Build:3.5.5,13050506 armv8
+  * Build:3.5.5,13050507 x86
+  * Build:3.5.5,13050508 x86_64
 
-    Variables FD_TARGET_TUPLE, FD_TARGET_ARCH and abi in output apk name needs
-    to be changed per build.
+  Variables FD_TARGET_TUPLE, FD_TARGET_ARCH and abi in output apk name needs
+  to be changed per build.
 
-    * arm64-v7a: aarch64-linux-android
-    * armeabi-v7a: arm-linux-androideabi
-    * x86: x86-linux-android
-    * x86_64: x86_64-linux-android
+  * armeabi-v7a: arm-linux-androideabi
+  * arm64-v8a: aarch64-linux-android
+  * x86: x86-linux-android
+  * x86_64: x86_64-linux-android
 
-    Mips no longer supported since 3.2.6.
-
-ArchivePolicy: 12 versions
+ArchivePolicy: 12
 AutoUpdateMode: None
 UpdateCheckMode: Tags ^[\d.]+$
 VercodeOperation:
   - 10000008+%c
 UpdateCheckData: build.gradle|versionCode\s=\s(\d+)|.|versionName\s=\s'(.*)'
-CurrentVersion: 3.5.3
-CurrentVersionCode: 13050308
+CurrentVersion: 3.5.7
+CurrentVersionCode: 13050708

@@ -165,7 +165,49 @@ Builds:
       - sed -i -e '/addOnCompleteListener/,+2d' -e "s|Firebase.*google_sign_in_url\")|\"$google_sign_in_url\"|"
         -e '/startActivityForResult/,+1s/}//' -e '/firebase/d' ui/LoginActivity.kt
 
+  - versionName: 2.8.9
+    versionCode: 60
+    commit: 7ea7714ea2625a18e0195d58af04543fc81921e9
+    subdir: app
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/aliyun/d' -e '/fabric/d' -e '/firebase/d' -e '/googlePlay/d' ../build.gradle.kts
+        build.gradle.kts
+      - sed -i -e '/repositories {/a mavenCentral()' -e '/repositories {/a jcenter()'
+        ../build.gradle.kts
+      - sed -i -e '/systemProp/d' ../gradle.properties
+      - google_sign_in_url=$(sed -n -E 's/^.*<value>(.*)<\/value>.*$/\1/p' src/main/res/xml/remote_config_defaults.xml)
+      - cd src/main/java/im/fdx/v2ex
+      - sed -i -e '/firebase/Id' network/HttpHelper.kt ui/topic/TopicFragment.kt ui/main/MainActivity.kt
+      - sed -i -e '/addOnCompleteListener/,+2d' -e "s|Firebase.*google_sign_in_url\")|\"$google_sign_in_url\"|"
+        -e '/startActivityForResult/,+1s/}//' -e '/firebase/d' ui/LoginActivity.kt
+
+  - versionName: 2.9.4
+    versionCode: 69
+    commit: fb4994fea3da448c31d9a5d9fffcf9e570f0ff23
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/dependencies {/a implementation("com.google.errorprone:error_prone_annotations:2.24.1")'
+        build.gradle.kts
+      - sed -i -e '/aliyun/d' -e '/fabric/d' -e '/firebase/d' -e '/googlePlay/d' ../build.gradle.kts
+        build.gradle.kts
+      - sed -i -e '/repositories {/a mavenCentral()' -e '/repositories {/a jcenter()'
+        ../build.gradle.kts
+      - sed -i -e '/systemProp/d' ../gradle.properties
+      - google_sign_in_url=$(sed -n -E 's/^.*<value>(.*)<\/value>.*$/\1/p' src/main/res/xml/remote_config_defaults.xml)
+      - cd src/main/java/im/fdx/v2ex
+      - sed -i -e '/firebase/Id' network/HttpHelper.kt ui/topic/TopicFragment.kt ui/main/MainActivity.kt
+      - sed -i -e '/addOnCompleteListener/,+2d' -e "s|Firebase.*google_sign_in_url\")|\"$google_sign_in_url\"|"
+        -e '/startActivityForResult/,+1s/}//' -e '/firebase/d' ui/LoginActivity.kt
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.8.7
-CurrentVersionCode: 58
+CurrentVersion: 2.9.4
+CurrentVersionCode: 69

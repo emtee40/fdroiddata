@@ -1,17 +1,17 @@
 Categories:
   - Internet
 License: MIT
-WebSite: https://code.rocketnine.space/tslocum/xenia
-SourceCode: https://code.rocketnine.space/tslocum/xenia
-IssueTracker: https://code.rocketnine.space/tslocum/xenia/issues
-Changelog: https://code.rocketnine.space/tslocum/xenia/src/branch/master/CHANGELOG
-Donate: https://rocketnine.space/donate/
-Liberapay: rocketnine.space
+WebSite: https://code.rocket9labs.com/tslocum/xenia
+SourceCode: https://code.rocket9labs.com/tslocum/xenia
+IssueTracker: https://code.rocket9labs.com/tslocum/xenia/issues
+Changelog: https://code.rocket9labs.com/tslocum/xenia/src/branch/master/CHANGELOG
+Donate: https://rocket9labs.com/donate/
+Liberapay: rocket9labs.com
 
 AutoName: Xenia
 
 RepoType: git
-Repo: https://code.rocketnine.space/tslocum/xenia.git
+Repo: https://code.rocket9labs.com/tslocum/xenia.git
 
 Builds:
   - versionName: 0.1.4
@@ -36,7 +36,20 @@ Builds:
       - yes
     ndk: r21e
 
+  - versionName: 0.1.6
+    versionCode: 16
+    commit: a9d08f64f4c4a68c8d3931b6b82f01dedea448e2
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y golang-go -t bullseye-backports
+      - apt-get install -y gcc openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    ndk: 26.0.10792818
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.1.5
-CurrentVersionCode: 15
+CurrentVersion: 0.1.6
+CurrentVersionCode: 16

@@ -6,10 +6,10 @@ IssueTracker: https://github.com/loisaidasam/mta-fare-buster-android/issues
 
 AutoName: MTA Fare Buster
 Description: |-
-    Calculate needed amount for your travels using NYC MTA: No more leaving change
-    on your Metrocard! Based on research by
-    <a href="http://iquantny.tumblr.com/post/96700509489/how-memorizing-19-05-can-help-you-outsmart-the-mta">
-    I Quant NY</a>.
+  Calculate needed amount for your travels using NYC MTA: No more leaving change
+  on your Metrocard! Based on research by
+  <a href="http://iquantny.tumblr.com/post/96700509489/how-memorizing-19-05-can-help-you-outsmart-the-mta">
+  I Quant NY</a>.
 
 RepoType: git
 Repo: https://github.com/loisaidasam/mta-fare-buster-android
@@ -19,7 +19,7 @@ Builds:
     versionCode: 1
     commit: 735a2234833e1ccda2c8746e10a5e23655e16422
     srclibs:
-      - 1:Support/v7/appcompat@android-4.4.3_r1
+      - appcompat@android-4.4.3_r1
     rm:
       - libs/*
     extlibs:
@@ -30,7 +30,7 @@ Builds:
     versionCode: 2
     commit: dba01df6b5cb1e19acaed8222c557eeee6cc157f
     srclibs:
-      - 1:Support/v7/appcompat@android-4.4.3_r1
+      - appcompat@android-4.4.3_r1
     rm:
       - libs/*
     extlibs:
@@ -41,7 +41,7 @@ Builds:
     versionCode: 3
     commit: 630d29f3badfb9f403fd0306385cb4e277f7d021
     srclibs:
-      - 1:Support/v7/appcompat@android-4.4.3_r1
+      - appcompat@android-4.4.3_r1
     rm:
       - libs/*
     extlibs:
@@ -62,7 +62,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '1.4'
 CurrentVersionCode: 5

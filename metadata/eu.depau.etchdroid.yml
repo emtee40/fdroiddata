@@ -2,34 +2,19 @@ Categories:
   - System
 License: GPL-3.0-only
 AuthorName: Davide Depau
-AuthorEmail: etchdroid@depau.eu
+AuthorEmail: hello@etchdroid.app
 AuthorWebSite: https://depau.eu/
-WebSite: https://etchdroid.depau.eu/
+WebSite: https://etchdroid.app/
 SourceCode: https://github.com/EtchDroid/EtchDroid
 IssueTracker: https://github.com/EtchDroid/EtchDroid/issues
-Translation: https://etchdroid-l10n.depau.eu/engage/etchdroid/?
+Translation: https://hosted.weblate.org/engage/etchdroid/
 Changelog: https://github.com/EtchDroid/EtchDroid/releases
-Donate: https://etchdroid.depau.eu/donate/
+Donate: https://etchdroid.app/donate/
 
 AutoName: EtchDroid
-Description: |-
-    EtchDroid is an open-source application that helps you write images to USB drives.
-    You can use it to make a bootable GNU/Linux USB drive when your laptop is dead
-    and you’re in the middle of nowhere.
-
-    Features:
-    * Supports raw disk images and most GNU/Linux distributions ISOs
-    * Supports most DMG disk images (beta)
-    * No root - everything is done within the bounds of the Android API
-    * Free as in freedom
-
-    Planned features:
-    * Write common GNU/Linux distro in streaming from the Internet without storing it on the device
-    * Support for Windows installation ISO (will likely require root)
-    * Support for Unetbootin-style image flashing
 
 RepoType: git
-Repo: https://github.com/Depau/EtchDroid.git
+Repo: https://github.com/EtchDroid/EtchDroid.git
 
 Builds:
   - versionName: '1.2'
@@ -94,10 +79,44 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/21.0.6113669/21.3.6528147/' ../ci-scripts/setup_sdk.sh
-        ../dmg2img/build.gradle
+      ../dmg2img/build.gradle
     ndk: r21d
+
+  - versionName: 1.5.1
+    versionCode: 13
+    commit: fae25df1b73fcbf6f4acb4cc9bdb8857d0e404db
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/21.0.6113669/21.3.6528147/' ../ci-scripts/setup_sdk.sh ../dmg2img/build.gradle
+      - sed -i -e 's/4.1.1/4.2.0/' ../build.gradle
+      - sed -i -e 's/gradle-6.5/gradle-6.7.1/' ../gradle/wrapper/gradle-wrapper.properties
+    ndk: r21d
+
+  - versionName: 1.9.rc1
+    versionCode: 21
+    commit: d7da13f2bb16f81f070d8e5b011fc2dc385a19d7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/21.0.6113669/21.4.7075529/' ../ci-scripts/setup_sdk.sh
+    ndk: r21e
+
+  - versionName: 1.9.rc3
+    versionCode: 23
+    commit: fcc07a6222e4f38fa8073d9dea1f72e7d68fc0d1
+    subdir: app
+    gradle:
+      - foss
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.5'
-CurrentVersionCode: 12
+CurrentVersion: 1.9.rc3
+CurrentVersionCode: 23

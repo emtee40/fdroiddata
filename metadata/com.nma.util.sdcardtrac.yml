@@ -3,15 +3,14 @@ Categories:
 License: GPL-3.0-only
 SourceCode: https://github.com/nma83/SDCardTrac
 IssueTracker: https://github.com/nma83/SDCardTrac/issues
-FlattrID: '3457864'
 Bitcoin: 16bxTv1fP8X2QN5SWXc1AcKhhA1tJQKcTa
 
 AutoName: StorageTrac
 Description: |-
-    Uses <a href="http://en.wikipedia.org/wiki/Inotify">inotify</a> to record any file activity
-    in the external storage. Collects data at regular intervals and plots used
-    storage space over time. Uses the <a href="http://android-graphview.org">GraphView</a>
-    library for plotting.
+  Uses <a href="http://en.wikipedia.org/wiki/Inotify">inotify</a> to record any file activity
+  in the external storage. Collects data at regular intervals and plots used
+  storage space over time. Uses the <a href="http://android-graphview.org">GraphView</a>
+  library for plotting.
 
 RepoType: git
 Repo: https://github.com/nma83/SDCardTrac.git

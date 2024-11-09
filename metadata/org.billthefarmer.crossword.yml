@@ -3,6 +3,7 @@ Categories:
 License: GPL-3.0-only
 AuthorName: Bill Farmer
 AuthorWebSite: https://billthefarmer.github.io/
+WebSite: https://billthefarmer.github.io/crossword/
 SourceCode: https://github.com/billthefarmer/crossword
 IssueTracker: https://github.com/billthefarmer/crossword/issues
 Changelog: https://github.com/billthefarmer/crossword/releases
@@ -10,7 +11,7 @@ Changelog: https://github.com/billthefarmer/crossword/releases
 AutoName: Crossword
 
 RepoType: git
-Repo: https://github.com/billthefarmer/crossword
+Repo: https://github.com/billthefarmer/crossword.git
 
 Builds:
   - versionName: '1.0'
@@ -161,7 +162,25 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.22'
+    versionCode: 122
+    commit: ea9581712702f2a96ad12aafbab853de9d315974
+    gradle:
+      - yes
+
+  - versionName: '1.23'
+    versionCode: 123
+    commit: 9286a8ad73c7824cc0a8998a81b2eac5ef181aa4
+    gradle:
+      - yes
+
+  - versionName: '1.24'
+    versionCode: 124
+    commit: 1e24ab4d4d59df3868f972c4efb8b3da5d2bdbad
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.21'
-CurrentVersionCode: 121
+CurrentVersion: '1.24'
+CurrentVersionCode: 124

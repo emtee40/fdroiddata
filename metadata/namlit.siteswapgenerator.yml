@@ -8,14 +8,14 @@ IssueTracker: https://github.com/namlit/siteswap_generator/issues
 
 AutoName: Siteswap Generator
 Description: |-
-    The Siteswap Generator is designed for passing Siteswap generation and analysis. The following features are supported:
-    * Find all possible Siteswaps for a given period length and number of objects
-    * Easy filtering of zips, zaps and holds via check boxes
-    * Automatic filtering of non-passable patterns
-    * Support for pattern and interface filters
-    * Generation of local Siteswaps and calculation of start position
-    * Support for asynchronous passing patters with more than two jugglers
-    * Generation of very long patterns in a random mode
+  The Siteswap Generator is designed for passing Siteswap generation and analysis. The following features are supported:
+  * Find all possible Siteswaps for a given period length and number of objects
+  * Easy filtering of zips, zaps and holds via check boxes
+  * Automatic filtering of non-passable patterns
+  * Support for pattern and interface filters
+  * Generation of local Siteswaps and calculation of start position
+  * Support for asynchronous passing patters with more than two jugglers
+  * Generation of very long patterns in a random mode
 
 RepoType: git
 Repo: https://github.com/namlit/siteswap_generator
@@ -137,7 +137,29 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.4.1
+    versionCode: 36
+    commit: 7d9bdf68bee5cc8f49397949394f8bb7f2cd14f7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.5.0
+    versionCode: 37
+    commit: e7f94a9a59da9becd949586974b11a33855ed210
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.3.1
-CurrentVersionCode: 34
+CurrentVersion: 1.5.0
+CurrentVersionCode: 37

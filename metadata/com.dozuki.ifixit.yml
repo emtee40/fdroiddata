@@ -9,12 +9,12 @@ IssueTracker: https://github.com/iFixit/iFixitAndroid/issues
 
 AutoName: Dozuki
 Description: |-
-    The official iFixit app offers native guide viewing using iFixit’s
-    <a href="http://www.ifixit.com/api/1.0/doc">public APIs</a>, integrated web views of the
-    site with Answers and Cart.
+  The official iFixit app offers native guide viewing using iFixit's
+  <a href="http://www.ifixit.com/api/1.0/doc">public APIs</a>, integrated web views of the
+  site with Answers and Cart.
 
-    v1.2.1+ is built with the non-free Google Analytics library replaced with the
-    free NoAnalytics.
+  v1.2.1+ is built with the non-free Google Analytics library replaced with the
+  free NoAnalytics.
 
 RepoType: git
 Repo: https://github.com/iFixit/iFixitAndroid.git
@@ -146,6 +146,7 @@ Builds:
       - echo 'dozukiAppId=' >> gradle.properties
       - echo 'accustreamAppId=' >> gradle.properties
 
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 2.4.1

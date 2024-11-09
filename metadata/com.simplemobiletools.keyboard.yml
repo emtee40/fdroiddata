@@ -149,7 +149,80 @@ Builds:
     gradle:
       - fdroid
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 5.4.0
-CurrentVersionCode: 15
+  - versionName: 5.4.1
+    versionCode: 16
+    commit: afdacfdd2ee8af42e3765990d97824adfc976767
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 5.4.2
+    versionCode: 17
+    commit: 6613f76cc32dd92da8c3ca2a88be2aeaf968aa4f
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 5.4.3
+    versionCode: 18
+    commit: 1c65f67566b2899bdfdd0964445d0c4fc01374a3
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 5.4.4
+    versionCode: 19
+    commit: 97204cbac05489d8e95fd9d9b2758788899da5bb
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 5.4.5
+    versionCode: 20
+    commit: 637f069a651c7fae08ef30142de83d10cacad86e
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 5.4.6
+    versionCode: 21
+    commit: e0da002baa72b34fcfa13e27e5a4ad6f89cebe5d
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 5.4.7
+    versionCode: 22
+    commit: 8c9b92731dfd90242f1d68df79c260670386f1fd
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 5.4.8
+    versionCode: 23
+    commit: 7bde046dbacf8292e732c7e277260c9c85fb1d08
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 5.4.9
+    versionCode: 24
+    commit: 6d2ebc30c5f31c186386dc35445b1729259bf164
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 5.4.9
+CurrentVersionCode: 24

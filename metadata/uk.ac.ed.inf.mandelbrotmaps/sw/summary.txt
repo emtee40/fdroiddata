@@ -1,1 +1,1 @@
-Mandelbrot na Julia fractal mtazamaji, kwa lengo la kuonyesha uhusiano wao.
+Amharcóir fractal Mandelbrot agus Julia, ag iarraidh a gcaidreamh a léiriú.

@@ -19,7 +19,27 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.1.0
+    versionCode: 19
+    commit: f738b33383ecd2087156bbe0f91660aca4725c98
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 20
+    commit: f9fbc83df5fd2f7d0ca8718136df912a2cb1b87d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 2cb0b2cba3df8114463ff1a099e996159982e3952cf1d2dc7962d8db2feafb93
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.7
-CurrentVersionCode: 18
+CurrentVersion: 2.2.0
+CurrentVersionCode: 20

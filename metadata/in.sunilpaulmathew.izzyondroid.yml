@@ -12,7 +12,7 @@ Liberapay: sunilpaulmathew
 AutoName: IzzyOnDroid
 
 RepoType: git
-Repo: https://gitlab.com/sunilpaulmathew/izzyondroid
+Repo: https://gitlab.com/sunilpaulmathew/izzyondroid.git
 
 Builds:
   - versionName: v0.5
@@ -66,7 +66,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: v0.10
+    versionCode: 10
+    commit: 766067f74a222b50f4d02f13837c4b9b8e3db885
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.11
+    versionCode: 11
+    commit: 21e6d4fe10d378eb7d2eb771607b056ae0599ca3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: v0.13
+    versionCode: 13
+    commit: 84daffa4479e75163fd0ead6844b3b0299e44c4a
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v0.9
-CurrentVersionCode: 9
+CurrentVersion: v0.13
+CurrentVersionCode: 13

@@ -8,7 +8,8 @@ AuthorEmail: apps@brentpanther.com
 AuthorWebSite: https://www.brentpanther.com/
 SourceCode: https://github.com/hwki/SimpleBitcoinWidget
 IssueTracker: https://github.com/hwki/SimpleBitcoinWidget/issues
-Bitcoin: 15SHnY7HC5bTxzErHDPe7wHXj1HhtDKV7z
+Changelog: https://github.com/hwki/SimpleBitcoinWidget/releases
+Bitcoin: 194QqhXirp21F5fJVaqviMeHkzZzkZKyi8
 
 AutoName: Simple Crypto Widget
 
@@ -786,7 +787,159 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 8.3.8
+    versionCode: 318
+    commit: 45094f669d9fedfd0ed97ddecdab9c35c9a22e2e
+    subdir: bitcoin
+    gradle:
+      - fdroid
+
+  - versionName: 8.4.0
+    versionCode: 319
+    commit: a87dd1c7611714570a7fe0018d0070230e42f950
+    subdir: bitcoin
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 8.4.1
+    versionCode: 320
+    commit: bf3b00eb5dbbb1f4083baec86c7891731cadf8d7
+    subdir: bitcoin
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 8.4.2
+    versionCode: 321
+    commit: 50b5d61f13bb0335489463699a63ac5df105f68e
+    subdir: bitcoin
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 8.4.3
+    versionCode: 322
+    commit: dafa65578240d05b67f4a9acdbd4b7aa711724fd
+    subdir: bitcoin
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 8.4.4
+    versionCode: 323
+    commit: 59f40a5d3bccfe7d0e06605a97a42cef0445dbed
+    subdir: bitcoin
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 8.4.5
+    versionCode: 324
+    commit: b3490ba237372b7252c622928bcba9a6daf5e38a
+    subdir: bitcoin
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 8.5.0
+    versionCode: 325
+    commit: f13d15e46093ee1333766519d5d9e6104fdd273e
+    subdir: bitcoin
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 8.5.1
+    versionCode: 326
+    commit: 6fbbda8d1dc0d9c8b3fd15d1039647e287feb158
+    subdir: bitcoin
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 8.5.3
+    versionCode: 328
+    commit: ad2e0973546f276d1b854ddf96298cf3ff67992b
+    subdir: bitcoin
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 8.5.4
+    versionCode: 329
+    commit: 4c5679fd470ee14e98c1d1e7725e2777aff575c1
+    subdir: bitcoin
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+
+  - versionName: 8.5.5
+    versionCode: 330
+    commit: b239857f7fc0d85d8f5fd5eef669f5ff9e504abc
+    subdir: bitcoin
+    gradle:
+      - fdroid
+
+  - versionName: 8.5.6
+    versionCode: 331
+    commit: d73f972f83239c43ef6a6d2e5b9bad2c4378e4f2
+    subdir: bitcoin
+    gradle:
+      - fdroid
+
+  - versionName: 8.5.7
+    versionCode: 332
+    commit: 0d5897cac6713018e50acd871846f57a82815d3c
+    subdir: bitcoin
+    gradle:
+      - fdroid
+
+  - versionName: 8.5.9
+    versionCode: 334
+    commit: cea28912e0c46abdad308344a3834d34aa221ae0
+    subdir: bitcoin
+    gradle:
+      - fdroid
+
+  - versionName: 8.6.0
+    versionCode: 335
+    commit: ded6ab75285d3256774522c3bedbedad7fd366b2
+    subdir: bitcoin
+    gradle:
+      - fdroid
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 8.3.7
-CurrentVersionCode: 317
+CurrentVersion: 8.6.0
+CurrentVersionCode: 335

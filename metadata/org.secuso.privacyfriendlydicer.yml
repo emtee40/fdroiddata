@@ -3,8 +3,8 @@ Categories:
 License: GPL-3.0-only
 AuthorName: SECUSO - Security Usability Society
 AuthorEmail: contact@secuso.org
-AuthorWebSite: https://secuso.aifb.kit.edu/english/
-WebSite: https://secuso.org/pfa
+AuthorWebSite: https://secuso.aifb.kit.edu/english/105.php
+WebSite: https://secuso.aifb.kit.edu/english/Dicer.php
 SourceCode: https://github.com/SecUSo/privacy-friendly-dicer
 IssueTracker: https://github.com/SecUSo/privacy-friendly-dicer/issues
 Changelog: https://github.com/SecUSo/privacy-friendly-dicer/blob/HEAD/CHANGELOG.md
@@ -57,7 +57,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.7.1
+    versionCode: 10
+    commit: cafd104036edd9df1d141432e68a1269a1a374f0
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.6.0
-CurrentVersionCode: 8
+CurrentVersion: 1.7.1
+CurrentVersionCode: 10

@@ -3,6 +3,7 @@ Categories:
 License: GPL-3.0-only
 AuthorName: Bill Farmer
 AuthorWebSite: https://billthefarmer.github.io/
+WebSite: https://billthefarmer.github.io/gridle/
 SourceCode: https://github.com/billthefarmer/gridle
 IssueTracker: https://github.com/billthefarmer/gridle/issues
 Changelog: https://github.com/billthefarmer/gridle/releases
@@ -10,7 +11,7 @@ Changelog: https://github.com/billthefarmer/gridle/releases
 AutoName: Gridle
 
 RepoType: git
-Repo: https://github.com/billthefarmer/gridle
+Repo: https://github.com/billthefarmer/gridle.git
 
 Builds:
   - versionName: '1.0'
@@ -109,7 +110,61 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.10'
+    versionCode: 110
+    commit: 70001775fef390adb31afd1668f0a514c38a1dfe
+    gradle:
+      - yes
+
+  - versionName: '1.11'
+    versionCode: 111
+    commit: 7748b8aa3d845c6396669d894d1654df5fe88b55
+    gradle:
+      - yes
+
+  - versionName: '1.12'
+    versionCode: 112
+    commit: c9b60bb5ea5ade85dae3f9872839d5cda0e06ae1
+    gradle:
+      - yes
+
+  - versionName: '1.13'
+    versionCode: 113
+    commit: 78c6d563ea8b0871dfa8b3c4a2af35ac8526b118
+    gradle:
+      - yes
+
+  - versionName: '1.14'
+    versionCode: 114
+    commit: 0ca7f1113d2771671f23f3554288a40fe1e887d5
+    gradle:
+      - yes
+
+  - versionName: '1.15'
+    versionCode: 115
+    commit: b133a2ff66aea99d3d5d9233c20e4029580302a8
+    gradle:
+      - yes
+
+  - versionName: '1.16'
+    versionCode: 116
+    commit: 7eb57155365bbb6f9659fc370353d091986cf98f
+    gradle:
+      - yes
+
+  - versionName: '1.17'
+    versionCode: 117
+    commit: 0ad6dddd690a5fb4785d832c9fe66d5b6be9e9c8
+    gradle:
+      - yes
+
+  - versionName: '1.18'
+    versionCode: 118
+    commit: bf65c5a9bb93dc28814b7b2c031f80f7a819da61
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.09'
-CurrentVersionCode: 109
+CurrentVersion: '1.18'
+CurrentVersionCode: 118

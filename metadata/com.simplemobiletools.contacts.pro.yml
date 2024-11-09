@@ -15,7 +15,7 @@ Name: Simple Contacts Pro
 AutoName: Contacts
 
 RepoType: git
-Repo: https://github.com/SimpleMobileTools/Simple-Contacts
+Repo: https://github.com/SimpleMobileTools/Simple-Contacts.git
 
 Builds:
   - versionName: 6.0.0
@@ -470,7 +470,45 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 6.22.1
-CurrentVersionCode: 101
+  - versionName: 6.22.2
+    versionCode: 102
+    commit: 1ec5277dc4155432b9142d441fb33b6a93d04f3d
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 6.22.3
+    versionCode: 103
+    commit: 831e6fc7b0af75cf8f81808e9f2f4a18d2b8a808
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 6.22.4
+    versionCode: 104
+    commit: 5b71c5a6624fdbed98ddc3f30db7012b28d32cb3
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 6.22.7
+    versionCode: 107
+    commit: 15d927e7a95ab20ee61a8910012292e7162a5a1f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - fdroid
+    prebuild: echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 6.22.7
+CurrentVersionCode: 107

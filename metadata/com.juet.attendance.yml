@@ -8,10 +8,10 @@ IssueTracker: https://github.com/mavidser/attendance-viewer/issues
 
 AutoName: Attendance
 Description: |-
-    Students of JUET and JIIT-128 can view class attendance. It visualizes the
-    attendance in a streamlined manner, along with additional details for each
-    subject, providing details about the subject. You can also set a threshold
-    attendance which helps you in maintaining the attendance.
+  Students of JUET and JIIT-128 can view class attendance. It visualizes the
+  attendance in a streamlined manner, along with additional details for each
+  subject, providing details about the subject. You can also set a threshold
+  attendance which helps you in maintaining the attendance.
 
 RepoType: git
 Repo: https://github.com/mavidser/attendance-viewer
@@ -21,7 +21,7 @@ Builds:
     versionCode: 6
     commit: 2c9586d2d3601ef02e42c2817fff9b4c1c474952
     srclibs:
-      - 1:ActionBarSherlock@4.4.0
+      - ActionBarSherlock@4.4.0
     rm:
       - out
       - libs

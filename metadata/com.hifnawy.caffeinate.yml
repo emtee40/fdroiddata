@@ -1,0 +1,63 @@
+Categories:
+  - System
+License: GPL-3.0-only
+SourceCode: https://github.com/abdalmoniem/Caffeinate
+IssueTracker: https://github.com/abdalmoniem/Caffeinate/issues
+
+AutoName: Caffeinate
+
+RepoType: git
+Repo: https://github.com/abdalmoniem/Caffeinate.git
+Binaries: https://github.com/abdalmoniem/Caffeinate/releases/download/v%v/com.hifnawy.caffeinate.release_release_v%v.apk
+
+Builds:
+  - versionName: 1.4.0
+    versionCode: 18
+    commit: c0e798d6ac968ccf4835b2023c29cc5d2587d599
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/abdalmoniem/Caffeinate/releases/download/v%v/com.hifnawy.caffeinate_release_v%v.apk
+    prebuild: sed -i -e '/signingConfigs.findByName/d' build.gradle.kts
+
+  - versionName: 1.4.5
+    versionCode: 19
+    commit: 185543d1b8eb9b4085ea735f0ab9e776bff2be57
+    subdir: app
+    gradle:
+      - yes
+    binary: https://github.com/abdalmoniem/Caffeinate/releases/download/v%v/com.hifnawy.caffeinate_release_v%v.apk
+    prebuild: sed -i -e '/signingConfigs.findByName/d' build.gradle.kts
+
+  - versionName: 1.6.0
+    versionCode: 22
+    commit: 95214fec54f6229ab74636e8f5d7a0ccee5f5f8b
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init: sed -i -e '/signingConfigs.findByName/,+1d' build.gradle.kts
+    gradle:
+      - yes
+
+  - versionName: 1.6.7
+    versionCode: 25
+    commit: f98dd53793792cc0403f168a0926c5f4ef83fce3
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    init: sed -i -e '/signingConfigs.findByName/,+1d' build.gradle.kts
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 950a5bf98a6c43769d800aac371e83b8a632b55de98349c01dc5419e90edb1ab
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.6.7
+CurrentVersionCode: 25

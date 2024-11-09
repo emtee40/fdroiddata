@@ -115,7 +115,50 @@ Builds:
     gradle:
       - store
 
+  - versionName: 3.11.0
+    versionCode: 57
+    commit: ffd4129ba886e045736914d2c93c04e239dd3b1b
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.11.1
+    versionCode: 58
+    commit: d4967edeeddbddc1a3a55e5ca2de56530d52a4e5
+    subdir: app
+    gradle:
+      - store
+
+  - versionName: 3.12.1
+    versionCode: 60
+    commit: 7ed6540465ee218f966d9bd58d8897d445e7905c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - store
+
+  - versionName: 3.12.2
+    versionCode: 61
+    commit: 60e486023c877ff87d90def5ddf2828818fd1cdb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - store
+
+  - versionName: 3.13.0
+    versionCode: 62
+    commit: bba9e167121488f1c8ba0a34b982710321b79c5d
+    subdir: app
+    gradle:
+      - store
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.10.0
-CurrentVersionCode: 56
+CurrentVersion: 3.13.0
+CurrentVersionCode: 62

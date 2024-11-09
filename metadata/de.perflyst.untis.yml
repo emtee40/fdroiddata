@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Untis service itself is proprietary.
 Categories:
   - Internet
 License: GPL-3.0-or-later
@@ -9,20 +10,22 @@ Changelog: https://github.com/Perflyst/OpenUntis/releases
 
 AutoName: OpenUntis
 Description: |-
-    An alternative FLOSS Android client for the Untis timetable system.
+  Note: The app is no longer developed, superseded by https://f-droid.org/packages/com.sapuseven.untis/
 
-    Untis is a proprietary timetable software. More information about Untis can be
-    found at https://untis.at. To use Untis, your school must provide it. Your
-    school must also give you an account with which you can access your current
-    timetable. Why use this app when there is an official one? The official app is
-    also proprietary and includes libraries from google and other tracking software.
-    OpenUntis offers you exactly the same features and even more. Free choice of
-    themes and dark mode are of course also included.
+  An alternative FLOSS Android client for the Untis timetable system.
 
-    OpenUntis is a fork of BetterUntis, we removed proprietary libraries and some
-    unnecessary requests to other non-free networks.
+  Untis is a proprietary timetable software. More information about Untis can be
+  found at https://untis.at. To use Untis, your school must provide it. Your
+  school must also give you an account with which you can access your current
+  timetable. Why use this app when there is an official one? The official app is
+  also proprietary and includes libraries from google and other tracking software.
+  OpenUntis offers you exactly the same features and even more. Free choice of
+  themes and dark mode are of course also included.
 
-    WebUntis is a non-free network.
+  OpenUntis is a fork of BetterUntis, we removed proprietary libraries and some
+  unnecessary requests to other non-free networks.
+
+  WebUntis is a non-free network.
 
 RepoType: git
 Repo: https://github.com/Perflyst/OpenUntis.git
@@ -56,7 +59,7 @@ Builds:
     gradle:
       - yes
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation' } }" >>
-        build.gradle
+      build.gradle
 
   - versionName: 2.2.0
     versionCode: 16
@@ -65,9 +68,10 @@ Builds:
     gradle:
       - yes
     prebuild: echo -e "android { lintOptions { disable 'MissingTranslation' } }" >>
-        build.gradle
+      build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 2.2.0
 CurrentVersionCode: 16

@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on several non-libre services, e.g. Binance, Coingecko.
 Categories:
   - Money
 License: GPL-3.0-only
@@ -12,24 +13,24 @@ Bitcoin: 3BCeMXVny1HbDc4NK64UZs9oFjKZdajBfx
 Name: Groestlcoin Wallet
 AutoName: Groestlcoin Wallet TestNet
 Description: |-
-    Have your Groestlcoins always with you, in your pocket! You pay by quickly scanning
-    a QR code. As a merchant, you receive payments reliably and instantly. Groestlcoin
-    Wallet is the first mobile Groestlcoin app, and arguably also the most secure!
+  Have your Groestlcoins always with you, in your pocket! You pay by quickly scanning
+  a QR code. As a merchant, you receive payments reliably and instantly. Groestlcoin
+  Wallet is the first mobile Groestlcoin app, and arguably also the most secure!
 
-    * No registration, web service or cloud needed! This wallet is de-centralized and peer to peer.
-    * Display of Groestlcoin amount in GRS, mGRS and µGRS.
-    * Conversion to and from national currencies.
-    * Sending and receiving of Groestlcoin via NFC, QR codes or Groestlcoin URLs.
-    * Address book for regularly used Groestlcoin addresses.
-    * When you're offline, you can still pay via Bluetooth.
-    * System notification for received coins.
-    * Sweeping of paper wallets (e.g. those used for cold storage).
-    * App widget for Groestlcoin balance.
+  * No registration, web service or cloud needed! This wallet is de-centralized and peer to peer.
+  * Display of Groestlcoin amount in GRS, mGRS and µGRS.
+  * Conversion to and from national currencies.
+  * Sending and receiving of Groestlcoin via NFC, QR codes or Groestlcoin URLs.
+  * Address book for regularly used Groestlcoin addresses.
+  * When you're offline, you can still pay via Bluetooth.
+  * System notification for received coins.
+  * Sweeping of paper wallets (e.g. those used for cold storage).
+  * App widget for Groestlcoin balance.
 
-    See the
-    <a href="https://raw.githubusercontent.com/Groestlcoin/groestlcoin-wallet/HEAD/wallet/README.md">README</a> for more details. Use this at your own risk and be wary that if you
-    don't make a backup of the private keys you will no longer be able to access the
-    Groestlcoins contained in the wallet, should the data of the app be lost.
+  See the
+  <a href="https://raw.githubusercontent.com/Groestlcoin/groestlcoin-wallet/HEAD/wallet/README.md">README</a> for more details. Use this at your own risk and be wary that if you
+  don't make a backup of the private keys you will no longer be able to access the
+  Groestlcoins contained in the wallet, should the data of the app be lost.
 
 RepoType: git
 Repo: https://github.com/Groestlcoin/groestlcoin-wallet.git
@@ -86,7 +87,34 @@ Builds:
     scandelete:
       - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
 
+  - versionName: '10.03'
+    versionCode: 100301
+    commit: 2264cbd65f78784d4820a77a8522c92048869693
+    subdir: wallet
+    gradle:
+      - prod
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
+  - versionName: '10.07'
+    versionCode: 100700
+    commit: 3564d24e1e264b518d982b4987ba65a87228fe58
+    subdir: wallet
+    gradle:
+      - prod
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
+  - versionName: 10.07.1
+    versionCode: 100701
+    commit: 89ab4179686b62d85a1d2ce3a176c6027339ae73
+    subdir: wallet
+    gradle:
+      - prod
+    scandelete:
+      - wallet/test/de/schildbach/wallet/util/backup-protobuf-testnet
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '9.03'
-CurrentVersionCode: 90301
+CurrentVersion: 10.07.1
+CurrentVersionCode: 100701

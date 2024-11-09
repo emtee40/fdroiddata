@@ -6,8 +6,8 @@ IssueTracker: https://github.com/umanx/DashNotifier/issues
 
 AutoName: DashNotifier
 Description: |-
-    An extension for https://f-droid.org/packages/net.nurik.roman.dashclock which allows the display of
-    notifications from arbitrary apps on the lock screen.
+  An extension for https://f-droid.org/packages/net.nurik.roman.dashclock which allows the display of
+  notifications from arbitrary apps on the lock screen.
 
 RepoType: git
 Repo: https://github.com/umanx/DashNotifier
@@ -41,7 +41,7 @@ Builds:
     versionCode: 13
     commit: 00c403efa01e751
     srclibs:
-      - 1:Crouton@1.8.1
+      - Crouton@1.8.1
     prebuild:
       - mkdir -p $$Crouton$$/libs/
       - mv libs/android-support-v4.jar $$Crouton$$/libs/
@@ -52,7 +52,7 @@ Builds:
     versionCode: 18
     commit: 3960c5c6f5d8383e
     srclibs:
-      - 1:Crouton@1.8.1
+      - Crouton@1.8.1
     prebuild:
       - mkdir -p $$Crouton$$/libs/
       - mv libs/android-support-v4.jar $$Crouton$$/libs/
@@ -60,7 +60,8 @@ Builds:
     scanignore:
       - res/drawable-xhdpi
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: '0.48'
 CurrentVersionCode: 18

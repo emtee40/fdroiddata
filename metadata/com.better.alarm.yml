@@ -9,8 +9,8 @@ Changelog: https://github.com/yuriykulikov/AlarmClock/commits/develop
 
 AutoName: Simple Alarm Clock
 Description: |-
-    Smart alarm clock that includes many improvements over the stock alarm clock. It
-    does not have any extra features such as dock mode or a world clock.
+  Smart alarm clock that includes many improvements over the stock alarm clock. It
+  does not have any extra features such as dock mode or a world clock.
 
 RepoType: git
 Repo: https://github.com/yuriykulikov/AlarmClock
@@ -220,7 +220,31 @@ Builds:
       - develop
     prebuild: sed -i -e 's/\r//' ../gradle/wrapper/gradle-wrapper.properties
 
+  - versionName: 3.14.03
+    versionCode: 31403
+    commit: 9212f17b2072742a00391f105a0925e6946572ac
+    subdir: app
+    gradle:
+      - develop
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+
+  - versionName: 3.15.01
+    versionCode: 31501
+    commit: d747847f6f74a0a9ad642d2c27747dd16c5a66f0
+    subdir: app
+    gradle:
+      - develop
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+
+  - versionName: 3.15.04
+    versionCode: 31504
+    commit: 533072ecd400ed6b1bf59d2535483682692c263a
+    subdir: app
+    gradle:
+      - develop
+    prebuild: sed -i -e '/signingConfig /d' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.10.10
-CurrentVersionCode: 31010
+CurrentVersion: 3.15.04
+CurrentVersionCode: 31504

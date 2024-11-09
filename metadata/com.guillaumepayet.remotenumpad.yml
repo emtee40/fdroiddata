@@ -3,13 +3,13 @@ Categories:
 License: GPL-3.0-only
 AuthorName: Guillaume Payet
 AuthorEmail: theolizard@gmail.com
-SourceCode: https://github.com/theolizard/remote-numpad
-IssueTracker: https://github.com/theolizard/remote-numpad/issues
+SourceCode: https://github.com/guillaumevpayet/remote-numpad
+IssueTracker: https://github.com/guillaumevpayet/remote-numpad/issues
 
 AutoName: Remote Numpad
 
 RepoType: git
-Repo: https://github.com/theolizard/remote-numpad
+Repo: https://github.com/guillaumevpayet/remote-numpad
 
 Builds:
   - versionName: 1.6.2
@@ -171,7 +171,31 @@ Builds:
       - yes
     prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
 
+  - versionName: 2.1.0
+    versionCode: 45
+    commit: c665ad395097f488bc43256470096be0024b63d8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.1.1
+    versionCode: 46
+    commit: 915662b75c22f80412fe0e9a323a048e7018d234
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
+  - versionName: 2.1.2
+    versionCode: 47
+    commit: efcb88747f28d9bb2378776c56364da6319aa186
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/firebase/d' -e '/gms/d' build.gradle ../build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.10
-CurrentVersionCode: 44
+CurrentVersion: 2.1.2
+CurrentVersionCode: 47

@@ -5,14 +5,17 @@ WebSite: http://markusfisch.de
 SourceCode: https://github.com/markusfisch/WaveLinesWallpaper
 IssueTracker: https://github.com/markusfisch/WaveLinesWallpaper/issues
 Changelog: https://github.com/markusfisch/WaveLinesWallpaper/blob/HEAD/CHANGELOG.md
+Donate: https://www.buymeacoffee.com/markusfisch
+Liberapay: markusfisch
+Bitcoin: bc1q2guk2rpll587aymrfadkdtpq32448x5khk5j8z
 
 AutoName: Wave Lines Wallpaper
 Description: |-
-    A simple, unobstrusive live wallpaper showing slowly moving wave lines. You can
-    choose a color theme, build your own, change if the lines should grow and shrink
-    or if they should have a uniform width. The lines may swing in harmony or each
-    line independently. You may set the number of lines, the number of waves in a
-    line and the maximum amplitude.
+  A simple, unobstrusive live wallpaper showing slowly moving wave lines. You can
+  choose a color theme, build your own, change if the lines should grow and shrink
+  or if they should have a uniform width. The lines may swing in harmony or each
+  line independently. You may set the number of lines, the number of waves in a
+  line and the maximum amplitude.
 
 RepoType: git
 Repo: https://github.com/markusfisch/WaveLinesWallpaper.git
@@ -142,7 +145,25 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.13.3
+    versionCode: 23
+    commit: 5834c072c2b2ef135a8aed69ee97a0439ca46d9e
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.13.4
+    versionCode: 24
+    commit: e80e3716bdcfa9540df0c2b6758de27b6aeaf2c1
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.13.2
-CurrentVersionCode: 22
+CurrentVersion: 1.13.4
+CurrentVersionCode: 24

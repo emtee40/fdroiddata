@@ -1,7 +1,7 @@
 Categories:
   - Internet
-  - Reading
   - Multimedia
+  - Reading
 License: GPL-3.0-only
 SourceCode: https://github.com/bubelov/news
 IssueTracker: https://github.com/bubelov/news/issues
@@ -9,7 +9,7 @@ IssueTracker: https://github.com/bubelov/news/issues
 AutoName: News
 
 RepoType: git
-Repo: https://github.com/bubelov/news
+Repo: https://github.com/bubelov/news.git
 
 Builds:
   - versionName: 0.2.0
@@ -158,7 +158,18 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.4.3
+    versionCode: 24
+    commit: d3977c601c811232757140737db2fc99fe35d00d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.4.2
-CurrentVersionCode: 23
+CurrentVersion: 0.4.3
+CurrentVersionCode: 24

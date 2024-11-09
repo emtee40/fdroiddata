@@ -1,6 +1,6 @@
 Categories:
-  - Development
   - Connectivity
+  - Development
 License: Apache-2.0
 SourceCode: https://github.com/Sash0k/bluetooth-spp-terminal
 IssueTracker: https://github.com/Sash0k/bluetooth-spp-terminal/issues
@@ -8,12 +8,12 @@ Changelog: https://github.com/Sash0k/bluetooth-spp-terminal#features
 
 AutoName: Bluetooth terminal
 Description: |-
-    Bluetooth terminal for debugging and testing:
+  Bluetooth terminal for debugging and testing:
 
-    * Search and connect to bluetooth devices in slave mode via RFCOMM.
-    * Send commands to devices both ASCII and hex modes.
-    * Share and clean log.
-    * English/Russian i18n.
+  * Search and connect to bluetooth devices in slave mode via RFCOMM.
+  * Send commands to devices both ASCII and hex modes.
+  * Share and clean log.
+  * English/Russian i18n.
 
 RepoType: git
 Repo: https://github.com/Sash0k/bluetooth-spp-terminal.git
@@ -42,7 +42,16 @@ Builds:
       - yes
     prebuild: sed -i -e '/classpath/s/2.2.0/2.1.3/' ../build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: '1.2'
-CurrentVersionCode: 3
+  - versionName: '1.3'
+    versionCode: 4
+    commit: 3f0df318a203b7b339b955ae977715390cf74ada
+    subdir: bluetooth-spp-terminal
+    gradle:
+      - yes
+    prebuild: sed -i -e '/classpath/s/2.2.0/2.1.3/' ../build.gradle
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: '1.3'
+CurrentVersionCode: 4

@@ -4,12 +4,13 @@ License: GPL-3.0-or-later
 WebSite: https://www.dynalogin.org
 SourceCode: https://github.com/dynalogin/dynalogin-android
 IssueTracker: https://github.com/dynalogin/dynalogin-android/issues
+Changelog: https://raw.githubusercontent.com/dynalogin/dynalogin-android/HEAD/ChangeLog
 
 AutoName: dynalogin
 Description: |-
-    Soft-token implementing the HOTP algorithm from the Open Authentication (OATH)
-    initiative. Works well with the dynalogin server platform for secure Single Sign
-    On (SSO) and OpenID use cases.
+  Soft-token implementing the HOTP algorithm from the Open Authentication (OATH)
+  initiative. Works well with the dynalogin server platform for secure Single Sign
+  On (SSO) and OpenID use cases.
 
 RepoType: git
 Repo: https://github.com/dynalogin/dynalogin-android.git
@@ -23,7 +24,8 @@ Builds:
     versionCode: 3
     commit: 1.0.2
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: 1.0.2
 CurrentVersionCode: 3

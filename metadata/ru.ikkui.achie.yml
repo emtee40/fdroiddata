@@ -8,39 +8,24 @@ IssueTracker: https://github.com/IgorKruchinin/AchieApp/issues
 AutoName: Achie
 
 RepoType: git
-Repo: https://github.com/IgorKruchinin/AchieApp
+Repo: https://github.com/IgorKruchinin/AchieApp.git
 Binaries: https://github.com/IgorKruchinin/AchieApp/releases/latest/download/app-release.apk
 
 Builds:
-  - versionName: '1.1'
-    versionCode: 2
-    commit: b84628fa07181e123fd1dc9ae404a1ca03fcdb52
+  - versionName: '1.4'
+    versionCode: 9
+    commit: 36a869919385e4511495020dab91ea0486b216a6
     subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
     gradle:
       - yes
 
-  - versionName: 1.1.1
-    versionCode: 3
-    commit: c69153e3fafe650b632584db182feac17be33c0b
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 1.1.1a
-    versionCode: 4
-    commit: 4aa3582d8ba9f133921c57784d0e3c2a838eda62
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: '1.2'
-    versionCode: 5
-    commit: 040c174fe59d54bcf5660700d5cddd092f7758d1
-    subdir: app
-    gradle:
-      - yes
+AllowedAPKSigningKeys: 5753fa3e344f569851c05db41bd15614569f916e3a020bfbe41d5f96d52f681f
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.2'
-CurrentVersionCode: 5
+CurrentVersion: '1.4'
+CurrentVersionCode: 9

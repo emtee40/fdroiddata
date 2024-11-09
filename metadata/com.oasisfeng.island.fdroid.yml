@@ -1,6 +1,6 @@
 Categories:
-  - System
   - Security
+  - System
 License: Apache-2.0
 AuthorName: proletarius101
 WebSite: https://secure-system.gitlab.io/Insular/
@@ -43,7 +43,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.1.2-87f1b7e9
     versionCode: 51492
@@ -59,7 +59,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.1.2-a9e15f6f
     versionCode: 51496
@@ -75,7 +75,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.1.2-f60c851c
     versionCode: 51535
@@ -91,7 +91,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.1.2-d815bc83
     versionCode: 51538
@@ -107,7 +107,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.1.3-689c8c20
     versionCode: 51551
@@ -123,7 +123,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.1.3-42de5a1a
     versionCode: 51557
@@ -139,7 +139,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.1.3-6fcbe182
     versionCode: 51560
@@ -155,7 +155,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.3-4cac321f
     versionCode: 51565
@@ -171,7 +171,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.3-da5d93e4
     versionCode: 51569
@@ -187,7 +187,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.4-bbca1958
     versionCode: 51576
@@ -203,7 +203,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.4.3-ee1cec6a
     versionCode: 51581
@@ -219,7 +219,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.5-e61328e3
     versionCode: 51584
@@ -235,7 +235,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.5-cc477d99
     versionCode: 51586
@@ -251,7 +251,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.5-4b104c42
     versionCode: 51590
@@ -267,7 +267,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.5-404b5a48
     versionCode: 51593
@@ -283,7 +283,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.5.1-40729b7f
     versionCode: 51598
@@ -303,7 +303,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.5.1-c37b25e9
     versionCode: 51601
@@ -323,7 +323,7 @@ Builds:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild: sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
+      ../settings.gradle
 
   - versionName: 5.5.1-0e1b5b1d
     versionCode: 51604
@@ -523,51 +523,74 @@ Builds:
         ../settings.gradle
       - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
 
-  - versionName: 6.0.5-e104be1b
-    versionCode: 51663
-    commit: 76248abe72954b5fee2f3db2755fd8faf24cff94
+  - versionName: 6.3-e46a1948
+    versionCode: 51709
+    commit: 3996a938b8ccc8ada4b4d4e72ba84bd61f33b2cc
     subdir: assembly
+    submodules: true
     sudo:
       - apt-get update
-      - apt-get install -y --no-install-recommends openjdk-11-jdk-headless
+      - apt-get install -y openjdk-17-jdk-headless
       - update-alternatives --auto java
     gradle:
       - complete
       - fdroid
-    srclibs:
-      - deagle@2430a73ecb0fb3f0d0f9cdf443b7863eb07a988d
-      - setupwizard@android12--mainline-release
     rm:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild:
-      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
       - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+      - sed -i -e '/core-google-shortcuts/,+2d' ../mobile/build.gradle
+    scanignore:
+      - libs/setup-wizard/library/self.gradle
+    scandelete:
+      - libs/setup-wizard/tools/docs/
 
-  - versionName: 6.0.5-d6ec6ee3
-    versionCode: 51666
-    commit: b47611bb2957a02cefd7c2ec45419b21747d6a47
+  - versionName: 6.3-4f363088
+    versionCode: 51733
+    commit: d47dc6d83883e389f8a0f7a17c95b9f14307f650
     subdir: assembly
+    submodules: true
     sudo:
       - apt-get update
-      - apt-get install -y --no-install-recommends openjdk-11-jdk-headless
+      - apt-get install -y openjdk-17-jdk-headless
       - update-alternatives --auto java
     gradle:
       - complete
       - fdroid
-    srclibs:
-      - deagle@2430a73ecb0fb3f0d0f9cdf443b7863eb07a988d
-      - setupwizard@android12--mainline-release
     rm:
       - assembly/google-services.json
       - shared/src/main/res/xml/analytics_tracker.xml
     prebuild:
-      - sed -i -e 's!..\/deagle!$$deagle$$!' -e 's!..\/setup-wizard!$$setupwizard$$!'
-        ../settings.gradle
       - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+      - sed -i -e '/core-google-shortcuts/,+2d' ../mobile/build.gradle
+    scanignore:
+      - libs/setup-wizard/library/self.gradle
+    scandelete:
+      - libs/setup-wizard/tools/docs/
+
+  - versionName: 6.4-66cd8034
+    versionCode: 51777
+    commit: 399077ba3ffdc2ef715e5857970d0394e7f1eb08
+    subdir: assembly
+    submodules: true
+    gradle:
+      - complete
+      - fdroid
+    rm:
+      - assembly/google-services.json
+      - shared/src/main/res/xml/analytics_tracker.xml
+    prebuild:
+      - echo 'org.gradle.jvmargs=-Xmx4096m' >> ../gradle.properties
+      - sed -i -e '/core-google-shortcuts/,+2d' ../mobile/build.gradle
+    scanignore:
+      - libs/setup-wizard/library/self.gradle
+    scandelete:
+      - libs/setup-wizard/tools/docs/
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v[\d.]+-\w+$
-CurrentVersion: 6.0.5-d6ec6ee3
-CurrentVersionCode: 51666
+UpdateCheckName: Ignore
+UpdateCheckData: assembly/build.gradle|versionCode\s(\d+)|.|versionName\s'(.*)'
+CurrentVersion: 6.4-66cd8034
+CurrentVersionCode: 51777

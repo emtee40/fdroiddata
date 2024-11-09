@@ -1,6 +1,6 @@
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-or-later
 WebSite: https://peers.community
 SourceCode: https://notabug.org/zplus/InternetRadio
@@ -8,12 +8,12 @@ IssueTracker: https://notabug.org/zplus/InternetRadio/issues
 
 AutoName: Internet Radio
 Description: |
-    This is a small app to search Internet radio stations, and listen to them.
+  This is a small app to search Internet radio stations, and listen to them.
 
-    * Single-tap the notification to play/pause the stream
-    * Remove the notification to stop the player
+  * Single-tap the notification to play/pause the stream
+  * Remove the notification to stop the player
 
-    The list of radio stations is maintained by <a href="https://www.radio-browser.info">RadioBrowser</a>, and the data is retrieved from <a href="https://dokk.org/about">DOKK</a>.
+  The list of radio stations is maintained by <a href="https://www.radio-browser.info">RadioBrowser</a>, and the data is retrieved from <a href="https://dokk.org/about">DOKK</a>.
 
 RepoType: git
 Repo: https://notabug.org/zplus/InternetRadio.git
@@ -82,7 +82,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 4.1.2
 CurrentVersionCode: 9

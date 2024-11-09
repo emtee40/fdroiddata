@@ -775,7 +775,84 @@ Builds:
     gradle:
       - FlavorDefault
 
+  - versionName: 2.10.8
+    versionCode: 145
+    commit: 8aba07b62e5b2143aa7a5ad6fcf80faaf7d4cda0
+    subdir: app
+    gradle:
+      - FlavorDefault
+
+  - versionName: 2.10.9
+    versionCode: 146
+    commit: ab2175460680eb4a914b6006b9c962756b2067d2
+    subdir: app
+    gradle:
+      - FlavorDefault
+
+  - versionName: 2.11.1
+    versionCode: 148
+    commit: 426b92db61b2a9018484db3df8e31167f93a2c1d
+    subdir: app
+    gradle:
+      - FlavorDefault
+
+  - versionName: 2.12.0
+    versionCode: 149
+    commit: 98c7f170851461bd7f2fe26432b5994628a90755
+    subdir: app
+    gradle:
+      - FlavorDefault
+    prebuild: sed -i -e 's/-XX:MaxPermSize=512m//' ../gradle.properties
+
+  - versionName: 2.12.1
+    versionCode: 150
+    commit: aab054b5147f15ca123d53f15975f72080d0c04c
+    subdir: app
+    gradle:
+      - FlavorDefault
+    prebuild: sed -i -e 's/-XX:MaxPermSize=512m//' ../gradle.properties
+
+  - versionName: 2.12.2
+    versionCode: 151
+    commit: a2afb69bc6edcf9ee35d33060a02ae7cc0292847
+    subdir: app
+    gradle:
+      - FlavorDefault
+    prebuild: sed -i -e 's/-XX:MaxPermSize=512m//' ../gradle.properties
+
+  - versionName: 2.12.3
+    versionCode: 152
+    commit: 275f488e87fa4182c05f898ffc713f71fec6d1fb
+    subdir: app
+    gradle:
+      - FlavorDefault
+    prebuild: sed -i -e 's/-XX:MaxPermSize=512m//' ../gradle.properties
+
+  - versionName: 2.12.4
+    versionCode: 153
+    commit: 446d4f9b34b3abe7a3aa6837720184684e7753a2
+    subdir: app
+    gradle:
+      - FlavorDefault
+    prebuild: sed -i -e 's/-XX:MaxPermSize=512m//' ../gradle.properties
+
+  - versionName: 2.12.5
+    versionCode: 154
+    commit: a3cc2146fc4b6e1ab4089b72c085071082599336
+    subdir: app
+    gradle:
+      - FlavorDefault
+    prebuild: sed -i -e 's/-XX:MaxPermSize=512m//' ../gradle.properties
+
+  - versionName: 2.13.0
+    versionCode: 155
+    commit: 1d89d9d5751c3f9f7597b3359ef772a0b9f12213
+    subdir: app
+    gradle:
+      - FlavorDefault
+    prebuild: sed -i -e 's/-XX:MaxPermSize=512m//' ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.10.7
-CurrentVersionCode: 143
+CurrentVersion: 2.13.0
+CurrentVersionCode: 155

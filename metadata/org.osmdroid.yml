@@ -1,10 +1,13 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Rely on OpenStreetMap
 Categories:
   - Navigation
 License: Apache-2.0
 WebSite: https://osmdroid.github.io/osmdroid/
 SourceCode: https://github.com/osmdroid/osmdroid
 IssueTracker: https://github.com/osmdroid/osmdroid/issues
-Changelog: https://github.com/osmdroid/osmdroid/blob/HEAD/CHANGELOG.md
+Changelog: https://github.com/osmdroid/osmdroid/releases
 
 AutoName: Open Map
 Description: Map viewer using OpenStreetMap tiles.
@@ -13,26 +16,6 @@ RepoType: git
 Repo: https://github.com/osmdroid/osmdroid
 
 Builds:
-  - versionName: 3.0.10
-    versionCode: 11
-    disable: local jar not being recognized (at osmdroid-parent-3.0.10)
-    commit: osmdroid-parent-3.0.10
-    maven: 'yes'
-    prebuild:
-      - sed -i 's/16_r2/16_r3/g' pom.xml
-      - mvn install:install-file -DgroupId=com.google.android.maps -DartifactId=maps
-        -Dversion=16_r3 -Dpackaging=jar -Dfile=$$SDK$$/addons/addon-google_apis-google-16/libs/maps.jar
-
-  - versionName: '4.1'
-    versionCode: 15
-    disable: needs play-services
-    commit: 99d6895e5d7b37cc43dd795ac2622b8d456a26bc
-    subdir: OpenStreetMapViewer
-    gradle:
-      - yes
-    prebuild: sed -i -e 's/4.2-SNAPSHOT/4.2/g' -e 's/android.support:compatibility-v4/com.android.support:support-v4/g'
-        build.gradle
-
   - versionName: 6.0.1
     versionCode: 31
     commit: osmdroid-parent-6.0.1
@@ -75,8 +58,58 @@ Builds:
       - testzoom4.zip
       - OSMMapTilePackager/fr_mapnik_12.zip
 
+  - versionName: 6.1.15
+    versionCode: 51
+    commit: 9d5f9651919a89a6caa66315f52f7e413a373af9
+    subdir: OpenStreetMapViewer
+    gradle:
+      - yes
+    rm:
+      - testzoom4.zip
+      - OSMMapTilePackager/fr_mapnik_12.zip
+
+  - versionName: 6.1.16
+    versionCode: 52
+    commit: e19f37139bba94867398205a02ef7675fea863bf
+    subdir: OpenStreetMapViewer
+    gradle:
+      - yes
+    rm:
+      - testzoom4.zip
+      - OSMMapTilePackager/fr_mapnik_12.zip
+
+  - versionName: 6.1.17
+    versionCode: 53
+    commit: a40150d07ead36a61227cb398b141d80277b9a3a
+    subdir: OpenStreetMapViewer
+    gradle:
+      - yes
+    rm:
+      - testzoom4.zip
+      - OSMMapTilePackager/fr_mapnik_12.zip
+
+  - versionName: 6.1.18
+    versionCode: 54
+    commit: 05123e524f717cbd2667bdc51541f2ceed39d003
+    subdir: OpenStreetMapViewer
+    gradle:
+      - yes
+    rm:
+      - testzoom4.zip
+      - OSMMapTilePackager/fr_mapnik_12.zip
+
+  - versionName: 6.1.20
+    versionCode: 55
+    commit: 1fe84bdc8f58c0f06c9ac3e806a8109822f93c13
+    subdir: OpenStreetMapViewer
+    gradle:
+      - yes
+    rm:
+      - testzoom4.zip
+      - OSMMapTilePackager/fr_mapnik_12.zip
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags osmdroid-parent-
 UpdateCheckData: gradle.properties|android\.versionCode=(\d+)|.|pom\.version=(.*)
-CurrentVersion: 6.1.14
-CurrentVersionCode: 50
+CurrentVersion: 6.1.20
+CurrentVersionCode: 55

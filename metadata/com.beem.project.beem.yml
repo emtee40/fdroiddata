@@ -6,14 +6,13 @@ AuthorEmail: contact@beem-project.com
 WebSite: https://www.beem-project.com
 SourceCode: http://www.beem-project.com/projects/beem/repository
 IssueTracker: http://www.beem-project.com/projects/beem/issues
-FlattrID: '379457'
 
 AutoName: Beem
 Description: |-
-    Beem is an XMPP (Jabber) client. Supports SASL, Proxy, DNS SRV, and OTR.
+  Beem is an XMPP (Jabber) client. Supports SASL, Proxy, DNS SRV, and OTR.
 
-    It’s possible to quickly sign up for an XMPP account on any one of 50-or-so
-    servers from within the app itself.
+  It's possible to quickly sign up for an XMPP account on any one of 50-or-so
+  servers from within the app itself.
 
 RepoType: hg
 Repo: http://www.beem-project.com/hg/trunk
@@ -52,7 +51,7 @@ Builds:
     commit: 0.1.8
     target: android-16
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 0.1.8

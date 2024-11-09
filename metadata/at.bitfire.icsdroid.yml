@@ -4,7 +4,9 @@ License: GPL-3.0-only
 AuthorName: bitfire web engineering
 WebSite: https://icsx5.bitfire.at/
 SourceCode: https://github.com/bitfireAT/icsx5
-Changelog: https://github.com/bitfireAT/icsx5/discussions/categories/announcements
+IssueTracker: https://github.com/bitfireAT/icsx5/issues
+Translation: https://explore.transifex.com/bitfireAT/icsx5/
+Changelog: https://github.com/bitfireAT/icsx5/releases
 Donate: https://icsx5.bitfire.at/donate/
 Bitcoin: 1KSCy7RHztKuhW9fLLaUYqdwdC2iwbejZU
 
@@ -338,7 +340,80 @@ Builds:
     gradle:
       - standard
 
+  - versionName: '2.1'
+    versionCode: 70
+    commit: 326c3c0da8d6650de16a20cbe855dda16fd97881
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: 2.1.1
+    versionCode: 72
+    commit: 6cb041146322fd0b752dd411776098a1d6e801d7
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+
+  - versionName: '2.2'
+    versionCode: 75
+    commit: 0c66c1d80c26002ba96f5deb8a342ca7b5cf4dea
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - standard
+
+  - versionName: 2.2.1
+    versionCode: 77
+    commit: e1f242728edefd4a14abe53ddf54462029caff61
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.2
+    versionCode: 78
+    commit: 3b6d38042751d7dac4331dd17275cd73f064a4f0
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.3
+    versionCode: 79
+    commit: 24896bd05cdd7d579ed49b8e98dd92e6798f45a3
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.4
+    versionCode: 80
+    commit: c68aef76e59abb68ce8a0d50d73fb7d25dca43cf
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
+  - versionName: 2.2.5
+    versionCode: 81
+    commit: b5d289b524c99c7cb0dd3c703cbdec1690687ca1
+    subdir: app
+    submodules: true
+    gradle:
+      - standard
+    prebuild: sed -i -e '/getByName("bitfire/d' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*$
-CurrentVersion: 2.0.3
-CurrentVersionCode: 64
+CurrentVersion: 2.2.5
+CurrentVersionCode: 81

@@ -7,9 +7,9 @@ IssueTracker: https://github.com/yacy/yacy_search_androidclient/issues
 AutoName: 32c3 Search
 Summary: Search a 32C3 related YaCy node
 Description: |-
-    Yacy is a decentralized, specialized, peer-to-peer search engine. This app
-    defaults to use <a href="http://32c3.yacy.net/">http://32c3.yacy.net/</a>, a search node related to the 32C3
-    congress.
+  Yacy is a decentralized, specialized, peer-to-peer search engine. This app
+  defaults to use <a href="http://32c3.yacy.net/">http://32c3.yacy.net/</a>, a search node related to the 32C3
+  congress.
 
 RepoType: git
 Repo: https://github.com/yacy/yacy_search_androidclient.git
@@ -39,7 +39,7 @@ Builds:
       - yes
     prebuild: sed -i -e '/android {/alintOptions {\nabortOnError false\n}\n' build.gradle
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 1.1.0

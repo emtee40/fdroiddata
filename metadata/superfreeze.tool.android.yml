@@ -79,13 +79,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: '0.3'
-    versionCode: 13
-    disable: lintVitalRelease fails
-    commit: v0.3
-    gradle:
-      - yes
-
   - versionName: '0.4'
     versionCode: 14
     commit: v0.4
@@ -200,7 +193,13 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.0'
+    versionCode: 1000
+    commit: cbd9c795b18a49a563129f67ce79014821de73e1
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.16.1
-CurrentVersionCode: 161
+CurrentVersion: '1.0'
+CurrentVersionCode: 1000

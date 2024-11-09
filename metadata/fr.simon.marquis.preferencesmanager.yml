@@ -9,18 +9,18 @@ IssueTracker: https://github.com/SimonMarquis/Android-PreferencesManager/issues
 
 AutoName: Preferences Manager
 Description: |-
-    Android provides several options for developers to save application data. The
-    most frequent solution is the Shared Preferences framework. It's a simple way to
-    store private primitive data in key-value pairs. Unfortunately, this method is
-    not very secure... It consists in a simple XML file stored in the private
-    folder, specific to the app. But in the case of a rooted device, theses files
-    can be read, edited and even deleted.
+  Android provides several options for developers to save application data. The
+  most frequent solution is the Shared Preferences framework. It's a simple way to
+  store private primitive data in key-value pairs. Unfortunately, this method is
+  not very secure... It consists in a simple XML file stored in the private
+  folder, specific to the app. But in the case of a rooted device, theses files
+  can be read, edited and even deleted.
 
-    Preferences Manager allows you to edit these preferences in a simple and easy
-    way. You can for instance increase your highscores, modify your progression, or
-    just debug your application preferences.
+  Preferences Manager allows you to edit these preferences in a simple and easy
+  way. You can for instance increase your highscores, modify your progression, or
+  just debug your application preferences.
 
-RequiresRoot: 'yes'
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/SimonMarquis/Android-PreferencesManager.git
@@ -33,9 +33,9 @@ Builds:
     patch:
       - fonts_15.patch
     srclibs:
-      - 1:Support-v7@android-4.3_r2.1
-      - 2:RootFW@2_0.3.2
-      - 3:StickyListHeaders-tots@62be7e8a7e547
+      - Support-v7@android-4.3_r2.1
+      - RootFW@2_0.3.2
+      - StickyListHeaders-tots@62be7e8a7e547
     rm:
       - PreferencesManager/assets
       - Resources
@@ -48,9 +48,9 @@ Builds:
     commit: v1.5
     subdir: PreferencesManager
     srclibs:
-      - 1:Support-v7@android-4.3_r2.1
-      - 2:RootFW@2_0.3.2
-      - 3:StickyListHeaders-tots@62be7e8a7e547
+      - Support-v7@android-4.3_r2.1
+      - RootFW@2_0.3.2
+      - StickyListHeaders-tots@62be7e8a7e547
     rm:
       - Resources
       - PreferencesManager/libs/rootfw.jar
@@ -116,7 +116,8 @@ Builds:
     rm:
       - Resources
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: 1.8.3
 CurrentVersionCode: 183

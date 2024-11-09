@@ -7,11 +7,11 @@ Changelog: https://gitlab.com/andiodine/andiodine/tags
 
 AutoName: AndIodine
 Description: |-
-    Andiodine lets you tunnel IPv4 data through a DNS server. This can be usable in
-    different situations where internet access is firewalled, but DNS queries are
-    allowed.
+  Andiodine lets you tunnel IPv4 data through a DNS server. This can be usable in
+  different situations where internet access is firewalled, but DNS queries are
+  allowed.
 
-    Based on iodine, requires Android4+.
+  Based on iodine, requires Android4+.
 
 RepoType: git
 Repo: https://gitlab.com/andiodine/andiodine.git
@@ -20,14 +20,6 @@ Builds:
   - versionName: '1.0'
     versionCode: 1
     commit: 1ae6623962ab115457deb00a9f40405627c4fdc4
-    buildjni:
-      - yes
-    ndk: r12b
-
-  - versionName: '1.1'
-    versionCode: 2
-    disable: missing base64u.c
-    commit: v1.1
     buildjni:
       - yes
     ndk: r12b

@@ -2,14 +2,14 @@ Categories:
   - Internet
 License: GPL-3.0-only
 WebSite: https://husky.adol.pw
-SourceCode: https://codeberg.org/husky/husky
-IssueTracker: https://codeberg.org/husky/husky/issues
-Changelog: https://codeberg.org/husky/husky/src/branch/master/HISTORY
+SourceCode: https://github.com/captainepoch/husky
+IssueTracker: https://github.com/captainepoch/husky/issues
+Changelog: https://github.com/captainepoch/husky/blob/HEAD/HISTORY
 
 AutoName: Husky
 
 RepoType: git
-Repo: https://codeberg.org/husky/husky
+Repo: https://github.com/captainepoch/husky
 
 Builds:
   - versionName: 1.1.2
@@ -110,9 +110,111 @@ Builds:
     gradle:
       - huskyStable
 
+  - versionName: 1.4.3
+    versionCode: 194
+    commit: 31680a025c5f622ae0f2464fb43515054084557c
+    subdir: husky/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - huskyStable
+
+  - versionName: 1.4.4
+    versionCode: 195
+    commit: 87e98d635b89d4af4100d5ca1f67ccf735183b59
+    subdir: husky/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - huskyStable
+
+  - versionName: 1.4.5
+    versionCode: 196
+    commit: 7c67be8aa58ddbe5578de1726cd66f721d0b7fe2
+    subdir: husky/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - huskyStable
+
+  - versionName: 1.4.6
+    versionCode: 197
+    commit: a2ef9b8f13b60677f254b78c105dcc9b20ae88b9
+    subdir: husky/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - huskyStable
+
+  - versionName: 1.5.0
+    versionCode: 198
+    commit: 400517f285b0fc8bf4c105ba5c1d85dfdf65b780
+    subdir: husky/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - huskyStable
+
+  - versionName: 1.5.1
+    versionCode: 199
+    commit: 4b50136fac8aa5c8d91c75e986ed6f5a0004315a
+    subdir: husky/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - huskyStable
+
+  - versionName: 1.5.2
+    versionCode: 200
+    commit: 9dc1b12ec55f6585d25ca82c518f57f8f1f9c2a4
+    subdir: husky/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - huskyStable
+
+  - versionName: 1.5.3
+    versionCode: 201
+    commit: 350071a5d39ad4fb7d702f9f8ad4dcd39df1fc42
+    subdir: husky/app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - huskyStable
+
+  - versionName: 1.5.4
+    versionCode: 202
+    commit: 6ec27214773965eec5598c6276caad334792efb4
+    subdir: husky/app
+    gradle:
+      - huskyStable
+
+  - versionName: 1.6.0
+    versionCode: 203
+    commit: 09a78d71bc2c3e7466e4ab4975aef676298d1d40
+    subdir: husky/app
+    gradle:
+      - huskyStable
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9.]+$
 UpdateCheckData: husky/appinfo.gradle|buildVersions.versionCode = (\d+)|.|buildVersions.versionName
-    = "(.*)"
-CurrentVersion: 1.4.2
-CurrentVersionCode: 193
+  = "(.*)"
+CurrentVersion: 1.6.0
+CurrentVersionCode: 203

@@ -5,6 +5,11 @@ License: AGPL-3.0-or-later
 WebSite: https://simplex.chat/
 SourceCode: https://github.com/simplex-chat/simplex-chat
 IssueTracker: https://github.com/simplex-chat/simplex-chat/issues
+Translation: https://hosted.weblate.org/projects/simplex-chat/android/
+Changelog: https://github.com/simplex-chat/simplex-chat/releases
+Donate: https://github.com/simplex-chat/simplex-chat#help-us-with-donations
+OpenCollective: simplex-chat
+Bitcoin: 1bpefFkzuRoMY3ZuBbZNZxycbg7NYPYTG
 
 RepoType: git
 Repo: https://github.com/simplex-chat/simplex-chat.git
@@ -174,7 +179,1714 @@ Builds:
       - export USER=vagrant
       - ./scripts/android/build-android.sh -s $$COMMIT$$
 
+  - versionName: 4.5.3
+    versionCode: 102
+    commit: 41c9c841390639ae68df30adb547a225ebb9e306
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat.apk
+    prebuild:
+      - mv apps/android/gradle .
+      - sed -i -e '/android {/a lint {abortOnError false}' apps/android/app/build.gradle
+    build:
+      - export USER=vagrant
+      - ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 4.5.4
+    versionCode: 103
+    commit: 498ffe8a7193de8b1d74ffa081abef30c30ef542
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat.apk
+    prebuild:
+      - mv apps/android/gradle .
+      - sed -i -e '/android {/a lint {abortOnError false}' apps/android/app/build.gradle
+    build:
+      - export USER=vagrant
+      - ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 4.6.1
+    versionCode: 112
+    commit: 834487e54852b2aa48b4aafb9a3152e413a3eb02
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armv7.apk
+    prebuild:
+      - mv apps/android/gradle .
+      - sed -i -e 's/versionCode .*/versionCode $$VERCODE$$/' apps/android/app/build.gradle
+    build:
+      - export USER=vagrant
+      - ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 4.6.1
+    versionCode: 113
+    commit: 834487e54852b2aa48b4aafb9a3152e413a3eb02
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-aarch64.apk
+    prebuild:
+      - mv apps/android/gradle .
+      - sed -i -e 's/versionCode .*/versionCode $$VERCODE$$/' apps/android/app/build.gradle
+    build:
+      - export USER=vagrant
+      - ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.0'
+    versionCode: 117
+    commit: c8721e80004dbd24f0c46718b02542228e4de4f2
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armv7.apk
+    prebuild:
+      - mv apps/android/gradle .
+      - sed -i -e 's/versionCode .*/versionCode $$VERCODE$$/' apps/android/app/build.gradle
+      - sed -i -e '/android {/a lint {abortOnError false}' apps/android/app/build.gradle
+    build:
+      - export USER=vagrant
+      - ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.0'
+    versionCode: 118
+    commit: c8721e80004dbd24f0c46718b02542228e4de4f2
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-aarch64.apk
+    prebuild:
+      - mv apps/android/gradle .
+      - sed -i -e 's/versionCode .*/versionCode $$VERCODE$$/' apps/android/app/build.gradle
+      - sed -i -e '/android {/a lint {abortOnError false}' apps/android/app/build.gradle
+    build:
+      - export USER=vagrant
+      - ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.1.2
+    versionCode: 125
+    commit: d7f3d1f19d6ae86fcc43dffb3fb306a69cd93097
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armv7.apk
+    rm:
+      - docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - mv apps/android/gradle .
+      - sed -i -e 's/versionCode .*/versionCode $$VERCODE$$/' apps/android/app/build.gradle
+      - sed -i -e '/android {/a lint {abortOnError false}' apps/android/app/build.gradle
+    build:
+      - export USER=vagrant
+      - ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.1.2
+    versionCode: 126
+    commit: d7f3d1f19d6ae86fcc43dffb3fb306a69cd93097
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-aarch64.apk
+    rm:
+      - docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - mv apps/android/gradle .
+      - sed -i -e 's/versionCode .*/versionCode $$VERCODE$$/' apps/android/app/build.gradle
+      - sed -i -e '/android {/a lint {abortOnError false}' apps/android/app/build.gradle
+    build:
+      - export USER=vagrant
+      - ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.1.3
+    versionCode: 127
+    commit: 3267b4d6ca6c9bb06d6ba1abc3ba8ed347ef9e7d
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - mv apps/android/gradle .
+      - sed -i -e 's/versionCode .*/versionCode $$VERCODE$$/' apps/android/app/build.gradle
+    build:
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.1.3
+    versionCode: 128
+    commit: 3267b4d6ca6c9bb06d6ba1abc3ba8ed347ef9e7d
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - mv apps/android/gradle .
+      - sed -i -e 's/versionCode .*/versionCode $$VERCODE$$/' apps/android/app/build.gradle
+    build:
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.2'
+    versionCode: 134
+    commit: 65c6c63024c6ff503ca1c7d488b459b6ffcab65b
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.2'
+    versionCode: 135
+    commit: 65c6c63024c6ff503ca1c7d488b459b6ffcab65b
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.2.1
+    versionCode: 139
+    commit: 920b56e3d8f55c7a1f0ad810dd044a1ff20b10e7
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.2.1
+    versionCode: 140
+    commit: 920b56e3d8f55c7a1f0ad810dd044a1ff20b10e7
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.2.2
+    versionCode: 142
+    commit: fde3c4f4e0aff5e6fd5ae7facba0bb254e0be785
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.2.2
+    versionCode: 143
+    commit: fde3c4f4e0aff5e6fd5ae7facba0bb254e0be785
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.2.3
+    versionCode: 144
+    commit: 8f9134b494ee859fe171696028eeb0df9dbc6cde
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.2.3
+    versionCode: 145
+    commit: 8f9134b494ee859fe171696028eeb0df9dbc6cde
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.3.1
+    versionCode: 154
+    commit: 6a578cfe3cf1d040aee27ce8c4525c8b3548b798
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.3.1
+    versionCode: 155
+    commit: 6a578cfe3cf1d040aee27ce8c4525c8b3548b798
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.3.2
+    versionCode: 157
+    commit: c60af078d78132468b9c6d88a13e80247611dda7
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.3.2
+    versionCode: 158
+    commit: c60af078d78132468b9c6d88a13e80247611dda7
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.4'
+    versionCode: 162
+    commit: dc8ca4cf897f01eaccd1e717c604a1e7f3c07142
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.4'
+    versionCode: 163
+    commit: dc8ca4cf897f01eaccd1e717c604a1e7f3c07142
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.4.1
+    versionCode: 164
+    commit: 545f110fb87a47703c5135929f08dbc03810a90c
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.4.1
+    versionCode: 165
+    commit: 545f110fb87a47703c5135929f08dbc03810a90c
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.4.2
+    versionCode: 166
+    commit: 825257e8986d2d8db5c7cd1c6526a9afe6bbea14
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.4.2
+    versionCode: 167
+    commit: 825257e8986d2d8db5c7cd1c6526a9afe6bbea14
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/android_simplex_lib=.*/android_simplex_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:simplex-chat"/g'
+        -e 's/android_support_lib=.*/android_support_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:support"/g'
+        ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.5'
+    versionCode: 175
+    commit: 0d4d08e52b53465d732d58859cf1d0a366af13c6
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.5'
+    versionCode: 176
+    commit: d0b75e0dd36ef09041d9d46dbaeaca1c371965b4
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/android_simplex_lib=.*/android_simplex_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:simplex-chat"/g'
+        -e 's/android_support_lib=.*/android_support_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:support"/g'
+        ./scripts/android/build-android.sh
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.5.1
+    versionCode: 177
+    commit: 1aa464bdb2f2225c0cca6451e7136e247008f629
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.5.2
+    versionCode: 179
+    commit: 09bbaa1c94c5793b5a1e96429617dd09b7c2a2b7
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.5.2
+    versionCode: 180
+    commit: 09bbaa1c94c5793b5a1e96429617dd09b7c2a2b7
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/android_simplex_lib=.*/android_simplex_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:simplex-chat"/g'
+        -e 's/android_support_lib=.*/android_support_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:support"/g'
+        ./scripts/android/build-android.sh
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.5.4
+    versionCode: 183
+    commit: 6d523d5b4ba88f0483ab8ca26b77a1381f5038f5
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.5.4
+    versionCode: 184
+    commit: 6d523d5b4ba88f0483ab8ca26b77a1381f5038f5
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/android_simplex_lib=.*/android_simplex_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:simplex-chat"/g'
+        -e 's/android_support_lib=.*/android_support_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:support"/g'
+        ./scripts/android/build-android.sh
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.5.5
+    versionCode: 185
+    commit: e6e27db2433a334f93fc1c91fd205c013e15de48
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.5.5
+    versionCode: 186
+    commit: e6e27db2433a334f93fc1c91fd205c013e15de48
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/android_simplex_lib=.*/android_simplex_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:simplex-chat"/g'
+        -e 's/android_support_lib=.*/android_support_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:support"/g'
+        ./scripts/android/build-android.sh
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.5.6
+    versionCode: 187
+    commit: 0c4848ad9e500a9d0fed6c1197ebc0808d7e065b
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.5.6
+    versionCode: 188
+    commit: 0c4848ad9e500a9d0fed6c1197ebc0808d7e065b
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/android_simplex_lib=.*/android_simplex_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:simplex-chat"/g'
+        -e 's/android_support_lib=.*/android_support_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:support"/g'
+        ./scripts/android/build-android.sh
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.6'
+    versionCode: 191
+    commit: 6ad5048b580816bd24dd4d65564a2bb6334abb1a
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.6'
+    versionCode: 192
+    commit: 6ad5048b580816bd24dd4d65564a2bb6334abb1a
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+      - sed -i -e 's/android_simplex_lib=.*/android_simplex_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:simplex-chat"/g'
+        -e 's/android_support_lib=.*/android_support_lib="${folder}#hydraJobs.x86_64-linux.${arch}-android:lib:support"/g'
+        ./scripts/android/build-android.sh
+      - sed -i -e 's/HEAD/& | head -n1/' ./scripts/android/build-android.sh
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: 5.6.1
+    versionCode: 193
+    commit: ea6c5bfb0bc5276cf666ed9f0c96ae1613583aca
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init: git checkout v$$VERSION$$-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e '/gradleConfig/d' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e '/tasks/Q' ./apps/multiplatform/android/build.gradle.kts
+      - sed -i -e 's/git checkout.*/:/' ./scripts/android/build-android.sh
+      - sed -i -e 's/.*commit.*/:/' ./scripts/android/build-android.sh
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -s $$COMMIT$$
+
+  - versionName: '5.7'
+    versionCode: 200
+    commit: d5a0c5e56a9c8598ea859e1b625a006cab086759
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: '5.7'
+    versionCode: 201
+    commit: d5a0c5e56a9c8598ea859e1b625a006cab086759
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.7.1
+    versionCode: 202
+    commit: 98f5e5d22ba1194d41abeb6d0ec1fea0a12796ed
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.7.1
+    versionCode: 203
+    commit: 98f5e5d22ba1194d41abeb6d0ec1fea0a12796ed
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.7.3
+    versionCode: 206
+    commit: 554ef4eefce8d9143c4eb8efb5de63ebb3e97b01
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.7.3
+    versionCode: 207
+    commit: 554ef4eefce8d9143c4eb8efb5de63ebb3e97b01
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.7.4
+    versionCode: 212
+    commit: dccd6631afbac678fb774e3e18f2ba242dcdb362
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.7.4
+    versionCode: 213
+    commit: dccd6631afbac678fb774e3e18f2ba242dcdb362
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.7.5
+    versionCode: 216
+    commit: ac8ee971f570cf3edcff18e03cb94cf31a585568
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.7.5
+    versionCode: 217
+    commit: ac8ee971f570cf3edcff18e03cb94cf31a585568
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: '5.8'
+    versionCode: 219
+    commit: 75445e604e84157bf20787666c20f5632d370d83
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: '5.8'
+    versionCode: 220
+    commit: 75445e604e84157bf20787666c20f5632d370d83
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.8.1
+    versionCode: 221
+    commit: 85dc467f74a46b88112bcb20a2b909eb82846923
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.8.1
+    versionCode: 222
+    commit: 85dc467f74a46b88112bcb20a2b909eb82846923
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.8.2
+    versionCode: 223
+    commit: e22e01acd232afb73572ab4b3119ea6c1ef55ba9
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 5.8.2
+    versionCode: 224
+    commit: e22e01acd232afb73572ab4b3119ea6c1ef55ba9
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: '6.0'
+    versionCode: 230
+    commit: e20a4e54c3218116c893c3d20f929b378c6a028f
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: '6.0'
+    versionCode: 231
+    commit: e20a4e54c3218116c893c3d20f929b378c6a028f
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 6.0.1
+    versionCode: 232
+    commit: 82c4d77c739b8f4283acfc9b4ba2b9ef9b92cf00
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 6.0.1
+    versionCode: 233
+    commit: 82c4d77c739b8f4283acfc9b4ba2b9ef9b92cf00
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 6.0.3
+    versionCode: 235
+    commit: defd095a4fa5aab0b64f44c8bbc991e40d8c32b2
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 6.0.3
+    versionCode: 236
+    commit: defd095a4fa5aab0b64f44c8bbc991e40d8c32b2
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - ./docs/themes/simplex-chat.sample.zip
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 6.0.4
+    versionCode: 237
+    commit: fc3ae4921445ecbf66e8ecd8c1f78d86f6360ea2
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - blog
+      - docs
+      - images
+      - packages
+      - website
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 6.0.4
+    versionCode: 238
+    commit: fc3ae4921445ecbf66e8ecd8c1f78d86f6360ea2
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - blog
+      - docs
+      - images
+      - packages
+      - website
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 6.0.5
+    versionCode: 241
+    commit: 9e6831d46fb6104740c77359cde20476ab6243f3
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - blog
+      - docs
+      - images
+      - packages
+      - website
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 6.0.5
+    versionCode: 242
+    commit: 9e6831d46fb6104740c77359cde20476ab6243f3
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - blog
+      - docs
+      - images
+      - packages
+      - website
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: '6.1'
+    versionCode: 247
+    commit: 7f899f661084f70a8f5e7b3b46393c8184f9b1fc
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - blog
+      - docs
+      - images
+      - packages
+      - website
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: '6.1'
+    versionCode: 248
+    commit: 7f899f661084f70a8f5e7b3b46393c8184f9b1fc
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - blog
+      - docs
+      - images
+      - packages
+      - website
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
+  - versionName: 6.1.1
+    versionCode: 249
+    commit: 854c9c9e99788238f43a6fa531c1390fdf6e51e5
+    timeout: 30000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    init:
+      - TAG=$(git tag --points-at HEAD | head -n1) && export TAG=${TAG%%-*}
+      - git checkout ${TAG}-armv7a
+    output: ./simplex-chat-armeabi-v7a.apk
+    rm:
+      - blog
+      - docs
+      - images
+      - packages
+      - website
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="armv7a" ./scripts/android/build-android.sh -gs
+
+  - versionName: 6.1.1
+    versionCode: 250
+    commit: 854c9c9e99788238f43a6fa531c1390fdf6e51e5
+    timeout: 60000
+    sudo:
+      - apt-get update
+      - apt-get install -y xz-utils zipalign zip
+      - mkdir -m 0755 /nix
+      - chown vagrant /nix
+      - chown -R vagrant /tmp
+    output: ./simplex-chat-arm64-v8a.apk
+    rm:
+      - blog
+      - docs
+      - images
+      - packages
+      - website
+    prebuild:
+      - cp -r ./apps/multiplatform/gradle .
+      - sed -i -e '/maven.pkg.jetbrains.space/d' ./apps/multiplatform/{build,settings}.gradle.kts
+      - sed -i -e 's/android.version_code=.*/android.version_code=$$VERCODE$$/' ./apps/multiplatform/gradle.properties
+    build:
+      - gradle -v
+      - export USER=vagrant
+      - ARCHES="aarch64" ./scripts/android/build-android.sh -gs
+
 AutoUpdateMode: Version
-UpdateCheckMode: Tags ^v[\d.]+$
-CurrentVersion: 4.5.2
-CurrentVersionCode: 100
+UpdateCheckMode: Tags ^v[\d.]+-fdroid$
+VercodeOperation:
+  - '%c'
+  - '%c+1'
+UpdateCheckData: apps/multiplatform/gradle.properties|android\.version_code\s*=\s*(\d+)|apps/multiplatform/gradle.properties|android\.version_name\s*=\s*([\d.]+)
+CurrentVersion: 6.1.1
+CurrentVersionCode: 250

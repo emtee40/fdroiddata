@@ -8,26 +8,10 @@ Changelog: https://github.com/tobexyz/yaacc-code/releases
 Bitcoin: 1MUvbfNgunNCUtitCkoEEMgmQGZJJg4isj
 Litecoin: LiPnCoN2yfXFYEEQjzbWDLNuKq5qoQbP6t
 
-Name: Yaacc
 AutoName: YAACC
-Description: |-
-    The App allows you to play media from UPNP/DLNA devices in your network on
-    your android device or any capable UPNP/DLNA device in your network.
-    It is also possible to start an UPNP/DLNA server on your device in order to
-    play media from your device on any UPNP/DLNA renderer in your network.
-
-    Features:
-
-    * UPNP/DLNA Server
-    * UPNP/DLNA Client
-    * UPNP/DLNA Controller
-    * Control multiple media receivers
-    * Multiple Receivers
-    * Allow download files to the device
-    * Implemented parts of UPnP Version 3 at once (sending synchronization information to the renderer)
 
 RepoType: git
-Repo: https://github.com/tobexyz/yaacc-code
+Repo: https://github.com/tobexyz/yaacc-code.git
 
 Builds:
   - versionName: 2.0.0
@@ -147,7 +131,61 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.0.0
+    versionCode: 40000
+    commit: c2d55df6c898026bd9a5dff578efb9a987d191ce
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 4.0.1
+    versionCode: 40001
+    commit: 554156114732f127ad5f9110d61c11865815f1b2
+    subdir: yaacc
+    gradle:
+      - yes
+
+  - versionName: 4.0.2
+    versionCode: 40002
+    commit: 883759f098b19c4c7b6e47cb9daf57389d4e949a
+    subdir: yaacc
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.0.3
+    versionCode: 40003
+    commit: 12422aeadf5d44f8ce5258f2ec595a216ff9bee2
+    subdir: yaacc
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.1.0
+    versionCode: 40100
+    commit: 693eff65f3cf9c7865c5e5b61cdf416f00a28a62
+    subdir: yaacc
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 4.2.0
+    versionCode: 40200
+    commit: a12175a90671350ce7879a37a88174638d7122fc
+    subdir: yaacc
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.3.0
-CurrentVersionCode: 30300
+CurrentVersion: 4.2.0
+CurrentVersionCode: 40200

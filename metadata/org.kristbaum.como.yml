@@ -6,6 +6,7 @@ Categories:
 License: GPL-3.0-or-later
 SourceCode: https://gitlab.com/kristbaum/como
 IssueTracker: https://gitlab.com/kristbaum/como/issues
+Changelog: https://gitlab.com/kristbaum/como/-/releases
 
 AutoName: Como
 
@@ -27,7 +28,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '2.5'
 CurrentVersionCode: 19

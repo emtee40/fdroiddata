@@ -1,5 +1,3 @@
-AntiFeatures:
-  - Tracking
 Categories:
   - Development
 License: GPL-3.0-only
@@ -13,14 +11,30 @@ Donate: https://sgit.sheimi.me/
 
 AutoName: MGit
 Description: |-
-    A git client and text editor, forked from no longer maintained
-    https://f-droid.org/packages/me.sheimi.sgit.
+  MGit is a full featured Git client that allows you to manage files in a local Git repository, clone, push and pull to and from remote repositories. It allows you to browse files in your local repositories, see diffs of changed files, stage and commit files all in your local repository while offline.
 
-    Antifeatures:
-    * Tracking: You can't run the app unless you agree to send error and
-    crash reports to the developers Sentry.io account. The reports will contain
-    information about the device you are using, a unique randomly generated ID
-    and potentially some metadata about the git repo that you are using.
+  Features include:
+  * Create local repositories
+  * Clone remote repositories
+  * Fetch, Pull, Push from remote repositories
+  * Delete local repositories
+  * Browse files
+  * Browse commit messages
+  * Checkout branches and tags
+  * HTTP/HTTPS/SSH are supported (including SSH with private key passphrase)
+  * Search local repositories
+  * Privatekey management
+  * git diff between commits
+  * Import existing repositories
+  * Merge branches
+  * Add modified file to stage
+  * View state of staged files (aka index)
+  * Rebasing branches
+  * Cherrypicks
+
+  MGit does not have a built-in text editor but should also work well with other Android text editors that support Content Providers.
+
+  MGit is a continuation of development of the popular SGit app.
 
 RepoType: git
 Repo: https://github.com/maks/MGit.git
@@ -31,24 +45,36 @@ Builds:
     commit: v1.5.0-2
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.1
     versionCode: 202
     commit: v1.5.1
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.2
     versionCode: 203
     commit: v1.5.2
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.3
     versionCode: 204
     commit: v1.5.3
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.4.3
     versionCode: 208
@@ -56,6 +82,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.4.4
     versionCode: 209
@@ -63,6 +92,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.4.5
     versionCode: 210
@@ -70,6 +102,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.4.6
     versionCode: 211
@@ -77,6 +112,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.4.7
     versionCode: 212
@@ -84,6 +122,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.5
     versionCode: 213
@@ -91,6 +132,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.5.1
     versionCode: 214
@@ -98,6 +142,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.9
     versionCode: 219
@@ -105,6 +152,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.5.10
     versionCode: 220
@@ -112,6 +162,9 @@ Builds:
     subdir: app
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.6.1
     versionCode: 222
@@ -123,6 +176,9 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+    antifeatures:
+      Tracking:
+        en-US: App enforces sending error/crash reports to its developers.
 
   - versionName: 1.6.3
     versionCode: 224

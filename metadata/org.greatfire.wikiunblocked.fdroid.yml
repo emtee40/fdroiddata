@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  TetheredNet:
+    en-US: Rely on wikipedia.org and proxy services not changeable
 Categories:
   - Internet
 License: Apache-2.0
@@ -16,77 +17,47 @@ Repo: https://github.com/greatfire/apps-android-wikipedia-envoy.git
 Binaries: https://github.com/greatfire/apps-android-wikipedia-envoy/releases/download/envoy-demo-v%v/app-fdroid-release-%c.apk
 
 Builds:
-  - versionName: 3.8-fdroid
-    versionCode: 1003801
-    commit: 398517293e8608f8cc1ff01d5f85d6c1532d9589
+  - versionName: 4.0-fdroid
+    versionCode: 1004001
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
+    commit: b552566adcc6d6fa503018e346ceabc5870f3848
     subdir: app
     gradle:
       - fdroid
     gradleprops:
       - ABI_FILTERS=armeabi-v7a
 
-  - versionName: 3.8-fdroid
-    versionCode: 1003802
-    commit: 398517293e8608f8cc1ff01d5f85d6c1532d9589
+  - versionName: 4.0-fdroid
+    versionCode: 1004002
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
+    commit: b552566adcc6d6fa503018e346ceabc5870f3848
     subdir: app
     gradle:
       - fdroid
     gradleprops:
       - ABI_FILTERS=arm64-v8a
 
-  - versionName: 3.8-fdroid
-    versionCode: 1003803
-    commit: 398517293e8608f8cc1ff01d5f85d6c1532d9589
+  - versionName: 4.0-fdroid
+    versionCode: 1004003
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
+    commit: b552566adcc6d6fa503018e346ceabc5870f3848
     subdir: app
     gradle:
       - fdroid
     gradleprops:
       - ABI_FILTERS=x86
 
-  - versionName: 3.8-fdroid
-    versionCode: 1003804
-    commit: 398517293e8608f8cc1ff01d5f85d6c1532d9589
+  - versionName: 4.0-fdroid
+    versionCode: 1004004
+    disable: https://gitlab.com/fdroid/fdroiddata/-/issues/3306#note_1993177326
+    commit: b552566adcc6d6fa503018e346ceabc5870f3848
     subdir: app
     gradle:
       - fdroid
     gradleprops:
       - ABI_FILTERS=x86_64
 
-  - versionName: 3.9-fdroid
-    versionCode: 1003901
-    commit: 08e52d489a1db5e0b1fe9a76d66c679fe9743639
-    subdir: app
-    gradle:
-      - fdroid
-    gradleprops:
-      - ABI_FILTERS=armeabi-v7a
-
-  - versionName: 3.9-fdroid
-    versionCode: 1003902
-    commit: 08e52d489a1db5e0b1fe9a76d66c679fe9743639
-    subdir: app
-    gradle:
-      - fdroid
-    gradleprops:
-      - ABI_FILTERS=arm64-v8a
-
-  - versionName: 3.9-fdroid
-    versionCode: 1003903
-    commit: 08e52d489a1db5e0b1fe9a76d66c679fe9743639
-    subdir: app
-    gradle:
-      - fdroid
-    gradleprops:
-      - ABI_FILTERS=x86
-
-  - versionName: 3.9-fdroid
-    versionCode: 1003904
-    commit: 08e52d489a1db5e0b1fe9a76d66c679fe9743639
-    subdir: app
-    gradle:
-      - fdroid
-    gradleprops:
-      - ABI_FILTERS=x86_64
+AllowedAPKSigningKeys: 65204c65b4a3e39eb4526a4be4db92df091c04a394c7c067e8be0a83909ca069
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*-fdroid
@@ -95,5 +66,5 @@ VercodeOperation:
   - 10 * %c + 2
   - 10 * %c + 3
   - 10 * %c + 4
-CurrentVersion: 3.9-fdroid
-CurrentVersionCode: 1003904
+CurrentVersion: 4.0-fdroid
+CurrentVersionCode: 1004004

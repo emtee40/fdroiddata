@@ -1,0 +1,143 @@
+Categories:
+  - Theming
+License: GPL-3.0-only
+AuthorName: kaanelloed
+SourceCode: https://codeberg.org/kaanelloed/Iconeration
+IssueTracker: https://codeberg.org/kaanelloed/Iconeration/issues
+
+AutoName: Alembicons
+
+RepoType: git
+Repo: https://codeberg.org/kaanelloed/Iconeration.git
+Binaries: https://codeberg.org/kaanelloed/Iconeration/releases/download/%v/Iconeration-v%v.apk
+
+Builds:
+  - versionName: 1.2.1
+    versionCode: 20
+    commit: 66641d4a0b5e0f857a204f6171e1f52c34f019eb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://codeberg.org/kaanelloed/Iconeration/releases/download/V%v/Iconeration-v%v.apk
+
+  - versionName: 1.2.2
+    versionCode: 21
+    commit: 6c7aca080b11fa61bc8ad200cdccdb4e1870a4a6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://codeberg.org/kaanelloed/Iconeration/releases/download/V%v/Iconeration-v%v.apk
+
+  - versionName: 1.3.0
+    versionCode: 22
+    commit: 76194cbad2c280d6cb3473b06095b5bc17a44e2f
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://codeberg.org/kaanelloed/Iconeration/releases/download/V%v/Iconeration-v%v.apk
+
+  - versionName: 1.3.1
+    versionCode: 23
+    commit: 1c1eeaf6825721d08f21382b4f49ea538572a5c7
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://codeberg.org/kaanelloed/Iconeration/releases/download/V%v/Iconeration-v%v.apk
+
+  - versionName: 1.3.2
+    versionCode: 24
+    commit: f85d1fb6d27abaee7e93f74ba2bf757e6bf493d4
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://codeberg.org/kaanelloed/Iconeration/releases/download/V%v/Iconeration-v%v.apk
+
+  - versionName: 1.4.0
+    versionCode: 25
+    commit: bc84e1bc3265fa36c6aae0a300f801cbce1202a2
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://codeberg.org/kaanelloed/Iconeration/releases/download/V%v/Iconeration-v%v.apk
+
+  - versionName: 1.4.2
+    versionCode: 27
+    commit: 89af69bab71152e957961b6f93d594072da43685
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    binary: https://codeberg.org/kaanelloed/Iconeration/releases/download/V%v/Iconeration-v%v.apk
+
+  - versionName: 1.4.4
+    versionCode: 29
+    commit: daaf83dd50e04104889e6789540b5c6943dafef0
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    binary: https://codeberg.org/kaanelloed/Iconeration/releases/download/V%v/Iconeration-v%v.apk
+
+  - versionName: 2024.04.00
+    versionCode: 30
+    commit: fc65107c49c0235349590c413835f2b0b702e108
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 2024.05.01
+    versionCode: 32
+    commit: 6aa56aef85d62e40db5d5c7bda0b5ee10d389b72
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+  - versionName: 2024.09.03
+    versionCode: 37
+    disable: https://codeberg.org/kaanelloed/Iconeration/issues/36#issuecomment-2315503
+    commit: 99f74406067ed330b119324f2115a8a467099f8f
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 5df208f4111ddb738f78e066d8d8d4d7fc42c4dc6c6490af0b131ab2786841fb
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2024.09.03
+CurrentVersionCode: 37

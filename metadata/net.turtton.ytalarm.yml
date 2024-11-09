@@ -13,7 +13,7 @@ Bitcoin: 3C3aj9pXf6xSm5im4ZMtmS3HeoGpBNtD7t
 AutoName: YtAlarm
 
 RepoType: git
-Repo: https://github.com/turtton/YtAlarm
+Repo: https://github.com/turtton/YtAlarm.git
 
 Builds:
   - versionName: 0.1.0
@@ -56,6 +56,46 @@ Builds:
       - noSplits
       - abiFilters=x86_64
 
+  - versionName: 0.1.5
+    versionCode: 106
+    commit: ff539614eb9476a3fd549d08fa3b3d8b777b43da
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - noSplits
+      - abiFilters=armeabi-v7a
+
+  - versionName: 0.1.5
+    versionCode: 107
+    commit: ff539614eb9476a3fd549d08fa3b3d8b777b43da
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - noSplits
+      - abiFilters=arm64-v8a
+
+  - versionName: 0.1.5
+    versionCode: 108
+    commit: ff539614eb9476a3fd549d08fa3b3d8b777b43da
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - noSplits
+      - abiFilters=x86
+
+  - versionName: 0.1.5
+    versionCode: 109
+    commit: ff539614eb9476a3fd549d08fa3b3d8b777b43da
+    subdir: app
+    gradle:
+      - yes
+    gradleprops:
+      - noSplits
+      - abiFilters=x86_64
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]+$
 VercodeOperation:
@@ -64,5 +104,5 @@ VercodeOperation:
   - '%c - 1'
   - '%c'
 UpdateCheckData: VERSION_CODE|versionCode=(\d+)||v(.*)
-CurrentVersion: 0.1.0
-CurrentVersionCode: 104
+CurrentVersion: 0.1.5
+CurrentVersionCode: 109

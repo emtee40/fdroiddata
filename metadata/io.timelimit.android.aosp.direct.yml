@@ -545,8 +545,239 @@ Builds:
     scanignore:
       - app/src/main/assets/device-names.bin
 
+  - versionName: 6.11.1
+    versionCode: 199
+    commit: 2b6bc3e7607d1b7c753b3478f71752bc0a005938
+    subdir: app
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.12.0
+    versionCode: 200
+    commit: 280baecd8a7de9912c1f2a342e4ecfae347b8745
+    subdir: app
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.12.1
+    versionCode: 201
+    commit: 45e0ada614841f4e8b933a433e937dcd29136e76
+    subdir: app
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.13.0
+    versionCode: 202
+    commit: 4ca18499ab21a3a9ba196cc183b1fe3833e4036f
+    subdir: app
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.14.0
+    versionCode: 203
+    commit: 7ac2a6e29977c485d19fe7b37701ae08914fd1d6
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.14.2
+    versionCode: 205
+    commit: 865755dd84ec1ad7eec9f1d98107e900614b3a2a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.15.0
+    versionCode: 206
+    commit: 6f91862fedb326ee8a6168dd549b62025be97335
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.16.0
+    versionCode: 208
+    commit: 6c163e929365c4b877656977f95d9e448b728259
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.16.1
+    versionCode: 209
+    commit: b12b57b47cb1cc8e3c859b19edd6589ff4cbb47d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.17.0
+    versionCode: 211
+    commit: 2c14e64bad7aee13c3bddb7e1f8498006c7b4205
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.18.0
+    versionCode: 212
+    commit: 1c3905c12904b36557ad61023352b18e6aac428a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.19.0
+    versionCode: 213
+    commit: 3f35001af10bd3ee407a3e6a095175a37e22c4b9
+    subdir: app
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.20.0
+    versionCode: 214
+    commit: bd3ca9bd4331c2d0b3df975ea3398038a4aff8f6
+    subdir: app
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 6.20.1
+    versionCode: 215
+    commit: 8a2f7ceb797745bc24a171d766547f1df661b352
+    subdir: app
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 7.0.0
+    versionCode: 216
+    commit: b5a65530a9e1aaa5a48fea35ed2caa8c87e0b7e5
+    subdir: app
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 7.0.1
+    versionCode: 217
+    commit: faea667d9812217e641cf232d36a6c00051c79e1
+    subdir: app
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 7.1.0
+    versionCode: 218
+    commit: e01cf09f51162c401577d39db3e942d963cbafe3
+    subdir: app
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
+  - versionName: 7.2.2
+    versionCode: 221
+    commit: e54ff92cbbb7abb4907cf231a4f9e1b691956162
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - noGoogleApi
+      - directVersion
+      - productionServer
+    scanignore:
+      - app/src/main/assets/device-names.bin
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckName: io.timelimit.android
-CurrentVersion: 6.10.0
-CurrentVersionCode: 197
+CurrentVersion: 7.2.2
+CurrentVersionCode: 221

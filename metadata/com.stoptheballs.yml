@@ -1,6 +1,8 @@
 AntiFeatures:
-  - Ads
-  - NonFreeNet
+  Ads:
+    en-US: contains self-served ads
+  NonFreeNet:
+    en-US: connections to Google (Fonts) and Youtube caused by the ads
 Categories:
   - Games
 License: GPL-2.0-only
@@ -59,11 +61,19 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.2.0
+    versionCode: 120
+    commit: f4610b279fad2813ceb824cd45ff1c0970e406c6
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+
 MaintainerNotes: |-
-    * Ads: contains self-served ads
-    * NonFreeNet: connections to Google (Fonts) and Youtube caused by the ads
+  * Ads: contains self-served ads
+  * NonFreeNet: connections to Google (Fonts) and Youtube caused by the ads
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.1.4
-CurrentVersionCode: 114
+CurrentVersion: 1.2.0
+CurrentVersionCode: 120

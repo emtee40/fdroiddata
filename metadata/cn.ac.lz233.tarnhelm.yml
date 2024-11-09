@@ -63,8 +63,92 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/versionCode/s/date.*/$$VERCODE$$/' build.gradle
 
+  - versionName: 1.5.0
+    versionCode: 20230425
+    commit: 195e26b38407522ade61c3f07df960f71a0a907f
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/versionCode/s/date.*/$$VERCODE$$/' build.gradle
+
+  - versionName: 1.5.2
+    versionCode: 20230528
+    commit: 5ccf6e37b809a97ff984f74e8b345328dbfff88b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/versionCode/s/date.*/$$VERCODE$$/' build.gradle
+
+  - versionName: 1.5.4
+    versionCode: 20230925
+    commit: 40a765b39cc6fdd02ee57db796907db17aac6d26
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/versionCode/s/date.*/$$VERCODE$$/' build.gradle
+
+  - versionName: 1.5.5
+    versionCode: 20231015
+    commit: 304fd6673d72ff05609abe31523c9bcff295e049
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/versionCode/s/date.*/$$VERCODE$$/' build.gradle
+
+  - versionName: 1.6.0
+    versionCode: 20231120
+    commit: a5bbc9e0e4c030364d0494cf65ea7759a8ac36aa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/versionCode/s/date.*/$$VERCODE$$/' build.gradle
+
+  - versionName: 1.6.0
+    versionCode: 20240111
+    commit: 71382a1cfe0719220117da44c41d213ecae83ea8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/versionCode/s/date.*/$$VERCODE$$/' build.gradle
+
+  - versionName: 1.6.2
+    versionCode: 20240424
+    commit: a399ff51eb65da0240c5011a2656082e37db798d
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/versionCode/s/date.*/$$VERCODE$$/' build.gradle
+
+  - versionName: 1.6.5
+    versionCode: 20240628
+    commit: a1eba9fef2bfa5d8d98bb1f0351a83348744224c
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/versionCode/s/date.*/$$VERCODE$$/' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: '||app/build.gradle|versionName\s"([\d.]+)"'
-CurrentVersion: 1.4.2
-CurrentVersionCode: 20230114
+CurrentVersion: 1.6.5
+CurrentVersionCode: 20240628

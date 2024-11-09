@@ -72,7 +72,34 @@ Builds:
     scandelete:
       - scripts
 
+  - versionName: 1.4.7
+    versionCode: 49
+    commit: 145df715c85fa38423669a659fa332bb94df82bc
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - scripts
+
+  - versionName: 1.4.8
+    versionCode: 50
+    commit: cc3d094859726adb54dac245631fa9b77cf08524
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - scripts
+
+  - versionName: 1.4.9
+    versionCode: 51
+    commit: 128e314e08d41780733b0ecd1b3003d137423551
+    subdir: app
+    gradle:
+      - yes
+    scandelete:
+      - scripts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.6
-CurrentVersionCode: 48
+CurrentVersion: 1.4.9
+CurrentVersionCode: 51

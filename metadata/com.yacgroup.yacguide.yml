@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Database is loaded from a non-libre server
 Categories:
   - Sports & Health
 License: GPL-3.0-only
@@ -63,7 +64,28 @@ Builds:
     gradle:
       - stable
 
+  - versionName: 0.7.0
+    versionCode: 7000
+    commit: 18d521994340b09aab14f39276716d14dc02e0ef
+    subdir: app
+    gradle:
+      - stable
+
+  - versionName: 0.7.1
+    versionCode: 7001
+    commit: 49ee4e9c48630b981adaaa0c00f90f79f1c4c26f
+    subdir: app
+    gradle:
+      - stable
+
+  - versionName: 0.8.0
+    versionCode: 8000
+    commit: 6c326a0987ac0a9cba0a3ba5c5a30d2c23345fbb
+    subdir: app
+    gradle:
+      - stable
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v
-CurrentVersion: 0.6.0
-CurrentVersionCode: 6000
+CurrentVersion: 0.8.0
+CurrentVersionCode: 8000

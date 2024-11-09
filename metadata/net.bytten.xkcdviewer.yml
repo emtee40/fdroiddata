@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on xkcd website, which is not libre.
 Categories:
   - Reading
 License: GPL-2.0-or-later
@@ -8,18 +9,18 @@ IssueTracker: https://github.com/tcoxon/XkcdViewer/issues
 
 AutoName: xkcdViewer
 Description: |-
-    Shows comics from xkcd.com, including alt-text. Also provides support for
-    bookmarks and easy navigation.
+  Shows comics from xkcd.com, including alt-text. Also provides support for
+  bookmarks and easy navigation.
 
-    <b>Features:</b>
+  <b>Features:</b>
 
-    * Read xkcd comics and tap to view the alt text
-    * Star your favorites for later reading
-    * Share links and images with friends
-    * Get linked straight to the explain xkcd wiki for explanations
-    * Search for comics by title
-    * Reopen at the last comic you read OR the most recent comic (edit your preferences)
-    * Disable zoom buttons with your preferences
+  * Read xkcd comics and tap to view the alt text
+  * Star your favorites for later reading
+  * Share links and images with friends
+  * Get linked straight to the explain xkcd wiki for explanations
+  * Search for comics by title
+  * Reopen at the last comic you read OR the most recent comic (edit your preferences)
+  * Disable zoom buttons with your preferences
 
 RepoType: git
 Repo: https://github.com/tcoxon/XkcdViewer.git
@@ -62,7 +63,7 @@ Builds:
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$ComicViewer$$@' project.properties
     target: android-12
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 4.1.0

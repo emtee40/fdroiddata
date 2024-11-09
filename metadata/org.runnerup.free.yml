@@ -1,50 +1,21 @@
 AntiFeatures:
-  - NonFreeNet
-  - UpstreamNonFree
+  NonFreeNet:
+    en-US: Uploading to Strava and other services makes use of non free net services.
+  UpstreamNonFree:
+    en-US: The Play version has additional features using non free libraries
 Categories:
   - Sports & Health
 License: GPL-3.0-only
 WebSite: https://github.com/jonasoreland/runnerup/wiki
 SourceCode: https://github.com/jonasoreland/runnerup
 IssueTracker: https://github.com/jonasoreland/runnerup/issues
-Translation: https://www.transifex.com/runner-up/runner-up-android/dashboard
+Translation: https://explore.transifex.com/runner-up/runner-up-android/
 Changelog: https://htmlpreview.github.io/?https://raw.githubusercontent.com/jonasoreland/runnerup/blob/HEAD/app/assets/changes.html
-Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=runnerup%2eandroid%40gmail%2ecom&lc=US&item_name=RunnerUp&button_subtype=services&currency_code=EUR&tax_rate=25%2e000&bn=PP%2dBuyNowBF%3abtn_buynow_LG%2egif%3aNonHosted
 
-Name: RunnerUp
-Description: |-
-    Track your sport activities with RunnerUp using the GPS in your Android phone:
-
-    * See detailed stats around your pace, distance and time.
-    * Get stats and progress with built-in highly configurable audio cues.
-    * Run free runs with target pace or target heart rate zone
-    * Easily configure and run effective interval workouts modeled after Garmin
-    * Share your favorite workouts with friends
-    * Heart rate monitor: Bluetooth SMART (BLE)
-    * Configure and use heart rate zones
-
-    Upload your activities to a variety of running sites with a single click:
-
-    * Strava
-    * Endomondo
-    * RunKeeper
-    * RunningAHEAD
-
-    Explanation to anti-features:
-
-    * NonFreeNet: Uploading to Strava and other services makes use of non free net services. (The uploading is open similar to uploading a .tcx file, but the services are not open.)
-    * UpstreamNonFree: The Play version (can be installed at the same time as the F-Droid version) has additional features using non free libraries, see below
-
-    Features removed compared to Play version:
-
-    * Map view (no MapBox API key in free)
-    * WearOS app (requires non-free Play services)
-    * HR ANT+ connectivity (requires closed source lib)
-    * Runalyze and Dropbox upload (Requires API keys. Runalyze test upload possible.)
-    * Download customized apk to device (F-Droid binary is universal for all supported binaries).
+AutoName: RunnerUp
 
 RepoType: git
-Repo: https://github.com/jonasoreland/runnerup
+Repo: https://github.com/jonasoreland/runnerup.git
 
 Builds:
   - versionName: 2.0.2.1
@@ -283,7 +254,7 @@ Builds:
       - wear
       - ANT-Android-SDKs
     prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
-        build.gradle
+      build.gradle
 
   - versionName: 2.4.1.0
     versionCode: 15000307
@@ -299,7 +270,7 @@ Builds:
       - wear
       - ANT-Android-SDKs
     prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
-        build.gradle
+      build.gradle
 
   - versionName: 2.4.3.1
     versionCode: 15000310
@@ -315,7 +286,7 @@ Builds:
       - wear
       - ANT-Android-SDKs
     prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
-        build.gradle
+      build.gradle
 
   - versionName: 2.4.4.0
     versionCode: 15000311
@@ -331,7 +302,7 @@ Builds:
       - wear
       - ANT-Android-SDKs
     prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
-        build.gradle
+      build.gradle
 
   - versionName: 2.4.5.0
     versionCode: 15000312
@@ -347,12 +318,11 @@ Builds:
       - wear
       - ANT-Android-SDKs
     prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
-        build.gradle
+      build.gradle
 
-  - versionName: 2.5.0.1
-    versionCode: 15000321
-    disable: https://github.com/jonasoreland/runnerup/issues/1129
-    commit: 190d03b3d714ed8ec14717d82577c5bb4ba619cb
+  - versionName: 2.5.0.5
+    versionCode: 15000323
+    commit: 60d385f1f9331999e6607e9713068ba3819c46b9
     subdir: app
     gradle:
       - latest
@@ -360,13 +330,113 @@ Builds:
       - wear
       - ANT-Android-SDKs
     prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
-        build.gradle
+      build.gradle
+
+  - versionName: 2.5.0.6
+    versionCode: 15000324
+    commit: 5764fc9004be60dce3979d22de35eb1912b465c9
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.5.0.7
+    versionCode: 15000325
+    commit: 41a3e8f1a6022dd84ac934de98943bf76d938958
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.5.1.0
+    versionCode: 15000326
+    commit: d1a3aa0c8d081ee35f6ea66dfbce7ab0d30ebf9e
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.5.2.0
+    versionCode: 15000327
+    commit: e508b74a5f6cc97f555ad44aa522007efdf979ba
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.6.0.2
+    versionCode: 21000331
+    commit: 0d5e405acb180cdbae59da72e060c68531bb29aa
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.7.0.0
+    versionCode: 21000335
+    commit: f693660dc016b0b3fbbe9fe6e10ebbea916b7196
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.7.0.1
+    versionCode: 21000337
+    commit: b5de26b5025b6d38ea54c531179fa637c9d28fd0
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
+
+  - versionName: 2.8.0.0
+    versionCode: 21000340
+    commit: 9510c6866bf31d36457b1e358645b1ec9ac6c520
+    subdir: app
+    gradle:
+      - latest
+    rm:
+      - wear
+      - ANT-Android-SDKs
+    prebuild: sed -i -e '/play-services/d' -e '/mapboxsdk/d' -e '/api.mapbox.com/d'
+      build.gradle
 
 MaintainerNotes: This replaces RunnerUp 1.x https://f-droid.org/packages/org.runnerup
 
 AutoUpdateMode: Version
-UpdateCheckMode: Tags ^v[0-9.]*$
+UpdateCheckMode: Tags ^v[0-9.]*_free$
 VercodeOperation:
-  - '%c + 15000000'
-CurrentVersion: 2.5.0.1
-CurrentVersionCode: 15000321
+  - '%c + 21000000'
+CurrentVersion: 2.8.0.0
+CurrentVersionCode: 21000340

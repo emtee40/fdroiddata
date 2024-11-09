@@ -36,8 +36,77 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 5.1.0
+    versionCode: 50100
+    commit: 995d984e04cd5d1b4bd6e742d85ca08ec41d27ed
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.1.2
+    versionCode: 50102
+    commit: efd2c3f8a047e66e4c2831d1547a9d8e04db36f7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 5.1.3
+    versionCode: 50103
+    commit: d7d3139d003ea04e05b620aa814e1ff07b4c6390
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 5.1.4
+    versionCode: 50104
+    commit: eb19298f38f56112cc9d4b7a94b6f95a3f54b2e0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 5.1.5
+    versionCode: 50105
+    commit: 226267e316768b94be090b9e8f61689ad3acc1f9
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 5.1.6
+    versionCode: 50106
+    commit: 8f60c1ed6bc3cd21b79c6f7be6a05558c57eef43
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 5.1.7
+    versionCode: 50107
+    commit: 529137631a5c64c370b40d98de8fba33504f724c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckName: de.metager.metagerapp
-CurrentVersion: 5.0.0
-CurrentVersionCode: 50000
+CurrentVersion: 5.1.7
+CurrentVersionCode: 50107

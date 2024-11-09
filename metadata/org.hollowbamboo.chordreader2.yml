@@ -1,3 +1,6 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Searches chords with startpage.com
 Categories:
   - Multimedia
   - Science & Education
@@ -44,7 +47,54 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.1.3
+    versionCode: 5
+    commit: 0658a320e61ac1003d07546975cbb9f2e409ff3a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.5
+    versionCode: 7
+    commit: e77b39b98efbb0a59815f5c60187e5a4df073dbc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.1.6
+    versionCode: 8
+    commit: c93594418564fbd3a30228ec32923757cf25f2d7
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.2.0
+    versionCode: 9
+    commit: e37a66c940fd36857f3bca50dcb841db4bc2a950
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 2.3.1
+    versionCode: 11
+    commit: 3ddec21dc44ac01c59dba6fef329513da1e24934
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.1.2
-CurrentVersionCode: 4
+CurrentVersion: 2.3.1
+CurrentVersionCode: 11

@@ -6,12 +6,12 @@ SourceCode: https://code.google.com/p/typeandspeak/source
 
 AutoName: Type and Speak
 Description: |-
-    Type and Speak makes your phone say out loud whatever you type! Save speech to
-    use as ringtones and alarms. Can work via the share menu so you can have entire
-    articles read out loud.
+  Type and Speak makes your phone say out loud whatever you type! Save speech to
+  use as ringtones and alarms. Can work via the share menu so you can have entire
+  articles read out loud.
 
-    Uses Android’s multi-lingual text-to-speech engine which supports UK English, US
-    English, French, Italian, German, and Spanish pronunciations.
+  Uses Android's multi-lingual text-to-speech engine which supports UK English, US
+  English, French, Italian, German, and Spanish pronunciations.
 
 Builds:
   - versionName: 1.4.8
@@ -20,6 +20,8 @@ Builds:
     prebuild: mkdir -p typeandspeak-libs/src
 
 AutoUpdateMode: None
-UpdateCheckMode: Static
+UpdateCheckMode: None
 CurrentVersion: 1.4.8
 CurrentVersionCode: 36
+
+NoSourceSince: 1.4.8

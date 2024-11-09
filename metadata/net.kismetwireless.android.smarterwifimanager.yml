@@ -2,13 +2,14 @@ Categories:
   - Connectivity
 License: GPL-2.0-only
 AuthorWebSite: http://kismetwireless.net/
+SourceCode: https://www.kismetwireless.net/git/android-smarterwifi.git
 Donate: https://kismetwireless.net/#support
 
 AutoName: Smarter Wi-Fi Manager
 Description: |-
-    Manages your device's WiFi connection by automatically learning where you use
-    networks. WiFi is only enabled when you are in a location you have previously
-    used WiFi, increasing battery life, security, and privacy.
+  Manages your device's WiFi connection by automatically learning where you use
+  networks. WiFi is only enabled when you are in a location you have previously
+  used WiFi, increasing battery life, security, and privacy.
 
 RepoType: git
 Repo: https://www.kismetwireless.net/git/android-smarterwifi.git
@@ -35,14 +36,6 @@ Builds:
     gradle:
       - standard
 
-  - versionName: 2015.12.77
-    versionCode: 77
-    disable: gradle issue
-    commit: 5b10aa433396dda1221ac066cd558927a1a1476a
-    subdir: SmarterWifiManager
-    gradle:
-      - standard
-
   - versionName: 2016.11.84
     versionCode: 84
     commit: cf6f42ef56c7c63efba760ed9f62055c31d22fab
@@ -58,10 +51,13 @@ Builds:
       - standard
 
 MaintainerNotes: |-
-    Version information are stored in gradle variables, so our update checks
-    don't detect them now.
+  Version information are stored in gradle variables, so our update checks
+  don't detect them now.
 
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 2016.12.85
 CurrentVersionCode: 85
+
+NoSourceSince: 2016.12.85

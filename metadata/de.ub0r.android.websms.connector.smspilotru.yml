@@ -7,8 +7,8 @@ IssueTracker: https://github.com/felixb/websms-connector-smspilot-ru/issues
 AutoName: 'WebSMS Connector: smspilot.ru'
 Summary: WebSMS addon
 Description: |-
-    WebSMSDroid let's you send SMS even if you have a WiFi only device via the web.
-    This build uses <a href="http://smspilot.ru">SMSPilot.ru</a> as backend.
+  WebSMSDroid let's you send SMS even if you have a WiFi only device via the web.
+  This build uses <a href="http://smspilot.ru">SMSPilot.ru</a> as backend.
 
 RepoType: git
 Repo: https://github.com/felixb/websms-connector-smspilot-ru.git
@@ -21,7 +21,7 @@ Builds:
       - WebSMSAPI@b7f44fd0
     prebuild: sed -i 's@\(android.library.reference.1=\).*@\1$$WebSMSAPI$$@' project.properties
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: '1.4'

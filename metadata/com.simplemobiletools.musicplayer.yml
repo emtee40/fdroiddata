@@ -14,7 +14,7 @@ Litecoin: LYACbHTKaM9ZubKQGxJ4NRyVy1gHUuztRP
 AutoName: Music Player
 
 RepoType: git
-Repo: https://github.com/SimpleMobileTools/Simple-Music-Player
+Repo: https://github.com/SimpleMobileTools/Simple-Music-Player.git
 
 Builds:
   - versionName: '1.6'
@@ -763,7 +763,71 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 5.16.3
-CurrentVersionCode: 109
+  - versionName: 5.16.4
+    versionCode: 110
+    commit: b2c138dc8610002297d9d311145a73a48f7d37b2
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.16.5
+    versionCode: 111
+    commit: e0a136a589a838210c610013569b5b2257a21f9c
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.16.6
+    versionCode: 112
+    commit: 25e0bb38a5075eb4d2979656d1a81f36d24e3163
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.17.0
+    versionCode: 113
+    commit: 9a3e835f773b99a8b9e497e9c09798ad9968544e
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.17.1
+    versionCode: 114
+    commit: eb427b7ca4d3790a051afdb1b938e1414d107804
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.18.1
+    versionCode: 117
+    commit: 9344ce9d06f2b6f31bc482817acadc178a6f8773
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 5.18.3
+    versionCode: 119
+    commit: 94d2ee9a4e76d5fd3251155a08aeca7871a9c139
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 5.18.3
+CurrentVersionCode: 119

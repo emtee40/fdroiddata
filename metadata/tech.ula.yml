@@ -76,14 +76,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 2.2.3
-    versionCode: 43
-    disable: crashlytics
-    commit: v2.2.3
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: 2.3.0
     versionCode: 44
     commit: v2.3.0
@@ -231,10 +223,10 @@ Builds:
       - androidDependencies
 
 MaintainerNotes: |-
-    We can't enable AUM since 2.5.14, versionCode is generated at build time and depends on the actual date.
-    Actual versionCode is copied from the upstream release.
+  We can't enable AUM since 2.5.14, versionCode is generated at build time and depends on the actual date.
+  Actual versionCode is copied from the upstream release.
 
-    App comes with Sentry.io but it is opt-in, so no Tracking AntiFeature needed.
+  App comes with Sentry.io but it is opt-in, so no Tracking AntiFeature needed.
 
 AutoUpdateMode: None
 UpdateCheckMode: None

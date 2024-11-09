@@ -26,7 +26,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i 's|pref_settings_check_for_updates_default">true<|pref_settings_check_for_updates_default">false<|'
-        src/main/res/values/pref_strings.xml
+      src/main/res/values/pref_strings.xml
 
   - versionName: v1.02
     versionCode: 102
@@ -40,9 +40,22 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i 's|pref_settings_check_for_updates_default">true<|pref_settings_check_for_updates_default">false<|'
-        src/main/res/values/pref_strings.xml
+      src/main/res/values/pref_strings.xml
+
+  - versionName: v1.03
+    versionCode: 103
+    commit: aac5dc352fb7b98eafafda6b8f3575409b590a52
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i '/pref_settings_check_for_updates_default/s/true/false/' src/main/res/values/pref_strings.xml
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v1.02
-CurrentVersionCode: 102
+CurrentVersion: v1.03
+CurrentVersionCode: 103

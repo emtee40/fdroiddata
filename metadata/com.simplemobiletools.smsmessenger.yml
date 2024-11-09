@@ -14,7 +14,7 @@ Litecoin: LYACbHTKaM9ZubKQGxJ4NRyVy1gHUuztRP
 AutoName: SMS Messenger
 
 RepoType: git
-Repo: https://github.com/SimpleMobileTools/Simple-SMS-Messenger
+Repo: https://github.com/SimpleMobileTools/Simple-SMS-Messenger.git
 
 Builds:
   - versionName: 5.0.0
@@ -517,7 +517,65 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
 
-AutoUpdateMode: Version
+  - versionName: 5.17.5
+    versionCode: 73
+    commit: fba1c6f904c7907c5c6a8643cb82aa2d76033abd
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.18.1
+    versionCode: 78
+    commit: fb0da99dc06c55cec2d1570a7962e2346672288b
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.18.2
+    versionCode: 79
+    commit: d1688897676b921eaf35f1b43fa15fabab45def7
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 5.19.1
+    versionCode: 83
+    commit: 6ecc87c4339587484f9b10b0cec849464fad4187
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 5.19.2
+    versionCode: 84
+    commit: f5ce526ff6fe8e310c565ac933ba4406aaeb465d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+  - versionName: 5.19.3
+    versionCode: 85
+    commit: 8b27d9f379e8bde62be5e77695366402f042af9a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+AutoUpdateMode: None
 UpdateCheckMode: Tags
-CurrentVersion: 5.17.4
-CurrentVersionCode: 72
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 5.19.3
+CurrentVersionCode: 85

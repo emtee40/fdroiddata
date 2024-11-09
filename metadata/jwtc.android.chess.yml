@@ -9,10 +9,10 @@ IssueTracker: https://github.com/jcarolus/android-chess/issues
 
 AutoName: Chess
 Description: |-
-    Play chess against your Android or online (FICS). Featuring 2000 practice
-    positions, 500 puzzles, Duck chess, Chess 960 and more. It’s also
-    possible to set up a position on the board, save and edit games, navigate
-    through history and import/export via e-mail or clipboard.
+  Play chess against your Android or online (FICS). Featuring 2000 practice
+  positions, 500 puzzles, Duck chess, Chess 960 and more. It's also
+  possible to set up a position on the board, save and edit games, navigate
+  through history and import/export via e-mail or clipboard.
 
 RepoType: git
 Repo: https://github.com/jcarolus/android-chess.git
@@ -73,25 +73,6 @@ Builds:
   - versionName: 8.9.10
     versionCode: 160
     commit: 71431dc9cf4d1441cbc3a49a02bbcae2ac805e21
-    subdir: app
-    gradle:
-      - foss
-    prebuild:
-      - rm -r src/main/jniLibs
-      - ln -s ../../../native/project/libs src/main/jniLibs
-    scandelete:
-      - native/project
-      - app
-    buildjni:
-      - ../native/project
-    ndk: r12b
-    antifeatures:
-      - Tracking
-
-  - versionName: 9.0.0
-    versionCode: 167
-    disable: https://github.com/jcarolus/android-chess/issues/139
-    commit: 17dbea517d932708f10137ccb48bba86b79f0591
     subdir: app
     gradle:
       - foss
@@ -359,7 +340,81 @@ Builds:
     prebuild: sed -i -e 's/3.5.4/7.0.4/' ../build.gradle
     ndk: r25b
 
+  - versionName: 9.3.11
+    versionCode: 193
+    commit: 4f02746ca8861e5c123addf0d3f7682726c3e7cc
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/src/main/assets/db.bin
+      - native/project/jni/db.bin
+      - gradle
+    prebuild: sed -i -e 's/3.5.4/7.0.4/' ../build.gradle
+    ndk: r25b
+
+  - versionName: 9.3.12
+    versionCode: 194
+    commit: ea5718be77a0d8b455c48b8f4922a548cd4e9a64
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/src/main/assets/db.bin
+      - native/project/jni/db.bin
+      - gradle
+    prebuild: sed -i -e 's/3.5.4/7.0.4/' ../build.gradle
+    ndk: r25b
+
+  - versionName: 9.3.15
+    versionCode: 197
+    commit: 788277ba78ef9f4c85e3b49d911867f5db980b29
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/src/main/assets/db.bin
+      - native/project/jni/db.bin
+      - gradle
+    prebuild: sed -i -e 's/3.5.4/7.0.4/' ../build.gradle
+    ndk: r25b
+
+  - versionName: 9.4.1
+    versionCode: 199
+    commit: 07fa60b981c400a8ad8c0412fef2423d5abaf13c
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/src/main/assets/db.bin
+      - native/project/jni/db.bin
+      - gradle
+    prebuild: sed -i -e 's/3.5.4/7.0.4/' ../build.gradle
+    ndk: r25b
+
+  - versionName: 9.4.2
+    versionCode: 200
+    commit: c3ba946a89dd23f2cb180c959432590e4f9f83d1
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/src/main/assets/db.bin
+      - native/project/jni/db.bin
+    ndk: r25b
+
+  - versionName: 9.5.0
+    versionCode: 201
+    commit: 6f98d6822eac2bbe24872bbb0b485f56c00953a2
+    subdir: app
+    gradle:
+      - foss
+    rm:
+      - app/src/main/assets/db.bin
+      - native/project/jni/db.bin
+    ndk: r25b
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 9.3.10
-CurrentVersionCode: 192
+CurrentVersion: 9.5.0
+CurrentVersionCode: 201

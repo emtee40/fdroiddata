@@ -5,13 +5,13 @@ SourceCode: https://archive.softwareheritage.org/browse/origin/http://droidlife.
 
 AutoName: DroidLife
 Description: |-
-    Simulate cellular life. This is an implementation of Conway's Game of Life.
-    Choose from many included seeds, download thousands online, or design your own
-    from the app.
+  Simulate cellular life. This is an implementation of Conway's Game of Life.
+  Choose from many included seeds, download thousands online, or design your own
+  from the app.
 
-    Define your own life: configure birth and survival rules.
+  Define your own life: configure birth and survival rules.
 
-    Reads standard Life file formats: Life 106 & RLE.
+  Reads standard Life file formats: Life 106 & RLE.
 
 Builds:
   - versionName: 2.4.1
@@ -25,6 +25,8 @@ Builds:
     init: rm -rf release/
 
 AutoUpdateMode: None
-UpdateCheckMode: Static
+UpdateCheckMode: None
 CurrentVersion: '2.5'
 CurrentVersionCode: 22
+
+NoSourceSince: '2.5'

@@ -1,6 +1,6 @@
 Categories:
-  - System
   - Security
+  - System
 License: GPL-3.0-only
 WebSite: https://adaway.org/
 SourceCode: https://github.com/AdAway/AdAway
@@ -8,11 +8,10 @@ IssueTracker: https://github.com/AdAway/AdAway/issues
 Translation: https://github.com/AdAway/AdAway/blob/HEAD/TRANSLATING.md
 Changelog: https://github.com/AdAway/AdAway/raw/HEAD/CHANGELOG.md
 Donate: https://paypal.me/BruceBUJON
-FlattrID: '369138'
 
 AutoName: AdAway
 
-RequiresRoot: 'yes'
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/AdAway/AdAway.git
@@ -75,11 +74,6 @@ Builds:
     buildjni:
       - yes
     ndk: r12b
-
-  - versionName: '1.23'
-    versionCode: 24
-    disable: no source in repo
-    commit: unknown - see disabled
 
   - versionName: '1.24'
     versionCode: 25
@@ -417,15 +411,6 @@ Builds:
     preassemble:
       - renameExecutables
 
-  - versionName: 4.1.0
-    versionCode: 40100
-    disable: missing native libraries
-    commit: v4.1.0
-    subdir: app
-    gradle:
-      - yes
-    ndk: r18b
-
   - versionName: 4.2.2
     versionCode: 40202
     commit: v4.2.2
@@ -445,15 +430,6 @@ Builds:
   - versionName: 4.2.4
     versionCode: 40204
     commit: v4.2.4
-    subdir: app
-    gradle:
-      - yes
-    ndk: r18b
-
-  - versionName: 4.2.5
-    versionCode: 40205
-    disable: uses com.android.tools.build:gradle:3.5.0-beta03
-    commit: v4.2.5
     subdir: app
     gradle:
       - yes
@@ -716,10 +692,54 @@ Builds:
       - Resources/symlink_hosts_to_data.zip
     ndk: r24
 
+  - versionName: 6.1.0
+    versionCode: 60100
+    commit: 8f0cb144ab553fbd3a5ea8439a22dbfa04acf8c1
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - Resources/symlink_hosts_to_data.zip
+    ndk: r25c
+
+  - versionName: 6.1.1
+    versionCode: 60101
+    commit: 8c248ac04e4b58608f3ad81b29fb37bc89396f48
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    scanignore:
+      - Resources/symlink_hosts_to_data.zip
+    ndk: r25c
+
+  - versionName: 6.1.2
+    versionCode: 60102
+    commit: c51f0091b6e411c78fbdae1f1f4535b21a0ac2b5
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - Resources/symlink_hosts_to_data.zip
+    ndk: r25c
+
+  - versionName: 6.1.3
+    versionCode: 60103
+    commit: 055f3d31f668bb596b5d07d2547c826715f4e324
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - Resources/symlink_hosts_to_data.zip
+    ndk: r25c
+
 MaintainerNotes: '* uses Sentry.io (foss, Apache-2.0) in opt-in mode, so no Tracking
-    AntiFeature required for that. See https://gitlab.com/fdroid/fdroiddata/-/issues/2289#note_503409470'
+  AntiFeature required for that. See https://gitlab.com/fdroid/fdroiddata/-/issues/2289#note_503409470'
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*[0-9]$
-CurrentVersion: 6.0.3
-CurrentVersionCode: 60003
+CurrentVersion: 6.1.3
+CurrentVersionCode: 60103

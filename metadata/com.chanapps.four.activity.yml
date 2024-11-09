@@ -6,23 +6,23 @@ IssueTracker: https://github.com/grzegorznittner/chanu/issues
 
 AutoName: Chanu
 Description: |-
-    Browse the famous <a href="https://en.wikipedia.org/wiki/4chan">4chan image board</a>.
-    Features include:
+  Browse the famous <a href="https://en.wikipedia.org/wiki/4chan">4chan image board</a>.
+  Features include:
 
-    * Browse boards and threads at high speed
-    * Track threads with watchlists
-    * View entire thread in gallery and download all images
-    * Post replies and make new threads
-    * Upload images from the web, your album, or your camera
-    * Favorite boards you visit the most
-    * Optimizes bandwidth usage on mobile data
-    * Offline mode saves content for when you aren't connected
-    * Automatic thread image expansion
-    * Light and dark mode selected from ambient light conditions
-    * Widgets for displaying threads on your home screen
-    * Optimized for both 7" and 10" tablets
-    * Supports 4chan Pass
-    * Customization options
+  * Browse boards and threads at high speed
+  * Track threads with watchlists
+  * View entire thread in gallery and download all images
+  * Post replies and make new threads
+  * Upload images from the web, your album, or your camera
+  * Favorite boards you visit the most
+  * Optimizes bandwidth usage on mobile data
+  * Offline mode saves content for when you aren't connected
+  * Automatic thread image expansion
+  * Light and dark mode selected from ambient light conditions
+  * Widgets for displaying threads on your home screen
+  * Optimized for both 7" and 10" tablets
+  * Supports 4chan Pass
+  * Customization options
 
 RepoType: git
 Repo: https://github.com/grzegorznittner/chanu
@@ -33,7 +33,7 @@ Builds:
     commit: c6299ec2c966f21744600fbc40669216988349cd
     subdir: app
     srclibs:
-      - 3:NineOldAndroids@2.4.0
+      - NineOldAndroids@2.4.0
       - CommonsLang@LANG_3_2_1
       - CommonsIO@2.4
     forceversion: true
@@ -55,7 +55,7 @@ Builds:
     commit: v2.0.4
     subdir: app
     srclibs:
-      - 3:NineOldAndroids@2.4.0
+      - NineOldAndroids@2.4.0
       - CommonsLang@LANG_3_2_1
       - CommonsIO@2.4
     forceversion: true
@@ -77,7 +77,7 @@ Builds:
     commit: v2.0.6
     subdir: app
     srclibs:
-      - 3:NineOldAndroids@2.4.0
+      - NineOldAndroids@2.4.0
       - CommonsLang@LANG_3_2_1
       - CommonsIO@2.4
     forceversion: true
@@ -99,7 +99,7 @@ Builds:
     commit: v2.0.7
     subdir: app
     srclibs:
-      - 3:NineOldAndroids@2.4.0
+      - NineOldAndroids@2.4.0
       - CommonsLang@LANG_3_2_1
       - CommonsIO@2.4
     forceversion: true
@@ -121,7 +121,7 @@ Builds:
     commit: v2.0.9
     subdir: app
     srclibs:
-      - 3:NineOldAndroids@2.4.0
+      - NineOldAndroids@2.4.0
       - CommonsLang@LANG_3_2_1
       - CommonsIO@2.4
     forceversion: true
@@ -143,7 +143,7 @@ Builds:
     commit: 11858662bfc3d71488e9b1cbeb260de8032b3494
     subdir: app
     srclibs:
-      - 3:NineOldAndroids@2.4.0
+      - NineOldAndroids@2.4.0
       - CommonsLang@LANG_3_2_1
       - CommonsIO@2.4
     forceversion: true
@@ -165,7 +165,7 @@ Builds:
     commit: v2.0.12
     subdir: app
     srclibs:
-      - 3:NineOldAndroids@2.4.0
+      - NineOldAndroids@2.4.0
       - CommonsLang@LANG_3_2_1
       - CommonsIO@2.4
     forceversion: true
@@ -187,7 +187,7 @@ Builds:
     commit: v2.0.13
     subdir: app
     srclibs:
-      - 3:NineOldAndroids@2.4.0
+      - NineOldAndroids@2.4.0
       - CommonsLang@LANG_3_2_1
       - CommonsIO@2.4
     forceversion: true
@@ -209,7 +209,7 @@ Builds:
     commit: v2.0.14
     subdir: app
     srclibs:
-      - 3:NineOldAndroids@2.4.0
+      - NineOldAndroids@2.4.0
       - CommonsLang@LANG_3_2_1
       - CommonsIO@2.4
     forceversion: true
@@ -231,7 +231,7 @@ Builds:
     commit: v2.0.15
     subdir: app
     srclibs:
-      - 3:NineOldAndroids@2.4.0
+      - NineOldAndroids@2.4.0
       - CommonsLang@LANG_3_2_1
       - CommonsIO@2.4
     forceversion: true
@@ -249,13 +249,13 @@ Builds:
       - cp $$CommonsIO$$/target/commons-io-2.4.jar libs/
 
 MaintainerNotes: |-
-    Verified jackson-all*jar against http://jackson.codehaus.org/1.8.2/jackson-all-1.8.2.jar
-    since jackson's upstream sources include quite a lot jars as well.. no point in replacing
-    one jar with a source build one that way..
+  Verified jackson-all*jar against http://jackson.codehaus.org/1.8.2/jackson-all-1.8.2.jar
+  since jackson's upstream sources include quite a lot jars as well.. no point in replacing
+  one jar with a source build one that way..
 
-    https://github.com/grzegorznittner/chanu/issues/467 will fix some dependency issues.
+  https://github.com/grzegorznittner/chanu/issues/467 will fix some dependency issues.
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 2.0.22

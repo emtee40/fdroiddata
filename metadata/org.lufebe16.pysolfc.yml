@@ -1,22 +1,10 @@
 Categories:
   - Games
 License: GPL-3.0-only
-AuthorName: Shlomi Fish
-AuthorEmail: shlomif@shlomifish.org
-AuthorWebSite: https://www.shlomifish.org/
 WebSite: https://pysolfc.sourceforge.io/
 SourceCode: https://github.com/shlomif/PySolFC
 IssueTracker: https://github.com/shlomif/PySolFC/issues
 Changelog: https://pysolfc.sourceforge.io/#news
-
-Description: |-
-    PySolFC is a collection of solitaire games written in Python.
-
-    The project provides more than 1000 solitaire games such as patiences, mahjongg,
-    shishensho, memory and others. The original project runs on linux, windows and
-    macos and was published at sourceforge. See <a href="https://pysolfc.sourceforge.io/">https://pysolfc.sourceforge.io/</a>.
-    A new user interface has been developed using the kivy framework to meet
-    requirements of touch screens devices.
 
 RepoType: git
 Repo: https://github.com/shlomif/PySolFC.git
@@ -232,7 +220,194 @@ Builds:
       - popd
     ndk: r23b
 
-AutoUpdateMode: None
-UpdateCheckMode: None
-CurrentVersion: 2.18.0
-CurrentVersionCode: 102121800
+  - versionName: 2.20.0
+    versionCode: 102122000
+    commit: ae40b654a170051a83f669701f48069468930c13
+    sudo:
+      - apt-get update
+      - apt-get install -y ant autoconf build-essential ccache gettext imagemagick
+        libffi-dev libltdl-dev libssl-dev libtool python3-tk virtualenv wget zlib1g-dev
+      - rm /opt/android-sdk/tools/bin/sdkmanager
+      - ln -s $(which sdkmanager) /opt/android-sdk/tools/bin/sdkmanager
+    output: buildozer/bin/pysolfc-$$VERSION$$-armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - wget --no-verbose -O /tmp/cmdline-tools.zip -t 5 "https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip"
+      - echo "124f2d5115eee365df6cf3228ffbca6fc3911d16f8025bebd5b1c6e2fcfa7faf /tmp/cmdline-tools.zip"  |
+        sha256sum -c -
+      - unzip -qq -o /tmp/cmdline-tools.zip -d /tmp/cmdline-tools
+      - rm /tmp/cmdline-tools.zip
+      - mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools/latest
+      - mv /tmp/cmdline-tools/cmdline-tools/* ${ANDROID_SDK_ROOT}/cmdline-tools/latest
+        || true
+      - export PATH=${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin:${PATH}
+      - sdkmanager 'build-tools;32.0.0' 'platforms;android-32'
+      - pushd buildozer
+      - virtualenv --python=python3 ${HOME}/PYSOLENV
+      - . ${HOME}/PYSOLENV/bin/activate
+      - python3 -m pip install -r pipreq.txt
+      - ./fdroid.init
+      - sed -r "s:#? ?android\.sdk_path =.*:android.sdk_path = $$SDK$$:" -i buildozer.spec
+      - sed -r "s:#? ?android\.ndk_path =.*:android.ndk_path = $$NDK$$:" -i buildozer.spec
+      - sed -r "s:#? ?android\.ant_path =.*:android.ant_path = $(which ant):" -i buildozer.spec
+      - deactivate
+      - popd
+    build:
+      - pushd buildozer
+      - . ${HOME}/PYSOLENV/bin/activate
+      - buildozer android release
+      - deactivate
+      - popd
+    ndk: r25b
+
+  - versionName: 2.20.1
+    versionCode: 102122001
+    commit: eaae28414078058d570a977afd74129339b52261
+    sudo:
+      - apt-get update
+      - apt-get install -y ant autoconf build-essential ccache gettext imagemagick
+        libffi-dev libltdl-dev libssl-dev libtool python3-tk virtualenv wget zlib1g-dev
+      - rm /opt/android-sdk/tools/bin/sdkmanager
+      - ln -s $(which sdkmanager) /opt/android-sdk/tools/bin/sdkmanager
+    output: buildozer/bin/pysolfc-$$VERSION$$-arm64-v8a_armeabi-v7a-release-unsigned.apk
+    prebuild:
+      - sdkmanager 'build-tools;32.0.0' 'platforms;android-32'
+      - pushd buildozer
+      - mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin
+      - ./helpers/setapiforp4a >${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/avdmanager
+      - chmod 0755 ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/avdmanager
+      - virtualenv --python=python3 ${HOME}/PYSOLENV
+      - . ${HOME}/PYSOLENV/bin/activate
+      - python3 -m pip install -r pipreq.txt
+      - ./fdroid.init
+      - sed -r "s:#? ?android\.sdk_path =.*:android.sdk_path = $$SDK$$:" -i buildozer.spec
+      - sed -r "s:#? ?android\.ndk_path =.*:android.ndk_path = $$NDK$$:" -i buildozer.spec
+      - sed -r "s:#? ?android\.ant_path =.*:android.ant_path = $(which ant):" -i buildozer.spec
+      - deactivate
+      - popd
+    build:
+      - pushd buildozer
+      - . ${HOME}/PYSOLENV/bin/activate
+      - ./buildozer.run release
+      - deactivate
+      - popd
+    ndk: r25b
+
+  - versionName: 2.24.0
+    versionCode: 102122400
+    commit: 77fd05e65aef2bbd93c8db26d6a6ade4e2335c95
+    subdir: buildozer
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libc-dev make automake libltdl-dev libtool zlib1g-dev
+        libffi-dev libssl-dev
+      - apt-get install -y python3-pip python3-pexpect python3-virtualenv python3-sh
+      - apt-get install -y -t bullseye-backports python3-appdirs python3-colorama
+        python3-jinja2 python3-build python3-toml python3-packaging
+      - apt-get install -y ant
+      - apt-get install -y ccache gettext imagemagick python3-tk
+      - rm /opt/android-sdk/tools/bin/sdkmanager
+      - ln -s $(which sdkmanager) /opt/android-sdk/tools/bin/sdkmanager
+    output: bin/pysolfc-$$VERSION$$-arm64-v8a_armeabi-v7a-release-unsigned.apk
+    srclibs:
+      - python-for-android@v2023.09.16
+    prebuild:
+      - sdkmanager 'build-tools;33.0.0' 'platforms;android-33'
+      - sed -i -e 's|/usr/bin/bash|/bin/bash|' resize4k
+      - mkdir -p $$SDK$$/cmdline-tools/latest/bin
+      - ./helpers/setapiforp4a > $$SDK$$/cmdline-tools/latest/bin/avdmanager
+      - chmod 0755 $$SDK$$/cmdline-tools/latest/bin/avdmanager
+      - python3 -m pip install -r pipreq.txt
+      - ./fdroid.init
+      - sed -i -e 's/log_level =.*/log_level = 1/' -e '/^\[app\]/aandroid.ndk_path
+        = $$NDK$$\nandroid.sdk_path = $$SDK$$\np4a.source_dir = $$python-for-android$$\nandroid.ant_path
+        = /usr' buildozer.spec
+    build:
+      - export PATH="$PATH:$HOME/.local/bin"
+      - ./buildozer.run release
+    ndk: r25b
+
+  - versionName: 3.0.0
+    versionCode: 102130000
+    commit: 34292e27434ef12b63fd58b92ec615e6cbbcf040
+    subdir: buildozer
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libc-dev make automake libltdl-dev libtool zlib1g-dev
+        libffi-dev libssl-dev cython3 python3-pip python3-pexpect python3-virtualenv
+        python3-sh python3-appdirs python3-colorama python3-jinja2 python3-build python3-toml
+        python3-packaging ant zip ccache gettext imagemagick python3-tk pipx
+      - rm /opt/android-sdk/tools/bin/sdkmanager
+      - ln -s $(which sdkmanager) /opt/android-sdk/tools/bin/sdkmanager
+      - ln -sf /usr/bin/cython3 /usr/bin/cython
+    output: bin/pysolfc-$$VERSION$$-arm64-v8a_armeabi-v7a-release-unsigned.apk
+    srclibs:
+      - python-for-android@v2023.09.16
+      - buildozer@1.5.0
+    prebuild:
+      - source helpers/setbuildvars
+      - sdkmanager "build-tools;$AAPI.0.0" "platforms;android-$AAPI"
+      - pushd $$python-for-android$$
+      - git checkout -q $VP4A
+      - sed -i -E 's:(.*)apis = get_available_apis.*:\1apis = [android_api]:' pythonforandroid/build.py
+      - popd
+      - pushd $$buildozer$$
+      - git checkout -q $VBUILDOZER
+      - sed -i -E 's:(.*)self._install_android_packages.*:\1pass:' buildozer/targets/android.py
+      - popd
+      - ./fdroid.init
+      - sed -i -e 's/log_level =.*/log_level = 2/' -e "/^\[app\]/aandroid.ndk_path
+        = $$NDK$$\nandroid.sdk_path = $$SDK$$\np4a.source_dir = $$python-for-android$$\nandroid.ant_path
+        = $HOME/.local" buildozer.spec
+    build:
+      - mkdir -p $HOME/.local/bin
+      - export PATH="$HOME/.local/bin:$PATH"
+      - cp -a $(which ant) $HOME/.local/bin/ant
+      - pipx install --system-site-packages $$buildozer$$
+      - ./buildozer.run release 2>&1 | grep -E "INFO|ERROR|Error|Fail"
+    ndk: r25b
+
+  - versionName: 3.1.0
+    versionCode: 102130100
+    commit: b7569e79c242bf449fe79003b4d390cfb8ac9a27
+    subdir: buildozer
+    sudo:
+      - apt-get update
+      - apt-get install -y g++ libc-dev make automake libltdl-dev libtool zlib1g-dev
+        libffi-dev libssl-dev cython3 python3-pip python3-pexpect python3-virtualenv
+        python3-sh python3-appdirs python3-colorama python3-jinja2 python3-build python3-toml
+        python3-packaging ant zip ccache gettext imagemagick python3-tk pipx
+      - rm /opt/android-sdk/tools/bin/sdkmanager
+      - ln -s $(which sdkmanager) /opt/android-sdk/tools/bin/sdkmanager
+      - ln -sf /usr/bin/cython3 /usr/bin/cython
+    output: bin/pysolfc-$$VERSION$$-arm64-v8a_armeabi-v7a-release-unsigned.apk
+    srclibs:
+      - python-for-android@v2023.09.16
+      - buildozer@1.5.0
+    prebuild:
+      - source helpers/setbuildvars
+      - sdkmanager "build-tools;$AAPI.0.0" "platforms;android-$AAPI"
+      - pushd $$python-for-android$$
+      - git checkout -q $VP4A
+      - sed -i -E 's:(.*)apis = get_available_apis.*:\1apis = [android_api]:' pythonforandroid/build.py
+      - popd
+      - pushd $$buildozer$$
+      - git checkout -q $VBUILDOZER
+      - sed -i -E 's:(.*)self._install_android_packages.*:\1pass:' buildozer/targets/android.py
+      - popd
+      - ./fdroid.init
+      - sed -i -e 's/log_level =.*/log_level = 2/' -e "/^\[app\]/aandroid.ndk_path
+        = $$NDK$$\nandroid.sdk_path = $$SDK$$\np4a.source_dir = $$python-for-android$$\nandroid.ant_path
+        = $HOME/.local" buildozer.spec
+    build:
+      - mkdir -p $HOME/.local/bin
+      - export PATH="$HOME/.local/bin:$PATH"
+      - cp -a $(which ant) $HOME/.local/bin/ant
+      - pipx install --system-site-packages $$buildozer$$
+      - ./buildozer.run release 2>&1 | grep -E "INFO|ERROR|Error|Fail"
+    ndk: r25b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^android-.*$
+UpdateCheckData: buildozer/pubspec.json|versionCode[:"\s]+(\d+)|.|versionName[:"\s]+([\d.]+)
+CurrentVersion: 3.1.0
+CurrentVersionCode: 102130100

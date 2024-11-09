@@ -9,16 +9,16 @@ Changelog: https://github.com/BenoitDuffez/AndroidCupsPrint/releases
 
 AutoName: Android CUPS Print
 Description: |-
-    This app provides a Print Service to Android. This means that once it's
-    installed, you need to enable it in the 'Print' section of the settings app.
-    Once the service is enabled, printers are automatically discovered using the
-    mDNS protocol. You can print anything you want from any app, as long as the
-    print service is enabled.
+  This app provides a Print Service to Android. This means that once it's
+  installed, you need to enable it in the 'Print' section of the settings app.
+  Once the service is enabled, printers are automatically discovered using the
+  mDNS protocol. You can print anything you want from any app, as long as the
+  print service is enabled.
 
-    Of course, printing document is an important matter. Because your documents are
-    your most private information, you don't want anybody to have access to this
-    information. This is why this app is completely open sourced and free to use,
-    modify and redistribute.
+  Of course, printing document is an important matter. Because your documents are
+  your most private information, you don't want anybody to have access to this
+  information. This is why this app is completely open sourced and free to use,
+  modify and redistribute.
 
 RepoType: git
 Repo: https://github.com/BenoitDuffez/AndroidCupsPrint.git
@@ -38,18 +38,6 @@ Builds:
       - sed -i -e '/Crashlytics/d' -e '/Fabric/d' src/main/java/io/github/benoitduffez/cupsprint/{,printservice,ssl}/*.java
       - sed -i -e '/fabric/d' -e '/crashlytics/,+2d' build.gradle
       - sed -i -e '/fabric/d' ../build.gradle
-
-  - versionName: 1.3.0
-    versionCode: 7
-    disable: still references crashlytics
-    commit: 931010a366f5114a3b538f3db26287640ffed356
-    subdir: app
-    gradle:
-      - yes
-    prebuild:
-      - echo -e "android { lintOptions { disable 'MissingTranslation'\n\ndisable 'ExtraTranslation'
-        } }" >> build.gradle
-      - sed -i -e '/fabric/d' build.gradle
 
   - versionName: 1.3.1
     versionCode: 8

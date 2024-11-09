@@ -15,7 +15,7 @@ Name: Simple File Manager Pro
 AutoName: File Manager
 
 RepoType: git
-Repo: https://github.com/SimpleMobileTools/Simple-File-Manager
+Repo: https://github.com/SimpleMobileTools/Simple-File-Manager.git
 
 Builds:
   - versionName: 6.0.0
@@ -565,13 +565,53 @@ Builds:
     gradle:
       - fdroid
 
-MaintainerNotes: |-
-    KnownVuln: com.github.tibbi:AndroidPdfViewer:da57ff410e noted at below link
-    https://github.com/SimpleMobileTools/Simple-File-Manager/blob/$TAG/app/build.gradle
-    https://github.com/SimpleMobileTools/Simple-File-Manager/issues/619
-    https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11496
+  - versionName: 6.15.3
+    versionCode: 133
+    commit: 266d2d5651428ff4e19483475a1b7e446543eca3
+    subdir: app
+    patch:
+      - build.patch
+    gradle:
+      - fdroid
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 6.15.2
-CurrentVersionCode: 132
+  - versionName: 6.15.4
+    versionCode: 134
+    commit: c6b1783d49a62fe9815e008dfa7547321b62114e
+    subdir: app
+    patch:
+      - build.patch
+    gradle:
+      - fdroid
+
+  - versionName: 6.16.0
+    versionCode: 135
+    commit: afdc8c97a851d5b380d014486f778a65f60b7296
+    subdir: app
+    patch:
+      - build.patch
+    gradle:
+      - fdroid
+
+  - versionName: 6.16.1
+    versionCode: 136
+    commit: 265c49db3b1c8fba1c954150c64e14ca6fd64daf
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+MaintainerNotes: |-
+  KnownVuln: com.github.tibbi:AndroidPdfViewer:da57ff410e noted at below link
+  https://github.com/SimpleMobileTools/Simple-File-Manager/blob/$TAG/app/build.gradle
+  https://github.com/SimpleMobileTools/Simple-File-Manager/issues/619
+  https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11496
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 6.16.1
+CurrentVersionCode: 136

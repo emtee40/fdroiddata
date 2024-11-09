@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: The DeepL service itself is not libre.
 Categories:
   - Reading
   - Science & Education
@@ -221,7 +222,42 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '8.2'
+    versionCode: 34
+    commit: 1f51399e8a4c4540aeb708d3edc62c8fb7326db7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.3'
+    versionCode: 36
+    commit: 9ced89c65db41f6d337707616878cd0645e2785f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.4'
+    versionCode: 37
+    commit: 140e892231110a4ceb616a70d4c91be5c9b667cf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.5'
+    versionCode: 38
+    commit: 8b7a5d7c18ec6c87f8f4af4364167f5f7f8a4fd4
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '8.6'
+    versionCode: 39
+    commit: e9d55c865139da18851e78ee318a9251d361bc73
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '8.1'
-CurrentVersionCode: 33
+CurrentVersion: '8.6'
+CurrentVersionCode: 39

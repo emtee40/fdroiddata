@@ -10,14 +10,14 @@ Changelog: https://github.com/brodeurlv/fastnfitness/blob/HEAD/CHANGELOG.md
 
 AutoName: Fast N Fitness
 Description: |-
-    Fast N Fitness allows you to track your workouts quickly and easily. It is
-    highly customizable and supports cardio and power lifting workouts.
+  Fast N Fitness allows you to track your workouts quickly and easily. It is
+  highly customizable and supports cardio and power lifting workouts.
 
-    You can create as many machines as you want with the names you want. Multiple
-    graphics will show your progress and your body evolution.
+  You can create as many machines as you want with the names you want. Multiple
+  graphics will show your progress and your body evolution.
 
-    Don’t leave the app to get your music; a music player is integrated into
-    the app!
+  Don't leave the app to get your music; a music player is integrated into
+  the app!
 
 RepoType: git
 Repo: https://github.com/brodeurlv/fastnfitness
@@ -205,7 +205,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.20.6
+    versionCode: 65
+    commit: 038f3898ededee19bd10ee2536d1e6661ffbb2ce
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.20.6.2
+    versionCode: 67
+    commit: 7c8f57b4edb2f85d38567a88fb8a82a5d019b4b1
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.20.5.1
-CurrentVersionCode: 63
+CurrentVersion: 0.20.6.2
+CurrentVersionCode: 67

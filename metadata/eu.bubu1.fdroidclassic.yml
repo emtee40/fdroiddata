@@ -5,7 +5,7 @@ AuthorName: Marcus Hoffmann
 AuthorEmail: fdroidclassic@bubu1.eu
 SourceCode: https://git.bubu1.eu/Bubu/fdroidclassic
 IssueTracker: https://git.bubu1.eu/Bubu/fdroidclassic/issues
-Translation: https://weblate.bubu1.eu/projects/f-droid-classic/
+Translation: https://translate.codeberg.org/projects/f-droid-classic/
 Changelog: https://git.bubu1.eu/Bubu/fdroidclassic/-/blob/main/CHANGELOG.md
 Liberapay: Bubu
 
@@ -38,6 +38,8 @@ Builds:
       - update-alternatives --auto java
     gradle:
       - yes
+
+AllowedAPKSigningKeys: 610e3f6f1f17111d753cad7051de06b4e4f24ae7910556248ab5181f814d283f
 
 AutoUpdateMode: None
 UpdateCheckMode: None

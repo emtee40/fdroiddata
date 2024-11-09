@@ -1,9 +1,9 @@
 AntiFeatures:
-  - Tracking
   - NonFreeNet
+  - Tracking
 Categories:
-  - Sports & Health
   - Science & Education
+  - Sports & Health
 License: GPL-3.0-or-later
 WebSite: https://noise-planet.org/noisecapture.html
 SourceCode: https://github.com/Universite-Gustave-Eiffel/NoiseCapture
@@ -42,6 +42,9 @@ Builds:
       - app/gradle
     gradleprops:
       - android.useAndroidX=true
+
+MaintainerNotes: connects to a.basemaps.cartocdn.com, onomap-gs.noise-planet.org and
+  img.shields.io, see https://gitlab.com/fdroid/fdroiddata/-/merge_requests/10732#note_878422774
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags

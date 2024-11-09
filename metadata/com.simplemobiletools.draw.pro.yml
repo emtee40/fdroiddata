@@ -15,7 +15,7 @@ Name: Simple Draw Pro
 AutoName: Draw
 
 RepoType: git
-Repo: https://github.com/SimpleMobileTools/Simple-Draw
+Repo: https://github.com/SimpleMobileTools/Simple-Draw.git
 
 Builds:
   - versionName: 6.0.2
@@ -253,7 +253,35 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
 
-AutoUpdateMode: Version
+  - versionName: 6.9.2
+    versionCode: 78
+    commit: 19c6246f29bf0e0d0240fd649c6adaf77e072bf0
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 6.9.3
+    versionCode: 79
+    commit: e736acabe607a021efddbd02f9037f586a17c22d
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild: sed -i -e '/keystore.*{/,/}/d; /keystore/d' build.gradle
+
+  - versionName: 6.9.6
+    versionCode: 82
+    commit: c7b622351753e6a2870b63023a0e9d5c7d807ef0
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - fdroid
+
+AutoUpdateMode: None
 UpdateCheckMode: Tags
-CurrentVersion: 6.9.1
-CurrentVersionCode: 77
+UpdateCheckData: gradle/libs.versions.toml|app-version-versionCode\s=\s"(\d+)"|.|app-version-versionName\s=\s"(.*)"
+CurrentVersion: 6.9.6
+CurrentVersionCode: 82

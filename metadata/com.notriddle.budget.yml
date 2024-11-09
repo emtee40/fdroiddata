@@ -4,17 +4,18 @@ License: GPL-3.0-or-later
 WebSite: https://www.notriddle.com
 SourceCode: https://github.com/notriddle/budget-envelopes
 IssueTracker: https://github.com/notriddle/budget-envelopes/issues
-Donate: https://www.notriddle.com/donate
 
 AutoName: Budget
 Description: |-
-    Avoid overdraft fees, unexpected shortages, the minimum payment treadmill, and
-    that sinking dread when you realize you actually couldn't afford to go out.
+  <b>NOTE:</b> App repo is archived by dev. It is read-only for all users and it is no longer actively maintained.
 
-    You put money into the envelopes at payday, and take it out as you spend. An
-    envelope can represent anything — a bank account, money set aside for groceries,
-    or the cash you're saving to buy that new Android phone off-contract. Think of a
-    cheque book, only more flexible.
+  Avoid overdraft fees, unexpected shortages, the minimum payment treadmill, and
+  that sinking dread when you realize you actually couldn't afford to go out.
+
+  You put money into the envelopes at payday, and take it out as you spend. An
+  envelope can represent anything — a bank account, money set aside for groceries,
+  or the cash you're saving to buy that new Android phone off-contract. Think of a
+  cheque book, only more flexible.
 
 RepoType: git
 Repo: https://github.com/notriddle/budget-envelopes.git
@@ -76,7 +77,8 @@ Builds:
     versionCode: 44
     commit: v4.4
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: '4.4'
 CurrentVersionCode: 44

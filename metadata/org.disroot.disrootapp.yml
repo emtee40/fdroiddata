@@ -9,19 +9,19 @@ Bitcoin: 1GNmDSXxpU1zaxEopKCJK2TzLh3dbZAxEA
 
 AutoName: Disroot App
 Description: |-
-    Disroot is a platform providing online services based on principles of freedom,
-    privacy, federation and decentralization. This app is like your Swiss Army knife
-    to the Disroot platform, made by the community for the community. If you don’t
-    have a Disroot account you can still use this  app to access all the Disroot
-    services that do not require an account:
+  Disroot is a platform providing online services based on principles of freedom,
+  privacy, federation and decentralization. This app is like your Swiss Army knife
+  to the Disroot platform, made by the community for the community. If you don't
+  have a Disroot account you can still use this  app to access all the Disroot
+  services that do not require an account:
 
-    * Etherpad
-    * Ethercalc
-    * Private bin
-    * Upload
-    * Poll
-    * Searx
-    * Diaspora* (requires a Diaspora only account)
+  * Etherpad
+  * Ethercalc
+  * Private bin
+  * Upload
+  * Poll
+  * Searx
+  * Diaspora* (requires a Diaspora only account)
 
 RepoType: git
 Repo: https://git.disroot.org/Disroot/disapp
@@ -37,14 +37,6 @@ Builds:
   - versionName: 0.9.2
     versionCode: 7
     commit: v0.9.2
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 0.9.3
-    versionCode: 8
-    disable: malformed app/src/main/res/values-nl/strings.xml
-    commit: v0.9.3
     subdir: app
     gradle:
       - yes
@@ -182,7 +174,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.0.8
+    versionCode: 31
+    commit: e2190b8de11279a0386febf967ee7cd8420db3f6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.9
+    versionCode: 32
+    commit: 3ceab4b54f7d26d5e2079cf5f75c59f25bf4ee1d
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.1.1
+    versionCode: 33
+    commit: 46df8de140dffe4b34548f9609c343c3c1d60a5f
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.6
-CurrentVersionCode: 29
+CurrentVersion: 2.1.1
+CurrentVersionCode: 33

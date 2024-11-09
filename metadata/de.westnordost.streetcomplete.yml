@@ -1,3 +1,7 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Tethered to commercial Jawg.io for map tiles, FOSS OpenStreetMap.org and
+      Westnordost.de to get quests, upload data, etc.
 Categories:
   - Navigation
 License: GPL-3.0-only
@@ -534,7 +538,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '26.0'
     versionCode: 2603
@@ -543,7 +547,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '26.1'
     versionCode: 2604
@@ -552,7 +556,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '26.2'
     versionCode: 2605
@@ -561,7 +565,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '27.0'
     versionCode: 2703
@@ -570,7 +574,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '27.1'
     versionCode: 2704
@@ -579,7 +583,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '27.2'
     versionCode: 2705
@@ -588,7 +592,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '28.0'
     versionCode: 2802
@@ -597,7 +601,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '28.1'
     versionCode: 2803
@@ -606,7 +610,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '29.0'
     versionCode: 2901
@@ -615,7 +619,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '29.1'
     versionCode: 2902
@@ -624,7 +628,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '30.0'
     versionCode: 3001
@@ -633,7 +637,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '30.1'
     versionCode: 3002
@@ -642,7 +646,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '31.0'
     versionCode: 3101
@@ -651,7 +655,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '31.1'
     versionCode: 3102
@@ -660,7 +664,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '31.2'
     versionCode: 3103
@@ -669,7 +673,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '31.3'
     versionCode: 3104
@@ -678,7 +682,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '32.0'
     versionCode: 3203
@@ -687,7 +691,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '32.1'
     versionCode: 3204
@@ -696,7 +700,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '32.2'
     versionCode: 3205
@@ -705,7 +709,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '33.0'
     versionCode: 3301
@@ -714,7 +718,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '33.1'
     versionCode: 3302
@@ -723,7 +727,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '33.2'
     versionCode: 3303
@@ -732,7 +736,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '34.0'
     versionCode: 3401
@@ -741,7 +745,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '34.1'
     versionCode: 3402
@@ -750,7 +754,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '34.2'
     versionCode: 3403
@@ -759,7 +763,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '35.0'
     versionCode: 3501
@@ -768,7 +772,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '35.2'
     versionCode: 3503
@@ -777,7 +781,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '36.0'
     versionCode: 3602
@@ -786,7 +790,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '36.1'
     versionCode: 3603
@@ -795,7 +799,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '37.0'
     versionCode: 3701
@@ -804,7 +808,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '37.1'
     versionCode: 3702
@@ -813,7 +817,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '37.2'
     versionCode: 3703
@@ -822,7 +826,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '38.0'
     versionCode: 3801
@@ -831,7 +835,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '38.1'
     versionCode: 3802
@@ -840,7 +844,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '38.2'
     versionCode: 3803
@@ -849,7 +853,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '39.1'
     versionCode: 3902
@@ -862,7 +866,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '40.0'
     versionCode: 4001
@@ -875,7 +879,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '40.1'
     versionCode: 4002
@@ -888,7 +892,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '40.2'
     versionCode: 4003
@@ -901,7 +905,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d; /keystorePropertiesFile/d'
-        build.gradle.kts
+      build.gradle.kts
 
   - versionName: '46.1'
     versionCode: 4602
@@ -1105,7 +1109,263 @@ Builds:
       - yes
     prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
 
+  - versionName: '51.1'
+    versionCode: 5102
+    commit: bd0da0cca0002d76cc6219eb2b68cb32fad6873c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '52.0'
+    versionCode: 5201
+    commit: 1320cab649d434e9eee03f8db1ee12f851a2b936
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '52.1'
+    versionCode: 5202
+    commit: 742b297f6db4a279fc2cc9b595cef9a30165965d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '53.0'
+    versionCode: 5301
+    commit: c5e5ac140b39facccc1b7c6f2edddfdc0cdbded8
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '53.1'
+    versionCode: 5302
+    commit: de2831b1686334beb2cc0817bbcf2ca1a00ca618
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '53.2'
+    versionCode: 5303
+    commit: 5cc6506dbecaad6b6b510bd1b3881281037c4043
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '53.3'
+    versionCode: 5304
+    commit: 796631aa007a63bdaa09fdf2fc23e157ed9d129c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '54.0'
+    versionCode: 5401
+    commit: eade1b329165f76a4d40063b295ffeb864dbfa0f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '54.1'
+    versionCode: 5402
+    commit: 3a5232a4035bbb5ff1e656535ae053dc98d08850
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '55.0'
+    versionCode: 5500
+    commit: 512afdc8c7bc6c58086a12471b5b1df4e47649c5
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '55.1'
+    versionCode: 5501
+    commit: 9da0fc76551690d6f6790f80267fbf821b9b97cc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '56.0'
+    versionCode: 5601
+    commit: c18d8675556657288fd968d1f211a759ab9ad957
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '56.1'
+    versionCode: 5602
+    commit: 5c37312949d46131c9f9edb00fa553b702959381
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: 57.0-beta1
+    versionCode: 5700
+    commit: d0db3f4968afe113079752aa6e194f1853a46e9c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '57.0'
+    versionCode: 5702
+    commit: 72b958bb1b69f9af58e381da777eb56c32f8513f
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '57.1'
+    versionCode: 5703
+    commit: 38203c669a5448414f9965b95dcd8d6defee2e35
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '57.2'
+    versionCode: 5704
+    commit: 372723228972ff038311abf209ff20180f3d7122
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '57.3'
+    versionCode: 5705
+    commit: 3a7dc5b6c90597555ecd34cc1ecf6351e60fbe9f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '57.4'
+    versionCode: 5706
+    commit: c7c07d0dc0d114af890ad5284ef3c7cc923ac4e4
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '58.0'
+    versionCode: 5800
+    commit: 132ee5cce7ef739ba77d7ba3f3889fd21466381f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '58.1'
+    versionCode: 5801
+    commit: 05ef7ce4564e8eba42220ae02e38f87f0e7b6aa5
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '58.2'
+    versionCode: 5803
+    commit: 8636a3b62f5d464cc87cb98899bc9b403e7cbaef
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: 59.0-beta1
+    versionCode: 5904
+    commit: 3eb3e0ffa2ea3985bbae1083ccc6f21c4c5a1ae2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '59.0'
+    versionCode: 5905
+    commit: b18eee766dee04cb2e3e14ae15c92cb133f8b58c
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '59.1'
+    versionCode: 5906
+    commit: 85f2c9febdd5619d363c8065fb322a6bf995a080
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '59.2'
+    versionCode: 5907
+    commit: 9f6475f25b70e264e35f803c8cb19dba0b81fb1d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: '59.3'
+    versionCode: 5908
+    commit: 9df8b0972aa500b998b3390a55adfbe06613b500
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
+  - versionName: 60.0-alpha1
+    versionCode: 6000
+    commit: ebf620b8ac857fcc80e6a153367e5223a0618cb7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/keystorePropertiesFile.*{/,/}/d' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[\d.]+$
-CurrentVersion: '51.0'
-CurrentVersionCode: 5101
+CurrentVersion: '59.3'
+CurrentVersionCode: 5908

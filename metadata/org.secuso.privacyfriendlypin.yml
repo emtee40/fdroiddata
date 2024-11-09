@@ -1,22 +1,22 @@
 Categories:
-  - System
   - Security
+  - System
 License: GPL-3.0-or-later
 AuthorName: SECUSO - Security Usability Society
 AuthorEmail: contact@secuso.org
-AuthorWebSite: https://secuso.aifb.kit.edu/english/
-WebSite: https://github.com/SecUSo/privacy-friendly-pin-mnemonic/wiki
+AuthorWebSite: https://secuso.aifb.kit.edu/english/105.php
+WebSite: https://secuso.aifb.kit.edu/english/PIN_Mnemonic.php
 SourceCode: https://github.com/SecUSo/privacy-friendly-pin-mnemonic
 IssueTracker: https://github.com/SecUSo/privacy-friendly-pin-mnemonic/issues
 Changelog: https://github.com/SecUSo/privacy-friendly-pin-mnemonic/blob/HEAD/CHANGELOG.md
 
 AutoName: PIN Mnemonic
 Description: |-
-    Provides strategies to memorize a 4-digit PIN. Therefore it determines whether
-    the PIN forms a T9-word, underlies a mathematical rule or forms a date or year.
+  Provides strategies to memorize a 4-digit PIN. Therefore it determines whether
+  the PIN forms a T9-word, underlies a mathematical rule or forms a date or year.
 
-    It is part of the Privacy Friendly Apps developed by the SECUSO research group
-    of the Technische Universtität Darmstadt in Germany.
+  It is part of the Privacy Friendly Apps developed by the SECUSO research group
+  of the Technische Universtität Darmstadt in Germany.
 
 RepoType: git
 Repo: https://github.com/SecUSo/privacy-friendly-pin-mnemonic
@@ -57,7 +57,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.0.3
+    versionCode: 8
+    commit: 073f47f293a865ea11c8fc5d653a626d8dbbadc4
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.1
-CurrentVersionCode: 6
+CurrentVersion: 2.0.3
+CurrentVersionCode: 8

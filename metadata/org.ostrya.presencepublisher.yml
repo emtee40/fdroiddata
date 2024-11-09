@@ -123,14 +123,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 2.2.1
-    versionCode: 31
-    disable: fails to build
-    commit: v2.2.1
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: 2.2.3
     versionCode: 33
     commit: v2.2.3
@@ -239,7 +231,83 @@ Builds:
       - yes
     prebuild: sed -i -e '/signingConfig/d' build.gradle.kts
 
+  - versionName: 2.5.0
+    versionCode: 48
+    commit: 175819ca51ca464dfd451c06aa290cfc495a106f
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfig/d' build.gradle.kts
+
+  - versionName: 2.5.1
+    versionCode: 49
+    commit: 1f17e3507f6501713bb5d7b60141b08e2352d7dc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfig/d' build.gradle.kts
+
+  - versionName: 2.5.2
+    versionCode: 50
+    commit: f92de60172f7b6d194e996a7b827efc342f2e4d1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfig/d' build.gradle.kts
+
+  - versionName: 2.5.3
+    versionCode: 51
+    commit: 24d783759960caf7bc27c08d80285999761a2b18
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfig/d' build.gradle.kts
+
+  - versionName: 2.6.1
+    versionCode: 53
+    commit: cc1ba8e50957cf96a03475dfaa91cc0792c6b6be
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfig/d' build.gradle.kts
+
+  - versionName: 2.6.2
+    versionCode: 54
+    commit: 804ac7a530ee1e35af3e4b5d4fcd99691ebb7bfe
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfig/d' build.gradle.kts
+
+  - versionName: 2.6.3
+    versionCode: 55
+    commit: 62368227d713abfc54928208e9ecf8c42d0f8e98
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfig/d' build.gradle.kts
+
+  - versionName: 2.6.4
+    versionCode: 56
+    commit: 7ef4fe47b2e2ba39f0610e4a573b91f8d3e03a44
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/signingConfig/d' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.4.2
-CurrentVersionCode: 47
+CurrentVersion: 2.6.4
+CurrentVersionCode: 56

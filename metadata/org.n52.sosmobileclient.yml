@@ -10,10 +10,10 @@ Changelog: https://github.com/marfnk/sosmobileclient#status
 
 AutoName: MobileSWC
 Description: |-
-    HTML5 client for the Sensor Observation Network by 52north. Most sensors are in
-    Germany and Belgium though there are some in Asia.
+  HTML5 client for the Sensor Observation Network by 52north. Most sensors are in
+  Germany and Belgium though there are some in Asia.
 
-    Status: Beta.
+  Status: Beta.
 
 RepoType: git
 Repo: https://github.com/marfnk/sosmobileclient.git
@@ -24,7 +24,8 @@ Builds:
     commit: f0609f17a677e
     forceversion: true
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: RepoManifest
+UpdateCheckMode: None
 CurrentVersion: 1.0.0 beta (bugfix1)
 CurrentVersionCode: 12

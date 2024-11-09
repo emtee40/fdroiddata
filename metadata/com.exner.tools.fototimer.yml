@@ -1,0 +1,43 @@
+Categories:
+  - Sports & Health
+  - Time
+License: Apache-2.0
+WebSite: https://www.jan-exner.de/software/android/fototimer
+SourceCode: https://github.com/janexner/FotoTimerAndroid
+IssueTracker: https://github.com/janexner/FotoTimerAndroid/issues
+
+AutoName: Foto Timer
+
+RepoType: git
+Repo: https://github.com/janexner/FotoTimerAndroid.git
+Binaries: https://www.jan-exner.de/software/android/fototimer/Foto_Timer_release_%v_%c.apk
+
+Builds:
+  - versionName: 1.1.1
+    versionCode: 10
+    commit: c0a8d060b9b92621c94dbbbceba172f8059892d4
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'META-INF/services/*'
+
+  - versionName: 1.1.2
+    versionCode: 11
+    commit: 74b69cdf6d6137fcc7888ea06858d89a57f0806d
+    subdir: app
+    gradle:
+      - yes
+    srclibs:
+      - reproducible-apk-tools@v0.2.7
+    postbuild: $$reproducible-apk-tools$$/inplace-fix.py --page-size 16 fix-newlines
+      $$OUT$$ 'META-INF/services/*'
+
+AllowedAPKSigningKeys: 3f15745561afae58a2f73ff97a517303eba059b7c608aac576fab7465df27843
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.2
+CurrentVersionCode: 11

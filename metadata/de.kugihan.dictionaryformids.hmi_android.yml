@@ -1,9 +1,9 @@
 Categories:
-  - Science & Education
   - Reading
+  - Science & Education
 License: GPL-2.0-or-later
 SourceCode: http://dictionarymid.sourceforge.net/android.html
-IssueTracker: http://dictionarymid.german-fighters.com/forum/index.php?board=12.0
+IssueTracker: https://dictionarymid.stefan1200.de/forum/index.php
 
 AutoName: DictionaryForMIDs
 
@@ -64,10 +64,7 @@ Builds:
       - mv -f ../DictionaryForMIDs/src/de/kugihan/dictionaryformids/* src/main/java/de/kugihan/
       - sed -i "s;compile project(':DictionaryForMIDs_Core');;" build.gradle
 
-MaintainerNotes: |-
-    Summary and Description have been moved to the new localizable text files:
-    https://f-droid.org/docs/All_About_Descriptions_Graphics_and_Screenshots
-
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 1.1.0

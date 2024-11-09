@@ -2,181 +2,223 @@ Categories:
   - System
   - Theming
 License: GPL-3.0-only
-AuthorName: Wayne Wesley
+AuthorName: DroidWorksStudio
 AuthorEmail: wayne6324@gmail.com
-SourceCode: https://github.com/HeCodes2Much/mLauncher
-IssueTracker: https://github.com/HeCodes2Much/mLauncher/issues
-Changelog: https://github.com/HeCodes2Much/mLauncher/blob/main/CHANGELOG.md
+SourceCode: https://github.com/DroidWorksStudio/mLauncher
+IssueTracker: https://github.com/DroidWorksStudio/mLauncher/issues
+Translation: https://crowdin.com/project/mlauncher
+Changelog: https://github.com/DroidWorksStudio/mLauncher/blob/HEAD/CHANGELOG.md
 
 AutoName: mLauncher
 
 RepoType: git
-Repo: https://github.com/HeCodes2Much/mLauncher
-Binaries: https://github.com/HeCodes2Much/mLauncher/releases/download/%v/mLauncher-%v-Signed.apk
+Repo: https://github.com/DroidWorksStudio/mLauncher.git
+Binaries: https://github.com/DroidWorksStudio/mLauncher/releases/download/%v/mLauncher-%v-Signed.apk
 
 Builds:
-  - versionName: 1.0.3
-    versionCode: 28
-    commit: e4791e3deb2b9e0148ffe65f66fb557bf21dbfdf
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 1.0.5
-    versionCode: 30
-    commit: 8a7e845300a637599b3d3f44a7f89e1c3af4c06d
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 1.0.6
-    versionCode: 31
-    commit: 887ad3818e3b1f32cf8c07d0f1a63c3deacbd771
-    subdir: app
-    gradle:
-      - yes
-
-  - versionName: 1.1.0
-    versionCode: 32
-    commit: 8558cabb31440869a5506b7d2de0871f5930e49e
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: 1.1.1
-    versionCode: 33
-    commit: a511fc6812fce577f183b5a019a0c18cf1b87a1c
+    versionCode: 63
+    commit: 8e5f99db3bee931ea0ccb6cd6b5d328128e51431
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.1.2
+    versionCode: 64
+    commit: 2c29a66d2986491a2c6e3dd6cae4dd15b9180dae
     subdir: app
     gradle:
       - yes
 
   - versionName: 1.2.0
-    versionCode: 34
-    commit: 861734ed37f5976b83e84ab8fee8dd2adaee5738
+    versionCode: 65
+    commit: 734c140024e88b6628e91b4a529ec534ba0600f2
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.3.5
-    versionCode: 35
-    commit: 6ce84f0d194b95c906675738ab1921e1a858d78e
+  - versionName: 1.2.1
+    versionCode: 66
+    commit: 2ff310ebe638d7712d1eeddcb2b5d6d101e39cd3
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.3.6
-    versionCode: 36
-    commit: d07d9bfa3538be37f131adbb2d32000cc9f6363d
+  - versionName: 1.3.2
+    versionCode: 69
+    commit: bcdb9eeabf0be20f1a3a37dfea35d433a88e3e3a
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.3.3
+    versionCode: 70
+    commit: 2080cf2bf1f501870a6cec3fdf8b6be67781d0dd
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 73
+    commit: 6855b1053d3e6503bd8a05fed5a84cd3a869711f
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.3.7
-    versionCode: 37
-    commit: 028e81ea1184b14480204dee67a15d7ec401cafa
+  - versionName: 1.4.1
+    versionCode: 74
+    commit: 2ccbc1a158936b103f777e7e0272831a17aefd6b
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.3.8
-    versionCode: 38
-    commit: eba48c54613d1d7eede29e4923cad932f304d657
+  - versionName: 1.4.3
+    versionCode: 143
+    commit: 3e4d0836ff8147898cb39c33feecc96be6280848
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.3.9
-    versionCode: 39
-    commit: fd4d7f6d8313b8ab18be34c212860c70f4e2a16b
+  - versionName: 1.4.4
+    versionCode: 144
+    commit: 798faafe4c08b53a3dbc2c0dfbadef46def6e90c
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.4.0
-    versionCode: 40
-    commit: f8357838c9b8931dc9906252dd0b5b261e4a322b
+  - versionName: 1.4.6
+    versionCode: 146
+    commit: b09e2a58f048372e91f8f1fad5025fc7233f8c0a
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.4.1
-    versionCode: 41
-    commit: 3ef142d681c143c2a47957e98b67f029559547f4
+  - versionName: 1.4.7
+    versionCode: 147
+    commit: 3fdaeab898e11360ae1e8ac6b9f9479147983dae
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.4.2
-    versionCode: 42
-    commit: c8fcf38c723fffb0a31d91706818c79a6b7d36bf
+  - versionName: 1.4.9
+    versionCode: 149
+    commit: f23a71226c84abdedbbd8e586d7bdd026e0862d7
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.4.3
-    versionCode: 43
-    commit: 7d954622d3090ba760e2eee23a1956a05a35e368
+  - versionName: 1.5.1
+    versionCode: 151
+    commit: b79236c6ab1e9a297f97d6f981a91d1f6087f28f
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.4.4
-    versionCode: 44
-    commit: c1160202ce8f955afba87023472650e2767c7a04
+  - versionName: 1.5.2
+    versionCode: 152
+    commit: 0ac3d9fb4a30cf43b26bd44904698486c734fd00
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.4.5
-    versionCode: 45
-    commit: a0bf0e5bf21dd94da80b5e7dca7c7d2fc34d736d
+  - versionName: 1.5.3
+    versionCode: 153
+    commit: 2d6bb0d728ebad10ee96dcde801eb43fe9eae86c
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.4.6
-    versionCode: 46
-    commit: 2db933912d6ec7c2af5b92b81e46e625ce29b4dc
+  - versionName: 1.5.4
+    versionCode: 154
+    commit: 29c2b852e01cdc332991893f9d61819db438277f
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.4.7
-    versionCode: 47
-    commit: 318e1a1e558a5602e74fa80a1e3fc8e7b5a2f6d2
+  - versionName: 1.5.5
+    versionCode: 155
+    commit: bfcfb95160c9352a938f14dba5f83a06f749613e
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.4.8
-    versionCode: 48
-    commit: 2e2aef8ab86b885f7c4f2299f49a7aa6dea27fa9
+  - versionName: 1.5.8
+    versionCode: 158
+    commit: 5bf8f74e1a0ab585f515359c5c0ab9073eeeeb6a
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.4.9
-    versionCode: 49
-    commit: b4adf6430111e4527baf5386cf9251d79baad31b
+  - versionName: 1.5.9
+    versionCode: 159
+    commit: 4a92403845fd74848379f920b6285fdecf2c1774
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.5.0
-    versionCode: 50
-    commit: 52d3ab692716dbc6502cbcda92eb1dea78675ed4
+  - versionName: 1.6.0
+    versionCode: 160
+    commit: 98ae777646dba5f305c8410a3751709a091f6adf
     subdir: app
     gradle:
       - yes
 
-  - versionName: 0.5.1
-    versionCode: 51
-    commit: d034fe40a6600a319e765183d684cae179833cfe
+  - versionName: 1.6.1
+    versionCode: 161
+    commit: 34454baae46e0ca91d57545f6c8d29f6b3ec7f5e
     subdir: app
     gradle:
       - yes
+
+  - versionName: 1.6.2
+    versionCode: 162
+    commit: 57fa78fcaa84b9ccddbd7877260fdb8789a778ee
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 163
+    commit: bd86afe7267110d456fa4869ac9033ee41da9dc3
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.4
+    versionCode: 164
+    commit: dcbebc21d86260a11adc309c69722303bc165446
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.7
+    versionCode: 167
+    commit: fdcee72870fdd6321adba30c02d218d3f4628281
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.8
+    versionCode: 168
+    commit: 2a07fb22bc5de376dff46f903a7afe0d3a6c0871
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - bin
+      - git-cliff-*
+
+AllowedAPKSigningKeys: 88585139eac6d8d5922ce7af80a0f2acd9280371676014a114d5e3bf34904ae0
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.5.1
-CurrentVersionCode: 51
+CurrentVersion: 1.6.8
+CurrentVersionCode: 168

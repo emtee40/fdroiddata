@@ -1,54 +1,40 @@
 Categories:
-  - Time
   - Sports & Health
+  - Time
 License: GPL-3.0-only
 AuthorName: Trevor Slocum
-AuthorEmail: trevor@rocketnine.space
-WebSite: https://rocketnine.space/
-SourceCode: https://code.rocketnine.space/tslocum/meditationassistant
-IssueTracker: https://code.rocketnine.space/tslocum/meditationassistant/issues
-Translation: https://medinet.rocketnine.space/translate/
-Changelog: https://code.rocketnine.space/tslocum/meditationassistant/src/branch/master/CHANGELOG
+AuthorEmail: trevor@rocket9labs.com
+WebSite: https://rocket9labs.com
+SourceCode: https://code.rocket9labs.com/tslocum/meditationassistant.git
+IssueTracker: https://code.rocket9labs.com/tslocum/meditationassistant/issues
+Translation: https://hosted.weblate.org/projects/meditation-assistant/app/
+Changelog: https://code.rocket9labs.com/tslocum/meditationassistant/src/branch/master/CHANGELOG
 Donate: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TEP9HT98XK7QA
-Liberapay: rocketnine.space
+Liberapay: rocket9labs.com
 Bitcoin: 3Aq6xnpdxSByUtKGrJNdte1sMzj3mADWaz
 
 AutoName: Meditation Assistant
 Description: |-
-    This application assists with both timed (via duration or ending at a specific
-    time) and untimed sessions, with numerous customizations, including
-    start/interval/end sounds and device behavior. It also provides a monthly
-    overview of your progress.
+  This application assists with both timed (via duration or ending at a specific
+  time) and untimed sessions, with numerous customizations, including
+  start/interval/end sounds and device behavior. It also provides a monthly
+  overview of your progress.
 
-    A major feature in this application is the ability to share your sessions
-    online. Though entirely optional, sharing your progress online adds another
-    dimension to your accountability. Now that you’ve gone public, as your
-    meditation streak increases more users will see it as a goal of their own. One
-    user has posted over 500 days of consecutive days of meditation.
+  A major feature in this application is the ability to share your sessions
+  online. Though entirely optional, sharing your progress online adds another
+  dimension to your accountability. Now that you've gone public, as your
+  meditation streak increases more users will see it as a goal of their own. One
+  user has posted over 500 days of consecutive days of meditation.
 
-    Your meditation streak is the number of consecutive days you have recorded at
-    least one session. As your streak grows, "not breaking the chain" becomes quite
-    important. Soon you will be meditating once a day, even if it’s five or ten
-    minutes out of your schedule.
+  Your meditation streak is the number of consecutive days you have recorded at
+  least one session. As your streak grows, "not breaking the chain" becomes quite
+  important. Soon you will be meditating once a day, even if it's five or ten
+  minutes out of your schedule.
 
 RepoType: git
-Repo: https://code.rocketnine.space/tslocum/meditationassistant.git
+Repo: https://code.rocket9labs.com/tslocum/meditationassistant.git
 
 Builds:
-  - versionName: 1.2.7
-    versionCode: 127
-    disable: aidl missing
-    commit: 1.2.7
-    subdir: MeditationAssistant
-    gradle:
-      - opensource
-    rm:
-      - MeditationAssistantWear
-    prebuild:
-      - sed -i -e '/play-services/d' -e '/applicationVariants.all/i/*' -e '/sourceSets/i*/'
-        build.gradle
-      - sed -i 's/4096m/1024m/' ../gradle.properties
-
   - versionName: 1.2.8
     versionCode: 128
     commit: 1.2.8
@@ -243,21 +229,6 @@ Builds:
       - sed -i 's/4096m/1024m/' ../gradle.properties
     antifeatures:
       - Tracking
-
-  - versionName: 1.4.1
-    versionCode: 141
-    disable: Cannot resolve external dependency com.android.tools.build:gradle:2.3.3
-        because no repositories are defined
-    commit: 1.4.1
-    subdir: MeditationAssistant
-    gradle:
-      - opensource
-    rm:
-      - MeditationAssistantWear
-    prebuild:
-      - sed -i -e '/play-services/d' -e '/applicationVariants.all/i/*' -e '/sourceSets/i*/'
-        build.gradle
-      - sed -i 's/4096m/1024m/' ../gradle.properties
 
   - versionName: 1.4.2
     versionCode: 142
@@ -535,8 +506,48 @@ Builds:
       - sed -i -e '/play-services/d' build.gradle
       - sed -i 's/4096m/1024m/' ../gradle.properties
 
+  - versionName: 1.6.6
+    versionCode: 166
+    commit: ed5afd4b832d30d81ada31257a225dbb63b14134
+    subdir: MeditationAssistant
+    gradle:
+      - opensource
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i 's/4096m/1024m/' ../gradle.properties
+
+  - versionName: 1.6.7
+    versionCode: 167
+    commit: 8f5db6906a441af12102b02d11f265fb96e164a8
+    subdir: MeditationAssistant
+    gradle:
+      - opensource
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i 's/4096m/1024m/' ../gradle.properties
+
+  - versionName: 1.6.8
+    versionCode: 168
+    commit: 6712de1303d2b5d66efe14b7647869bd64187160
+    subdir: MeditationAssistant
+    gradle:
+      - opensource
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i 's/4096m/1024m/' ../gradle.properties
+
+  - versionName: 1.6.9
+    versionCode: 169
+    commit: 09e667fd3408af2d724047f50fb18d14e76d0f22
+    subdir: MeditationAssistant
+    gradle:
+      - opensource
+    prebuild:
+      - sed -i -e '/play-services/d' build.gradle
+      - sed -i 's/4096m/1024m/' ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckName: sh.ftp.rocketninelabs.meditationassistant
-CurrentVersion: 1.6.5
-CurrentVersionCode: 165
+CurrentVersion: 1.6.9
+CurrentVersionCode: 169

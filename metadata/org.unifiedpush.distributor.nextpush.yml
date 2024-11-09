@@ -2,17 +2,17 @@ Categories:
   - Connectivity
   - System
 License: AGPL-3.0-only
-AuthorName: UnifiedPush
+AuthorName: UnifiedPush, S1m
 WebSite: https://unifiedpush.org/
-SourceCode: https://github.com/UP-NextPush/android
-IssueTracker: https://github.com/UP-NextPush/android/issues
-Changelog: https://github.com/UP-NextPush/android/releases
+SourceCode: https://codeberg.org/NextPush/nextpush-android
+IssueTracker: https://codeberg.org/NextPush/nextpush-android/issues
+Changelog: https://codeberg.org/NextPush/nextpush-android/releases
 
 Name: NextPush
 AutoName: NextPush
 
 RepoType: git
-Repo: https://github.com/UP-NextPush/android.git
+Repo: https://codeberg.org/NextPush/nextpush-android.git
 
 Builds:
   - versionName: 1.0.1
@@ -125,18 +125,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 1.4.1
-    versionCode: 16
-    disable: crashes (reported by author)
-    commit: ac67201dd9bfe2c62987df41c6179b880040b436
-    subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-11-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - yes
-
   - versionName: 1.4.2
     versionCode: 17
     commit: 45c41e8e2aed6177920e6a785e4623b638278ea8
@@ -155,7 +143,97 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.5.0
+    versionCode: 19
+    commit: 6ce18dfc03ce7bb3434cf2a265a84d376c0591f7
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.1
+    versionCode: 20
+    commit: fd8bc838ffe415c11d0623f04d9644770c9ffe70
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.1
+    versionCode: 22
+    commit: 389aa33fbb3e145a0e225b706fc694e3ad5a4c4c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.2
+    versionCode: 23
+    commit: 120c44d203d44aa452c98eb2582039987cced8dd
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.6.3
+    versionCode: 24
+    commit: ffe7878fc3a6916358990fea33eb7e82508bc6ff
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.0
+    versionCode: 25
+    commit: e15a6608ab924f227df7bd01d4bec97dcfea449b
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 26
+    commit: e2c98f0e81ffff1b69e96b2751490d4a4085ede8
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.8.0
+    versionCode: 27
+    commit: 08aca7b5bdbf67bca0284c7445a7d0d85db8fa1c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.8.1
+    versionCode: 28
+    commit: 48ad5f5edf0f34631906f32af3693fd86f860e46
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
+  - versionName: 1.9.0
+    versionCode: 29
+    commit: 6170f630d113f13a79225df698c3aa980a5d48fb
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
-UpdateCheckMode: Tags \d+\.\d+(\.\d+)?
-CurrentVersion: 1.4.3
-CurrentVersionCode: 18
+UpdateCheckMode: Tags ^[\d.]+$
+CurrentVersion: 1.9.0
+CurrentVersionCode: 29

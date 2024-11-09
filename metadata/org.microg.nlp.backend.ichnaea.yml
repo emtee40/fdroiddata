@@ -10,10 +10,10 @@ Changelog: https://github.com/microg/IchnaeaNlpBackend/releases
 Name: MozillaNlpBackend
 AutoName: Mozilla UnifiedNlp Backend
 Description: |-
-    https://f-droid.org/packages/com.google.android.gms backend that uses
-    <a href="https://location.services.mozilla.com/">Mozilla Location Services</a>.
+  https://f-droid.org/packages/com.google.android.gms backend that uses
+  <a href="https://location.services.mozilla.com/">Mozilla Location Services</a>.
 
-    Location calculation is done online and therefor requires internet connection.
+  Location calculation is done online and therefor requires internet connection.
 
 RepoType: git
 Repo: https://github.com/microg/IchnaeaNlpBackend
@@ -58,13 +58,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: v1.3.1
-    versionCode: 20017
-    disable: bad release?
-    commit: v1.3.1
-    gradle:
-      - yes
-
   - versionName: 1.3.2
     versionCode: 20018
     commit: v1.3.2
@@ -93,7 +86,8 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 1.5.0
 CurrentVersionCode: 20036

@@ -1,6 +1,6 @@
 Categories:
-  - Science & Education
   - Reading
+  - Science & Education
 License: GPL-2.0-only
 AuthorName: Neil Roberts
 AuthorEmail: bpeeluk@yahoo.co.uk
@@ -9,10 +9,11 @@ WebSite: https://www.busydoingnothing.co.uk/prevo
 SourceCode: https://github.com/bpeel/prevo
 IssueTracker: https://github.com/bpeel/prevo/issues
 
+AutoName: PReVo
 Description: |-
-    PReVo is a portable version of Reta Vortaro (the free and libre Esperanto
-    dictionary) for Android. It’s usable without Internet access and is quickly
-    searched with the keyboard.
+  PReVo is a portable version of Reta Vortaro (the free and libre Esperanto
+  dictionary) for Android. It's usable without Internet access and is quickly
+  searched with the keyboard.
 
 RepoType: git
 Repo: https://github.com/bpeel/prevo
@@ -134,7 +135,45 @@ Builds:
       - cd ..
       - PrevoDB/src/prevodb -i $$RevoFonto$$ -i $$VokoGrundo$$ -o src/main
 
+  - versionName: '0.24'
+    versionCode: 24
+    commit: '0.24'
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint gcc gettext libexpat1-dev libglib2.0-dev
+        make
+    gradle:
+      - yes
+    srclibs:
+      - RevoFonto@4c9ac7586de7443611edfdd741b099ba8879d86b
+      - VokoGrundo@f8b7f6800ce2cd0827840bdee6a9089761167ee1
+      - PrevoDB@ee4b73ebf07dbafb6d2038989d3bf024779dd791
+    build:
+      - cp -r $$PrevoDB$$ .
+      - cd PrevoDB
+      - ./autogen.sh CFLAGS="-Dg_memdup2=g_memdup"
+      - make -j`nproc`
+      - cd ..
+      - PrevoDB/src/prevodb -i $$RevoFonto$$ -i $$VokoGrundo$$ -o src/main
+
+  - versionName: '0.26'
+    versionCode: 26
+    commit: '0.26'
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake autopoint gcc gettext libexpat1-dev libglib2.0-dev
+        make
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys:
+  - 8cdd302c4a2b17e3e7ce179f39a34310847d1b8002fcf1c6d8d143c4a87bfacd
+  - f80ea49d10a478bc64cf674e4f515717b6d5c81dd51717412fb03db9b16c192d
+
 AutoUpdateMode: None
 UpdateCheckMode: Static
-CurrentVersion: '0.23'
-CurrentVersionCode: 23
+CurrentVersion: '0.26'
+CurrentVersionCode: 26

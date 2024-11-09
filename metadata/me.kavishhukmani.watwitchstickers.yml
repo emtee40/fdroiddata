@@ -1,6 +1,8 @@
 AntiFeatures:
-  - NonFreeDep
-  - NonFreeAssets
+  NonFreeAssets:
+    en-US: stickers used are not libre
+  NonFreeDep:
+    en-US: requires WhatsApp to be available on-device
 Categories:
   - Internet
   - Theming
@@ -15,24 +17,24 @@ Changelog: https://github.com/DoubleGremlin181/WhatsApp-Twitch-Stickers/releases
 
 AutoName: WhatsApp Twitch Stickers
 Description: |-
-    A sticker pack for WhatsApp comprising of Twitch emotes
+  A sticker pack for WhatsApp comprising of Twitch emotes
 
-    Includes over 50 emotes such as:
+  Includes over 50 emotes such as:
 
-    * Kappa
-    * monkaS
-    * PogChamp
-    * OMEGALUL
-    * 4Head
-    * LuL
-    * TriHard
+  * Kappa
+  * monkaS
+  * PogChamp
+  * OMEGALUL
+  * 4Head
+  * LuL
+  * TriHard
 
-    Note: Certain devices reload the stickers each time WhatsApp is launched.
-    Disabling battery optimization for the app fixes it.
+  Note: Certain devices reload the stickers each time WhatsApp is launched.
+  Disabling battery optimization for the app fixes it.
 
-    This app is a fork of <a href="https://github.com/WhatsApp/stickers">WhatsApp/Stickers</a>
-    It is not affiliated with WhatsApp or Twitch.
-    No copyright infringement intended.
+  This app is a fork of <a href="https://github.com/WhatsApp/stickers">WhatsApp/Stickers</a>
+  It is not affiliated with WhatsApp or Twitch.
+  No copyright infringement intended.
 
 RepoType: git
 Repo: https://github.com/DoubleGremlin181/WhatsApp-Twitch-Stickers
@@ -80,7 +82,10 @@ Builds:
     gradle:
       - yes
 
-AutoUpdateMode: Version
-UpdateCheckMode: Tags
+MaintainerNotes: Github repo was archived 2022-01-19
+
+ArchivePolicy: 0
+AutoUpdateMode: None
+UpdateCheckMode: None
 CurrentVersion: 10.0.0
 CurrentVersionCode: 1000

@@ -7,6 +7,8 @@ AuthorWebSite: https://exodus-privacy.eu.org/
 WebSite: https://exodus-privacy.eu.org/
 SourceCode: https://github.com/Exodus-Privacy/exodus-android-app
 IssueTracker: https://github.com/Exodus-Privacy/exodus-android-app/issues
+Translation: https://crowdin.com/project/exodus-android-app
+Changelog: https://github.com/Exodus-Privacy/exodus-android-app/releases
 Donate: https://exodus-privacy.eu.org/en/page/contribute/#finance
 
 AutoName: Exodus
@@ -100,7 +102,7 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/$System.env.EXODUS_API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/'
-        build.gradle
+      build.gradle
 
   - versionName: 3.0.1
     versionCode: 14
@@ -109,9 +111,102 @@ Builds:
     gradle:
       - yes
     prebuild: sed -i -e 's/$System.env.EXODUS_API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/'
-        build.gradle
+      build.gradle
+
+  - versionName: 3.1.0
+    versionCode: 15
+    commit: f88d9427361dfde2be9f727ac22d7d419d5136cc
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$System.env.EXODUS_API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/'
+      build.gradle
+
+  - versionName: 3.1.1
+    versionCode: 16
+    commit: cdeaf533e9fae5fba2619058f9b1526cfc2d0720
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
+  - versionName: 3.2.0
+    versionCode: 17
+    commit: a4ac0adc007ac7e0d7985591092bad7d226a9f72
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
+  - versionName: 3.2.1
+    versionCode: 18
+    commit: 40f3fcb28d81fa0073540803269d9bae7336b727
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
+  - versionName: 3.2.2
+    versionCode: 19
+    commit: e07852c99ecc19b54f0529695a23a9cbf8ebaf6d
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
+  - versionName: 3.2.3
+    versionCode: 20
+    commit: 53b1972728733bce2dcc2cbfa512f1b805950716
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
+  - versionName: 3.3.0
+    versionCode: 21
+    commit: 39b3f5aae0f0ee04c2892a406b83aac8e9d43cc7
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
+  - versionName: 3.3.1
+    versionCode: 22
+    commit: de1348bea53cd849cfd747bc846c341ed9fe3ad2
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
+
+  - versionName: 3.3.2
+    versionCode: 23
+    commit: a507b729be1bd3983fbc0828eb445e7cd1dd093e
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e 's/$API_KEY/a7b296cf7959cd10cc04a3a4321ca38bdadc4c9d/' build.gradle.kts
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.0.1
-CurrentVersionCode: 14
+CurrentVersion: 3.3.2
+CurrentVersionCode: 23

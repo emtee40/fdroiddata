@@ -1,6 +1,6 @@
 Categories:
-  - Sports & Health
   - Games
+  - Sports & Health
 License: MIT
 AuthorName: Markus Borg
 AuthorEmail: markus.borg@gmail.com
@@ -10,23 +10,23 @@ Changelog: https://github.com/mrksbrg/RacketGhost/releases
 
 AutoName: RacketGhost
 Description: |-
-    Ghosting is an established training exercise in racket sports to practice court
-    movement without a ball. Moving to the various corners of the court improves
-    both footwork and general stamina. In the best of worlds, your coach or sparring
-    partner will always be ready to point you to random corners at a pace that
-    pushes you to your limits.
+  Ghosting is an established training exercise in racket sports to practice court
+  movement without a ball. Moving to the various corners of the court improves
+  both footwork and general stamina. In the best of worlds, your coach or sparring
+  partner will always be ready to point you to random corners at a pace that
+  pushes you to your limits.
 
-    Unfortunately, few people have access to a coach at all times, thus have to run
-    the exercise on their own. That means the randomness in the order of corners is
-    missing.
+  Unfortunately, few people have access to a coach at all times, thus have to run
+  the exercise on their own. That means the randomness in the order of corners is
+  missing.
 
-    Getting Started
+  Getting Started
 
-    1. Configure your ghosting session. 2. Put your mobile device in front of you on
-    the court. 3. Press "GO!" to start your ghosting session.
+  1. Configure your ghosting session. 2. Put your mobile device in front of you on
+  the court. 3. Press "GO!" to start your ghosting session.
 
 RepoType: git
-Repo: https://github.com/mrksbrg/RacketGhost
+Repo: https://github.com/mrksbrg/RacketGhost.git
 
 Builds:
   - versionName: '1.23'
@@ -106,13 +106,6 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 1.8.1
-    versionCode: 17
-    commit: d24e0e3c05c0e6cedfa0c1f47a4ef50859ba7c9f
-    subdir: app
-    gradle:
-      - yes
-
   - versionName: 1.8.3
     versionCode: 19
     commit: v.1.8.3
@@ -120,7 +113,20 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.8.4
+    versionCode: 20
+    commit: 5f265f089e4dda386707ea6a5fe92706d0f978f3
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    rm:
+      - RacketGhost.zip
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.8.3
-CurrentVersionCode: 19
+CurrentVersion: 1.8.4
+CurrentVersionCode: 20

@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet:
+    en-US: Depends on Github.
 Categories:
   - Development
 License: Apache-2.0
@@ -11,29 +12,22 @@ IssueTracker: https://github.com/jonan/ForkHub/issues
 Changelog: https://github.com/jonan/ForkHub/blob/HEAD/CHANGELOG.md
 
 AutoName: ForkHub
+Description: |-
+  <b>Note:</b> This app is no longer maintained and it can't login.
+
+  ForkHub is a open source GitHub client that started off as a fork of the official Android app from   GitHub after they abandoned it, and has since seen lots of improvements. You can see a comprehensive list of changes in the change log.
+
+  Available features include:
+  * Stay up to date with your all your GitHub activity thanks to notifications and an integrated news feed for organizations, friends, and repositories.
+  * Create, manage, and discuss issues in any GitHub repository or view your issues dashboard to stay connected with all the issues you've reported, been assigned, or participating in the discussion on. You can also view and filter a repository's issue list and bookmark it for quick access.
+  * Star and fork GitHub repositories or follow users.
+  * See your GitHub organizations' repositories, members and teams and stay up to date with all the events.
+  * Discover, share, and discuss code snippets using the integrated GitHub Gists support.
 
 RepoType: git
 Repo: https://github.com/jonan/ForkHub.git
 
 Builds:
-  - versionName: 0.9.0
-    versionCode: 1990
-    disable: untrusted repo
-    commit: ForkHub-v0.9.0
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - Wishlist@c5aa973d2d3504e72b0665d95d0b81f3d7609d6d
-      - egit-github@v4.0.0.201505260635-rc2
-    rm:
-      - app/libs/*
-    prebuild:
-      - sed -i -e '/bintray/d' -e '/jcenter/imavenCentral()\nmavenLocal()\n' ../build.gradle
-      - cp -fR $$Wishlist$$/lib/src/main/java/com src/main/java/
-      - sed -i -e '/compile(name/d' -e 's/com.viewpagerindicator/fr.avianey.com.viewpagerindicator/g'
-        build.gradle
-
   - versionName: 1.1.0
     versionCode: 2100
     commit: c1d4663e706f4fb0f894ccdd11b3c5c1ae4648d4
@@ -48,28 +42,6 @@ Builds:
     prebuild:
       - sed -i -e '/compile(name/d' -e 's/com.viewpagerindicator/fr.avianey.com.viewpagerindicator/g'
         build.gradle
-      - cp -fR $$Wishlist$$/lib/src/main/java/com src/main/java/
-      - sed -i -e '/populov/d' -e '/repo.eclipse.org/d' -e '/jcenter/imavenCentral()\nmavenLocal()'
-        ../build.gradle
-      - pushd $$egit-github$$/org.eclipse.egit.github.core/
-      - mvn -f pom-jar.xml clean install
-      - popd
-
-  - versionName: 1.1.1
-    versionCode: 2110
-    disable: uses snapshot dependencies; failing to build
-    commit: ForkHub-v1.1.1
-    subdir: app
-    gradle:
-      - yes
-    srclibs:
-      - Wishlist@c5aa973d2d3504e72b0665d95d0b81f3d7609d6d
-      - egit-github@fbfc22880fff5fde22ef96bfce0f6497199e6895
-    rm:
-      - app/libs/*
-    prebuild:
-      - sed -i -e '/compile(name/d' -e 's/com.viewpagerindicator/fr.avianey.com.viewpagerindicator/g'
-        -e '/egit-github/s/-SNAPSHOT/.201512141825-rc1/g' build.gradle
       - cp -fR $$Wishlist$$/lib/src/main/java/com src/main/java/
       - sed -i -e '/populov/d' -e '/repo.eclipse.org/d' -e '/jcenter/imavenCentral()\nmavenLocal()'
         ../build.gradle
@@ -265,8 +237,9 @@ Builds:
       - mvn -f pom-jar.xml clean install
       - popd
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 UpdateCheckName: com.github.mobile
 CurrentVersion: 1.2.9
 CurrentVersionCode: 1020900

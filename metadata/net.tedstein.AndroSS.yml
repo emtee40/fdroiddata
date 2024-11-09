@@ -8,11 +8,11 @@ IssueTracker: https://github.com/tstein/AndroSS/issues
 
 AutoName: AndroSS
 Description: |-
-    Take screen captures. Root is required on non-Tegra devices. Android 4+ allows
-    screenshots usually by holding Volume Down and the Power button, but earlier
-    versions of Android need root, by design.
+  Take screen captures. Root is required on non-Tegra devices. Android 4+ allows
+  screenshots usually by holding Volume Down and the Power button, but earlier
+  versions of Android need root, by design.
 
-RequiresRoot: 'yes'
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/tstein/AndroSS.git
@@ -73,7 +73,8 @@ Builds:
       - yes
     ndk: r12b
 
+ArchivePolicy: 0
 AutoUpdateMode: None
-UpdateCheckMode: Tags
+UpdateCheckMode: None
 CurrentVersion: 0.4.3
 CurrentVersionCode: 17

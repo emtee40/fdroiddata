@@ -7,26 +7,26 @@ IssueTracker: https://github.com/phpsysinfo/psiandroid/issues
 
 AutoName: PSIAndroid
 Description: |-
-    Little tool allowing you to monitor your
-    <a href="https://phpsysinfo.github.io/phpsysinfo/">phpSysInfo</a> system on your phone.
+  Little tool allowing you to monitor your
+  <a href="https://phpsysinfo.github.io/phpsysinfo/">phpSysInfo</a> system on your phone.
 
-    <b>Features:</b>
+  <b>Features:</b>
 
-    * Operating System Information (Version, Uptime, ...)
-    * CPU, Memory and Disk usage
-    * Multi-host
-    * HTTPS
-    * Basic/Digest Authentification
-    * Temperatures (MotherBoard and IPMI)
-    * Fans speed (MotherBoard)
-    * Network informations
-    * PSStatus
-    * SMART
-    * RAID
-    * UPS
-    * UpdateNotifier
-    * Printers (SNMP)
-    * Auto-Refresh feature (experimental)
+  * Operating System Information (Version, Uptime, ...)
+  * CPU, Memory and Disk usage
+  * Multi-host
+  * HTTPS
+  * Basic/Digest Authentification
+  * Temperatures (MotherBoard and IPMI)
+  * Fans speed (MotherBoard)
+  * Network informations
+  * PSStatus
+  * SMART
+  * RAID
+  * UPS
+  * UpdateNotifier
+  * Printers (SNMP)
+  * Auto-Refresh feature (experimental)
 
 RepoType: git
 Repo: https://github.com/phpsysinfo/psiandroid
@@ -36,13 +36,13 @@ Builds:
     versionCode: 833
     commit: e8b5a03a28102b7b207152bd2d168073168f705a
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
 
   - versionName: '0.84'
     versionCode: 840
     commit: v0.84
     srclibs:
-      - 1:appcompat@v7
+      - appcompat@v7
 
   - versionName: '0.86'
     versionCode: 860

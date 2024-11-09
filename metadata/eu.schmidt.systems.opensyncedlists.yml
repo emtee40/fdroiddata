@@ -7,7 +7,7 @@ AuthorWebSite: https://schmidt-systems.eu/
 WebSite: https://schmidt-systems.eu/docs/opensyncedlists
 SourceCode: https://gitlab.com/gladion136/opensyncedlists
 IssueTracker: https://gitlab.com/gladion136/opensyncedlists/-/issues
-Changelog: https://gitlab.com/gladion136/opensyncedlists/-/blob/main/CHANGELOG.md
+Changelog: https://gitlab.com/gladion136/opensyncedlists/-/blob/HEAD/CHANGELOG.md
 
 AutoName: OpenSyncedLists
 
@@ -37,7 +37,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.0.8
+    versionCode: 9
+    commit: 19867f955a2cd379fc7fd00e49f192aa289b529d
+    subdir: Android_Client/OpenSyncedLists/app
+    gradle:
+      - yes
+
+  - versionName: 1.0.9
+    versionCode: 10
+    commit: b7bb0a48e9784fa3723d4bb8e19ca311c6888033
+    subdir: Android_Client/OpenSyncedLists/app
+    gradle:
+      - yes
+
+  - versionName: 1.0.10
+    versionCode: 11
+    commit: 056a8fcefdc5ddf5ca2a91b588021690248929bd
+    subdir: Android_Client/OpenSyncedLists/app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.7
-CurrentVersionCode: 8
+CurrentVersion: 1.0.10
+CurrentVersionCode: 11

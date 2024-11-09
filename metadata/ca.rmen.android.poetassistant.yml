@@ -6,12 +6,12 @@ Changelog: https://github.com/caarmen/poet-assistant/blob/HEAD/CHANGELOG.md
 
 AutoName: Poet Assistant
 Description: |-
-    A set of tools to help with writing poems:
+  A set of tools to help with writing poems:
 
-    * a rhyming dictionary, using the Carnegie Mellon University pronunciation dictionary.
-    * a thesaurus, using the WordNet thesaurus.
-    * a dictionary, using the WordNet dictionary.
-    * a screen where you can enter your poem text, and have it read aloud back to you by the device's text-to-speech engine.
+  * a rhyming dictionary, using the Carnegie Mellon University pronunciation dictionary.
+  * a thesaurus, using the WordNet thesaurus.
+  * a dictionary, using the WordNet dictionary.
+  * a screen where you can enter your poem text, and have it read aloud back to you by the device's text-to-speech engine.
 
 RepoType: git
 Repo: https://github.com/caarmen/poet-assistant.git
@@ -542,7 +542,39 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.30.6
+    versionCode: 113006
+    commit: c0b2649aa0f13d7848a76fa5c2cb0d0006387315
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.30.7
+    versionCode: 113007
+    commit: bb4e405af2ba57ca138bd9f8ddd4722a27b1112f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.30.8
+    versionCode: 113008
+    commit: ed1ef7d8136c4d3dce0b8249a2d44c7bc3fbbaea
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.30.10
+    versionCode: 113010
+    commit: 94124122e6309a4c6ab0bbf5d3a6392f15c3c44c
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^release-
-CurrentVersion: 1.30.5
-CurrentVersionCode: 113005
+CurrentVersion: 1.30.10
+CurrentVersionCode: 113010

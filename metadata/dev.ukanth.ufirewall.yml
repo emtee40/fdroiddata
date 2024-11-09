@@ -1,8 +1,8 @@
 AntiFeatures:
   - NonFreeAdd
 Categories:
-  - Security
   - Internet
+  - Security
 License: GPL-3.0-only
 AuthorName: portgenix
 AuthorEmail: contact@portgenix.com
@@ -15,21 +15,21 @@ Donate: https://github.com/ukanth/afwall/wiki#making-donations
 
 AutoName: AFWall+
 Description: |-
-    Firewall (iptables frontend), based on DroidWall which is no longer being
-    developed. A paid "donate"-version with more features it advertised within the
-    app.
+  Firewall (iptables frontend), based on DroidWall which is no longer being
+  developed. A paid "donate"-version with more features it advertised within the
+  app.
 
-    * Import/Export Rules to external storage
-    * Search Applications
-    * Multiple profiles with custom names
-    * Highlights system applications with custom color
-    * Notify on new installations
-    * VPN Support
-    * Device Admin support to protect against being uninstalled
+  * Import/Export Rules to external storage
+  * Search Applications
+  * Multiple profiles with custom names
+  * Highlights system applications with custom color
+  * Notify on new installations
+  * VPN Support
+  * Device Admin support to protect against being uninstalled
 
-    Requires root: Yes. iptables must run as root.
+  Requires root: Yes. iptables must run as root.
 
-RequiresRoot: 'yes'
+RequiresRoot: true
 
 RepoType: git
 Repo: https://github.com/ukanth/afwall.git
@@ -757,7 +757,43 @@ Builds:
     build: make -C ../external -j`nproc` NDK="$$NDK$$" NDK_PROJECT_PATH="$PWD/.."
     ndk: r10e
 
+  - versionName: 3.6.0
+    versionCode: 20230828
+    commit: 733db4b6fff729d0e061f664ddf58248e4a7e9ec
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make bzip2 automake libtool pkg-config openjdk-17-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/haibison.bitbucket.io/d' ../build.gradle
+      - sed -i -e '/android.ndkPath/d' -e '/ndk.dir/d' ../local.properties
+    scandelete:
+      - app/src/main/res/raw/
+    build: make -C ../external -j`nproc` NDK="$$NDK$$" NDK_PROJECT_PATH="$PWD/.."
+    ndk: r10e
+
+  - versionName: 3.6.1
+    versionCode: 20241025
+    disable: https://monitor.f-droid.org/builds/log/dev.ukanth.ufirewall/20241025
+    commit: d13af7efa3db573d84a5f28bbd7493ff5cdd65d4
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y make bzip2 automake libtool pkg-config
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/haibison.bitbucket.io/d' ../build.gradle
+      - sed -i -e '/android.ndkPath/d' -e '/ndk.dir/d' ../local.properties
+    scandelete:
+      - app/src/main/res/raw/
+    build: make -C ../external -j`nproc` NDK="$$NDK$$" NDK_PROJECT_PATH="$PWD/.."
+    ndk: r11
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]+$
-CurrentVersion: 3.5.3
-CurrentVersionCode: 20220615
+CurrentVersion: 3.6.1
+CurrentVersionCode: 20241025

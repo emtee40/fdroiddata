@@ -9,17 +9,17 @@ IssueTracker: https://github.com/sozialhelden/wheelmap-android/issues
 
 AutoName: Wheelmap
 Description: |-
-    <b>Note:</b> this app is no longer maintained, its repo was archived.
+  <b>Note:</b> this app is no longer maintained, its repo was archived.
 
-    Which underground stations are equipped with a lift? Are there accessible
-    restaurants, cafes or clubs around you? Which museums or libraries are
-    accessible for people with limited mobility and which are not? With Wheelmap,
-    you can find locations and modify descriptions on an OpenStreetMap (OSM) map.
+  Which underground stations are equipped with a lift? Are there accessible
+  restaurants, cafes or clubs around you? Which museums or libraries are
+  accessible for people with limited mobility and which are not? With Wheelmap,
+  you can find locations and modify descriptions on an OpenStreetMap (OSM) map.
 
-    Wheelmap was developed by the non-profit organisation SOZIALHELDEN.The
-    SOZIALHELDEN’s aim is to adress social challenges with innovative approaches.
+  Wheelmap was developed by the non-profit organisation SOZIALHELDEN.The
+  SOZIALHELDEN's aim is to adress social challenges with innovative approaches.
 
-    Google Analytics was removed before building.
+  Google Analytics was removed before building.
 
 RepoType: git
 Repo: https://github.com/sozialhelden/wheelmap-android.git
@@ -38,7 +38,7 @@ Builds:
       - sed -i 's@\(android.library.reference.1=\).*@\1$$PullToRefresh$$@' project.properties
       - echo "android.library.reference.2=$$NoAnalytics$$" >> project.properties
 
-ArchivePolicy: 0 versions
+ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
 CurrentVersion: 0.8.3
