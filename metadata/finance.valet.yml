@@ -1,0 +1,34 @@
+AntiFeatures:
+  - NonFreeNet
+Categories:
+  - Money
+License: Apache-2.0
+AuthorName: Anton Kumaigorodski, Anton Gushcha, Ilya Evdokimov
+WebSite: https://valet.finance
+SourceCode: https://github.com/standardsats/valet
+IssueTracker: https://github.com/standardsats/valet/issues
+Changelog: https://github.com/standardsats/valet/releases
+
+AutoName: Valet
+
+RepoType: git
+Repo: https://github.com/standardsats/valet.git
+
+Builds:
+  - versionName: '4.4.3'
+    versionCode: 105
+    commit: 25a5f6c
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y apt-get install --yes --no-install-recommends
+      - update-alternatives --auto java
+    submodules: true
+    gradle:
+      - yes
+    ndk: r22b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 4.4.3
+CurrentVersionCode: 105
