@@ -15,9 +15,9 @@ RepoType: git
 Repo: https://github.com/standardsats/valet.git
 
 Builds:
-  - versionName: 4.4.3
-    versionCode: 104
-    commit: 25a5f6c
+  - versionName: 4.4.4
+    versionCode: 105
+    commit: ca10829
     subdir: app
     submodules: true
     sudo:
@@ -30,5 +30,5 @@ Builds:
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.4.3
-CurrentVersionCode: 104
+CurrentVersion: 4.4.4
+CurrentVersionCode: 105
