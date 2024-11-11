@@ -1,1 +1,0 @@
-Phone Calling app and Dialer with clean and intuitive UI implemented using Material design principals
