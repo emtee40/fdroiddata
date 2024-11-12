@@ -17,7 +17,7 @@ Repo: https://github.com/standardsats/valet.git
 Builds:
   - versionName: 4.4.4
     versionCode: 105
-    commit: f7c042a
+    commit: dfeab52
     subdir: app
     submodules: true
     sudo:
