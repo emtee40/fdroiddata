@@ -10,6 +10,7 @@ AutoName: Amadz
 
 RepoType: git
 Repo: https://github.com/msusman1/Amadz.git
+Binaries: https://github.com/msusman1/Amadz/releases/download/%v/amadz.apk
 
 Builds:
   - versionName: '1.0'
@@ -19,7 +20,9 @@ Builds:
     gradle:
       - yes
 
+AllowedAPKSigningKeys: 9624d23f872090328bba7f6a36e996de4c6798e0ac2e8074c8ee6d2433584358
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.0
+CurrentVersion: '1.0'
 CurrentVersionCode: 1
