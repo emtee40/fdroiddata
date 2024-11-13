@@ -1,6 +1,6 @@
 AntiFeatures:
   NonFreeNet:
-    en-US: ???
+    en-US: Bitcoin Lightning Network charges fees dependent on the service providers
 Categories:
   - Money
 License: Apache-2.0
