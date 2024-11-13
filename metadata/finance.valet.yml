@@ -1,5 +1,6 @@
 AntiFeatures:
-  - NonFreeNet
+  NonFreeNet
+    en-US: ???
 Categories:
   - Money
 License: Apache-2.0
@@ -13,6 +14,7 @@ AutoName: Valet
 
 RepoType: git
 Repo: https://github.com/standardsats/valet.git
+Binaries: https://github.com/standardsats/valet/releases/download/%v/finance.valet_%c.apk
 
 Builds:
   - versionName: 4.4.4
@@ -28,6 +30,8 @@ Builds:
     gradle:
       - yes
     ndk: r22b
+
+AllowedAPKSigningKeys: d63372e7e5e5eebed01f8469a5661e7ec71ea45c5494a23f15580779b21da3c3
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
