@@ -925,7 +925,31 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 12.3.0
+    versionCode: 120300
+    commit: 44c12b3a24d958777d8ddfc0dea4904cda24ac03
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 12.4.0
+    versionCode: 120400
+    commit: 5cbf5d6f450924a863dba60f44910c53708f80c0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 14.0.0
+    versionCode: 140000
+    commit: cbbc2db0e0b83fbe569721bf528cfaf3963d6f60
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - ad-filter/scriptlets_src/package.json
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 12.2.0
-CurrentVersionCode: 120200
+CurrentVersion: 14.0.0
+CurrentVersionCode: 140000

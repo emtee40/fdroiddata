@@ -261,96 +261,6 @@ trigger-issuebot:
     - apk add --no-cache bash curl
     - ./tools/trigger-issuebot
 
-schedule-issuebot:
-  stage: test
-  needs: []
-  image: debian:bookworm-slim
-  only:
-    variables:
-      - $SCHEDULE_ISSUEBOT
-  variables:
-    GIT_DEPTH: "1"
-  artifacts:
-    name: "${CI_PROJECT_PATH}_${CI_JOB_STAGE}_${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHA}"
-    paths:
-      - logs/
-    when: always
-    expire_in: 1 week
-  script:
-    - mkdir logs
-    - export | grep -F CI_ | grep -vFi -e password -e token > logs/export.txt
-    - apt-get update
-    - apt-get -qy install --no-install-recommends bash curl ca-certificates python3-gitlab
-    - ./tools/schedule-issuebot.py
-
-checkupdates_runner:
-  stage: prepare
-  image: debian:bookworm-slim
-  variables:
-    GIT_DEPTH: "1"
-  parallel: 10
-  tags:
-    - fdroid
-    - pep.security
-  rules:
-    - if: $CI_PIPELINE_SOURCE == 'schedule' && $CHECKUPDATES == 'true'
-  before_script:
-    - *install_fdroid_server_deb
-    - export fdroidserver=../fdroidserver
-    - *install_fdroid_server
-    - apt-get install -y openssh-client
-    - git config --global user.email "fdroidci@bubu1.eu"
-    - git config --global user.name "F-Droid checkupdates bot"
-
-    # gitlab.com was still vulnerable to https://terrapin-attack.com/ when this was added
-    - printf 'Ciphers -chacha20-poly1305@openssh.com,*-cbc\nMACs -*etm*,*-sha1*\n'
-        > /etc/ssh/ssh_config.d/0-terrapin-workaround.conf
-
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - cp "${GITLAB_KNOWN_HOSTS}" ~/.ssh/known_hosts
-    - chmod 644 ~/.ssh/known_hosts
-    - eval $(ssh-agent -s)
-    - echo "${CHECKUPDATES_SSH_DEPLOY_KEY}" | tr -d '\r' | ssh-add -
-    - url_host=$(echo "${CI_REPOSITORY_URL}" | sed -e 's|https\?://gitlab-ci-token:.*@|ssh://git@|g')
-    - git remote set-url --push origin "${url_host}"
-    # reset repo to origin state before adding new commits
-    - git rebase --abort || true
-    - rm -fr ".git/rebase-apply"
-    # https://gitlab.com/gitlab-org/gitlab-runner/-/issues/29187
-    - rm -f ".git/logs/HEAD.lock"
-    - git checkout master || true
-    - git reset --hard origin/master || true
-  script:
-    # Get app IDs in this batch
-    - |
-      metadata_files=(metadata/*.yml)
-      metadata_files_count=${#metadata_files[@]}
-      batch_size=$((metadata_files_count / CI_NODE_TOTAL + 1))
-      metadata_files_batch=("${metadata_files[@]:$(((CI_NODE_INDEX - 1) * batch_size)):$batch_size}")
-
-      declare -a CHECKUPDATES_APPIDS
-      for file in "${metadata_files_batch[@]}"; do
-        filename="${file##*/}"
-        filename_without_extension="${filename%.*}"
-        CHECKUPDATES_APPIDS=("${CHECKUPDATES_APPIDS[@]}" "$filename_without_extension")
-      done
-
-      export CHECKUPDATES_APPIDS
-
-    - echo "$metadata_files_count"
-    - echo "$batch_size"
-    - echo "${metadata_files_batch[@]}"
-    - echo "${#metadata_files_batch[@]}"
-    - echo "${CHECKUPDATES_APPIDS[@]}"
-    - echo "${#CHECKUPDATES_APPIDS[@]}"
-
-    - fdroid checkupdates --allow-dirty --auto --commit "${CHECKUPDATES_APPIDS[@]}" 2>&1 | tee /tmp/out || true
-    # when two jobs try to push at the same time they occasionally fail, so try it again
-    - while ! git push origin HEAD:master; do git pull --rebase --strategy-option=ours origin master; done
-    - echo "============== Summary ====================="
-    - 'grep -v "INFO: Processing" /tmp/out || true'
-
 # This job is should be as close as possible to the production
 # buildserver.  It should not include custom setup or methods, except
 # when there is no other way to make this job work.  The docker image
@@ -448,13 +358,15 @@ fdroid build:
           $fdroid fetchsrclibs $build --verbose;
           rm $home_vagrant/fdroiddata $home_vagrant/.gitconfig;
           $fdroid build --verbose --test --refresh-scanner --scan-binary --on-server --no-tarball $build;
+          apt-get install sudo;
+          apk="tmp/binaries/${build/:/_}.binary.apk";
+          [[ -e $apk ]] && $fdroid scanner --verbose --exit-code $apk;
           popd;
           rm -rf $home_vagrant/build || true;
           rm -rf $ANDROID_HOME/ndk || true;
           apt-get install -y openjdk-17-jdk-headless;
           update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java;
           ./tools/build-contains-signatures.py $build || continue;
-          apt-get install sudo;
           $fdroid publish --verbose --error-on-failed $build;
       done
 
@@ -546,3 +458,89 @@ check_git_repos:
     - test -d public || mkdir public
     - cp `git status | grep -Eo 'metadata/.*\.yml'` public/ || true
     - exit $EXITVALUE
+
+
+# checkupdates should only be allowed to modify app metadata files,
+# e.g. metadata/*.yml.  Anything else should throw an error here.
+checkupdates_filter:
+  image: debian:bookworm-slim
+  stage: test
+  needs: []
+  rules:
+    - if: $CI_PROJECT_PATH == 'fdroid/checkupdates-bot-fdroiddata'
+  script:
+    - apt-get update
+    - apt-get -qy install --no-install-recommends ca-certificates git
+    - git fetch https://gitlab.com/fdroid/fdroiddata.git
+    - |
+      if git diff --merge-base FETCH_HEAD HEAD --name-only | grep -v '^metadata/\S*\.yml$'; then
+          printf "\x1b[31mERROR Modifications to paths checkupdates-bot is not allowed to change! \x1b[0m\n"
+          exit 1
+      else
+          echo "All file modifications match paths checkupdates-bot is allowed to change."
+      fi
+
+
+strip EXIF:
+  stage: test
+  needs: []
+  image: debian:bookworm-slim
+  rules:
+    - changes:
+        paths:
+          - "**.JPEG"
+          - "**.JPEg"
+          - "**.JPeG"
+          - "**.JPeg"
+          - "**.JpEG"
+          - "**.JpEg"
+          - "**.JpeG"
+          - "**.Jpeg"
+          - "**.jPEG"
+          - "**.jPEg"
+          - "**.jPeG"
+          - "**.jPeg"
+          - "**.jpEG"
+          - "**.jpEg"
+          - "**.jpeG"
+          - "**.jpeg"
+
+          - "**.JPG"
+          - "**.JPg"
+          - "**.JpG"
+          - "**.Jpg"
+          - "**.jPG"
+          - "**.jPg"
+          - "**.jpG"
+          - "**.jpg"
+
+          - "**.PNG"
+          - "**.PNg"
+          - "**.PnG"
+          - "**.Png"
+          - "**.pNG"
+          - "**.pNg"
+          - "**.pnG"
+          - "**.png"
+
+  script:
+    - apt-get -qy update
+    - apt-get -qy dist-upgrade
+    - apt-get -qy install --no-install-recommends exiftool git
+
+    # JPEG
+    - find . -type f  -iname "*.jpg" -o -iname "*.jpeg"  -exec chmod a-x {} \;
+    - find . -type f  -iname "*.jpg" -o -iname "*.jpeg"  -exec exiftool -quiet -all= {} \;
+
+    # PNG
+    - find . -type f -iname "*.png" -exec chmod a-x {} \;
+    - find . -type f -iname "*.png" -exec exiftool -quiet -all= {} \;
+
+    - git diff --exit-code --color || {
+        printf "\x1b[31mERROR Image files (JPEG, PNG) should be stripped and not be set executable:\x1b[0m\n";
+        echo "Try using exiftool, jpegoptim, optipng (e.g. `exiftool -all= foo.png`).";
+        echo "For more info, see:";
+        echo "https://umbrella.cisco.com/blog/picture-perfect-how-jpg-exif-data-hides-malware";
+        echo "https://beinset.medium.com/exif-metadata-a-hidden-door-to-cyber-vulnerabilities-52b0dd2ff4de";
+        exit 1;
+      }

@@ -6,7 +6,7 @@ Categories:
   - System
 License: GPL-3.0-only
 AuthorName: Matthias Urhahn
-AuthorEmail: darken@darken.eu
+AuthorEmail: support@darken.eu
 AuthorWebSite: https://darken.eu
 SourceCode: https://github.com/d4rken-org/sdmaid-se
 IssueTracker: https://github.com/d4rken-org/sdmaid-se/issues
@@ -108,10 +108,30 @@ Builds:
       - crowdin-cli.jar
       - tooling/testdata-generator/dirt-sources.zip
 
+  - versionName: 1.2.8-rc0
+    versionCode: 10208000
+    commit: 34615e47713ec96b8162725266c5e88abffb8d44
+    subdir: app
+    output: build/outputs/apk/foss/release/eu.darken.sdmse-*-RELEASE.apk
+    rm:
+      - crowdin-cli.jar
+      - tooling/testdata-generator/dirt-sources.zip
+    build:
+      - mkdir upstream
+      - pushd upstream
+      - curl -L -o upstream.apk https://github.com/d4rken-org/sdmaid-se/releases/download/v$$VERSION$$/eu.darken.sdmse-v$$VERSION$$-$$VERCODE$$-FOSS-RELEASE.apk
+      - unzip -q upstream.apk
+      - export upstreamhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1)
+      - popd
+      - for i in {1..10}; do gradle clean assembleFossRelease; mkdir local; pushd
+        local; unzip -q ../build/outputs/apk/foss/release/eu.darken.sdmse-*-RELEASE.apk;
+        export localhash=$(sha256sum assets/dexopt/baseline.prof|cut -d " " -f1);
+        [[ $localhash == $upstreamhash ]] && break ; popd; rm -fr local; done
+
 AllowedAPKSigningKeys: f490032be5383f55900495fa7fc207ece2e786a5c2c6cc52027b99548a9ce938
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*(|-rc[0-9])$
 UpdateCheckData: VERSION|.* (\d+)|.|(.*) \d+
-CurrentVersion: 1.2.7-rc0
-CurrentVersionCode: 10207000
+CurrentVersion: 1.2.8-rc0
+CurrentVersionCode: 10208000

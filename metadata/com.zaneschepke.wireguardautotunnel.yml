@@ -400,9 +400,45 @@ Builds:
       - sed -i -e '/libs.google.services/d' -e '/libs.firebase/d' ../build.gradle.kts
       - sed -i -e '/gitea.zaneschepke.com/d' ../settings.gradle.kts
 
+  - versionName: 3.5.3
+    versionCode: 35300
+    commit: 2c0c88baf260801c780b6e0865e27d81ef78ac4b
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/com.google.gms/d' -e '/com.google.firebase/d' -e '/libs.androidx.core.google.shortcuts/d'
+        build.gradle.kts
+      - sed -i -e '/libs.google.services/d' -e '/libs.firebase/d' ../build.gradle.kts
+      - sed -i -e '/gitea.zaneschepke.com/d' ../settings.gradle.kts
+
+  - versionName: 3.5.4
+    versionCode: 35400
+    commit: 205493092bace3f83ebd0b3bfc105e9158d9325a
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/com.google.gms/d' -e '/com.google.firebase/d' -e '/libs.androidx.core.google.shortcuts/d'
+        build.gradle.kts
+      - sed -i -e '/libs.google.services/d' -e '/libs.firebase/d' ../build.gradle.kts
+      - sed -i -e '/gitea.zaneschepke.com/d' ../settings.gradle.kts
+
+  - versionName: 3.6.0
+    versionCode: 36000
+    commit: 5cc2ae0d019fa493f5aecd75fa2123620c08b502
+    subdir: app
+    gradle:
+      - fdroid
+    prebuild:
+      - sed -i -e '/com.google.gms/d' -e '/com.google.firebase/d' -e '/libs.androidx.core.google.shortcuts/d'
+        build.gradle.kts
+      - sed -i -e '/libs.google.services/d' -e '/libs.firebase/d' ../build.gradle.kts
+      - sed -i -e '/gitea.zaneschepke.com/d' ../settings.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[\d.]+$
 UpdateCheckData: buildSrc/src/main/kotlin/Constants.kt|VERSION_CODE = (\d+)|.|VERSION_NAME
   = "(.+)"
-CurrentVersion: 3.5.2
-CurrentVersionCode: 35200
+CurrentVersion: 3.6.0
+CurrentVersionCode: 36000

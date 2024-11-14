@@ -1851,9 +1851,9 @@ Builds:
     prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
       false/' build.gradle
 
-  - versionName: 2.17.0+free
-    versionCode: 4212101
-    commit: c01a1f01ddf1136b1115aedd3ef668ebc502d341
+  - versionName: 2.17.2+free
+    versionCode: 4212301
+    commit: 26d52906726c74cb4882fdbe5c607f384132fbf4
     gradle:
       - quicksy
       - free
@@ -1861,9 +1861,9 @@ Builds:
     prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
       false/' build.gradle
 
-  - versionName: 2.17.0+free
-    versionCode: 4212102
-    commit: c01a1f01ddf1136b1115aedd3ef668ebc502d341
+  - versionName: 2.17.2+free
+    versionCode: 4212302
+    commit: 26d52906726c74cb4882fdbe5c607f384132fbf4
     gradle:
       - quicksy
       - free
@@ -1871,9 +1871,9 @@ Builds:
     prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
       false/' build.gradle
 
-  - versionName: 2.17.0+free
-    versionCode: 4212103
-    commit: c01a1f01ddf1136b1115aedd3ef668ebc502d341
+  - versionName: 2.17.2+free
+    versionCode: 4212303
+    commit: 26d52906726c74cb4882fdbe5c607f384132fbf4
     gradle:
       - quicksy
       - free
@@ -1881,9 +1881,9 @@ Builds:
     prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
       false/' build.gradle
 
-  - versionName: 2.17.0+free
-    versionCode: 4212104
-    commit: c01a1f01ddf1136b1115aedd3ef668ebc502d341
+  - versionName: 2.17.2+free
+    versionCode: 4212304
+    commit: 26d52906726c74cb4882fdbe5c607f384132fbf4
     gradle:
       - quicksy
       - free
@@ -1898,5 +1898,5 @@ VercodeOperation:
   - 100 * %c + 2
   - 100 * %c + 3
   - 100 * %c + 4
-CurrentVersion: 2.17.0+free
-CurrentVersionCode: 4212104
+CurrentVersion: 2.17.2+free
+CurrentVersionCode: 4212304

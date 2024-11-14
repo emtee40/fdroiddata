@@ -21,7 +21,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '3.1'
+    versionCode: 31
+    commit: 0b260316c76743afac33746ca79c77e40572217f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.2'
+    versionCode: 32
+    commit: 63666bb430eb10c3602bb48d2ec335d39f93fd50
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '3.0'
-CurrentVersionCode: 30
+CurrentVersion: '3.2'
+CurrentVersionCode: 32

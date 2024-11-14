@@ -90,9 +90,23 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.5.4
+    versionCode: 22
+    commit: 61c84f026994d3f97314b349c4a343092abefd22
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 0.6.1
+    versionCode: 24
+    commit: 4a423f99005241b49f9ea713aa4a7f584f6d37b8
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: ea7195cfce638ae6b1a8002ddc0d4863366095ea5b8d95c1cd5e25db0fe2e7c3
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.5.2
-CurrentVersionCode: 20
+CurrentVersion: 0.6.1
+CurrentVersionCode: 24

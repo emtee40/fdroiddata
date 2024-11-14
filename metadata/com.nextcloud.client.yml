@@ -1183,7 +1183,53 @@ Builds:
 
   - versionName: 3.30.1
     versionCode: 30300190
+    disable: https://github.com/nextcloud/android/issues/13738
     commit: stable-3.30.1
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.30.2
+    versionCode: 30300290
+    commit: stable-3.30.2
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.30.3
+    versionCode: 30300390
+    commit: stable-3.30.3
+    subdir: app
+    gradle:
+      - generic
+    rm:
+      - user_manual
+    prebuild:
+      - mkdir -p $HOME/.gradle
+      - echo org.gradle.jvmargs=-Xmx9g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+        > $HOME/.gradle/gradle.properties
+    scandelete:
+      - app/src/androidTest/assets
+
+  - versionName: 3.30.4
+    versionCode: 30300490
+    commit: stable-3.30.4
     subdir: app
     gradle:
       - generic
@@ -1202,5 +1248,5 @@ MaintainerNotes: 'Latest 3 stable version will be kept, RC versions will be dire
 
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: 3.30.1
-CurrentVersionCode: 30300190
+CurrentVersion: 3.30.4
+CurrentVersionCode: 30300490

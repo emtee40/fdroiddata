@@ -199,7 +199,28 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.7.2
+    versionCode: 29
+    commit: 1e5123faee62bbe9d2fd1a14f98fa104a6916e7e
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '2.0'
+    versionCode: 30
+    commit: ad086877e89ecba707d550f7a0a985c3ab7621cc
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.1
+    versionCode: 31
+    commit: 4981881f5de4d12fb2ee08fc8806fc42bc1a0227
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.7.1
-CurrentVersionCode: 28
+CurrentVersion: 2.0.1
+CurrentVersionCode: 31

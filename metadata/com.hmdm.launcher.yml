@@ -5,7 +5,7 @@ WebSite: https://h-mdm.com/
 SourceCode: https://github.com/h-mdm/hmdm-android
 IssueTracker: https://github.com/h-mdm/hmdm-android/issues
 
-AutoName: Headwind MDM
+AutoName: MDM Agent
 Description: |-
   A Powerful Open Source Platform to Manage your Enterprise Android Devices
 
@@ -47,9 +47,30 @@ Builds:
     gradle:
       - opensource
 
+  - versionName: '5.28'
+    versionCode: 14280
+    commit: 158b50656ce00495ad03a539ec02a2129d899b15
+    subdir: app
+    gradle:
+      - opensource
+
+  - versionName: '6.10'
+    versionCode: 15100
+    commit: 976292f59b44398870b6d067169991e3538bb6c9
+    subdir: app
+    gradle:
+      - opensource
+
+  - versionName: '6.11'
+    versionCode: 15110
+    commit: 6fbed1806e85214f18af038df3ba987970c2d0db
+    subdir: app
+    gradle:
+      - opensource
+
 MaintainerNotes: Release APKs at https://h-mdm.com/files/hmdm-%v-os.apk
 
-AutoUpdateMode: None
-UpdateCheckMode: Static
-CurrentVersion: '5.26'
-CurrentVersionCode: 14260
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+CurrentVersion: '6.11'
+CurrentVersionCode: 15110

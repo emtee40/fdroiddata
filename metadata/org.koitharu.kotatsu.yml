@@ -1369,7 +1369,14 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 7.6.7
+    versionCode: 680
+    commit: e2f8d8e022f99f4f83299a93e32a1145ccd86e0a
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]+$
-CurrentVersion: 7.6.4
-CurrentVersionCode: 677
+CurrentVersion: 7.6.7
+CurrentVersionCode: 680

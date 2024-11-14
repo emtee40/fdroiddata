@@ -1,0 +1,127 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Rely on https://acrarium.grakovne.org/
+  Tracking:
+    en-US: Sends Analytics to https://acrarium.grakovne.org/
+Categories:
+  - Multimedia
+License: MIT
+AuthorName: Max Grakov
+AuthorEmail: grakovne@gmail.com
+SourceCode: https://github.com/GrakovNe/lissen-android/
+IssueTracker: https://github.com/GrakovNe/lissen-android/issues
+Changelog: https://github.com/GrakovNe/lissen-android/releases
+
+AutoName: Lissen
+
+RepoType: git
+Repo: https://github.com/GrakovNe/lissen-android/
+
+Builds:
+  - versionName: 1.0.8
+    versionCode: 9
+    commit: 240eb64969ba86f16516b4b92bd4bf72ea6b5632
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.0.18
+    versionCode: 19
+    commit: c1b94513d507e7b37ef674c3eed84ff0ebfcf1ca
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.20
+    versionCode: 21
+    commit: 8a70bb2f22f7f54e6ece4769417528e981b5d0f9
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.21
+    versionCode: 22
+    commit: bea87f2a5258b3d123a73c207a278ccace4c9710
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.24
+    versionCode: 25
+    commit: aa81886c75823e47731d2dfba8e38e1947b0de4c
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.25
+    versionCode: 26
+    commit: 0301659dc599042e7cb17b040497849a1bad88b0
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.0.28
+    versionCode: 29
+    commit: 194c0ef09403467df07f00ed7086409f72308641
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.0
+    versionCode: 30
+    commit: 29db899271de4dba4aa2b42de479a018c10fb008
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+  - versionName: 1.1.1
+    versionCode: 31
+    commit: 5b911835ecc64aaa08dfe9f5134643abf6497e27
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.1
+CurrentVersionCode: 31

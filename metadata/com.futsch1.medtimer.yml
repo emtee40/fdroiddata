@@ -236,9 +236,37 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.10.3
+    versionCode: 77
+    commit: 859e653ca18063aa80cecc0e4bb3ba7b84a03b38
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.4
+    versionCode: 79
+    commit: 1df6f94dcc601b191b72c95217682888edd596c9
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.10.5
+    versionCode: 80
+    commit: 19ad5ca9cc5a315bfa86221cb118c448151d3260
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.11.0
+    versionCode: 82
+    commit: b66bb3e2079c7c1c3ba70f0886f6a2280b809864
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: 69bc7c72e499045b44c87fc8463f599472deb408c48de38de8554ae7754b9d84
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.10.2
-CurrentVersionCode: 76
+CurrentVersion: 1.11.0
+CurrentVersionCode: 82

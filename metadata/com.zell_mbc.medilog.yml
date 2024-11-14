@@ -14,7 +14,7 @@ Bitcoin: 1EUrRpjDAGgpS8J46tmsVWKbgNqAv7rWC7
 AutoName: MediLog
 
 RepoType: git
-Repo: https://codeberg.org/toz/MediLog
+Repo: https://codeberg.org/toz/medilog.git
 
 Builds:
   - versionName: 1.7.3

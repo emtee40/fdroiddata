@@ -206,9 +206,71 @@ Builds:
       - free
     prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
 
+  - versionName: 2024.10.1065-dev
+    versionCode: 1065
+    commit: 8c2fbeca33b10a6901109ac4e9a0c02150c781f4
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 2024.10.1067
+    versionCode: 1067
+    commit: 10f37f04a54aa4421c5bb01ff6b7a9c06758a230
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 2024.10.1069-dev
+    versionCode: 1069
+    commit: 0eca97634bb5861bbb36e51d988b08a4f0458e84
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 2024.11.1070
+    versionCode: 1070
+    commit: 29093742357363397150e158efe8012490ba5bd9
+    subdir: app
+    gradle:
+      - free
+    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 2024.11.1071-dev
+    versionCode: 1071
+    commit: 3a0b11b5c5c17cc530028246c21b08554ad585c8
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - free
+    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 2024.11.1073
+    versionCode: 1073
+    commit: e5766e1463cbfcc2d45107fdaac7df6adccb313a
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - free
+    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
+
 AllowedAPKSigningKeys: 67437375a161f420219ddff1f281df292ccb5f057aa0caf56568a782b2816465
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2024.10.1063
-CurrentVersionCode: 1063
+CurrentVersion: 2024.11.1073
+CurrentVersionCode: 1073
