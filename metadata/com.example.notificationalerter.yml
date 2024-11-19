@@ -8,7 +8,7 @@ SourceCode: https://github.com/lightningcpu/Notification-Alerter
 IssueTracker: https://github.com/lightningcpu/Notification-Alerter/issues
 Changelog: https://github.com/lightningcpu/Notification-Alerter/releases
 
-AutoName: Notification Alerter
+AutoName: Alertly
 
 RepoType: git
 Repo: https://github.com/lightningcpu/Notification-Alerter.git
@@ -22,9 +22,16 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.1.0
+    versionCode: 2
+    commit: 9e0f5bbe8c443d4c02777615ee10eec20ad66029
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: e3ff64656bbd62da61ce4b8b1eda49b98dd0029ad5413dba625d2a89c809261a
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.1
-CurrentVersionCode: 1
+CurrentVersion: 1.1.0
+CurrentVersionCode: 2
