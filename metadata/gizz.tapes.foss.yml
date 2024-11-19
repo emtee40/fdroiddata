@@ -9,20 +9,18 @@ AutoName: Gizz Tapes
 
 RepoType: git
 Repo: https://github.com/Ghost-Applications/gizz-tapes.git
+Binaries: https://github.com/Ghost-Applications/gizz-tapes/releases/download/%v/mobile-foss-release.apk
 
 Builds:
-  - versionName: Converge-Patch1
-    versionCode: 4
-    commit: Converge-Patch1
+  - versionName: Converge
+    versionCode: 5
+    commit: ec622c61b5925abc0dd0e6b9c92e58e354f5106f
     subdir: mobile
     gradle:
       - foss
     prebuild:
-      - sed -i -e 's/-XX:MaxPermSize\S*//' ../gradle.properties
-      - sed -i -e '/firebase/d;/gms/d;/google.services/d' mobile.gradle.kts
-      - sed -i -e '/CrashlyticsExtension/,+2d' mobile.gradle.kts
-      - sed -i -e '/GoogleServicesTask/,+2d' mobile.gradle.kts
-      - sed -i -e '/fullImplementation/d' mobile.gradle.kts
+      - sed -i -e '/firebase/d' -e '/gms/d' -e '/google.services/d' -e '/CrashlyticsExtension/,+2d'
+        -e '/GoogleServicesTask/,+2d' -e '/signingConfig =/d' mobile.gradle.kts
       - sed -i -e '/buildFileName/d' ../{.,buildSrc}/settings.gradle.kts
       - for d in buildSrc mobile networking networking-integration; do mv ../$d/$d.gradle.kts
         ../$d/build.gradle.kts; done
@@ -31,5 +29,7 @@ AllowedAPKSigningKeys: cd9a8e7dfa19d4c9a23e8a46513d5b7153e3a0728de6afefa2837b853
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: Converge-Patch1
+UpdateCheckData: buildSrc/src/main/kotlin/build-number.gradle.kts|defaultValue = "(\d+)"|mobile/mobile.gradle.kts|versionName
+  = "(.+)"
+CurrentVersion: Converge
 CurrentVersionCode: 5
