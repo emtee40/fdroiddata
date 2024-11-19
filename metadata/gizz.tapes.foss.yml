@@ -12,7 +12,7 @@ Repo: https://github.com/Ghost-Applications/gizz-tapes.git
 Binaries: https://github.com/Ghost-Applications/gizz-tapes/releases/download/%v/mobile-foss-release.apk
 
 Builds:
-  - versionName: Converge
+  - versionName: Converge-Patch1
     versionCode: 5
     commit: ec622c61b5925abc0dd0e6b9c92e58e354f5106f
     subdir: mobile
@@ -31,5 +31,5 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: buildSrc/src/main/kotlin/build-number.gradle.kts|defaultValue = "(\d+)"|mobile/mobile.gradle.kts|versionName
   = "(.+)"
-CurrentVersion: Converge
+CurrentVersion: Converge-Patch1
 CurrentVersionCode: 5
