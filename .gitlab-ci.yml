@@ -54,19 +54,6 @@ variables:
         export SOURCE_REF="${CI_COMMIT_SHA}"
     fi;
 
-.get_changed_builds: &get_changed_builds
-  - *get_target_source_refs
-  - echo $TARGET_REF
-  - |
-    for f in $(git diff --name-only --diff-filter=d "${TARGET_REF}...${SOURCE_REF}" -- metadata/*.yml) $(git diff --name-only --diff-filter=d "${TARGET_REF}...${SOURCE_REF}" -- metadata/*/signatures); do
-        diff=$(git diff "${TARGET_REF}...${SOURCE_REF}" -- "$f")
-        echo "$diff"
-        test $(echo "$diff" | perl -wnle '/^[+-](( +-)|( *\w))/ and print' | grep -v -c '^+ *disable:') = 0 && continue
-        echo "$diff" | grep -E '^\+ *(NoSourceSince|Disabled):' && continue
-        appid=$(echo "$f" | sed -E -n 's,^metadata/([^/][^/]*)(\.yml|/signatures/.*),\1,p')
-        export CHANGED="$CHANGED $appid"
-    done
-
 .get_changed_apps: &get_changed_apps
   - *get_target_source_refs
   - echo $TARGET_REF
@@ -104,7 +91,7 @@ checkupdates:
   script:
     - |
       set -xe
-    - *get_changed_builds
+    - *get_changed_apps
     - |
       if [ -n "$CHANGED" ]; then
         fdroid checkupdates --auto -v $CHANGED
@@ -295,7 +282,7 @@ fdroid build:
     ANDROID_SDK_ROOT: ${ANDROID_HOME}
   script:
     - test -d build || mkdir build
-    - *get_changed_builds
+    - *get_changed_apps
     - test -n "$(printf "$CHANGED" | tr -d '[:space:]')"
           || { echo "no packages need processing, exiting"; exit 0; }
 

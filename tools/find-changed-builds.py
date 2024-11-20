@@ -10,6 +10,15 @@ from colorama import Fore, Style
 changed = set(os.getenv('CHANGED').split(' '))
 changed.discard('')
 
+
+def build_changed(old, new):
+    if "antifeatures" in old:
+        old.pop("antifeatures")
+    if "antifeatures" in new:
+        new.pop("antifeatures")
+    return old != new
+
+
 target_ref = os.getenv('TARGET_REF')
 source_ref = os.getenv('SOURCE_REF')
 
@@ -17,7 +26,9 @@ for appid in sorted(changed):
     metadata_file = 'metadata/{appid}.yml'.format(**locals())
     diff = subprocess.check_output(
         (
-            'git diff --no-color --diff-filter=d {target_ref}...{source_ref} -- {metadata_file}' .format(**locals())
+            'git diff --no-color --diff-filter=d {target_ref}...{source_ref} -- {metadata_file}'.format(
+                **locals()
+            )
         ).split(' ')
     )
 
@@ -58,7 +69,7 @@ for appid in sorted(changed):
             if vc not in previous_builds:
                 to_build.append(vc)
                 continue
-            if build != previous_builds[vc]:
+            if build_changed(build, previous_builds[vc]):
                 to_build.append(vc)
     else:
         # this is a brand new metadata file
@@ -82,7 +93,9 @@ for appid in sorted(changed):
     signatures_dir = 'metadata/%s/signatures/' % appid
     diff = subprocess.check_output(
         (
-            'git diff --name-only --no-color --diff-filter=d {target_ref}...{source_ref} -- {signatures_dir}'.format(**locals())
+            'git diff --name-only --no-color --diff-filter=d {target_ref}...{source_ref} -- {signatures_dir}'.format(
+                **locals()
+            )
         ).split(' ')
     )
     for f in diff.split():
