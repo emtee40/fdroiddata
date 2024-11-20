@@ -471,7 +471,15 @@ Builds:
       - yes
     prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
 
+  - versionName: 0.26.0
+    versionCode: 58
+    commit: d337b3baedcab5fbbbac90f90516467f48aad362
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e '/isEnable/s/true/false/' build.gradle.kts
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*[0-9]$
-CurrentVersion: 0.25.2
-CurrentVersionCode: 57
+CurrentVersion: 0.26.0
+CurrentVersionCode: 58
