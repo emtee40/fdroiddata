@@ -12,8 +12,8 @@ Repo: https://github.com/Ghost-Applications/gizz-tapes.git
 Binaries: https://github.com/Ghost-Applications/gizz-tapes/releases/download/%v/mobile-foss-release.apk
 
 Builds:
-  - versionName: Converge-Patch1
-    versionCode: 5
+  - versionName: 'Dawn of Eternal Night'
+    versionCode: 6
     commit: 2765aba588c2fbf87b8388999e05fa6e468aa649
     subdir: mobile
     gradle:
@@ -24,6 +24,7 @@ Builds:
       - sed -i -e '/buildFileName/d' ../{.,buildSrc}/settings.gradle.kts
       - for d in buildSrc mobile networking networking-integration; do mv ../$d/$d.gradle.kts
         ../$d/build.gradle.kts; done
+      - sed -i -e 's/-XX:MaxPermSize=256m//' ../gradle.properties
 
 AllowedAPKSigningKeys: cd9a8e7dfa19d4c9a23e8a46513d5b7153e3a0728de6afefa2837b8536b01e51
 
@@ -31,5 +32,5 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: buildSrc/src/main/kotlin/build-number.gradle.kts|defaultValue = "(\d+)"|mobile/mobile.gradle.kts|versionName
   = "(.+)"
-CurrentVersion: Converge-Patch1
-CurrentVersionCode: 5
+CurrentVersion: 'Dawn of Eternal Night'
+CurrentVersionCode: 6
