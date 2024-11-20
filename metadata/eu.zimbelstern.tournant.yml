@@ -159,9 +159,17 @@ Builds:
       - full
     prebuild: sed -i -e '/relativePath/s|app/||' build.gradle.kts
 
+  - versionName: 2.9.0
+    versionCode: 27
+    commit: 8330bb00ad687d3040f2f0c21d2845dcbd87ea6d
+    subdir: app
+    gradle:
+      - full
+    prebuild: sed -i -e '/relativePath/s|app/||' build.gradle.kts
+
 AllowedAPKSigningKeys: a23db5fd8aab1b88051125e127600577e3dcbc80ff73ddfc4a8d245b1765c13f
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.8.1
-CurrentVersionCode: 26
+CurrentVersion: 2.9.0
+CurrentVersionCode: 27
