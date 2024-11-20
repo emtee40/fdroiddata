@@ -12,7 +12,7 @@ Repo: https://github.com/Ghost-Applications/gizz-tapes.git
 Binaries: https://github.com/Ghost-Applications/gizz-tapes/releases/download/%v/mobile-foss-release.apk
 
 Builds:
-  - versionName: 'Dawn of Eternal Night'
+  - versionName: Dawn of Eternal Night
     versionCode: 6
     commit: 2765aba588c2fbf87b8388999e05fa6e468aa649
     subdir: mobile
@@ -32,5 +32,5 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: buildSrc/src/main/kotlin/build-number.gradle.kts|defaultValue = "(\d+)"|mobile/mobile.gradle.kts|versionName
   = "(.+)"
-CurrentVersion: 'Dawn of Eternal Night'
+CurrentVersion: Dawn of Eternal Night
 CurrentVersionCode: 6
