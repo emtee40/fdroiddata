@@ -320,9 +320,9 @@ Builds:
       - ./flutterw build apk
     ndk: r21
 
-  - versionName: 0.6.24
-    versionCode: 47
-    commit: a7f823566182656707caba1ce7fe1a321a5db744
+  - versionName: 0.6.25
+    versionCode: 49
+    commit: 62c83fbbd91001b428363b8097e21a814e01ce78
     submodules: true
     output: build/app/outputs/flutter-apk/app-release.apk
     rm:
@@ -345,5 +345,5 @@ Builds:
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*[0-9]$
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 0.6.24
-CurrentVersionCode: 47
+CurrentVersion: 0.6.25
+CurrentVersionCode: 49
