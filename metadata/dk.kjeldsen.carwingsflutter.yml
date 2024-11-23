@@ -353,9 +353,9 @@ Builds:
       - $$flutter$$/bin/flutter build apk
     ndk: r21
 
-  - versionName: 2.4.1
-    versionCode: 212
-    commit: a579fc5968f319addb7b69ea42c76eaa6fafc462
+  - versionName: 2.4.3
+    versionCode: 213
+    commit: 9afbdfa1a7bc6c90aa20342a6ed5092b7c21eba7
     output: build/app/outputs/flutter-apk/app-release.apk
     srclibs:
       - flutter@3.0.5
@@ -366,5 +366,5 @@ Builds:
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^f-droid
-CurrentVersion: 2.4.1
-CurrentVersionCode: 212
+CurrentVersion: 2.4.3
+CurrentVersionCode: 213
