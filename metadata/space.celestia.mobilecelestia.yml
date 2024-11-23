@@ -409,7 +409,7 @@ Builds:
 
   - versionName: 1.7.10
     versionCode: 580
-    commit: f678357fcd43a5132037ebd9cab50d45544cd0cc
+    commit: 59cad59534b194ce910ea4e2c20732f7baeb3b68
     timeout: 30000
     subdir: app
     sudo:
