@@ -19,9 +19,17 @@ Builds:
       - yes
     output: build/outputs/apk/release/app-universal-release-unsigned.apk
 
+  - versionName: 1.2.0
+    versionCode: 8
+    commit: 5f27c464bf06ae50ae9ca93ac96c2daef1ccba95
+    subdir: app
+    gradle:
+      - yes
+    output: build/outputs/apk/release/app-universal-release-unsigned.apk
+
 AllowedAPKSigningKeys: 999e27d8ee66a67319db6827e0f8549c37624601b86f0108c6970413279ef1d4
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.1.3
-CurrentVersionCode: 6
+CurrentVersion: 1.2.0
+CurrentVersionCode: 8
