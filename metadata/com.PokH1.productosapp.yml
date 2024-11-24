@@ -7,9 +7,10 @@ SourceCode: https://github.com/PokH1/Productos_app
 IssueTracker: https://github.com/PokH1/Productos_app/issues
 Changelog: https://github.com/PokH1/Productos_app/releases
 Name: Productos App
-Summary: Una aplicación para gestionar productos
+Summary: Una aplicación para gestionar productos.
 Description: |
-  Productos App es una aplicación de código abierto que te permite gestionar inventarios y productos de forma eficiente. Incluye funciones para añadir, editar, y eliminar productos.
+  Productos App es una aplicación de código abierto que te permite gestionar inventarios y productos de forma eficiente. 
+  Incluye funciones para agregar, editar y eliminar productos.
 RepoType: git
 Repo: https://github.com/PokH1/Productos_app.git
 
