@@ -1,0 +1,22 @@
+License: GPL-3.0-or-later
+Categories:
+  - Utility
+AuthorName: Rodrigo Hernández
+WebSite: https://example.com
+SourceCode: https://github.com/PokH1/Productos_app
+IssueTracker: https://github.com/PokH1/Productos_app/issues
+Changelog: https://github.com/PokH1/Productos_app/releases
+Name: Productos App
+Summary: Una aplicación para gestionar productos
+Description: |
+  Productos App es una aplicación de código abierto que te permite gestionar inventarios y productos de forma eficiente. Incluye funciones para añadir, editar, y eliminar productos.
+RepoType: git
+Repo: https://github.com/PokH1/Productos_app.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: v1.0.0
+    subdir: app
+    gradle:
+      - yes
