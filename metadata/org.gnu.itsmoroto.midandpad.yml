@@ -1,9 +1,11 @@
+---
 License: GPL-3.0-or-later
 SourceCode: https://github.com/pacoandres/midandpad
 IssueTracker: https://github.com/pacoandres/midandpad/issues
 
 AutoName: Midandpad
-
+Categories:
+  - Multimedia
 RepoType: git
 Repo: https://github.com/pacoandres/midandpad
 
@@ -21,3 +23,5 @@ UpdateCheckMode: Tags
 CurrentVersion: '1.2'
 CurrentVersionCode: 4
 AuthorWebSite: https://github.com/pacoandres
+Binaries: https://github.com/pacoandres/midandpad/releases/download/v1.2r/midandpad-v1.2.apk
+AllowedAPKSigningKeys: 379b70471e9378c91d4f7de286ff8f97d1c639d6ac63a3e6b9dfb856c3bde2db
