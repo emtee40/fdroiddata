@@ -1,1 +1,0 @@
-Un controlador MIDI para Android.
