@@ -99,10 +99,17 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '1.50'
+    versionCode: 46
+    commit: 8559a4e98a1b2df26feb7c47c0fc72669dcc35a4
+    subdir: presentation
+    gradle:
+      - production
+
 AllowedAPKSigningKeys: 7d540aebb849a4ad9237dba1ace4f6dc069e91b8cd140496d2206fb3abd9366b
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: gradle.properties|versionCode=(\d+)|.|versionName=(.*)
-CurrentVersion: '1.35'
-CurrentVersionCode: 45
+CurrentVersion: '1.50'
+CurrentVersionCode: 46
