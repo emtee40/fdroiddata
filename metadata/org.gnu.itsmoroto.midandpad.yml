@@ -14,7 +14,7 @@ Binaries: https://github.com/pacoandres/midandpad/releases/download/v%vr/midandp
 Builds:
   - versionName: '1.2'
     versionCode: 4
-    commit: 44722ae4ad4e3784b9c64d2f4279a2c15ca3e20d
+    commit: a5e2e9f3c8aa26ca87e71928adeda41f7c669b33
     subdir: app
     gradle:
       - yes
