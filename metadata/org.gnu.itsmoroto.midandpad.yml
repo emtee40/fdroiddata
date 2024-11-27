@@ -9,12 +9,12 @@ AutoName: Midandpad
 
 RepoType: git
 Repo: https://github.com/pacoandres/midandpad.git
-Binaries: https://github.com/pacoandres/midandpad/releases/download/v%vr/midandpad-v%v.apk
+Binaries: https://github.com/pacoandres/midandpad/releases/download/v1.2.1r/midandpad-v1.2.1.apk
 
 Builds:
   - versionName: '1.2'
     versionCode: 4
-    commit: a5e2e9f3c8aa26ca87e71928adeda41f7c669b33
+    commit: 743333f044d0f1289b5e40b0295a3f9cc97cec08
     subdir: app
     gradle:
       - yes
