@@ -1,0 +1,27 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Rely on Google Maps.
+Categories:
+  - Navigation
+License: Apache-2.0
+AuthorName: swanti
+SourceCode: https://github.com/santiwanti/GMaps2Osm
+IssueTracker: https://github.com/santiwanti/GMaps2Osm/issues
+
+AutoName: GMaps 2 Osm
+
+RepoType: git
+Repo: https://github.com/santiwanti/GMaps2Osm
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0.0
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.0'
+CurrentVersionCode: 1
