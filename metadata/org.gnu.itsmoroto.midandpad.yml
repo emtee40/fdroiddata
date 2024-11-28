@@ -9,7 +9,8 @@ AutoName: Midandpad
 
 RepoType: git
 Repo: https://github.com/pacoandres/midandpad.git
-Binaries: https://github.com/pacoandres/midandpad/releases/download/v1.2.1r/midandpad-v1.2.1.apk
+Binaries: 
+  https://github.com/pacoandres/midandpad/releases/download/v1.2.1r/midandpad-v1.2.1.apk
 
 Builds:
   - versionName: '1.2'
@@ -25,4 +26,3 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags
 CurrentVersion: '1.2'
 CurrentVersionCode: 4
-
