@@ -1,0 +1,28 @@
+Categories:
+  - Phone & SMS
+License: AGPL-3.0-only
+AuthorName: Vinetos
+SourceCode: https://github.com/Vinetos/Tranquille
+IssueTracker: https://github.com/Vinetos/Tranquille/issues
+Changelog: https://github.com/Vinetos/Tranquille/releases
+
+AutoName: Tranquille
+
+RepoType: git
+Repo: https://github.com/Vinetos/Tranquille.git
+Binaries: https://github.com/Vinetos/Tranquille/releases/download/%v/app-release.apk
+
+Builds:
+  - versionName: 0.0.1
+    versionCode: 1
+    commit: dd300c65131ee669e39e03a47edf98608de806e2
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: b71847c775f0c8b3e05c0084494dd52fc8059b3ba7a53b15570eeeebdd752916
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags .*[0-9]$
+CurrentVersion: 0.0.1
+CurrentVersionCode: 1
