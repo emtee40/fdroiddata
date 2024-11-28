@@ -23,8 +23,8 @@ Binaries: https://github.com/picguard/picguard/releases/download/v%v+%c/PicGuard
 
 Builds:
   - versionName: 1.0.7
-    versionCode: 428
-    commit: fbc909581d98ef092dd6ca64265b9c69e2dae515
+    versionCode: 429
+    commit: cab034d98f76d47eca2f670cd4ebe4eb73a4ba17
     sudo:
       - mkdir -p /home/runner
       - chown vagrant /home/runner
@@ -61,6 +61,7 @@ Builds:
       - pushd $repo/picguard
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --no-tree-shake-icons --target lib/main_free.dart
+        --dart-define SENTRY_DSN="https://ce37ccf14474a85b378d5c8b1ae80a67@o4507226640285696.ingest.us.sentry.io/4507226645397509"
         --flavor freeProduction
       - popd
       - mv $repo/picguard com.kjxbyz.picguard
@@ -71,4 +72,4 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags .*[0-9]$
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
 CurrentVersion: 1.0.7
-CurrentVersionCode: 428
+CurrentVersionCode: 429
