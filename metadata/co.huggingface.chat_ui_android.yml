@@ -1,0 +1,29 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Depends on huggingface.co server
+Categories:
+  - Internet
+License: Apache-2.0
+AuthorName: Hugging Face, Inc.
+AuthorEmail: kevin@huggingface.co
+WebSite: https://huggingface.co/chat
+SourceCode: https://github.com/huggingface/chat-ui-android
+IssueTracker: https://github.com/huggingface/chat-ui-android/issues
+
+AutoName: HuggingChat
+
+RepoType: git
+Repo: https://github.com/huggingface/chat-ui-android.git
+
+Builds:
+  - versionName: '1.4'
+    versionCode: 5
+    commit: fb3ac37ff7271e4855d65c4c5cb3897fac13aa04
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.4'
+CurrentVersionCode: 5
