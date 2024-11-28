@@ -1,6 +1,6 @@
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-or-later
 AuthorName: Framasoft
 AuthorWebSite: https://framasoft.org/
@@ -15,7 +15,7 @@ RepoType: git
 Repo: https://framagit.org/framasoft/peertube/mobile-application.git
 
 Builds:
-  - versionName: "0.4.2"
+  - versionName: 0.4.2
     versionCode: 12
     commit: v0.4.2
     output: build/app/outputs/flutter-apk/app-release.apk
@@ -38,10 +38,11 @@ Builds:
       - .pub-cache
     build:
       - export PUB_CACHE=$(pwd)/.pub-cache
-      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64" --dart-define-from-file=env-stable.json --flavor=stable --dart-define=buildType=fdroid
+      - .flutter/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
+        --dart-define-from-file=env-stable.json --flavor=stable --dart-define=buildType=fdroid
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: "0.4.2"
+CurrentVersion: 0.4.2
 CurrentVersionCode: 12
