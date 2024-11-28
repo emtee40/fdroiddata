@@ -1,3 +1,6 @@
+AntiFeatures:
+  Tracking:
+    en-US: Sentry is enabled by default
 Categories:
   - Graphics
   - Multimedia
