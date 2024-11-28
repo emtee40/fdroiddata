@@ -18,7 +18,7 @@ Builds:
   - versionName: 0.4.2
     versionCode: 12
     commit: v0.4.2
-    output: build/app/outputs/flutter-apk/app-release.apk
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-stable-release.apk
     srclibs:
       - flutter@stable
     rm:
