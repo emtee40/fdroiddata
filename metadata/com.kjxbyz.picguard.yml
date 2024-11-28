@@ -16,6 +16,7 @@ AutoName: PicGuard
 
 RepoType: git
 Repo: https://github.com/picguard/picguard.git
+Binaries: https://github.com/picguard/picguard/releases/download/v%v+%c/PicGuard_%v+%c-free.apk
 
 Builds:
   - versionName: 1.0.7
@@ -25,7 +26,6 @@ Builds:
       - mkdir -p /home/runner
       - chown vagrant /home/runner
     output: build/app/outputs/flutter-apk/app-freeproduction-release.apk
-    binary: https://github.com/picguard/picguard/releases/download/v%v+%c/PicGuard_%v+%c-free.apk
     srclibs:
       - flutter@stable
     rm:
