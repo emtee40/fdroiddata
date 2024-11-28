@@ -12,7 +12,7 @@ Repo: https://github.com/pacoandres/midandpad.git
 Binaries: https://github.com/pacoandres/midandpad/releases/download/v%v/midandpad-v%v.apk
 
 Builds:
-  - versionName: '1.2.1'
+  - versionName: 1.2.1
     versionCode: 4
     commit: c288afe06bc4ca0961b13ce134ea58f7cf03cc8e
     subdir: app
@@ -23,5 +23,5 @@ AllowedAPKSigningKeys: 379b70471e9378c91d4f7de286ff8f97d1c639d6ac63a3e6b9dfb856c
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '1.2'
+CurrentVersion: 1.2.1
 CurrentVersionCode: 4
