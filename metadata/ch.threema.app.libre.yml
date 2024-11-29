@@ -243,6 +243,7 @@ Builds:
 
   - versionName: 5.6.2l
     versionCode: 1014
+    disable: not for F-Droid
     commit: bdc65f240bf1d2e9c41aa9bba6296d9b5c237180
     subdir: app
     gradle:
