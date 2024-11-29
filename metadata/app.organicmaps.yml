@@ -1940,6 +1940,7 @@ Builds:
       - cp ../../private_default.h ../../private.h
     scanignore:
       - data/*.bin
+      - android/app/build.gradle
     scandelete:
       - 3party
       - package.json
