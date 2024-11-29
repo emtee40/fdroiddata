@@ -9,8 +9,6 @@ IssueTracker: https://github.com/Sanmeet007/logger/issues
 Donate: https://github.com/sponsors/Sanmeet007
 
 AutoName: logger
-Description: Logger is a Flutter-based Android app that enables you to view and export
-  call logs in CSV or JSON format and perform lightweight on-device analysis.
 
 RepoType: git
 Repo: https://github.com/Sanmeet007/logger
