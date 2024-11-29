@@ -177,7 +177,6 @@ Builds:
   - versionName: 1.4.5
     versionCode: 342
     commit: 144fd82508c7a3c17a44f19997503caa80fa206f
-    submodules: true
     output: build/app/outputs/flutter-apk/app-release.apk
     rm:
       - .github
