@@ -1932,7 +1932,8 @@ Builds:
       - xcode
     prebuild:
       - sdkmanager 'cmake;3.30.3'
-      - sed -i -e '/com.google.firebase/d; /gms/d' build.gradle
+      - sed -i -e '/com.google.firebase/d; /gms.google-services/d; /android.gms:play-services/d'
+        build.gradle
       - touch secure.properties
       - echo '<?xml version="1.0" encoding="utf-8"?><network-security-config/>' >
         src/main/res/xml/network_security_config.xml
