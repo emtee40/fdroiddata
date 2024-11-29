@@ -220,7 +220,35 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.0.2
+    versionCode: 32
+    commit: 997eb7312b23a7161e7ed269b93ba3c11e08f324
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.3
+    versionCode: 33
+    commit: 3ccb5273d08254777ee40e22d2d308e176b1634a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.4
+    versionCode: 34
+    commit: 38fe45facd84e50a598a16245ee94a61f99220e0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.5
+    versionCode: 35
+    commit: c27992ff92c43bfc1a7b4420ec8d108ab7bd8e44
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.1
-CurrentVersionCode: 31
+CurrentVersion: 2.0.5
+CurrentVersionCode: 35

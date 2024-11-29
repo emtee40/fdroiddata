@@ -644,9 +644,25 @@ Builds:
       - generic
     prebuild: sed -i -e '/work-firebase/d' build.gradle
 
-  - versionName: 20.0.3
-    versionCode: 200000390
-    commit: 2e2377b5447958ce67f7f6a185579b76a5d54c23
+  - versionName: 20.0.4
+    versionCode: 200000490
+    commit: 47433ea752472ebccb695a06c08866e5211b2443
+    subdir: app
+    gradle:
+      - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
+
+  - versionName: 20.0.5
+    versionCode: 200000590
+    commit: 0ff4adbadd4cd8cc80977a91456c50faa7813d31
+    subdir: app
+    gradle:
+      - generic
+    prebuild: sed -i -e '/work-firebase/d' build.gradle
+
+  - versionName: 20.0.6
+    versionCode: 200000690
+    commit: 7f07b3e7cde152efae802e58e110a5a12032243f
     subdir: app
     gradle:
       - generic
@@ -654,5 +670,5 @@ Builds:
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9]+\.[0-9]+\.[0-9]+$
-CurrentVersion: 20.0.3
-CurrentVersionCode: 200000390
+CurrentVersion: 20.0.6
+CurrentVersionCode: 200000690

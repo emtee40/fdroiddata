@@ -6180,9 +6180,63 @@ Builds:
     rm:
       - desktop
 
+  - versionName: 4.14.6-patch1
+    versionCode: 1071
+    commit: 1599db17403161b0894361da8260bc701b2aa066
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+
+  - versionName: 4.14.7
+    versionCode: 1072
+    commit: f5b07277323054ebe4e11d612086a43641277b07
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+
+  - versionName: 4.14.8
+    versionCode: 1073
+    commit: e228572c4f40df8a3465753a428ea7fd7647fa2f
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+
+  - versionName: 4.14.9
+    versionCode: 1074
+    commit: ac6fbad0685e729d1e75686e0fcad408ca978d19
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+
+  - versionName: 4.14.10
+    versionCode: 1075
+    commit: 62480c5d92e41c35059984bcff72e0c8edfe4823
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+
+  - versionName: 4.14.11
+    versionCode: 1076
+    commit: 306907568d8027a0afa8a35c1abe59cb73bbeed7
+    subdir: android
+    gradle:
+      - yes
+    rm:
+      - desktop
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: buildSrc/src/main/kotlin/BuildConfig.kt|appCodeNumber = (\d+)|.|appVersion
   = "(.*)"
-CurrentVersion: 4.14.5-patch1
-CurrentVersionCode: 1069
+CurrentVersion: 4.14.11
+CurrentVersionCode: 1076

@@ -1027,7 +1027,19 @@ Builds:
     gradle:
       - yes
 
+  - versionName: v4.14.1
+    versionCode: 5909
+    commit: 5ff91a98f4b029f1efd7bd583fec25ac0943996d
+    gradle:
+      - yes
+
+  - versionName: v4.14.2
+    versionCode: 5917
+    commit: d9de56be336b62f52230d459f1e2db553e11e029
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: v4.14.0
-CurrentVersionCode: 5889
+CurrentVersion: v4.14.2
+CurrentVersionCode: 5917

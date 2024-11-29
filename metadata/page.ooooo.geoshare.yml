@@ -1,0 +1,56 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Connects to Google servers to decode links.
+Categories:
+  - Internet
+  - Navigation
+License: GPL-3.0-or-later
+AuthorName: Jakub Valenta
+AuthorWebSite: https://www.jakubvalenta.cz/
+WebSite: https://geoshare.ooooo.page/
+SourceCode: https://github.com/jakubvalenta/geoshare
+IssueTracker: https://github.com/jakubvalenta/geoshare/issues
+Changelog: https://github.com/jakubvalenta/geoshare/releases
+Donate: https://ko-fi.com/jakubvalenta
+
+AutoName: Geo Share
+
+RepoType: git
+Repo: https://github.com/jakubvalenta/geoshare.git
+Binaries: https://github.com/jakubvalenta/geoshare/releases/download/v%v/page.ooooo.geoshare.apk
+
+Builds:
+  - versionName: 1.1.1
+    versionCode: 4
+    commit: 79af56d26c7a7f8b311449cc3a0b555ff97823c6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.2.0
+    versionCode: 5
+    commit: 4178447fed73dd864496ce0b16973c99abea1f21
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.3.0
+    versionCode: 6
+    commit: 4aafcf794559ea21b7b52bf48a9b6f22c288f87f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.4.0
+    versionCode: 7
+    commit: 7d0b52669904b25ec3b446aa8d0dfb99f552b947
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 1b27b17a9df05321a93a47df31ed0d6645ebe55d0e89908157d71c1032d17c10
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.4.0
+CurrentVersionCode: 7

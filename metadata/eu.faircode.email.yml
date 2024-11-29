@@ -7812,8 +7812,30 @@ Builds:
     scandelete:
       - app/lib
 
+  - versionName: '1.2248'
+    versionCode: 2248
+    commit: ad118b9455955184ebe4bab7bc8005b97179934f
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
+  - versionName: '1.2249'
+    versionCode: 2249
+    commit: e0826e65eb26a7438d727a0d53284f16300a5064
+    subdir: app
+    submodules: true
+    gradle:
+      - fdroid
+    prebuild: sdkmanager 'cmake;3.22.1'
+    scandelete:
+      - app/lib
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: app/build.gradle|getVersionCode.*return (\d+)||([\d.]+)
-CurrentVersion: '1.2246'
-CurrentVersionCode: 2246
+CurrentVersion: '1.2249'
+CurrentVersionCode: 2249

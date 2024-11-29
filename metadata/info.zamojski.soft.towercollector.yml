@@ -433,7 +433,25 @@ Builds:
       - fdroid
     prebuild: sed -i -e '/signingConfigs/d' build.gradle
 
+  - versionName: 2.15.1
+    versionCode: 2150112
+    commit: 5f232e3ef271b0c45646ecdc3b9cc553c2501d35
+    subdir: app
+    gradle:
+      - production
+      - fdroid
+    prebuild: sed -i -e '/signingConfigs/d' build.gradle
+
+  - versionName: 2.15.3
+    versionCode: 2150314
+    commit: 079522049daec4455ceb683eade7a468604152bb
+    subdir: app
+    gradle:
+      - production
+      - fdroid
+    prebuild: sed -i -e '/signingConfigs/d' build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.14.6
-CurrentVersionCode: 2140610
+CurrentVersion: 2.15.3
+CurrentVersionCode: 2150314

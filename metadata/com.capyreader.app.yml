@@ -238,19 +238,6 @@ Builds:
       - free
     prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
 
-  - versionName: 2024.11.1071-dev
-    versionCode: 1071
-    commit: 3a0b11b5c5c17cc530028246c21b08554ad585c8
-    subdir: app
-    sudo:
-      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
-      - apt-get update
-      - apt-get install -y -t trixie openjdk-21-jdk-headless
-      - update-alternatives --auto java
-    gradle:
-      - free
-    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
-
   - versionName: 2024.11.1073
     versionCode: 1073
     commit: e5766e1463cbfcc2d45107fdaac7df6adccb313a
@@ -268,9 +255,79 @@ Builds:
       - free
     prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
 
+  - versionName: 2024.11.1074-dev
+    versionCode: 1074
+    commit: b94443db0d720fe802148031f4141a7a8ae073f9
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - free
+    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 2024.11.1075-dev
+    versionCode: 1075
+    disable: crashing
+    commit: b0fbe9cd08a440934895f16cf78b076b061b58e8
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - free
+    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 2024.11.1076-dev
+    versionCode: 1076
+    disable: crashing
+    commit: 8eb4ad2b29bf1843f4eac7a9853624ae55349f71
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - free
+    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
+
+  - versionName: 2024.11.1077
+    versionCode: 1077
+    commit: 7d4065664567e5105149fcac32302f8adbc1ccb7
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+      - export CPUS_MAX=6
+      - export CPUS=$(getconf _NPROCESSORS_ONLN)
+      - for (( c=$CPUS_MAX; c<$CPUS; c++ )) ; do echo 0 > /sys/devices/system/cpu/cpu$c/online
+        ; done
+    gradle:
+      - free
+    prebuild: sed -i -e '/firebase/d' -e '/gms.google/d' build.gradle.kts ../build.gradle.kts
+
 AllowedAPKSigningKeys: 67437375a161f420219ddff1f281df292ccb5f057aa0caf56568a782b2816465
 
 AutoUpdateMode: Version
-UpdateCheckMode: Tags
-CurrentVersion: 2024.11.1073
-CurrentVersionCode: 1073
+UpdateCheckMode: Tags .*[0-9]$
+CurrentVersion: 2024.11.1077
+CurrentVersionCode: 1077
