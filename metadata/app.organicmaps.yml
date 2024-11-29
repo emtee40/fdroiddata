@@ -1949,6 +1949,9 @@ Builds:
       - ./bootstrap.sh
       - ./b2 headers
 
+MaintainerNotes: scanner might detect 'com/google/android/gms/location' and more from
+  'org.microg.gms:play-services-location`
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*android$
 UpdateCheckData: android/app/src/fdroid/play/version.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
