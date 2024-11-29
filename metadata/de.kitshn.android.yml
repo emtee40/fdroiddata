@@ -83,7 +83,7 @@ Builds:
 
   - versionName: 1.0.0-alpha.12.1
     versionCode: 1121
-    commit: d00a4825f80acc05932fcac85d35a87fce1440b9
+    commit: bf7e744e43bfb1d17de4f2e133649c701e7fc7e3
     subdir: app
     gradle:
       - yes
