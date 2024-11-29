@@ -3085,7 +3085,7 @@ Builds:
       - apt-get update
       - apt-get install -y gcc-multilib libc-dev make automake pkg-config libtool
         nasm python3-jsonschema wget meson python3-jinja2 zip
-    output: build/app/outputs/apk/fdroid/release/app-fdroid-release.apk
+    output: build/app/outputs/flutter-apk/app-fdroid-release.apk
     srclibs:
       - libsodium@ee009287afd480b60a9a4d75b19afdc0f705e9d9
       - transistor-background-fetch@ca8d2f7a9cf1880dfaf9bcb2c2176fab19e0b124
