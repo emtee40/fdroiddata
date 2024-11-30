@@ -11,15 +11,15 @@ RepoType: git
 Repo: https://github.com/Snd-R/Komelia
 
 Builds:
-  - versionName: 0.11.1
-    versionCode: 1
-    commit: 7694cbffb9ee36f2b44ca081fd186957dcf81c96
+  - versionName: 0.12.0
+    versionCode: 2
+    commit: 1e74fdca3a362bd763804f14b2fb1f8b7b0cf2c4
     subdir: komelia-app
     submodules: true
     sudo:
       - apt-get update
       - apt-get install -y cmake ninja-build pkg-config nasm automake libtool gettext
-        texinfo make libltdl-dev
+        texinfo make libltdl-dev npm
       - apt-get install -y -t bookworm-backports meson
     gradle:
       - yes
@@ -31,9 +31,10 @@ Builds:
       - git apply ./patches/disable_self_updates.patch
       - NDK_PATH=$$NDK$$ ./cmake/android-arm64-build.sh
       - gradle android-arm64_copyJniLibs
+      - gradle buildWebui
     ndk: r26d
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.11.1
-CurrentVersionCode: 1
+CurrentVersion: 0.12.0
+CurrentVersionCode: 2
