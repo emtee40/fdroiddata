@@ -47,7 +47,7 @@ Builds:
       - mv de.keplerchemnitz.kepler_app $repo/kepler_app
       - pushd $repo/kepler_app
       - export PUB_CACHE=$(pwd)/.pub-cache
-      - $$flutter$$/bin/flutter build apk
+      - $$flutter$$/bin/flutter build apk --dart-define=logup_host=logup.vlant.de
       - popd
       - mv $repo/kepler_app de.keplerchemnitz.kepler_app
 
