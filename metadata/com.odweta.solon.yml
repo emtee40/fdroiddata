@@ -30,9 +30,16 @@ Builds:
       - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
         --replace unaligned.apk $$OUT$$
 
+  - versionName: '2.1'
+    versionCode: 204
+    commit: 23607f93b3f6596a34c7795f38ae7d684f73197e
+    subdir: mobile/app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: 10eeb5e45c41df32f9bf3a454d5151a3f9587ada42c1b9695f89e588dd07976c
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.3
-CurrentVersionCode: 203
+CurrentVersion: '2.1'
+CurrentVersionCode: 204
