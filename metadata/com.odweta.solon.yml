@@ -14,7 +14,7 @@ AutoName: Solon
 
 RepoType: git
 Repo: https://gitlab.com/Odweta/solon.git
-Binaries: https://gitlab.com/Odweta/solon/-/raw/master/release/com.odweta.solon_%v.apk
+Binaries: https://gitlab.com/Odweta/solon/-/raw/%v/release/com.odweta.solon_%v.apk
 
 Builds:
   - versionName: 2.0.3
