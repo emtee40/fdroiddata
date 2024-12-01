@@ -58,5 +58,7 @@ Builds:
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
+UpdateCheckData: komelia-app/build.gradle.kts|versionCode = (\d+)|gradle/libs.versions.toml|app-version
+  = "(.+)"
 CurrentVersion: 0.12.1
 CurrentVersionCode: 3
