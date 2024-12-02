@@ -23,5 +23,5 @@ AllowedAPKSigningKeys: 379b70471e9378c91d4f7de286ff8f97d1c639d6ac63a3e6b9dfb856c
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.2.1
-CurrentVersionCode: 4
+CurrentVersion: 1.2.2
+CurrentVersionCode: 5
