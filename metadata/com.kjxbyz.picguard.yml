@@ -1,4 +1,6 @@
 AntiFeatures:
+  NonFreeNet:
+    en-US: Connects to Sentry servers
   Tracking:
     en-US: Sentry is enabled by default
 Categories:
