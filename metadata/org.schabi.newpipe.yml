@@ -962,9 +962,9 @@ Builds:
       - doc
       - app/src/test
 
-  - versionName: 0.27.3
-    versionCode: 1000
-    commit: d298a12533065aa80969bb40985b346be3a1318a
+  - versionName: 0.27.4
+    versionCode: 1001
+    commit: 3847b32c119d4054933393aa0147aad0c5293105
     subdir: app
     gradle:
       - yes
@@ -981,5 +981,5 @@ MaintainerNotes: ACRA is only used via email the users have to send themselves, 
 
 AutoUpdateMode: None
 UpdateCheckMode: Tags .*[0-9]$
-CurrentVersion: 0.27.3
-CurrentVersionCode: 1000
+CurrentVersion: 0.27.4
+CurrentVersionCode: 1001
