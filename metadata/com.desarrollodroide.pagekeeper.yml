@@ -101,7 +101,7 @@ Builds:
 
   - versionName: '1.50'
     versionCode: 46
-    commit: 8559a4e98a1b2df26feb7c47c0fc72669dcc35a4
+    commit: 905450d09ad876a140e6ca0d3c6d715ace8b9a1a
     subdir: presentation
     gradle:
       - production
