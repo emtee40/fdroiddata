@@ -24,7 +24,8 @@ Builds:
     rm:
       - ios
     prebuild:
-      - export flutterVersion=$(sed -n -E "s/^\s*flutter:\s*'?>=([0-9.]+)'?/\1/p" pubspec.yaml)
+      - export flutterVersion=$(sed -n -E 's/.*flutter:\s*">=([0-9.]+)"/\1/p'
+        pubspec.yaml)
       - '[[ $flutterVersion ]] || exit 1'
       - git -C $$flutter$$ checkout -f $flutterVersion
       - export PUB_CACHE=$(pwd)/.pub-cache
@@ -37,6 +38,7 @@ Builds:
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter build apk --release --split-per-abi --target-platform="android-arm64"
         --dart-define-from-file=env-stable.json --flavor=stable --dart-define=buildType=fdroid
+        --build-number=$$VERCODE$$
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
