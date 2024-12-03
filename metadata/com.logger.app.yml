@@ -16,7 +16,7 @@ Repo: https://github.com/Sanmeet007/logger
 Builds:
   - versionName: 2.5.7
     versionCode: 21
-    commit: 6cfbfda70c1f4c4d356381e593361ae5161621db
+    commit: 42eebd20b3325bb705128ef7d61e966f21a4f13d
     output: build/app/outputs/flutter-apk/app-release.apk
     srclibs:
       - flutter@stable
