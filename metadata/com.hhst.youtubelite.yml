@@ -1,11 +1,12 @@
 Categories:
-  - Multimedia
   - Internet
+  - Multimedia
 License: GPL-3.0-or-later
 AuthorEmail: hhstyyds520@gmail.com
 SourceCode: https://github.com/HydeYYHH/YouTube-lite
 IssueTracker: https://github.com/HydeYYHH/YouTube-lite/issues
 
+AutoName: YouTube lite
 
 RepoType: git
 Repo: https://github.com/HydeYYHH/YouTube-lite
