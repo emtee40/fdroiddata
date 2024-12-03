@@ -212,7 +212,7 @@ Builds:
     gradle:
       - foss
       - product
-    prebuild: sed -i -e 's/implementation("\(.*\)", /\1Implementation(/g' build.gradle.kts
+    prebuild: sed -i -e 's/implementation("\(.*\)", /add("\1Implementation", /g' build.gradle.kts
     scandelete:
       - build-logic/convention/build
 
