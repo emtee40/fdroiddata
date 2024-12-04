@@ -1,4 +1,6 @@
-License: Unknown
+Categories:
+  - Time
+License: UNLICENSE
 SourceCode: https://github.com/mario-schmid/maya
 IssueTracker: https://github.com/mario-schmid/maya/issues
 
@@ -31,4 +33,4 @@ AllowedAPKSigningKeys: 99cf06b7835f780da61b7b4a5a1e8d35a0007975198ca518112fc6e29
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 49
+CurrentVersion: v1.2.0
