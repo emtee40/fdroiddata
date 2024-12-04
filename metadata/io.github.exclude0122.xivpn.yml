@@ -12,33 +12,6 @@ Repo: https://github.com/Exclude0122/xivpn.git
 
 Builds:
   - versionName: 1.0.7
-    versionCode: 141
-    commit: v1.0.7
-    subdir: app
-    submodules: true
-    sudo:
-      - apt-get update
-      - apt-get install -y -t bookworm-backports golang-go
-    gradle:
-      - universal
-    binary: https://github.com/Exclude0122/xivpn/releases/download/v%v/xivpn-universal.apk
-    srclibs:
-      - go@go1.23.3
-    build:
-      - pushd $$go$$/src
-      - ./make.bash
-      - popd
-      - export GOPATH=$$go$$
-      - export PATH="$GOPATH/bin:$PATH"
-      - cd ../libxivpn
-      - NDK=$$NDK$$/toolchains/llvm/prebuilt/linux-x86_64 ./build.sh
-      - mkdir ../app/src/main/jniLibs/arm64-v8a
-      - cp libxivpn_arm64.so ../app/src/main/jniLibs/arm64-v8a/libxivpn.so
-      - mkdir ../app/src/main/jniLibs/x86_64
-      - cp libxivpn_x86_64.so ../app/src/main/jniLibs/x86_64/libxivpn.so
-    ndk: r27
-
-  - versionName: 1.0.7
     versionCode: 142
     commit: v1.0.7
     subdir: app
@@ -58,9 +31,7 @@ Builds:
       - export GOPATH=$$go$$
       - export PATH="$GOPATH/bin:$PATH"
       - cd ../libxivpn
-      - NDK=$$NDK$$/toolchains/llvm/prebuilt/linux-x86_64 ./build.sh
-      - mkdir ../app/src/main/jniLibs/arm64-v8a
-      - cp libxivpn_arm64.so ../app/src/main/jniLibs/arm64-v8a/libxivpn.so
+      - NDK=$$NDK$$/toolchains/llvm/prebuilt/linux-x86_64 ./build.sh x86_64
       - mkdir ../app/src/main/jniLibs/x86_64
       - cp libxivpn_x86_64.so ../app/src/main/jniLibs/x86_64/libxivpn.so
     ndk: r27
@@ -85,11 +56,9 @@ Builds:
       - export GOPATH=$$go$$
       - export PATH="$GOPATH/bin:$PATH"
       - cd ../libxivpn
-      - NDK=$$NDK$$/toolchains/llvm/prebuilt/linux-x86_64 ./build.sh
+      - NDK=$$NDK$$/toolchains/llvm/prebuilt/linux-x86_64 ./build.sh arm64
       - mkdir ../app/src/main/jniLibs/arm64-v8a
       - cp libxivpn_arm64.so ../app/src/main/jniLibs/arm64-v8a/libxivpn.so
-      - mkdir ../app/src/main/jniLibs/x86_64
-      - cp libxivpn_x86_64.so ../app/src/main/jniLibs/x86_64/libxivpn.so
     ndk: r27
 
 AllowedAPKSigningKeys: d979100bc8cbb65843f8e52005c429856fd5faaf3d94ed64043bf796abfe9b18
