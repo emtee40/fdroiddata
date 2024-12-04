@@ -10,9 +10,9 @@ RepoType: git
 Repo: https://github.com/Exclude0122/xivpn.git
 
 Builds:
-  - versionName: 1.0.3
-    versionCode: 10
-    commit: master
+  - versionName: 1.0.4
+    versionCode: 11
+    commit: v1.0.4
     sudo:
       - apt-get update
       - apt-get install -y -t bookworm-backports sdkmanager
