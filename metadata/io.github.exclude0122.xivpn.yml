@@ -1,0 +1,27 @@
+Categories:
+  - Connectivity
+  - Internet
+  - Security
+  - System
+License: GPL-3.0-or-later
+SourceCode: https://github.com/Exclude0122/xivpn
+
+RepoType: git
+Repo: https://github.com/Exclude0122/xivpn.git
+
+Builds:
+  - versionName: 1.0.3
+    versionCode: 10
+    commit: master
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bookworm-backports sdkmanager
+      - apt-get install -y build-essential openjdk-17-jdk-headless
+    output: app/build/outputs/apk/universal/fdroid/app-universal-fdroid-unsigned.apk
+    init: git submodule init && git submodule update
+    prebuild: ./prebuild-fdroid.sh
+    build: FDROID_NDK="$$NDK$$" ./build-fdroid.sh
+    ndk: 27.0.12077973
+
+AutoUpdateMode: None
+UpdateCheckMode: None
