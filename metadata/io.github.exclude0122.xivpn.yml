@@ -1,10 +1,11 @@
 Categories:
-  - Connectivity
   - Internet
-  - Security
-  - System
 License: GPL-3.0-or-later
+AuthorName: Exclude0122
 SourceCode: https://github.com/Exclude0122/xivpn
+IssueTracker: https://github.com/Exclude0122/xivpn/issues
+
+AutoName: XiVPN
 
 RepoType: git
 Repo: https://github.com/Exclude0122/xivpn.git
@@ -13,15 +14,30 @@ Builds:
   - versionName: 1.0.4
     versionCode: 11
     commit: v1.0.4
+    subdir: app
+    submodules: true
     sudo:
       - apt-get update
-      - apt-get install -y -t bookworm-backports sdkmanager
-      - apt-get install -y build-essential openjdk-17-jdk-headless
-    init: git submodule init && git submodule update
-    output: app/build/outputs/apk/universal/fdroid/app-universal-fdroid-unsigned.apk
-    prebuild: ./prebuild-fdroid.sh
-    build: FDROID_NDK="$$NDK$$" ./build-fdroid.sh
-    ndk: 27.0.12077973
+      - apt-get install -y -t bookworm-backports golang-go
+    gradle:
+      - universal
+    srclibs:
+      - go@go1.23.3
+    build:
+      - pushd $$go$$/src
+      - ./make.bash
+      - popd
+      - export GOPATH=$$go$$
+      - export PATH="$GOPATH/bin:$PATH"
+      - cd ../libxivpn
+      - NDK=$$NDK$$/toolchains/llvm/prebuilt/linux-x86_64 ./build.sh
+      - mkdir ../app/src/main/jniLibs/arm64-v8a
+      - cp libxivpn_arm64.so ../app/src/main/jniLibs/arm64-v8a/libxivpn.so
+      - mkdir ../app/src/main/jniLibs/x86_64
+      - cp libxivpn_x86_64.so ../app/src/main/jniLibs/x86_64/libxivpn.so
+    ndk: r27
 
-AutoUpdateMode: None
-UpdateCheckMode: None
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.4
+CurrentVersionCode: 11
