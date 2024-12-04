@@ -34,3 +34,4 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
 CurrentVersion: v1.2.0
+CurrentVersionCode: 49
