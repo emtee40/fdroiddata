@@ -108,10 +108,17 @@ Builds:
     gradle:
       - lite
 
+  - versionName: '41.0'
+    versionCode: 806
+    commit: 00e00e180268e8ed83c190b325c205f1bf617b7b
+    subdir: app
+    gradle:
+      - lite
+
 AllowedAPKSigningKeys: 57f09ab8dcfedbb63fa309362fedbbb0d8026cada8b2dc78ff00057f98c6020b
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[a-z0-9.]*$
 UpdateCheckData: app/src/main/AndroidManifest.xml|versionCode="(\d+)"|.|versionName="(.+)"
-CurrentVersion: '40.0'
-CurrentVersionCode: 774
+CurrentVersion: '41.0'
+CurrentVersionCode: 806
