@@ -1335,8 +1335,8 @@ Builds:
     ndk: r26d
 
   - versionName: 3.1.14
-    versionCode: 252
-    commit: 524cfb8f7c86d24c0463c820ce34c756c83aa059
+    versionCode: 253
+    commit: 3677f3a96e33578069958a69052c2a8d93243d35
     subdir: app
     sudo:
       - apt-get update
@@ -1388,4 +1388,4 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: build.gradle|siyuanVersionCode = (\d+)|.|siyuanVersionName = "([\d.]+)"
 CurrentVersion: 3.1.14
-CurrentVersionCode: 252
+CurrentVersionCode: 253
