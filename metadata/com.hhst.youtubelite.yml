@@ -9,7 +9,7 @@ IssueTracker: https://github.com/HydeYYHH/litetube/issues
 AutoName: litetube
 
 RepoType: git
-Repo: https://github.com/litetube/YouTube-lite
+Repo: https://github.com/HydeYYHH/litetube
 
 Builds:
   - versionName: '1.1'
