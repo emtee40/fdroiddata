@@ -42,9 +42,7 @@ Builds:
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 VercodeOperation:
-  - '2000 + %c'
-  - '3000 + %c'
-  - '4000 + %c'
+  - 2000 + %c
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
 CurrentVersion: 0.5.0
 CurrentVersionCode: 2013
