@@ -11,9 +11,9 @@ RepoType: git
 Repo: https://github.com/Exclude0122/xivpn.git
 
 Builds:
-  - versionName: 1.0.6
-    versionCode: 131
-    commit: v1.0.6
+  - versionName: 1.0.7
+    versionCode: 141
+    commit: v1.0.7
     subdir: app
     submodules: true
     sudo:
@@ -38,9 +38,9 @@ Builds:
       - cp libxivpn_x86_64.so ../app/src/main/jniLibs/x86_64/libxivpn.so
     ndk: r27
 
-  - versionName: 1.0.6
-    versionCode: 132
-    commit: v1.0.6
+  - versionName: 1.0.7
+    versionCode: 142
+    commit: v1.0.7
     subdir: app
     submodules: true
     sudo:
@@ -65,9 +65,9 @@ Builds:
       - cp libxivpn_x86_64.so ../app/src/main/jniLibs/x86_64/libxivpn.so
     ndk: r27
 
-  - versionName: 1.0.6
-    versionCode: 133
-    commit: v1.0.6
+  - versionName: 1.0.7
+    versionCode: 143
+    commit: v1.0.7
     subdir: app
     submodules: true
     sudo:
@@ -100,5 +100,5 @@ VercodeOperation:
   - '%c * 10 + 1'
   - '%c * 10 + 2'
   - '%c * 10 + 3'
-CurrentVersion: 1.0.6
-CurrentVersionCode: 133
+CurrentVersion: 1.0.7
+CurrentVersionCode: 143
