@@ -33,6 +33,8 @@ Builds:
     subdir: app
     gradle:
       - yes
+    scandelete:
+      - bin/act
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
