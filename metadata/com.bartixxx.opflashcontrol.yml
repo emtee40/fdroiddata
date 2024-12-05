@@ -11,9 +11,6 @@ AutoName: Opflashcontrol
 RepoType: git
 Repo: https://github.com/Bartixxx32/Opflashcontrol-app
 
-Description: |
-  This app allows you to control the brightness of your OnePlus device's LED flash. It is especially useful for users with root access who need advanced control over their device's flashlight settings.
-
 Builds:
   - versionName: '1.0'
     versionCode: 1
