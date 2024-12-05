@@ -8,18 +8,8 @@ WebSite: https://github.com/robinsrk/Flip_2_DND
 SourceCode: https://github.com/robinsrk/Flip_2_DND
 IssueTracker: https://github.com/robinsrk/Flip_2_DND/issues
 Changelog: https://github.com/robinsrk/Flip_2_DND/releases
+
 AutoName: Flip 2 DND
-Description: |
-  Flip 2 DND is a simple yet powerful app that automatically toggles Do Not Disturb mode based on your phone's orientation.
-
-  Features:
-  * Automatically enables DND when phone is flipped face down
-  * Automatically disables DND when phone is picked up
-  * Works in background with minimal battery impact
-  * Simple and intuitive interface
-  * No ads or tracking
-
-  The app is designed with privacy and simplicity in mind, requiring only the necessary permissions to function.
 
 RepoType: git
 Repo: https://github.com/robinsrk/Flip_2_DND
