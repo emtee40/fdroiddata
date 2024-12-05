@@ -12,8 +12,8 @@ Repo: https://github.com/mario-schmid/maya
 Binaries: https://github.com/mario-schmid/maya/releases/download/v%v/maya_v%v.apk
 
 Builds:
-  - versionName: 1.2.0
-    versionCode: 49
+  - versionName: 1.2.1
+    versionCode: 50
     commit: 03d8fe7d2100a00a91ddab2ba572dfce36885f29
     output: build/app/outputs/flutter-apk/app-release.apk
     srclibs:
@@ -36,5 +36,5 @@ AllowedAPKSigningKeys: 99cf06b7835f780da61b7b4a5a1e8d35a0007975198ca518112fc6e29
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: v1.2.0
-CurrentVersionCode: 49
+CurrentVersion: v1.2.1
+CurrentVersionCode: 50
