@@ -66,7 +66,6 @@ AllowedAPKSigningKeys: d979100bc8cbb65843f8e52005c429856fd5faaf3d94ed64043bf796a
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 VercodeOperation:
-  - '%c * 10 + 1'
   - '%c * 10 + 2'
   - '%c * 10 + 3'
 CurrentVersion: 1.0.7
