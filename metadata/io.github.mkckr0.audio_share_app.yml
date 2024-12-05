@@ -141,9 +141,16 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 0.3.0
+    versionCode: 3000
+    commit: 1c42f612a3fe206105095eec5c039e79b1c7aab7
+    subdir: android-app/app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: bdbf8e590127e380a28c328085231647912634b45ffaa20d9e70c96658cb7a40
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]*$
-CurrentVersion: 0.2.2
-CurrentVersionCode: 2002
+CurrentVersion: 0.3.0
+CurrentVersionCode: 3000
