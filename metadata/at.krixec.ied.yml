@@ -48,9 +48,9 @@ Builds:
       - gradle generateGodotTemplates
       - popd
       - cd ..
-      - mkdir -p ./.local/share/godot/templates/4.3.stable/
-      - echo "4.3.stable" >> ./.local/share/godot/templates/4.3.stable/version.txt
-      - cp godot/bin/android_source.zip ./.local/share/godot/templates/4.3.stable/
+      - mkdir -p ./.local/share/godot/export_templates/4.3.stable/
+      - echo "4.3.stable" >> ./.local/share/godot/export_templates/4.3.stable/version.txt
+      - cp godot/bin/android_source.zip ./.local/share/godot/export_templates/4.3.stable/
       - ./godot/bin/godot.* --headless --export-release Android IED.apk
     ndk: 23.2.8568313
 
