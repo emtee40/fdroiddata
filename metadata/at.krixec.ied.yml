@@ -47,7 +47,8 @@ Builds:
       - gradle generateGodotTemplates
       - popd
       - cd ..
-      - ./godot/bin/godot.* --headless --install-android-build-template --export-release Android IED.apk
+      - ./godot/bin/godot.* --headless --install-android-build-template --export-release
+        Android IED.apk
     ndk: 23.2.8568313
 
 AutoUpdateMode: Version
