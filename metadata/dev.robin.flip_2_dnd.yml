@@ -16,7 +16,7 @@ Repo: https://github.com/robinsrk/Flip_2_DND
 Binaries: https://github.com/robinsrk/flip_2_dnd/releases/download/v1.0.2/app-release.apk
 
 Builds:
-  - versionName: 1.0.1
+  - versionName: 1.0.2
     versionCode: 2
     commit: ba753e57df5422bfdfccc2102ad237b77476fa35
     subdir: app
@@ -27,5 +27,5 @@ AllowedAPKSigningKeys: 3c7cf9ebb6030720493af367c8cf9d8077a30fe104dbb50ea351454fc
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.1
+CurrentVersion: 1.0.2
 CurrentVersionCode: 2
