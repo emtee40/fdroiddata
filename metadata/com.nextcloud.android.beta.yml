@@ -14672,9 +14672,9 @@ Builds:
     scandelete:
       - app/src/androidTest/assets
 
-  - versionName: '20241202'
-    versionCode: 20241202
-    commit: b92ee9008326d6fad2ffaed1f07aadc618c8c38c
+  - versionName: '20241206'
+    versionCode: 20241206
+    commit: daf1eaf7a314b2f75c7e390208415de1c53f37f2
     subdir: app
     gradle:
       - versionDev
@@ -14691,5 +14691,5 @@ MaintainerNotes: Tags get removed. See https://github.com/nextcloud/android/issu
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^dev
-CurrentVersion: '20241202'
-CurrentVersionCode: 20241202
+CurrentVersion: '20241206'
+CurrentVersionCode: 20241206

@@ -205,9 +205,9 @@ Builds:
     gradle:
       - yes
 
-  - versionName: 1.1.14
-    versionCode: 45
-    commit: 5cc540a5f3dd6e84f8bbb285fdc3ae41645bb214
+  - versionName: 1.1.17
+    versionCode: 48
+    commit: ace4b34397baf781015a93a0a6ff192d9f899de0
     subdir: app
     sudo:
       - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
@@ -219,5 +219,5 @@ Builds:
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.1.14
-CurrentVersionCode: 45
+CurrentVersion: 1.1.17
+CurrentVersionCode: 48

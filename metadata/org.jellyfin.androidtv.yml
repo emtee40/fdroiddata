@@ -376,9 +376,9 @@ Builds:
       - echo 'rootProject.name="jellyfin-androidtv"' >> ../settings.gradle.kts
       - echo 'jellyfin.version=$$VERSION$$' >> ../gradle.properties
 
-  - versionName: 0.18.0
-    versionCode: 180099
-    commit: v0.18.0
+  - versionName: 0.18.1
+    versionCode: 180199
+    commit: v0.18.1
     subdir: app
     sudo:
       - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
@@ -398,5 +398,5 @@ AutoUpdateMode: Version v%v
 UpdateCheckMode: HTTP
 UpdateCheckIgnore: (beta|rc)
 UpdateCheckData: https://repo.jellyfin.org/releases/client/androidtv/version.txt|^v.*?=(\d+)|.|^v(.*?)=\d+
-CurrentVersion: 0.18.0
-CurrentVersionCode: 180099
+CurrentVersion: 0.18.1
+CurrentVersionCode: 180199
