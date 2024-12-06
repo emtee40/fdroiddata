@@ -49,7 +49,7 @@ Builds:
       - cd ..
       - cp godot/bin/android_source.zip .
       - mkdir android
-      - unzip android_source.zip android/build
+      - unzip android_source.zip -d android/build
       - echo "4.3.stable" >> android/.build_version
       - ./godot/bin/godot.* --headless --export-release Android IED.apk
     ndk: 23.2.8568313
