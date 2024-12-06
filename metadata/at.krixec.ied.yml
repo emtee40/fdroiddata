@@ -15,10 +15,9 @@ Builds:
   - versionName: Ni havas lingvojn
     versionCode: 12
     commit: 2a290a87d11c1a24fba0f97db4ebcabdc44e3afa
-    timeout: 7200
     sudo:
       - apt-get update
-      - apt-get install -y clang gettext pkg-config scons
+      - apt-get install -y clang gettext pkg-config scons unzip
     output: IED.apk
     srclibs:
       - Godot@4.3-stable
@@ -48,9 +47,10 @@ Builds:
       - gradle generateGodotTemplates
       - popd
       - cd ..
-      - mkdir -p ./.local/share/godot/export_templates/4.3.stable/
-      - echo "4.3.stable" >> ./.local/share/godot/export_templates/4.3.stable/version.txt
-      - cp godot/bin/android_source.zip ./.local/share/godot/export_templates/4.3.stable/
+      - cp godot/bin/android_source.zip .
+      - mkdir android
+      - unzip android_source.zip android/build
+      - echo "4.3.stable" >> android/.build_version
       - ./godot/bin/godot.* --headless --export-release Android IED.apk
     ndk: 23.2.8568313
 
