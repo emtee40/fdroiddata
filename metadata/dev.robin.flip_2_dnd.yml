@@ -18,7 +18,7 @@ Binaries: https://github.com/robinsrk/flip_2_dnd/releases/download/v1.0.2/app-re
 Builds:
   - versionName: 1.0.2
     versionCode: 2
-    commit: ba753e57df5422bfdfccc2102ad237b77476fa35
+    commit: 1.0.2
     subdir: app
     gradle:
       - yes
