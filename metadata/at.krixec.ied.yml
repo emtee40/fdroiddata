@@ -21,7 +21,7 @@ Builds:
       - apt-get install -y clang gettext pkg-config scons
     output: IED.apk
     srclibs:
-      - Godot@4.3-stable
+      - Godot@4.2.1-stable
     build:
       - export HOME=$PWD
       - cp -R $$Godot$$ godot
@@ -48,9 +48,9 @@ Builds:
       - gradle generateGodotTemplates
       - popd
       - cd ..
-      - mkdir -p ./.local/share/godot/templates/4.3.stable/
-      - echo "4.3.stable" >> ./.local/share/godot/templates/4.3.stable/version.txt
-      - cp godot/bin/android_release.apk ./.local/share/godot/templates/4.3.stable/
+      - mkdir -p ./.local/share/godot/templates/4.2.1.stable/
+      - echo "4.2.1.stable" >> ./.local/share/godot/templates/4.2.1.stable/version.txt
+      - cp godot/bin/android_release.apk ./.local/share/godot/templates/4.2.1.stable/
       - ./godot/bin/godot.* --headless --export-release Android IED.apk
     ndk: 23.2.8568313
 
