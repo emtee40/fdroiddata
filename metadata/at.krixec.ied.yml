@@ -19,7 +19,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y clang gettext pkg-config scons
-    output: IED.apk
+    output: godot/bin/android_release.apk
     srclibs:
       - Godot@4.2.1-stable
     build:
