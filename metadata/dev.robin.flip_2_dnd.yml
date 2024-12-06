@@ -13,7 +13,7 @@ AutoName: Flip 2 DND
 
 RepoType: git
 Repo: https://github.com/robinsrk/Flip_2_DND
-Binaries: https://github.com/robinsrk/flip_2_dnd/releases/download/v1.0.2/app-release.apk
+Binaries: https://github.com/robinsrk/flip_2_dnd/releases/download/v%v/app-release.apk
 
 Builds:
   - versionName: 1.0.2
