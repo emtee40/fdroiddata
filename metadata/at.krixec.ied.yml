@@ -14,14 +14,14 @@ Repo: https://codeberg.org/Krixec/IED-FDroid.git
 Builds:
   - versionName: Ni havas lingvojn
     versionCode: 12
-    commit: 211940241201b1310d741fab4a02b9c43adf13b8
+    commit: 2a290a87d11c1a24fba0f97db4ebcabdc44e3afa
     timeout: 7200
     sudo:
       - apt-get update
       - apt-get install -y clang gettext pkg-config scons
     output: godot/bin/android_release.apk
     srclibs:
-      - Godot@4.2.1-stable
+      - Godot@4.3-stable
     build:
       - export HOME=$PWD
       - cp -R $$Godot$$ godot
@@ -48,9 +48,9 @@ Builds:
       - gradle generateGodotTemplates
       - popd
       - cd ..
-      - mkdir -p ./.local/share/godot/templates/4.2.1.stable/
-      - echo "4.2.1.stable" >> ./.local/share/godot/templates/4.2.1.stable/version.txt
-      - cp godot/bin/android_release.apk ./.local/share/godot/templates/4.2.1.stable/
+      - mkdir -p ./.local/share/godot/templates/4.3.stable/
+      - echo "4.3.stable" >> ./.local/share/godot/templates/4.3.stable/version.txt
+      - cp godot/bin/android_release.apk ./.local/share/godot/templates/4.3.stable/
       - ./godot/bin/godot.* --headless --export-release Android IED.apk
     ndk: 23.2.8568313
 
