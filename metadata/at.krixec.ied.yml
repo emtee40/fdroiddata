@@ -51,7 +51,7 @@ Builds:
       - mkdir -p ./.local/share/godot/templates/4.3.stable/
       - echo "4.3.stable" >> ./.local/share/godot/templates/4.3.stable/version.txt
       - cp godot/bin/android_release.apk ./.local/share/godot/templates/4.3.stable/
-      - ./godot/bin/godot.* -v --export Android IED.apk
+      - ./godot/bin/godot.* --headless --export-release Android IED.apk
     ndk: 23.2.8568313
 
 AutoUpdateMode: Version
