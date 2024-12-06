@@ -22,8 +22,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    scandelete:
-      - bin/act
 
 AllowedAPKSigningKeys: 3c7cf9ebb6030720493af367c8cf9d8077a30fe104dbb50ea351454fc3ed08f1
 
