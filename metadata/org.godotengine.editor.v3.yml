@@ -303,7 +303,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y pkg-config scons
-    output: bin/android_editor.apk
+    output: editor/build/outputs/apk/debug/android_editor-debug-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
       - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
@@ -325,7 +325,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y pkg-config scons
-    output: bin/android_editor.apk
+    output: editor/build/outputs/apk/debug/android_editor-debug-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
       - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
@@ -347,7 +347,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y pkg-config scons
-    output: bin/android_editor.apk
+    output: editor/build/outputs/apk/debug/android_editor-debug-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
       - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
@@ -369,7 +369,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y pkg-config scons
-    output: bin/android_editor.apk
+    output: editor/build/outputs/apk/debug/android_editor-debug-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
       - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
