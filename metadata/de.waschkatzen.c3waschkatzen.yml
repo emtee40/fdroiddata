@@ -1,0 +1,29 @@
+Categories:
+  - Internet
+License: MIT
+WebSite: https://git.sakamoto.pl/april/waschkatzen-gui/
+SourceCode: https://git.sakamoto.pl/april/waschkatzen-gui/
+IssueTracker: https://git.sakamoto.pl/april/waschkatzen-gui/issues
+
+Name: c3Waschkatzen
+Description: The Waschkatzen service tool for helpers at Chaos events.
+
+RepoType: git
+Repo: https://git.sakamoto.pl/april/waschkatzen-gui.git
+
+Builds:
+  - versionName: 2024.12.7
+    versionCode: 1
+    commit: v2024.12.7
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@3.22.2
+    rm:
+      - ios
+    prebuild: $$flutter$$/bin/flutter pub get
+    build: $$flutter$$/bin/flutter build apk
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 2024.12.7
+CurrentVersionCode: 1
