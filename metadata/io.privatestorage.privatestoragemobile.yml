@@ -1,0 +1,36 @@
+Categories:
+  - Internet
+  - Security
+License: GPL-3.0-only
+WebSite: https://private.storage/
+SourceCode: https://whetstone.private.storage/privatestorage/privatestoragemobile
+IssueTracker: https://whetstone.private.storage/privatestorage/privatestoragemobile/-/issues
+
+RepoType: git
+Repo: https://whetstone.private.storage/privatestorage/privatestoragemobile.git
+
+Builds:
+  - versionName: 1.0.9
+    versionCode: 9
+    commit: e521004dbfaabf7d67c9206c4103111bfa4288a6
+    timeout: 259200
+    subdir: obelisk
+    sudo:
+      - apt-get update
+      - apt install -y xz-utils
+      - mkdir /nix
+      - chown vagrant /nix
+    init:
+      - curl -sSf https://nixos.org/releases/nix/nix-2.13.4/install -o /tmp/nix-install
+      - bash /tmp/nix-install --no-daemon
+    output: result/android-app-release-unsigned.apk
+    build:
+      - USER=vagrant source /home/vagrant/.nix-profile/etc/profile.d/nix.sh
+      - nix-build -A android.frontend.release --option max-jobs auto
+    antifeatures:
+      - NonFreeNet
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.0.9
+CurrentVersionCode: 9
