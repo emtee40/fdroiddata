@@ -36,6 +36,7 @@ Builds:
       - pushd $repo/anynotedotai
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
       - popd
       - mv $repo/anynotedotai com.MH0386.AnyNoteDotAI
     scandelete:
@@ -46,7 +47,6 @@ Builds:
       - mv com.MH0386.AnyNoteDotAI $repo/anynotedotai
       - pushd $repo/anynotedotai
       - export PUB_CACHE=$(pwd)/.pub-cache
-      - $$flutter$$/bin/flutter pub get
       - $$flutter$$/bin/flutter build apk --release
       - popd
       - mv $repo/anynotedotai com.MH0386.AnyNoteDotAI
