@@ -153,8 +153,22 @@ Builds:
     gradle:
       - fdroid
 
+  - versionName: 1.9.0
+    versionCode: 10900
+    commit: 83605c13c7f13e1f484aa00f6b3e9af622880888
+    subdir: app
+    gradle:
+      - fdroid
+
+  - versionName: 1.10.0
+    versionCode: 11000
+    commit: a5026ada8de9279291aa3acef28b264370b2bbc5
+    subdir: app
+    gradle:
+      - fdroid
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: version.properties|versionCode=(\d+)|.|versionName=(.*)
-CurrentVersion: 1.8.0
-CurrentVersionCode: 10800
+CurrentVersion: 1.10.0
+CurrentVersionCode: 11000

@@ -359,15 +359,6 @@ Builds:
       - yes
     prebuild: sdkmanager 'cmake;3.22.1'
 
-  - versionName: 2.6.2
-    versionCode: 38
-    commit: cab7a429fc619901ee4dcec6d9c38d1ad3a58b45
-    subdir: app
-    submodules: true
-    gradle:
-      - yes
-    prebuild: sdkmanager 'cmake;3.22.1'
-
   - versionName: 2.6.3
     versionCode: 39
     commit: 0884ae17b8fd446f3a5ec2976ab3752fb27c4418
@@ -378,7 +369,17 @@ Builds:
     rm:
       - extern/libvncserver/webclients
 
+  - versionName: 2.7.0
+    versionCode: 40
+    commit: e545872208211e0e9907abb785a29330ddad54fc
+    subdir: app
+    submodules: true
+    gradle:
+      - yes
+    rm:
+      - extern/libvncserver/webclients
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.6.3
-CurrentVersionCode: 39
+CurrentVersion: 2.7.0
+CurrentVersionCode: 40

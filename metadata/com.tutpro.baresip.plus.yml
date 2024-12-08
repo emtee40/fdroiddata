@@ -2794,10 +2794,100 @@ Builds:
       - make all
     ndk: 26.2.11394342
 
+  - versionName: 48.0.1
+    versionCode: 180
+    commit: 45e3d7a42cf3599065498070750f36274bdebfe3
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 26.2.11394342
+
+  - versionName: 48.1.0
+    versionCode: 181
+    commit: ccb861f1d6f71bf7dc8810f4ab9ce1f0d0fb9418
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: 27.2.12479018
+
+  - versionName: 49.0.0
+    versionCode: 182
+    commit: 576010ecedac30dc3db97e2120d543fee9c99594
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: r27c
+
+  - versionName: 49.1.0
+    versionCode: 183
+    commit: b5b40aef96bff32c5422a8fe7c0778cab0f4cc9a
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: r27c
+
+  - versionName: 49.2.0
+    versionCode: 184
+    commit: f38098ce63247b61f1ee275e08a15887e3859d57
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y automake cmake libre-dev libtool make pkg-config wget
+    gradle:
+      - yes
+    prebuild: sed -i -e 's|/opt/Android/ndk/.*|$$NDK$$|' -e 's|/usr/src/baresip-studio|..|'
+      ../libbaresip-android.video/Makefile
+    build:
+      - cd ../libbaresip-android.video
+      - make download-sources
+      - make all
+    ndk: r27c
+
 MaintainerNotes: make download-sources checks out master branches of several libraries;
   this can cause build failures.
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags v.*[0-9]$
-CurrentVersion: 48.0.0
-CurrentVersionCode: 179
+CurrentVersion: 49.2.0
+CurrentVersionCode: 184

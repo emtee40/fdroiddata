@@ -110,7 +110,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.0.3
+    versionCode: 12
+    commit: 4c5ee908b59f11adbcbf5560e2e24417170b90f2
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 2.0.4
+    versionCode: 13
+    commit: 92bef014eff0df388ac0ee99c8a070fbfb91ab81
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.2
-CurrentVersionCode: 11
+CurrentVersion: 2.0.4
+CurrentVersionCode: 13

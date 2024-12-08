@@ -1510,6 +1510,7 @@ Builds:
 
   - versionName: 1.76.0-t51fb4ce51-g5f19730c7a4
     versionCode: 303
+    disable: https://github.com/tailscale/tailscale/issues/13850
     commit: a8c8301a50e890c1d033367c972bd5dc84e6259e
     subdir: android
     sudo:
@@ -1539,9 +1540,41 @@ Builds:
       - make -C .. libtailscale
     ndk: r23b
 
+  - versionName: 1.76.1-t24929f6b6-ga20b1114dd5
+    versionCode: 308
+    disable: https://github.com/tailscale/tailscale/issues/13850
+    commit: e393dad29e6881dcfdf1604787c5d2752e1cc504
+    subdir: android
+    sudo:
+      - apt-get update
+      - apt-get install -y -t bookworm-backports golang-go
+      - apt-get install -y gcc libc-dev make
+    gradle:
+      - yes
+    srclibs:
+      - tailscale-go@bf15628b759344c6fc7763795a405ba65b8be5d7
+    prebuild:
+      - echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> gradle.properties
+      - sdkmanager 'platforms;android-31' 'platform-tools' 'build-tools;33.0.2'
+      - sed -i -e 's|$(ANDROID_HOME)/cmdline-tools/latest/bin/sdkmanager|sdkmanager|g'
+        -e 's/list_installed/list/' ../Makefile
+    build:
+      - export TOOLCHAINREV=$(cat ../go.toolchain.rev)
+      - export TOOLCHAINDIR=$$tailscale-go$$
+      - export ANDROID_NDK_ROOT=$$NDK$$
+      - export PATH=$TOOLCHAINDIR/bin:$PATH
+      - make -C .. env
+      - pushd $$tailscale-go$$
+      - git checkout $TOOLCHAINREV
+      - cd src
+      - ./make.bash
+      - popd
+      - make -C .. libtailscale
+    ndk: r23b
+
 MaintainerNotes: Tracking reported at https://gitlab.com/fdroid/fdroiddata/-/issues/2601
 
-AutoUpdateMode: Version
+AutoUpdateMode: None
 UpdateCheckMode: Tags ^\d\.\d+[02468]\.\d+-t.*$
-CurrentVersion: 1.76.0-t51fb4ce51-g5f19730c7a4
-CurrentVersionCode: 303
+CurrentVersion: 1.76.6-t1edcf9d46-gf7aa2e4a837
+CurrentVersionCode: 320

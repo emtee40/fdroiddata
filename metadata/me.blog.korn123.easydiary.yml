@@ -907,16 +907,23 @@ Builds:
       - foss
     prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
 
-  - versionName: 1.4.314.202410130
-    versionCode: 314
-    disable: https://github.com/hanjoongcho/aaf-easydiary/issues/229
-    commit: 0e88ae39003decf8aa7390226b52b70578ea30c0
+  - versionName: 1.4.316.202410151
+    versionCode: 316
+    commit: a8f1b6950c08c52c1ae2412ad7a69ed3160a2843
     subdir: app
     gradle:
       - foss
     prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
 
-AutoUpdateMode: None
+  - versionName: 1.4.317.202410240
+    versionCode: 317
+    commit: cb480dd11193563e406085cc2511e669477398aa
+    subdir: app
+    gradle:
+      - foss
+    prebuild: sed -i -e 's/-XX:MaxPermSize=1024m//' ../gradle.properties
+
+AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.314.202410130
-CurrentVersionCode: 314
+CurrentVersion: 1.4.317.202410240
+CurrentVersionCode: 317

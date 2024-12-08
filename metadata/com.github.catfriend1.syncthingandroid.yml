@@ -9,28 +9,6 @@ Changelog: https://github.com/Catfriend1/syncthing-android/releases
 Liberapay: cf4friends
 
 AutoName: Syncthing-Fork
-Description: |-
-  This is a fork of https://f-droid.org/packages/com.nutomic.syncthingandroid that brings major
-  enhancements like:
-  * Individual sync conditions can be applied per device and per folder
-  * Recent changes UI, click to open files.
-  * "Battery eater" problem is fixed.
-  * Android 8 and 9 support.
-  Syncthing replaces proprietary sync and cloud services with something open,
-  trustworthy and decentralized. Your data is your data alone and you deserve to
-  choose where it is stored, if it is shared with some third party and how it's
-  transmitted over the Internet. Syncthing-Fork for Android is a wrapper for
-  Syncthing that provides an Android UI instead of Syncthing's built-in Web UI.
-  Goals of the fork:
-  * Develop and try out enhancements together with the community.
-  * Release the wrapper more frequently to identify and fix bugs caused by changes in the syncthing submodule
-  * Make enhancements configurable in the UI, users should be able to turn them on and off
-  Comparison between upstream and fork at the time of writing this:
-  * Both contain the syncthing binary built from the official source at GitHub:syncthing/syncthing
-  * Syncing functionality and reliability depends on the syncthing binary submodule version.
-  * Fork gets along with upstream and sometimes they pick up my improvements.
-  * Strategy and release frequency is different
-  * Only the wrapper containing the Android UI is addressed by the fork.
 
 RepoType: git
 Repo: https://github.com/Catfriend1/syncthing-android-fdroid.git
@@ -2231,10 +2209,9 @@ Builds:
       - export ANDROID_NDK_HOME=$$SDK$$/ndk/$ndkversion
       - gradle :syncthing:buildNative
 
-  - versionName: 1.27.12.0
-    versionCode: 1271200
-    disable: https://github.com/Catfriend1/syncthing-android/issues/1135
-    commit: 9d1dd2f93c2908c5ef35121df333490e479f9e88
+  - versionName: 1.28.0.0
+    versionCode: 1280000
+    commit: 72c3b7ead2b5427e9b57e9f093b9d461566b1653
     subdir: app
     submodules: true
     sudo:
@@ -2247,12 +2224,13 @@ Builds:
     rm:
       - syncthing/src/github.com/syncthing/syncthing/lib/model/testdata
     prebuild:
-      - sed -i -e '/signingConfig/d' build.gradle
-      - sed -i -e '/executable/s/python/python3/' {../syncthing,.}/build.gradle
+      - sed -i -e '/signingConfig/,+2d' build.gradle.kts
+      - sed -i -e 's/java.net.URI/uri/' ../settings.gradle.kts
+      - sed -i -e '/executable/s/python/python3/' build.gradle.kts
       - echo -e "\norg.gradle.jvmargs=-Xmx4096m" >> ../gradle.properties
     build:
-      - export ndkversion=$(grep "ndkVersionShared = " ../build.gradle | cut -d "'"
-        -f 2)
+      - export ndkversion=$(grep "ndkVersionShared" ../build.gradle.kts | cut -d '"'
+        -f 4)
       - sdkmanager "ndk;$ndkversion"
       - export ANDROID_NDK_HOME=$$SDK$$/ndk/$ndkversion
       - gradle :syncthing:buildNative
@@ -2263,5 +2241,5 @@ MaintainerNotes: |-
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[a-z0-9.]*$
-CurrentVersion: 1.27.12.0
-CurrentVersionCode: 1271200
+CurrentVersion: 1.28.0.0
+CurrentVersionCode: 1280000

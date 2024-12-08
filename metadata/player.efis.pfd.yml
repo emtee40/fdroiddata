@@ -341,7 +341,49 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '6.18'
+    versionCode: 58
+    commit: EFIS_6.18
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.19'
+    versionCode: 59
+    commit: EFIS_6.19
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.20'
+    versionCode: 60
+    commit: EFIS_6.20
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.21'
+    versionCode: 61
+    commit: EFIS_6.21
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.22'
+    versionCode: 62
+    commit: 9c5b5a440562f47bcb8ccc195f391e78fb41850c
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '6.24'
+    versionCode: 64
+    commit: cf6e6884d4ef07a99de5cfc28dde7110a0024117
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^EFIS
-CurrentVersion: '6.17'
-CurrentVersionCode: 57
+CurrentVersion: '6.24'
+CurrentVersionCode: 64

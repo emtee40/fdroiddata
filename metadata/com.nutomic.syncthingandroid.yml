@@ -10,6 +10,8 @@ Donate: https://syncthing.net/donations
 
 AutoName: Syncthing
 Description: |-
+  <b>NOTE:</b> The app has been discontinued and may no loger get updated after December 2024. The fork https://f-droid.org/packages/com.github.catfriend1.syncthingandroid is recommended.
+
   Syncthing replaces proprietary sync and cloud services with something open,
   trustworthy and decentralized. Your data is your data alone and you deserve to
   choose where it is stored, if it is shared with some third party and how it's
@@ -2309,6 +2311,46 @@ Builds:
     build: gradle :syncthing:buildNative
     ndk: 25.2.9519653
 
+  - versionName: 1.28.0
+    versionCode: 4394
+    commit: e302d5c05ec2777d47ab2ebc6e4b0fb24d799e28
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y autogen automake autopoint bzip2 g++ libc-dev make gettext
+        libtool pkg-config rename shtool
+      - apt-get install -y -t bookworm-backports golang-go
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/signingConfig/,+2d' -e '/buildNative/d' build.gradle.kts
+      - sed -i -e 's/java.net.URI/uri/' ../settings.gradle.kts
+    scanignore:
+      - syncthing/src/github.com/syncthing/syncthing/lib/model/testdata
+    build: gradle :syncthing:buildNative
+    ndk: 25.2.9519653
+
+  - versionName: 1.28.1
+    versionCode: 4395
+    commit: 64d2b8e362d45988dfc21dda3b0b494d7e8bb2c1
+    subdir: app
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y autogen automake autopoint bzip2 g++ libc-dev make gettext
+        libtool pkg-config rename shtool
+      - apt-get install -y -t bookworm-backports golang-go
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/signingConfig/,+2d' -e '/buildNative/d' build.gradle.kts
+      - sed -i -e 's/java.net.URI/uri/' ../settings.gradle.kts
+    scanignore:
+      - syncthing/src/github.com/syncthing/syncthing/lib/model/testdata
+    build: gradle :syncthing:buildNative
+    ndk: 25.2.9519653
+
 MaintainerNotes: |-
   The submodule in syncthing/src/github.com/syncthing/syncthing must be
   pristine, as the version/release information is taken from git.
@@ -2319,5 +2361,5 @@ MaintainerNotes: |-
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^[0-9.]*$
-CurrentVersion: 1.27.12.1
-CurrentVersionCode: 4393
+CurrentVersion: 1.28.1
+CurrentVersionCode: 4395

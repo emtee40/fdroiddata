@@ -446,7 +446,26 @@ Builds:
     gradle:
       - yes
 
+  - versionName: MatriX.134.1.F-Droid
+    versionCode: 169
+    commit: 11c0273ae17a08e9cf61fbc66300dd19f84aaeac
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: MatriX.135.F-Droid
+    versionCode: 170
+    commit: 63dc63a1845ad57918f36e13a38c6a9a7cb3aa6a
+    subdir: app
+    sudo:
+      - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y -t trixie openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags .*\.F-Droid$
-CurrentVersion: MatriX.134.F-Droid
-CurrentVersionCode: 168
+CurrentVersion: MatriX.135.F-Droid
+CurrentVersionCode: 170

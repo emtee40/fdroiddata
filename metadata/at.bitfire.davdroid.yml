@@ -4,6 +4,7 @@ License: GPL-3.0-only
 AuthorName: bitfire web engineering
 WebSite: https://www.davx5.com/
 SourceCode: https://github.com/bitfireAT/davx5-ose/
+IssueTracker: https://github.com/bitfireAT/davx5-ose/issues
 Translation: https://www.transifex.com/bitfireAT/davx5/
 Changelog: https://github.com/bitfireAT/davx5-ose/discussions/categories/announcements
 Donate: https://www.davx5.com/donate
@@ -1914,7 +1915,47 @@ Builds:
       - ose
     prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
 
+  - versionName: 4.4.3-ose
+    versionCode: 404030003
+    disable: https://github.com/bitfireAT/davx5-ose/issues/1080
+    commit: 9c2afbab09205928579a370a962769efc807383a
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.4.3.2-ose
+    versionCode: 404030200
+    commit: 1802740a2d3d3df7702b74c0efa0edf88e49298a
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
+  - versionName: 4.4.4-ose
+    versionCode: 404040002
+    commit: 2f26c6c36559d2276e8396865b6e8b0ece504bed
+    subdir: app
+    sudo:
+      - echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
+      - apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-java-alternatives -a
+    gradle:
+      - ose
+    prebuild: sed -i -e 's/configuration-cache=.*/configuration-cache=false/' ../gradle.properties
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]+-ose[0-9]*$
-CurrentVersion: 4.4.2-ose
-CurrentVersionCode: 404020004
+CurrentVersion: 4.4.4-ose
+CurrentVersionCode: 404040002

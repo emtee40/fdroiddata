@@ -196,7 +196,34 @@ Builds:
     rm:
       - svg.zip
 
+  - versionName: '3.3'
+    versionCode: 33
+    commit: e5d3454036a4173ab5c3731c34c02d8e9e5dc36d
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - svg.zip
+
+  - versionName: '3.4'
+    versionCode: 34
+    commit: 18921829e0248c8718db539bc3d37b05b1bb9f74
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - svg.zip
+
+  - versionName: '3.5'
+    versionCode: 35
+    commit: dfc68870a731685c414520dc314d511ccedb9e6d
+    subdir: app
+    gradle:
+      - yes
+    rm:
+      - svg.zip
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags V.*
-CurrentVersion: '3.2'
-CurrentVersionCode: 32
+CurrentVersion: '3.5'
+CurrentVersionCode: 35

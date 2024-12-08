@@ -14,7 +14,7 @@ Bitcoin: 1EUrRpjDAGgpS8J46tmsVWKbgNqAv7rWC7
 AutoName: MediLog
 
 RepoType: git
-Repo: https://codeberg.org/toz/MediLog
+Repo: https://codeberg.org/toz/medilog.git
 
 Builds:
   - versionName: 1.7.3
@@ -587,7 +587,23 @@ Builds:
       - yes
     prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
 
+  - versionName: 3.1.0
+    versionCode: 5464
+    commit: 68cecf68e642585427cfdca1d7feacb1d1af8779
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
+  - versionName: 3.1.1
+    versionCode: 5465
+    commit: 7dd1b9607b4a747c2b06810f68aa2b283753a22d
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.0.7
-CurrentVersionCode: 5462
+CurrentVersion: 3.1.1
+CurrentVersionCode: 5465

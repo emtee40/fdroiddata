@@ -554,10 +554,9 @@ Builds:
       - popd
       - mv $repo/flutter_server_box tech.lolli.toolbox
 
-  - versionName: 1.0.1070
-    versionCode: 10701
-    disable: https://github.com/lollipopkit/flutter_server_box/issues/548
-    commit: 966a60a82da0cf8dc44240be1f2f2cf3604b71c7
+  - versionName: 1.0.1104
+    versionCode: 11041
+    commit: 229983d82e85523c2931b5b029df3f39b97f5a6e
     sudo:
       - mkdir -p /home/runner
       - chown vagrant /home/runner
@@ -577,11 +576,10 @@ Builds:
       - cd ..
       - mv tech.lolli.toolbox $repo/flutter_server_box
       - pushd $repo/flutter_server_box
-      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml|head
-        -n1)
-      - pushd $$flutter$$
-      - git checkout -f $version
-      - popd
+      - flutterVersion=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml
+        | head -n1)
+      - '[[ $flutterVersion ]] || exit 1'
+      - git -C $$flutter$$ checkout -f $flutterVersion
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter packages pub get
@@ -600,10 +598,9 @@ Builds:
       - popd
       - mv $repo/flutter_server_box tech.lolli.toolbox
 
-  - versionName: 1.0.1070
-    versionCode: 10702
-    disable: https://github.com/lollipopkit/flutter_server_box/issues/548
-    commit: 966a60a82da0cf8dc44240be1f2f2cf3604b71c7
+  - versionName: 1.0.1104
+    versionCode: 11042
+    commit: 229983d82e85523c2931b5b029df3f39b97f5a6e
     sudo:
       - mkdir -p /home/runner
       - chown vagrant /home/runner
@@ -623,11 +620,10 @@ Builds:
       - cd ..
       - mv tech.lolli.toolbox $repo/flutter_server_box
       - pushd $repo/flutter_server_box
-      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml|head
-        -n1)
-      - pushd $$flutter$$
-      - git checkout -f $version
-      - popd
+      - flutterVersion=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml
+        | head -n1)
+      - '[[ $flutterVersion ]] || exit 1'
+      - git -C $$flutter$$ checkout -f $flutterVersion
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter packages pub get
@@ -646,10 +642,9 @@ Builds:
       - popd
       - mv $repo/flutter_server_box tech.lolli.toolbox
 
-  - versionName: 1.0.1070
-    versionCode: 10703
-    disable: https://github.com/lollipopkit/flutter_server_box/issues/548
-    commit: 966a60a82da0cf8dc44240be1f2f2cf3604b71c7
+  - versionName: 1.0.1104
+    versionCode: 11043
+    commit: 229983d82e85523c2931b5b029df3f39b97f5a6e
     sudo:
       - mkdir -p /home/runner
       - chown vagrant /home/runner
@@ -669,11 +664,10 @@ Builds:
       - cd ..
       - mv tech.lolli.toolbox $repo/flutter_server_box
       - pushd $repo/flutter_server_box
-      - version=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml|head
-        -n1)
-      - pushd $$flutter$$
-      - git checkout -f $version
-      - popd
+      - flutterVersion=$(sed -n -E "s/.*flutter-version:\ '(.*)'/\1/p" .github/workflows/release.yml
+        | head -n1)
+      - '[[ $flutterVersion ]] || exit 1'
+      - git -C $$flutter$$ checkout -f $flutterVersion
       - export PUB_CACHE=$(pwd)/.pub-cache
       - $$flutter$$/bin/flutter config --no-analytics
       - $$flutter$$/bin/flutter packages pub get
@@ -701,5 +695,5 @@ VercodeOperation:
   - 10 * %c + 2
   - 10 * %c + 3
 UpdateCheckData: pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 1.0.1070
-CurrentVersionCode: 10703
+CurrentVersion: 1.0.1104
+CurrentVersionCode: 11043

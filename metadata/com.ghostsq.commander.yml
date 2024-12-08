@@ -22,6 +22,8 @@ Description: |-
   Requires root: No, but if provided you can remount filesystems and mess around
   with system files.
 
+  Note: Due to missing deps, SFTP server connections authenticated with Kerberos might fail on certain newer devices.
+
 RepoType: git-svn
 Repo: https://svn.code.sf.net/p/ghostcommander/svn/
 
@@ -763,6 +765,30 @@ Builds:
     scanignore:
       - src/main/java/com/ghostsq/commander/adapters/CA.java
 
+  - versionName: 1.64b4
+    versionCode: 467
+    commit: r121
+    gradle:
+      - free
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
+  - versionName: 1.64.1b1
+    versionCode: 469
+    commit: r122
+    gradle:
+      - free
+    prebuild:
+      - cat build.gradle >> build.gradle.root
+      - mv build.gradle.root build.gradle
+      - sed -i -e '/task clean/,/^}/d' -e 's/lint/lintOptions/' build.gradle
+    scanignore:
+      - src/main/java/com/ghostsq/commander/adapters/CA.java
+
 MaintainerNotes: |-
   No commit messages in source repo! No tags. Apks on website can be used to
   confirm a release is real. Commit where AndroidManifest is changed usually
@@ -774,5 +800,5 @@ MaintainerNotes: |-
 
 AutoUpdateMode: None
 UpdateCheckMode: RepoManifest
-CurrentVersion: 1.64b2
-CurrentVersionCode: 465
+CurrentVersion: 1.64.1b1
+CurrentVersionCode: 469

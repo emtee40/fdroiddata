@@ -1851,9 +1851,9 @@ Builds:
     prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
       false/' build.gradle
 
-  - versionName: 2.17.0+free
-    versionCode: 4212101
-    commit: c01a1f01ddf1136b1115aedd3ef668ebc502d341
+  - versionName: 2.17.2+free
+    versionCode: 4212301
+    commit: 26d52906726c74cb4882fdbe5c607f384132fbf4
     gradle:
       - quicksy
       - free
@@ -1861,9 +1861,9 @@ Builds:
     prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
       false/' build.gradle
 
-  - versionName: 2.17.0+free
-    versionCode: 4212102
-    commit: c01a1f01ddf1136b1115aedd3ef668ebc502d341
+  - versionName: 2.17.2+free
+    versionCode: 4212302
+    commit: 26d52906726c74cb4882fdbe5c607f384132fbf4
     gradle:
       - quicksy
       - free
@@ -1871,9 +1871,9 @@ Builds:
     prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
       false/' build.gradle
 
-  - versionName: 2.17.0+free
-    versionCode: 4212103
-    commit: c01a1f01ddf1136b1115aedd3ef668ebc502d341
+  - versionName: 2.17.2+free
+    versionCode: 4212303
+    commit: 26d52906726c74cb4882fdbe5c607f384132fbf4
     gradle:
       - quicksy
       - free
@@ -1881,9 +1881,129 @@ Builds:
     prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
       false/' build.gradle
 
-  - versionName: 2.17.0+free
-    versionCode: 4212104
-    commit: c01a1f01ddf1136b1115aedd3ef668ebc502d341
+  - versionName: 2.17.2+free
+    versionCode: 4212304
+    commit: 26d52906726c74cb4882fdbe5c607f384132fbf4
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.3+free
+    versionCode: 4212401
+    commit: 102bf11fe6adefa96c1b3a6b76edb2864553f8cb
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.3+free
+    versionCode: 4212402
+    commit: 102bf11fe6adefa96c1b3a6b76edb2864553f8cb
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.3+free
+    versionCode: 4212403
+    commit: 102bf11fe6adefa96c1b3a6b76edb2864553f8cb
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.3+free
+    versionCode: 4212404
+    commit: 102bf11fe6adefa96c1b3a6b76edb2864553f8cb
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.4+free
+    versionCode: 4212501
+    commit: 52a9b83869d5b6bf03d9ac37eb4b50b1bb354b0d
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.4+free
+    versionCode: 4212502
+    commit: 52a9b83869d5b6bf03d9ac37eb4b50b1bb354b0d
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.4+free
+    versionCode: 4212503
+    commit: 52a9b83869d5b6bf03d9ac37eb4b50b1bb354b0d
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.4+free
+    versionCode: 4212504
+    commit: 52a9b83869d5b6bf03d9ac37eb4b50b1bb354b0d
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-arm64-v8a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.5+free
+    versionCode: 4212601
+    commit: 9de3211b4dfecdf76f8413734637e156b71faa8c
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-armeabi-v7a-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.5+free
+    versionCode: 4212602
+    commit: 9de3211b4dfecdf76f8413734637e156b71faa8c
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-x86-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.5+free
+    versionCode: 4212603
+    commit: 9de3211b4dfecdf76f8413734637e156b71faa8c
+    gradle:
+      - quicksy
+      - free
+    output: build/outputs/apk/quicksyFree/release/Conversations-*-quicksy-free-x86_64-release-unsigned.apk
+    prebuild: sed -i -e '/MissingTranslation/aabortOnError\ false' -e 's/Apk true/Apk
+      false/' build.gradle
+
+  - versionName: 2.17.5+free
+    versionCode: 4212604
+    commit: 9de3211b4dfecdf76f8413734637e156b71faa8c
     gradle:
       - quicksy
       - free
@@ -1898,5 +2018,5 @@ VercodeOperation:
   - 100 * %c + 2
   - 100 * %c + 3
   - 100 * %c + 4
-CurrentVersion: 2.17.0+free
-CurrentVersionCode: 4212104
+CurrentVersion: 2.17.5+free
+CurrentVersionCode: 4212604

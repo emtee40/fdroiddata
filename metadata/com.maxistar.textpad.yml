@@ -143,7 +143,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.26.2
+    versionCode: 46
+    commit: 13d1449c9465508529b82f73b7cfa95a53f78ac0
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.26.3
+    versionCode: 47
+    commit: 628958223c26ed890fc9ca744af71c9a25d6f066
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.26.1
-CurrentVersionCode: 45
+CurrentVersion: 1.26.3
+CurrentVersionCode: 47

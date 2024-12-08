@@ -286,7 +286,42 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 2.8.0
+    versionCode: 125
+    commit: 162bc86ebe3218f0339200f18e19ea2b8cabaa58
+    subdir: mastodon
+    gradle:
+      - yes
+
+  - versionName: 2.9.0
+    versionCode: 128
+    commit: 357041b99544349da67f3266d6dcee70f0f6f916
+    subdir: mastodon
+    gradle:
+      - yes
+
+  - versionName: 2.9.1
+    versionCode: 129
+    commit: ad2f4791c24f14905bd07329931bc3a05dc3904b
+    subdir: mastodon
+    gradle:
+      - yes
+
+  - versionName: 2.9.2
+    versionCode: 131
+    commit: 2ec3be39d589a7900c068806bbd0d8f01c67a260
+    subdir: mastodon
+    gradle:
+      - yes
+
+  - versionName: 2.9.3
+    versionCode: 132
+    commit: 9ed95cc0d34bcc7703a1948a2244eaf372221d87
+    subdir: mastodon
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.7.3
-CurrentVersionCode: 123
+CurrentVersion: 2.9.3
+CurrentVersionCode: 132

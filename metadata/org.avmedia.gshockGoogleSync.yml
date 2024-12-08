@@ -596,7 +596,49 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '14.3'
+    versionCode: 143
+    commit: 6cbf5d4ba946f2635316340e298a088e5ed481cb
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '20.2'
+    versionCode: 202
+    commit: 23023b1ee06ff56d4c6ec5bb94dd26eed6e7ecbf
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '20.3'
+    versionCode: 203
+    commit: 059de13972797e655563ca691263220e955f9c04
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '20.7'
+    versionCode: 207
+    commit: ddbb3492f7ccfe1b2ab1b8663c9929ecc249f20b
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '20.9'
+    versionCode: 209
+    commit: d3fe18b5cb1cb5acd62649c87fb6ae25e23ded5f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '21.0'
+    versionCode: 210
+    commit: 2dc297329b93d7030fd0811e920f919e1819927a
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '14.2'
-CurrentVersionCode: 142
+CurrentVersion: '21.0'
+CurrentVersionCode: 210

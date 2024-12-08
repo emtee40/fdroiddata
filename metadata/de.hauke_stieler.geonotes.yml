@@ -132,7 +132,21 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.7.0
+    versionCode: 1007000
+    commit: d26d6fb858083a8845515b2858cf325cc07dbef8
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.7.1
+    versionCode: 1007001
+    commit: 99d293e968efef4890347c72027a9075be23695b
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.6.0
-CurrentVersionCode: 1006000
+CurrentVersion: 1.7.1
+CurrentVersionCode: 1007001

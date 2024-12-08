@@ -4,14 +4,14 @@ License: GPL-3.0-only
 AuthorName: Quintin Smith
 AuthorEmail: smith.quintin@protonmail.com
 WebSite: https://burnsomni.net/manuals/pagan
-SourceCode: https://burnsomni.net/git/pagan
-IssueTracker: https://burnsomni.net/issues/pagan
-Donate: https://www.buymeacoffee.com/qfsmith
+SourceCode: https://github.com/quintinfsmith/pagan
+IssueTracker: https://github.com/quintinfsmith/pagan/issues
+Donate: https://ko-fi.com/quintinfsmith
 
 AutoName: Pagan Music Sequencer
 
 RepoType: git
-Repo: https://burnsomni.net/git/pagan.git
+Repo: https://github.com/quintinfsmith/pagan
 
 Builds:
   - versionName: 1.0.1
@@ -426,7 +426,35 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 1.5.9
+    versionCode: 77
+    commit: 34d64961351e566fe805c1acd4131aa58d53bf6f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.10
+    versionCode: 78
+    commit: 53ef797161f4e94984e190c81b596e0e17a8c758
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.11
+    versionCode: 79
+    commit: ebe9cfb8d27e47e152254b892898ee33f26b3c5a
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: 1.5.12
+    versionCode: 80
+    commit: 50915f486906a1029424c08f919b44ad97ebee39
+    subdir: app
+    gradle:
+      - yes
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.5.7
-CurrentVersionCode: 75
+CurrentVersion: 1.5.12
+CurrentVersionCode: 80

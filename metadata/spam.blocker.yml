@@ -159,9 +159,37 @@ Builds:
     gradle:
       - yes
 
+  - versionName: '3.2'
+    versionCode: 302
+    commit: 19f1ec3a5cee938bf437634ebb1646b3fcc2d31f
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.3'
+    versionCode: 303
+    commit: 5b31ef8c4941c4c1a925f6fd2be98bea4ab3e362
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.4'
+    versionCode: 304
+    commit: c0c3c7a360b2f902bbf83bd949e29edfdebdf0d6
+    subdir: app
+    gradle:
+      - yes
+
+  - versionName: '3.5'
+    versionCode: 305
+    commit: 2bc1c24bf6c0ed33eae86ca3b8a4de98f499519a
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: 7b1ce727856f3427eab1fadfad6c9730cd4e6ba201661547f009206377dffb58
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: '3.0'
-CurrentVersionCode: 300
+CurrentVersion: '3.5'
+CurrentVersionCode: 305
