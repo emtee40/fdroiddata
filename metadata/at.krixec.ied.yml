@@ -17,7 +17,8 @@ Builds:
     commit: 2a290a87d11c1a24fba0f97db4ebcabdc44e3afa
     sudo:
       - apt-get update
-      - apt-get install -y clang pkgconf scons
+      - apt-get install -y clang pkgconf scons openjdk-17-jdk-headless
+      - update-java-alternatives -a --jre-headless
     output: IED.apk
     srclibs:
       - Godot@4.3-stable
