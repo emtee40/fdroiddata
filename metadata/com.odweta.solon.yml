@@ -14,7 +14,7 @@ AutoName: Solon
 
 RepoType: git
 Repo: https://gitlab.com/Odweta/solon.git
-Binaries: https://gitlab.com/Odweta/solon/-/releases/%v/downloads/home/thinker/Code/AndroidStudioProjects/solonJetpack/release/app-release.apk
+Binaries: https://gitlab.com/Odweta/solon/-/releases/%v/downloads/app-release.apk
 
 Builds:
   - versionName: 2.0.3
@@ -32,7 +32,7 @@ Builds:
 
   - versionName: '2.1'
     versionCode: 204
-    commit: 98b6b72e819eec8bbc3d3b6ae1e401d5bbc1e28c
+    commit: c6646e554fc3e8d1b2fe0fa76b11e2c2544b6e32
     subdir: mobile/app
     gradle:
       - yes
