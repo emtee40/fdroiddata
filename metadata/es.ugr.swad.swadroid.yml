@@ -18,10 +18,6 @@ Builds:
     versionCode: 1005014
     commit: 1.5.14
     subdir: SWADroid
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-17-jdk-headless wget
-      - update-alternatives --auto java
     gradle:
       - yes
     prebuild:
