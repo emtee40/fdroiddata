@@ -22,8 +22,6 @@ Builds:
     gradle:
       - yes
     rm:
-      - AndroidLibV2rayLite
-    scandelete:
       - V2rayNG/app/libs
     build:
       - git clone https://github.com/2dust/AndroidLibV2rayLite
