@@ -25,10 +25,10 @@ Builds:
       - make all
       - curl -L -o parse.awk https://gist.githubusercontent.com/xiaokangwang/06268fb23034ed94bc301880e862da09/raw/afd95cbbe2f8c1d9e7b0277b7c5ef39af756a6ee/parse.awk
       - curl -L -o reduce.awk https://gist.githubusercontent.com/xiaokangwang/4684bdb5c3415b943f52aa4803386480/raw/b46dab1cc60f02c0d87f88f01e27157034218faa/out.awk
-      - "sdkmanager --verbose --list | awk -f parse.awk > ~/package_to_install\n"
+      - sdkmanager --verbose --list | awk -f parse.awk > ~/package_to_install
       - readarray -t filenames < ~/package_to_install
       - cat ~/package_to_install
-      - "yes | sdkmanager --verbose \"${filenames[@]}\" | awk -f reduce.awk\n"
+      - yes | sdkmanager --verbose "${filenames[@]}" | awk -f reduce.awk
       - sdkmanager "ndk-bundle"
       - go install -v golang.org/x/mobile/cmd/...
       - make BuildMobile
