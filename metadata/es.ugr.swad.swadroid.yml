@@ -17,27 +17,21 @@ Builds:
   - versionName: 1.5.14
     versionCode: 1005014
     commit: 1.5.14
+    submodules: true
     subdir: SWADroid
     sudo:
       - apt-get update
       - apt-get install -y maven
     gradle:
       - yes
-    srclibs:
-      - ksoap2-android@3.6.4
+    scandelete:
+      - ksoap2-android
     prebuild:
-      - sed -i -e '/sonatype/d' -e "/^repositories {/a flatDir { dirs 'libs' }" ../build.gradle
-      - sed -i "s/'com.google.code.ksoap2-android:ksoap2-android:3.6.4'/fileTree(dir:\
-        'libs',\ include:\ '*.jar')/g" build.gradle
-      - sed -i -e 's/>1.5</>1.7</g' $$ksoap2-android$$/pom.xml
-      - sed -i -e 's/>1.6</>1.7</g' $$ksoap2-android$$/ksoap2-okhttp/pom.xml
+      - sed -i -e 's/>1.5</>1.8</g' ../ksoap2-android/pom.xml
+      - sed -i -e 's/>1.6</>1.8</g' ../ksoap2-android/ksoap2-okhttp/pom.xml
     build:
-      - pushd $$ksoap2-android$$
-      - ./mvnw clean install
-      - popd
-      - mkdir -p libs
-      - mv $$ksoap2-android$$/ksoap2-android-assembly/target/ksoap2-android-assembly-3.6.4-jar-with-dependencies.jar
-        libs/ksoap2-android-3.6.4.jar
+      - cd ../ksoap2-android
+      - mvn clean install
 
 AllowedAPKSigningKeys: 715d6d6d93736cd9e1ec7503af1318afd6f8bd148f115c1a35193f0198e87885
 
