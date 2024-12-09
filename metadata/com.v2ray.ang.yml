@@ -32,12 +32,14 @@ Builds:
       - mv libs ../
       - cd ../
       - git clone https://github.com/2dust/AndroidLibXrayLite && cd AndroidLibXrayLite
+      - go mod download github.com/xtls/xray-core
+      - go mod tidy -v
       - go install golang.org/x/mobile/cmd/...
       - export PATH=$PATH:~/go/bin
       - gomobile init
-      - go mod tidy -v
       - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
       - mv *.aar *.jar ../libs
+
     ndk: r27
 
   - versionName: 1.9.24
@@ -61,10 +63,11 @@ Builds:
       - mv libs ../
       - cd ../
       - git clone https://github.com/2dust/AndroidLibXrayLite && cd AndroidLibXrayLite
+      - go mod download github.com/xtls/xray-core
+      - go mod tidy -v
       - go install golang.org/x/mobile/cmd/...
       - export PATH=$PATH:~/go/bin
       - gomobile init
-      - go mod tidy -v
       - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
       - mv *.aar *.jar ../libs
     ndk: r27
