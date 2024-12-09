@@ -52,7 +52,7 @@ Builds:
       - mv $repo/anynotedotai com.MH0386.AnyNoteDotAI
     antifeatures:
       - NonFreeNet
-      
+
 AllowedAPKSigningKeys: a444ac204f3e04d1f01909ecc67146123b7dc8e02435994a1de9a31817f99ad9
 
 AutoUpdateMode: Version
