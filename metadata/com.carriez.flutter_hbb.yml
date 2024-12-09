@@ -332,9 +332,9 @@ Builds:
     prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" x86_64 prebuild
     build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" x86_64 build
 
-  - versionName: 1.3.4
-    versionCode: 103040001
-    commit: 1.3.4
+  - versionName: 1.3.5
+    versionCode: 103050001
+    commit: 1.3.5
     timeout: 14400
     sudo:
       - apt-get update
@@ -353,9 +353,9 @@ Builds:
     prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" armeabi-v7a prebuild
     build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" armeabi-v7a build
 
-  - versionName: 1.3.4
-    versionCode: 103040002
-    commit: 1.3.4
+  - versionName: 1.3.5
+    versionCode: 103050002
+    commit: 1.3.5
     timeout: 14400
     sudo:
       - apt-get update
@@ -374,9 +374,9 @@ Builds:
     prebuild: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" arm64-v8a prebuild
     build: flutter/build_fdroid.sh "$$VERSION$$" "$$VERCODE$$" arm64-v8a build
 
-  - versionName: 1.3.4
-    versionCode: 103040003
-    commit: 1.3.4
+  - versionName: 1.3.5
+    versionCode: 103050003
+    commit: 1.3.5
     timeout: 14400
     sudo:
       - apt-get update
@@ -430,5 +430,5 @@ VercodeOperation:
   - 100 * %c + 2
   - 100 * %c + 3
 UpdateCheckData: https://github.com/rustdesk/rustdesk/releases/download/fdroid-version/rustdesk-version.txt|versionCode=(\d+)|.|versionName=(.*)
-CurrentVersion: 1.3.4
-CurrentVersionCode: 103040003
+CurrentVersion: 1.3.5
+CurrentVersionCode: 103050003
