@@ -38,7 +38,34 @@ Builds:
       - mv libs ../
     ndk: r27
 
+  - versionName: 1.9.24
+    versionCode: 620
+    commit: 5124266346743ed5dbc2d08bc35b9f3885f0430f
+    subdir: V2rayNG/app
+    sudo:
+      - apt-get update
+      - apt-get install -y make wget tar curl
+      - apt-get install -y -t bookworm-backports golang-go
+    gradle:
+      - yes
+    rm:
+      - V2rayNG/app/libs
+    build:
+      - git clone https://github.com/2dust/AndroidLibV2rayLite
+      - cd AndroidLibV2rayLite
+      - make all
+      - sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      - go install golang.org/x/mobile/cmd/...
+      - export PATH=$PATH:~/go/bin
+      - gomobile init
+      - gomobile bind -androidapi 21 -v -ldflags='-s -w' github.com/2dust/AndroidLibV2rayLite
+      - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
+      - tar -xvzf libtun2socks.so.tgz
+      - mv *.aar *.jar libs
+      - mv libs ../
+    ndk: r27
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.9.8
-CurrentVersionCode: 602
+CurrentVersion: 1.9.24
+CurrentVersionCode: 620
