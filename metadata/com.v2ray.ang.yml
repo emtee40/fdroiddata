@@ -29,11 +29,11 @@ Builds:
       - git clone https://github.com/2dust/AndroidLibV2rayLite
       - cd AndroidLibV2rayLite
       - make all
-      - sdkmanager "platforms;android-34" "build-tools;34.0.0" "ndk-bundle;r19"
+      - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - go install golang.org/x/mobile/cmd/...
       - export PATH=$PATH:~/go/bin
       - gomobile init
-      - gomobile bind -androidapi 19 -v -ldflags='-s -w' github.com/2dust/AndroidLibV2rayLite
+      - gomobile bind -androidapi 21 -v -ldflags='-s -w' github.com/2dust/AndroidLibV2rayLite
       - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - mv *.aar *.jar libs
