@@ -21,6 +21,7 @@ Builds:
       - apt-get install -y -t bookworm-backports golang-go
     gradle:
       - yes
+    output: build/com.v2ray.ang/V2rayNG/app/build/outputs/apk/**/*.apk
     rm:
       - V2rayNG/app/libs
     build:
@@ -52,6 +53,7 @@ Builds:
       - apt-get install -y -t bookworm-backports golang-go
     gradle:
       - yes
+    output: build/com.v2ray.ang/V2rayNG/app/build/outputs/apk/**/*.apk
     rm:
       - V2rayNG/app/libs
     build:
