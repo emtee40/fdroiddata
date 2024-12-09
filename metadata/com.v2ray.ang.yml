@@ -39,7 +39,6 @@ Builds:
       - gomobile init
       - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
       - mv *.aar *.jar ../libs
-
     ndk: r27
 
   - versionName: 1.9.24
