@@ -17,18 +17,18 @@ Builds:
   - versionName: 1.5.14
     versionCode: 1005014
     commit: 1.5.14
-    submodules: true
     subdir: SWADroid
+    submodules: true
     sudo:
       - apt-get update
       - apt-get install -y maven
     gradle:
       - yes
-    scandelete:
-      - ksoap2-android
     prebuild:
       - sed -i -e 's/>1.5</>1.8</g' ../ksoap2-android/pom.xml
       - sed -i -e 's/>1.6</>1.8</g' ../ksoap2-android/ksoap2-okhttp/pom.xml
+    scandelete:
+      - ksoap2-android
     build:
       - cd ../ksoap2-android
       - mvn clean install
