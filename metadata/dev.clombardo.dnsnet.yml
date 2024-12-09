@@ -1,0 +1,27 @@
+Categories:
+  - Connectivity
+  - Internet
+License: GPL-3.0-or-later
+AuthorName: Charles Lombardo
+AuthorEmail: clombardo169@gmail.com
+SourceCode: https://github.com/t895/DNSNet
+IssueTracker: https://github.com/t895/DNSNet/issues
+
+AutoName: DNSNet
+
+RepoType: git
+Repo: https://github.com/t895/DNSNet.git
+
+Builds:
+  - versionName: 1.0.10
+    versionCode: 24
+    commit: 1.0.10
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i '/^        bundletool {/,/^        }/d' ./build.gradle.kts
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.10
+CurrentVersionCode: 24
