@@ -17,7 +17,7 @@ Builds:
     subdir: V2rayNG/app
     sudo:
       - apt-get update
-      - apt-get install -y make wget
+      - apt-get install -y make wget tar
       - apt-get install -y -t bookworm-backports golang-go
     init:
       - git clone https://github.com/2dust/AndroidLibV2rayLite
