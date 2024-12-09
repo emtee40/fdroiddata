@@ -24,18 +24,20 @@ Builds:
     rm:
       - V2rayNG/app/libs
     build:
-      - git clone https://github.com/2dust/AndroidLibV2rayLite
-      - cd AndroidLibV2rayLite
-      - make all
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
+      - make all
+      - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
+      - tar -xvzf libtun2socks.so.tgz
+      - mv libs ../
+      - cd ../
+      - git clone https://github.com/2dust/AndroidLibXrayLite && cd AndroidLibXrayLite
       - go install golang.org/x/mobile/cmd/...
       - export PATH=$PATH:~/go/bin
       - gomobile init
-      - gomobile bind -androidapi 21 -v -ldflags='-s -w' github.com/2dust/AndroidLibV2rayLite
-      - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
-      - tar -xvzf libtun2socks.so.tgz
-      - mv *.aar *.jar libs
-      - mv libs ../
+      - go mod tidy -v
+      - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
+      - mv *.aar *.jar ../libs
     ndk: r27
 
   - versionName: 1.9.24
@@ -51,18 +53,20 @@ Builds:
     rm:
       - V2rayNG/app/libs
     build:
-      - git clone https://github.com/2dust/AndroidLibV2rayLite
-      - cd AndroidLibV2rayLite
-      - make all
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
+      - make all
+      - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
+      - tar -xvzf libtun2socks.so.tgz
+      - mv libs ../
+      - cd ../
+      - git clone https://github.com/2dust/AndroidLibXrayLite && cd AndroidLibXrayLite
       - go install golang.org/x/mobile/cmd/...
       - export PATH=$PATH:~/go/bin
       - gomobile init
-      - gomobile bind -androidapi 21 -v -ldflags='-s -w' github.com/2dust/AndroidLibV2rayLite
-      - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
-      - tar -xvzf libtun2socks.so.tgz
-      - mv *.aar *.jar libs
-      - mv libs ../
+      - go mod tidy -v
+      - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
+      - mv *.aar *.jar ../libs
     ndk: r27
 
 AutoUpdateMode: Version
