@@ -37,7 +37,6 @@ Builds:
       - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - mv *.aar *.jar libs
-      - mv libs ../V2rayNG/app
     ndk: r27
 
 AutoUpdateMode: Version
