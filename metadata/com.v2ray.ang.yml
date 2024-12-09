@@ -17,7 +17,7 @@ Builds:
     subdir: V2rayNG/app
     sudo:
       - apt-get update
-      - apt-get install -y make wget tar curl
+      - apt-get install -y make wget tar curl unzip
       - apt-get install -y -t bookworm-backports golang-go
     gradle:
       - yes
@@ -32,6 +32,7 @@ Builds:
       - mv libs ../
       - cd ../
       - git clone https://github.com/2dust/AndroidLibXrayLite && cd AndroidLibXrayLite
+      - mkdir data && bash gen_assets.sh
       - go mod download github.com/xtls/xray-core
       - go mod tidy -v
       - go install golang.org/x/mobile/cmd/...
@@ -62,6 +63,7 @@ Builds:
       - mv libs ../
       - cd ../
       - git clone https://github.com/2dust/AndroidLibXrayLite && cd AndroidLibXrayLite
+      - mkdir data && bash gen_assets.sh
       - go mod download github.com/xtls/xray-core
       - go mod tidy -v
       - go install golang.org/x/mobile/cmd/...
