@@ -17,8 +17,11 @@ Builds:
     subdir: V2rayNG/app
     gradle:
       - yes
-    prebuild:
-      - git clone https://github.com/2dust/AndroidLibV2rayLite
+    prebuild: git clone https://github.com/2dust/AndroidLibV2rayLite
+    scandelete:
+      - V2rayNG/app/libs
+      - AndroidLibV2rayLite
+    build:
       - cd AndroidLibV2rayLite
       - make all
       - make downloadGoMobile
@@ -27,9 +30,6 @@ Builds:
       - tar -xvzf libtun2socks.so.tgz
       - mv *.aar *.jar libs
       - mv libs ../V2rayNG/app
-    scandelete:
-      - V2rayNG/app/libs
-      - AndroidLibV2rayLite
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
