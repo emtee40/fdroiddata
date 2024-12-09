@@ -257,14 +257,14 @@ Builds:
     gradle:
       - fdroid
 
-  - versionName: 1.22.4
-    versionCode: 12204
-    commit: 419a8a8ff8f45f571842ea68c3632b5ecda67110
+  - versionName: 1.22.5
+    versionCode: 12205
+    commit: 702e13c613f31049d65fa22bb16f501390deea8d
     subdir: app
     gradle:
       - fdroid
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags \d+\.\d+\.\d+
-CurrentVersion: 1.22.4
-CurrentVersionCode: 12204
+CurrentVersion: 1.22.5
+CurrentVersionCode: 12205
