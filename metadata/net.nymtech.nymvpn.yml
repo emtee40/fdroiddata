@@ -19,9 +19,9 @@ RepoType: git
 Repo: https://github.com/nymtech/nym-vpn-client.git
 
 Builds:
-  - versionName: v1.1.4
-    versionCode: 11400
-    commit: 29a3ce52e2445b24e49ad5d556bbc2de58d24f39
+  - versionName: v1.1.5
+    versionCode: 11500
+    commit: 88bb5d52510fe19e16c0f191782fb59bae2e2c3f
     subdir: nym-vpn-android
     sudo:
       - apt-get update
@@ -61,5 +61,5 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags nym-vpn-android-v\d+\.\d+\.\d+$
 UpdateCheckData: nym-vpn-android/buildSrc/src/main/kotlin/Constants.kt|VERSION_CODE
   = (\d+)|.|VERSION_NAME = "(.+)"
-CurrentVersion: nym-vpn-android-v1.1.4
-CurrentVersionCode: 11400
+CurrentVersion: nym-vpn-android-v1.1.5
+CurrentVersionCode: 11500
