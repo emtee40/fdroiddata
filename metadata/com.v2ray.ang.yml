@@ -19,11 +19,15 @@ Builds:
       - apt-get update
       - apt-get install -y make wget tar curl
       - apt-get install -y -t bookworm-backports golang-go
-    init:
+    gradle:
+      - yes
+    scandelete:
+      - AndroidLibV2rayLite
+    build:
       - git clone https://github.com/2dust/AndroidLibV2rayLite
       - cd AndroidLibV2rayLite
       - make all
-      - sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      - sdkmanager "platforms;android-34" "build-tools;34.0.0" "ndk-bundle;r19"
       - go install golang.org/x/mobile/cmd/...
       - export PATH=$PATH:~/go/bin
       - gomobile init
@@ -32,13 +36,6 @@ Builds:
       - tar -xvzf libtun2socks.so.tgz
       - mv *.aar *.jar libs
       - mv libs ../V2rayNG/app
-    gradle:
-      - yes
-    scanignore:
-      - V2rayNG/app/libs
-    scandelete:
-      - AndroidLibV2rayLite
-    ndk: r19
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
