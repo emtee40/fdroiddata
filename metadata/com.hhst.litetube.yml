@@ -1,0 +1,25 @@
+Categories:
+  - Internet
+  - Multimedia
+License: GPL-3.0-only
+AuthorEmail: hhstyyds520@gmail.com
+SourceCode: https://github.com/HydeYYHH/litetube
+IssueTracker: https://github.com/HydeYYHH/litetube/issues
+
+AutoName: litetube
+
+RepoType: git
+Repo: https://github.com/HydeYYHH/litetube
+
+Builds:
+  - versionName: '1.2'
+    versionCode: 3
+    commit: v1.2
+    subdir: app
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.2'
+CurrentVersionCode: 3
