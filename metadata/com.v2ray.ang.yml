@@ -25,9 +25,8 @@ Builds:
       - make all
       - sdkmanager "ndk-bundle;r27"
       - go install golang.org/x/mobile/cmd/...
-      - echo $PATH
-      - gomobile init
-      - gomobile bind -androidapi 19 -v -ldflags='-s -w' github.com/2dust/AndroidLibV2rayLite
+      - ~/go/bin/gomobile init
+      - ~/go/bin/gomobile bind -androidapi 19 -v -ldflags='-s -w' github.com/2dust/AndroidLibV2rayLite
       - NDK=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - mv *.aar *.jar libs
