@@ -15,6 +15,10 @@ Builds:
     versionCode: 602
     commit: 5b4f51981e27f053334d26bea6c720f474ffe18a
     subdir: V2rayNG/app
+    sudo:
+      - apt-get update
+      - apt-get install -y make
+      - apt-get install -y -t bookworm-backports golang-go
     init:
       - git clone https://github.com/2dust/AndroidLibV2rayLite
       - cd AndroidLibV2rayLite
