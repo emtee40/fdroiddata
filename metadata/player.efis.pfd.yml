@@ -376,14 +376,14 @@ Builds:
     gradle:
       - yes
 
-  - versionName: '6.24'
-    versionCode: 64
-    commit: cf6e6884d4ef07a99de5cfc28dde7110a0024117
+  - versionName: '6.23'
+    versionCode: 63
+    commit: EFIS_6.23
     subdir: app
     gradle:
       - yes
 
-AutoUpdateMode: Version
+AutoUpdateMode: Version EFIS_%c
 UpdateCheckMode: Tags ^EFIS
-CurrentVersion: '6.24'
-CurrentVersionCode: 64
+CurrentVersion: '6.23'
+CurrentVersionCode: 63
