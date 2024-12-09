@@ -23,7 +23,7 @@ Builds:
       - git clone https://github.com/2dust/AndroidLibV2rayLite
       - cd AndroidLibV2rayLite
       - make all
-      - sdkmanager "ndk-bundle;r19"
+      - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - go install golang.org/x/mobile/cmd/...
       - export PATH=$PATH:~/go/bin
       - gomobile init
