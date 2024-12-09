@@ -169,9 +169,9 @@ Builds:
     postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
       'META-INF/services/*'
 
-  - versionName: 2.0.0
-    versionCode: 31
-    commit: 9a14773c93febce3565753a1bfa98bfe5004c7b1
+  - versionName: 2.0.1
+    versionCode: 32
+    commit: f4174e5a18919344f03497d7bd8db2d7f945f2ec
     subdir: app
     gradle:
       - yes
@@ -184,5 +184,5 @@ AllowedAPKSigningKeys: 06dd0cd0942f0c8b29fb2f19f6d4853eb7d69df0c98352197f24ade17
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.0.0
-CurrentVersionCode: 31
+CurrentVersion: 2.0.1
+CurrentVersionCode: 32
