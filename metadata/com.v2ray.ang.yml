@@ -23,7 +23,7 @@ Builds:
       - git clone https://github.com/2dust/AndroidLibV2rayLite
       - cd AndroidLibV2rayLite
       - make all
-      - sdkmanager "ndk-bundle"
+      - sdkmanager "ndk-bundle;r27"
       - go install -v golang.org/x/mobile/cmd/...
       - make BuildMobile
       - NDK=$$NDK$$ bash compile-tun2socks.sh
