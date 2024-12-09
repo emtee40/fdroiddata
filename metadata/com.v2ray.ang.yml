@@ -34,10 +34,11 @@ Builds:
       - export PATH=$PATH:~/go/bin
       - gomobile init
       - gomobile bind -androidapi 19 -v -ldflags='-s -w' github.com/2dust/AndroidLibV2rayLite
-      - NDK=$$NDK$$ bash compile-tun2socks.sh
+      - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - mv *.aar *.jar libs
       - mv libs ../V2rayNG/app
+    ndk: r27
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
