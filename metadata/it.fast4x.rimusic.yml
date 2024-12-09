@@ -719,9 +719,9 @@ Builds:
     postbuild: $$reproducible-apk-tools$$/inplace-fix.py --zipalign fix-newlines $$OUT$$
       'META-INF/services/*' 'res/m0.html' 'res/lM.json' 'assets/composeResources/rimusic.composeapp.generated.resources/drawable/*.xml'
 
-  - versionName: 0.6.63
-    versionCode: 73
-    commit: 6f86af67676ec0f4bfaa23a5003c29448c672c70
+  - versionName: 0.6.63.1
+    versionCode: 74
+    commit: 522d4b779727ed3a3ebf00b06c759466b4a6d773
     subdir: composeApp
     sudo:
       - echo "deb https://deb.debian.org/debian trixie main" > /etc/apt/sources.list.d/trixie.list
@@ -748,5 +748,5 @@ AllowedAPKSigningKeys: a1ba8bd74af8f92cb3719a072113a218cfaec02bce2b736a280e31d8c
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 0.6.63
-CurrentVersionCode: 73
+CurrentVersion: 0.6.63.1
+CurrentVersionCode: 74
