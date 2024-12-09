@@ -23,6 +23,7 @@ Builds:
       - yes
     scandelete:
       - AndroidLibV2rayLite
+      - V2rayNG/app/libs
     build:
       - git clone https://github.com/2dust/AndroidLibV2rayLite
       - cd AndroidLibV2rayLite
