@@ -15,21 +15,22 @@ Builds:
     versionCode: 602
     commit: 5b4f51981e27f053334d26bea6c720f474ffe18a
     subdir: V2rayNG/app
-    gradle:
-      - yes
-    prebuild: git clone https://github.com/2dust/AndroidLibV2rayLite
-    scandelete:
-      - V2rayNG/app/libs
-      - AndroidLibV2rayLite
-    build:
+    init:
+      - git clone https://github.com/2dust/AndroidLibV2rayLite
       - cd AndroidLibV2rayLite
       - make all
       - make downloadGoMobile
       - make BuildMobile
-      - bash compile-tun2socks.sh
+      - NDK=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - mv *.aar *.jar libs
       - mv libs ../V2rayNG/app
+    gradle:
+      - yes
+    scanignore:
+      - V2rayNG/app/libs
+    scandelete:
+      - AndroidLibV2rayLite
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
