@@ -42,13 +42,12 @@ Builds:
       - echo $DEBUG_KEYSTORE_PATH >> ./.config/godot/editor_settings-4.3.tres
       - echo 'export/android/debug_keystore_user = "androiddebugkey"' >> ./.config/godot/editor_settings-4.3.tres
       - echo 'export/android/debug_keystore_pass = "android"' >> ./.config/godot/editor_settings-4.3.tres
-      - cd godot
+      - pushd $$Godot$$
       - scons -j `nproc` platform=linuxbsd target=editor
       - scons -j `nproc` platform=android target=template_release arch=arm64
       - cd platform/android/java
       - gradle generateGodotTemplates
       - popd
-      - cd ..
       - cp godot/bin/android_source.zip .
       - mkdir android
       - unzip android_source.zip -d android/build
