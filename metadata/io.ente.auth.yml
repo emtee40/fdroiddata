@@ -2089,9 +2089,9 @@ Builds:
       - flutter/bin/flutter build apk --flavor fdroid -t lib/main.dart
     ndk: r21
 
-  - versionName: 4.1.5
-    versionCode: 415
-    commit: 7a9b30ac7a077ff6f34380c1a8a2a36c4881d1b2
+  - versionName: 4.1.6
+    versionCode: 416
+    commit: 92c476cb6f3cb2262673008ce5e2bfbc1c1279f6
     subdir: auth
     submodules: true
     sudo:
@@ -2144,5 +2144,5 @@ Builds:
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^auth-v
 UpdateCheckData: auth/pubspec.yaml|version:\s.+\+(\d+)|.|version:\s(.+)\+
-CurrentVersion: 4.1.5
-CurrentVersionCode: 415
+CurrentVersion: 4.1.6
+CurrentVersionCode: 416
