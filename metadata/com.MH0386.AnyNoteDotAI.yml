@@ -54,9 +54,8 @@ Builds:
       - export RUST_BACKTRACE=1
       - cd ..
       - mv com.MH0386.AnyNoteDotAI $repo/anynotedotai
-      - export HOME=/home/runner
       - pushd $repo/anynotedotai
-      # - source $HOME/.cargo/env
+      - source $HOME/.cargo/env
       - export PUB_CACHE=$(pwd)/.pub-cache
       - fromdos .isar/tool/build_android.sh
       - bash ./scripts/isar/fdroid_build_isar.sh x64
