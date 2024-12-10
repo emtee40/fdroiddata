@@ -28,7 +28,6 @@ Builds:
       - apt-get install -y libdbus-1-dev
       - apt-get install -y libmnl-dev libnftnl-dev protobuf-compiler make
     init: bash ../scripts/fdroid-init.sh
-    output: build/outputs/apk/fdroid/release/nymvpn-fdroid-release-*.apk
     rm:
       - nym-vpn-apple
       - nym-vpn-app
