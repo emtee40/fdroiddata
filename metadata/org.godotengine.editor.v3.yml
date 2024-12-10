@@ -306,7 +306,7 @@ Builds:
     output: platform/android/java/editor/build/outputs/apk/release/android_editor-release-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
-      - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
+      - ln -sf $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
       - cd platform/android/java
       - sed -i 's/url repoUrl//' app/build.gradle
       - sed -i 's/editorBuildNumber\ =\ 0/editorBuildNumber\ =\ 0/' editor/build.gradle
@@ -329,7 +329,7 @@ Builds:
     output: platform/android/java/editor/build/outputs/apk/release/android_editor-release-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
-      - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
+      - ln -sf $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
       - cd platform/android/java
       - sed -i 's/url repoUrl//' app/build.gradle
       - sed -i 's/editorBuildNumber\ =\ 0/editorBuildNumber\ =\ 0/' editor/build.gradle
@@ -352,7 +352,7 @@ Builds:
     output: platform/android/java/editor/build/outputs/apk/release/android_editor-release-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
-      - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
+      - ln -sf $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
       - cd platform/android/java
       - sed -i 's/url repoUrl//' app/build.gradle
       - sed -i 's/editorBuildNumber\ =\ 0/editorBuildNumber\ =\ 0/' editor/build.gradle
@@ -375,7 +375,7 @@ Builds:
     output: platform/android/java/editor/build/outputs/apk/release/android_editor-release-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
-      - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
+      - ln -sf $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
       - cd platform/android/java
       - sed -i 's/url repoUrl//' app/build.gradle
       - sed -i 's/editorBuildNumber\ =\ 0/editorBuildNumber\ =\ 0/' editor/build.gradle
