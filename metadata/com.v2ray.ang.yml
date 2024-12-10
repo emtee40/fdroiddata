@@ -19,6 +19,8 @@ Builds:
       - apt-get update
       - apt-get install -y make wget tar curl
       - apt-get install -y -t bookworm-backports golang-go
+    patch:
+      - abiFilters.patch
     gradle:
       - yes
     rm:
@@ -56,6 +58,8 @@ Builds:
       - apt-get update
       - apt-get install -y make wget tar curl
       - apt-get install -y -t bookworm-backports golang-go
+    patch:
+      - abiFilters.patch
     gradle:
       - yes
     rm:
@@ -93,6 +97,8 @@ Builds:
       - apt-get update
       - apt-get install -y make wget tar curl
       - apt-get install -y -t bookworm-backports golang-go
+    patch:
+      - abiFilters.patch
     gradle:
       - yes
     rm:
@@ -130,6 +136,8 @@ Builds:
       - apt-get update
       - apt-get install -y make wget tar curl
       - apt-get install -y -t bookworm-backports golang-go
+    patch:
+      - abiFilters.patch
     gradle:
       - yes
     rm:
