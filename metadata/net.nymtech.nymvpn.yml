@@ -22,7 +22,7 @@ Builds:
   - versionName: v1.1.5
     versionCode: 11500
     commit: 88bb5d52510fe19e16c0f191782fb59bae2e2c3f
-    subdir: nym-vpn-android
+    subdir: nym-vpn-android/app
     sudo:
       - apt-get update
       - apt-get install -y libdbus-1-dev
