@@ -1,0 +1,41 @@
+Categories:
+  - Science & Education
+License: GPL-3.0-or-later
+AuthorName: Juan Miguel Boyero Corral
+AuthorEmail: swadroid@gmail.com
+SourceCode: https://git.cuernodehipnos.es/Marown/SWADroid
+IssueTracker: https://git.cuernodehipnos.es/Marown/SWADroid/issues
+Changelog: https://git.cuernodehipnos.es/Marown/SWADroid/releases
+
+AutoName: SWADroid
+
+RepoType: git
+Repo: https://git.cuernodehipnos.es/Marown/SWADroid.git
+Binaries: https://git.cuernodehipnos.es/Marown/SWADroid/releases/download/%v/SWADroid-release.apk
+
+Builds:
+  - versionName: 1.5.14
+    versionCode: 1005014
+    commit: 1.5.14
+    subdir: SWADroid
+    submodules: true
+    sudo:
+      - apt-get update
+      - apt-get install -y maven
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e 's/>1.5</>1.8</g' ../ksoap2-android/pom.xml
+      - sed -i -e 's/>1.6</>1.8</g' ../ksoap2-android/ksoap2-okhttp/pom.xml
+    scandelete:
+      - ksoap2-android
+    build:
+      - cd ../ksoap2-android
+      - mvn clean install
+
+AllowedAPKSigningKeys: 715d6d6d93736cd9e1ec7503af1318afd6f8bd148f115c1a35193f0198e87885
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.5.14
+CurrentVersionCode: 1005014
