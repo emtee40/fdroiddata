@@ -11,14 +11,14 @@ RepoType: git
 Repo: https://github.com/Bartixxx32/Opflashcontrol-app
 
 Builds:
-  - versionName: 1.0.3
-    versionCode: 4
-    commit: v1.0.3
+  - versionName: 1.0.5
+    versionCode: 6
+    commit: v1.0.5
     subdir: app
     gradle:
       - yes
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.3
-CurrentVersionCode: 4
+CurrentVersion: 1.0.5
+CurrentVersionCode: 6
