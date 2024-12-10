@@ -34,6 +34,12 @@ Builds:
       - nym-vpn-apple
       - nym-vpn-app
       - proto
+    scanignore:
+      - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
+      - android/app/build/extraJni
+      - nym-vpn-core/target
+      - build/android-go-path
+      - build/lib
     build:
       - echo "Building WireGuard dep"
       - source "$HOME/.cargo/env"
@@ -43,18 +49,12 @@ Builds:
       - bash ../../wireguard/libwg/build-android.sh
       - (cd ../../nym-vpn-core/crates/nym-vpn-lib; cargo ndk -t arm64-v8a -o ../../../nym-vpn-android/nym-vpn-client/src/main/jniLibs
         build --release)
-      - (cd ../../nym-vpn-core; cargo run --bin uniffi-bindgen generate --library ./target/aarch64-linux-android/release/libnym_vpn_lib.so  --language
-        kotlin --out-dir ../nym-vpn-android/nym-vpn-client/src/main/java/net/nymtech/vpn
-        -n)
+      - (cd ../../nym-vpn-core; cargo run --bin uniffi-bindgen generate --library
+        ./target/aarch64-linux-android/release/libnym_vpn_lib.so  --language kotlin
+        --out-dir ../nym-vpn-android/nym-vpn-client/src/main/java/net/nymtech/vpn
       - cargo license -j --avoid-dev-deps --current-dir ../../nym-vpn-core/crates/nym-vpn-lib
         --filter-platform aarch64-linux-android --avoid-build-deps > ./nym-vpn-client/src/main/assets/licenses_rust.json
       - ./gradlew assembleFdroidRelease
-    scanignore:
-      - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
-      - android/app/build/extraJni
-      - nym-vpn-core/target
-      - build/android-go-path
-      - build/lib
     ndk: r25c
 
 AutoUpdateMode: None
