@@ -831,7 +831,8 @@ Builds:
       - ../../build-apk.sh --fdroid
     ndk: r25c
 
-AutoUpdateMode: None
-UpdateCheckMode: None
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^android/[0-9]{4}\.[0-9]+$
+UpdateCheckData: dist-assets/android-version-code.txt|(\d+)|dist-assets/android-version-name.txt|(.+)
 CurrentVersion: '2024.9'
 CurrentVersionCode: 24090099
