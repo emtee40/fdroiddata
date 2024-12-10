@@ -29,6 +29,7 @@ Builds:
       - apt-get install -y libmnl-dev libnftnl-dev protobuf-compiler make
     gradle:
       - fdroid
+    init: bash ../scripts/fdroid-init.sh
     rm:
       - nym-vpn-apple
       - nym-vpn-app
@@ -36,6 +37,8 @@ Builds:
     scanignore:
       - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
     build:
+      - source "$HOME/.cargo/env"
+      - export PATH="$PATH:$HOME/go/bin"
       - export ANDROID_NDK_HOME="$$NDK$$"
     ndk: r25c
 
