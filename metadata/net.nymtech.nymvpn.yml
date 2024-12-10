@@ -36,8 +36,6 @@ Builds:
     scanignore:
       - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
     build:
-      - source "$HOME/.cargo/env"
-      - export PATH="$PATH:$HOME/go/bin"
       - export ANDROID_NDK_HOME="$$NDK$$"
     ndk: r25c
 
