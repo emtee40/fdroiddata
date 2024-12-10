@@ -1,0 +1,33 @@
+diff --git a/V2rayNG/app/build.gradle.kts b/V2rayNG/app/build.gradle.kts
+index 221ac8b..d6fea64 100644
+--- a/V2rayNG/app/build.gradle.kts
++++ b/V2rayNG/app/build.gradle.kts
+@@ -4,6 +4,8 @@ plugins {
+     id("com.google.android.gms.oss-licenses-plugin")
+ }
+ 
++val abiFilterList = (properties["ABI_FILTERS"] as String).split(';')
++
+ android {
+     namespace = "com.v2ray.ang"
+     compileSdk = 35
+@@ -16,18 +18,7 @@ android {
+         versionName = "1.9.24"
+         multiDexEnabled = true
+ 
+-        splits {
+-            abi {
+-                isEnable = true
+-                include(
+-                    "arm64-v8a",
+-                    "armeabi-v7a",
+-                    "x86_64",
+-                    "x86"
+-                )
+-                isUniversalApk = true
+-            }
+-        }
++        ndk { abiFilters.addAll(abiFilterList) }
+ 
+         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+     }
