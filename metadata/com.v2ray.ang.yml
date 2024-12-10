@@ -128,7 +128,11 @@ Builds:
       - yes
     rm:
       - V2rayNG/app/libs
-    prebuild: git revert -n 4a62aff
+    prebuild:
+      - git revert -n 4a62aff
+      - git restore --staged src/main/res/values/strings.xml
+      - git checkout HEAD src/main/res/values/strings.xml
+      - git commit -m "Revert 4a62aff excluding strings.xml"
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
