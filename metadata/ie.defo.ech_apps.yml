@@ -51,10 +51,27 @@ Builds:
       - app/src/test/resources
     ndk: r20
 
+  - versionName: '0.3'
+    versionCode: 1014052
+    commit: 84151ac5195db719479a1ad19a381a045d1a0746
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install openjdk-11-jdk-headless
+      - apt-get purge openjdk-17-*
+      - update-java-alternatives -a
+    gradle:
+      - fullDefo
+    prebuild: rm ../gradle/verification-metadata.xml
+    scanignore:
+      - app/src/androidTest/assets
+      - app/src/test/resources
+    ndk: r20
+
 MaintainerNotes: v0.1 shipped with bad gradle verification metadata
 
 ArchivePolicy: 0
 AutoUpdateMode: None
 UpdateCheckMode: None
-CurrentVersion: '0.2'
-CurrentVersionCode: 1014051
+CurrentVersion: '0.3'
+CurrentVersionCode: 1014052
