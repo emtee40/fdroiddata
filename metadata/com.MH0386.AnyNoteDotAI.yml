@@ -18,6 +18,7 @@ Builds:
   - versionName: 1.0.15
     versionCode: 15
     commit: 0d1566bbc08dbb8cb528e81c89808fb4744e2e6f
+    submodules: true
     antifeatures:
       - NonFreeNet
     sudo:
