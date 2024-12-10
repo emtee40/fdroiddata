@@ -26,9 +26,8 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - git revert -n 4a62aff
-      - git restore --staged src/main/res/values/strings.xml
-      - git checkout HEAD src/main/res/values/strings.xml
+      - sed -i -e '/oss/d' {..,.}/build.gradle
+      - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
@@ -65,9 +64,8 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - git revert -n 4a62aff
-      - git restore --staged src/main/res/values/strings.xml
-      - git checkout HEAD src/main/res/values/strings.xml
+      - sed -i -e '/oss/d' {..,.}/build.gradle
+      - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
@@ -104,9 +102,8 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - git revert -n 4a62aff
-      - git restore --staged src/main/res/values/strings.xml
-      - git checkout HEAD src/main/res/values/strings.xml
+      - sed -i -e '/oss/d' {..,.}/build.gradle
+      - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
@@ -143,9 +140,8 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - git revert -n 4a62aff
-      - git restore --staged src/main/res/values/strings.xml
-      - git checkout HEAD src/main/res/values/strings.xml
+      - sed -i -e '/oss/d' {..,.}/build.gradle
+      - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
