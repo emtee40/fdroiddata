@@ -9,6 +9,7 @@ AutoName: Opflashcontrol
 
 RepoType: git
 Repo: https://github.com/Bartixxx32/Opflashcontrol-app
+Binaries: https://github.com/Bartixxx32/Opflashcontrol-app/releases/download/v%v/app-release-signed.apk
 
 Builds:
   - versionName: 1.0.5
