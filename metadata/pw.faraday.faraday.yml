@@ -1,8 +1,17 @@
+AntiFeatures:
+  NonFreeNet:
+    en-US: Integrate with megafile.sb
+  TetheredNet:
+    en-US: Intergrate with cryptodocs.pm and onlyoffice.com
 Categories:
   - Connectivity
   - Internet
 License: GPL-3.0-only
+AuthorName: FaradayApp
+AuthorEmail: interlinkapps.store@gmail.com
+AuthorWebSite: https://faraday.pw/
 SourceCode: https://github.com/FaradayApp/Faraday-android
+IssueTracker: https://github.com/FaradayApp/Faraday-android/issues
 
 RepoType: git
 Repo: https://github.com/FaradayApp/Faraday-android
