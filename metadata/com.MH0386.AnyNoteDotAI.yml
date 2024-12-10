@@ -24,6 +24,7 @@ Builds:
     sudo:
       - mkdir -p /home/runner
       - chown vagrant /home/runner
+      - apt-get install -y tofrodos
     output: build/app/outputs/flutter-apk/app-release.apk
     srclibs:
       - flutter@stable
@@ -52,11 +53,10 @@ Builds:
       - export repo=/home/runner/work/anynotedotai
       - cd ..
       - mv com.MH0386.AnyNoteDotAI $repo/anynotedotai
-      - ls -a $repo/anynotedotai
-      - ls -a $repo/anynotedotai/.isar
       - pushd $repo/anynotedotai
       - source $HOME/.cargo/env
       - export PUB_CACHE=$(pwd)/.pub-cache
+      - fromdos .isar/tool/build_android.sh
       - bash ./scripts/isar/fdroid_build_isar.sh x64
       - $$flutter$$/bin/flutter build apk --release
       - popd
