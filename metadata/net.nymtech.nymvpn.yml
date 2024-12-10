@@ -27,9 +27,9 @@ Builds:
       - apt-get update
       - apt-get install -y libdbus-1-dev
       - apt-get install -y libmnl-dev libnftnl-dev protobuf-compiler make
+    init: bash ../scripts/fdroid-init.sh
     gradle:
       - fdroid
-    init: bash ../scripts/fdroid-init.sh
     rm:
       - nym-vpn-apple
       - nym-vpn-app
