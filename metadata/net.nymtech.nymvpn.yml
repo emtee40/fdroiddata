@@ -33,12 +33,8 @@ Builds:
       - nym-vpn-apple
       - nym-vpn-app
       - proto
-    scanignore:
+    scandelete:
       - nym-vpn-android/nym-vpn-client/src/main/jniLibs/
-      - android/app/build/extraJni
-      - nym-vpn-core/target
-      - build/android-go-path
-      - build/lib
     build:
       - echo "Building WireGuard dep"
       - source "$HOME/.cargo/env"
