@@ -147,9 +147,16 @@ Builds:
     gradle:
       - defaultFlavor
 
+  - versionName: 1.4.20
+    versionCode: 27
+    commit: bcd09a050f42b3ed188284f4ae63f4a472e34ca3
+    subdir: app
+    gradle:
+      - defaultFlavor
+
 AllowedAPKSigningKeys: 3c2b48eeceed98e70a33d21d3e9ff6193343a1dddcbb9cc076b859d36cdeae6a
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.19
-CurrentVersionCode: 26
+CurrentVersion: 1.4.20
+CurrentVersionCode: 27
