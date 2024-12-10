@@ -46,9 +46,9 @@ Builds:
       - yes
     prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
 
-  - versionName: 6.2.1
-    versionCode: 621
-    commit: c228eb341df4e6f9b79e7f9bfc522b6af2761525
+  - versionName: 6.2.2
+    versionCode: 622
+    commit: 766aedb923222457077b39f660580665a4cce99c
     subdir: app
     gradle:
       - yes
@@ -58,5 +58,5 @@ AllowedAPKSigningKeys: d214b6057b79f82509ddcd1e351965b3c6ecc4b2a3896e5cdf885a70a
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags ^v[0-9.]+$
-CurrentVersion: 6.2.1
-CurrentVersionCode: 621
+CurrentVersion: 6.2.2
+CurrentVersionCode: 622

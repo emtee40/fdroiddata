@@ -405,9 +405,9 @@ Builds:
     scandelete:
       - node_modules
 
-  - versionName: 3.1.25
-    versionCode: 30125
-    commit: 53e42e362a053ab2a57e505307e86a4f47cf2c31
+  - versionName: 3.1.26
+    versionCode: 30126
+    commit: bc9dcb7d42deac54382762a4fab53f346b04a94e
     subdir: android/app
     sudo:
       - sysctl fs.inotify.max_user_watches=524288 || true
@@ -432,5 +432,5 @@ Builds:
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.1.25
-CurrentVersionCode: 30125
+CurrentVersion: 3.1.26
+CurrentVersionCode: 30126

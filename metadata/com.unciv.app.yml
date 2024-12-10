@@ -6243,9 +6243,9 @@ Builds:
     rm:
       - desktop
 
-  - versionName: 4.14.13-patch1
-    versionCode: 1081
-    commit: a84cdd4e8ed93e185021ce505f5c59dee9fc352c
+  - versionName: 4.14.14
+    versionCode: 1082
+    commit: 66f9ed549bb25a26a4a55e878e6e714b80a465fa
     subdir: android
     gradle:
       - yes
@@ -6256,5 +6256,5 @@ AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: buildSrc/src/main/kotlin/BuildConfig.kt|appCodeNumber = (\d+)|.|appVersion
   = "(.*)"
-CurrentVersion: 4.14.13-patch1
-CurrentVersionCode: 1081
+CurrentVersion: 4.14.14
+CurrentVersionCode: 1082
