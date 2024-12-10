@@ -1,5 +1,5 @@
 diff --git a/V2rayNG/app/build.gradle.kts b/V2rayNG/app/build.gradle.kts
-index 221ac8b..d6fea64 100644
+index 221ac8b..20b32ee 100644
 --- a/V2rayNG/app/build.gradle.kts
 +++ b/V2rayNG/app/build.gradle.kts
 @@ -4,6 +4,8 @@ plugins {
@@ -31,3 +31,27 @@ index 221ac8b..d6fea64 100644
  
          testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
      }
+@@ -60,7 +51,7 @@ android {
+     applicationVariants.all {
+         val variant = this
+         val versionCodes =
+-            mapOf("armeabi-v7a" to 4, "arm64-v8a" to 4, "x86" to 4, "x86_64" to 4, "universal" to 4)
++            mapOf("armeabi-v7a" to 2, "arm64-v8a" to 1, "x86" to 4, "x86_64" to 3, "universal" to 0)
+ 
+         variant.outputs
+             .map { it as com.android.build.gradle.internal.api.ApkVariantOutputImpl }
+@@ -68,12 +59,12 @@ android {
+                 val abi = if (output.getFilter("ABI") != null)
+                     output.getFilter("ABI")
+                 else
+-                    "universal"
++                    abiFilterList.firstOrNull()
+ 
+                 output.outputFileName = "v2rayNG_${variant.versionName}_${abi}.apk"
+                 if (versionCodes.containsKey(abi)) {
+                     output.versionCodeOverride =
+-                        (1000000 * versionCodes[abi]!!).plus(variant.versionCode)
++                        (versionCodes[abi]!!).plus(variant.versionCode * 100)
+                 } else {
+                     return@forEach
+                 }
