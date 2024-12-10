@@ -1,0 +1,53 @@
+Categories:
+  - Internet
+  - Multimedia
+License: Apache-2.0
+SourceCode: https://github.com/Zenda-Cross/vega-app
+IssueTracker: https://github.com/Zenda-Cross/vega-app/issues
+
+AutoName: Vega
+
+RepoType: git
+Repo: https://github.com/Zenda-Cross/vega-app.git
+
+Builds:
+  - versionName: 2.4.6
+    versionCode: 59
+    commit: e9c70722e4849d040064f6f07ddac334420541a5
+    subdir: android/app
+    sudo:
+      - apt-get update
+      - apt-get install npm
+      - npm install -g react-native-cli
+    gradle:
+      - yes
+    prebuild:
+      - sed -i -e '/cast-framework/d' build.gradle
+      - sed -i -e '/google-cast/d' ../../package.json
+      - npm install
+      - sed -i -e '/media3-exoplayer-ima/d' ../../node_modules/react-native-video/android/build.gradle
+    scanignore:
+      - node_modules/@dominicvonk/react-native-apk-installer/android/build.gradle
+      - node_modules/expo-modules-autolinking/scripts/android/autolinking_implementation.gradle
+      - node_modules/expo-modules-core/android/ExpoModulesCorePlugin.gradle
+      - node_modules/ffmpeg-kit-react-native/android/build.gradle
+      - node_modules/jsc-android
+      - node_modules/react-native/sdks/hermesc/linux64-bin/hermesc
+      - node_modules/react-native-aes-crypto/android/build.gradle
+      - node_modules/react-native-bootsplash/android/build.gradle
+      - node_modules/react-native-haptic-feedback/android/build.gradle
+      - node_modules/react-native-linear-gradient/android/build.gradle
+      - node_modules/react-native-permissions/android/build.gradle
+      - node_modules/react-native-reanimated/android/build.gradle
+      - node_modules/react-native-safe-area-context/android/build.gradle
+      - node_modules/react-native-screens/android/build.gradle
+      - node_modules/react-native-svg/android/build.gradle
+      - node_modules/react-native-video/android/build.gradle
+      - node_modules/react-native-webview/android/build.gradle
+    scandelete:
+      - node_modules
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.4.6
+CurrentVersionCode: 59
