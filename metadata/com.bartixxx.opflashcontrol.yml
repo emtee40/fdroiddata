@@ -12,9 +12,9 @@ Repo: https://github.com/Bartixxx32/Opflashcontrol-app
 Binaries: https://github.com/Bartixxx32/Opflashcontrol-app/releases/download/v%v/app-release-signed.apk
 
 Builds:
-  - versionName: 1.0.6
-    versionCode: 7
-    commit: v1.0.6
+  - versionName: 1.0.7
+    versionCode: 8
+    commit: v1.0.7
     subdir: app
     gradle:
       - yes
@@ -23,5 +23,5 @@ AllowedAPKSigningKeys: e5967593aab3d904fdd6ab7a506b1e12f3d8e6b7606176b2b32398dfa
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.0.6
-CurrentVersionCode: 7
+CurrentVersion: 1.0.7
+CurrentVersionCode: 8
