@@ -56,3 +56,6 @@ Builds:
       - build/android-go-path
       - build/lib
     ndk: r25c
+
+AutoUpdateMode: None
+UpdateCheckMode: None
