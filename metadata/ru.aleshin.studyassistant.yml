@@ -1,0 +1,31 @@
+Categories:
+  - Science & Education
+License: Apache-2.0
+AuthorName: Stanislav Aleshin
+AuthorEmail: dev.aleshin@gmail.com
+SourceCode: https://github.com/v1tzor/StudyAssistant
+IssueTracker: https://github.com/v1tzor/StudyAssistant/issues
+Changelog: https://github.com/v1tzor/StudyAssistant/releases
+
+AutoName: StudyAssistant
+
+RepoType: git
+Repo: https://github.com/v1tzor/StudyAssistant.git
+Binaries: https://github.com/v1tzor/StudyAssistant/releases/download/%v/%v-studyassistant-fdroid-release.apk
+
+Builds:
+  - versionName: 0.0.2
+    versionCode: 2
+    commit: 4c95f5aad095515d8fe4b2f68232d0ec4f56b073
+    subdir: androidApp
+    gradle:
+      - fdroid
+
+AllowedAPKSigningKeys: 8706f51a3665c1990c7a1cbab09f19161cf92657331e3ce44277ce1640964005
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: gradle/libs.versions.toml|version-code = "(\d+)"|.|version-name
+  = "(.*)"
+CurrentVersion: 0.0.2
+CurrentVersionCode: 2
