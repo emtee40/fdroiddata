@@ -31,7 +31,6 @@ Builds:
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
-      - make all
       - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - mv libs ../
@@ -69,7 +68,6 @@ Builds:
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
-      - make all
       - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - mv libs ../
@@ -107,7 +105,6 @@ Builds:
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
-      - make all
       - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - mv libs ../
@@ -145,7 +142,6 @@ Builds:
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
-      - make all
       - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - mv libs ../
