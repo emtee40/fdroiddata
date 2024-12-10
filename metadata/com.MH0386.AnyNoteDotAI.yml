@@ -12,7 +12,7 @@ AutoName: AnyNote.AI
 
 RepoType: git
 Repo: https://github.com/MH0386/anynotedotai.git
-Binaries: https://github.com/MH0386/anynotedotai/releases/download/v%v/AnyNote.AI.apk
+Binaries: https://github.com/MH0386/anynotedotai/releases/download/v%v/AnyNote.AI_v%v.apk
 
 Builds:
   - versionName: 1.0.11
