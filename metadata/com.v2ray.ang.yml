@@ -42,7 +42,7 @@ Builds:
       - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - popd
-      - mv $$AndroidLibV2rayLite$$/libs ../
+      - mv $$AndroidLibV2rayLite$$/libs ./
       - pushd $$AndroidLibXrayLite$$
       - mkdir data && bash gen_assets.sh
       - go mod download github.com/xtls/xray-core
@@ -52,7 +52,7 @@ Builds:
       - gomobile init
       - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
       - popd
-      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ../libs
+      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ./libs
     ndk: r27
     gradleprops:
       - ABI_FILTERS=arm64-v8a
@@ -88,7 +88,7 @@ Builds:
       - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - popd
-      - mv $$AndroidLibV2rayLite$$/libs ../
+      - mv $$AndroidLibV2rayLite$$/libs ./
       - pushd $$AndroidLibXrayLite$$
       - mkdir data && bash gen_assets.sh
       - go mod download github.com/xtls/xray-core
@@ -98,7 +98,7 @@ Builds:
       - gomobile init
       - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
       - popd
-      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ../libs
+      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ./libs
     ndk: r27
     gradleprops:
       - ABI_FILTERS=armeabi-v7a
@@ -134,7 +134,7 @@ Builds:
       - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - popd
-      - mv $$AndroidLibV2rayLite$$/libs ../
+      - mv $$AndroidLibV2rayLite$$/libs ./
       - pushd $$AndroidLibXrayLite$$
       - mkdir data && bash gen_assets.sh
       - go mod download github.com/xtls/xray-core
@@ -144,7 +144,7 @@ Builds:
       - gomobile init
       - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
       - popd
-      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ../libs
+      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ./libs
     ndk: r27
     gradleprops:
       - ABI_FILTERS=x86_64
@@ -180,7 +180,7 @@ Builds:
       - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
       - tar -xvzf libtun2socks.so.tgz
       - popd
-      - mv $$AndroidLibV2rayLite$$/libs ../
+      - mv $$AndroidLibV2rayLite$$/libs ./
       - pushd $$AndroidLibXrayLite$$
       - mkdir data && bash gen_assets.sh
       - go mod download github.com/xtls/xray-core
@@ -190,7 +190,7 @@ Builds:
       - gomobile init
       - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
       - popd
-      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ../libs
+      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ./libs
     ndk: r27
     gradleprops:
       - ABI_FILTERS=x86
