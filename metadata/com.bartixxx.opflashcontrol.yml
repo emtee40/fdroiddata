@@ -6,6 +6,7 @@ SourceCode: https://github.com/Bartixxx32/Opflashcontrol-app
 IssueTracker: https://github.com/Bartixxx32/Opflashcontrol-app/issues
 
 AutoName: OnePlus Flash Control
+AllowedAPKSigningKeys: e5967593aab3d904fdd6ab7a506b1e12f3d8e6b7606176b2b32398dfa4ccb173
 
 RepoType: git
 Repo: https://github.com/Bartixxx32/Opflashcontrol-app
