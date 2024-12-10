@@ -63,7 +63,7 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - sed -i -e '/oss/d' {..,.}/build.gradle
+      - sed -i -e '/oss/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
@@ -100,7 +100,7 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - sed -i -e '/oss/d' {..,.}/build.gradle
+      - sed -i -e '/oss/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
@@ -137,7 +137,7 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - sed -i -e '/oss/d' {..,.}/build.gradle
+      - sed -i -e '/oss/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
