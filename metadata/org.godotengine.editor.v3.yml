@@ -303,7 +303,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y pkg-config scons
-    output: platform/android/java/editor/build/outputs/apk/debug/android_editor-debug-unsigned.apk
+    output: platform/android/java/editor/build/outputs/apk/release/android_editor-release-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
       - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
@@ -313,10 +313,11 @@ Builds:
       - sed -i 's/versionCode\ generateVersionCode()/versionCode $$VERCODE$$/' editor/build.gradle
     build:
       - export ANDROID_SDK_ROOT="$$SDK$$"
-      - scons platform=android tools=yes target=release_debug android_arch=x86
+      - scons -j$(nproc) verbose=yes warnings=no progress=no platform=android android_arch=x86
+        production=yes tools=yes target=release_debug store_release=yes
       - cd platform/android/java
       - gradle generateGodotEditor
-    ndk: r23c
+    ndk: 23.2.8568313
 
   - versionName: 3.6.0.stable
     versionCode: 306005001
@@ -325,7 +326,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y pkg-config scons
-    output: platform/android/java/editor/build/outputs/apk/debug/android_editor-debug-unsigned.apk
+    output: platform/android/java/editor/build/outputs/apk/release/android_editor-release-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
       - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
@@ -335,10 +336,11 @@ Builds:
       - sed -i 's/versionCode\ generateVersionCode()/versionCode $$VERCODE$$/' editor/build.gradle
     build:
       - export ANDROID_SDK_ROOT="$$SDK$$"
-      - scons platform=android tools=yes target=release_debug android_arch=x86_64
+      - scons -j$(nproc) verbose=yes warnings=no progress=no platform=android android_arch=x86_64
+        production=yes tools=yes target=release_debug store_release=yes
       - cd platform/android/java
       - gradle generateGodotEditor
-    ndk: r23c
+    ndk: 23.2.8568313
 
   - versionName: 3.6.0.stable
     versionCode: 306005002
@@ -347,7 +349,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y pkg-config scons
-    output: platform/android/java/editor/build/outputs/apk/debug/android_editor-debug-unsigned.apk
+    output: platform/android/java/editor/build/outputs/apk/release/android_editor-release-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
       - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
@@ -357,10 +359,11 @@ Builds:
       - sed -i 's/versionCode\ generateVersionCode()/versionCode $$VERCODE$$/' editor/build.gradle
     build:
       - export ANDROID_SDK_ROOT="$$SDK$$"
-      - scons platform=android tools=yes target=release_debug android_arch=armv7
+      - scons -j$(nproc) verbose=yes warnings=no progress=no platform=android android_arch=armv7
+        production=yes tools=yes target=release_debug store_release=yes
       - cd platform/android/java
       - gradle generateGodotEditor
-    ndk: r23c
+    ndk: 23.2.8568313
 
   - versionName: 3.6.0.stable
     versionCode: 306005003
@@ -369,7 +372,7 @@ Builds:
     sudo:
       - apt-get update
       - apt-get install -y pkg-config scons
-    output: platform/android/java/editor/build/outputs/apk/debug/android_editor-debug-unsigned.apk
+    output: platform/android/java/editor/build/outputs/apk/release/android_editor-release-unsigned.apk
     prebuild:
       - mkdir -p /opt/android-sdk/cmdline-tools/latest/bin
       - ln -s $(which sdkmanager) /opt/android-sdk/cmdline-tools/latest/bin/
@@ -379,15 +382,13 @@ Builds:
       - sed -i 's/versionCode\ generateVersionCode()/versionCode $$VERCODE$$/' editor/build.gradle
     build:
       - export ANDROID_SDK_ROOT="$$SDK$$"
-      - scons platform=android tools=yes target=release_debug android_arch=arm64v8
+      - scons -j$(nproc) verbose=yes warnings=no progress=no platform=android android_arch=arm64v8
+        production=yes tools=yes target=release_debug store_release=yes
       - cd platform/android/java
       - gradle generateGodotEditor
-    ndk: r23c
+    ndk: 23.2.8568313
 
 MaintainerNotes: |-
-  3.5.x is the last stable release. Starting from 3.6.x many changes from 4.0 branch
-  are backported, versionCode is also different.
-
   VersionCode is generated at compile time upstream. F-Droid builds correspond
   to upstream version codes with an addition of a single digit at the end to
   differentiate builds for different architecture:
