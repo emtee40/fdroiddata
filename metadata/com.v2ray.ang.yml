@@ -26,7 +26,7 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - sed -i -e '/oss/d' {..,.}/build.gradle.kts
+      - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
       - echo 'package com.v2ray.ang.ui' > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
       - echo -n 'class ScannerActivity ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
@@ -68,7 +68,7 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - sed -i -e '/oss/d' {..,.}/build.gradle.kts
+      - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
       - echo 'package com.v2ray.ang.ui' > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
       - echo -n 'class ScannerActivity ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
@@ -110,7 +110,7 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - sed -i -e '/oss/d' {..,.}/build.gradle.kts
+      - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
       - echo 'package com.v2ray.ang.ui' > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
       - echo -n 'class ScannerActivity ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
@@ -152,7 +152,7 @@ Builds:
     rm:
       - V2rayNG/app/libs
     prebuild:
-      - sed -i -e '/oss/d' {..,.}/build.gradle.kts
+      - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
       - echo 'package com.v2ray.ang.ui' > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
       - echo -n 'class ScannerActivity ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
