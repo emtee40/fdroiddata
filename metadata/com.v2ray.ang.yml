@@ -77,7 +77,7 @@ Builds:
     ndk: r27
     gradleprops:
       - noSplits
-      - ABI_FILTERS=x86
+      - ABI_FILTERS=armeabi-v7a
 
   - versionName: 1.9.24
     versionCode: 62003
@@ -111,7 +111,7 @@ Builds:
     ndk: r27
     gradleprops:
       - noSplits
-      - ABI_FILTERS=armeabi-v7a
+      - ABI_FILTERS=x86_64
 
   - versionName: 1.9.24
     versionCode: 62004
@@ -145,7 +145,7 @@ Builds:
     ndk: r27
     gradleprops:
       - noSplits
-      - ABI_FILTERS=x86_64
+      - ABI_FILTERS=x86
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
