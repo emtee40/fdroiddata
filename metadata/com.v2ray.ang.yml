@@ -31,11 +31,8 @@ Builds:
     prebuild:
       - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
-      - echo 'package com.v2ray.ang.ui' > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n 'class ScannerActivity ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n ':' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n ' BaseActivity() ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo '{}' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
+      - echo -e 'package com.v2ray.ang.ui\nclass ScannerActivity:BaseActivity() {}'
+        > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - pushd $$AndroidLibV2rayLite$$
@@ -77,11 +74,8 @@ Builds:
     prebuild:
       - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
-      - echo 'package com.v2ray.ang.ui' > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n 'class ScannerActivity ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n ':' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n ' BaseActivity() ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo '{}' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
+      - echo -e 'package com.v2ray.ang.ui\nclass ScannerActivity:BaseActivity() {}'
+        > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - pushd $$AndroidLibV2rayLite$$
@@ -123,11 +117,8 @@ Builds:
     prebuild:
       - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
-      - echo 'package com.v2ray.ang.ui' > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n 'class ScannerActivity ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n ':' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n ' BaseActivity() ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo '{}' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
+      - echo -e 'package com.v2ray.ang.ui\nclass ScannerActivity:BaseActivity() {}'
+        > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - pushd $$AndroidLibV2rayLite$$
@@ -169,11 +160,8 @@ Builds:
     prebuild:
       - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
       - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
-      - echo 'package com.v2ray.ang.ui' > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n 'class ScannerActivity ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n ':' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo -n ' BaseActivity() ' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
-      - echo '{}' >> src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
+      - echo -e 'package com.v2ray.ang.ui\nclass ScannerActivity:BaseActivity() {}'
+        > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - pushd $$AndroidLibV2rayLite$$
