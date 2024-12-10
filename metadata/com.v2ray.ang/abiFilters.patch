@@ -1,17 +1,8 @@
 diff --git a/V2rayNG/app/build.gradle.kts b/V2rayNG/app/build.gradle.kts
-index 221ac8b..20b32ee 100644
+index 221ac8b..8be476f 100644
 --- a/V2rayNG/app/build.gradle.kts
 +++ b/V2rayNG/app/build.gradle.kts
-@@ -4,6 +4,8 @@ plugins {
-     id("com.google.android.gms.oss-licenses-plugin")
- }
- 
-+val abiFilterList = (properties["ABI_FILTERS"] as String).split(';')
-+
- android {
-     namespace = "com.v2ray.ang"
-     compileSdk = 35
-@@ -16,18 +18,7 @@ android {
+@@ -16,18 +16,8 @@ android {
          versionName = "1.9.24"
          multiDexEnabled = true
  
@@ -27,11 +18,12 @@ index 221ac8b..20b32ee 100644
 -                isUniversalApk = true
 -            }
 -        }
++        val abiFilterList = (properties["ABI_FILTERS"] as String).split(';')
 +        ndk { abiFilters.addAll(abiFilterList) }
  
          testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
      }
-@@ -60,7 +51,7 @@ android {
+@@ -60,7 +50,7 @@ android {
      applicationVariants.all {
          val variant = this
          val versionCodes =
@@ -40,7 +32,7 @@ index 221ac8b..20b32ee 100644
  
          variant.outputs
              .map { it as com.android.build.gradle.internal.api.ApkVariantOutputImpl }
-@@ -68,12 +59,12 @@ android {
+@@ -68,12 +58,12 @@ android {
                  val abi = if (output.getFilter("ABI") != null)
                      output.getFilter("ABI")
                  else
