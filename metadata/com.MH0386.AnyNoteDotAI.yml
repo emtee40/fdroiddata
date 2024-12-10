@@ -25,7 +25,8 @@ Builds:
     srclibs:
       - flutter@stable
     prebuild:
-      - export flutterVersion=$(grep -oP '(?<=flutter: )\S+' pubspec.yaml)
+      - export flutterVersion=$(grep flutter pubspec.yaml | 
+        head -1 | cut -d ':' -f 2)
       - '[[ $flutterVersion ]] || exit 1'
       - git -C $$flutter$$ checkout -f $flutterVersion
       - export repo=/home/runner/work/anynotedotai
