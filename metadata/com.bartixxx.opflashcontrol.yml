@@ -18,6 +18,7 @@ Builds:
     subdir: app
     gradle:
       - yes
+
 AllowedAPKSigningKeys: e5967593aab3d904fdd6ab7a506b1e12f3d8e6b7606176b2b32398dfa4ccb173
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
