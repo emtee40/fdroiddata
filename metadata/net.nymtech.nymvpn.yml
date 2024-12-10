@@ -58,7 +58,7 @@ Builds:
     ndk: r25c
 
 AutoUpdateMode: Version
-UpdateCheckMode: Tags nym-vpn-android-v(1\.1\.[5-9]\d*|[1-9]\d*\.\d*\.\d+)$
+UpdateCheckMode: Tags nym-vpn-android-v(1\.(1\.[5-9]|[2-9]\d*)|[2-9]\d*\.\d*\.\d*)$
 UpdateCheckData: nym-vpn-android/buildSrc/src/main/kotlin/Constants.kt|VERSION_CODE
   = (\d+)|.|VERSION_NAME = "(.+)"
 CurrentVersion: nym-vpn-android-v1.1.5
