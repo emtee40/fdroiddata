@@ -55,11 +55,6 @@ Builds:
     versionCode: 1014052
     commit: 84151ac5195db719479a1ad19a381a045d1a0746
     subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install openjdk-11-jdk-headless
-      - apt-get purge openjdk-17-*
-      - update-java-alternatives -a
     gradle:
       - fullDefo
     prebuild: rm ../gradle/verification-metadata.xml
