@@ -15,18 +15,19 @@ Repo: https://github.com/MH0386/anynotedotai.git
 Binaries: https://github.com/MH0386/anynotedotai/releases/download/v%v/AnyNote.AI_v%v.apk
 
 Builds:
-  - versionName: 1.0.11
-    versionCode: 11
-    commit: 7a336dd1d6b050ce2a2944e26edfab779ac6927a
+  - versionName: 1.0.15
+    versionCode: 15
+    commit: 0d1566bbc08dbb8cb528e81c89808fb4744e2e6f
     sudo:
       - mkdir -p /home/runner
       - chown vagrant /home/runner
     output: build/app/outputs/flutter-apk/app-release.apk
     srclibs:
       - flutter@stable
+      - rustup@stable
     prebuild:
-      - export flutterVersion=$(grep flutter pubspec.yaml | 
-        head -1 | cut -d ':' -f 2)
+      - export flutterVersion=$(grep flutter pubspec.yaml | head -1 | cut -d ':' -f 
+        2)
       - '[[ $flutterVersion ]] || exit 1'
       - git -C $$flutter$$ checkout -f $flutterVersion
       - export repo=/home/runner/work/anynotedotai
@@ -58,5 +59,5 @@ AllowedAPKSigningKeys: a444ac204f3e04d1f01909ecc67146123b7dc8e02435994a1de9a3181
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 UpdateCheckData: pubspec.yaml|version:\s.*\+(\d+)|.|version:\s(.*)\+
-CurrentVersion: 1.0.11
-CurrentVersionCode: 11
+CurrentVersion: 1.0.15
+CurrentVersionCode: 15
