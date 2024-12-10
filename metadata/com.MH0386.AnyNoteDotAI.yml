@@ -51,8 +51,10 @@ Builds:
       - .pub-cache
     build:
       - export repo=/home/runner/work/anynotedotai
+      - export RUST_BACKTRACE=1
       - cd ..
       - mv com.MH0386.AnyNoteDotAI $repo/anynotedotai
+      - export HOME=/home/runner
       - pushd $repo/anynotedotai
       - source $HOME/.cargo/env
       - export PUB_CACHE=$(pwd)/.pub-cache
