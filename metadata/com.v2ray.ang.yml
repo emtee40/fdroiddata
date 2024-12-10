@@ -23,6 +23,7 @@ Builds:
       - yes
     rm:
       - V2rayNG/app/libs
+    prebuild: git revert -n 4a62aff
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
@@ -57,6 +58,7 @@ Builds:
       - yes
     rm:
       - V2rayNG/app/libs
+    prebuild: git revert -n 4a62aff
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
@@ -91,6 +93,7 @@ Builds:
       - yes
     rm:
       - V2rayNG/app/libs
+    prebuild: git revert -n 4a62aff
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
@@ -125,6 +128,7 @@ Builds:
       - yes
     rm:
       - V2rayNG/app/libs
+    prebuild: git revert -n 4a62aff
     build:
       - sdkmanager "platforms;android-34" "build-tools;34.0.0"
       - git clone https://github.com/2dust/AndroidLibV2rayLite && cd AndroidLibV2rayLite
