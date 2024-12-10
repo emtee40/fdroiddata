@@ -30,7 +30,6 @@ Builds:
     init: bash scripts/fdroid-init.sh
     gradle:
       - fdroid
-    output: app/build/outputs/apk/fdroid/release/nymvpn-fdroid-release-*.apk
     rm:
       - nym-vpn-apple
       - nym-vpn-app
