@@ -51,6 +51,8 @@ Builds:
       - export repo=/home/runner/work/anynotedotai
       - cd ..
       - mv com.MH0386.AnyNoteDotAI $repo/anynotedotai
+      - ls -a $repo/anynotedotai
+      - ls -a $repo/anynotedotai/.isar
       - pushd $repo/anynotedotai
       - source $HOME/.cargo/env
       - export PUB_CACHE=$(pwd)/.pub-cache
