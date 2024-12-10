@@ -48,7 +48,6 @@ Builds:
         --out-dir ../nym-vpn-android/nym-vpn-client/src/main/java/net/nymtech/vpn
       - cargo license -j --avoid-dev-deps --current-dir ../../nym-vpn-core/crates/nym-vpn-lib
         --filter-platform aarch64-linux-android --avoid-build-deps > ./nym-vpn-client/src/main/assets/licenses_rust.json
-      - ./gradlew assembleFdroidRelease
     ndk: r25c
 
 AutoUpdateMode: None
