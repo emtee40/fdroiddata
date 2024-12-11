@@ -1,0 +1,194 @@
+Categories:
+  - Connectivity
+  - Internet
+License: GPL-3.0-only
+SourceCode: https://github.com/2dust/v2rayNG
+IssueTracker: https://github.com/2dust/v2rayNG/issues
+
+AutoName: v2rayNG
+
+RepoType: git
+Repo: https://github.com/2dust/v2rayNG
+
+Builds:
+  - versionName: 1.9.24
+    versionCode: 62001
+    commit: 5124266346743ed5dbc2d08bc35b9f3885f0430f
+    subdir: V2rayNG/app
+    sudo:
+      - apt-get update
+      - apt-get install -y make wget tar curl
+      - apt-get install -y -t bookworm-backports golang-go
+    patch:
+      - abiFilters.patch
+    gradle:
+      - yes
+    srclibs:
+      - AndroidLibV2rayLite@a415b7be6c219a918d9f68097a2622ca3ec72252
+      - AndroidLibXrayLite@dbfe1c91472aa228c5d8f7059a1b1104b3ab3083
+    rm:
+      - V2rayNG/app/libs
+    prebuild:
+      - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
+      - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
+      - echo -e 'package com.v2ray.ang.ui\nclass ScannerActivity:BaseActivity() {}'
+        > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
+    build:
+      - sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      - pushd $$AndroidLibV2rayLite$$
+      - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
+      - tar -xvzf libtun2socks.so.tgz
+      - popd
+      - mv $$AndroidLibV2rayLite$$/libs ./
+      - pushd $$AndroidLibXrayLite$$
+      - mkdir data && bash gen_assets.sh
+      - go mod download github.com/xtls/xray-core
+      - go mod tidy -v
+      - go install golang.org/x/mobile/cmd/...
+      - export PATH=$PATH:~/go/bin
+      - gomobile init
+      - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
+      - popd
+      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ./libs
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=arm64-v8a
+
+  - versionName: 1.9.24
+    versionCode: 62002
+    commit: 5124266346743ed5dbc2d08bc35b9f3885f0430f
+    subdir: V2rayNG/app
+    sudo:
+      - apt-get update
+      - apt-get install -y make wget tar curl
+      - apt-get install -y -t bookworm-backports golang-go
+    patch:
+      - abiFilters.patch
+    gradle:
+      - yes
+    srclibs:
+      - AndroidLibV2rayLite@a415b7be6c219a918d9f68097a2622ca3ec72252
+      - AndroidLibXrayLite@dbfe1c91472aa228c5d8f7059a1b1104b3ab3083
+    rm:
+      - V2rayNG/app/libs
+    prebuild:
+      - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
+      - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
+      - echo -e 'package com.v2ray.ang.ui\nclass ScannerActivity:BaseActivity() {}'
+        > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
+    build:
+      - sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      - pushd $$AndroidLibV2rayLite$$
+      - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
+      - tar -xvzf libtun2socks.so.tgz
+      - popd
+      - mv $$AndroidLibV2rayLite$$/libs ./
+      - pushd $$AndroidLibXrayLite$$
+      - mkdir data && bash gen_assets.sh
+      - go mod download github.com/xtls/xray-core
+      - go mod tidy -v
+      - go install golang.org/x/mobile/cmd/...
+      - export PATH=$PATH:~/go/bin
+      - gomobile init
+      - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
+      - popd
+      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ./libs
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=armeabi-v7a
+
+  - versionName: 1.9.24
+    versionCode: 62003
+    commit: 5124266346743ed5dbc2d08bc35b9f3885f0430f
+    subdir: V2rayNG/app
+    sudo:
+      - apt-get update
+      - apt-get install -y make wget tar curl
+      - apt-get install -y -t bookworm-backports golang-go
+    patch:
+      - abiFilters.patch
+    gradle:
+      - yes
+    srclibs:
+      - AndroidLibV2rayLite@a415b7be6c219a918d9f68097a2622ca3ec72252
+      - AndroidLibXrayLite@dbfe1c91472aa228c5d8f7059a1b1104b3ab3083
+    rm:
+      - V2rayNG/app/libs
+    prebuild:
+      - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
+      - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
+      - echo -e 'package com.v2ray.ang.ui\nclass ScannerActivity:BaseActivity() {}'
+        > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
+    build:
+      - sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      - pushd $$AndroidLibV2rayLite$$
+      - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
+      - tar -xvzf libtun2socks.so.tgz
+      - popd
+      - mv $$AndroidLibV2rayLite$$/libs ./
+      - pushd $$AndroidLibXrayLite$$
+      - mkdir data && bash gen_assets.sh
+      - go mod download github.com/xtls/xray-core
+      - go mod tidy -v
+      - go install golang.org/x/mobile/cmd/...
+      - export PATH=$PATH:~/go/bin
+      - gomobile init
+      - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
+      - popd
+      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ./libs
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86_64
+
+  - versionName: 1.9.24
+    versionCode: 62004
+    commit: 5124266346743ed5dbc2d08bc35b9f3885f0430f
+    subdir: V2rayNG/app
+    sudo:
+      - apt-get update
+      - apt-get install -y make wget tar curl
+      - apt-get install -y -t bookworm-backports golang-go
+    patch:
+      - abiFilters.patch
+    gradle:
+      - yes
+    srclibs:
+      - AndroidLibV2rayLite@a415b7be6c219a918d9f68097a2622ca3ec72252
+      - AndroidLibXrayLite@dbfe1c91472aa228c5d8f7059a1b1104b3ab3083
+    rm:
+      - V2rayNG/app/libs
+    prebuild:
+      - sed -i -e '/oss/d' -e '/quickie/d' {..,.}/build.gradle.kts
+      - sed -i -e '/OssLicensesMenuActivity/d' src/main/java/com/v2ray/ang/ui/AboutActivity.kt
+      - echo -e 'package com.v2ray.ang.ui\nclass ScannerActivity:BaseActivity() {}'
+        > src/main/java/com/v2ray/ang/ui/ScannerActivity.kt
+    build:
+      - sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      - pushd $$AndroidLibV2rayLite$$
+      - NDK_HOME=$$NDK$$ bash compile-tun2socks.sh
+      - tar -xvzf libtun2socks.so.tgz
+      - popd
+      - mv $$AndroidLibV2rayLite$$/libs ./
+      - pushd $$AndroidLibXrayLite$$
+      - mkdir data && bash gen_assets.sh
+      - go mod download github.com/xtls/xray-core
+      - go mod tidy -v
+      - go install golang.org/x/mobile/cmd/...
+      - export PATH=$PATH:~/go/bin
+      - gomobile init
+      - gomobile bind -androidapi 21 -v -ldflags='-s -w' ./
+      - popd
+      - mv $$AndroidLibXrayLite$$/*.aar $$AndroidLibXrayLite$$/*.jar ./libs
+    ndk: r27
+    gradleprops:
+      - ABI_FILTERS=x86
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+VercodeOperation:
+  - 100 * %c + 1
+  - 100 * %c + 2
+  - 100 * %c + 3
+  - 100 * %c + 4
+CurrentVersion: 1.9.24
+CurrentVersionCode: 62004

@@ -1,0 +1,53 @@
+diff --git a/V2rayNG/app/build.gradle.kts b/V2rayNG/app/build.gradle.kts
+index 221ac8b..de32fc7 100644
+--- a/V2rayNG/app/build.gradle.kts
++++ b/V2rayNG/app/build.gradle.kts
+@@ -1,3 +1,4 @@
++val abiFilterList = (properties["ABI_FILTERS"] as String).split(';')
+ plugins {
+     alias(libs.plugins.android.application)
+     alias(libs.plugins.kotlin.android)
+@@ -16,18 +17,7 @@ android {
+         versionName = "1.9.24"
+         multiDexEnabled = true
+ 
+-        splits {
+-            abi {
+-                isEnable = true
+-                include(
+-                    "arm64-v8a",
+-                    "armeabi-v7a",
+-                    "x86_64",
+-                    "x86"
+-                )
+-                isUniversalApk = true
+-            }
+-        }
++        ndk { abiFilters.addAll(abiFilterList) }
+ 
+         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+     }
+@@ -60,7 +50,7 @@ android {
+     applicationVariants.all {
+         val variant = this
+         val versionCodes =
+-            mapOf("armeabi-v7a" to 4, "arm64-v8a" to 4, "x86" to 4, "x86_64" to 4, "universal" to 4)
++            mapOf("armeabi-v7a" to 2, "arm64-v8a" to 1, "x86" to 4, "x86_64" to 3, "universal" to 0)
+ 
+         variant.outputs
+             .map { it as com.android.build.gradle.internal.api.ApkVariantOutputImpl }
+@@ -68,12 +58,12 @@ android {
+                 val abi = if (output.getFilter("ABI") != null)
+                     output.getFilter("ABI")
+                 else
+-                    "universal"
++                    abiFilterList.firstOrNull()
+ 
+                 output.outputFileName = "v2rayNG_${variant.versionName}_${abi}.apk"
+                 if (versionCodes.containsKey(abi)) {
+                     output.versionCodeOverride =
+-                        (1000000 * versionCodes[abi]!!).plus(variant.versionCode)
++                        (versionCodes[abi]!!).plus(variant.versionCode * 100)
+                 } else {
+                     return@forEach
+                 }
