@@ -1,0 +1,73 @@
+Categories:
+  - Writing
+License: MIT
+AuthorName: Mohamed Hisham Abdelzaher
+AuthorEmail: mohamed.hisham.abdelzaher@gmail.com
+AuthorWebSite: https://mh0386.github.io
+SourceCode: https://github.com/MH0386/anynotedotai
+IssueTracker: https://github.com/MH0386/anynotedotai/issues
+Changelog: https://github.com/MH0386/anynotedotai/releases
+
+AutoName: AnyNote.AI
+
+RepoType: git
+Repo: https://github.com/MH0386/anynotedotai.git
+Binaries: https://github.com/MH0386/anynotedotai/releases/download/v%v/AnyNote.AI_v%v.apk
+
+Builds:
+  - versionName: 1.0.15
+    versionCode: 15
+    commit: 0d1566bbc08dbb8cb528e81c89808fb4744e2e6f
+    submodules: true
+    antifeatures:
+      - NonFreeNet
+    sudo:
+      - mkdir -p /home/runner
+      - chown vagrant /home/runner
+      - apt-get install -y tofrodos gcc-multilib libc-dev make
+    output: build/app/outputs/flutter-apk/app-release.apk
+    srclibs:
+      - flutter@stable
+      - rustup@stable
+    prebuild:
+      - export flutterVersion=$(grep flutter\:\  pubspec.yaml | cut -d ":" -f2)
+      - '[[ $flutterVersion ]] || exit 1'
+      - git -C $$flutter$$ checkout -f $flutterVersion
+      - export repo=/home/runner/work/anynotedotai
+      - mkdir -p $repo
+      - cd ..
+      - mv com.MH0386.AnyNoteDotAI $repo/anynotedotai
+      - pushd $repo/anynotedotai
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - rustVersion=$(sed -n 's/channel = "\(.*\)"/\1/p' rust-toolchain.toml)
+      - $$rustup$$/rustup-init.sh -y --default-toolchain $rustVersion -t x86_64-linux-android
+      - cp Cargo.lock .isar/Cargo.lock
+      - cp Cargo.lock .isar-cargo.lock
+      - popd
+      - mv $repo/anynotedotai com.MH0386.AnyNoteDotAI
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/anynotedotai
+      - export RUST_BACKTRACE=full
+      - cd ..
+      - mv com.MH0386.AnyNoteDotAI $repo/anynotedotai
+      - pushd $repo/anynotedotai
+      - source $HOME/.cargo/env
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - fromdos .isar/tool/build_android.sh
+      - bash ./scripts/isar/fdroid_build_isar.sh x64
+      - $$flutter$$/bin/flutter build apk --release
+      - popd
+      - mv $repo/anynotedotai com.MH0386.AnyNoteDotAI
+    ndk: r26d
+
+AllowedAPKSigningKeys: a444ac204f3e04d1f01909ecc67146123b7dc8e02435994a1de9a31817f99ad9
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: pubspec.yaml|version:\s.*\+(\d+)|.|version:\s(.*)\+
+CurrentVersion: 1.0.15
+CurrentVersionCode: 15
