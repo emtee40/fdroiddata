@@ -1,0 +1,34 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Depends on wiki.fosscell.org which is free and open source, but is not
+      changeable by a user.
+Categories:
+  - Reading
+License: Apache-2.0
+AuthorName: FOSSCell NITC
+AuthorWebSite: https://fosscell.org/
+WebSite: https://wiki.fosscell.org/
+SourceCode: https://gitlab.com/wiki-nitc/nitc-wiki-android-app
+IssueTracker: https://gitlab.com/wiki-nitc/nitc-wiki-android-app/-/issues
+
+AutoName: NITC Wiki
+
+RepoType: git
+Repo: https://gitlab.com/wiki-nitc/nitc-wiki-android-app.git
+Binaries: https://gitlab.com/wiki-nitc/nitc-wiki-android-app/-/releases/%v/downloads/app-fdroid-release.apk
+
+Builds:
+  - versionName: 2.7.50489-fdroid-2024-08-20
+    versionCode: 50489
+    commit: 86fca7898a33de7bedc30999ff058418869e5455
+    subdir: app
+    gradle:
+      - fdroid
+    forceversion: true
+
+AllowedAPKSigningKeys: 3365ab571fad4f4ef87f1c4748d2c3faed966b3fc0389d7b332c87481290eeb8
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 2.7.50489-fdroid-2024-08-20
+CurrentVersionCode: 50489
