@@ -108,7 +108,15 @@ Builds:
       - yes
     prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
 
+  - versionName: 3.0.0
+    versionCode: 300
+    commit: 313baf79f517b191975f15343447d2fffb7331fe
+    subdir: app
+    gradle:
+      - yes
+    prebuild: sed -i -e "/android {/alintOptions { disable 'ExtraTranslation' }" build.gradle
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.1.0
-CurrentVersionCode: 210
+CurrentVersion: 3.0.0
+CurrentVersionCode: 300
