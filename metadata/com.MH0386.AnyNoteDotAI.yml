@@ -24,7 +24,7 @@ Builds:
     sudo:
       - mkdir -p /home/runner
       - chown vagrant /home/runner
-      - apt-get install -y tofrodos
+      - apt-get install -y tofrodos gcc-multilib libc-dev make
     output: build/app/outputs/flutter-apk/app-release.apk
     srclibs:
       - flutter@stable
