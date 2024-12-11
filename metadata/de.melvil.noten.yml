@@ -1,0 +1,47 @@
+Categories:
+  - Science & Education
+License: MIT
+AuthorName: MelvilQ
+SourceCode: https://github.com/MelvilQ/noten-lernen
+IssueTracker: https://github.com/MelvilQ/noten-lernen/issues
+Changelog: https://github.com/MelvilQ/noten-lernen/releases
+
+AutoName: noten-lernen
+
+RepoType: git
+Repo: https://github.com/MelvilQ/noten-lernen.git
+Binaries: https://github.com/MelvilQ/noten-lernen/releases/download/v%v/app-release.apk
+
+Builds:
+  - versionName: 1.8.1
+    versionCode: 10801
+    commit: 07cdb4dfea6c7ce03a1f1b0570d80d1cff5be85b
+    subdir: cordova
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y -t bullseye openjdk-11-jdk-headless
+      - update-java-alternatives --set java-1.11.0-openjdk-amd64
+      - apt-get install npm
+      - npm install -g cordova
+    output: platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+    prebuild:
+      - sdkmanager "build-tools;31.0.0" "build-tools;30.0.3"
+      - cordova platform remove android
+      - cordova platform add android@10
+      - npm i
+      - cd ..
+      - npm i
+      - npm run build
+      - npm run copy
+    scanignore:
+      - cordova/node_modules/cordova-android/framework/cordova-publish.gradle
+    build: npm run build
+
+AllowedAPKSigningKeys: d711ee41a33434cd6d74bb7614b705fc82f613be070f824b634d3e432314a8e9
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 1.8.1
+CurrentVersionCode: 10801
