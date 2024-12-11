@@ -1,0 +1,139 @@
+Categories:
+  - Money
+License: MIT
+SourceCode: https://github.com/dreautall/waterfly-iii
+IssueTracker: https://github.com/dreautall/waterfly-iii/issues
+Translation: https://crowdin.com/project/waterfly-iii
+Donate: https://github.com/sponsors/dreautall
+
+AutoName: Waterfly III
+
+RepoType: git
+Repo: https://github.com/dreautall/waterfly-iii
+
+Builds:
+  - versionName: 1.0.6
+    versionCode: 3241
+    commit: v1.0.6
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-x86_64-release.apk
+    binary: https://github.com/dreautall/waterfly-iii/releases/download/v%v/app-x86_64-release.apk
+    srclibs:
+      - flutter@3.22.2
+    prebuild:
+      - export repo=/home/runner/work/waterfly-iii
+      - mkdir -p $repo
+      - cd ..
+      - mv com.dreautall.waterflyiii $repo/waterfly-iii
+      - pushd $repo/waterfly-iii
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/dart --disable-analytics
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - sed -i -e '/gms/d' .pub-cache/hosted/pub.dev/cronet_http-*/android/build.gradle
+      - popd
+      - mv $repo/waterfly-iii com.dreautall.waterflyiii
+      - cd com.dreautall.waterflyiii
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/waterfly-iii
+      - cd ..
+      - mv com.dreautall.waterflyiii $repo/waterfly-iii
+      - pushd $repo/waterfly-iii
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --obfuscate --split-debug-info=build/app/outputs/symbols/apk
+        --release --split-per-abi --build-number $(( $$VERCODE$$/10 )) --build-name=$$VERSION$$
+        --target-platform="android-x64" --dart-define=cronetHttpNoPlay=true
+      - popd
+      - mv $repo/waterfly-iii com.dreautall.waterflyiii
+
+  - versionName: 1.0.6
+    versionCode: 3242
+    commit: v1.0.6
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+    binary: https://github.com/dreautall/waterfly-iii/releases/download/v%v/app-armeabi-v7a-release.apk
+    srclibs:
+      - flutter@3.22.2
+    prebuild:
+      - export repo=/home/runner/work/waterfly-iii
+      - mkdir -p $repo
+      - cd ..
+      - mv com.dreautall.waterflyiii $repo/waterfly-iii
+      - pushd $repo/waterfly-iii
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/dart --disable-analytics
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - sed -i -e '/gms/d' .pub-cache/hosted/pub.dev/cronet_http-*/android/build.gradle
+      - popd
+      - mv $repo/waterfly-iii com.dreautall.waterflyiii
+      - cd com.dreautall.waterflyiii
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/waterfly-iii
+      - cd ..
+      - mv com.dreautall.waterflyiii $repo/waterfly-iii
+      - pushd $repo/waterfly-iii
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --obfuscate --split-debug-info=build/app/outputs/symbols/apk
+        --release --split-per-abi --build-number $(( $$VERCODE$$/10 )) --build-name=$$VERSION$$
+        --target-platform="android-arm" --dart-define=cronetHttpNoPlay=true
+      - popd
+      - mv $repo/waterfly-iii com.dreautall.waterflyiii
+
+  - versionName: 1.0.6
+    versionCode: 3243
+    commit: v1.0.6
+    sudo:
+      - mkdir -p /home/runner/
+      - chown vagrant /home/runner/
+    output: build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+    binary: https://github.com/dreautall/waterfly-iii/releases/download/v%v/app-arm64-v8a-release.apk
+    srclibs:
+      - flutter@3.22.2
+    prebuild:
+      - export repo=/home/runner/work/waterfly-iii
+      - mkdir -p $repo
+      - cd ..
+      - mv com.dreautall.waterflyiii $repo/waterfly-iii
+      - pushd $repo/waterfly-iii
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/dart --disable-analytics
+      - $$flutter$$/bin/flutter config --no-analytics
+      - $$flutter$$/bin/flutter pub get
+      - sed -i -e '/gms/d' .pub-cache/hosted/pub.dev/cronet_http-*/android/build.gradle
+      - popd
+      - mv $repo/waterfly-iii com.dreautall.waterflyiii
+      - cd com.dreautall.waterflyiii
+    scandelete:
+      - .pub-cache
+    build:
+      - export repo=/home/runner/work/waterfly-iii
+      - cd ..
+      - mv com.dreautall.waterflyiii $repo/waterfly-iii
+      - pushd $repo/waterfly-iii
+      - export PUB_CACHE=$(pwd)/.pub-cache
+      - $$flutter$$/bin/flutter build apk --obfuscate --split-debug-info=build/app/outputs/symbols/apk
+        --release --split-per-abi --build-number $(( $$VERCODE$$/10 )) --build-name=$$VERSION$$
+        --target-platform="android-arm64" --dart-define=cronetHttpNoPlay=true
+      - popd
+      - mv $repo/waterfly-iii com.dreautall.waterflyiii
+
+AllowedAPKSigningKeys: b3b639d89f1bf02d4d9f9adc08bf60f792cebc36bfc13d81311a7413e7c867dc
+
+AutoUpdateMode: Version %v
+UpdateCheckMode: HTTP
+VercodeOperation:
+  - '%c * 10 + 1'
+  - '%c * 10 + 2'
+  - '%c * 10 + 3'
+UpdateCheckData: https://raw.githubusercontent.com/dreautall/waterfly-iii/master/fastlane/metadata/android/version.txt|versionCode=(\d+)|.|versionName=(.*)
+CurrentVersion: 1.0.6
+CurrentVersionCode: 3243
