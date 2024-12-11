@@ -1,0 +1,28 @@
+Categories:
+  - Phone & SMS
+License: GPL-3.0-only
+AuthorName: msusman1
+SourceCode: https://github.com/msusman1/Amadz
+IssueTracker: https://github.com/msusman1/Amadz/issues
+Changelog: https://github.com/msusman1/Amadz/releases
+
+AutoName: Amadz
+
+RepoType: git
+Repo: https://github.com/msusman1/Amadz.git
+Binaries: https://github.com/msusman1/Amadz/releases/download/%v/amadz.apk
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: 048ef80bc0d776a204e2adb9f55dfd29223b1e39
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 9624d23f872090328bba7f6a36e996de4c6798e0ac2e8074c8ee6d2433584358
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.0'
+CurrentVersionCode: 1
