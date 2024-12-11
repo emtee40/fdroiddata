@@ -276,5 +276,5 @@ MaintainerNotes: |-
 AutoUpdateMode: None
 UpdateCheckMode: Tags
 UpdateCheckData: build.py|version_code = "(\d+)"|.|version = "(.*)"
-CurrentVersion: 1.7.1
-CurrentVersionCode: 171
+CurrentVersion: 1.7.2
+CurrentVersionCode: 172
