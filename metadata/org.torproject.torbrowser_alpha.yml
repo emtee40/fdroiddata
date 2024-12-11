@@ -1,0 +1,123 @@
+Categories:
+  - Internet
+  - Multimedia
+  - Reading
+  - Science & Education
+  - Security
+License: MPL-2.0
+WebSite: https://www.torproject.org/torbrowser
+SourceCode: https://gitlab.torproject.org/tpo/applications/tor-browser-build
+IssueTracker: https://gitlab.torproject.org/tpo/applications/tor-browser-build/-/issues
+Changelog: https://gitlab.torproject.org/tpo/applications/tor-browser-build/-/blob/main/projects/browser/Bundle-Data/Docs-TBB/ChangeLog.txt
+Donate: https://donate.torproject.org/
+
+Description: |-
+  Tor Browser for Android is the only official mobile browser supported by
+  the Tor Project, developers of the world's strongest tool for privacy
+  and freedom online.
+
+  BLOCK TRACKERS
+  Tor Browser isolates each website you visit so third-party trackers and
+  ads can't follow you. Any cookies automatically clear when you're done
+  browsing.
+
+  DEFEND AGAINST SURVEILLANCE
+  Tor Browser prevents someone watching your connection from knowing what
+  websites you visit. All anyone monitoring your browsing habits can see is
+  that you're using Tor.
+
+  RESIST FINGERPRINTING
+  Tor aims to make all users look the same, making it difficult for you to
+  be fingerprinted based on your browser and device information.
+
+  MULTI-LAYERED ENCRYPTION
+  When you use Tor Browser for Android, your traffic is relayed and
+  encrypted three times as it passes over the Tor network. The network is
+  comprised of thousands of volunteer-run servers known as Tor relays.
+
+  BROWSE FREELY
+  With Tor Browser for Android, you are free to access sites your local
+  internet service provider may have blocked.
+
+RepoType: git
+Repo: https://gitlab.torproject.org/tpo/applications/tor-browser-build.git
+
+Builds:
+  - versionName: 115.2.1-beta (13.5a6)
+    versionCode: 2016011617
+    commit: tbb-13.5a6-build1
+    timeout: 21600
+    submodules: true
+    sudo:
+      - echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+      - apt-get update
+      - apt-get install -y libdata-dump-perl libdata-uuid-perl libdatetime-perl libdigest-sha-perl
+        libfile-copy-recursive-perl libfile-slurp-perl libio-all-perl libio-captureoutput-perl
+        libio-handle-util-perl libjson-perl libparallel-forkmanager-perl libpath-tiny-perl
+        libsort-versions-perl libstring-shellquote-perl libtemplate-perl libxml-libxml-perl
+        libxml-writer-perl libyaml-libyaml-perl git mercurial zstd build-essential
+        python3 automake libtool zip unzip autoconf2.13 gettext-base autotools-dev
+        automake autoconf libtool autopoint libssl-dev pkg-config zlib1g-dev libparallel-forkmanager-perl
+        libfile-slurp-perl bzip2 xz-utils apksigner yasm wget bison gyp tcl python3-venv
+        7zip jq bsdiff openjdk-11-jdk
+    output: torbrowser/alpha/unsigned/*/tor-browser-qa-android-*.apk
+    binary: https://dist.torproject.org/torbrowser/13.5a6/tor-browser-android-armv7-13.5a6.apk
+    srclibs:
+      - MozAppServices@v115.0
+      - cbindgen@v0.26.0
+      - CMake@v3.28.1
+      - conjure@14d6a80f5bd5f8b88dca488b1126b9a498536368
+      - TorBrowserAndroid@firefox-android-115.2.1-13.0-1-build11
+      - TorBrowser@tor-browser-115.7.0esr-13.0-1-build1
+      - libevent@release-2.1.12-stable
+      - llvm-project@llvmorg-17.0.6
+      - lyrebird@lyrebird-0.1.0
+      - ninja@v1.11.1
+      - snowflake@v2.8.1
+      - tor@tor-0.4.8.10
+      - TorAndroidService@0438a9a4ce1548be08dd2df891a38987bb313d22
+      - TorOnionProxyLibrary@71dc2a13f674260e34d31d723fcb21a5e7649731
+      - TorTranslation@b3e21d83f2d6d1fcbd1330af182befcbb4b9b99e
+      - wasi-config@948ae97ca5703224bd3eada06b7a69f40dd15a02
+      - wasi-libc@wasi-sdk-21
+      - wasi-sdk@wasi-sdk-21
+      - webtunnel@ae511e2d67297b8b32fdb173549cac7b9f64f45b
+      - zlib@v1.3.1
+      - zstd@v1.5.5
+    prebuild:
+      - 'echo "tmp_dir: /tmp" > rbm.local.conf'
+      - sed -i 's/^apksigner\ sign.*/mv \$aligned_apk \$qa_apk/' projects/browser/build.android
+      - git clone $$MozAppServices$$ git_clones/application-services
+      - git clone $$cbindgen$$ git_clones/cbindgen
+      - git clone $$CMake$$ git_clones/cmake
+      - git clone $$conjure$$ git_clones/conjure
+      - git clone $$TorBrowserAndroid$$ git_clones/firefox-android
+      - git clone $$TorBrowser$$ git_clones/geckoview
+      - git clone $$libevent$$ git_clones/libevent
+      - git clone $$llvm-project$$ git_clones/llvm-project
+      - git clone $$lyrebird$$ git_clones/lyrebird
+      - git clone $$ninja$$ git_clones/ninja
+      - git clone $$snowflake$$ git_clones/snowflake
+      - git clone $$tor$$ git_clones/tor
+      - git clone $$TorAndroidService$$ git_clones/tor-android-service
+      - git clone $$TorOnionProxyLibrary$$ git_clones/tor-onion-proxy-library
+      - git clone $$TorTranslation$$ git_clones/translation
+      - git clone $$wasi-config$$ git_clones/wasi-config
+      - git clone $$wasi-libc$$ git_clones/wasi-libc
+      - git clone $$wasi-sdk$$ git_clones/wasi-sysroot
+      - git clone $$webtunnel$$ git_clones/webtunnel
+      - git clone $$zlib$$ git_clones/zlib
+      - git clone $$zstd$$ git_clones/zstd
+    build: env -u ANDROID_HOME -u ANDROID_SDK_ROOT -u ANDROID_SDK -u ANDROID_NDK -u
+      ANDROID_NDK_HOME -u NDK USER=rbm RBM_NO_DEBUG=1 ./rbm/rbm build release --target
+      no_containers --target alpha --target browser-android-armv7 --target torbrowser
+
+AllowedAPKSigningKeys: 4e617e6516f81123ca58e718d617a704ac8365c575bd9e7a731ba5dd0476869d
+
+MaintainerNotes: |
+  The srclibs commits are irrelevant, as tor-browser-build checks out specific commits anyways. To satisfy `fdroid lint`, we have to use a commit or tag.
+
+AutoUpdateMode: None
+UpdateCheckMode: None
+CurrentVersion: 115.2.1-beta (13.5a6)
+CurrentVersionCode: 2016011617
