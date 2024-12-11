@@ -1,0 +1,36 @@
+Categories:
+  - Multimedia
+License: Apache-2.0
+SourceCode: https://github.com/Ghost-Applications/gizz-tapes
+IssueTracker: https://github.com/Ghost-Applications/gizz-tapes/issues
+Changelog: https://raw.githubusercontent.com/Ghost-Applications/gizz-tapes/refs/heads/main/CHANGELOG.adoc
+
+AutoName: Gizz Tapes
+
+RepoType: git
+Repo: https://github.com/Ghost-Applications/gizz-tapes.git
+Binaries: https://github.com/Ghost-Applications/gizz-tapes/releases/download/%v/mobile-foss-release.apk
+
+Builds:
+  - versionName: DawnOfEternalNight
+    versionCode: 11
+    commit: 0f8bbb92db4c5a2edc38ab438772c130acddc0cf
+    subdir: mobile
+    gradle:
+      - foss
+    prebuild:
+      - sed -i -e '/firebase/d' -e '/gms/d' -e '/google.services/d' -e '/CrashlyticsExtension/,+2d'
+        -e '/GoogleServicesTask/,+2d' -e '/signingConfig =/d' mobile.gradle.kts
+      - sed -i -e '/buildFileName/d' ../{.,buildSrc}/settings.gradle.kts
+      - for d in buildSrc mobile networking networking-integration; do mv ../$d/$d.gradle.kts
+        ../$d/build.gradle.kts; done
+      - sed -i -e 's/-XX:MaxPermSize=256m//' ../gradle.properties
+
+AllowedAPKSigningKeys: cd9a8e7dfa19d4c9a23e8a46513d5b7153e3a0728de6afefa2837b8536b01e51
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+UpdateCheckData: gradle.properties|defaultBuildNumber = "(\d+)"|gradle.properties|versionName
+  = "(.+)"
+CurrentVersion: DawnOfEternalNight
+CurrentVersionCode: 11
