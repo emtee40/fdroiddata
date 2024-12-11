@@ -342,9 +342,9 @@ Builds:
       - cp $$esbuild$$/esbuild ../../node_modules/svelte-i18n/node_modules/@esbuild/linux-x64/bin/esbuild
     ndk: r25b
 
-  - versionName: 1.6.23
-    versionCode: 74
-    commit: 83842616419a44b56000667cbcae7c29105b76df
+  - versionName: 1.6.24
+    versionCode: 75
+    commit: 975ca9db37fed97950502ab505399ae385328e4e
     timeout: 20000
     subdir: materialious/android/app
     sudo:
@@ -384,5 +384,5 @@ Builds:
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.6.23
-CurrentVersionCode: 74
+CurrentVersion: 1.6.24
+CurrentVersionCode: 75
